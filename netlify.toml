@@ -1,0 +1,57 @@
+# Honorbrook Insurance — Netlify configuration
+# Publishes the static site in /site and deploys the chatbot function in /netlify/functions.
+
+[build]
+  publish = "site"
+  functions = "netlify/functions"
+
+# Pretty URLs already work (Netlify serves /medicare-advantage from medicare-advantage.html).
+# Add a couple of redirects so old/alternate paths resolve cleanly.
+[[redirects]]
+  from = "/medigap"
+  to = "/medicare-supplement-medigap"
+  status = 301
+
+[[redirects]]
+  from = "/group"
+  to = "/group-health-insurance-shop"
+  status = 301
+
+# Redirects from the previous /services/ URL structure to the new clean URLs (301 = permanent)
+[[redirects]]
+  from = "/services/medicare-advantage.html"
+  to = "/medicare-advantage"
+  status = 301
+[[redirects]]
+  from = "/services/medicare-supplement.html"
+  to = "/medicare-supplement-medigap"
+  status = 301
+[[redirects]]
+  from = "/services/medicare-part-d.html"
+  to = "/medicare-part-d"
+  status = 301
+[[redirects]]
+  from = "/services/medicare.html"
+  to = "/medicare-advantage"
+  status = 301
+[[redirects]]
+  from = "/services/aca-marketplace.html"
+  to = "/aca-health-insurance"
+  status = 301
+[[redirects]]
+  from = "/services/final-expense.html"
+  to = "/final-expense-life-insurance"
+  status = 301
+[[redirects]]
+  from = "/services/life-insurance.html"
+  to = "/life-insurance"
+  status = 301
+[[redirects]]
+  from = "/services/annuities.html"
+  to = "/annuities"
+  status = 301
+# Catch-all for any other old /services/ path
+[[redirects]]
+  from = "/services/*"
+  to = "/"
+  status = 301

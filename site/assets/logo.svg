@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Honorbrook Insurance crest">
+  <defs>
+    <linearGradient id="hb-navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#27415f"/>
+      <stop offset="1" stop-color="#142339"/>
+    </linearGradient>
+    <linearGradient id="hb-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3c25c"/>
+      <stop offset="1" stop-color="#c9a227"/>
+    </linearGradient>
+  </defs>
+
+  <!-- shield -->
+  <path d="M100 14 L182 44 L182 118 C182 186 148 214 100 232 C52 214 18 186 18 118 L18 44 Z" fill="url(#hb-navy)"/>
+  <!-- inner double border -->
+  <path d="M100 28 L171 53 L171 116 C171 177 141 202 100 218 C59 202 29 177 29 116 L29 53 Z" fill="none" stroke="url(#hb-gold)" stroke-width="2.4" opacity=".95"/>
+  <path d="M100 35 L164 58 L164 115 C164 170 137 193 100 208 C63 193 36 170 36 115 L36 58 Z" fill="none" stroke="url(#hb-gold)" stroke-width="1" opacity=".5"/>
+
+  <!-- serif "H" monogram -->
+  <g fill="url(#hb-gold)">
+    <!-- left stem + serifs -->
+    <rect x="71" y="80" width="14" height="70"/>
+    <rect x="64" y="80" width="28" height="7"/>
+    <rect x="64" y="143" width="28" height="7"/>
+    <!-- right stem + serifs -->
+    <rect x="115" y="80" width="14" height="70"/>
+    <rect x="108" y="80" width="28" height="7"/>
+    <rect x="108" y="143" width="28" height="7"/>
+    <!-- crossbar -->
+    <rect x="83" y="108" width="34" height="13"/>
+  </g>
+
+  <!-- the "brook": two waves beneath -->
+  <g fill="none" stroke="url(#hb-gold)" stroke-width="5.5" stroke-linecap="round">
+    <path d="M70 170 Q85 161 100 170 T130 170"/>
+    <path d="M70 184 Q85 175 100 184 T130 184"/>
+  </g>
+</svg>
