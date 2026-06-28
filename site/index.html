@@ -145,8 +145,9 @@
   .step p{font-size:15.5px;color:var(--muted)}
 
   .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
-  .about-photo{background:linear-gradient(160deg,var(--navy-d) 0%,#2c486a 100%);border-radius:10px;min-height:330px;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(27,47,75,.25);border:1px solid rgba(227,194,92,.25)}
-  .about-photo img{width:170px;height:auto}
+  .about-photo{background:var(--cream-d);border-radius:10px;min-height:460px;overflow:hidden;box-shadow:0 14px 40px rgba(27,47,75,.25);border:1px solid rgba(227,194,92,.45)}
+  .about-photo img{width:100%;height:460px;object-fit:cover;object-position:center 18%;display:block}
+  .about-photo figcaption{display:none}
   .about ul{list-style:none;margin-top:18px}
   .about li{padding-left:32px;position:relative;margin-bottom:12px;font-size:17.5px}
   .about li::before{content:"";position:absolute;left:4px;top:.55em;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
@@ -436,7 +437,7 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap">
-    <div class="about-photo"><img src="/assets/logo.svg" alt="Honorbrook Insurance crest"></div>
+    <div class="about-photo"><img src="/assets/luay-sadqi.jpg" alt="Luay Sadqi, founder and licensed agent at Honorbrook Insurance" onerror="this.style.display='none'"></div>
     <div>
       <div class="kicker">About Honorbrook</div>
       <h2 class="section-title">A name built on honor.<br>Service built on trust.</h2>
