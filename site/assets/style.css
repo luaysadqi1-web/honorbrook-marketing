@@ -141,6 +141,8 @@ footer a{color:#c2ccdb;text-decoration:none;display:block;margin-bottom:9px}
 footer a:hover{color:var(--gold-l)}
 .svc-areas{font-size:13.5px;color:#9fb0c6;border-top:1px solid #2c3e57;padding-top:20px;margin-bottom:18px;line-height:1.7}
 .svc-areas strong{color:#c2ccdb}
+.svc-areas a{display:inline;color:#c2ccdb;text-decoration:underline}
+.svc-areas a:hover{color:var(--gold-l)}
 .disclaimer{border-top:1px solid #2c3e57;padding-top:22px;font-size:12.5px;line-height:1.75;color:#7e92ab}
 .disclaimer a{color:#9fb0c6;display:inline;text-decoration:underline}
 
