@@ -176,3 +176,16 @@
     }
   }
 })();
+
+
+/* ---- GA4 conversion tracking (fires only if gtag is present on the page) ---- */
+(function(){
+  function track(name,params){ if(typeof window.gtag==='function'){ try{ window.gtag('event',name,params||{}); }catch(e){} } }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href^="tel:"]'):null;
+    if(a){ track('phone_call_click',{phone:a.getAttribute('href').replace('tel:','')}); }
+  },true);
+  document.addEventListener('submit',function(e){
+    if(e.target&&e.target.tagName==='FORM'){ track('generate_lead',{form:(e.target.getAttribute('action')||'form')}); }
+  },true);
+})();
