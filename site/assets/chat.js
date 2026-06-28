@@ -158,11 +158,18 @@
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ messages: history }),
       });
-      var data = await res.json();
+      var data = {};
+      try { data = await res.json(); } catch (_) {}
       typing(false);
-      var reply = data.reply || "Thanks! Anything else I can help with?";
-      addMsg(reply, "bot");
-      history.push({ role: "assistant", content: reply });
+      if (res.ok && data && data.reply) {
+        addMsg(data.reply, "bot");
+        history.push({ role: "assistant", content: data.reply });
+      } else {
+        addMsg(
+          "Thanks for reaching out! For the fastest help, please call us at " + PHONE + " or use the contact form, and a licensed agent will get right back to you.",
+          "bot"
+        );
+      }
     } catch (e) {
       typing(false);
       addMsg(
