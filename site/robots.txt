@@ -1,7 +1,5 @@
 # robots.txt for honorbrook-insurance.com
-# Upload this file to the ROOT of your site so it loads at:
-#   https://honorbrook-insurance.com/robots.txt
-# (Right now that URL returns 404 — that's a problem this fixes.)
+# Lives at https://honorbrook-insurance.com/robots.txt
 
 User-agent: *
 Allow: /

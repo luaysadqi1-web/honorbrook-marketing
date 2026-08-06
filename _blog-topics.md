@@ -4,12 +4,12 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 
 ## Medicare core
 - [x] Medicare Advantage vs. Medigap: How to Choose in 2026
-- [ ] What Does Medicare Part D Actually Cost? Premiums, Deductibles & the Donut Hole
+- [x] What Does Medicare Part D Actually Cost? Premiums, Deductibles & the Donut Hole
 - [x] Turning 65: Your Step-by-Step Medicare Enrollment Checklist  (covered by "Medicare 101")
 - [x] Medicare Annual Enrollment (Oct 15–Dec 7): What You Can Change  (covered by "AEP 2026: What's Changing")
-- [ ] Medigap Plan G vs. Plan N: Which Saves You More?
-- [ ] When Can You Switch Medicare Plans? Every Enrollment Window Explained
-- [ ] Do You Really Need a Medicare Agent? (And Why It's Free)
+- [x] Medigap Plan G vs. Plan N: Which Saves You More?
+- [x] When Can You Switch Medicare Plans? Every Enrollment Window Explained
+- [x] Do You Really Need a Medicare Agent? (And Why It's Free)
 - [ ] Medicare and Prescription Drugs: How to Lower Your Annual Cost
 
 ## ICHRA / employer (high opportunity, low competition)
@@ -20,6 +20,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 
 ## ACA / under-65
 - [x] How ACA Subsidies Work: Do You Qualify for a Premium Tax Credit?  (covered by "ACA Marketplace 2026")
+- [x] ACA or Medicaid? How Virginia Decides, and What's Changing in 2026  (added ad hoc, not from original list)
 - [ ] Bronze vs. Silver vs. Gold: Choosing an ACA Plan
 - [ ] Lost Your Job Coverage? Your Health Insurance Options
 - [ ] Self-Employed Health Insurance: ACA, ICHRA & What to Know
