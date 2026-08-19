@@ -10,7 +10,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] Medigap Plan G vs. Plan N: Which Saves You More?
 - [x] When Can You Switch Medicare Plans? Every Enrollment Window Explained
 - [x] Do You Really Need a Medicare Agent? (And Why It's Free)
-- [ ] Medicare and Prescription Drugs: How to Lower Your Annual Cost
+- [x] Medicare and Prescription Drugs: How to Lower Your Annual Cost
 
 ## ICHRA / employer (high opportunity, low competition)
 - [ ] What Is an ICHRA? A Plain-English Guide for Small Businesses
