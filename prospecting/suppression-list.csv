@@ -1,0 +1,2 @@
+email,phone,company,reason,date
+# Anyone here is NEVER contacted. Add opt-outs, existing clients, DNC. The bot checks this before every draft.

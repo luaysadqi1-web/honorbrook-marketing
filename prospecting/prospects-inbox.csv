@@ -1,0 +1,5 @@
+first_name,company,title,city,email,phone,segment,linkedin,hook
+# Drop new leads here (from Apollo/Clay/LinkedIn export or by hand). segment = ichra|pharmacy|vertical|new-agent|captive-agent
+# --- EXAMPLE ROWS (fictional — delete before real use) ---
+Maria,Bright Smile Dental,Owner,Fairfax,,,vertical,,"growing 3-op practice, no benefits listed"
+John,Oakton Family Pharmacy,Pharmacist-in-Charge,Oakton,,,pharmacy,,"independent, near a 55+ community"
