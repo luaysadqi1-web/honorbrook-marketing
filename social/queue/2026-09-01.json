@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-01",
+  "generated": "2026-08-27T12:48:08",
+  "source": "seed_week.py",
+  "items": [
+    {
+      "id": "4411f5d46e",
+      "platform": "x",
+      "pillar": "ichra-employer",
+      "text": "Small employers: ICHRA lets you give staff tax-free dollars to buy their own coverage instead of running a group plan. No participation minimums, no renewal roulette. Licensed in 11 states. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "af369013c8",
+      "platform": "linkedin",
+      "pillar": "ichra-employer",
+      "text": "Most small employers we talk to think their only two options are \"offer a group plan\" or \"offer nothing.\"\n\nThere is a third one: an ICHRA - an Individual Coverage Health Reimbursement Arrangement. Instead of buying a group policy, you set a monthly allowance and employees use it to buy their own individual coverage. The reimbursement is tax-free to them and deductible to you.\n\nWhy owners of 5-50 person companies keep moving to it:\n\n- Your cost is a number you choose, not a renewal you receive\n- No participation minimums to hit\n- You can set different allowances by class - full-time, part-time, salaried, by location\n- Employees keep their plan if they leave\n\nIt is not right for everyone. If your team is mostly older and your current group rates are good, staying put can win. That is a math question, and it is worth actually running.\n\nHappy to run it with you. Honorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    }
+  ]
+}

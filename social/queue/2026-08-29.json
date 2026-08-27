@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-29",
+  "generated": "2026-08-27T12:48:08",
+  "source": "seed_week.py",
+  "items": [
+    {
+      "id": "570d55076e",
+      "platform": "x",
+      "pillar": "you-asked",
+      "text": "You asked: does using an agent cost me anything? No. We're paid by the carrier, and your rate is the same whether you enroll with us or by yourself. You just get a person to call. (571) 354-0146",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "c8c3bf0aef",
+      "platform": "linkedin",
+      "pillar": "you-asked",
+      "text": "\"What do you charge?\" is the question we get most, so here is the plain answer: nothing.\n\nIndependent agents are compensated by the insurance carrier when a policy is placed. Your rate is set by the carrier and filed with the state - it does not go up because you used an agent, and it does not go down because you skipped one.\n\nWhat you get for it is a person who is accountable to you at claim time, at renewal, and when something changes. Not a call center queue.\n\nThe fair follow-up question is: if the carrier pays you, whose side are you on? That is why independence matters. We represent many carriers rather than one, so we are not steering you toward a single company's shelf.\n\nHonorbrook Insurance - Luay Sadqi, NPN 21370662. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    }
+  ]
+}

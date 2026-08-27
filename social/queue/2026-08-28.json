@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-28",
+  "generated": "2026-08-27T12:48:08",
+  "source": "seed_week.py",
+  "items": [
+    {
+      "id": "0710fd837a",
+      "platform": "x",
+      "pillar": "local-nova",
+      "text": "Plan networks in Northern Virginia change county to county - Fairfax isn't Loudoun isn't Arlington. Check that your doctors are in-network before you enroll, not after. (571) 354-0146",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "6e8e75b5a9",
+      "platform": "linkedin",
+      "pillar": "local-nova",
+      "text": "A pattern we see every year in Northern Virginia: someone compares plans on price, enrolls, and then finds out in February that their specialist at Inova or VHC Health is out of network.\n\nNetworks here are genuinely local. A plan that is strong in Fairfax County can be thin in Loudoun. The provider directory is the document that matters, and it is the one almost nobody reads.\n\nBefore you enroll anywhere, verify three things: your doctors, your hospital, and every prescription you actually take. All three, by name.\n\nWe do that check for clients across Northern Virginia at no cost - Vienna, Tysons, McLean, Fairfax, Arlington, Falls Church, Reston, Herndon, Oakton and Alexandria.\n\nHonorbrook Insurance. (571) 354-0146\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-03",
+  "generated": "2026-08-27T12:48:08",
+  "source": "seed_week.py",
+  "items": [
+    {
+      "id": "0195f44f93",
+      "platform": "x",
+      "pillar": "life-final-expense",
+      "text": "Final expense coverage isn't about leaving a fortune. It's about making sure the people you love aren't handed a bill during the worst week of their lives. Honest talk, no pressure. (571) 354-0146",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "001a7dea30",
+      "platform": "linkedin",
+      "pillar": "life-final-expense",
+      "text": "Final expense insurance is a small whole life policy meant to cover what a funeral and the loose ends actually cost.\n\nWhat we tell people to check before buying one:\n\n- Is it level benefit or graded? Graded policies pay a reduced amount if death occurs in the first two or three years. That difference matters and it is not always volunteered.\n- Does the premium ever increase? On a properly structured whole life policy it should not.\n- Would existing coverage already handle it? Sometimes a client already has what they need through work or an old policy, and the honest answer is to keep it.\n\nWe have told people not to buy. That is part of the job.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    }
+  ]
+}

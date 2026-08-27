@@ -6,3 +6,7 @@
 *.log
 node_modules/
 .netlify/
+
+# social routine secrets - never commit
+social/.env
+social/logs/*.csv
