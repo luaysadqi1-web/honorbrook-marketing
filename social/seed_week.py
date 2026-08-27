@@ -136,6 +136,50 @@ WEEK = {
     "Drive, Tysons VA. " + PHONE),
 }
 
+# Google Business Profile posts. Different job from X or LinkedIn: someone is
+# looking at the profile with intent right now, so front-load the offer and make
+# the action a phone call. Roughly the first 200 characters show before
+# "Read more".
+GBP = {
+0: "Turning 65 in the next year? Come see us before you enroll in Medicare. "
+   "We map your enrollment window, verify your doctors and prescriptions are "
+   "covered, and tell you plainly when the plan you already have is the better "
+   "one. No cost, no obligation. Independent agency in Tysons, licensed in 11 "
+   "states.",
+1: "Small business owner in Northern Virginia? There is a third option between "
+   "\"offer a group plan\" and \"offer nothing.\" An ICHRA lets you set a monthly "
+   "allowance employees use to buy their own coverage - tax-free to them, "
+   "deductible to you, and your cost is a number you choose instead of a "
+   "renewal you receive. We will run the math against your current plan at no "
+   "charge.",
+2: "Lost your employer coverage? You have 60 days to enroll on the ACA "
+   "Marketplace, counted from the day coverage ended rather than the day you "
+   "start looking. Before defaulting to COBRA it is worth comparing - subsidies "
+   "are based on this year's household income, and people who lost income "
+   "mid-year often qualify for help they assume is not available to them.",
+3: "Final expense coverage is a small whole life policy meant to cover a funeral "
+   "and the loose ends. Before buying one, check three things: whether the "
+   "benefit is level or graded, whether the premium can ever increase, and "
+   "whether coverage you already have would handle it. We have told people not "
+   "to buy. That is part of the job.",
+4: "Medicare plan networks in Northern Virginia change county to county. A plan "
+   "that is strong in Fairfax can be thin in Loudoun, and the provider "
+   "directory is the document almost nobody reads. Before you enroll anywhere, "
+   "verify your doctors, your hospital and every prescription by name. We do "
+   "that check at no cost - Vienna, Tysons, McLean, Fairfax, Arlington, Falls "
+   "Church, Reston, Herndon, Oakton and Alexandria.",
+5: "The question we get most: what do you charge? Nothing. Independent agents "
+   "are paid by the carrier, and your rate is set by the carrier and filed with "
+   "the state - it does not go up because you used an agent, and it does not go "
+   "down because you skipped one. What you get for it is a person who is "
+   "accountable to you at renewal and at claim time.",
+6: "The right coverage. The honest way. We are an independent agency in Tysons - "
+   "health, life and annuity, for individuals and small employers, licensed "
+   "across 11 states. Representing many carriers rather than one means a "
+   "comparison is a real comparison, and it means we are allowed to tell you to "
+   "keep what you already have. We do, regularly. Luay Sadqi, NPN 21370662.",
+}
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -155,6 +199,12 @@ def main():
             print("!! %s X draft is %d chars after the disclaimer - shorten it"
                   % (day, len(x_text)))
 
+        gbp_text, gbp_fits = compliance.append_disclaimer(
+            GBP[day.weekday()], "gbp")
+        if not gbp_fits:
+            print("!! %s GBP draft is %d chars - shorten it"
+                  % (day, len(gbp_text)))
+
         data = {
             "date": day.isoformat(),
             "generated": datetime.datetime.now().isoformat(timespec="seconds"),
@@ -162,12 +212,13 @@ def main():
             "items": [
                 store.new_item("x", pillar, x_text),
                 store.new_item("linkedin", pillar, li_body),
+                store.new_item("gbp", pillar, gbp_text, cta="CALL"),
             ],
         }
         store.save_queue(day.isoformat(), data)
         made += 1
-        print("wrote queue/%s.json  (%s)  X=%d chars  LI=%d chars"
-              % (day, pillar, len(x_text), len(li_body)))
+        print("wrote queue/%s.json  (%s)  X=%d  LI=%d  GBP=%d"
+              % (day, pillar, len(x_text), len(li_body), len(gbp_text)))
     print("\n%d day(s) queued." % made)
 
 

@@ -24,8 +24,9 @@ import compliance
 import store
 import x_client
 import linkedin_client
+import gbp_client
 
-AUTO_PLATFORMS = ("x", "linkedin")
+AUTO_PLATFORMS = ("x", "linkedin", "gbp")
 
 
 class NotConfiguredError(str):
@@ -40,11 +41,20 @@ def publish(item, dry_run):
             return x_client.post(item["text"], dry_run=dry_run), None
         if platform == "linkedin":
             return linkedin_client.post(item["text"], dry_run=dry_run), None
+        if platform == "gbp":
+            return gbp_client.post(
+                item["text"],
+                cta=item.get("cta", "CALL"),
+                cta_url=item.get("cta_url"),
+                dry_run=dry_run,
+            ), None
         return None, "platform %r is not auto-posted" % platform
-    except (x_client.NotConfigured, linkedin_client.NotConfigured) as e:
+    except (x_client.NotConfigured, linkedin_client.NotConfigured,
+            gbp_client.NotConfigured) as e:
         # Nothing was transmitted, so this stays retryable.
         return None, NotConfiguredError("not configured: %s" % e)
-    except (x_client.PostError, linkedin_client.PostError) as e:
+    except (x_client.PostError, linkedin_client.PostError,
+            gbp_client.PostError) as e:
         return None, str(e)
     except Exception as e:
         return None, "unexpected error: %s" % e

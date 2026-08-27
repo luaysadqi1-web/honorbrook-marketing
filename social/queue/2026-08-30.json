@@ -1,10 +1,10 @@
 {
   "date": "2026-08-30",
-  "generated": "2026-08-27T12:48:08",
+  "generated": "2026-08-27T12:58:45",
   "source": "seed_week.py",
   "items": [
     {
-      "id": "1ec8353eee",
+      "id": "c84ae6c7b2",
       "platform": "x",
       "pillar": "trust-brand",
       "text": "We're an independent agency. We don't work for one carrier - we work for you, and we'll tell you when the plan you already have is the right one to keep. Honorbrook Insurance, Tysons VA. honorbrook-insurance.com",
@@ -14,7 +14,7 @@
       "blocks": []
     },
     {
-      "id": "36f807433a",
+      "id": "84b9a69a4f",
       "platform": "linkedin",
       "pillar": "trust-brand",
       "text": "The right coverage. The honest way.\n\nThat line is on our door because of how often people arrive having been sold something rather than advised.\n\nWhat being independent actually changes, in practice:\n\n- We represent many carriers, so a comparison is a real comparison\n- We are allowed to tell you to keep what you have. We do, regularly\n- We are local. You can drive to our office in Tysons and sit across from the person who wrote your policy\n\nHealth, life, and annuity, for individuals and small employers, licensed across 11 states.\n\nLuay Sadqi, NPN 21370662 - Honorbrook Insurance, 8609 Westwood Center Drive, Tysons VA. (571) 354-0146",
@@ -22,6 +22,17 @@
       "status": "pending",
       "post_id": null,
       "blocks": []
+    },
+    {
+      "id": "22ae6f0c80",
+      "platform": "gbp",
+      "pillar": "trust-brand",
+      "text": "The right coverage. The honest way. We are an independent agency in Tysons - health, life and annuity, for individuals and small employers, licensed across 11 states. Representing many carriers rather than one means a comparison is a real comparison, and it means we are allowed to tell you to keep what you already have. We do, regularly. Luay Sadqi, NPN 21370662.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
     }
   ]
 }

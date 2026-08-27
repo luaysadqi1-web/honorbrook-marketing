@@ -18,6 +18,12 @@ Cadence: **Sundays.** Generates the following Mon–Sun.
    - **one LinkedIn post**, 600–1200 characters. Real substance, short
      paragraphs, no hashtag spam, no "🚀". Medicare topics carry the full
      disclaimer at the end.
+   - **one Google Business Profile post**, 300–450 characters of content. The
+     reader is on the profile with intent, so front-load the offer — only the
+     first ~200 characters show before "Read more". Concrete and local. Set
+     `"cta": "CALL"`, which uses the phone number already on the profile.
+     Build the text with `compliance.append_disclaimer(body, "gbp")`, which
+     appends the full CMS disclaimer when the topic is Medicare.
 4. Write each day to `queue/YYYY-MM-DD.json` using the schema below.
 5. Generate 3 Reddit drafts into `reddit-drafts/YYYY-MM-DD.md` (see below).
 6. Run `python3 run_daily.py --date <each day> --dry-run` for all seven days.
@@ -46,7 +52,11 @@ Cadence: **Sundays.** Generates the following Mon–Sun.
 }
 ```
 
-`status` must be `pending`. The poster owns every other value.
+`status` must be `pending`. The poster owns every other value. GBP items carry
+one extra key, `"cta": "CALL"`.
+
+Use `compliance.append_disclaimer(body, platform)` for LinkedIn and GBP, and
+`compliance.fit_x(body)` for X, rather than typing disclaimers by hand.
 
 ## Voice
 

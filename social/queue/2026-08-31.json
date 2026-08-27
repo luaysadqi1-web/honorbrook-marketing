@@ -1,10 +1,10 @@
 {
   "date": "2026-08-31",
-  "generated": "2026-08-27T12:48:08",
+  "generated": "2026-08-27T12:58:45",
   "source": "seed_week.py",
   "items": [
     {
-      "id": "1393426fa1",
+      "id": "45e0b1d6fc",
       "platform": "x",
       "pillar": "medicare-foundations",
       "text": "Turning 65? Your Medicare window opens 3 months before your birthday month and closes 3 months after. Miss it and the Part B penalty is permanent. We'll map your dates, free. (571) 354-0146 Not connected with or endorsed by the U.S. government or the federal Medicare program.",
@@ -14,7 +14,7 @@
       "blocks": []
     },
     {
-      "id": "dd9f049572",
+      "id": "11be604579",
       "platform": "linkedin",
       "pillar": "medicare-foundations",
       "text": "Turning 65 is the one insurance deadline that never forgives you.\n\nYour Initial Enrollment Period runs seven months: the three months before your birthday month, that month, and the three after. Enroll late without qualifying coverage and the Part B late-enrollment penalty is permanent - it is added to your premium for as long as you have Part B.\n\nThe part people miss: still working at 65 with employer coverage can change the math entirely, and whether it does depends on how many people your employer has.\n\nIf you are approaching 65, map your dates before you do anything else. We do that at no cost, and there is no obligation to use us afterward.\n\nHonorbrook Insurance - independent, licensed in 11 states. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
@@ -22,6 +22,17 @@
       "status": "pending",
       "post_id": null,
       "blocks": []
+    },
+    {
+      "id": "5fed9928ec",
+      "platform": "gbp",
+      "pillar": "medicare-foundations",
+      "text": "Turning 65 in the next year? Come see us before you enroll in Medicare. We map your enrollment window, verify your doctors and prescriptions are covered, and tell you plainly when the plan you already have is the better one. No cost, no obligation. Independent agency in Tysons, licensed in 11 states.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
     }
   ]
 }

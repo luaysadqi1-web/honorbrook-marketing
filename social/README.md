@@ -1,7 +1,7 @@
 # Honorbrook social routine
 
-Daily automated posting to **X** and **LinkedIn**, plus drafted (never
-auto-posted) **Reddit** replies.
+Daily automated posting to **Google Business Profile**, **X** and **LinkedIn**,
+plus drafted (never auto-posted) **Reddit** replies.
 
 ## How it's built
 
@@ -16,7 +16,8 @@ picks up today's queue file, lints every draft, publishes what passes. Pure
 stdlib Python — no Claude, no venv, no pip, no app open. It just runs.
 
 ```
-queue/2026-08-31.json ──> run_daily.py ──> compliance.check() ──┬─> X API
+queue/2026-08-31.json ──> run_daily.py ──> compliance.check() ──┬─> Google Business Profile
+                                                                ├─> X API
                                                                 ├─> LinkedIn API
                                                                 └─> held (stays in queue)
 ```
@@ -79,6 +80,8 @@ launchctl unload ~/Library/LaunchAgents/com.honorbrook.social.daily.plist
 |---|---|
 | `run_daily.py` | The daily poster. The only thing launchd runs. |
 | `lib/compliance.py` | The linter. Rules and the CMS disclaimers. |
+| `lib/gbp_client.py` | Google Business Profile local posts, OAuth2 refresh. |
+| `gbp_authorize.py` | One-time Google auth helper; prints your `.env` values. |
 | `lib/x_client.py` | X API v2, OAuth 1.0a, stdlib only. |
 | `lib/linkedin_client.py` | LinkedIn Posts API, stdlib only. |
 | `lib/store.py` | Queue files, `.env` loading, CSV log. |
@@ -99,3 +102,11 @@ launchctl unload ~/Library/LaunchAgents/com.honorbrook.social.daily.plist
   job runs on wake. If it is off, that day is skipped — the queue is not
   consumed, so nothing is lost except the day.
 - **Reddit is manual by design.** See `reddit-drafts/_FORMAT.md`.
+- **GBP posting requires Google to approve an API access request** against your
+  Cloud project. Until it clears, GBP items fail with a 403 and stay queued
+  while X and LinkedIn continue. The Google refresh token itself does not
+  expire — but only if you **Publish** the OAuth consent screen; left in
+  Testing, it dies after 7 days.
+
+Each platform is independent: a dead LinkedIn token or an unapproved GBP project
+never blocks the others.

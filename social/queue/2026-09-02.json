@@ -1,10 +1,10 @@
 {
   "date": "2026-09-02",
-  "generated": "2026-08-27T12:48:08",
+  "generated": "2026-08-27T12:58:45",
   "source": "seed_week.py",
   "items": [
     {
-      "id": "e34636a02b",
+      "id": "f16f4ceded",
       "platform": "x",
       "pillar": "aca-under65",
       "text": "Lost job coverage? You get a 60-day Special Enrollment Period on the ACA Marketplace - but the clock starts the day coverage ends, not the day you get around to it. honorbrook-insurance.com",
@@ -14,7 +14,7 @@
       "blocks": []
     },
     {
-      "id": "7dfbc9326e",
+      "id": "78933dd8fb",
       "platform": "linkedin",
       "pillar": "aca-under65",
       "text": "If you have just lost employer coverage, you have 60 days. Not 60 days from when you start looking - 60 days from the date the coverage ended.\n\nTwo things worth knowing before you default to COBRA:\n\n1. COBRA is the same plan, but you now pay the full cost including the share your employer used to cover. For many households a Marketplace plan with a premium tax credit lands lower.\n\n2. Subsidy eligibility is based on your household income for the year, not your old salary. People who lost income mid-year often qualify for help they assume is not available to them.\n\nRun both before the 60 days closes. If COBRA wins, take COBRA - we will tell you when it does.\n\nHonorbrook Insurance - independent, no cost to you. honorbrook-insurance.com",
@@ -22,6 +22,17 @@
       "status": "pending",
       "post_id": null,
       "blocks": []
+    },
+    {
+      "id": "d709e7b865",
+      "platform": "gbp",
+      "pillar": "aca-under65",
+      "text": "Lost your employer coverage? You have 60 days to enroll on the ACA Marketplace, counted from the day coverage ended rather than the day you start looking. Before defaulting to COBRA it is worth comparing - subsidies are based on this year's household income, and people who lost income mid-year often qualify for help they assume is not available to them.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
     }
   ]
 }

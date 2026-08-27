@@ -13,6 +13,13 @@ LinkedIn post against it. Reddit drafts are produced separately (see the spec).
 | Sat | `you-asked` | One real question we actually get, answered plainly | X |
 | Sun | `trust-brand` | Independence, how we're paid, why we say "keep what you have" | LinkedIn |
 
+Every day also gets a **Google Business Profile** post on the same pillar. GBP is
+a different job from X or LinkedIn: the reader is looking at your profile with
+intent *right now*. Front-load the offer, keep it concrete and local, and let the
+CALL button be the action. Only the first ~200 characters show before "Read
+more", so the first sentence has to carry it. 300–450 characters of content is
+the sweet spot; the cap is 1500 including the disclaimer.
+
 ## Seasonal override
 
 **Oct 15 – Dec 7 (Medicare AEP):** override Mon/Wed/Fri to AEP topics — what can
@@ -60,6 +67,7 @@ Tysons office · why we tell people to keep what they have.
 
 1. Medicare-topic posts on X have a **193-character content budget** — the
    86-character disclaimer is appended automatically. Write to the budget.
+   On LinkedIn and GBP the *full* disclaimer is appended instead; there is room.
 2. Never name a carrier. Never name a premium, copay, deductible, or "$0".
 3. No superlatives, no guarantees, no urgency language.
 4. No invented statistics. If a number cannot be cited, do not use it.

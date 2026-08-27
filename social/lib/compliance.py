@@ -160,12 +160,30 @@ WARN_RULES = [
     ),
 ]
 
-PLATFORM_LIMITS = {"x": 280, "linkedin": 3000, "reddit": 40000}
+PLATFORM_LIMITS = {"x": 280, "linkedin": 3000, "reddit": 40000, "gbp": 1500}
 
 # On X the short disclaimer costs 96 characters, so a Medicare-topic post has
 # only this much room left for actual content. The generator writes to this
 # budget; fit_x() below assembles the final string.
 X_CONTENT_BUDGET = PLATFORM_LIMITS["x"] - len(DISCLAIMER_SHORT) - 1
+
+
+def append_disclaimer(content, platform):
+    """Attach the right disclaimer for the platform when the topic requires it.
+
+    X gets the short form because the long one cannot fit in 280 characters.
+    Everywhere else gets the full CMS standardized wording.
+
+    Returns (text, fits_within_platform_limit).
+    """
+    content = content.strip()
+    limit = PLATFORM_LIMITS.get(platform, 3000)
+    if not is_medicare_topic(content) or has_disclaimer(content):
+        return content, len(content) <= limit
+    tail = DISCLAIMER_SHORT if platform == "x" else DISCLAIMER_LONG
+    sep = " " if platform == "x" else "\n\n"
+    text = content + sep + tail
+    return text, len(text) <= limit
 
 
 def fit_x(content):

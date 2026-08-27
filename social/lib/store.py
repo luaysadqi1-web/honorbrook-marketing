@@ -53,8 +53,8 @@ def save_queue(date_str, data):
         fh.write("\n")
 
 
-def new_item(platform, pillar, text, note=""):
-    return {
+def new_item(platform, pillar, text, note="", cta=None, cta_url=None):
+    item = {
         "id": uuid.uuid4().hex[:10],
         "platform": platform,
         "pillar": pillar,
@@ -64,6 +64,11 @@ def new_item(platform, pillar, text, note=""):
         "post_id": None,
         "blocks": [],
     }
+    if cta:
+        item["cta"] = cta
+    if cta_url:
+        item["cta_url"] = cta_url
+    return item
 
 
 def append_log(row):
