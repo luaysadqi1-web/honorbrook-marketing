@@ -139,6 +139,12 @@ footer h4{color:var(--white);font-size:14px;margin-bottom:14px;letter-spacing:2p
 footer p{line-height:1.6}
 footer a{color:#c2ccdb;text-decoration:none;display:block;margin-bottom:9px}
 footer a:hover{color:var(--gold-l)}
+.social-row{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;border-top:1px solid #2c3e57;padding-top:20px;margin-bottom:18px;font-size:13.5px}
+.social-row a{display:inline-block;color:#c2ccdb;text-decoration:none;border-bottom:1px solid transparent;padding:2px 0}
+.social-row a:hover,.social-row a:focus-visible{color:var(--gold-l);border-bottom-color:var(--gold-l)}
+.map-embed{margin:22px 0 6px;border-radius:10px;overflow:hidden;border:1px solid #dfe4ea;line-height:0}
+.map-embed iframe{width:100%;height:340px;border:0;display:block}
+.map-actions{font-size:14px}
 .svc-areas{font-size:13.5px;color:#9fb0c6;border-top:1px solid #2c3e57;padding-top:20px;margin-bottom:18px;line-height:1.7}
 .svc-areas strong{color:#c2ccdb}
 .svc-areas a{display:inline;color:#c2ccdb;text-decoration:underline}
