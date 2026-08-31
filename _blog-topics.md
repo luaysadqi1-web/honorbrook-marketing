@@ -13,7 +13,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] Medicare and Prescription Drugs: How to Lower Your Annual Cost
 
 ## ICHRA / employer (high opportunity, low competition)
-- [ ] What Is an ICHRA? A Plain-English Guide for Small Businesses
+- [x] What Is an ICHRA? A Plain-English Guide for Small Businesses
 - [ ] ICHRA vs. Traditional Group Health Insurance: A Cost Comparison
 - [ ] How to Set Up an ICHRA for Your Business in 5 Steps
 - [ ] ICHRA for Employees: What It Means for Your Health Coverage
