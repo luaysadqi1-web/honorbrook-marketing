@@ -30,3 +30,19 @@ Path: `/Users/luaysadqi/honorbrook-marketing/site/blog/{slug}.html` (slug = keba
 
 ## Step 4 — Publish (only if this is a git repo)
 If `/Users/luaysadqi/honorbrook-marketing` is a git repository with a remote, `git add -A && git commit -m "blog: {title}" && git push`. If not a git repo, STOP after writing files — the post is a draft for the owner to review and upload. Never force-push; branch if not on the default branch.
+
+Netlify auto-publishes from `main` and a build takes roughly 10 seconds.
+
+## Step 5 — Ping IndexNow (only if Step 4 actually pushed)
+Tell Bing, Yandex, Naver and Seznam the post exists instead of waiting for a crawl. From the repo root:
+
+```
+./scripts/indexnow.sh /blog/{slug} /blog/
+```
+
+Submit the new post **and** `/blog/` so the index page's updated links get recrawled too.
+
+- The script waits for each URL to return 200 before submitting, so it is safe to run immediately after `git push` — it will poll for up to ~45 seconds while Netlify builds.
+- It refuses to submit anything if the key file at `/{key}.txt` isn't live, and skips any URL that never comes up. A skipped URL means the deploy failed — check Netlify before assuming the post is published.
+- Expected output: `OK (200) — accepted.`
+- **Google does not use IndexNow.** For Google, the sitemap entry from Step 3 is what matters. If a post is time-sensitive, additionally request indexing manually in Search Console → URL Inspection.

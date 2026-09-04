@@ -3,6 +3,13 @@
 #
 #   ./scripts/indexnow.sh                        # submit every URL in sitemap.xml
 #   ./scripts/indexnow.sh /term-life-insurance   # submit specific path(s)
+#   ./scripts/indexnow.sh /blog/my-post /blog/   # new post + the index page
+#
+# When given specific paths it waits (up to ~45s) for each to return 200 before
+# submitting, so it is safe to run right after `git push` while Netlify builds.
+#
+# Google does NOT participate in IndexNow — this reaches Bing, Yandex, Naver and
+# Seznam. For Google, rely on sitemap.xml plus Search Console "Request indexing".
 #
 # The key file must already be live at:
 #   https://honorbrook-insurance.com/fe552356957a40beab701665b4d886a9.txt
@@ -40,6 +47,33 @@ fi
 
 if [ "${#urls[@]}" -eq 0 ]; then
   echo "No URLs to submit."; exit 1
+fi
+
+# When specific URLs are passed (the automated-publish case), make sure each one
+# is actually live before telling Bing about it. A deploy takes a few seconds, so
+# a routine that pushes and immediately pings would otherwise submit a 404.
+# Bulk sitemap runs skip this — those URLs are already published by definition.
+if [ "$#" -gt 0 ]; then
+  live=()
+  for u in "${urls[@]}"; do
+    ok=""
+    for attempt in 1 2 3 4 5 6 7 8 9 10; do
+      if [ "$(curl -s -o /dev/null -w '%{http_code}' --max-time 15 "$u")" = "200" ]; then
+        ok="yes"; break
+      fi
+      [ "$attempt" -lt 10 ] && sleep 5
+    done
+    if [ -n "$ok" ]; then
+      live+=("$u")
+    else
+      echo "SKIP (never returned 200 after ~45s): $u"
+    fi
+  done
+  if [ "${#live[@]}" -eq 0 ]; then
+    echo "ERROR: none of the given URLs are live. Nothing submitted."
+    exit 1
+  fi
+  urls=("${live[@]}")
 fi
 
 echo "Submitting ${#urls[@]} URL(s) to IndexNow..."
