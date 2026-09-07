@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-09",
+  "generated": "2026-09-07T13:13:33",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "54854a3bbf",
+      "platform": "x",
+      "pillar": "aca-under65",
+      "text": "On the ACA Marketplace, the lowest premium plan isn't always the lowest total cost. A Silver plan with a higher monthly price can beat a Bronze plan once you count what you'd actually pay at the doctor. Worth comparing before you pick by sticker price.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "806a7adfba",
+      "platform": "linkedin",
+      "pillar": "aca-under65",
+      "text": "On the ACA Marketplace, people default to sorting by monthly premium, and it is often the wrong sort.\n\nThe metal tiers - Bronze, Silver, Gold - describe how costs split between your premium and what you pay when you use care, not how good the plan is. Bronze plans carry the lowest premium and the highest cost when you actually need care. Silver plans sit in the middle, and for many households qualify for extra cost-sharing help that Bronze and Gold do not.\n\nThe comparison that actually matters is total expected annual cost: premium plus what you would plausibly pay for a doctor visit, a prescription, or a procedure you already know is coming. Someone managing an ongoing condition or expecting a specific medical expense this year often comes out ahead on a Silver plan even though the premium is higher, because the most they would ever pay in a bad year is meaningfully lower.\n\nThis is a math exercise specific to your situation, not a rule that one tier wins. We run it with clients before they enroll rather than after.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "11d55fd834",
+      "platform": "gbp",
+      "pillar": "aca-under65",
+      "text": "Choosing an ACA Marketplace plan by the lowest monthly premium alone can cost you more over the year. Bronze plans carry the lowest premium but the highest cost when you use care; Silver plans often qualify for extra cost-sharing help that can make total annual cost lower even with a higher premium. We'll run the real math against your situation before you enroll. No charge.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}
