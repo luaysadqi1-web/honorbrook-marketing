@@ -15,7 +15,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 ## ICHRA / employer (high opportunity, low competition)
 - [x] What Is an ICHRA? A Plain-English Guide for Small Businesses
 - [x] ICHRA vs. Traditional Group Health Insurance: A Cost Comparison
-- [ ] How to Set Up an ICHRA for Your Business in 5 Steps
+- [x] How to Set Up an ICHRA for Your Business in 5 Steps
 - [ ] ICHRA for Employees: What It Means for Your Health Coverage
 
 ## ACA / under-65
