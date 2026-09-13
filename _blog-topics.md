@@ -16,7 +16,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] What Is an ICHRA? A Plain-English Guide for Small Businesses
 - [x] ICHRA vs. Traditional Group Health Insurance: A Cost Comparison
 - [x] How to Set Up an ICHRA for Your Business in 5 Steps
-- [ ] ICHRA for Employees: What It Means for Your Health Coverage
+- [x] ICHRA for Employees: What It Means for Your Health Coverage
 
 ## ACA / under-65
 - [x] How ACA Subsidies Work: Do You Qualify for a Premium Tax Credit?  (covered by "ACA Marketplace 2026")
