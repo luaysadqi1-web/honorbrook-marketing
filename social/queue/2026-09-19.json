@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-19",
+  "generated": "2026-09-13T15:11:59",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "3ac73f3831",
+      "platform": "x",
+      "pillar": "you-asked",
+      "text": "You asked: what if I already have a plan I like? Then keep it. A review is not a switch. We will tell you plainly if what you have is still the right fit, and most years for most people it is. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "0ee02fefc2",
+      "platform": "linkedin",
+      "pillar": "you-asked",
+      "text": "A question we get more than any other, usually said a little defensively: what if I already have a plan I like?\n\nThen you should probably keep it. A review is not a switch, and we are not trying to talk anyone out of coverage that is working.\n\nWhat a review is actually for: your plan can change even when you do nothing. The premium, the provider network and the drug list are all set annually by the plan, not by you. So the question is never really \"is this a good plan.\" It is \"is this still the same plan I chose, and does it still match the doctors and medications I have now.\"\n\nMost years, for most people, the answer is yes and the conversation takes fifteen minutes. When the answer is no, it is usually because a medication moved tiers or a specialist left the network, and neither of those announces itself.\n\nWe have told people to keep what they have. That is a normal outcome here, not a failed appointment.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "6cc66f0c4a",
+      "platform": "gbp",
+      "pillar": "you-asked",
+      "text": "You asked: what if I already have a plan I like? Then keep it. A review is not a switch. Your plan can change even when you do nothing, because the premium, the network and the drug list are set annually by the plan. We check whether it is still the same plan you chose and still matches your doctors and medications. Most years the answer is yes and it takes fifteen minutes. No cost, no obligation.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}

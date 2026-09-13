@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-23",
+  "generated": "2026-09-13T15:11:59",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "621d1d47f0",
+      "platform": "x",
+      "pillar": "aca-under65",
+      "text": "Marketplace subsidies are based on the income you estimate for the year, not last year's. If your income moves, update it mid-year. Guessing high overpays every month. Guessing low means paying it back at tax time. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "777215d10f",
+      "platform": "linkedin",
+      "pillar": "aca-under65",
+      "text": "The most common Marketplace mistake we see has nothing to do with which plan someone picked.\n\nYour subsidy is an advance payment based on the income you estimated when you enrolled. At tax time it gets reconciled against what you actually earned. Estimate too low and you repay the difference, sometimes a large one. Estimate too high and you quietly overpaid every month for a year and get it back only as a refund.\n\nFor anyone with variable income, a contractor, a commissioned salesperson, a small business owner, this is not a corner case. It is the normal condition. A good year in August can turn into a bill in April if nobody told the Marketplace.\n\nThe fix is unglamorous. You can update your income estimate during the year, and the subsidy adjusts going forward. It takes a few minutes and it prevents most of the damage.\n\nThe related point: a change in income can also change which plans you qualify for, and in some cases open eligibility you did not have at enrollment.\n\nIf your year is not going the way you projected, tell someone before December.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "96f2950ff9",
+      "platform": "gbp",
+      "pillar": "aca-under65",
+      "text": "If your income changed this year and you have a Marketplace plan, update your estimate now rather than at tax time. Subsidies are advance payments reconciled against what you actually earn. Estimate low and you repay the difference. Estimate high and you overpaid every month. For contractors and business owners with variable income this is the normal condition, not a corner case. We will help you re-run it. No charge.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}

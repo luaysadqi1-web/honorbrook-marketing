@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-21",
+  "generated": "2026-09-13T15:11:59",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "fc4e88c193",
+      "platform": "x",
+      "pillar": "medicare-foundations",
+      "text": "Still working at 65? Whether you can safely delay Part B turns on your employer's headcount. Below the threshold Medicare pays first whether or not you enrolled. Check the number first. Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "e0bc8be130",
+      "platform": "linkedin",
+      "pillar": "medicare-foundations",
+      "text": "If you are turning 65 and still working, the size of your employer decides the whole question.\n\nAt larger employers, the group plan generally pays first and Medicare pays second, which is what makes delaying Part B safe and lets you keep a Special Enrollment Period for later. At smaller employers the order flips. Medicare becomes the primary payer whether or not you actually enrolled, and the group plan pays as if you had. Skip Part B in that situation and you can be left holding the share Medicare would have covered, on every claim, without knowing it until the bills arrive.\n\nThe threshold is a headcount, and it is lower than most people expect. It is also not something your HR department is obliged to explain, and in our experience often does not.\n\nTwo more things worth confirming in the same conversation: whether the plan is genuinely creditable, and what happens to a spouse covered under it if you do enroll.\n\nThis is a fifteen-minute check with real money attached. No cost to run it.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "5247b4e82b",
+      "platform": "gbp",
+      "pillar": "medicare-foundations",
+      "text": "Turning 65 and still working? Whether you can safely delay Part B depends on your employer's headcount. At smaller employers Medicare becomes the primary payer whether or not you enrolled, and the group plan pays as if you had, which can leave you covering Medicare's share on every claim. HR is not obliged to explain this. We check it in fifteen minutes at no cost. Independent agency in Tysons.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}

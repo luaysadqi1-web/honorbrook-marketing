@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-18",
+  "generated": "2026-09-13T15:11:59",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "7643759d39",
+      "platform": "x",
+      "pillar": "local-nova",
+      "text": "Northern Virginia has several hospital systems, and Advantage plan networks do not all include the same ones. If there is a hospital you want to stay with, check it by name before you pick a plan, not after. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "2275ab742f",
+      "platform": "linkedin",
+      "pillar": "local-nova",
+      "text": "A Northern Virginia specific point that costs people real money.\n\nWe have Inova, VHC Health, Reston Hospital Center and others operating across Fairfax, Arlington and Loudoun. Medicare Advantage plans build their own networks, and those networks do not all include the same systems or the same specialists within a system.\n\nTwo things follow from that. First, a plan that looks identical on a comparison page can send you to a different hospital in an emergency, or leave your cardiologist out of network while keeping your primary care doctor in. Second, network directories are updated on the plan's schedule, not in real time, so a directory listing is a starting point rather than proof.\n\nWhat we do about it: we check your actual doctors and your preferred hospital by name against the current directory, and where it matters we call the practice to confirm they are still taking that plan. It takes a little longer than reading a brochure. It is the difference between a plan that works in theory and one that works in January.\n\nServing Vienna, Tysons, McLean, Fairfax, Arlington, Falls Church, Reston, Herndon, Oakton and Alexandria.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "ed07a90457",
+      "platform": "gbp",
+      "pillar": "local-nova",
+      "text": "Northern Virginia has several hospital systems, and Medicare Advantage networks do not all include the same ones. A plan can keep your primary care doctor in network while leaving your cardiologist or your preferred hospital out. Directories are updated on the plan's schedule, not in real time, so we check your doctors and hospital by name and call the practice where it matters. Serving Vienna, Tysons, McLean, Fairfax and Arlington.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}
