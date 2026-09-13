@@ -1,5 +1,21 @@
 # Getting the API keys
 
+> **Check your work with `python3 preflight.py`.** It reads `.env`, then makes one
+> read-only live call per channel to prove the credentials actually work before a
+> scheduled run tries to publish with them. It never prints a secret — only a length
+> and a short hash — so the output is safe to paste to anyone. Use `--x`,
+> `--linkedin` or `--gbp` to check one channel.
+>
+> **LinkedIn tokens expire after 60 days.** That is why this channel went dark. Set
+> `LINKEDIN_REFRESH_TOKEN`, `LINKEDIN_CLIENT_ID` and `LINKEDIN_CLIENT_SECRET` as well
+> as the access token, and a 401 will now trigger one automatic refresh, write the new
+> token back to `.env`, and retry the post. Programmatic refresh tokens are only issued
+> to approved apps; without them, plan on re-authorising by hand every 60 days.
+>
+> **`LinkedIn-Version` sunsets.** Marketing API versions are supported for about a
+> year, then every call fails. `API_VERSION` in `lib/linkedin_client.py` is currently
+> `202608`. Bump it annually.
+
 You do this part — I never handle credentials. Both platforms take about
 20 minutes each. Paste results into `social/.env` (copy `.env.example` first).
 
