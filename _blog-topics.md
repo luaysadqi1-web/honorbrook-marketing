@@ -21,7 +21,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 ## ACA / under-65
 - [x] How ACA Subsidies Work: Do You Qualify for a Premium Tax Credit?  (covered by "ACA Marketplace 2026")
 - [x] ACA or Medicaid? How Virginia Decides, and What's Changing in 2026  (added ad hoc, not from original list)
-- [ ] Bronze vs. Silver vs. Gold: Choosing an ACA Plan
+- [x] Bronze vs. Silver vs. Gold: Choosing an ACA Plan
 - [ ] Lost Your Job Coverage? Your Health Insurance Options
 - [ ] Self-Employed Health Insurance: ACA, ICHRA & What to Know
 
