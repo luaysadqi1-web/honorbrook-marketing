@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-20",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "a3b4acbe8d",
-      "platform": "x",
-      "pillar": "trust-brand",
-      "text": "We have told people to keep the plan they already have. An agency that can only make money by moving you has one answer to every question. Independence is what lets the honest answer be an option. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "0336580ed0",
-      "platform": "linkedin",
-      "pillar": "trust-brand",
-      "text": "The most useful thing we do some weeks is tell someone not to buy anything.\n\nThat sounds like a strange thing for an agency to advertise, so here is the mechanism behind it. We are independent, which means we are appointed with multiple carriers rather than employed by one. No single company sets our targets or owns our answer. When the plan someone already has is the right one, saying so costs us a commission and nothing else.\n\nA captive agent, by structure, cannot give that answer. Not because of character, because of arrangement. If the only product available is the one your employer sells, that is the product every conversation ends at.\n\nWe think it is worth asking any agent two questions before you get into specifics. Are you independent or appointed with one carrier. And what is your National Producer Number, so I can look you up. Both answers should come easily.\n\nLicensed in 11 states, based in Tysons.\n\nHonorbrook Insurance. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "2ee2c109a0",
-      "platform": "gbp",
-      "pillar": "trust-brand",
-      "text": "The most useful thing we do some weeks is tell someone not to buy anything. We are independent, appointed with multiple carriers rather than employed by one, so when the plan you already have is the right one, saying so costs us a commission and nothing else. A captive agent cannot give that answer, not for lack of character but by arrangement. Ask any agent whether they are independent before you discuss products. Tysons office.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-20",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "a3b4acbe8d",
+   "platform": "x",
+   "pillar": "trust-brand",
+   "text": "We have told people to keep the plan they already have. An agency that can only make money by moving you has one answer to every question. Independence is what lets the honest answer be an option. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "0336580ed0",
+   "platform": "linkedin",
+   "pillar": "trust-brand",
+   "text": "The most useful thing we do some weeks is tell someone not to buy anything.\n\nThat sounds like a strange thing for an agency to advertise, so here is the mechanism behind it. We are independent, which means we are appointed with multiple carriers rather than employed by one. No single company sets our targets or owns our answer. When the plan someone already has is the right one, saying so costs us a commission and nothing else.\n\nA captive agent, by structure, cannot give that answer. Not because of character, because of arrangement. If the only product available is the one your employer sells, that is the product every conversation ends at.\n\nWe think it is worth asking any agent two questions before you get into specifics. Are you independent or appointed with one carrier. And what is your National Producer Number, so I can look you up. Both answers should come easily.\n\nLicensed in 11 states, based in Tysons.\n\nHonorbrook Insurance. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "2ee2c109a0",
+   "platform": "gbp",
+   "pillar": "trust-brand",
+   "text": "The most useful thing we do some weeks is tell someone not to buy anything. We are independent, appointed with multiple carriers rather than employed by one, so when the plan you already have is the right one, saying so costs us a commission and nothing else. A captive agent cannot give that answer, not for lack of character but by arrangement. Ask any agent whether they are independent before you discuss products. Tysons office.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

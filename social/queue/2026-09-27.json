@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-27",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "d6f214eef6",
-      "platform": "x",
-      "pillar": "trust-brand",
-      "text": "What a review actually looks like here: bring your card, your plan letter, and a list of your doctors and medications. We check those against what is offered. No presentation, no pressure, and often no change. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "1da2a94ac5",
-      "platform": "linkedin",
-      "pillar": "trust-brand",
-      "text": "People are wary of booking an insurance appointment, and they are right to be. So here is exactly what happens at ours.\n\nYou bring three things. Your Medicare card, the letter your plan sends in the autumn describing what is changing, and a list of your doctors and your medications with dosages. That is the whole preparation.\n\nWe check your specific medications against the drug lists, by name and dose, and your specific doctors against the current networks, calling practices where the directory is ambiguous. Then we tell you what we found. If nothing meaningful changed, we say so and you leave with the plan you came in with.\n\nWhat does not happen: a presentation, a comparison of products you did not ask about, or a follow-up call you did not agree to. If you want to think about it, that is the end of the conversation until you get back in touch.\n\nWe are independent and licensed in 11 states, based in Tysons. Our National Producer Number is 21370662 if you would like to verify it first.\n\nHonorbrook Insurance. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "144c53e674",
-      "platform": "gbp",
-      "pillar": "trust-brand",
-      "text": "Wary of booking an insurance appointment? Here is exactly what ours looks like. Bring your Medicare card, the letter your plan sends in the autumn, and a list of your doctors and medications with dosages. We check those against what is actually offered and tell you what we found. No presentation, no products you did not ask about, no follow-up call you did not agree to. Often no change at all. Tysons office.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-27",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "d6f214eef6",
+   "platform": "x",
+   "pillar": "trust-brand",
+   "text": "What a review actually looks like here: bring your card, your plan letter, and a list of your doctors and medications. We check those against what is offered. No presentation, no pressure, and often no change. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "1da2a94ac5",
+   "platform": "linkedin",
+   "pillar": "trust-brand",
+   "text": "People are wary of booking an insurance appointment, and they are right to be. So here is exactly what happens at ours.\n\nYou bring three things. Your Medicare card, the letter your plan sends in the autumn describing what is changing, and a list of your doctors and your medications with dosages. That is the whole preparation.\n\nWe check your specific medications against the drug lists, by name and dose, and your specific doctors against the current networks, calling practices where the directory is ambiguous. Then we tell you what we found. If nothing meaningful changed, we say so and you leave with the plan you came in with.\n\nWhat does not happen: a presentation, a comparison of products you did not ask about, or a follow-up call you did not agree to. If you want to think about it, that is the end of the conversation until you get back in touch.\n\nWe are independent and licensed in 11 states, based in Tysons. Our National Producer Number is 21370662 if you would like to verify it first.\n\nHonorbrook Insurance. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "144c53e674",
+   "platform": "gbp",
+   "pillar": "trust-brand",
+   "text": "Wary of booking an insurance appointment? Here is exactly what ours looks like. Bring your Medicare card, the letter your plan sends in the autumn, and a list of your doctors and medications with dosages. We check those against what is actually offered and tell you what we found. No presentation, no products you did not ask about, no follow-up call you did not agree to. Often no change at all. Tysons office.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

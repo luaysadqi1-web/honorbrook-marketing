@@ -1,38 +1,44 @@
 {
-  "date": "2026-09-16",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "c0ffe82bd9",
-      "platform": "x",
-      "pillar": "aca-under65",
-      "text": "After a layoff, COBRA is the letter that finds you. It is not the only option. Losing that job also opened a 60-day Marketplace window, and the subsidy there is based on this year's income, not last year's. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "f07afad946",
-      "platform": "linkedin",
-      "pillar": "aca-under65",
-      "text": "After a layoff, COBRA arrives in the mail and feels like the only option. It is worth ten minutes to check whether it is the right one.\n\nCOBRA continues the exact plan you had, same network, same deductible progress. What changes is who pays. Your employer was likely covering a large share of that premium; now you pick up all of it, plus an administrative percentage. The plan did not get worse. The bill got honest.\n\nThe part people miss: losing job-based coverage also opens a 60-day Special Enrollment Period on the Marketplace. And Marketplace subsidies are calculated on the income you expect this year, which just changed substantially. People who assumed they earn too much to qualify often qualify now, precisely because they were laid off.\n\nSometimes COBRA still wins. If you are mid-treatment and have met your deductible, starting over on a new plan in October can cost more than the COBRA premium. That is a real calculation, not a slogan.\n\nRun both before the 60 days close. We do that at no cost.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "a5b911c221",
-      "platform": "gbp",
-      "pillar": "aca-under65",
-      "text": "Laid off recently? COBRA is not your only option, and it is usually the priciest. Losing job coverage opens a 60-day Special Enrollment window, and your Marketplace subsidy is based on what you expect to earn this year, which just changed. People who assumed they earned too much often qualify now. We will run COBRA against Marketplace side by side before the 60 days close. No charge, serving Northern Virginia.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-16",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "c0ffe82bd9",
+   "platform": "x",
+   "pillar": "aca-under65",
+   "text": "After a layoff, COBRA is the letter that finds you. It is not the only option. Losing that job also opened a 60-day Marketplace window, and the subsidy there is based on this year's income, not last year's. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": [
+    "not configured: missing env vars: X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET"
+   ]
+  },
+  {
+   "id": "f07afad946",
+   "platform": "linkedin",
+   "pillar": "aca-under65",
+   "text": "After a layoff, COBRA arrives in the mail and feels like the only option. It is worth ten minutes to check whether it is the right one.\n\nCOBRA continues the exact plan you had, same network, same deductible progress. What changes is who pays. Your employer was likely covering a large share of that premium; now you pick up all of it, plus an administrative percentage. The plan did not get worse. The bill got honest.\n\nThe part people miss: losing job-based coverage also opens a 60-day Special Enrollment Period on the Marketplace. And Marketplace subsidies are calculated on the income you expect this year, which just changed substantially. People who assumed they earn too much to qualify often qualify now, precisely because they were laid off.\n\nSometimes COBRA still wins. If you are mid-treatment and have met your deductible, starting over on a new plan in October can cost more than the COBRA premium. That is a real calculation, not a slogan.\n\nRun both before the 60 days close. We do that at no cost.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": [
+    "not configured: missing env vars: LINKEDIN_ACCESS_TOKEN"
+   ]
+  },
+  {
+   "id": "a5b911c221",
+   "platform": "gbp",
+   "pillar": "aca-under65",
+   "text": "Laid off recently? COBRA is not your only option, and it is usually the priciest. Losing job coverage opens a 60-day Special Enrollment window, and your Marketplace subsidy is based on what you expect to earn this year, which just changed. People who assumed they earned too much often qualify now. We will run COBRA against Marketplace side by side before the 60 days close. No charge, serving Northern Virginia.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [
+    "not configured: missing env vars: GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN, GBP_ACCOUNT_ID, GBP_LOCATION_ID"
+   ],
+   "cta": "CALL"
+  }
+ ]
 }

@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-24",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "61d127e2ae",
-      "platform": "x",
-      "pillar": "life-final-expense",
-      "text": "An annuity is not a savings account and not life insurance. It converts a lump sum into income, usually for life. That trade can be right or wrong for you, and the deciding factor is liquidity, not the rate. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "549aa09365",
-      "platform": "linkedin",
-      "pillar": "life-final-expense",
-      "text": "Annuities get sold on the rate. The rate is rarely the thing that determines whether one was a good idea.\n\nWhat an annuity actually does is convert money you have into income you will receive, often for as long as you live. That is a real solution to a real problem, which is not knowing how long retirement will last. It is also, structurally, a trade of access for certainty.\n\nSo the first question is not what it pays. It is what you give up. Most contracts limit how much you can withdraw in the early years without a surrender charge, and those schedules can run several years. If there is a reasonable chance you will need that money for a roof, a car, or helping family, an annuity is the wrong container for it, no matter how good the rate looks.\n\nThe second question is which kind. Fixed, indexed and immediate annuities behave differently enough that grouping them under one word causes most of the confusion in the category.\n\nWe will tell you when the answer is that you do not need one. That happens often.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "07f87849a6",
-      "platform": "gbp",
-      "pillar": "life-final-expense",
-      "text": "Annuities get sold on the rate, but the rate is rarely what decides whether one was a good idea. An annuity converts money you have into income you will receive, trading access for certainty. Most contracts limit early withdrawals for several years. If there is a reasonable chance you will need that money, it is the wrong container regardless of the rate. We will tell you when the answer is that you do not need one.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-24",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "61d127e2ae",
+   "platform": "x",
+   "pillar": "life-final-expense",
+   "text": "An annuity is not a savings account and not life insurance. It converts a lump sum into income, usually for life. That trade can be right or wrong for you, and the deciding factor is liquidity, not the rate. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "549aa09365",
+   "platform": "linkedin",
+   "pillar": "life-final-expense",
+   "text": "Annuities get sold on the rate. The rate is rarely the thing that determines whether one was a good idea.\n\nWhat an annuity actually does is convert money you have into income you will receive, often for as long as you live. That is a real solution to a real problem, which is not knowing how long retirement will last. It is also, structurally, a trade of access for certainty.\n\nSo the first question is not what it pays. It is what you give up. Most contracts limit how much you can withdraw in the early years without a surrender charge, and those schedules can run several years. If there is a reasonable chance you will need that money for a roof, a car, or helping family, an annuity is the wrong container for it, no matter how good the rate looks.\n\nThe second question is which kind. Fixed, indexed and immediate annuities behave differently enough that grouping them under one word causes most of the confusion in the category.\n\nWe will tell you when the answer is that you do not need one. That happens often.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "07f87849a6",
+   "platform": "gbp",
+   "pillar": "life-final-expense",
+   "text": "Annuities get sold on the rate, but the rate is rarely what decides whether one was a good idea. An annuity converts money you have into income you will receive, trading access for certainty. Most contracts limit early withdrawals for several years. If there is a reasonable chance you will need that money, it is the wrong container regardless of the rate. We will tell you when the answer is that you do not need one.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

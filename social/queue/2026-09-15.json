@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-15",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "e0332aa78a",
-      "platform": "x",
-      "pillar": "ichra-employer",
-      "text": "ICHRA lets you set different allowances by employee class - full-time, part-time, seasonal, by location. Not favoritism, a structure the rules allow. Useful when one number does not fit everyone. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "d9ba8b6dbb",
-      "platform": "linkedin",
-      "pillar": "ichra-employer",
-      "text": "One ICHRA feature that gets overlooked: you do not have to offer the same allowance to everyone.\n\nThe rules let you define employee classes and fund them differently. Full-time and part-time. Salaried and hourly. Staff in one location versus another. Seasonal workers. Each class can carry its own monthly allowance, and you can also vary the amount by age and family size within a class.\n\nWhy that matters practically: a single group premium forces one answer onto a workforce that does not have one problem. A company with a young warehouse team and an older office team is subsidising two very different risk pools with one number. Classes let the budget follow the actual need.\n\nThe constraint worth knowing early is that classes have minimum size requirements in some combinations, and you cannot offer the same class a choice between a group plan and an ICHRA. That is where the design work is.\n\nWe will map your roster into classes and price it against your current renewal. No cost to see the numbers.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "67eec3a3eb",
-      "platform": "gbp",
-      "pillar": "ichra-employer",
-      "text": "Small business owners in Northern Virginia: an ICHRA does not force one allowance on everyone. The rules let you fund full-time, part-time, seasonal and by-location classes at different levels, and vary by age and family size within each. A young warehouse team and an older office team stop subsidising each other. We will map your roster into classes and price it against your current renewal, at no charge.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-15",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "e0332aa78a",
+   "platform": "x",
+   "pillar": "ichra-employer",
+   "text": "ICHRA lets you set different allowances by employee class - full-time, part-time, seasonal, by location. Not favoritism, a structure the rules allow. Useful when one number does not fit everyone. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "d9ba8b6dbb",
+   "platform": "linkedin",
+   "pillar": "ichra-employer",
+   "text": "One ICHRA feature that gets overlooked: you do not have to offer the same allowance to everyone.\n\nThe rules let you define employee classes and fund them differently. Full-time and part-time. Salaried and hourly. Staff in one location versus another. Seasonal workers. Each class can carry its own monthly allowance, and you can also vary the amount by age and family size within a class.\n\nWhy that matters practically: a single group premium forces one answer onto a workforce that does not have one problem. A company with a young warehouse team and an older office team is subsidising two very different risk pools with one number. Classes let the budget follow the actual need.\n\nThe constraint worth knowing early is that classes have minimum size requirements in some combinations, and you cannot offer the same class a choice between a group plan and an ICHRA. That is where the design work is.\n\nWe will map your roster into classes and price it against your current renewal. No cost to see the numbers.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "67eec3a3eb",
+   "platform": "gbp",
+   "pillar": "ichra-employer",
+   "text": "Small business owners in Northern Virginia: an ICHRA does not force one allowance on everyone. The rules let you fund full-time, part-time, seasonal and by-location classes at different levels, and vary by age and family size within each. A young warehouse team and an older office team stop subsidising each other. We will map your roster into classes and price it against your current renewal, at no charge.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

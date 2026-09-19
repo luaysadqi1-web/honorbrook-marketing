@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-11",
-  "generated": "2026-09-07T13:13:33",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "b0513fef91",
-      "platform": "x",
-      "pillar": "local-nova",
-      "text": "Your Part D pharmacy network can change every year - last year's preferred pharmacy may not be preferred now. Check your pharmacy and drug list before assuming your plan still fits. Not connected with or endorsed by the U.S. government or the federal Medicare program.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "9fbacfc4e6",
-      "platform": "linkedin",
-      "pillar": "local-nova",
-      "text": "Northern Virginia clients are often surprised that a pharmacy relationship they have had for years can suddenly cost more, with nothing about their health changing.\n\nMedicare Part D plans negotiate preferred pharmacy networks separately from the drug list itself, and both can change from one plan year to the next. A pharmacy preferred last year is not guaranteed to stay preferred, and a plan can also move a medication to a different tier, which changes your cost even if the pharmacy stays the same.\n\nThe check we recommend every year: confirm your pharmacy is still preferred under your plan, and confirm every medication you take is still on the formulary at the tier you expect. Doing this by drug name and dose is what catches the changes that matter.\n\nThis applies whether you are on a Medicare Advantage plan with drug coverage built in or a standalone Part D plan. Either way, the drug list is worth checking annually, not assumed.\n\nHonorbrook Insurance. (571) 354-0146\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "2bb705b474",
-      "platform": "gbp",
-      "pillar": "local-nova",
-      "text": "Your Medicare Part D pharmacy and drug list can change every year - the pharmacy that was preferred last year, or the tier your medication sat on, may be different for the coming plan year. Before you assume your coverage still fits, we'll check your specific pharmacy and every medication you take, by name and dose. Serving Vienna, Tysons, McLean, Fairfax, Arlington, Falls Church, Reston, Herndon, Oakton and Alexandria.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-11",
+ "generated": "2026-09-07T13:13:33",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "b0513fef91",
+   "platform": "x",
+   "pillar": "local-nova",
+   "text": "Your Part D pharmacy network can change every year - last year's preferred pharmacy may not be preferred now. Check your pharmacy and drug list before assuming your plan still fits. Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "9fbacfc4e6",
+   "platform": "linkedin",
+   "pillar": "local-nova",
+   "text": "Northern Virginia clients are often surprised that a pharmacy relationship they have had for years can suddenly cost more, with nothing about their health changing.\n\nMedicare Part D plans negotiate preferred pharmacy networks separately from the drug list itself, and both can change from one plan year to the next. A pharmacy preferred last year is not guaranteed to stay preferred, and a plan can also move a medication to a different tier, which changes your cost even if the pharmacy stays the same.\n\nThe check we recommend every year: confirm your pharmacy is still preferred under your plan, and confirm every medication you take is still on the formulary at the tier you expect. Doing this by drug name and dose is what catches the changes that matter.\n\nThis applies whether you are on a Medicare Advantage plan with drug coverage built in or a standalone Part D plan. Either way, the drug list is worth checking annually, not assumed.\n\nHonorbrook Insurance. (571) 354-0146\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "2bb705b474",
+   "platform": "gbp",
+   "pillar": "local-nova",
+   "text": "Your Medicare Part D pharmacy and drug list can change every year - the pharmacy that was preferred last year, or the tier your medication sat on, may be different for the coming plan year. Before you assume your coverage still fits, we'll check your specific pharmacy and every medication you take, by name and dose. Serving Vienna, Tysons, McLean, Fairfax, Arlington, Falls Church, Reston, Herndon, Oakton and Alexandria.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

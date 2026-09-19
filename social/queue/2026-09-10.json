@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-10",
-  "generated": "2026-09-07T13:13:33",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "2469851c5e",
-      "platform": "x",
-      "pillar": "life-final-expense",
-      "text": "The most common final expense mistake isn't the wrong policy type - it's the wrong amount. People often buy round numbers instead of adding up what a funeral, final medical bills, and small debts actually come to. Worth doing the math first.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "c823129735",
-      "platform": "linkedin",
-      "pillar": "life-final-expense",
-      "text": "The question we get wrong the least is whole life vs. term. The one we get wrong the most is the amount.\n\nFinal expense buyers tend to reach for a round number instead of adding up what it is actually meant to cover: funeral and burial or cremation costs, any final medical bills not covered by other insurance, and small debts that would otherwise land on family. Those numbers vary a lot by region and by the choices a family makes, and they are worth pricing out specifically rather than guessing.\n\nThe other side of the mistake is buying more than needed because a number sounded reassuring. Final expense policies are priced by the death benefit, so overbuying is a real, ongoing cost with no benefit attached to it.\n\nThe right process is to add up the real numbers first, then size the policy to that. It usually takes fifteen minutes and it changes the answer more often than people expect.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "0730615303",
-      "platform": "gbp",
-      "pillar": "life-final-expense",
-      "text": "Most final expense policies are sized by guesswork - a round number that sounds about right - instead of what a funeral, final medical bills, and small debts actually add up to locally. We'll help you price out the real number before you buy, so you're not paying for coverage you don't need or leaving a gap for the ones you love. No pressure, no obligation.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-10",
+ "generated": "2026-09-07T13:13:33",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "2469851c5e",
+   "platform": "x",
+   "pillar": "life-final-expense",
+   "text": "The most common final expense mistake isn't the wrong policy type - it's the wrong amount. People often buy round numbers instead of adding up what a funeral, final medical bills, and small debts actually come to. Worth doing the math first.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "c823129735",
+   "platform": "linkedin",
+   "pillar": "life-final-expense",
+   "text": "The question we get wrong the least is whole life vs. term. The one we get wrong the most is the amount.\n\nFinal expense buyers tend to reach for a round number instead of adding up what it is actually meant to cover: funeral and burial or cremation costs, any final medical bills not covered by other insurance, and small debts that would otherwise land on family. Those numbers vary a lot by region and by the choices a family makes, and they are worth pricing out specifically rather than guessing.\n\nThe other side of the mistake is buying more than needed because a number sounded reassuring. Final expense policies are priced by the death benefit, so overbuying is a real, ongoing cost with no benefit attached to it.\n\nThe right process is to add up the real numbers first, then size the policy to that. It usually takes fifteen minutes and it changes the answer more often than people expect.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "0730615303",
+   "platform": "gbp",
+   "pillar": "life-final-expense",
+   "text": "Most final expense policies are sized by guesswork - a round number that sounds about right - instead of what a funeral, final medical bills, and small debts actually add up to locally. We'll help you price out the real number before you buy, so you're not paying for coverage you don't need or leaving a gap for the ones you love. No pressure, no obligation.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

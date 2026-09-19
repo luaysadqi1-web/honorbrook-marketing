@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-17",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "823915d78b",
-      "platform": "x",
-      "pillar": "life-final-expense",
-      "text": "Two final expense policies at the same price can pay very differently. A level benefit pays the full amount from day one. A graded benefit pays only premiums back, or a fraction, if death occurs in the first two or three years. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "f338231e2e",
-      "platform": "linkedin",
-      "pillar": "life-final-expense",
-      "text": "If you are comparing small whole life policies for funeral costs, the number to check first is not the premium. It is whether the benefit is level or graded.\n\nA level benefit pays the full face amount from day one. A graded benefit pays a reduced amount during an initial period, often two or three years, and sometimes only returns the premiums paid plus interest. Both are legitimate products. They are not interchangeable, and two policies quoted at similar monthly cost can sit on opposite sides of that line.\n\nGraded benefit policies exist because they accept applicants who would not qualify for a level benefit, usually for health reasons. If you are healthy enough to be approved for level, buying graded means paying for a waiting period you did not need.\n\nThe second question, asked in the same breath: can the premium increase, and can the coverage end at a certain age? Some products people think of as permanent are not.\n\nWe read those two pages with you before anything is signed. We have told people the policy in front of them was not worth buying. That is part of the job.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "0089fc1413",
-      "platform": "gbp",
-      "pillar": "life-final-expense",
-      "text": "Comparing final expense policies? Check whether the benefit is level or graded before you look at the price. Level pays the full amount from day one. Graded pays a reduced amount, sometimes only your premiums back, if death occurs in the first two or three years. Two policies at similar monthly cost can sit on opposite sides of that line. We read those pages with you before anything is signed.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-17",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "823915d78b",
+   "platform": "x",
+   "pillar": "life-final-expense",
+   "text": "Two final expense policies at the same price can pay very differently. A level benefit pays the full amount from day one. A graded benefit pays only premiums back, or a fraction, if death occurs in the first two or three years. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "f338231e2e",
+   "platform": "linkedin",
+   "pillar": "life-final-expense",
+   "text": "If you are comparing small whole life policies for funeral costs, the number to check first is not the premium. It is whether the benefit is level or graded.\n\nA level benefit pays the full face amount from day one. A graded benefit pays a reduced amount during an initial period, often two or three years, and sometimes only returns the premiums paid plus interest. Both are legitimate products. They are not interchangeable, and two policies quoted at similar monthly cost can sit on opposite sides of that line.\n\nGraded benefit policies exist because they accept applicants who would not qualify for a level benefit, usually for health reasons. If you are healthy enough to be approved for level, buying graded means paying for a waiting period you did not need.\n\nThe second question, asked in the same breath: can the premium increase, and can the coverage end at a certain age? Some products people think of as permanent are not.\n\nWe read those two pages with you before anything is signed. We have told people the policy in front of them was not worth buying. That is part of the job.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "0089fc1413",
+   "platform": "gbp",
+   "pillar": "life-final-expense",
+   "text": "Comparing final expense policies? Check whether the benefit is level or graded before you look at the price. Level pays the full amount from day one. Graded pays a reduced amount, sometimes only your premiums back, if death occurs in the first two or three years. Two policies at similar monthly cost can sit on opposite sides of that line. We read those pages with you before anything is signed.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

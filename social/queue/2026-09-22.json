@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-22",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "883afd38c1",
-      "platform": "x",
-      "pillar": "ichra-employer",
-      "text": "One ICHRA feature owners underrate: the policy belongs to the employee. When someone leaves, their coverage does not collapse on their last day, and you are not administering COBRA for a plan you no longer hold. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "f0706c2257",
-      "platform": "linkedin",
-      "pillar": "ichra-employer",
-      "text": "A question that comes up once an owner starts taking an ICHRA seriously: what happens when someone leaves?\n\nWith a group plan, the coverage is the company's. An employee's last day is also their coverage's last day, and then you are into COBRA administration, notices, deadlines and the risk of getting the paperwork wrong.\n\nWith an ICHRA, the policy belongs to the employee. They bought it, they own it. When they leave, your allowance stops and their coverage continues. They keep their plan, their doctors and their deductible progress, and they move to paying for it themselves or picking up a subsidy if they now qualify. Losing the ICHRA contribution is itself a qualifying event, so they are not stranded mid-year.\n\nFor the business, the administrative tail largely disappears. For the employee, the thing they were most anxious about, losing the doctor in the middle of treatment, mostly does not happen.\n\nThis is not a reason on its own to move. It is a real cost that never shows up in a premium comparison.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "4f0d197336",
-      "platform": "gbp",
-      "pillar": "ichra-employer",
-      "text": "Small employers: with a group plan, an employee's last day is their coverage's last day, and then you are administering COBRA. With an ICHRA the policy belongs to the employee, so when they leave your allowance stops and their coverage continues, doctors and deductible progress intact. The administrative tail largely disappears. We will price an ICHRA against your current renewal at no charge. Tysons office.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-22",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "883afd38c1",
+   "platform": "x",
+   "pillar": "ichra-employer",
+   "text": "One ICHRA feature owners underrate: the policy belongs to the employee. When someone leaves, their coverage does not collapse on their last day, and you are not administering COBRA for a plan you no longer hold. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "f0706c2257",
+   "platform": "linkedin",
+   "pillar": "ichra-employer",
+   "text": "A question that comes up once an owner starts taking an ICHRA seriously: what happens when someone leaves?\n\nWith a group plan, the coverage is the company's. An employee's last day is also their coverage's last day, and then you are into COBRA administration, notices, deadlines and the risk of getting the paperwork wrong.\n\nWith an ICHRA, the policy belongs to the employee. They bought it, they own it. When they leave, your allowance stops and their coverage continues. They keep their plan, their doctors and their deductible progress, and they move to paying for it themselves or picking up a subsidy if they now qualify. Losing the ICHRA contribution is itself a qualifying event, so they are not stranded mid-year.\n\nFor the business, the administrative tail largely disappears. For the employee, the thing they were most anxious about, losing the doctor in the middle of treatment, mostly does not happen.\n\nThis is not a reason on its own to move. It is a real cost that never shows up in a premium comparison.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "4f0d197336",
+   "platform": "gbp",
+   "pillar": "ichra-employer",
+   "text": "Small employers: with a group plan, an employee's last day is their coverage's last day, and then you are administering COBRA. With an ICHRA the policy belongs to the employee, so when they leave your allowance stops and their coverage continues, doctors and deductible progress intact. The administrative tail largely disappears. We will price an ICHRA against your current renewal at no charge. Tysons office.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

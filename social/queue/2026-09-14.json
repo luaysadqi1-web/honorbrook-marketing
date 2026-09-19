@@ -1,38 +1,44 @@
 {
-  "date": "2026-09-14",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "4484c4641b",
-      "platform": "x",
-      "pillar": "medicare-foundations",
-      "text": "Delay Part B without creditable coverage and the late penalty is 10% of the premium for every 12 months you waited. It is added for life, not once. Worth checking your dates before you delay. Not connected with or endorsed by the U.S. government or the federal Medicare program.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "55127024ba",
-      "platform": "linkedin",
-      "pillar": "medicare-foundations",
-      "text": "Most people know there is a penalty for enrolling in Part B late. Far fewer know it never goes away.\n\nThe math: 10% added for each full 12-month period you could have had Part B and did not. It is applied to your premium every month, for as long as you have Part B. A two-year delay is not a two-year problem.\n\nThe exception that saves people is creditable coverage, usually an active employer plan. Whether yours counts turns partly on how many employees the company has, and the threshold is lower than most people assume. Retiree coverage and COBRA generally do not count, which is where we see the expensive surprises.\n\nIf you are approaching 65 and still working, map the dates before you make any decision. There is no cost to have someone check, and no obligation afterward.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "0cbdf4a255",
-      "platform": "gbp",
-      "pillar": "medicare-foundations",
-      "text": "Still working at 65 and thinking about delaying Part B? Whether that is safe depends on your employer's size and whether your plan counts as creditable coverage. Get it wrong and the late penalty is 10% of the premium for every year you waited, added for life. We map your dates at no cost and tell you plainly if delaying is fine. Independent agency in Tysons.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-14",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "4484c4641b",
+   "platform": "x",
+   "pillar": "medicare-foundations",
+   "text": "Delay Part B without creditable coverage and the late penalty is 10% of the premium for every 12 months you waited. It is added for life, not once. Worth checking your dates before you delay. Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": [
+    "not configured: missing env vars: X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET"
+   ]
+  },
+  {
+   "id": "55127024ba",
+   "platform": "linkedin",
+   "pillar": "medicare-foundations",
+   "text": "Most people know there is a penalty for enrolling in Part B late. Far fewer know it never goes away.\n\nThe math: 10% added for each full 12-month period you could have had Part B and did not. It is applied to your premium every month, for as long as you have Part B. A two-year delay is not a two-year problem.\n\nThe exception that saves people is creditable coverage, usually an active employer plan. Whether yours counts turns partly on how many employees the company has, and the threshold is lower than most people assume. Retiree coverage and COBRA generally do not count, which is where we see the expensive surprises.\n\nIf you are approaching 65 and still working, map the dates before you make any decision. There is no cost to have someone check, and no obligation afterward.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": [
+    "not configured: missing env vars: LINKEDIN_ACCESS_TOKEN"
+   ]
+  },
+  {
+   "id": "0cbdf4a255",
+   "platform": "gbp",
+   "pillar": "medicare-foundations",
+   "text": "Still working at 65 and thinking about delaying Part B? Whether that is safe depends on your employer's size and whether your plan counts as creditable coverage. Get it wrong and the late penalty is 10% of the premium for every year you waited, added for life. We map your dates at no cost and tell you plainly if delaying is fine. Independent agency in Tysons.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [
+    "not configured: missing env vars: GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN, GBP_ACCOUNT_ID, GBP_LOCATION_ID"
+   ],
+   "cta": "CALL"
+  }
+ ]
 }

@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-08",
-  "generated": "2026-09-07T13:13:33",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "b32d3d1da8",
-      "platform": "x",
-      "pillar": "ichra-employer",
-      "text": "Under 25 employees and paying at least half of premiums? You may qualify for the Small Business Health Care Tax Credit through SHOP - worth checking before you assume group coverage is a pure cost. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "5b3d6e8226",
-      "platform": "linkedin",
-      "pillar": "ichra-employer",
-      "text": "Most small employers write off the small-business health care tax credit before checking if they qualify.\n\nThe credit runs through the SHOP marketplace and generally requires: fewer than 25 full-time equivalent employees, average annual wages under a set threshold that adjusts each year, and the employer paying at least half of employee premium cost. Qualifying employers can claim the credit for two consecutive years.\n\nThe two things that trip people up:\n\n- The employee count is measured in full-time equivalents, not headcount, so a mix of part-time staff often still qualifies\n- The credit applies to SHOP-purchased group plans specifically, not an ICHRA allowance\n\nWorth noting: this is a separate question from whether ICHRA or a traditional group plan is the better structure for your business. Some employers find the tax credit makes a SHOP group plan worth keeping even when an ICHRA would otherwise pencil out lower. That is a real comparison, not a default answer.\n\nIf you have not checked whether you qualify, it takes about ten minutes to find out.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "6d5b6b5992",
-      "platform": "gbp",
-      "pillar": "ichra-employer",
-      "text": "Small business owner with under 25 employees in Northern Virginia? You may qualify for the Small Business Health Care Tax Credit if you cover at least half of employee premiums - a credit many owners never check for. We'll run your numbers against both a SHOP group plan and an ICHRA so you can see which structure actually costs less. No charge to find out.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-08",
+ "generated": "2026-09-07T13:13:33",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "b32d3d1da8",
+   "platform": "x",
+   "pillar": "ichra-employer",
+   "text": "Under 25 employees and paying at least half of premiums? You may qualify for the Small Business Health Care Tax Credit through SHOP - worth checking before you assume group coverage is a pure cost. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "5b3d6e8226",
+   "platform": "linkedin",
+   "pillar": "ichra-employer",
+   "text": "Most small employers write off the small-business health care tax credit before checking if they qualify.\n\nThe credit runs through the SHOP marketplace and generally requires: fewer than 25 full-time equivalent employees, average annual wages under a set threshold that adjusts each year, and the employer paying at least half of employee premium cost. Qualifying employers can claim the credit for two consecutive years.\n\nThe two things that trip people up:\n\n- The employee count is measured in full-time equivalents, not headcount, so a mix of part-time staff often still qualifies\n- The credit applies to SHOP-purchased group plans specifically, not an ICHRA allowance\n\nWorth noting: this is a separate question from whether ICHRA or a traditional group plan is the better structure for your business. Some employers find the tax credit makes a SHOP group plan worth keeping even when an ICHRA would otherwise pencil out lower. That is a real comparison, not a default answer.\n\nIf you have not checked whether you qualify, it takes about ten minutes to find out.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "6d5b6b5992",
+   "platform": "gbp",
+   "pillar": "ichra-employer",
+   "text": "Small business owner with under 25 employees in Northern Virginia? You may qualify for the Small Business Health Care Tax Credit if you cover at least half of employee premiums - a credit many owners never check for. We'll run your numbers against both a SHOP group plan and an ICHRA so you can see which structure actually costs less. No charge to find out.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

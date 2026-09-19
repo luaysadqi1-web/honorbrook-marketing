@@ -26,7 +26,10 @@ import x_client
 import linkedin_client
 import gbp_client
 
-AUTO_PLATFORMS = ("x", "linkedin", "gbp")
+# GBP is scheduled through Metricool (brand 6893064), which already holds the
+# Google-approved Business Profile connection. Leaving "gbp" here would double-post
+# every Metricool GBP item the moment GBP_* credentials appear in .env.
+AUTO_PLATFORMS = ("x", "linkedin")
 
 
 class NotConfiguredError(str):

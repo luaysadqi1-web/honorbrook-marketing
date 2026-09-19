@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-26",
-  "generated": "2026-09-13T15:11:59",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "268907ae63",
-      "platform": "x",
-      "pillar": "you-asked",
-      "text": "You asked: do I have to switch plans every year? No. Most people should review and then stay. Switching is not the goal. Knowing whether your plan still fits your doctors and medications is. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "2a0e1c2aac",
-      "platform": "linkedin",
-      "pillar": "you-asked",
-      "text": "You asked: do I have to change plans every year?\n\nNo. And anyone implying otherwise is selling something.\n\nHere is the distinction that matters. Reviewing is annual. Switching is occasional. Your plan sets its premium, its provider network and its drug list once a year, and it does not need your agreement to change any of them. So reviewing is just confirming that the plan you chose is still the plan you have.\n\nIn most years, for most people, that review ends with no change at all. When it does end in a switch, it is almost always one of two specific reasons: a medication moved to a higher tier, or a doctor left the network. Those are concrete, checkable things, not matters of opinion.\n\nWhat we would push back on is the opposite habit, which is treating no news as good news. The plan documents that arrive in the autumn are the news. They just do not look like it.\n\nFifteen minutes, no cost, and often the outcome is that you keep exactly what you have.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "f538c43dc7",
-      "platform": "gbp",
-      "pillar": "you-asked",
-      "text": "You asked: do I have to switch plans every year? No. Reviewing is annual, switching is occasional, and most reviews end with no change at all. When a switch does make sense it is usually one of two reasons: a medication moved to a higher tier, or a doctor left the network. Both are concrete and checkable. Fifteen minutes at no cost, often ending with you keeping exactly what you have.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-26",
+ "generated": "2026-09-13T15:11:59",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "268907ae63",
+   "platform": "x",
+   "pillar": "you-asked",
+   "text": "You asked: do I have to switch plans every year? No. Most people should review and then stay. Switching is not the goal. Knowing whether your plan still fits your doctors and medications is. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "2a0e1c2aac",
+   "platform": "linkedin",
+   "pillar": "you-asked",
+   "text": "You asked: do I have to change plans every year?\n\nNo. And anyone implying otherwise is selling something.\n\nHere is the distinction that matters. Reviewing is annual. Switching is occasional. Your plan sets its premium, its provider network and its drug list once a year, and it does not need your agreement to change any of them. So reviewing is just confirming that the plan you chose is still the plan you have.\n\nIn most years, for most people, that review ends with no change at all. When it does end in a switch, it is almost always one of two specific reasons: a medication moved to a higher tier, or a doctor left the network. Those are concrete, checkable things, not matters of opinion.\n\nWhat we would push back on is the opposite habit, which is treating no news as good news. The plan documents that arrive in the autumn are the news. They just do not look like it.\n\nFifteen minutes, no cost, and often the outcome is that you keep exactly what you have.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "f538c43dc7",
+   "platform": "gbp",
+   "pillar": "you-asked",
+   "text": "You asked: do I have to switch plans every year? No. Reviewing is annual, switching is occasional, and most reviews end with no change at all. When a switch does make sense it is usually one of two reasons: a medication moved to a higher tier, or a doctor left the network. Both are concrete and checkable. Fifteen minutes at no cost, often ending with you keeping exactly what you have.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }

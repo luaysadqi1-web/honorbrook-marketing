@@ -1,38 +1,38 @@
 {
-  "date": "2026-09-12",
-  "generated": "2026-09-07T13:13:33",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "97bec9a834",
-      "platform": "x",
-      "pillar": "you-asked",
-      "text": "You asked: if I switch plans, can I keep my doctor? Sometimes - it depends entirely on whether your doctor is in that plan's network, not on the plan's reputation. We check your specific doctors against a specific plan's directory before you switch anything.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "7d747878df",
-      "platform": "linkedin",
-      "pillar": "you-asked",
-      "text": "\"Can I keep my doctor?\" is the question underneath almost every plan question we get, so here is the honest answer: it depends on the plan's network, not on the plan's reputation or its price.\n\nTwo plans that look similar on paper can have completely different provider networks. A plan can be well-reviewed generally and still not include your specific specialist, or include your primary care doctor but not the hospital they admit to.\n\nThe only reliable way to answer this is to check your actual doctors, by name, against a specific plan's current provider directory - not a summary, not a sales page. Directories change, sometimes mid-year, so this is worth re-checking even for a plan you are already on, not just one you are considering.\n\nWe do this check before recommending anything, because a plan that costs less but drops your cardiologist is not actually the cheaper option once you count what switching costs you in continuity of care.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "f6219a2f46",
-      "platform": "gbp",
-      "pillar": "you-asked",
-      "text": "You asked: if I switch plans, can I keep my doctor? It depends on that specific plan's provider network, not its price or reputation. Two plans that look similar on paper can cover completely different doctors and hospitals. Before you switch anything, we'll check your actual doctors and specialists by name against the plan's current directory. We do this at no cost, across Northern Virginia.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-09-12",
+ "generated": "2026-09-07T13:13:33",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "97bec9a834",
+   "platform": "x",
+   "pillar": "you-asked",
+   "text": "You asked: if I switch plans, can I keep my doctor? Sometimes - it depends entirely on whether your doctor is in that plan's network, not on the plan's reputation. We check your specific doctors against a specific plan's directory before you switch anything.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "7d747878df",
+   "platform": "linkedin",
+   "pillar": "you-asked",
+   "text": "\"Can I keep my doctor?\" is the question underneath almost every plan question we get, so here is the honest answer: it depends on the plan's network, not on the plan's reputation or its price.\n\nTwo plans that look similar on paper can have completely different provider networks. A plan can be well-reviewed generally and still not include your specific specialist, or include your primary care doctor but not the hospital they admit to.\n\nThe only reliable way to answer this is to check your actual doctors, by name, against a specific plan's current provider directory - not a summary, not a sales page. Directories change, sometimes mid-year, so this is worth re-checking even for a plan you are already on, not just one you are considering.\n\nWe do this check before recommending anything, because a plan that costs less but drops your cardiologist is not actually the cheaper option once you count what switching costs you in continuity of care.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "f6219a2f46",
+   "platform": "gbp",
+   "pillar": "you-asked",
+   "text": "You asked: if I switch plans, can I keep my doctor? It depends on that specific plan's provider network, not its price or reputation. Two plans that look similar on paper can cover completely different doctors and hospitals. Before you switch anything, we'll check your actual doctors and specialists by name against the plan's current directory. We do this at no cost, across Northern Virginia.",
+   "note": "scheduled via Metricool brand 6893064 on 2026-09-19; local poster no longer handles gbp",
+   "status": "moved-to-metricool",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL"
+  }
+ ]
 }
