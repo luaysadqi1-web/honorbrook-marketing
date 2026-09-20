@@ -79,8 +79,71 @@
     .page-hero h1{font-size:32px}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "@id": "https://honorbrook-insurance.com/#organization",
+  "name": "Honorbrook Insurance",
+  "legalName": "Luay's Lifeline Inc.",
+  "url": "https://honorbrook-insurance.com/",
+  "logo": "https://honorbrook-insurance.com/assets/logo.svg",
+  "image": "https://honorbrook-insurance.com/assets/og-image.jpg",
+  "telephone": "+1-571-354-0146",
+  "email": "info@honorbrook-insurance.com",
+  "priceRange": "Free consultation",
+  "description": "Independent insurance agency specializing in Medicare Advantage, Medicare Supplement (Medigap), Part D, final expense life insurance, ICHRA, ACA, group/SHOP coverage, and senior health products. Free, no-pressure guidance from 90+ carriers. Serving Tysons and Northern Virginia; licensed in 11 states.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8609 Westwood Center Dr, Suite 110",
+    "addressLocality": "Tysons",
+    "addressRegion": "VA",
+    "postalCode": "22182",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "38.9283105", "longitude": "-77.2464425" },
+  "areaServed": ["Virginia","Maryland","Georgia","Texas","Michigan","North Carolina","South Carolina","Alabama","Louisiana","Indiana","West Virginia"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens": "08:00","closes": "20:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Saturday","Sunday"],"opens": "09:00","closes": "14:30"}
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Luay Sadqi",
+    "jobTitle": "Licensed Insurance Agent",
+    "identifier": "NPN 21370662"
+  },
+  "knowsAbout": ["Medicare Advantage","Medicare Supplement (Medigap)","Medicare Part D","Final Expense Life Insurance","Hospital Indemnity Insurance","Cancer and Critical Illness Insurance","Dental Vision and Hearing Plans","ICHRA","ACA Health Plans","Group and SHOP Insurance"],
+  "hasMap": "https://g.page/r/CSVdc8pCgKkAEAE/",
+  "sameAs": [
+    "https://www.facebook.com/HonorbrookInsurance",
+    "https://www.instagram.com/honorbrookinsurance",
+    "https://www.linkedin.com/company/honorbrook-insurance",
+    "https://www.tiktok.com/@honorbrookinsurance",
+    "https://www.youtube.com/@luaysadqi5069",
+    "https://g.page/r/CSVdc8pCgKkAEAE/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://honorbrook-insurance.com/contact#webpage",
+  "url": "https://honorbrook-insurance.com/contact",
+  "name": "Contact Honorbrook Insurance | (571) 354-0146",
+  "isPartOf": {
+    "@id": "https://honorbrook-insurance.com/#website"
+  },
+  "about": {
+    "@id": "https://honorbrook-insurance.com/#organization"
+  }
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to main content</a>
+
 
 <div class="topbar sans">
   <div class="wrap">
@@ -112,7 +175,7 @@
   <span id="aepMsg"></span> <a href="#contact">Get on our priority review list →</a>
 </div>
 
-<section class="page-hero" id="top">
+<section class="page-hero" id="top" role="main">
   <div class="wrap">
     <div class="breadcrumb"><a href="/">Home</a><span>›</span>Contact</div>
     <h1>Let's find your <em>coverage</em> together.</h1>
@@ -137,7 +200,7 @@
           src="https://www.google.com/maps?q=8609%20Westwood%20Center%20Dr%20Suite%20110%2C%20Tysons%2C%20VA%2022182&amp;output=embed"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <p class="map-actions sans"><a href="https://www.google.com/maps/search/?api=1&amp;query=Honorbrook+Insurance+8609+Westwood+Center+Dr+Suite+110+Tysons+VA+22182" rel="noopener" target="_blank">Get directions on Google Maps &rsaquo;</a></p>
+      <p class="map-actions sans"><a href="https://g.page/r/CSVdc8pCgKkAEAE/" rel="noopener" target="_blank">Get directions on Google Maps &rsaquo;</a></p>
       <div class="info-line"><span class="ic">🕐</span><div><strong>Hours</strong><br>Monday–Friday, 8am–8pm ET<br>Saturday–Sunday, 9am–2:30pm ET</div></div>
     </div>
     <!-- LEADS GO LIVE: replace xgobjlba with the same Formspree form id. -->
@@ -145,14 +208,14 @@
       <input type="hidden" name="_subject" value="New Contact Message — Honorbrook website">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <h3 style="font-size:23px;margin-bottom:4px">Send us a message</h3>
-      <label>Full name</label>
-      <input type="text" name="Name" autocomplete="name" required>
-      <label>Phone</label>
-      <input type="tel" name="Phone" autocomplete="tel" required>
-      <label>Email</label>
-      <input type="email" name="Email" autocomplete="email">
-      <label>What can we help with?</label>
-      <select name="Topic">
+      <label for="f1-name">Full name</label>
+      <input id="f1-name" type="text" name="Name" autocomplete="name" required>
+      <label for="f2-phone">Phone</label>
+      <input id="f2-phone" type="tel" name="Phone" autocomplete="tel" required>
+      <label for="f3-email">Email</label>
+      <input id="f3-email" type="email" name="Email" autocomplete="email">
+      <label for="f4-topic">What can we help with?</label>
+      <select id="f4-topic" name="Topic">
         <option>Medicare plan review / enrollment</option>
         <option>Final expense / burial insurance</option>
         <option>ICHRA (employer health reimbursement)</option>
@@ -162,8 +225,8 @@
         <option>Dental, vision &amp; hearing</option>
         <option>Something else</option>
       </select>
-      <label>Message</label>
-      <textarea name="Message" rows="4" placeholder="I'm turning 65 in September and want to compare plans…"></textarea>
+      <label for="f5-message">Message</label>
+      <textarea id="f5-message" name="Message" rows="4" placeholder="I'm turning 65 in September and want to compare plans…"></textarea>
       <label class="consent"><input type="checkbox" name="Consent" value="Yes" required>
         <span>By submitting, I authorize Honorbrook Insurance to contact me by phone or text (including automated means) about insurance. Consent isn't a condition of purchase; reply STOP to opt out. See our <a href='/privacy-policy' rel='noopener' target='_blank'>Privacy Policy</a>.</span>
       </label>
@@ -231,7 +294,7 @@
       <a href="https://www.linkedin.com/company/honorbrook-insurance" rel="me noopener" target="_blank" aria-label="Honorbrook Insurance on LinkedIn">LinkedIn</a>
       <a href="https://www.tiktok.com/@honorbrookinsurance" rel="me noopener" target="_blank" aria-label="Honorbrook Insurance on TikTok">TikTok</a>
       <a href="https://www.youtube.com/@luaysadqi5069" rel="me noopener" target="_blank" aria-label="Honorbrook Insurance on YouTube">YouTube</a>
-      <a href="https://www.google.com/maps/search/?api=1&amp;query=Honorbrook+Insurance+8609+Westwood+Center+Dr+Suite+110+Tysons+VA+22182" rel="noopener" target="_blank" aria-label="Honorbrook Insurance on Google Maps">Google&nbsp;Maps</a>
+      <a href="https://g.page/r/CSVdc8pCgKkAEAE/" rel="noopener" target="_blank" aria-label="Honorbrook Insurance on Google Maps">Google&nbsp;Maps</a>
     </div>
     <div class="svc-areas">
       <strong>Serving <a href="/northern-virginia-medicare-insurance">Northern Virginia</a>:</strong> <a href="/vienna-medicare-insurance">Vienna</a> · <a href="/tysons-medicare-insurance">Tysons</a> · <a href="/mclean-medicare-insurance">McLean</a> · <a href="/falls-church-medicare-insurance">Falls Church</a> · <a href="/fairfax-medicare-insurance">Fairfax</a> · <a href="/oakton-medicare-insurance">Oakton</a> · <a href="/reston-medicare-insurance">Reston</a> · <a href="/herndon-medicare-insurance">Herndon</a> · <a href="/arlington-medicare-insurance">Arlington</a> · <a href="/alexandria-medicare-insurance">Alexandria</a>

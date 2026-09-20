@@ -58,6 +58,8 @@ nav.menu a:hover::after{transform:scaleX(1)}
 .breadcrumb a{color:var(--gold-l);text-decoration:none}
 .breadcrumb a:hover{text-decoration:underline}
 
+.skip-link{position:absolute;left:-9999px;top:0;z-index:999;background:var(--navy);color:#fff;padding:12px 20px;font-family:'Source Sans 3',Arial,sans-serif;font-weight:700;text-decoration:none}
+.skip-link:focus{left:8px;top:8px;outline:3px solid var(--gold)}
 /* ---------- kicker (heritage label) ---------- */
 .kicker{font-family:'Source Sans 3',Arial,sans-serif;text-transform:uppercase;letter-spacing:3px;font-size:13px;color:var(--gold-d);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:12px}
 .kicker::after{content:"";flex:0 0 42px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
