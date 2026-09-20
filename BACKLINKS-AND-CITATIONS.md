@@ -1,8 +1,9 @@
 # Honorbrook — Backlink & Citation Plan
 
-**Status as of 2026-09-20:** a search for `"Honorbrook Insurance" Tysons Virginia` returns
-**no third-party listings at all** — no BBB, no Yelp, no directory profiles. The only
-result for the brand is honorbrook-insurance.com itself. Worse, the indexed description
+**Status as of 2026-09-20:** a brand search surfaces **no third-party listings**. A BBB
+profile does exist (found only by querying BBB directly, not via search) but it carries
+the **old Vienna address and no website link**. A Yelp listing reportedly exists but is
+not publicly indexed. In practice the brand has no working citations. Worse, the indexed description
 still says the agency is "based in Vienna" — stale data from the old address.
 
 That is the whole opportunity: the site is technically strong (72 pages, clean schema,
@@ -62,8 +63,8 @@ Google cross-references these to confirm your business is real and where it says
 | 1 | **Google Business Profile** | Already live (`g.page/r/CSVdc8pCgKkAEAE`). Now linked sitewide from the footer and declared in `sameAs` schema. Keep posting weekly. |
 | 2 | **Bing Places** | Feeds Bing + Copilot answers. Can import directly from your GBP. 10 minutes. |
 | 3 | **Apple Business Connect** | Feeds Apple Maps and Siri. Free. Heavily used by the 65+ iPhone demographic — unusually relevant to your audience. |
-| 4 | **Better Business Bureau** | High trust weight for insurance specifically, and your buyers actively check it. Paid accreditation is optional; the free listing is the citation. |
-| 5 | **Yelp** | Low lead value for Medicare, but Yelp is a strong citation source and Apple pulls from it. |
+| 4 | **Better Business Bureau** | **ALREADY LIVE** — rating A, not accredited, founded Nov 2024, 0 reviews. But it lists **Vienna** (site says Tysons) and has **no website link**, so it currently passes zero link value. See `BBB-LISTING-CORRECTIONS.md`. |
+| 5 | **Yelp** | User reports a listing exists, but it is not publicly indexed and Yelp blocks automated lookups — URL needed to verify NAP and website link. |
 | 6 | **Nextdoor Business** | Northern Virginia is dense with active Nextdoor neighborhoods. Strong for "who do you use for Medicare?" word-of-mouth posts. |
 | 7 | **Foursquare / Factual** | Data aggregator — feeds dozens of downstream apps from one submission. |
 | 8 | **Chamberofcommerce.com** | Free national business directory listing, separate from your actual chamber membership. |
