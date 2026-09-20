@@ -122,9 +122,9 @@ table.compare td:first-child{font-weight:700;color:var(--navy);font-family:'Play
 .related .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .rel-card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:24px;box-shadow:0 6px 22px rgba(27,47,75,.06);text-decoration:none;display:block;transition:transform .15s,box-shadow .15s}
 .rel-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(27,47,75,.12)}
-.rel-card h4{font-size:19px;margin-bottom:7px}
+.rel-card h3{font-size:19px;margin-bottom:7px}
 .rel-card p{font-size:15px;color:var(--muted);font-family:'Source Sans 3',Arial,sans-serif;line-height:1.5}
-.rel-card:hover h4{color:var(--gold-d)}
+.rel-card:hover h3{color:var(--gold-d)}
 
 /* ---------- closing band ---------- */
 .band{position:relative;background:linear-gradient(135deg,var(--navy-d),#22384f);color:#eef1f6;text-align:center;padding:56px 0;border-top:4px solid var(--gold);border-bottom:4px solid var(--gold)}
@@ -135,7 +135,7 @@ table.compare td:first-child{font-weight:700;color:var(--navy);font-family:'Play
 /* ---------- footer ---------- */
 footer{background:var(--navy-d);color:#9fb0c6;padding:48px 0 92px;font-size:14.5px;font-family:'Source Sans 3',Arial,sans-serif}
 footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;margin-bottom:30px}
-footer h4{color:var(--white);font-size:14px;margin-bottom:14px;letter-spacing:2px;text-transform:uppercase;font-family:'Source Sans 3',Arial,sans-serif;font-weight:700}
+footer h3{color:var(--white);font-size:14px;margin-bottom:14px;letter-spacing:2px;text-transform:uppercase;font-family:'Source Sans 3',Arial,sans-serif;font-weight:700}
 footer p{line-height:1.6}
 footer a{color:#c2ccdb;text-decoration:none;display:block;margin-bottom:9px}
 footer a:hover{color:var(--gold-l)}

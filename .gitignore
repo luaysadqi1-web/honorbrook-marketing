@@ -10,3 +10,4 @@ node_modules/
 # social routine secrets - never commit
 social/.env
 social/logs/*.csv
+__pycache__/
