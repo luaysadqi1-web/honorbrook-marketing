@@ -20,7 +20,7 @@ single most common reason local rankings stall.
 ```
 Name:     Honorbrook Insurance
 Address:  8609 Westwood Center Dr, Suite 110
-City:     Tysons, VA 22182
+City:     Tysons, VA 22182        <- CONFIRMED against Google Business Profile 2026-09-20
 Phone:    (571) 354-0146
 Website:  https://honorbrook-insurance.com
 Email:    info@honorbrook-insurance.com
@@ -30,7 +30,8 @@ Hours:    Mon-Fri 8:00am-8:00pm; Sat-Sun 9:00am-2:30pm
 ```
 
 Do **not** write "Vienna", "Westwood Center Drive" (spelled out), or omit "Suite 110".
-The site itself was inconsistent until this week — that is now fixed sitewide.
+The site itself was inconsistent until this week — that is now fixed sitewide, and it
+matches GBP. **BBB and Yelp both currently say Vienna and both need correcting.**
 
 Category to pick when offered: **Insurance Agency** (secondary: Insurance Broker,
 Health Insurance Agency). Never "Insurance Company" — you are not a carrier.
@@ -64,7 +65,7 @@ Google cross-references these to confirm your business is real and where it says
 | 2 | **Bing Places** | Feeds Bing + Copilot answers. Can import directly from your GBP. 10 minutes. |
 | 3 | **Apple Business Connect** | Feeds Apple Maps and Siri. Free. Heavily used by the 65+ iPhone demographic — unusually relevant to your audience. |
 | 4 | **Better Business Bureau** | **ALREADY LIVE** — rating A, not accredited, founded Nov 2024, 0 reviews. But it lists **Vienna** (site says Tysons) and has **no website link**, so it currently passes zero link value. See `BBB-LISTING-CORRECTIONS.md`. |
-| 5 | **Yelp** | User reports a listing exists, but it is not publicly indexed and Yelp blocks automated lookups — URL needed to verify NAP and website link. |
+| 5 | **Yelp** | **ALREADY LIVE + CLAIMED** — yelp.com/biz/honorbrook-insurance-vienna. Website link is present, hours correct, but address says **Vienna with no suite number** and categories omit Insurance Agency. See `BBB-LISTING-CORRECTIONS.md`. |
 | 6 | **Nextdoor Business** | Northern Virginia is dense with active Nextdoor neighborhoods. Strong for "who do you use for Medicare?" word-of-mouth posts. |
 | 7 | **Foursquare / Factual** | Data aggregator — feeds dozens of downstream apps from one submission. |
 | 8 | **Chamberofcommerce.com** | Free national business directory listing, separate from your actual chamber membership. |

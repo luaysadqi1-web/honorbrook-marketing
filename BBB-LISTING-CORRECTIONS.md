@@ -95,21 +95,25 @@ https://www.tiktok.com/@honorbrookinsurance
 
 ---
 
-## Two things to confirm before you submit
+## Confirmed: the city is TYSONS
 
-**1. City — Vienna or Tysons?**
-BBB says Vienna. The website now says Tysons on all 72 pages. USPS treats *Vienna* as
-the default city for ZIP 22182, with *Tysons* an accepted alternate, so address-validating
-directories will tend to rewrite Tysons back to Vienna on their own.
+Verified on the Google Business Profile (2026-09-20), which shows:
 
-Match whatever your **Google Business Profile** says — GBP is the anchor every other
-citation should agree with. Once you tell me which it is, I'll make the site and all
-future listings match in one pass.
+```
+8609 Westwood Center Dr #110, Tysons, VA 22182
+```
 
-**2. The owner name shows as "Ms. Luay Sadqi."**
-Worth confirming that's how you want to be listed, since the agent name should read the
-same across BBB, GBP, NIPR, and the site. If it should be different, correct it in the
-same submission.
+GBP is the anchor, so **Tysons is correct and the website is already right**. BBB is the
+outlier. Submit this address change along with everything above:
+
+```
+From:  8609 Westwood Center Dr Ste 110, Vienna, VA 22182
+To:    8609 Westwood Center Dr, Suite 110, Tysons, VA 22182
+```
+
+One more thing to confirm yourself: BBB lists the owner as **"Ms. Luay Sadqi."** The agent
+name should read identically across BBB, GBP, and NIPR — correct it in the same submission
+if it should be different.
 
 ---
 
@@ -126,9 +130,51 @@ same submission.
 
 ---
 
-## Yelp
+## Yelp — found it, and it needs the same fixes
 
-You mentioned you're on Yelp too, but the listing isn't publicly indexed — it doesn't
-surface for `"Honorbrook Insurance"` in search, and Yelp blocks automated lookups, so I
-couldn't verify it. Send me the profile URL and I'll check the NAP, website link, hours,
-and categories against this same standard.
+**Live profile:** https://www.yelp.com/biz/honorbrook-insurance-vienna
+(status: **Claimed**, last updated ~3 months ago, 6 photos, no reviews yet)
+
+| Field | What Yelp shows | Should be |
+|---|---|---|
+| Address | 8609 Westwood Center Dr, **Vienna**, VA 22182 | 8609 Westwood Center Dr, **Suite 110, Tysons**, VA 22182 |
+| Categories | Life Insurance, Health Insurance Offices | add **Insurance** / Insurance Agency — you are currently invisible in the category most Medicare searchers browse |
+| Website | https://honorbrook-insurance.com | correct (note Yelp wraps outbound links in a redirect, so treat this as a citation, not a link) |
+| Hours | Mon-Fri 8-8, Sat-Sun 9-2:30 | correct — matches GBP and the site |
+
+Two fixes: **the city and the missing suite number**, and **the categories**. The URL slug
+will keep saying "vienna" even after you change the address — Yelp does not regenerate
+slugs, and that is fine. It is cosmetic and does not affect the citation.
+
+---
+
+## Three more things found on the Google Business Profile
+
+**1. Your GBP website link uses `http://`, not `https://`.**
+It currently points at `http://honorbrook-insurance.com/`, which forces an extra redirect
+hop before the visitor reaches the site. Change it in GBP to:
+```
+https://honorbrook-insurance.com
+```
+
+**2. There's a Calendly booking link on GBP that does not exist anywhere on the website.**
+```
+https://calendly.com/luaysadqi1/30min
+```
+Someone finding you on Google can book a 30-minute slot directly; someone landing on the
+website cannot. Every CTA on the site is "call" or "request a callback." Adding this as a
+third option — "Book a time that suits you" — is likely the single easiest conversion win
+available, especially for working-age ICHRA/ACA buyers who will not call during the day.
+
+**3. You have 26 reviews at a 5.0 average, and the website shows none of it.**
+That is a substantial trust asset sitting entirely on Google. The site has no testimonials,
+no rating, no review count anywhere — while every competitor page in the space leads with
+social proof.
+
+Worth adding a testimonials block (homepage plus the highest-intent product pages) pulling
+a few real quotes with first name and last initial, as Google displays them.
+
+**Important caveat:** do **not** add `AggregateRating` schema markup for these. Google's
+structured-data policy disallows self-serving review markup for a business on its own
+site, and it can trigger a manual action. Display the reviews as ordinary content — the
+trust benefit is in the conversion rate, not in rich-result stars.
