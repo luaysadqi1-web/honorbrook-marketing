@@ -206,8 +206,10 @@ def verify():
         out["facebook"] = d.get("name", "?")
     if can_post_instagram():
         ig_id, token = _require("META_IG_USER_ID", "META_PAGE_TOKEN")
-        d = _call(ig_id, {"access_token": token, "fields": "username,account_type"},
-                  method="GET")
-        out["instagram"] = "@%s (%s)" % (d.get("username", "?"),
-                                         d.get("account_type", "?"))
+        # account_type is not a field on an IG Business node; username and
+        # followers_count are, and they prove the link works.
+        d = _call(ig_id, {"access_token": token,
+                          "fields": "username,followers_count,media_count"}, method="GET")
+        out["instagram"] = "@%s (%s followers, %s posts)" % (
+            d.get("username", "?"), d.get("followers_count", "?"), d.get("media_count", "?"))
     return out
