@@ -12,6 +12,7 @@ fingerprint, so the output is safe to paste into a chat or a ticket.
     python3 preflight.py            # check everything
     python3 preflight.py --x        # just X
     python3 preflight.py --linkedin # just LinkedIn
+    python3 preflight.py --meta     # just Facebook + Instagram
     python3 preflight.py --gbp      # just Google Business Profile
 
 Exit code 0 = every enabled channel is ready. 1 = at least one is not.
@@ -30,6 +31,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import store  # noqa: E402
 from lib import linkedin_client  # noqa: E402
 from lib import x_client  # noqa: E402
+from lib import meta_client  # noqa: E402
 
 GREEN, RED, YELLOW, DIM, RESET = "\033[32m", "\033[31m", "\033[33m", "\033[2m", "\033[0m"
 OK, BAD, WARN = GREEN + "OK  " + RESET, RED + "FAIL" + RESET, YELLOW + "WARN" + RESET
@@ -189,6 +191,34 @@ def check_linkedin():
         return False
 
 
+# -------------------------------------------------------------- Meta --------
+def check_meta():
+    names = ("META_PAGE_ID", "META_PAGE_TOKEN", "META_IG_USER_ID")
+    present, rows = check_vars(names)
+    if not os.environ.get("META_PAGE_TOKEN", "").strip():
+        render("Meta (Facebook + Instagram)", False, rows,
+               "not configured -- nothing to test",
+               """Create an app at developers.facebook.com, add the Page, and issue a
+                  LONG-LIVED Page access token with pages_manage_posts and
+                  pages_read_engagement. META_IG_USER_ID is the Instagram Business
+                  account id linked to that Page, not the @handle. Free, and unlike
+                  Metricool there is no monthly post cap.""")
+        return False
+    try:
+        who = meta_client.verify()
+    except Exception as e:
+        render("Meta (Facebook + Instagram)", False, rows,
+               "live check failed: %s" % str(e)[:200])
+        return False
+    bits = ", ".join("%s: %s" % (k, v) for k, v in who.items()) or "token valid"
+    extra = ""
+    if not meta_client.can_post_instagram():
+        extra = ("META_IG_USER_ID is unset, so Facebook will work but Instagram "
+                 "will not. Instagram also cannot post without an image.")
+    render("Meta (Facebook + Instagram)", True, rows, bits, extra)
+    return True
+
+
 # --------------------------------------------------------------- GBP --------
 def check_gbp():
     names = ("GBP_CLIENT_ID", "GBP_CLIENT_SECRET", "GBP_REFRESH_TOKEN",
@@ -210,7 +240,7 @@ def check_gbp():
 def main():
     store.load_dotenv()
     args = [a for a in sys.argv[1:] if a.startswith("--")]
-    want = {a.lstrip("-") for a in args} or {"x", "linkedin", "gbp"}
+    want = {a.lstrip("-") for a in args} or {"x", "linkedin", "meta", "gbp"}
 
     print("\033[1mHonorbrook social -- credential preflight\033[0m")
     print("%s.env: %s%s" % (DIM, linkedin_client.ENV_PATH, RESET))
@@ -221,6 +251,8 @@ def main():
         results["X"] = check_x()
     if "linkedin" in want:
         results["LinkedIn"] = check_linkedin()
+    if "meta" in want:
+        results["Meta"] = check_meta()
     if "gbp" in want:
         results["GBP"] = check_gbp()
 
