@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-28",
+  "generated": "2026-09-23T21:02:21",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "7210c03e15",
+      "platform": "x",
+      "pillar": "medicare-foundations",
+      "text": "Medicare enrollment has three windows, not one. IEP: seven months around your 65th birthday, no penalty. GEP: Jan-Mar if you missed it, with one. SEPs: job loss, moves, and more. Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "00df29f9c8",
+      "platform": "linkedin",
+      "pillar": "medicare-foundations",
+      "text": "Most of the confusion we hear about Medicare enrollment comes down to one thing: people assume there is a single window, and there isn't.\n\nThe Initial Enrollment Period, IEP, is tied to turning 65. It runs seven months: three before your birthday month, that month, and three after. No penalty attached.\n\nMiss it without other qualifying coverage, and the fallback is the General Enrollment Period, GEP, which runs January through March every year. The Part B late penalty applies for as long as you have Part B.\n\nThen there are Special Enrollment Periods, SEPs - not one window but a category. Losing employer coverage, moving, and other life events each open their own SEP with its own length and start date.\n\nThe mistake we see most: assuming a life change will \"obviously\" trigger a window, when it either does not qualify or the clock already started.\n\nWorth five minutes to confirm which window you are actually in.\n\nHonorbrook Insurance, Tysons VA. honorbrook-insurance.com\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "3014cc69a9",
+      "platform": "gbp",
+      "pillar": "medicare-foundations",
+      "text": "Not sure which Medicare enrollment window applies to you? There isn't just one. Turning 65 opens a seven-month Initial Enrollment Period. Miss it and the fallback is the General Enrollment Period in January through March, with a penalty attached. Job loss, moves and other changes open separate Special Enrollment Periods, each with its own deadline. We'll map your exact dates at no cost.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}

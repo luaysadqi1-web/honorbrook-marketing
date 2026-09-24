@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-02",
+  "generated": "2026-09-23T21:02:21",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "b64f32d134",
+      "platform": "x",
+      "pillar": "local-nova",
+      "text": "Northern Virginia's two largest hospital systems, Inova and VHC Health, aren't included in every plan's network. The same plan can cover one and exclude the other. Check your hospital by name before you enroll, not after. (571) 354-0146",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "010b5f730c",
+      "platform": "linkedin",
+      "pillar": "local-nova",
+      "text": "A pattern we see every enrollment season in Northern Virginia: someone picks a plan, then finds out their hospital is not in it.\n\nInova and VHC Health are the two largest hospital systems here, and plan networks do not treat them the same way. A plan can include Inova's hospitals and exclude VHC Health's, or the reverse, and two plans from the same carrier can differ on this from one county to the next. The provider directory is the only document that actually answers the question, and it is the one almost nobody reads before enrolling.\n\nThis matters most for people with an existing relationship at a specific hospital or health system, or a specialist who only admits at one of the two. Losing that relationship over a network detail nobody checked is avoidable.\n\nBefore enrolling anywhere, verify three things by name: your hospital, your specialists, and your prescriptions. We run that check for clients across Fairfax, Arlington, Tysons, McLean, Falls Church, Reston, Herndon, Oakton and Alexandria, at no cost.\n\nHonorbrook Insurance. (571) 354-0146",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "a1ac53e428",
+      "platform": "gbp",
+      "pillar": "local-nova",
+      "text": "Inova or VHC Health - is your hospital actually in the plan you're considering? Northern Virginia's two largest hospital systems aren't both included in every network, and the same plan can cover one and exclude the other. We check your hospital, specialists and prescriptions by name before you enroll, not after. Serving Vienna, Tysons, McLean, Fairfax, Arlington, Falls Church, Reston, Herndon, Oakton and Alexandria.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}

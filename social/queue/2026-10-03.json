@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-03",
+  "generated": "2026-09-23T21:02:21",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "c2d6a32ee4",
+      "platform": "x",
+      "pillar": "you-asked",
+      "text": "You asked: does working with an agent cost anything? No. We're paid by the carrier you choose, and the premium is set by the carrier either way - it doesn't change based on whether you use us. You just get a person to call. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "ed4f3b6b19",
+      "platform": "linkedin",
+      "pillar": "you-asked",
+      "text": "The question we get asked most, almost always a little hesitantly, is some version of: what do you charge?\n\nThe honest answer is nothing, and it is worth explaining why rather than just asserting it. Independent agents are compensated by the insurance carrier when a policy is placed, out of the premium the carrier already charges. That premium is set by the carrier and filed with the state regulator. It does not go up because you used an agent, and it does not go down because you skipped one and enrolled yourself.\n\nThe fair follow-up question is who that arrangement actually serves. If the carrier is the one paying, whose side are you really on? That is the reason independence matters in practice, not just as a word on a website. We represent multiple carriers rather than one, so recommending a plan does not depend on which single company we are contracted with.\n\nWhat you get for choosing to work with an agent, at the same price either way, is a person accountable to you at enrollment, at renewal, and if something goes wrong with a claim. Not a call center queue that starts from zero each time.\n\nHonorbrook Insurance - Luay Sadqi, NPN 21370662. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "605ef47722",
+      "platform": "gbp",
+      "pillar": "you-asked",
+      "text": "Does working with an insurance agent cost you anything? No. We're paid by the carrier when a policy is placed, and your premium is set by the carrier and filed with the state - it's the same price whether you enroll with us or on your own. What you get instead is a person accountable to you at renewal and at claim time, not a call center.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}

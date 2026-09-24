@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-30",
+  "generated": "2026-09-23T21:02:21",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "744803a13e",
+      "platform": "x",
+      "pillar": "aca-under65",
+      "text": "Self-employed and buying your own health coverage? The premium may be deductible against your business income, and that deduction changes what the plan actually costs you net - not just the sticker price you're comparing. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "333df9b667",
+      "platform": "linkedin",
+      "pillar": "aca-under65",
+      "text": "Self-employed people shopping the ACA Marketplace tend to compare plans the same way an employee would: by the monthly premium on the screen. That comparison is usually incomplete.\n\nIf you are self-employed, your health insurance premium may be deductible against your business income through the self-employed health insurance deduction. That changes the real cost of a plan, sometimes meaningfully, and it can also affect the income figure you use to estimate your subsidy in the first place.\n\nThere is a second wrinkle. Marketplace subsidies are based on estimated household income for the year. Self-employment income is uneven by nature, so the estimate filed at enrollment is frequently wrong by spring. Update it as the year develops rather than leaving it as a guess made in one sitting.\n\nNone of this is tax advice, and the deduction interacts with your specific return in ways worth confirming with your accountant. What we can do is help you compare plans using your real, after-deduction cost rather than the number on the page.\n\nHonorbrook Insurance - independent, no cost to you. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "38379766fd",
+      "platform": "gbp",
+      "pillar": "aca-under65",
+      "text": "Self-employed and shopping for your own health coverage? Don't compare plans by the sticker premium alone. Your premium may be deductible against your business income, which changes the real monthly cost, and that same income figure sets your subsidy. We help self-employed clients across Northern Virginia run the actual numbers before choosing a plan. No cost, no obligation.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}

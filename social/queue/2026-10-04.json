@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-04",
+  "generated": "2026-09-23T21:02:21",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "456126fd30",
+      "platform": "x",
+      "pillar": "trust-brand",
+      "text": "Licensed in 11 states means the same agency can keep serving you if you move within that footprint, instead of starting over with a stranger. We're independent - we represent many carriers, not one. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "7fcc0f3f74",
+      "platform": "linkedin",
+      "pillar": "trust-brand",
+      "text": "Being licensed in 11 states is a small credential that changes something real for clients: it means a move does not automatically mean starting over.\n\nA lot of insurance relationships end the moment someone relocates, because the agent who wrote the policy is not licensed where they landed. We built our licensing footprint deliberately so that a family who moves from Virginia to a neighboring state, or further, can keep working with the same agency and the same person who already knows their situation rather than explaining it from scratch to someone new.\n\nLicensing is also easy to verify. Every licensed agent has an NPN you can look up on NIPR's producer database before you ever talk to them. Ours is 21370662.\n\nBeing independent and multi-state licensed both serve the same idea: we would rather be the agency people keep, not the one they are stuck with because switching is inconvenient. That only works if the relationship is actually worth keeping.\n\nHonorbrook Insurance, 8609 Westwood Center Drive, Tysons VA. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": []
+    },
+    {
+      "id": "840eb26566",
+      "platform": "gbp",
+      "pillar": "trust-brand",
+      "text": "Licensed in 11 states, independent, and based in Tysons. Being licensed broadly means if you move within our footprint, you keep working with the same agency instead of starting over with someone new. We represent many carriers rather than one, so a comparison here is a real comparison. Verify any agent's license on NIPR's producer database - ours is NPN 21370662.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL"
+    }
+  ]
+}
