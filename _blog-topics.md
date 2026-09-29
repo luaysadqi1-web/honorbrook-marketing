@@ -23,7 +23,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] ACA or Medicaid? How Virginia Decides, and What's Changing in 2026  (added ad hoc, not from original list)
 - [x] Bronze vs. Silver vs. Gold: Choosing an ACA Plan
 - [x] Lost Your Job Coverage? Your Health Insurance Options
-- [ ] Self-Employed Health Insurance: ACA, ICHRA & What to Know
+- [x] Self-Employed Health Insurance: ACA, ICHRA & What to Know
 
 ## Life / final expense
 - [x] Final Expense Insurance Explained: Is It Worth It?  (covered by "Hidden Costs of Final Expense")
