@@ -27,16 +27,16 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 
 ## Life / final expense
 - [x] Final Expense Insurance Explained: Is It Worth It?  (covered by "Hidden Costs of Final Expense")
-- [ ] Term vs. Whole Life Insurance: Which Fits Your Family?
+- [x] Term vs. Whole Life Insurance: Which Fits Your Family?
 - [x] How Much Life Insurance Do You Actually Need?
-- [ ] No-Exam Life Insurance: How It Works and Who It's For
+- [x] No-Exam Life Insurance: How It Works and Who It's For
 
 ## Long-term care
 - [x] Who Pays for Long-Term Care? Medicare, Medicaid, and the Gap Between
-- [ ] Traditional vs. Hybrid Long-Term Care Insurance: Which Fits?
+- [x] Traditional vs. Hybrid Long-Term Care Insurance: Which Fits?
 
 ## Group / SHOP
-- [ ] Small Business Health Insurance: Group Plans vs. SHOP vs. ICHRA
+- [x] Small Business Health Insurance: Group Plans vs. SHOP vs. ICHRA
 - [ ] The Small Business Health Care Tax Credit: Do You Qualify?
 
 ## Seasonal / local
