@@ -37,7 +37,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 
 ## Group / SHOP
 - [x] Small Business Health Insurance: Group Plans vs. SHOP vs. ICHRA
-- [ ] The Small Business Health Care Tax Credit: Do You Qualify?
+- [x] The Small Business Health Care Tax Credit: Do You Qualify?
 
 ## Seasonal / local
 - [ ] New to Virginia (or Moving)? Your Health Coverage Checklist
