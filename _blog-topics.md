@@ -9,14 +9,22 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - **Season gate:** Oct 1 - Dec 7 = Medicare AEP topics first. Nov 1 - Jan 15 = ACA Open Enrollment topics are also priority. Jan 1 - Mar 31 = Medicare Advantage Open Enrollment topics. Do not publish evergreen filler in these windows.
 - **Compliance for the new product lines:** never quote or imply specific returns, rates, caps, or "tax-free retirement" outcomes; always explain caps, participation rates, surrender charges, fees, and that guarantees depend on the issuing carrier's claims-paying ability; say these are not investments and not tax/legal advice; suitability depends on the individual. Annuities/IUL/FIA posts use the independent-agency disclaimer (from ichra.html) and must not use carrier names as claims. Juvenile/college posts: do not compare to a 529 as "better" - explain tradeoffs only. No invented statistics.
 
-## PRIORITY NOW - Medicare AEP (Oct 15 - Dec 7)
+## PRIORITY NOW - interleaved: Medicare AEP (M) and wealth/retirement (W). Pick in order.
 - [ ] Can I Change My Medicare Plan After December 7? What Your Options Are
 - [ ] What Happens If I Do Nothing During Medicare Open Enrollment?
+- [ ] What Should I Do With My 401(k) When I Retire or Leave a Job? Rollover Options Explained
 - [ ] How Do I Read My Medicare Annual Notice of Change (ANOC) Letter?
 - [ ] Why Did My Medicare Advantage Plan Drop My Doctor (or My Drug)? What to Do Now
+- [ ] What Is a Single-Premium Annuity, and Who Is It Actually For?
 - [ ] Should I Switch From Medicare Advantage Back to Original Medicare? (And Can I Get Medigap?)
 - [ ] Medicare Part A, B, C and D Explained: What Each Part Actually Covers
+- [ ] What Is a Fixed Indexed Annuity (FIA)? Caps, Participation Rates and Surrender Charges Explained
 - [ ] Does Medicare Cover Dental, Vision and Hearing? What Advantage Plans Add
+- [ ] Turning 65 With a 401(k): What to Do About Medicare and Your Retirement Savings
+- [ ] What Is Indexed Universal Life (IUL)? How It Works, What It Costs, and the Real Risks
+- [ ] Medigap Plan G vs. Plan N in 2027: Which Costs Less for Your Health Profile?
+- [ ] How Do Annuities Get Taxed? Rollovers, Withdrawals and Required Distributions Explained
+- [ ] IRA Rollover vs. 401(k) Rollover Into an Annuity: What to Ask Before You Move Money
 
 ## Under 65 - individuals, families, small business
 - [ ] How Much Does Health Insurance Cost Without a Job? What Actually Drives the Price
@@ -31,9 +39,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [ ] Short-Term Health Insurance: When It Works and When It Doesn't
 
 ## High-income individuals - life, IUL, FIA
-- [ ] What Is Indexed Universal Life (IUL)? How It Works, What It Costs, and the Real Risks
 - [ ] IUL vs. Term Life Plus Investing: Which Is Better for High Earners?
-- [ ] What Is a Fixed Indexed Annuity (FIA)? Caps, Participation Rates and Surrender Charges Explained
 - [ ] Fixed Indexed Annuity vs. CD vs. Bond: Where Does an FIA Fit?
 - [ ] How Much Life Insurance Do High-Income Earners Need?
 - [ ] Is Cash Value Life Insurance a Good Retirement Supplement? What Agents Don't Always Say
