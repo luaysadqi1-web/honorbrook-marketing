@@ -40,5 +40,5 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] The Small Business Health Care Tax Credit: Do You Qualify?
 
 ## Seasonal / local
-- [ ] New to Virginia (or Moving)? Your Health Coverage Checklist
+- [x] New to Virginia (or Moving)? Your Health Coverage Checklist
 - [ ] Medicare in Northern Virginia: A Local Guide
