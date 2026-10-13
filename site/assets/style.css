@@ -167,3 +167,16 @@ footer a:hover{color:var(--gold-l)}
   .sticky-call{display:block}
   .crest-divider::before,.crest-divider::after{width:60px}
 }
+
+/* Reviews block (real Google reviews, shown as written) */
+.reviews-block{background:var(--cream-d);padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reviews-block .kicker{justify-content:center;text-align:center}
+.reviews-block .section-title{text-align:center;margin-bottom:10px}
+.reviews-block .rv-sub{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 34px;font-size:17px;line-height:1.55}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:22px}
+.quote-card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:24px 24px 20px;box-shadow:0 6px 22px rgba(27,47,75,.06);display:flex;flex-direction:column}
+.quote-card .rv-stars{color:var(--gold);font-size:20px;letter-spacing:3px;margin-bottom:10px}
+.quote-card blockquote{font-size:17px;line-height:1.6;color:var(--ink);margin:0 0 16px;flex:1}
+.quote-card figcaption{font-family:'Source Sans 3',Arial,sans-serif;font-size:15px;color:var(--muted);font-weight:600}
+.reviews-block .rv-cta{text-align:center;margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.reviews-block .rv-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:18px;font-family:'Source Sans 3',Arial,sans-serif}
