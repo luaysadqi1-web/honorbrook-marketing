@@ -26,6 +26,16 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] How Do Annuities Get Taxed? Rollovers, Withdrawals and Required Distributions Explained
 - [x] IRA Rollover vs. 401(k) Rollover Into an Annuity: What to Ask Before You Move Money
 
+## Rollovers - added Oct 13, 2026 (Luay request: TSP, 401(k) and all rollovers)
+- [x] Can I Roll Over My TSP to an IRA or 401(k)? What Federal Employees Should Know
+- [ ] TSP vs. IRA After Retirement: Fees, Fund Choices and Withdrawal Flexibility Compared
+- [ ] Can I Roll Over a 403(b), 457(b) or Pension Lump Sum? Rules for Each Plan Type
+- [ ] Direct vs. Indirect Rollover: Why the 60-Day Rule and 20% Withholding Trip People Up
+- [ ] Roth vs. Traditional Rollover: What Happens When You Convert a 401(k) or TSP
+- [ ] Should I Roll My Old 401(k) Into My New Employer's Plan or an IRA?
+- [ ] Rolling a Military or Federal Pension Lump Sum: What to Check Before You Move It
+- [ ] Rollover Mistakes That Create Surprise Tax Bills (and How to Avoid Them)
+
 ## Under 65 - individuals, families, small business
 - [x] How Much Does Health Insurance Cost Without a Job? What Actually Drives the Price
 - [x] What Is the ACA Open Enrollment Deadline, and Can I Still Sign Up Late?
