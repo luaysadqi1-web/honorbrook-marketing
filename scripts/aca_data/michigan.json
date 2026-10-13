@@ -1,0 +1,24 @@
+{
+  "state": "Michigan",
+  "exchange_name": "HealthCare.gov (Health Insurance Marketplace)",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federally-facilitated (HealthCare.gov)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.michigan.gov/en/difs/consumers/Insurance/health-insurance",
+  "medicaid_expanded": true,
+  "medicaid_program_name": "Healthy Michigan Plan (Michigan's Medicaid expansion program created under the Affordable Care Act)",
+  "medicaid_adult_income_limit_note": "MDHHS: \"Are age 19-64 years. Have income at or below 133% of the federal poverty level.\" and \"Eligibility for the Healthy Michigan Plan is determined through the Modified Adjusted Gross Income methodology.\" The same page also lists \"Demonstrate work requirements (beginning on January 1, 2027).\"",
+  "medicaid_url": "https://www.michigan.gov/mdhhs/assistance-programs/healthcare/healthy-michigan-plan",
+  "state_subsidy_or_reinsurance_note": "Michigan is not on CMS's list of states with approved Section 1332 waivers and is not named by KFF (Jan 9, 2026) among states with state-funded premium subsidies or 1332 reinsurance programs, so Michigan Marketplace enrollees get only federal premium tax credits.",
+  "state_subsidy_source_url": "https://www.kff.org/affordable-care-act/state-based-efforts-will-provide-limited-relief-from-enhanced-tax-credit-expiration/",
+  "enhanced_ptc_status_note": "KFF (FAQ updated January 14, 2026): \"The premium tax credit enhancements that began in 2021 expired at the end of 2025 and have not been renewed by Congress.\" Original 400% FPL cap is back for 2026; I did not find a primary source showing any later congressional renewal as of 2026-10-12 (re-check before publishing).",
+  "enhanced_ptc_source_url": "https://www.kff.org/faqs/faqs-health-insurance-marketplace-and-the-aca/help-paying-marketplace-premiums-the-basics/what-kind-of-recent-changes-to-the-marketplace-premium-subsidies-have-happened-that-i-should-know-about/",
+  "notes_unverified": [
+    "Michigan DIFS page (fetched 2026-10-12): \"Open Enrollment for 2027 health insurance runs from November 1, 2026 through January 15, 2027. Consumers must select a plan no later than December 15, 2026 for coverage to start on January 1, 2027.\" HealthCare.gov dates-and-deadlines page also shows Nov 1 start and Jan 15 end (page lists Jan 15 without a year; year 2027 inferred and matches DIFS).",
+    "Michigan uses HealthCare.gov: DIFS page refers to the 'HealthCare.gov Marketplace' and LocalHelp.HealthCare.gov. No Michigan state-based exchange was found; no separate CMS listing of FFE states was fetched.",
+    "Absence-based claim: no state subsidy/reinsurance is inferred from Michigan not appearing in CMS's 1332 waiver list or KFF's state-effort list; no Michigan primary-source statement saying 'no state subsidy' was found.",
+    "The 400% FPL cap reverting on enhanced PTC expiration is from a secondary web-search summary of KFF/KBRA, not directly quoted from a fetched KFF page.",
+    "Healthy Michigan Plan work requirements beginning Jan 1, 2027 (federal H.R. 1 implementation) are stated on the MDHHS page; exact exemption rules were not reviewed."
+  ]
+}

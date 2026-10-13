@@ -1,0 +1,28 @@
+{
+  "state": "Virginia",
+  "exchange_name": "Virginia's Insurance Marketplace (operated by the Virginia Health Benefit Exchange, a division of the Virginia State Corporation Commission)",
+  "exchange_url": "https://marketplace.virginia.gov/",
+  "exchange_type": "state-based exchange",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-29",
+  "oe_source_url": "https://www.marketplace.virginia.gov/sites/default/files/2026-08/FAQs%208.19.pdf",
+  "medicaid_expanded": true,
+  "medicaid_program_name": "Virginia Medicaid (Medicaid Expansion for adults); state coverage site branded Cover Virginia / CoverVA",
+  "medicaid_adult_income_limit_note": "Cover Virginia page 'Adults 19-64 Years Old': \"Medicaid Expansion covers adults who are between 19 and 64, have income under 138% of the federal poverty limit (FPL)\" and \"do not have Medicare.\" The page's '2026 Income Guidelines as of January 13, 2026' (includes 5% FPL disregard) list $22,025/year ($1,836/month) for a household of 1 and $45,540/year ($3,795/month) for a household of 4.",
+  "medicaid_url": "https://coverva.dmas.virginia.gov/learn/coverage-for-adults/adults-19-64-years-old/",
+  "state_subsidy_or_reinsurance_note": "Virginia Premium Savings is a new state premium-savings program for plan year 2027 coverage bought through Virginia's Insurance Marketplace, for households with incomes between 138% and 250% of the federal poverty level, applied to the monthly premium after the household's full federal APTC is used.",
+  "state_subsidy_source_url": "https://www.marketplace.virginia.gov/Virginia-premium-savings-faq",
+  "enhanced_ptc_status_note": "The enhanced premium tax credits expired at the end of 2025 and have not been renewed. KFF FAQ (updated Jan 14, 2026): \"The premium tax credit enhancements that began in 2021 expired at the end of 2025 and have not been renewed by Congress.\" KFF midterm update (published Oct 6, 2026) reports no extension became law. Virginia's Insurance Marketplace 'Federal Changes' page: \"Enhanced Premium Tax Credits (ePTCs) expired at the end of 2025\"; the original ACA Advance Premium Tax Credits are still available to those who qualify.",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "Additional enhanced-PTC sources fetched: https://www.kff.org/faqs/faqs-health-insurance-marketplace-and-the-aca/help-paying-marketplace-premiums-the-basics/what-kind-of-recent-changes-to-the-marketplace-premium-subsidies-have-happened-that-i-should-know-about/ and https://www.marketplace.virginia.gov/federalchanges (no publication date shown). Status is as of those source dates; congress.gov was not independently checked for later action.",
+    "OE dates are corroborated by three official documents: Marketplace FAQ (version 8/19/26): 'Open Enrollment for Plan Year 2027 runs from November 1 through January 29, 2027'; Marketplace help-center flyer (8/19/26): 'starts November 1 and ends January 29'; Virginia Department of Health flyer: 'ACA/Marketplace coverage: November 1, 2026 - January 29, 2027'. Search snippets indicated earlier June 2026 Marketplace materials and healthinsurance.org gave Dec 31, 2026; those are superseded by the August 2026 materials, but confirm on marketplace.virginia.gov before publishing.",
+    "Exchange type: Marketplace talking points (8/19/26) state Virginia moved from HealthCare.gov to Virginia's Insurance Marketplace on November 1, 2023 (own platform = state-based exchange).",
+    "Virginia Premium Savings additional eligibility per Marketplace FAQ page: Virginia resident, enrolled in a qualified health plan (not catastrophic), US citizen or eligible lawfully present non-citizen, not incarcerated, no other minimum essential coverage; the FAQ page itself says it will be updated closer to Nov 1 (dollar amounts and calculation not final).",
+    "Funding source name (reported in press as the 'Virginia Health Insurance Affordability Fund', created in a 2026 special session) and press claims (about 200,000 people; 70% cost reduction after APTC) were NOT verified on official pages; the Marketplace FAQ only says lawmakers funded it in the budget.",
+    "No Virginia state-funded reinsurance program was verified this run (CMS 1332 waiver page was only partially read and did not reach Virginia); do not claim one.",
+    "Cover Virginia page also states: 'Starting January 2027, work and community engagement requirements will apply only to adults in Medicaid Expansion.'",
+    "Virginia Department of Health (VA MAP) flyer says Cigna Healthcare will not be an option in 2027 on the Virginia Insurance Marketplace; not confirmed on the Marketplace site or by the State Corporation Commission.",
+    "Beginning plan year 2027, the Marketplace states federal APTC eligibility for lawfully present non-citizens is narrowed (per Marketplace Federal Changes/FAQ pages); not independently checked against CMS."
+  ]
+}

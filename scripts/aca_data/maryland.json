@@ -1,0 +1,25 @@
+{
+  "state": "Maryland",
+  "exchange_name": "Maryland Health Connection (operated by the Maryland Health Benefit Exchange)",
+  "exchange_url": "https://www.marylandhealthconnection.gov/",
+  "exchange_type": "state-based exchange",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.marylandhbe.com/wp-content/uploads/2026/10/Compare-Health-Plans-and-Prices-on-MarylandHealthConnection.gov_.pdf",
+  "medicaid_expanded": true,
+  "medicaid_program_name": "Maryland Medicaid (HealthChoice managed care) and Maryland Children's Health Program (MCHP), applied for through Maryland Health Connection",
+  "medicaid_adult_income_limit_note": "Maryland Health Connection Medicaid page (income limits effective February 1, 2026): \"You may be eligible for Medicaid if your monthly income is up to approximately\" $1,835 for an adult in a household of 1, $2,490 for 2, $3,142 for 3, $3,795 for 4 (each additional person add $654).",
+  "medicaid_url": "https://www.marylandhealthconnection.gov/how-to-enroll/medicaid/",
+  "state_subsidy_or_reinsurance_note": "Maryland Premium Assistance Program gives eligible Marylanders state financial help lowering monthly premiums for plans bought through Maryland Health Connection, and the MHBE Oct. 7, 2026 release cites it for 2027 plan costs (the program page describes help for incomes up to 400% FPL in 2026, plus extra help for ages 18-37).",
+  "state_subsidy_source_url": "https://www.marylandhealthconnection.gov/maryland-premium-assistance/",
+  "enhanced_ptc_status_note": "KFF (published Oct. 6, 2026): the temporary enhanced premium tax credits expired at the end of 2025 and no extension is reported; MHBE (Jan. 23, 2026) likewise says the federal government let them expire at the end of 2025, and Maryland created Maryland Premium Assistance to replace some or all of the lost help for people under 400% FPL.",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "Medicaid expansion confirmed via KFF Status of State Medicaid Expansion Decisions (published Oct. 1, 2026): Maryland 'Adopted and implemented', 'Implemented expansion on 1/1/2014' (https://www.kff.org/medicaid/status-of-state-medicaid-expansion-decisions/).",
+    "The 138% FPL expansion threshold was not stated on the fetched official Maryland Health Connection page; only the monthly dollar figures were, so it is not asserted as verified here.",
+    "Maryland Premium Assistance 2027 eligibility limits (e.g., whether the 400% FPL cap carries over) were not verified; only the program's continued existence for 2027 per the Oct. 7, 2026 MHBE press release.",
+    "Maryland's state reinsurance program (1332 waiver) is described on marylandhbe.com/policy/reinsurance-program/ but no 2027-specific parameters were found on that page, so no 2027 reinsurance claim is made.",
+    "The official Open Enrollment FAQ page (marylandhealthconnection.gov/open-enrollment/) also says 'Maryland open enrollment is Nov. 1 - Jan.15.' (undated), consistent with the 2027 dates in the Oct. 7, 2026 press release.",
+    "marylandhealthconnection.gov and marylandhbe.com return HTTP 403 to WebFetch; content was retrieved via curl with a browser user agent."
+  ]
+}

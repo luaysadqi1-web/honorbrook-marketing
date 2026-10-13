@@ -1,0 +1,28 @@
+{
+  "state": "North Carolina",
+  "exchange_name": "HealthCare.gov",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federally-facilitated (HealthCare.gov)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.cms.gov/files/document/ftr-requirement-py26-27-statement.pdf",
+  "medicaid_expanded": true,
+  "medicaid_program_name": "NC Medicaid (Medicaid expansion)",
+  "medicaid_adult_income_limit_note": "NC Medicaid covers people ages 19 through 64 with higher incomes. 2025 monthly income limits (NCDHHS flyer dated 04/2025): Single Adults $1,800 or less; Family of 2 $2,433 or less; Family of 3 $3,065 or less; Family of 4 $3,698 or less; Family of 5 $4,340 or less. 'Income limits are updated annually.'",
+  "medicaid_url": "https://medicaid.ncdhhs.gov/nc-medicaid-expansion-and-marketplace-plans-flyer-english/open",
+  "state_subsidy_or_reinsurance_note": null,
+  "state_subsidy_source_url": null,
+  "enhanced_ptc_status_note": "The enhanced federal premium tax credits expired at the end of 2025 and have not been renewed by Congress (KFF FAQ, updated Jan 14, 2026: 'The premium tax credit enhancements that began in 2021 expired at the end of 2025 and have not been renewed by Congress'); KFF's Oct 6, 2026 Midterm Election Update reports no extension or pending legislation restoring them for 2027, so 2027 plan-year subsidies follow the pre-2021-enhancement rules (original ACA schedule, including the 400% FPL cap per KBRA Sept 2026 summary, secondary).",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "[verified] OE: CMS statement dated July 27, 2026 says HHS has not altered the OE dates in 45 CFR 155.410(e)(4) and 'Open Enrollment at the Federally-facilitated Marketplace will begin on November 1, 2026 and end on January 15, 2027.' Corroborated by healthcare.gov/quick-guide/dates-and-deadlines (Nov 1 start, Dec 15 for Jan 1 coverage, Jan 15 end, Feb 1 coverage for Dec 16-Jan 15).",
+    "[verified] Exchange type: KFF State Health Insurance Marketplace Types (2026 table) lists North Carolina as 'Federally Facilitated Marketplace'; NC Medicaid blog (Feb 7, 2024) confirms NC Medicaid accepts eligibility determinations from the Federally-Facilitated Marketplace (HealthCare.gov). Sources: https://www.kff.org/affordable-care-act/state-indicator/state-health-insurance-marketplace-types/ and https://medicaid.ncdhhs.gov/blog/2024/02/07/nc-medicaid-accepting-federally-facilitated-marketplace-eligibility-determinations",
+    "[verified] Medicaid wording/income table source: NCDHHS flyer 'More North Carolinians (including some with Health Insurance Marketplace plans) can now get coverage through Medicaid', dated 04/2025. NCDHHS's own page medicaid.ncdhhs.gov/medicaid-expansion returned HTTP 403 to fetch, so the current 2026 dollar limits were not retrieved.",
+    "[unverified/secondary] The '138% of the federal poverty level' figure and the Dec 1, 2023 launch date appear only in secondary sources (healthinsurance.org, NC Health News, Manatt) in this run; the NCDHHS flyer does not state a % FPL. The 2025 single-adult figure of $1,800/month is consistent with 138% FPL but % FPL wording was not found on a primary page.",
+    "[verified] NC Medicaid page 'The Work and Community Engagement Requirement' (last modified 08/31/2026) says starting January 1, 2027 most adults ages 19 through 64 will need to work (80 hours of approved activities or earn $580 per month) to keep Medicaid, with exemptions. https://medicaid.ncdhhs.gov/beneficiaries/impact-hr-1-and-federal-changes-medicaid/work-and-community-engagement-requirement",
+    "[unverified/secondary] News reports (WBTV/Fox Carolina, Sept 19, 2026) say expansion adults must also renew every 6 months starting Jan 1, 2027 and that an NCDHHS filing to CMS says full implementation by Jan 1, 2027 is unlikely; not confirmed on a primary NC page in this run.",
+    "[unverified] State subsidy/reinsurance: KFF 'State-Based Efforts Will Provide Limited Relief from Enhanced Tax Credit Expiration' (Jan 9, 2026) lists state-funded subsidies (NM, MD, CA, CO, WA; pre-existing NY, CT, VT, MA, NJ) and 1332 reinsurance states (MD, CO, NJ, GA, OR) and does not mention North Carolina. No NC state subsidy or reinsurance program was found, but absence could not be affirmatively verified from a primary NC source, so the field is null.",
+    "[unverified/secondary] KBRA (Sept 1, 2026) says the 400% FPL subsidy cap returned with the expiration; not fetched from a primary source.",
+    "[context, secondary] KFF reported NC plan selections fell 22% for 2026 (largest drop among states); NCDOI posted requested 2027 individual-market rate increases (e.g., BCBSNC 17.686% requested) - not independently fetched."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "state": "Georgia",
+  "exchange_name": "Georgia Access",
+  "exchange_url": "https://georgiaaccess.gov/",
+  "exchange_type": "state-based exchange",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://georgiaaccess.gov/renew-or-update-coverage/",
+  "medicaid_expanded": false,
+  "medicaid_program_name": "Georgia Pathways to Coverage (Medicaid Section 1115 demonstration with a qualifying-activity/work requirement; not a full ACA Medicaid expansion)",
+  "medicaid_adult_income_limit_note": "Pathways eligibility (pathways.georgia.gov/eligibility): ages 19-64, 'household income of up to 100% of the Federal Poverty Level', 'Complete at least 80 hours of qualifying activities per month', and not qualify for any other type of Medicaid. Georgia has not adopted the ACA expansion: CMS's 2020 Pathways approval letter states 'the state has elected not to implement the ... (ACA) expansion to provide Medicaid coverage to adults with income up to 133 percent of the FPL.' Pathways page also notes eligibility requirements change Jan 1, 2027 due to federal law (H.R. 1), with a new option of earning at least $580/month while under 100% FPL; members unaffected until their 2027 renewal.",
+  "medicaid_url": "https://pathways.georgia.gov/eligibility",
+  "state_subsidy_or_reinsurance_note": "Georgia operates a Section 1332 state reinsurance program (launched Jan 1, 2022) authorized through December 31, 2026; Georgia applied on June 1, 2026 to extend it for another five years and, per the state insurance department, the extension application 'is currently under federal review' (approval for 2027 not yet confirmed).",
+  "state_subsidy_source_url": "https://oci.georgia.gov/insurance-resources/health/1332-waiver",
+  "enhanced_ptc_status_note": "The enhanced federal premium tax credits expired at the end of 2025 and have not been extended: KFF (Oct 6, 2026) says the July 2025 reconciliation law 'did not address the expiring enhanced premium tax credits' and Republicans blocked efforts to extend them before expiry; the original (non-enhanced) ACA tax credits remain, and insurers are seeking a median ~15% premium increase for 2027.",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "Georgia Access describes itself as having 'transitioned to an SBE' on Nov 1, 2024 (georgiaaccess.gov/about-georgia-access/; OCI press release 2024-08-14 says it moves the individual market from the FFE to an SBE and replaces HealthCare.gov). Whether it is operationally a full state platform vs. using the federal platform for any functions was not separately verified; classified here as state-based exchange.",
+    "OE page wording quirk: georgiaaccess.gov/renew-or-update-coverage lists Jan 15, 2027 as 'last day to enroll in 2026 coverage beginning February 1, 2027' (apparent typo for 2027). Dec 15, 2026 is listed as the last day to enroll for Jan 1, 2027 coverage start. A Georgia DPH page (not exchange) says Nov 1-Dec 15, 2026; ignored as the exchange's own page governs.",
+    "Georgia's 1332 reinsurance extension (Jan 1, 2027 - Dec 31, 2031) was reported as deemed complete by CMS on July 30, 2026 with a decision due within ~90 days (via search summary of CMS/OCI docs, not independently confirmed from a fetched primary page this run); no approval was found.",
+    "Georgia Pathways CMS approval: older CMS letter covered through Sept 30, 2025; a CMS temporary extension is referenced and a Sept 2026 CMS document reportedly conforms terms to H.R. 1 effective Jan 1, 2027; exact current expiration of the Pathways demonstration was not verified from a readable primary page.",
+    "Non-expansion statement is from CMS's Oct 2020 Pathways approval letter; no current-year source this run states a change. KFF page text fetched did not name Georgia (image map), only that 10 states have not adopted expansion.",
+    "No evidence checked on any Georgia state-funded premium subsidy; none is claimed. Under H.R. 1, lawfully present immigrant groups lose eligibility for marketplace premium tax credits starting in 2027 (reported by WABE/KFF search summaries; not fetched from a primary page)."
+  ]
+}

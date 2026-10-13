@@ -1,0 +1,25 @@
+{
+  "state": "Texas",
+  "exchange_name": "HealthCare.gov (Federally-Facilitated Marketplace)",
+  "exchange_url": "https://www.healthcare.gov",
+  "exchange_type": "federally-facilitated (HealthCare.gov)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+  "medicaid_expanded": false,
+  "medicaid_program_name": "Texas Medicaid (administered by Texas Health and Human Services Commission, HHSC)",
+  "medicaid_adult_income_limit_note": "KFF table 'Medicaid Income Eligibility Limits for Adults as a Percent of the Federal Poverty Level' (as of January 2026), Texas row: Parents (family of three) 15% FPL; Other Adults (for an individual) 0% FPL. KFF notes the 2026 limits include a disregard of five percentage points of the FPL applied to the highest eligibility limit for each group.",
+  "medicaid_url": "https://www.hhs.texas.gov/services/health/medicaid-chip",
+  "state_subsidy_or_reinsurance_note": null,
+  "state_subsidy_source_url": null,
+  "enhanced_ptc_status_note": "KFF (page dated Oct 6, 2026) describes 'The expiration of those temporary tax credits at the end of 2025'; says the 2025 reconciliation law 'did not address the expiring enhanced premium tax credits' and that 'Republicans in Congress blocked efforts by Democrats to extend the tax credits before they expired'; the page mentions no pending bill to restore them. So the enhanced credits are not in effect for plan year 2027 (original ACA subsidy rules apply, including loss of eligibility at 400% FPL per KFF's separate analysis).",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "OE DATE CONFLICT: HealthCare.gov dates page (fetched 2026-10-12) lists 'November 1: Open Enrollment starts' and 'January 15: Open Enrollment ends' (Dec 15 = last day for Jan 1 coverage; Jan 16 start Feb 1 for Dec 16-Jan 15 enrollment), under a banner 'Starting November 1, you can apply for 2027 coverage'. However the eCFR text of 45 CFR 155.410(e)(5) (fetched, as of 2026-10-01) still says that for benefit years beginning on or after Jan 1, 2027 all Exchanges must end OE no later than Dec 31 and not exceed 9 weeks. Web-search summaries from non-official broker blogs say a federal court (City of Columbus v. Kennedy, D. Md.) vacated/stayed the shorter window and CMS confirmed Nov 1 - Jan 15 for HealthCare.gov states; I could NOT open a CMS/court primary document to confirm this. The 2027 NBPP final rule text (Federal Register 2026-10050) does not contain OE dates. Recommend re-checking healthcare.gov before publishing.",
+    "Texas being on HealthCare.gov for plan year 2027: KFF marketplace-types table lists Texas as 'Federally Facilitated Marketplace' for plan year 2026; healthcare.gov marketplace-in-your-state page (fetched) names only Oregon as moving to its own site for 2027 coverage; no Texas transition seen, but not explicitly confirmed for 2027.",
+    "Medicaid expanded = false is based on KFF table showing Texas 0% FPL for other adults (as of January 2026) and KFF/healthcare.gov general statements (KFF Oct 1, 2026: '41 states (including DC) have adopted the Medicaid expansion and 10 states have not'); KFF page text did not name Texas (map/table were images). healthcare.gov expansion pages do not name Texas. If Medicaid expansion were adopted, expansion adult limit would be 138% FPL (healthcare.gov: 'below 133% ... works out to 138% of the FPL') - not applicable to Texas.",
+    "Texas HHSC pages returned HTTP 403 to curl; the medicaid_url was reachable only partially (WebFetch of /medicaid-chip/programs/medicaid-adults returned disabilities-program content, no income limits). The medicaid_url value is the HHSC Medicaid & CHIP landing page, content not verified this run. Income-limit figures come from KFF, not HHSC.",
+    "State subsidy / reinsurance for Texas: no verified source this run (KFF says New Mexico is the only state fully replacing expired enhanced PTCs; KFF says state efforts are limited), but Texas-specific absence of a state subsidy or 1332 reinsurance waiver was not directly confirmed, so field left null.",
+    "KFF reports (Sept-Oct 2026) median proposed 2027 marketplace premium increase of 15% and 9 carriers exiting the ACA marketplaces for 2027 as of Sept 15, 2026; Texas-specific carrier changes not checked."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "state": "Alabama",
+  "exchange_name": "HealthCare.gov (Federal Health Insurance Marketplace)",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federally-facilitated (HealthCare.gov)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.cms.gov/files/document/statement-re-city-columbus-073126.pdf",
+  "medicaid_expanded": false,
+  "medicaid_program_name": "Alabama Medicaid (Alabama Medicaid Agency)",
+  "medicaid_adult_income_limit_note": "Alabama Medicaid Agency 'Medicaid Income Limits for 2026' (MAGI, effective February 2026), Parent and Caretaker Relatives: 'Income after deductions cannot exceed $240 per month for a family of 1... $325 per month for a family of 2... $410 per month for a family of 3... $495 per month for a family of 4' (based on the 18% Federal Poverty Level, including the 5% FPL disregard). KFF status tracker (published Oct 1, 2026) lists Alabama as 'Not adopted' for ACA Medicaid expansion.",
+  "medicaid_url": "https://medicaid.alabama.gov/content/3.0_Apply/3.2_Qualifying.aspx",
+  "state_subsidy_or_reinsurance_note": "CMS's Section 1332 State Innovation Waivers page (page last modified 09/10/2026) contains no Alabama waiver (no Alabama state reinsurance or premium-assistance 1332 waiver is listed).",
+  "state_subsidy_source_url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+  "enhanced_ptc_status_note": "KFF (published Oct 6, 2026): the enhanced premium tax credits expired at the end of 2025 and Congress did not extend them (the July 2025 reconciliation law 'did not address the expiring enhanced premium tax credits'); KFF reports 2026 net premium payments rose (58% on average after plan switching) and effectuated enrollment fell from 21.8M in 2025 to 19.2M in 2026, and insurers are seeking a median increase of about 15% for 2027.",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "OE dates verified from two primary sources: CMS/CCIIO statement dated July 31, 2026 ('Open Enrollment at the Federally-facilitated Exchange will begin on November 1, 2026, and end on January 15, 2027') and healthcare.gov/quick-guide/dates-and-deadlines/ (Nov 1 start; Dec 15 = last day to enroll for Jan 1 coverage; Jan 15 = OE ends; page banner refers to 2027 coverage). The 2025 Marketplace Integrity rule text had set the federal OE to Nov 1-Dec 15 starting plan year 2027, but CMS's 2026 statement says the dates were not changed; the legal basis for the Jan 15 end date was not independently confirmed.",
+    "exchange_type: KFF State Health Facts 'State Health Insurance Marketplace Types' lists Alabama as 'Federally Facilitated Marketplace' (page dateModified 2025-10-21); no 2027 change for Alabama was found on healthcare.gov or CMS pages checked.",
+    "State subsidy/reinsurance: only the absence of an Alabama 1332 waiver on the CMS waiver page was verified; absence of any state-funded premium subsidy program was not independently verified from a state source."
+  ]
+}

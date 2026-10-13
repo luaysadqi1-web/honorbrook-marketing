@@ -1,0 +1,27 @@
+{
+  "state": "West Virginia",
+  "exchange_name": "HealthCare.gov (federally facilitated Marketplace); West Virginia does not run its own exchange",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federally-facilitated (HealthCare.gov)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+  "medicaid_expanded": true,
+  "medicaid_program_name": "West Virginia Medicaid, Adult Expansion Group (administered by the WV Department of Human Services, Bureau for Medical Services; managed care branded Mountain Health Trust)",
+  "medicaid_adult_income_limit_note": "WV DoHS (wvmedicaidhelp.org): Adult Expansion Group = \"adults between the ages of 19 and 64 who have a low income\"; \"'Low income' means earning less than about $22,025 a year for one person or $45,540 a year for a family of four.\" (These figures match 138% of FPL, which HealthCare.gov gives as the general expansion income standard; the WV page itself does not print '138%'.)",
+  "medicaid_url": "https://wvmedicaidhelp.org/",
+  "state_subsidy_or_reinsurance_note": null,
+  "state_subsidy_source_url": null,
+  "enhanced_ptc_status_note": "KFF (published Oct 6, 2026): the enhanced premium tax credits expired at the end of 2025; the July 2025 reconciliation law \"did not address the expiring enhanced premium tax credits,\" Congress did not extend them, and the remaining (original ACA) tax credits still apply; as a result net premium payments rose on average in 2026 and effectuated enrollment fell from 21.8 million (2025) to 19.2 million (2026).",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "Exchange type verified two ways fetched this run: KFF 'State Health Insurance Marketplace Types' lists West Virginia as 'Federally Facilitated Marketplace' for every year 2014-2026 (https://www.kff.org/affordable-care-act/state-indicator/state-health-insurance-marketplace-types/); WV BMS 'Applying for Healthcare' page calls the Health Insurance Marketplace a 'Federal website' (https://bms.wv.gov/members/applying-healthcare); WV Insurance Commission page says its ACA link 'will take you to the Federal Marketplace' (https://www.wvinsurance.gov/). No 2027-specific source found that West Virginia is changing exchange model.",
+    "OE dates: the HealthCare.gov dates-and-deadlines page (fetched Oct 12, 2026) states 'Starting November 1, you can apply for 2027 coverage', 'December 15: Last day to enroll in or change plans for coverage to start January 1', and 'January 15: Open Enrollment ends'. The page does not print years next to the dates; Nov 1, 2026 and Jan 15, 2027 are inferred from the '2027 coverage' banner.",
+    "State subsidy / reinsurance: no West Virginia state premium subsidy or state reinsurance program was verified from an official source. The CMS Section 1332 waiver page (https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers) was fetched but its text did not mention West Virginia; that is not conclusive proof none exists, so the field is left null. Do not claim one.",
+    "Medicaid expansion: KFF state-activity table (notes: 'as of October 2026') lists West Virginia as 'Adopted', effective 1/1/2014, no trigger law, no pending ballot (https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/). WV BMS homepage and 8/27/2026 news release also refer to the 'Medicaid Adult Expansion Group'.",
+    "Medicaid 2027 change (verified, WV DoHS news release dated Aug 27, 2026, https://bms.wv.gov/article/west-virginia-department-human-services-outlines-steps-medicaid-members-ahead-2027): beginning Jan 1, 2027, certain adults 19-64 in the Medicaid Adult Expansion Group must complete 80 hours per month of qualifying activities (or earn at least $580 per month) to keep coverage; wvmedicaidhelp.org adds that renewals for some members move to every six months starting January 2027.",
+    "medicaid.gov West Virginia state page returned HTTP 403 and could not be read; Medicaid income-limit wording therefore comes from the WV DoHS site only.",
+    "KFF midterm article (Oct 6, 2026) also reports insurers sought a median premium increase of about 15% for 2027; this is a KFF summary, not a West Virginia-specific figure.",
+    "Congress.gov was not independently checked for any legislative action on enhanced PTCs after the KFF Oct 6, 2026 article date."
+  ]
+}

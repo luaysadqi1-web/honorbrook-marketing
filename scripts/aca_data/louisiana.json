@@ -1,0 +1,25 @@
+{
+  "state": "Louisiana",
+  "exchange_name": "HealthCare.gov",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federally-facilitated (HealthCare.gov)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.cms.gov/files/document/statement-re-city-columbus-080426.pdf",
+  "medicaid_expanded": true,
+  "medicaid_program_name": "Medicaid Expansion",
+  "medicaid_adult_income_limit_note": "Louisiana Department of Health: 'Medicaid Expansion - ages 19 through 64 without Medicare' monthly income limit (effective 3/1/2026) is $1,836 for a family of 1, $2,489 for 2, $3,142 for 3, $3,795 for 4, $4,449 for 5, $5,102 for 6, $5,755 for 7, $6,408 for 8 (source: https://ldh.la.gov/medicaid/Medicaid-Partners, 'Monthly Income Limits for Medicaid Programs 2026'). LDH expansion page: adults must be between the ages of 19 and 64, below the income limits, live in Louisiana, and be a U.S. citizen or meet certain immigration requirements.",
+  "medicaid_url": "https://ldh.la.gov/page/medicaid-expansion",
+  "state_subsidy_or_reinsurance_note": null,
+  "state_subsidy_source_url": "",
+  "enhanced_ptc_status_note": "KFF (published Jan 9, 2026): 'the enhanced premium tax credits expired as of January 1' (2026).",
+  "enhanced_ptc_source_url": "https://www.kff.org/affordable-care-act/state-based-efforts-will-provide-limited-relief-from-enhanced-tax-credit-expiration/",
+  "notes_unverified": [
+    "exchange_type verified via KFF state marketplace types page (Louisiana = Federally Facilitated Marketplace, listed 2014-2026) and CMS/CCIIO statement referring to 'the Federally-facilitated Exchange'.",
+    "OE dates verified from CMS/CCIIO statement dated Aug 4, 2026 (City of Columbus v. Kennedy): 'Open Enrollment at the Federally-facilitated Exchange will begin on November 1, 2026, and end on January 15, 2027.' HealthCare.gov dates page (fetched this run) says: Dec 15 = last day to enroll for Jan 1 coverage; Dec 16-Jan 15 enrollments start Feb 1. Some secondary sites claim Dec 15 end; CMS primary statement controls. Court litigation (City of Columbus v. Kennedy) could still change dates.",
+    "Medicaid expanded=true is based on the LDH Medicaid Expansion page (adults 19-64) and LDH 2026 income table. The percent-of-FPL (commonly 138% FPL) is NOT stated on the fetched LDH pages, so it is not asserted; the LDH dollar table is quoted instead. KFF expansion-status page (Oct 1, 2026) text did not show the Louisiana row (table is an image).",
+    "Louisiana state subsidy/reinsurance: no Louisiana program found. The KFF 'State-Based Efforts' article (Jan 9, 2026) does not mention Louisiana and the CMS Section 1332 waivers page contains no mention of Louisiana, but absence is not treated as verification, so field is null.",
+    "Enhanced PTC: only the Jan 1, 2026 expiration is verified from a fetched primary-ish source (KFF Jan 9, 2026). Whether Congress has restored or extended them for plan year 2027 was NOT verified from a fetched official source; a web-search summary of KFF material (Oct 2026) still described them as expired, but that page was not fetched. Re-check before publishing 2027 subsidy claims.",
+    "Medicaid work requirements / other 2027 changes under the 2025 reconciliation law (e.g., 2027 restriction of marketplace subsidies to certain lawfully present immigrants, per a web-search summary of KFF) were not verified from fetched sources."
+  ]
+}

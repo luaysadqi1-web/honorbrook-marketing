@@ -1,0 +1,24 @@
+{
+  "state": "South Carolina",
+  "exchange_name": "HealthCare.gov (Federally-Facilitated Marketplace)",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federally-facilitated (HealthCare.gov)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+  "medicaid_expanded": false,
+  "medicaid_program_name": "Healthy Connections Medicaid (SC Department of Health and Human Services)",
+  "medicaid_adult_income_limit_note": "SCDHHS: Parent/Caretaker Relatives 'At or below 62% of the Federal Poverty Level (FPL)' (limits effective 03/01/2026; $824.60/month for 1 person, $1,411.53/month for 3 people); the SCDHHS page lists no income limit for childless adults. KFF (data as of October 2026): South Carolina is 'Not Adopted' for Medicaid expansion.",
+  "medicaid_url": "https://www.scdhhs.gov/members/program-eligibility-and-income-limits",
+  "state_subsidy_or_reinsurance_note": "South Carolina does not appear anywhere on CMS's Section 1332 State Innovation Waivers page (no approved, incomplete or withdrawn waiver listed), so no 1332 state reinsurance waiver is on record for the state.",
+  "state_subsidy_source_url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+  "enhanced_ptc_status_note": "KFF (published Oct 6, 2026): the enhanced premium tax credits expired at the end of 2025; Congress did not extend them (the July 2025 reconciliation law did not address them) and the article mentions no extension since. The same article reports insurers seeking a median premium increase of about 15% for 2027.",
+  "enhanced_ptc_source_url": "https://www.kff.org/elections/midterm-election-update-the-affordable-care-act-marketplaces/",
+  "notes_unverified": [
+    "oe_end: healthcare.gov (official) says 'Open Enrollment is November 1 - January 15' and 'Starting November 1, you can apply for 2027 coverage' but prints no years; 2026-11-01 and 2027-01-15 are the plain reading as of Oct 12, 2026. A secondary report (Inside Health Policy / others, not fetched in full) says CMS confirmed Nov 1 - Jan 15 on Aug 4, 2026 after a Maryland federal court (City of Columbus v. Kennedy, June 2026) vacated the shorter Dec 15 window, and that HHS appealed (oral arguments reportedly late Oct 2026) - dates could change; not verified from a CMS primary page this run.",
+    "Dec 15, 2026 is the last day to enroll/change plans for coverage starting Jan 1, 2027 (healthcare.gov dates page); Dec 16 - Jan 15 enrollment starts Feb 1.",
+    "exchange_type: SC DOI ACA page (https://doi.sc.gov/798/Affordable-Care-Act) refers to the 'Federally-facilitated Health Insurance Marketplace' at Healthcare.gov (for 2026 QHPs); CMS state-exchange list and KFF marketplace-type pages returned 404, so no 2027-specific confirmation of SC's exchange type.",
+    "State premium subsidy: no state-funded subsidy program was found, but absence was not affirmatively verified from a primary source (only the 1332 waiver absence is verified).",
+    "SC Medicaid parent limit: third-party sources cite 67%, 89%/50% or 100% FPL; only the SCDHHS 62% FPL figure (eff. 03/01/2026) is used. SC DOI Open Enrollment page is stale (2023 cycle) and was not used."
+  ]
+}
