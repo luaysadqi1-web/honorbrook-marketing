@@ -1,10 +1,15 @@
 # Honorbrook — High-Converting Plan (SEO + GEO → calls → appointments)
 Oct 12, 2026. Companion to `SEO-GEO-MASTER-PLAN.md` (architecture) and `_growth-plan-2026.md`. Built locally; nothing here is deployed until you say so (Netlify credits are low).
 
-## 0. Deploy discipline (credits)
-- Every push to `main` triggers a Netlify build. Pushes so far this session: 7. From now on: **stage locally, deploy once or twice a week.**
-- Staged content lives in `staging/` (outside the publish folder). A single publish step moves a batch into `site/`, updates the blog index and sitemap, and then ONE push deploys it.
-- Social drafts/queue commits should not be pushed on their own; fold them into the weekly deploy.
+## 0. Deploy discipline (Netlify credits)
+How deploys work here: every push to `main` that changes published files triggers a Netlify deploy. To spend as few as possible:
+1. **Staging.** Unpublished posts live in `staging/blog/` (outside the publish folder). Currently 16 are staged, listed in `staging/manifest.json`.
+2. **One command publishes a batch:** `python3 scripts/publish_staged.py --n 6` (or `--all`, or slugs). It moves the posts into `site/blog/`, stamps today's date, adds blog-index cards and sitemap entries, checks off the backlog, and refuses if a post links to a post that is not live. It does not run git.
+3. **Then ONE push:** `git add site _blog-topics.md && git commit -m "blog: batch" && git push`, then `./scripts/indexnow.sh /blog/<slug> ... /blog/`.
+4. **Ignore rule added to `netlify.toml`:** pushes that only touch `social/`, docs, `staging/` or `scripts/` no longer trigger a build (takes effect after the next push that includes `netlify.toml`).
+5. **In the Netlify dashboard (you):** turn off Deploy Previews and Branch Deploys, and keep only `main` as the production branch. Check Billing to see what a deploy costs on your plan; I could not see your account.
+6. **Cadence:** two batches a week (Mon, Thu), about 6 posts each = about 8 deploys a month for ~48 posts.
+7. Rebuild a post after editing its source: `python3 scripts/blogbuild/build.py posts_5.py` (writes to `staging/blog/`). Post sources are in `scripts/blogbuild/`.
 
 ## 1. The funnel (what turns a reader into an appointment)
 | Stage | What the visitor sees | Goal |
