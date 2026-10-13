@@ -49,7 +49,8 @@ Submit the new post **and** `/blog/` so the index page's updated links get recra
 
 ## GEO addendum (Oct 2026, mandatory for every post)
 - **Answer block:** the first paragraph under the H1 is a 40-60 word direct answer to the title question, wrapped in `<p class="lead">` style already used by the page-hero lead; repeat it as the `description` meta.
-- **"In your state" section** (h2): a short bullet list for VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV. Include ONLY facts you verified from an official source this run (state DOI, state exchange, SHIP). If a state fact is not verified, give the SHIP name/number or say "rules vary by state; call us". Never guess.
+- **"In your state" section** (h2): a short bullet list for VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV. Include ONLY facts you verified from an official source this run (state DOI, state exchange, SHIP). If a state fact is not verified, say "rules vary by state" and point readers to our contact form / (571) 354-0146. Never guess.
+- **No third-party phone numbers or referrals:** do NOT list SHIP/State Health Insurance Assistance Program numbers, Eldercare Locator, state agency hotlines, or any other outside phone number. The only numbers allowed are ours, (571) 354-0146, and the federal 1-800-MEDICARE number. Readers are directed to our contact form or phone.
 - **Cite primary sources inline** (medicare.gov, cms.gov, healthcare.gov, irs.gov, kff.org, state DOI) with links; every number needs a cited source.
 - **BlogPosting schema** must include `dateModified`, `author` Person with `name`, `jobTitle`, `identifier` (NPN 21370662) and `sameAs`.
 - 900-1300 words. Verify current-year figures via WebSearch before stating them; AEP 2026 = coverage for plan year 2027.

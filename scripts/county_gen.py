@@ -335,7 +335,235 @@ def external_block(sname, D, k=''):
       '<li><a href="https://www.medicare.gov/care-compare/" rel="noopener" target="_blank">Medicare Care Compare</a> for hospitals and doctors.</li>',
       '<li><a href="https://www.ssa.gov/medicare" rel="noopener" target="_blank">Social Security: Medicare</a> to enroll or check status.</li>',
       '<li><a href="https://www.medicare.gov/health-drug-plans/medigap" rel="noopener" target="_blank">Medicare.gov: Medigap</a> on how Medicare Supplement works.</li>',
-      '<li><a href="https://www.shiphelp.org/" rel="noopener" target="_blank">SHIP National Technical Assistance Center</a> to find counseling.</li>',
+      '<li><a href="https://www.healthcare.gov/" rel="noopener" target="_blank">HealthCare.gov</a> if you are not yet on Medicare.</li>',
+    ]
+    off = int(k) % len(items) if str(k).isdigit() else 0
+    pick = [items[(off + i) % len(items)] for i in range(3)]
+    base = ['<li><a href="https://www.medicare.gov/plan-compare/" rel="noopener" target="_blank">Medicare Plan Finder</a> on Medicare.gov, searchable by ZIP code.</li>',
+            f'<li><a href="{doi_u}" rel="noopener" target="_blank">{esc(doi_n)}</a>: {sname}&rsquo;s insurance regulator, including agent license lookup.</li>']
+    rows = '\n      '.join([base[0]] + pick + [base[1]])
+    return f"""    <h2>Medicare resources from official sources</h2>
+    <ul>
+      {rows}
+    </ul>
+"""
+
+
+def coverage_sentence(k, D):
+    L = [('/medicare-advantage', 'Medicare Advantage'), ('/medicare-supplement-medigap', 'Medicare Supplement (Medigap)'), ('/medicare-part-d', 'Part D drug plans'),
+         ('/aca-health-insurance', 'ACA health insurance'), ('/ichra', 'ICHRA'), ('/group-health-insurance-shop', 'group health insurance'),
+         ('/life-insurance', 'life insurance'), ('/final-expense-life-insurance', 'final expense insurance'), ('/annuities', 'annuities')]
+    off = int(k) % len(L)
+    L = L[off:] + L[:off]
+    links = [f'<a href="{h}">{t}</a>' for h, t in L]
+    lead = V(k, 'cov2', [f"As an independent agency we are not tied to one insurer, so for {esc(D)} residents we can compare ",
+                         f"We work with many carriers, which lets us compare more than one option for {esc(D)} households, including ",
+                         f"Here is what we can help {esc(D)} residents with, drawing on plans from many insurers: "])
+    return lead + ', '.join(links[:-1]) + ' and ' + links[-1] + '.'
+
+
+EXTRA = {}
+
+
+def load_extra():
+    gv = json.load(open(os.path.join(DATA, 'gv.json')))
+    rucc = json.load(open(os.path.join(DATA, 'rucc.json')))
+    ip = os.path.join(DATA, 'indexable.json')
+    idx = set(json.load(open(ip))) if os.path.exists(ip) else None
+    EXTRA['places'], EXTRA['zips'] = local_data()
+    return gv, rucc, idx
+
+
+def num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def wavg(keys, gv, field, w='BENES_TOTAL_CNT'):
+    tot = sw = 0.0
+    for k in keys:
+        x, ww = num(gv.get(k, {}).get(field)), num(gv.get(k, {}).get(w))
+        if x is not None and ww:
+            tot += x * ww; sw += ww
+    return tot / sw if sw else None
+
+
+def state_gv(keys, gv):
+    return {f: wavg(keys, gv, f) for f in ('BENE_AVG_AGE', 'BENE_DUAL_PCT', 'ER_VISITS_PER_1000_BENES', 'IP_CVRD_STAYS_PER_1000_BENES', 'BENES_HH_PCT')}
+
+
+def rel(x, ref, hi=1.12, lo=0.88, words=('higher than', 'lower than', 'close to')):
+    if x is None or not ref:
+        return None
+    return words[0] if x >= ref * hi else words[1] if x <= ref * lo else words[2]
+
+
+def bucket(rucc):
+    return 'metro' if rucc <= 3 else 'town' if rucc <= 7 else 'rural'
+
+
+def profile_block(c, k, sname, sg):
+    D = display(c)
+    g_ = EXTRA['gv'].get(k, {})
+    ru = EXTRA['rucc'].get(k)
+    out = []
+    if ru:
+        b = bucket(ru['rucc'])
+        desc = ru['desc'].split(' - ', 1)[-1] if ' - ' in ru['desc'] else ru['desc']
+        if b == 'metro':
+            t = V(k, 'ru', [f"{esc(D)} is a metro county; the U.S. Department of Agriculture describes it as: {esc(desc.lower())}. Metro counties usually have more hospitals and more insurers competing for Medicare members, so there can be more plans to compare.",
+                            f"The U.S. Department of Agriculture classifies {esc(D)} as a metro county ({esc(desc.lower())}). Counties like this tend to have a wider choice of hospitals and Medicare plans than rural ones, though networks still differ plan by plan.",
+                            f"{esc(D)} sits in a metro area, which the USDA defines as {esc(desc.lower())}. That usually means more doctors, more hospitals and more plan choices in the area."])
+        elif b == 'town':
+            t = V(k, 'ru', [f"{esc(D)} is a smaller-city and town county; the U.S. Department of Agriculture describes it as: {esc(desc.lower())}. Counties like this often sit between a metro area and rural communities, so some residents use hospitals and specialists in a neighboring county and a plan&rsquo;s network across the county line matters.",
+                            f"The USDA classifies {esc(D)} as: {esc(desc.lower())}. In counties of this type, people often travel to a larger neighboring county for specialists, so we check whether your plan&rsquo;s network reaches there.",
+                            f"{esc(D)} is a non-metro county with towns and small cities (USDA: {esc(desc.lower())}). Care is often split between local providers and a bigger hospital elsewhere, which is worth testing against each plan&rsquo;s network."])
+        else:
+            t = V(k, 'ru', [f"{esc(D)} is a rural county; the U.S. Department of Agriculture describes it as: {esc(desc.lower())}. Rural counties tend to have fewer local hospitals and doctors, so a plan&rsquo;s network and the distance to care matter a great deal.",
+                            f"The USDA classifies {esc(D)} as: {esc(desc.lower())}. With fewer hospitals and clinics close by, the right Medicare plan here is often the one whose network includes the providers you can really reach.",
+                            f"{esc(D)} is a rural county (USDA: {esc(desc.lower())}). Plan choices can be narrower than in a city, and we focus on networks that include the doctors and hospital you actually use."])
+        out.append(t)
+    n = num(g_.get('BENES_TOTAL_CNT'))
+    age, dual = num(g_.get('BENE_AVG_AGE')), num(g_.get('BENE_DUAL_PCT'))
+    parts = []
+    if n:
+        parts.append(f"CMS counts {int(n):,} Medicare beneficiaries in {esc(D)} (2023).")
+    if age is not None and sg['BENE_AVG_AGE']:
+        r = rel(age, sg['BENE_AVG_AGE'], 1.02, 0.98, ('older than', 'younger than', 'about the same as'))
+        parts.append(f"Their average age is {age:.0f}, {r} the {sname} average of {sg['BENE_AVG_AGE']:.0f}.")
+    if dual is not None:
+        d100 = dual * 100
+        r = rel(dual, sg['BENE_DUAL_PCT'], 1.2, 0.8, ('higher than', 'lower than', 'close to'))
+        parts.append(f"About {d100:.0f}% are &ldquo;dual eligible,&rdquo; meaning they have both Medicare and Medicaid, {r} the state figure of {sg['BENE_DUAL_PCT'] * 100:.0f}%." if r else f"About {d100:.0f}% are dual eligible.")
+        if r == 'higher than':
+            parts.append("Where many people have both, special plans for dual-eligible members can matter; see our <a href=\"/medicaid-dual-eligible\">Medicaid and dual eligible guide</a>, since availability varies by plan and area.")
+    if parts:
+        out.append(' '.join(parts))
+    er, ip_, hh = num(g_.get('ER_VISITS_PER_1000_BENES')), num(g_.get('IP_CVRD_STAYS_PER_1000_BENES')), num(g_.get('BENES_HH_PCT'))
+    care = []
+    if er is not None and ip_ is not None and sg['ER_VISITS_PER_1000_BENES']:
+        r1 = rel(er, sg['ER_VISITS_PER_1000_BENES'])
+        r2 = rel(ip_, sg['IP_CVRD_STAYS_PER_1000_BENES'])
+        care.append(f"Among people in Original Medicare in {esc(D)}, CMS reported about {er:.0f} emergency room visits and {ip_:.0f} inpatient hospital stays per 1,000 beneficiaries in 2023, which is {r1} the state average for emergency visits ({sg['ER_VISITS_PER_1000_BENES']:.0f}) and {r2} it for hospital stays ({sg['IP_CVRD_STAYS_PER_1000_BENES']:.0f}).")
+    if hh is not None:
+        care.append(f"About {hh * 100:.0f}% received home health care.")
+    if care:
+        care.append("These figures describe how people use care under Original Medicare; they do not show what any plan covers or costs.")
+        out.append(' '.join(care))
+    if not out:
+        return ''
+    return f"    <h2>Who has Medicare in {esc(D)}</h2>\n" + '\n'.join(f'    <p>{x}</p>' for x in out) + '\n    <p class="sans" style="font-size:14px;color:var(--muted)">Sources: <a href="https://data.cms.gov/summary-statistics-on-beneficiary-enrollment/medicare-and-medicaid-reports/medicare-geographic-variation-by-national-state-county" rel="noopener" target="_blank">CMS Medicare Geographic Variation, 2023</a>; <a href="https://www.ers.usda.gov/data-products/rural-urban-continuum-codes" rel="noopener" target="_blank">USDA Rural-Urban Continuum Codes, 2023</a>.</p>\n\n'
+
+
+def similar_table(c, k, ag, cen, pen, slugmap, st, sname):
+    unit = 'parishes' if st['unit'] == 'parishes' else 'counties'
+    me = EXTRA['rucc'].get(k, {}).get('rucc')
+    mb = bucket(me) if me else None
+    order = ag['order']
+    cand = [x for x in order if x != k]
+    same = [x for x in cand if mb and EXTRA['rucc'].get(x) and bucket(EXTRA['rucc'][x]['rucc']) == mb]
+    pool = same if len(same) >= 6 else cand
+    pool = sorted(pool, key=lambda x: abs(cen[x]['p65'] - c['p65']))[:6]
+    label = {'metro': 'Metro', 'town': 'Smaller city/town', 'rural': 'Rural'}
+    rows = []
+    for x in pool:
+        p = pen.get(x); g_ = EXTRA['gv'].get(x, {})
+        ma = pct(p['enr'], p['elig']) if p else 'n/a'
+        dl = num(g_.get('BENE_DUAL_PCT'))
+        ru = EXTRA['rucc'].get(x)
+        rows.append(f'          <tr><td><a href="/{slugmap[x]}">{esc(display(cen[x]))}</a></td><td>{cen[x]["p65"]:,}</td><td>{ma}</td><td>{f"{dl * 100:.0f}%" if dl is not None else "n/a"}</td><td>{label[bucket(ru["rucc"])] if ru else "n/a"}</td></tr>')
+    return f"""    <h2>{esc(display(c))} compared with similar {sname} {unit}</h2>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead>
+          <tr><th>{'Parish' if unit == 'parishes' else 'County'}</th><th>Residents 65+</th><th>Medicare Advantage share</th><th>Dual eligible share</th><th>Area type</th></tr>
+        </thead>
+        <tbody>
+{chr(10).join(rows)}
+        </tbody>
+      </table>
+    </div>
+    <p>See every {sname} {'parish' if unit == 'parishes' else 'county'} in our <a href="/{st['slug']}-counties">{sname} directory</a> or go to our <a href="/{st['slug']}-medicare-insurance">{sname} Medicare hub</a>.</p>
+"""
+
+
+def local_data():
+    pl = json.load(open(os.path.join(DATA, 'places.json')))
+    zp = json.load(open(os.path.join(DATA, 'zips.json')))
+    return pl, zp
+
+
+def local_block(k, D, sname):
+    pl, zp = EXTRA['places'], EXTRA['zips']
+    places = [(n, p_) for n, p_, raw in pl.get(k, []) if not n.lower().startswith('balance of')][:6]
+    zips = zp.get(k, [])
+    out = []
+    if places:
+        items = ', '.join(f"{esc(n)} ({p_:,})" for n, p_ in places)
+        out.append(V(k, 'pl', [f"The largest communities in {esc(D)} by 2023 Census population estimates are {items}. Each figure counts only the people living inside the county.",
+                               f"Census Bureau 2023 estimates put the biggest communities in {esc(D)} at {items}, counting only the part of each community inside the county.",
+                               f"People in {esc(D)} live in communities such as {items} (2023 population estimates, counting only the part of each community that lies inside the county)."]))
+    if zips:
+        shown = ', '.join(zips[:14]) + (f" and {len(zips) - 14} more" if len(zips) > 14 else '')
+        out.append(V(k, 'zp', [f"ZIP codes that fall mostly inside {esc(D)} include {shown}. Plan availability can change by ZIP code, so have yours ready when we compare plans.",
+                               f"We look up plans by ZIP code. In {esc(D)}, that means areas such as {shown}, based on Census ZIP Code Tabulation Areas that lie mostly in the county.",
+                               f"Census ZIP Code Tabulation Areas mostly within {esc(D)} number {len(zips)}: {shown}. Your exact ZIP code is what decides which plans you can join."]))
+    if not out:
+        return ''
+    return V(k, 'plh', [f"    <h2>Communities and ZIP codes in {esc(D)}</h2>", f"    <h2>Where people live in {esc(D)}</h2>", f"    <h2>{esc(D)}: communities and ZIP codes</h2>"]) + '\n' + '\n'.join(f'    <p>{x}</p>' for x in out) + '\n\n'
+
+
+def sources_line(k):
+    return V(k, 'src', [
+        '<p class="sans" style="font-size:14px;color:var(--muted)">Sources: <a href="https://www.census.gov/data/datasets/time-series/demo/popest/2020s-counties-detail.html" rel="noopener" target="_blank">Census Bureau 2023 estimates</a> and <a href="https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/ma-state/county-penetration" rel="noopener" target="_blank">CMS Medicare Advantage penetration, ' + DATA_MONTH + '</a>.</p>',
+        '<p class="sans" style="font-size:14px;color:var(--muted)">Data: U.S. Census Bureau (2023 population estimates); <a href="https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/ma-state/county-penetration" rel="noopener" target="_blank">CMS, ' + DATA_MONTH + '</a>. Medicare Advantage share is enrollees divided by people with Medicare.</p>',
+        '<p class="sans" style="font-size:14px;color:var(--muted)">Figures come from the <a href="https://www.census.gov/data/datasets/time-series/demo/popest/2020s-counties-detail.html" rel="noopener" target="_blank">Census Bureau</a> and <a href="https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/ma-state/county-penetration" rel="noopener" target="_blank">CMS</a> (' + DATA_MONTH + ').</p>'])
+
+
+def free_help(k, D, sname, st):
+    # Only our own number plus the federal 1-800-MEDICARE helpline; no SHIP/Eldercare/third-party numbers.
+    return f"""    <h2>Questions about Medicare in {esc(D)}?</h2>
+    <p>Reach out to us: <a href="/#contact">fill out our short form</a> or call <a href="tel:+15713540146">(571) 354-0146</a>, and a licensed agent will compare the plans available to you, check your doctors and drugs, and stay with you each year at renewal. For general Medicare information, the federal helpline is <strong>1-800-MEDICARE</strong> (<a href="tel:+18006334227">1-800-633-4227</a>).</p>
+
+"""
+
+
+def guides_block(c, k):
+    n = len(GUIDES)
+    off = int(k) % n
+    pick = [GUIDES[(off + i * 2) % n] for i in range(6)]
+    seen, items = set(), []
+    for h, t in pick:
+        if h not in seen:
+            seen.add(h); items.append(f'      <li><a href="{h}">{esc(t)}</a></li>')
+    return f"""    <h2>Medicare guides for {esc(display(c))} residents</h2>
+    <ul>
+{chr(10).join(items)}
+    </ul>
+"""
+
+
+def others_block(c, ag, cen, slugmap, st, sname):
+    order = ag['order']; i = order.index(c['fips'])
+    idxs = [j for j in (i-1, i+1, i-2, i+2, i-3, i+3, i-4, i+4) if 0 <= j < len(order)][:8]
+    items = '\n'.join(f'      <li><a href="/{slugmap[order[j]]}">{esc(display(cen[order[j]]))}</a></li>' for j in idxs)
+    unit = 'parishes' if st['unit'] == 'parishes' else 'counties'
+    return f"""    <h2>Other {sname} {unit} we serve</h2>
+    <ul>
+{items}
+    </ul>
+    <p>See every {sname} {'parish' if unit == 'parishes' else 'county'} on our <a href="/{st['slug']}-counties">{sname} county directory</a>, or go to our <a href="/{st['slug']}-medicare-insurance">{sname} Medicare hub</a>.</p>
+"""
+
+
+def external_block(sname, D, k=''):
+    doi_n, doi_u = DOI[sname]
+    items = [
+      '<li><a href="https://www.medicare.gov/care-compare/" rel="noopener" target="_blank">Medicare Care Compare</a> for hospitals and doctors.</li>',
+      '<li><a href="https://www.ssa.gov/medicare" rel="noopener" target="_blank">Social Security: Medicare</a> to enroll or check status.</li>',
+      '<li><a href="https://www.medicare.gov/health-drug-plans/medigap" rel="noopener" target="_blank">Medicare.gov: Medigap</a> on how Medicare Supplement works.</li>',
       '<li><a href="https://www.healthcare.gov/" rel="noopener" target="_blank">HealthCare.gov</a> if you are not yet on Medicare.</li>',
     ]
     off = int(k) % len(items) if str(k).isdigit() else 0
@@ -788,7 +1016,7 @@ def build_directory(sname, st, cen, pen, ag, slugmap):
     </div>
     <p class="sans" style="font-size:14px;color:var(--muted)">Sources: U.S. Census Bureau 2023 population estimates; CMS Medicare Advantage State/County Penetration, {DATA_MONTH}. Medicare Advantage share = people enrolled in a Medicare Advantage plan divided by people with Medicare. &ldquo;n/a&rdquo; means CMS does not publish a figure for very small counties.</p>
     <div class="callout">
-      <strong>Free help in {sname}:</strong> {esc(st['ship'])}, the state health insurance assistance program, offers free Medicare counseling at <a href="tel:+1{st['tel'].replace('-', '')[1:]}">{st['tel']}</a>.
+      Questions about your options? <a href="/#contact">Fill out our short form</a> and a licensed agent will reach out.
     </div>
     <div class="cta-strip">
       <h3>Let&rsquo;s check your options together</h3>

@@ -12,10 +12,10 @@ def end_of_prose(h):
     return m.start()
 
 def ship_block():
-    lis = '\n'.join(f'      <li><strong><a href="/{v["slug"]}-medicare-insurance">{k}</a>:</strong> {v["ship"]}, {v["tel"]}. <a href="/{v["slug"]}-counties">County-by-county numbers</a>.</li>' for k, v in ST.items())
+    lis = '\n'.join(f'      <li><a href="/{v["slug"]}-medicare-insurance">{k}</a> · <a href="/{v["slug"]}-counties">County pages</a></li>' for k, v in ST.items())
     return f'''
     <h2>Medicare help in your state</h2>
-    <p>Honorbrook is licensed in all 11 states below. Each state has a free, unbiased State Health Insurance Assistance Program (SHIP) that can answer Medicare questions. Plan availability, costs and some rules vary by state and county, so call us for what applies where you live. SHIP contacts come from the <a href="https://www.shiphelp.org/" rel="noopener">SHIP National Technical Assistance Center</a> and the <a href="https://www.cms.gov/about-cms/contact/directory" rel="noopener">CMS directory</a>; the national SHIP line is 1-877-839-2675.</p>
+    <p>Honorbrook is licensed in all 11 states below. Plan availability, costs and some rules vary by state and county, so call us at <a href="tel:+15713540146">(571) 354-0146</a> or fill out <a href="/#contact">our short form</a> for what applies where you live.</p>
     <ul>
 {lis}
     </ul>
