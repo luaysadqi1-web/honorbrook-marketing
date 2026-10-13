@@ -1,85 +1,77 @@
 # Honorbrook SEO + GEO Master Plan (11 states, all lines)
 
-Written 2026-10-12. States: VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV.
+Revised 2026-10-12 (v2). States: VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV.
 
-## Where we are
-- 79 sitemap URLs: 8+ Medicare/health product pages, 11 state hubs, 26 blog posts, 10 NoVA city pages.
-- Strength: schema (FAQPage, BlogPosting, BreadcrumbList), NAP clean, answer-style titles already adopted in the blog backlog.
-- Gaps:
-  1. **State hubs are Medicare-only** (`{state}-medicare-insurance.html`). Zero state-level surface for ACA, ICHRA/small business, life, IUL, FIA, final expense, kids. That is 11 states x 7 lines of unclaimed search surface.
-  2. **No GEO layer**: no llms.txt (added today), no named-expert/entity signals on posts, no "quotable answer block" pattern.
-  3. **Blog cadence is 1/week**. The backlog has ~35 open topics, so ~8 months at that rate. Too slow for AEP (Oct 15 - Dec 7) and ACA OE (Nov 1 - Jan 15).
-  4. **High-income / life / FIA / kids topics have not started**, and the product pages for them exist but nothing links in from answer content.
-  5. 26 real Google reviews appear nowhere on the site.
+## STATUS (v2)
+| Item | State |
+|---|---|
+| llms.txt, explicit AI-bot robots.txt | LIVE |
+| 7 AEP answer posts (after Dec 7, do nothing, ANOC, plan dropped doctor, MA back to Original, Parts A-D, dental/vision/hearing) | LIVE |
+| 11-state SHIP block + `contentLocation` schema on all 7 AEP posts | LIVE |
+| Under-65 posts (cost without a job, OE deadline, subsidy changes, deductible vs OOP, HMO/PPO/EPO, 2-10 employees, self-employed deduction, health sharing, short-term) | LIVE (committed by the content engine) |
+| 44 county/parish pages (4 per state x 11 states) + "Counties we serve" on every state hub + sitemap | LIVE |
+| "Free plan" wording removed site-wide (150 files) | LIVE |
+| Content engine cadence 4x/week (Mon/Tue/Thu/Fri 8am) | ON |
+| Reviews/testimonials block on homepage | NOT DONE (needs real review text from GBP) |
+| Person schema for Luay (NPN, 11 licensed states, sameAs) | NOT DONE |
+| ACA state hubs for Nov 1 open enrollment | NEXT |
+| State x life / IUL / FIA / final expense hubs | BLOCKED on license + appointment confirmation per state |
 
-## Architecture: Line x State x Intent grid
-Each cell is a page that answers one question for one audience.
+## What we learned (changes the strategy)
+1. **Counties are the real geographic unit for Medicare.** MA and Part D are sold by county; Medigap and ACA price by area. 1,077 counties/parishes exist in the 11 states (Census 2023). County pages are justified, but only with real local facts: thin template pages are doorway-spam risk.
+2. **We are remote outside Northern Virginia.** Every out-of-state page must say phone/video; never claim a local office. Local-pack ranking will not come from these pages (GBP is Tysons), so they compete on organic and AI-citation, not map pack.
+3. **State SHIP/AAA data is a reusable trust asset.** Each state has a SHIP helpline and local Area Agency on Aging; citing them gives pages a verifiable, non-templated core. Several county facts could not be verified (county seats, some hospitals, some AAA phones). Those were left out, not guessed.
+4. **Parallel agents collide.** They share a scratchpad and a repo, and a background job commits with `git add -A`. Rules from now on: one writer per file, agents write only their own files, orchestrator registers sitemap/index, verify what is on disk after every batch.
+5. **Compliance wording is a site-wide issue, not per page.** Fixed "free plan"; keep the linter (`social/lib/compliance.py`) and page scans in the loop.
 
-| Layer | What | Count |
+## Architecture (revised): Line x State x County x Intent
+| Layer | Status | Next |
 |---|---|---|
-| Pillar (national) | Product pages that exist today | ~20 |
-| State x line hubs (NEW) | e.g. `/texas/aca-health-insurance`, `/georgia/life-insurance`, `/north-carolina/ichra` | 11 states x 6 lines = 66 |
-| Answer posts (national, state-aware) | Real-person questions; state specifics in a "In your state" block | 100+ |
-| City pages | Keep NoVA; add 1 anchor metro per out-of-state market (Houston, Charlotte, Atlanta, Detroit, Indianapolis, Baltimore, Columbia, Birmingham, New Orleans, Charleston WV) only AFTER state-line hubs rank | later |
+| Pillar (national) product pages (~20) | live | add FAQ/answer blocks |
+| State hubs (11), Medicare | live + county lists | add ACA, life, ICHRA/SHOP sections |
+| **County/parish pages** | 44 live (top 4 by 65+ pop per state) | Wave 2: next 4 per state (44 more) once Wave 1 shows indexing |
+| State x line hubs (ACA, ICHRA, life, IUL/FIA, final expense, kids) | none | build ACA first (Nov 1); others gated by licensing |
+| Answer posts (national, 11-state block) | ~60 live | 4/week; every post carries the 11-state block |
+| NoVA city pages | 10 live | keep |
 
-State x line hubs must contain real, checkable state facts (state Marketplace name, state Medicaid expansion status, state DOI, SHIP name and phone, state-run vs HealthCare.gov exchange, state premium-tax or guaranty-association limit). No templated filler: that is a thin-content risk. State facts get verified from the state DOI / exchange / SHIP site before publish.
+### County rollout rules
+- Wave 1 (done): 44 pages. Gate to Wave 2: >=60% of pages indexed in Search Console within 4 weeks AND impressions on county-named queries.
+- Wave 2 (Nov-Dec): next 4 per state by 65+ population. Wave 3: top ~15 per state where verified AAA/hospital data exists. Do NOT mass-publish all 1,077.
+- A county page ships only if it has: verified hospitals/health systems, verified local AAA or state aging bureau, SHIP number, Census figure, county-specific FAQ. Otherwise hold.
+- Add real, checkable county differentiators over time: CMS Medicare Advantage landscape (plan counts by county, if retrievable), ACA rating area and insurers participating (healthcare.gov/state exchange), county ZIP list.
+- Expansion option: "Medicare by ZIP" lookup tool/FAQ rather than 1,000 pages.
 
-## Content pillars (priority order, per your direction)
-1. **Under 65: individuals, families, small business.** ACA, subsidies after the enhanced credits expired, ICHRA, SHOP/group, self-employed, job loss, kids on a plan.
-2. **Medicare, every part.** A/B/C/D, Medigap, AEP, ANOC, switching, IRMAA, Medicaid/dual, turning 65.
-3. **High income.** IUL, FIA, term vs permanent, cash value, policy loans, estate/legacy, how much coverage.
-4. **Seniors.** Final expense, graded benefit, 80+ with health problems, funeral cost.
-5. **Parents.** Juvenile whole life (Gerber-style), guaranteed insurability, college funding, life vs 529 tradeoffs.
+## Content pillars (unchanged order)
+1. Under 65: individuals, families, small business. 2. Medicare, every part. 3. High-income: IUL, FIA, term vs permanent. 4. Seniors: final expense. 5. Parents: juvenile whole life (Gerber-style), college funding.
 
-## Question-first writing rule
-- Title is the question a person types or says to an assistant.
-- First 2 sentences answer it directly (the "answer block" AI engines lift).
-- Then: steps/table, "In your state" block (VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV, with only facts we verified), FAQ (3-5 related questions, FAQPage schema), reviewer byline (Luay, NPN), compliance footer.
-- Mine real questions from: Google People Also Ask, Reddit r/Medicare r/healthinsurance r/personalfinance, Medicare.gov FAQs, SHIP helpline topics, your own call/chat logs (best source, add the Brook chatbot transcripts).
+## GEO checklist (revised)
+- [x] llms.txt, explicit AI-bot robots.txt
+- [x] Answer block + "In your state" (11 states) on AEP posts
+- [x] State-level schema (`contentLocation`) on posts, `areaServed` on county pages
+- [ ] Person schema for Luay (NPN, licensed states, sameAs) + author page
+- [ ] Add 11-state block to the older ~30 posts (same script)
+- [ ] Primary-source citations inline on every post
+- [ ] Visible testimonials (real GBP reviews; no AggregateRating on own site)
+- [ ] AI-citation tracker: monthly, same 30 questions in ChatGPT, Perplexity, Gemini, Google AI Overviews; log whether Honorbrook is cited and which page
+- [ ] Off-site entity: consistent NAP/NPN on BBB, Yelp (both still say Vienna), LinkedIn; helpful Reddit answers (no solicitation)
 
-## GEO (Generative Engine Optimization) checklist
-- [x] llms.txt published (site/llms.txt)
-- [ ] robots.txt: explicitly Allow GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Bingbot (currently `Allow: /` for all, which already works; making it explicit documents intent)
-- [ ] Answer-block pattern on every post and product page (direct answer in first 40-60 words)
-- [ ] Person schema for Luay with NPN, licensed states, sameAs (LinkedIn, GBP). Expert + entity signals.
-- [ ] Cite primary sources inline (CMS, Medicare.gov, KFF, state DOI) with links. AI engines prefer citable pages.
-- [ ] Consistent entity facts everywhere (NAP, 11 states, NPNs, 90+ carriers). Same wording on site, GBP, BBB, Yelp, LinkedIn.
-- [ ] Brand mentions off-site: Reddit helpful answers (no solicitation), Quora, HARO/Qwoted-style expert quotes, local news, chamber.
-- [ ] Reviews on site as visible testimonials (NO AggregateRating schema on own site).
-- [ ] Freshness: dateModified refreshed on seasonal posts every Oct/Nov/Jan.
-- [ ] Track: monthly query a fixed list of 30 questions in ChatGPT, Perplexity, Gemini, Google AI Overviews and log whether Honorbrook is cited.
-
-## Compliance guardrails (non-negotiable, already in backlog rules)
-- Medicare content: CMS disclaimer; no plan premiums/benefits as marketing claims; no "free"/"$0" claims.
-- IUL/FIA: no projected returns, no "tax-free retirement", explain caps, participation rates, surrender charges, fees, carrier-guarantee dependence; not investment/tax/legal advice.
-- Kids/college: do not call a policy "better than a 529"; tradeoffs only.
-- No invented statistics. Every number cites a source on the page.
-- Per-state: confirm the agency's lines of authority in each state before publishing a state x line page for that line (e.g. life and health appointments). Your 11 licenses cover health and life per your signature; verify annuity/FIA appointments by state.
-
-## Execution phases
-**Phase 1 (this week, AEP-critical)**
-- Publish llms.txt (done), explicit AI-bot robots, Person schema.
-- Ship 7 AEP posts from the backlog (ANOC, "do nothing", after Dec 7, drops my doctor, MA back to Original, A/B/C/D, DVH coverage). Batch, not weekly.
-- Add a visible reviews/testimonial block to homepage.
-
-**Phase 2 (Oct 20 - Nov 15)**
-- Build 11 x ACA state hubs (Nov 1 OE) and 11 x Medicare answer hubs refresh.
-- 8 under-65 and small-business posts (cost without a job, OE deadline, subsidy changes, HMO/PPO/EPO, 2-10 employees, self-employed deduction).
-
-**Phase 3 (Nov 15 - Jan 31)**
-- State x life, final expense, IUL/FIA hubs (verify appointments first).
-- High-income cluster (IUL x5, FIA x4), seniors cluster (x5), parents cluster (x5).
-
-**Phase 4 (Feb onward)**
-- ICHRA/SHOP state hubs, metro anchor pages, Spanish mirror (/es/ with hreflang), Medicare Advantage OEP posts (Jan 1 - Mar 31).
-
-## Cadence to hit coverage
-Move the content engine from 1/week to **4/week during AEP/OE**, 2/week after. Roughly 120 posts and 66 state-line pages by end of Q1 2027.
+## Calendar
+- **Now - Oct 31:** AEP posts push (4/week); reviews block; Person schema; 11-state block backfill on older posts; request indexing for county pages in Search Console; fix Yelp/BBB address.
+- **Nov 1 - Dec 7 (AEP + ACA OE):** ACA state hubs x11; county Wave 2; ICHRA/SHOP state hubs; keep Medicare AEP posts first.
+- **Dec 8 - Jan 15:** high-income cluster (IUL x5, FIA x4), seniors cluster, parents cluster; state x life hubs for states where licensed.
+- **Jan - Mar:** MA Open Enrollment posts (Jan 1 - Mar 31); county Wave 3; Spanish /es/ mirror (priority metros TX, GA, NC).
 
 ## KPIs
-Indexed pages (Search Console), impressions on question queries, AI-citation log score, GBP calls/directions, form + chat leads by state and line, review count.
+Indexed pages and index rate for the 44 county pages; impressions on question and county queries; AI-citation log; GBP calls/directions; leads by state, line and county (GA4 events already installed); review count.
 
-## Needs from you
-1. Which lines are you licensed AND appointed to sell in each of the 11 states (esp. annuities/FIA, IUL, health in non-VA states)? Drives which state-line hubs I'm allowed to publish.
-2. OK to raise cadence to 4 posts/week during AEP.
-3. Approve the plan so I start Phase 1.
+## Compliance guardrails (unchanged, plus)
+- No "free plan"/"$0"/superlatives; Medicare disclaimer on Medicare pages; independent-agency disclaimer elsewhere.
+- IUL/FIA: no projected returns, no "tax-free retirement"; explain caps, participation rates, surrender charges.
+- Kids/college: tradeoffs only vs 529.
+- Any local fact must be verified from an official source or omitted.
+- Confirm lines of authority and carrier appointments per state before publishing a state x line page.
+
+## Decisions needed from Luay
+1. For each of the 11 states: which lines are you licensed AND appointed for (esp. annuities/FIA, IUL, health outside VA)? Blocks all state x life/IUL/FIA hubs.
+2. Permission to read your real Google reviews from GBP for the testimonials block.
+3. Approve county Wave 2 once Wave 1 shows indexing.
