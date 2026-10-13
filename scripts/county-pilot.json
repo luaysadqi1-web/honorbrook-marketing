@@ -1,0 +1,244 @@
+{
+ "Virginia": [
+  {
+   "name": "Virginia Beach city",
+   "pop65": 74911,
+   "fips": "51810"
+  },
+  {
+   "name": "Chesterfield County",
+   "pop65": 63434,
+   "fips": "51041"
+  },
+  {
+   "name": "Henrico County",
+   "pop65": 58689,
+   "fips": "51087"
+  },
+  {
+   "name": "Prince William County",
+   "pop65": 57805,
+   "fips": "51153"
+  }
+ ],
+ "Maryland": [
+  {
+   "name": "Montgomery County",
+   "pop65": 187319,
+   "fips": "24031"
+  },
+  {
+   "name": "Baltimore County",
+   "pop65": 157919,
+   "fips": "24005"
+  },
+  {
+   "name": "Prince George's County",
+   "pop65": 148087,
+   "fips": "24033"
+  },
+  {
+   "name": "Anne Arundel County",
+   "pop65": 97887,
+   "fips": "24003"
+  }
+ ],
+ "North Carolina": [
+  {
+   "name": "Wake County",
+   "pop65": 159366,
+   "fips": "37183"
+  },
+  {
+   "name": "Mecklenburg County",
+   "pop65": 143690,
+   "fips": "37119"
+  },
+  {
+   "name": "Guilford County",
+   "pop65": 89625,
+   "fips": "37081"
+  },
+  {
+   "name": "Forsyth County",
+   "pop65": 68335,
+   "fips": "37067"
+  }
+ ],
+ "South Carolina": [
+  {
+   "name": "Horry County",
+   "pop65": 107430,
+   "fips": "45051"
+  },
+  {
+   "name": "Greenville County",
+   "pop65": 95536,
+   "fips": "45045"
+  },
+  {
+   "name": "Charleston County",
+   "pop65": 78368,
+   "fips": "45019"
+  },
+  {
+   "name": "Richland County",
+   "pop65": 61710,
+   "fips": "45079"
+  }
+ ],
+ "Georgia": [
+  {
+   "name": "Fulton County",
+   "pop65": 141433,
+   "fips": "13121"
+  },
+  {
+   "name": "Gwinnett County",
+   "pop65": 115777,
+   "fips": "13135"
+  },
+  {
+   "name": "Cobb County",
+   "pop65": 109539,
+   "fips": "13067"
+  },
+  {
+   "name": "DeKalb County",
+   "pop65": 108754,
+   "fips": "13089"
+  }
+ ],
+ "Alabama": [
+  {
+   "name": "Jefferson County",
+   "pop65": 114194,
+   "fips": "01073"
+  },
+  {
+   "name": "Mobile County",
+   "pop65": 73219,
+   "fips": "01097"
+  },
+  {
+   "name": "Madison County",
+   "pop65": 66539,
+   "fips": "01089"
+  },
+  {
+   "name": "Baldwin County",
+   "pop65": 55923,
+   "fips": "01003"
+  }
+ ],
+ "Louisiana": [
+  {
+   "name": "Jefferson Parish",
+   "pop65": 82284,
+   "fips": "22051"
+  },
+  {
+   "name": "East Baton Rouge Parish",
+   "pop65": 70903,
+   "fips": "22033"
+  },
+  {
+   "name": "Orleans Parish",
+   "pop65": 66128,
+   "fips": "22071"
+  },
+  {
+   "name": "St. Tammany Parish",
+   "pop65": 52409,
+   "fips": "22103"
+  }
+ ],
+ "Texas": [
+  {
+   "name": "Harris County",
+   "pop65": 586125,
+   "fips": "48201"
+  },
+  {
+   "name": "Dallas County",
+   "pop65": 317636,
+   "fips": "48113"
+  },
+  {
+   "name": "Tarrant County",
+   "pop65": 276400,
+   "fips": "48439"
+  },
+  {
+   "name": "Bexar County",
+   "pop65": 273263,
+   "fips": "48029"
+  }
+ ],
+ "Michigan": [
+  {
+   "name": "Wayne County",
+   "pop65": 299646,
+   "fips": "26163"
+  },
+  {
+   "name": "Oakland County",
+   "pop65": 242408,
+   "fips": "26125"
+  },
+  {
+   "name": "Macomb County",
+   "pop65": 164492,
+   "fips": "26099"
+  },
+  {
+   "name": "Kent County",
+   "pop65": 102130,
+   "fips": "26081"
+  }
+ ],
+ "Indiana": [
+  {
+   "name": "Marion County",
+   "pop65": 131576,
+   "fips": "18097"
+  },
+  {
+   "name": "Lake County",
+   "pop65": 91656,
+   "fips": "18089"
+  },
+  {
+   "name": "Allen County",
+   "pop65": 63254,
+   "fips": "18003"
+  },
+  {
+   "name": "Hamilton County",
+   "pop65": 53693,
+   "fips": "18057"
+  }
+ ],
+ "West Virginia": [
+  {
+   "name": "Kanawha County",
+   "pop65": 39460,
+   "fips": "54039"
+  },
+  {
+   "name": "Berkeley County",
+   "pop65": 20592,
+   "fips": "54003"
+  },
+  {
+   "name": "Cabell County",
+   "pop65": 18487,
+   "fips": "54011"
+  },
+  {
+   "name": "Wood County",
+   "pop65": 18279,
+   "fips": "54107"
+  }
+ ]
+}
