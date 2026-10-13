@@ -88,9 +88,10 @@ def build(sname, st, j, cen, pen, agg, slugmap, hdr, foot):
     banner = (f'<div class="aep-banner sans"><strong>{sname} ACA open enrollment: {s_} to {e_}.</strong> '
               f'<a href="/#contact">Get free help comparing plans &rarr;</a></div>') if s_ and e_ else \
              '<div class="aep-banner sans"><strong>ACA open enrollment begins November 1.</strong> <a href="/#contact">Get free help comparing plans &rarr;</a></div>'
-    title = f"{sname} ACA Health Insurance 2027: Enrollment & Help | Honorbrook"
-    desc = (f"{sname} ACA open enrollment for 2027 runs {s_} to {e_}. Compare Marketplace plans and check your subsidy with an independent agency. (571) 354-0146."
-            if s_ and e_ else f"{sname} ACA health insurance for 2027: compare Marketplace plans and check your subsidy with an independent agency. (571) 354-0146.")
+    title = f"{sname} ACA Health Insurance 2027 | Honorbrook"
+    desc = (f"{sname} ACA open enrollment for 2027: {s_} to {e_}. Compare plans and check your subsidy with an independent agency. (571) 354-0146."
+            if s_ and e_ else f"{sname} ACA health insurance for 2027: compare plans and check your subsidy with an independent agency. (571) 354-0146.")
+    desc = desc.replace(', 2026 to', ' to') if len(desc) > 160 else desc
     lead = (f"Open enrollment for 2027 ACA coverage in {sname} runs {s_} to {e_} on {esc(ex)}. "
             if s_ and e_ else f"Open enrollment for 2027 ACA coverage in {sname} begins November 1 on {esc(ex)}. ")
     lead += (f"Honorbrook Insurance is an independent agency licensed in {sname} that compares plans and checks your premium tax credit at no cost to you.")
@@ -173,7 +174,7 @@ def build(sname, st, j, cen, pen, agg, slugmap, hdr, foot):
     <p class="sans" style="font-size:14px;color:var(--muted)">Facts verified from the sources linked above as of October 2026. Dates and rules can change; confirm on the official Marketplace site before you act.</p>
 
     <h2>Help with the cost of coverage in {sname}</h2>
-    <p>Premium tax credits lower your monthly Marketplace premium based on your household income and the cost of local plans. The enhanced federal credits that applied through 2025 have expired, so many households pay more than before. The best way to know your number is to run it with your real income. Our <a href="/blog/can-i-keep-my-aca-subsidy-if-my-income-changes">subsidy guide</a> explains what happens if your income changes during the year.</p>
+    <p>Premium tax credits lower your monthly Marketplace premium based on your household income and the cost of local plans. The enhanced federal credits that applied through 2025 have expired, so many households pay more than before. To know your number, run it with your real income. Our <a href="/blog/can-i-keep-my-aca-subsidy-if-my-income-changes">subsidy guide</a> explains what happens if your income changes during the year.</p>
 {f'    <h2>Medicaid in {sname}</h2>{chr(10)}    <p>{med}</p>' if med else ''}
     <h2>Plan choices and networks in {sname}</h2>
     <p>Marketplace plans come in bronze, silver, gold and platinum levels, and networks differ by insurer and by where you live. Compare the <a href="/blog/bronze-vs-silver-vs-gold-aca-plans">metal tiers</a>, check that your doctors and hospitals are in network, and look at the <a href="/blog/deductible-vs-out-of-pocket-maximum-explained">deductible and out-of-pocket maximum</a>, not just the premium.</p>
