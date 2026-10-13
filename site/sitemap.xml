@@ -532,4 +532,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://honorbrook-insurance.com/blog/what-is-the-medicare-part-d-late-enrollment-penalty</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

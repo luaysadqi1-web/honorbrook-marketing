@@ -60,6 +60,15 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] Juvenile Life Insurance: What Is a Guaranteed Insurability Rider?  (written, staged for publish)
 - [x] How Do I Protect My Kids' College Plans If I Die Early?  (written, staged for publish)
 
+## Added Oct 13, 2026 (backlog was empty)
+- [x] What Is the Medicare Part D Late Enrollment Penalty, and Can I Avoid It?
+- [ ] What Is Medicare Extra Help (Low-Income Subsidy), and Do I Qualify?
+- [ ] Can I Keep My ACA Marketplace Plan When I Turn 65?
+- [ ] How Do I Compare ACA Plans During Open Enrollment? A Checklist Beyond the Premium
+- [ ] What Are Medicare Savings Programs, and Can They Pay My Part B Premium?
+- [ ] Should I Take Medicare Part B If I'm Still Working at 65?
+- [ ] How Does a Health Reimbursement Arrangement Work for a Business Owner With One or Two Employees?
+
 ## Already published (do not repeat)
 ### Medicare core
 - [x] Medicare Advantage vs. Medigap: How to Choose in 2026
