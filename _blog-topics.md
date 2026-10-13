@@ -32,11 +32,11 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] Can I Keep My Subsidy If My Income Changes Mid-Year?
 - [x] What Is a Deductible vs. Out-of-Pocket Maximum? A Plain-English Example
 - [x] HMO vs. PPO vs. EPO: Which Health Plan Type Is Right for My Family?
-- [ ] Do I Need Health Insurance for My Kids if I'm on a Spouse's Plan? Family Glitch Explained
-- [ ] How Do Small Businesses Offer Health Insurance With Just 2 to 10 Employees?
-- [ ] Can I Deduct Health Insurance Premiums If I'm Self-Employed?
-- [ ] What Is a Health Sharing Plan, and Is It Real Insurance?
-- [ ] Short-Term Health Insurance: When It Works and When It Doesn't
+- [x] Do I Need Health Insurance for My Kids if I'm on a Spouse's Plan? Family Glitch Explained
+- [x] How Do Small Businesses Offer Health Insurance With Just 2 to 10 Employees?
+- [x] Can I Deduct Health Insurance Premiums If I'm Self-Employed?
+- [x] What Is a Health Sharing Plan, and Is It Real Insurance?
+- [x] Short-Term Health Insurance: When It Works and When It Doesn't
 
 ## High-income individuals - life, IUL, FIA
 - [ ] IUL vs. Term Life Plus Investing: Which Is Better for High Earners?
