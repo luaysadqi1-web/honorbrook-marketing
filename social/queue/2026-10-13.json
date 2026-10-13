@@ -11,7 +11,11 @@
       "note": "",
       "status": "pending",
       "post_id": null,
-      "blocks": []
+      "blocks": [
+        "not configured: missing env vars: X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET"
+      ],
+      "image": "../social-assets/infographics/ichra-allowance-1819765b.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/ichra-allowance-1819765b.png"
     },
     {
       "id": "1a402e63a8",
@@ -21,7 +25,9 @@
       "note": "",
       "status": "pending",
       "post_id": null,
-      "blocks": []
+      "blocks": [
+        "not configured: missing env vars: LINKEDIN_ACCESS_TOKEN"
+      ]
     },
     {
       "id": "7afda88046",
@@ -31,8 +37,12 @@
       "note": "",
       "status": "pending",
       "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
+      "blocks": [
+        "not configured: missing env vars: GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN, GBP_ACCOUNT_ID, GBP_LOCATION_ID"
+      ],
+      "cta": "CALL",
+      "image": "../social-assets/infographics/ichra-allowance-1819765b.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/ichra-allowance-1819765b.png"
     }
   ]
 }

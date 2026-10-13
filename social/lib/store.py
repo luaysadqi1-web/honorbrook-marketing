@@ -53,7 +53,7 @@ def save_queue(date_str, data):
         fh.write("\n")
 
 
-def new_item(platform, pillar, text, note="", cta=None, cta_url=None):
+def new_item(platform, pillar, text, note="", cta=None, cta_url=None, image=None):
     item = {
         "id": uuid.uuid4().hex[:10],
         "platform": platform,
@@ -68,6 +68,8 @@ def new_item(platform, pillar, text, note="", cta=None, cta_url=None):
         item["cta"] = cta
     if cta_url:
         item["cta_url"] = cta_url
+    if image:
+        item["image"] = image
     return item
 
 

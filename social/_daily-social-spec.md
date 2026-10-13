@@ -24,6 +24,14 @@ Cadence: **Sundays.** Generates the following Mon–Sun.
      `"cta": "CALL"`, which uses the phone number already on the profile.
      Build the text with `compliance.append_disclaimer(body, "gbp")`, which
      appends the full CMS disclaimer when the topic is Medicare.
+3b. **Infographic.** For each day also write `infographic-specs/YYYY-MM-DD.json`:
+   `{"pillar": "<pillar of the X item>", "slug": "...", "eyebrow": "...", "headline": "...", "points": [2-5 short lines]}`
+   (a list of specs is allowed when items on a day have different pillars). Same
+   rules as posts: no carriers, no dollar figures, no superlatives, no urgency.
+   After the queue is written run `python3 build_infographics.py --from <Monday> --days 7`,
+   which renders the PNG, vets its text with compliance, copies it to
+   `site/assets/infographics/`, and sets `image` and `image_url` on matching X and
+   GBP items. The site folder must be deployed before GBP can fetch `image_url`.
 4. Write each day to `queue/YYYY-MM-DD.json` using the schema below.
 5. Generate 3 Reddit drafts into `reddit-drafts/YYYY-MM-DD.md` (see below).
 6. Run `python3 run_daily.py --date <each day> --dry-run` for all seven days.
