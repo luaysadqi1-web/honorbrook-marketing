@@ -1,6 +1,14 @@
 # Honorbrook SEO + GEO Master Plan (11 states, all lines)
 
-Revised 2026-10-12 (v2). States: VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV.
+Revised 2026-10-12 (v3: all 1,077 counties live). States: VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV.
+
+## v3 UPDATE: ALL COUNTIES LIVE (decision by Luay: all 11 states, all counties)
+- 1,077 of 1,077 counties/parishes covered: 44 hand-built pilot pages, 1,029 data-driven pages, 4 Northern Virginia counties served by existing city pages. Plus 11 state directories (`/{state}-counties`).
+- Built by `scripts/county_gen.py` from Census 2023 (population, age bands) and CMS (Medicare Advantage penetration Sept 2026; Hospital General Information). Re-run after new CMS releases (monthly penetration file; hospital file quarterly). Every page shows real county numbers, hospitals with CMS ratings, SHIP, Eldercare Locator, official resources, 6 guides, 8 sibling counties and a link to the state directory.
+- Separate `sitemap-counties.xml` (1,040 URLs) so Search Console shows county index rate on its own.
+- **Risk to watch (scaled-content / doorway):** ~50% of article text is shared structure between two random county pages. Mitigations in place: real per-county data, wording variants, hospital detail. If Search Console shows low index rate or "Crawled - not indexed" on county pages after 4-6 weeks, options are: (1) add `noindex` to counties with <5,000 Medicare-eligible residents, (2) fold them into their state directory, (3) add more unique data (CMS 2027 plan counts, ACA rating areas, local AAA names).
+- Not verified per county (left out on purpose): county seats, local Area Agency on Aging names/phones (pages use the national Eldercare Locator), plan counts/premiums. 
+- Next actions for Luay: submit `sitemap-counties.xml` in Search Console; watch index rate weekly.
 
 ## STATUS (v2)
 | Item | State |
