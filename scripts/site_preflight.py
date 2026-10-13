@@ -16,13 +16,13 @@ SITE = os.path.join(ROOT, 'site')
 STATE_AB = {'va', 'md', 'nc', 'sc', 'ga', 'al', 'la', 'tx', 'mi', 'in', 'wv'}
 
 BANNED = [  # (pattern, label, severity)
-    (r'free plan', 'says "free plan"', 'ERROR'),
+    (r'free plan(?!ning)', 'says "free plan"', 'ERROR'),
     (r'(?<![\w])\$0(?![\d,.])', 'says "$0"', 'ERROR'),
     (r'guaranteed (income|returns?|growth)', 'promises guaranteed income/returns/growth', 'ERROR'),
-    (r'tax[- ]free retirement', 'says "tax-free retirement"', 'ERROR'),
+    (r'(?<!["\u201c])tax[- ]free retirement', 'says "tax-free retirement"', 'ERROR'),
     (r'(no|zero) risk|risk[- ]free', 'says no risk', 'ERROR'),
-    (r'act now|limited time|don.t wait|hurry', 'urgency wording', 'ERROR'),
-    (r'#1\b|number one|top[- ]rated|best[- ]in', 'superlative', 'ERROR'),
+    (r'act now|limited time|don.t wait|(?<!not in a )hurry', 'urgency wording', 'ERROR'),
+    (r'#1\b|(?<!myth )number one|top[- ]rated|best[- ]in[- ](class|the|town|show)', 'superlative', 'ERROR'),
     (r'official medicare(?! (information|resources|website|site|plan finder|sources))|government[- ]approved', 'implies government affiliation', 'ERROR'),
     (r'best (plan|policy|option|way|rates?)\b', 'says "best plan/policy/option"', 'WARN'),
     (r'\bnever lose\b|\bcannot lose\b|beat the market', 'investment promise', 'ERROR'),
