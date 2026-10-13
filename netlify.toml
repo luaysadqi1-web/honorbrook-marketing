@@ -4,6 +4,9 @@
 [build]
   publish = "site"
   functions = "netlify/functions"
+  # Credit saver: skip the build/deploy when a push changes nothing that is published
+  # (social queue, docs, staging, scripts). Exit 0 = skip, exit 1 = build.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- site netlify netlify.toml"
 
 # Pretty URLs already work (Netlify serves /medicare-advantage from medicare-advantage.html).
 # Add a couple of redirects so old/alternate paths resolve cleanly.
@@ -54,6 +57,12 @@
 [[redirects]]
   from = "/services/*"
   to = "/"
+  status = 301
+
+# Duplicate ANOC post consolidated into the original
+[[redirects]]
+  from = "/blog/how-to-read-your-medicare-annual-notice-of-change-anoc"
+  to = "/blog/how-to-read-medicare-annual-notice-of-change"
   status = 301
 
 # Googlebot requests /favicon.ico and the repo ships PNG icons only.

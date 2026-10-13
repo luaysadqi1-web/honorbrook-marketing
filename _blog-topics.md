@@ -39,26 +39,26 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] Short-Term Health Insurance: When It Works and When It Doesn't
 
 ## High-income individuals - life, IUL, FIA
-- [ ] IUL vs. Term Life Plus Investing: Which Is Better for High Earners?
-- [ ] Fixed Indexed Annuity vs. CD vs. Bond: Where Does an FIA Fit?
-- [ ] How Much Life Insurance Do High-Income Earners Need?
-- [ ] Is Cash Value Life Insurance a Good Retirement Supplement? What Agents Don't Always Say
-- [ ] What Is a Life Insurance Policy Loan, and Does It Really Avoid Taxes?
-- [ ] What Happens to an FIA When You Die? Beneficiaries and Probate Explained
+- [x] IUL vs. Term Life Plus Investing: Which Is Better for High Earners?  (written, staged for publish)
+- [x] Fixed Indexed Annuity vs. CD vs. Bond: Where Does an FIA Fit?  (written, staged for publish)
+- [x] How Much Life Insurance Do High-Income Earners Need?  (written, staged for publish)
+- [x] Is Cash Value Life Insurance a Good Retirement Supplement? What Agents Don't Always Say  (written, staged for publish)
+- [x] What Is a Life Insurance Policy Loan, and Does It Really Avoid Taxes?  (written, staged for publish)
+- [x] What Happens to an FIA When You Die? Beneficiaries and Probate Explained  (written, staged for publish)
 
 ## Seniors - final expense
-- [ ] How Much Does Final Expense Insurance Cost at 65, 70 or 75? (What Sets the Price)
-- [ ] What Is a Graded Death Benefit, and Why Do Some Final Expense Policies Have One?
-- [ ] Can I Get Life Insurance at 80 With Health Problems?
-- [ ] Final Expense vs. Burial Insurance vs. Prepaid Funeral Plan: What's the Difference?
-- [ ] How Much Does a Funeral Cost, and Who Pays if There's No Policy?
+- [x] How Much Does Final Expense Insurance Cost at 65, 70 or 75? (What Sets the Price)  (written, staged for publish)
+- [x] What Is a Graded Death Benefit, and Why Do Some Final Expense Policies Have One?  (written, staged for publish)
+- [x] Can I Get Life Insurance at 80 With Health Problems?  (written, staged for publish)
+- [x] Final Expense vs. Burial Insurance vs. Prepaid Funeral Plan: What's the Difference?  (written, staged for publish)
+- [x] How Much Does a Funeral Cost, and Who Pays if There's No Policy?  (written, staged for publish)
 
 ## Parents - kids, college, juvenile policies
-- [ ] Should I Buy Life Insurance for My Child? Pros, Cons and the Gerber-Style Whole Life Option
-- [ ] How Does Cash Value Life Insurance for Kids Work, and Can It Help Pay for College?
-- [ ] Life Insurance vs. 529 for College Savings: What Each Does and Doesn't Do
-- [ ] Juvenile Life Insurance: What Is a Guaranteed Insurability Rider?
-- [ ] How Do I Protect My Kids' College Plans If I Die Early?
+- [x] Should I Buy Life Insurance for My Child? Pros, Cons and the Gerber-Style Whole Life Option  (written, staged for publish)
+- [x] How Does Cash Value Life Insurance for Kids Work, and Can It Help Pay for College?  (written, staged for publish)
+- [x] Life Insurance vs. 529 for College Savings: What Each Does and Doesn't Do  (written, staged for publish)
+- [x] Juvenile Life Insurance: What Is a Guaranteed Insurability Rider?  (written, staged for publish)
+- [x] How Do I Protect My Kids' College Plans If I Die Early?  (written, staged for publish)
 
 ## Already published (do not repeat)
 ### Medicare core
