@@ -1,38 +1,39 @@
 {
-  "date": "2026-10-15",
-  "generated": "2026-10-12T12:59:24",
-  "source": "weekly-generator",
-  "items": [
-    {
-      "id": "1b0d498b3c",
-      "platform": "x",
-      "pillar": "life-final-expense",
-      "text": "No-exam life insurance exists in two kinds. Simplified issue asks a few health questions. Guaranteed issue asks none, but usually pays less in the first years. Ask which one you are being offered. (571) 354-0146",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "232b0031fa",
-      "platform": "linkedin",
-      "pillar": "life-final-expense",
-      "text": "\"No medical exam\" covers two quite different products, and the difference matters.\n\nSimplified issue policies skip the exam but ask several health questions. If your answers are favorable, you may qualify for a full benefit from day one.\n\nGuaranteed issue policies ask no health questions at all, so anyone in the eligible age range can be accepted. The trade-off is that they commonly pay a reduced benefit if death occurs in the first two or three years, and the coverage amounts tend to be smaller.\n\nNeither is better in the abstract. For someone in good health, simplified issue is often the stronger value. For someone who has been declined elsewhere, guaranteed issue can be the right answer.\n\nThe question to ask any agent is simple: which of these am I being offered, and when does the full benefit begin?\n\nWe explain it plainly and we will tell you if you do not need a policy at all.\n\nHonorbrook Insurance, Tysons VA. (571) 354-0146 honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": []
-    },
-    {
-      "id": "3a90309d62",
-      "platform": "gbp",
-      "pillar": "life-final-expense",
-      "text": "Told you can get life insurance with no medical exam? There are two kinds. Simplified issue asks a few health questions and may pay in full from day one. Guaranteed issue asks none, but usually pays a reduced benefit in the first years. We explain the difference and tell you honestly if you do not need a policy. Call our Tysons office.",
-      "note": "",
-      "status": "pending",
-      "post_id": null,
-      "blocks": [],
-      "cta": "CALL"
-    }
-  ]
+ "date": "2026-10-15",
+ "generated": "2026-10-12T12:59:24",
+ "source": "weekly-generator",
+ "items": [
+  {
+   "id": "1b0d498b3c",
+   "platform": "x",
+   "pillar": "life-final-expense",
+   "text": "No-exam life insurance exists in two kinds. Simplified issue asks a few health questions. Guaranteed issue asks none, but usually pays less in the first years. Ask which one you are being offered. (571) 354-0146",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "232b0031fa",
+   "platform": "linkedin",
+   "pillar": "life-final-expense",
+   "text": "\"No medical exam\" covers two quite different products, and the difference matters.\n\nSimplified issue policies skip the exam but ask several health questions. If your answers are favorable, you may qualify for a full benefit from day one.\n\nGuaranteed issue policies ask no health questions at all, so anyone in the eligible age range can be accepted. The trade-off is that they commonly pay a reduced benefit if death occurs in the first two or three years, and the coverage amounts tend to be smaller.\n\nNeither is better in the abstract. For someone in good health, simplified issue is often the stronger value. For someone who has been declined elsewhere, guaranteed issue can be the right answer.\n\nThe question to ask any agent is simple: which of these am I being offered, and when does the full benefit begin?\n\nWe explain it plainly and we will tell you if you do not need a policy at all.\n\nHonorbrook Insurance, Tysons VA. (571) 354-0146 honorbrook-insurance.com",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": []
+  },
+  {
+   "id": "aep2026gbp",
+   "platform": "gbp",
+   "pillar": "enrollment-periods",
+   "text": "Medicare's Annual Enrollment Period runs October 15 \u2013 December 7.\n\nThis is the yearly window when anyone with Medicare can review their coverage and make changes. Changes you make take effect January 1.\n\nPlans can change their costs, drug lists, and provider networks from one year to the next, so it's worth looking over your Annual Notice of Change when it arrives. If you'd like a second set of eyes on it, we're happy to walk through it with you in plain English, with no pressure.\n\nHonorbrook Insurance is an independent agency. We work for you, not for one insurance company.\n\nTap Call to talk with Luay.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+   "note": "",
+   "status": "pending",
+   "post_id": null,
+   "blocks": [],
+   "cta": "CALL",
+   "image_url": "https://raw.githubusercontent.com/luaysadqi1-web/honorbrook-marketing/main/social-assets/gbp/gbp-aep-2026.png"
+  }
+ ]
 }

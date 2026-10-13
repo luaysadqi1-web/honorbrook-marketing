@@ -26,10 +26,8 @@ import x_client
 import linkedin_client
 import gbp_client
 
-# GBP is scheduled through Metricool (brand 6893064), which already holds the
-# Google-approved Business Profile connection. Leaving "gbp" here would double-post
-# every Metricool GBP item the moment GBP_* credentials appear in .env.
-AUTO_PLATFORMS = ("x", "linkedin")
+# Metricool is no longer used (user, 2026-10-12): every channel posts directly.
+AUTO_PLATFORMS = ("x", "linkedin", "gbp")
 
 
 class NotConfiguredError(str):
@@ -49,6 +47,7 @@ def publish(item, dry_run):
                 item["text"],
                 cta=item.get("cta", "CALL"),
                 cta_url=item.get("cta_url"),
+                image_url=item.get("image_url"),
                 dry_run=dry_run,
             ), None
         return None, "platform %r is not auto-posted" % platform

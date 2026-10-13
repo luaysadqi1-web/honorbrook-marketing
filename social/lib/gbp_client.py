@@ -90,7 +90,7 @@ def _access_token(client_id, client_secret, refresh_token):
     return token
 
 
-def post(text, cta="CALL", cta_url=None, dry_run=False):
+def post(text, cta="CALL", cta_url=None, image_url=None, dry_run=False):
     """Publish one local post. Returns the created post name."""
     client_id, client_secret, refresh_token, account, location = _creds()
 
@@ -109,6 +109,8 @@ def post(text, cta="CALL", cta_url=None, dry_run=False):
         "summary": text,
         "topicType": "STANDARD",
     }
+    if image_url:
+        payload["media"] = [{"mediaFormat": "PHOTO", "sourceUrl": image_url}]
     # CALL uses the phone number already on the profile and needs no URL.
     if cta == "CALL":
         payload["callToAction"] = {"actionType": "CALL"}
