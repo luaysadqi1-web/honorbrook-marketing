@@ -148,14 +148,21 @@
     </a>
     <nav class="menu sans">
       <a href="/about">About</a>
-      <a href="/aca-health-insurance">Health</a>
+      <div class="has-dd"><a href="/aca-health-insurance" aria-haspopup="true">Health</a><div class="dd">
+        <a href="/aca-health-insurance">ACA health insurance</a>
+        <a href="/ichra">ICHRA (employer allowance)</a>
+        <a href="/group-health-insurance-shop">Group health &amp; SHOP</a>
+        <a href="/self-employed-health-insurance">Self-employed health</a>
+        <a href="/lost-health-coverage">Lost health coverage</a>
+        <a href="/medicaid-dual-eligible">Medicaid &amp; dual eligible</a>
+      </div></div>
       <a href="/medicare-advantage">Medicare</a>
       <a href="/life-insurance">Life</a>
       <a href="/annuities">Annuities</a>
       <a href="/blog/">Blog</a>
       <a href="/contact">Contact</a>
     </nav>
-    <a class="cta-btn sans" href="/#contact">Plan Review</a>
+    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="/#contact">Plan Review</a></div>
   </div>
 </header>
 
@@ -390,6 +397,7 @@
 </script>
 
 <script src="/assets/chat.js" defer></script>
+<script src="/assets/find.js" defer></script>
 
 </body>
 </html>

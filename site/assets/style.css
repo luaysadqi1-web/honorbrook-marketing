@@ -182,3 +182,39 @@ footer a:hover{color:var(--gold-l)}
 .reviews-block .rv-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:18px;font-family:'Source Sans 3',Arial,sans-serif}
 /* Consent checkbox must never stretch to full width (tablet horizontal-scroll fix) */
 form .consent input[type=checkbox]{width:auto;min-width:0;height:auto;flex:none}
+
+/* Header: Health dropdown + Find your area */
+nav.menu .has-dd{position:relative;display:flex;align-items:center}
+nav.menu .dd{display:none;position:absolute;top:100%;left:-14px;min-width:250px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:0 0 8px 8px;box-shadow:0 14px 34px rgba(20,35,57,.16);padding:8px 0;z-index:60}
+nav.menu .has-dd:hover .dd,nav.menu .has-dd:focus-within .dd{display:block}
+nav.menu .dd a{display:block;padding:10px 18px;font-size:15.5px;font-weight:600;white-space:nowrap}
+nav.menu .dd a::after{display:none}
+nav.menu .dd a:hover{background:var(--cream)}
+.find-btn{display:inline-flex;align-items:center;gap:7px;background:var(--white);color:var(--navy);border:1.5px solid var(--gold);border-radius:4px;padding:9px 14px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Source Sans 3',Arial,sans-serif;margin-right:12px}
+.find-btn:hover{background:var(--cream)}
+.find-btn svg{width:17px;height:17px;flex:none}
+.nav-right{display:flex;align-items:center}
+@media(max-width:1180px){.find-btn .fb-t{display:none}.find-btn{padding:10px 11px}}
+/* Find your area dialog and inline search */
+dialog.fd-dlg{position:fixed;inset:0;margin:auto;border:none;border-radius:10px;padding:0;width:min(560px,92vw);max-height:88vh;overflow:auto;box-shadow:0 24px 60px rgba(10,20,35,.35)}
+dialog.fd-dlg::backdrop{background:rgba(10,20,35,.55)}
+.fd-head{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:var(--navy);color:#f3e7c4}
+.fd-head h2{color:#f3e7c4;font-size:22px;margin:0}
+.fd-x{background:none;border:none;color:#f3e7c4;font-size:30px;line-height:1;cursor:pointer;padding:0 4px}
+.fd-body{padding:22px}
+.fd-label{display:block;font-family:'Source Sans 3',Arial,sans-serif;font-weight:700;color:var(--navy);margin-bottom:8px;font-size:16px}
+.fd-row{display:flex;gap:10px}
+.fd-input{flex:1;min-width:0;font-size:18px;padding:13px 14px;border:2px solid var(--line);border-radius:6px;font-family:inherit}
+.fd-input:focus{outline:none;border-color:var(--gold)}
+.fd-go{background:var(--gold);color:var(--navy-d);border:1px solid var(--gold-d);border-radius:6px;padding:0 20px;font-weight:700;font-size:16px;cursor:pointer;font-family:'Source Sans 3',Arial,sans-serif}
+.fd-out{margin-top:16px;font-size:17px;line-height:1.55}
+.fd-yes{background:#eef7f0;border:1px solid #cfe5d5;border-left:4px solid var(--green);border-radius:6px;padding:12px 14px;margin:0 0 12px}
+.fd-no{background:#fcf6e4;border:1px solid #ecd9a3;border-left:4px solid var(--gold);border-radius:6px;padding:12px 14px;margin:0 0 12px}
+.fd-hint{color:var(--muted);font-size:15px;margin:8px 0 0}
+.fd-list{list-style:none;margin:0;padding:0}
+.fd-list li{padding:10px 0;border-bottom:1px solid var(--line)}
+.fd-list li:last-child{border-bottom:none}
+.fd-tag{font-family:'Source Sans 3',Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--gold-d);border:1px solid var(--line);border-radius:10px;padding:1px 8px;margin-left:6px;white-space:nowrap}
+.fd-foot{margin:0;padding:0 22px 20px;font-family:'Source Sans 3',Arial,sans-serif;font-size:16px}
+#findInline{max-width:640px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:22px;box-shadow:0 6px 22px rgba(27,47,75,.06)}
+@media(max-width:520px){.fd-row{flex-direction:column}.fd-go{padding:13px}}
