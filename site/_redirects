@@ -1,0 +1,15 @@
+# Cloudflare Pages redirects (same syntax Netlify reads). Mirrors netlify.toml.
+/medigap /medicare-supplement-medigap 301
+/group /group-health-insurance-shop 301
+/services/medicare-advantage.html /medicare-advantage 301
+/services/medicare-supplement.html /medicare-supplement-medigap 301
+/services/medicare-part-d.html /medicare-part-d 301
+/services/medicare.html /medicare-advantage 301
+/services/aca-marketplace.html /aca-health-insurance 301
+/services/final-expense.html /final-expense-life-insurance 301
+/services/life-insurance.html /life-insurance 301
+/services/annuities.html /annuities 301
+/services/* / 301
+/blog/how-to-read-your-medicare-annual-notice-of-change-anoc /blog/how-to-read-medicare-annual-notice-of-change 301
+/blog/should-i-switch-from-medicare-advantage-to-original-medicare /blog/switch-from-medicare-advantage-back-to-original-medicare 301
+/favicon.ico /favicon-64.png 200
