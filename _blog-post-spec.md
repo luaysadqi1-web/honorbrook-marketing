@@ -46,3 +46,11 @@ Submit the new post **and** `/blog/` so the index page's updated links get recra
 - It refuses to submit anything if the key file at `/{key}.txt` isn't live, and skips any URL that never comes up. A skipped URL means the deploy failed — check Netlify before assuming the post is published.
 - Expected output: `OK (200) — accepted.`
 - **Google does not use IndexNow.** For Google, the sitemap entry from Step 3 is what matters. If a post is time-sensitive, additionally request indexing manually in Search Console → URL Inspection.
+
+## GEO addendum (Oct 2026, mandatory for every post)
+- **Answer block:** the first paragraph under the H1 is a 40-60 word direct answer to the title question, wrapped in `<p class="lead">` style already used by the page-hero lead; repeat it as the `description` meta.
+- **"In your state" section** (h2): a short bullet list for VA, MD, NC, SC, GA, AL, LA, TX, MI, IN, WV. Include ONLY facts you verified from an official source this run (state DOI, state exchange, SHIP). If a state fact is not verified, give the SHIP name/number or say "rules vary by state; call us". Never guess.
+- **Cite primary sources inline** (medicare.gov, cms.gov, healthcare.gov, irs.gov, kff.org, state DOI) with links; every number needs a cited source.
+- **BlogPosting schema** must include `dateModified`, `author` Person with `name`, `jobTitle`, `identifier` (NPN 21370662) and `sameAs`.
+- 900-1300 words. Verify current-year figures via WebSearch before stating them; AEP 2026 = coverage for plan year 2027.
+- Do NOT edit blog/index.html, sitemap.xml or _blog-topics.md when run in parallel; the orchestrator registers posts.
