@@ -180,3 +180,5 @@ footer a:hover{color:var(--gold-l)}
 .quote-card figcaption{font-family:'Source Sans 3',Arial,sans-serif;font-size:15px;color:var(--muted);font-weight:600}
 .reviews-block .rv-cta{text-align:center;margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .reviews-block .rv-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:18px;font-family:'Source Sans 3',Arial,sans-serif}
+/* Consent checkbox must never stretch to full width (tablet horizontal-scroll fix) */
+form .consent input[type=checkbox]{width:auto;min-width:0;height:auto;flex:none}
