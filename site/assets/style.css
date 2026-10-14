@@ -29,11 +29,13 @@ header{background:var(--white);border-bottom:3px solid var(--gold);position:stic
 .logo-text{font-family:'Playfair Display',Georgia,serif;font-size:25px;font-weight:700;color:var(--navy);letter-spacing:.6px;line-height:1}
 .logo-text span{color:var(--gold)}
 .logo-text small{display:block;font-family:'Source Sans 3',Arial,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:4px}
-nav.menu{display:flex;gap:26px;font-family:'Source Sans 3',Arial,sans-serif}
-nav.menu a{color:var(--navy);text-decoration:none;font-size:16px;font-weight:600;letter-spacing:.3px;position:relative;padding-bottom:3px}
-nav.menu a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .2s;transform-origin:center}
-nav.menu a:hover{color:var(--gold-d)}
-nav.menu a:hover::after{transform:scaleX(1)}
+nav.menu{display:flex;align-items:center;gap:4px;font-family:'Source Sans 3',Arial,sans-serif}
+nav.menu a{color:var(--navy);text-decoration:none}
+nav.menu .dd-t{display:inline-flex;align-items:center;gap:6px;background:none;border:0;border-radius:4px;padding:10px 9px;color:var(--navy);font:600 16px 'Source Sans 3',Arial,sans-serif;letter-spacing:.3px;cursor:pointer;white-space:nowrap}
+nav.menu .dd-t::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s;opacity:.75}
+nav.menu .has-dd.open .dd-t{color:var(--gold-d);background:var(--cream)}
+nav.menu .has-dd.open .dd-t::after{transform:translateY(1px) rotate(-135deg)}
+nav.menu .dd-t:hover{color:var(--gold-d)}
 .cta-btn{background:var(--gold);color:var(--navy-d);padding:11px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:15.5px;white-space:nowrap;font-family:'Source Sans 3',Arial,sans-serif;letter-spacing:.5px;border:1px solid var(--gold-d);box-shadow:0 2px 8px rgba(201,162,39,.25)}
 .cta-btn:hover{background:var(--gold-l)}
 .aep-banner{background:var(--green);color:#fff;text-align:center;padding:10px 16px;font-size:15.5px;font-family:'Source Sans 3',Arial,sans-serif;letter-spacing:.2px}
@@ -159,7 +161,6 @@ footer a:hover{color:var(--gold-l)}
 .sticky-call a{color:var(--navy-d);font-weight:700;font-size:19px;text-decoration:none;font-family:'Source Sans 3',Arial,sans-serif;letter-spacing:.5px}
 
 @media(max-width:900px){
-  nav.menu{display:none}
   .page-hero h1{font-size:33px}
   .prose h2{font-size:27px}
   .related .grid-3{grid-template-columns:1fr}
@@ -183,18 +184,41 @@ footer a:hover{color:var(--gold-l)}
 /* Consent checkbox must never stretch to full width (tablet horizontal-scroll fix) */
 form .consent input[type=checkbox]{width:auto;min-width:0;height:auto;flex:none}
 
-/* Header: Health dropdown + Find your area */
-nav.menu .has-dd{position:relative;display:flex;align-items:center}
-nav.menu .dd{display:none;position:absolute;top:100%;left:-14px;min-width:250px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:0 0 8px 8px;box-shadow:0 14px 34px rgba(20,35,57,.16);padding:8px 0;z-index:60}
-nav.menu .has-dd:hover .dd,nav.menu .has-dd:focus-within .dd{display:block}
+/* Header: dropdown menus + Find your area */
+nav.menu .has-dd{position:relative}
+nav.menu .dd{display:none;position:absolute;top:calc(100% + 17px);left:0;min-width:260px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:0 0 8px 8px;box-shadow:0 14px 34px rgba(20,35,57,.16);padding:8px 0;z-index:60}
+nav.menu .dd::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+nav.menu .dd.dd-r{left:auto;right:0}
+nav.menu .has-dd.open .dd{display:block}
+@media(min-width:1251px) and (hover:hover){nav.menu .has-dd:hover .dd{display:block}nav.menu .has-dd:hover .dd-t{color:var(--gold-d)}}
 nav.menu .dd a{display:block;padding:10px 18px;font-size:15.5px;font-weight:600;white-space:nowrap}
-nav.menu .dd a::after{display:none}
-nav.menu .dd a:hover{background:var(--cream)}
+nav.menu .dd a:hover,nav.menu .dd a:focus{background:var(--cream);color:var(--gold-d)}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;margin-left:10px;padding:0 10px;background:var(--white);border:1.5px solid var(--line);border-radius:4px;cursor:pointer}
+.nav-toggle span{display:block;height:2.5px;background:var(--navy);border-radius:2px;transition:transform .2s,opacity .2s}
+header.nav-open .nav-toggle span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+header.nav-open .nav-toggle span:nth-child(2){opacity:0}
+header.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+@media(max-width:1250px){
+  header .nav{position:relative}
+  .nav-toggle{display:inline-flex}
+  nav.menu{display:none;position:absolute;top:100%;left:-24px;right:-24px;flex-direction:column;align-items:stretch;gap:0;background:var(--white);border-top:1px solid var(--line);border-bottom:3px solid var(--gold);box-shadow:0 18px 30px rgba(20,35,57,.18);max-height:calc(100vh - 90px);overflow-y:auto;padding:6px 0 12px;z-index:60}
+  header.nav-open nav.menu{display:flex}
+  nav.menu .dd-t{width:100%;justify-content:space-between;padding:15px 24px;font-size:17px;border-radius:0;border-bottom:1px solid var(--line)}
+  nav.menu .dd,nav.menu .dd.dd-r{position:static;min-width:0;border:0;border-radius:0;box-shadow:none;padding:4px 0;background:var(--cream)}
+  nav.menu .dd::before{display:none}
+  nav.menu .dd a{padding:12px 36px;font-size:16px;white-space:normal}
+}
+@media(max-width:600px){header .cta-btn{display:none}.logo-text small{display:none}}
+@media(max-width:420px){header .logo img{height:40px}header .logo-text{font-size:21px}header .logo{gap:9px}}
 .find-btn{display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:#f3e7c4;border:1.5px solid var(--gold);border-radius:4px;padding:9px 14px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Source Sans 3',Arial,sans-serif;margin-right:12px}
 .find-btn:hover{background:var(--gold);color:var(--navy-d)}
 .find-btn svg{width:17px;height:17px;flex:none}
 .nav-right{display:flex;align-items:center}
-@media(max-width:1180px){.find-btn .fb-t{display:none}.find-btn{padding:10px 11px}}
+/* search button is icon-only in the header so the seven menus fit on one line */
+header .wrap{max-width:1320px}
+header .logo{flex-shrink:0}
+header .logo-text small{letter-spacing:2.2px}
+.find-btn .fb-t{display:none}.find-btn{padding:10px 11px}
 /* Find your area dialog and inline search */
 dialog.fd-dlg{position:fixed;inset:0;margin:auto;border:none;border-radius:10px;padding:0;width:min(560px,92vw);max-height:88vh;overflow:auto;box-shadow:0 24px 60px rgba(10,20,35,.35)}
 dialog.fd-dlg::backdrop{background:rgba(10,20,35,.55)}

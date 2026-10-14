@@ -151,17 +151,8 @@
       <img src="/assets/logo.svg" alt="Honorbrook Insurance crest" width="46" height="55" decoding="async">
       <div class="logo-text">Honorbrook <span>Insurance</span><small>Independent Insurance · Est. Virginia</small></div>
     </a>
-    <nav class="menu sans">
-      <a href="/about">About</a>
-      <div class="has-dd"><a href="/aca-health-insurance" aria-haspopup="true">Health</a><div class="dd">
-        <a href="/aca-health-insurance">ACA health insurance</a>
-        <a href="/ichra">ICHRA (employer allowance)</a>
-        <a href="/group-health-insurance-shop">Group health &amp; SHOP</a>
-        <a href="/self-employed-health-insurance">Self-employed health</a>
-        <a href="/lost-health-coverage">Lost health coverage</a>
-        <a href="/medicaid-dual-eligible">Medicaid &amp; dual eligible</a>
-      </div></div>
-      <div class="has-dd"><a href="/medicare-advantage" aria-haspopup="true">Medicare</a><div class="dd">
+    <nav class="menu sans" id="site-menu" aria-label="Main">
+      <div class="has-dd"><button type="button" class="dd-t" aria-expanded="false">Medicare</button><div class="dd">
         <a href="/medicare-advantage">Medicare Advantage (Part C)</a>
         <a href="/medicare-supplement-medigap">Medicare Supplement (Medigap)</a>
         <a href="/medicare-part-d">Part D drug plans</a>
@@ -169,17 +160,51 @@
         <a href="/medicare-annual-enrollment-period">Annual Enrollment (Oct 15&ndash;Dec 7)</a>
         <a href="/turning-65">Turning 65</a>
         <a href="/medicaid-dual-eligible">Medicaid &amp; dual eligible</a>
-        <a href="/dental-vision-hearing-insurance">Dental, vision &amp; hearing</a>
         <a href="/find-your-area">Find Medicare help by state</a>
       </div></div>
-      <a href="/life-insurance">Life</a>
-      <a href="/annuities">Annuities</a>
-      <a href="/blog/">Blog</a>
-      <a href="/contact">Contact</a>
+      <div class="has-dd"><button type="button" class="dd-t" aria-expanded="false">Health</button><div class="dd">
+        <a href="/aca-health-insurance">ACA health insurance</a>
+        <a href="/self-employed-health-insurance">Self-employed health</a>
+        <a href="/lost-health-coverage">Lost health coverage</a>
+        <a href="/medicaid-dual-eligible">Medicaid &amp; dual eligible</a>
+      </div></div>
+      <div class="has-dd"><button type="button" class="dd-t" aria-expanded="false">Business</button><div class="dd">
+        <a href="/small-business-employee-benefits">Small business employee benefits</a>
+        <a href="/group-health-insurance-shop">Group health &amp; SHOP</a>
+        <a href="/ichra">ICHRA (employer allowance)</a>
+      </div></div>
+      <div class="has-dd"><button type="button" class="dd-t" aria-expanded="false">Life</button><div class="dd">
+        <a href="/life-insurance">Life insurance overview</a>
+        <a href="/term-life-insurance">Term life</a>
+        <a href="/whole-life-insurance">Whole life</a>
+        <a href="/indexed-universal-life">Indexed universal life (IUL)</a>
+        <a href="/guaranteed-universal-life">Guaranteed universal life (GUL)</a>
+        <a href="/final-expense-life-insurance">Final expense &amp; burial</a>
+      </div></div>
+      <div class="has-dd"><button type="button" class="dd-t" aria-expanded="false">Retirement</button><div class="dd">
+        <a href="/annuities">Annuities</a>
+        <a href="/long-term-care-insurance">Long-term care</a>
+        <a href="/short-term-home-care-insurance">Short-term &amp; home care</a>
+      </div></div>
+      <div class="has-dd"><button type="button" class="dd-t" aria-expanded="false">Supplemental</button><div class="dd dd-r">
+        <a href="/dental-vision-hearing-insurance">Dental, vision &amp; hearing</a>
+        <a href="/hospital-indemnity-insurance">Hospital indemnity</a>
+        <a href="/cancer-critical-illness-insurance">Cancer &amp; critical illness</a>
+        <a href="/disability-insurance">Disability insurance</a>
+      </div></div>
+      <div class="has-dd"><button type="button" class="dd-t" aria-expanded="false">About</button><div class="dd dd-r">
+        <a href="/about">About Honorbrook</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/blog/">Blog</a>
+        <a href="/find-your-area">Find your area</a>
+        <a href="/careers">Careers</a>
+        <a href="/contact">Contact</a>
+      </div></div>
     </nav>
-    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="/#contact">Plan Review</a></div>
+    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="/#contact">Plan Review</a><button type="button" class="nav-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button></div>
   </div>
 </header>
+<script src="/assets/nav.js" defer></script>
 
 <div class="aep-banner sans"><strong>Got an ICHRA offer from work?</strong> We'll help you pick a plan — free — <a href="tel:+15713540146">(571) 354-0146</a>.</div>
 

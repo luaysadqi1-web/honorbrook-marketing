@@ -3,7 +3,7 @@
 Everything is built and verified locally. Here's how to put it live on **honorbrook-insurance.com** (hosted on Netlify).
 
 Your whole site lives in: **`/Users/luaysadqi/honorbrook-marketing/site/`**
-(plus `netlify.toml` and `netlify/functions/chat.js` one level up, for the chatbot).
+(plus `netlify.toml` and `netlify/functions/chat.mjs` one level up, for the chatbot).
 
 ---
 
@@ -59,7 +59,7 @@ The forms and chatbot use a Formspree placeholder. To receive leads:
 1. Create a free form at **formspree.io** pointed at `info@honorbrook-insurance.com`.
 2. Copy your form ID (looks like `abcdwxyz`).
 3. Replace every `xgobjlba` in these files with your real ID:
-   - `site/index.html`, `site/reviews.html`, and `netlify/functions/chat.js` (the `LEAD_ENDPOINT`).
+   - `site/index.html`, `site/reviews.html`, and `netlify/functions/chat.mjs` (the `LEAD_ENDPOINT`).
    (I can do this find-and-replace for you in seconds once you have the ID.)
 
 ---
