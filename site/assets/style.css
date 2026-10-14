@@ -190,8 +190,8 @@ nav.menu .has-dd:hover .dd,nav.menu .has-dd:focus-within .dd{display:block}
 nav.menu .dd a{display:block;padding:10px 18px;font-size:15.5px;font-weight:600;white-space:nowrap}
 nav.menu .dd a::after{display:none}
 nav.menu .dd a:hover{background:var(--cream)}
-.find-btn{display:inline-flex;align-items:center;gap:7px;background:var(--white);color:var(--navy);border:1.5px solid var(--gold);border-radius:4px;padding:9px 14px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Source Sans 3',Arial,sans-serif;margin-right:12px}
-.find-btn:hover{background:var(--cream)}
+.find-btn{display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:#f3e7c4;border:1.5px solid var(--gold);border-radius:4px;padding:9px 14px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Source Sans 3',Arial,sans-serif;margin-right:12px}
+.find-btn:hover{background:var(--gold);color:var(--navy-d)}
 .find-btn svg{width:17px;height:17px;flex:none}
 .nav-right{display:flex;align-items:center}
 @media(max-width:1180px){.find-btn .fb-t{display:none}.find-btn{padding:10px 11px}}
