@@ -27,7 +27,11 @@ import linkedin_client
 import gbp_client
 
 # Metricool is no longer used (user, 2026-10-12): every channel posts directly.
-AUTO_PLATFORMS = ("x", "linkedin", "gbp")
+# Platforms the poster publishes itself. Set SOCIAL_MANUAL_PLATFORMS=x (comma list)
+# in .env to hand a platform to daily_packet.py instead, e.g. while X has no free API.
+store.load_dotenv()
+_MANUAL = {p.strip() for p in os.environ.get("SOCIAL_MANUAL_PLATFORMS", "").split(",") if p.strip()}
+AUTO_PLATFORMS = tuple(p for p in ("x", "linkedin", "gbp") if p not in _MANUAL)
 
 
 class NotConfiguredError(str):
