@@ -53,3 +53,9 @@
 2. Install ffmpeg + Node locally (needs your OK) so I can run IT Reelsmaker / Remotion and caption, brand and export each clip in vertical and landscape.
 3. Upload to YouTube, embed on the matching posts at the top, post Shorts/Reels with Postiz or Metricool.
 4. Add GA4 video-play and form-submit events. Review after 2 weeks.
+
+## Update Oct 14 (SEO session): both videos rebuilt
+- New builder `scripts/video_studio.py` replaces the slide-and-bullets builder (`make_video.py`, now unused). Animated, hook-first scenes built from the verified numbers (Part D: the $9.40 hook, 63-day timeline, 1% x $38.99 bars for 6/12/24/36 months; ACA: yearly-cost stack, 60/70/80/90 metal split, savings by metal level, date timeline with Virginia's Jan 29), burned-in captions, quiet music bed and soft UI sounds. `python3 scripts/video_studio.py build part-d|aca` renders 16:9 into `site/assets/video/` and 9:16 into `social/video_masters/` (not committed, about 10 MB each).
+- Fixed: the old ACA video said Open Enrollment ends Jan 15 everywhere; Virginia's runs to Jan 29.
+- Still true: the voice is the macOS "Samantha" voice and nobody is on camera. Luay on camera remains the biggest lift. For a better synthetic voice, download "Ava (Premium)" in System Settings > Accessibility > Spoken Content, then rerun with `VIDEO_VOICE="Ava (Premium)"`.
+- Part D numbers use the 2026 base premium ($38.99, Medicare.gov). The 2027 base premium is $41.33 per CMS; re-render with 2027 figures if you want the video to match plan-year-2027 choices.
