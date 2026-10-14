@@ -526,25 +526,10 @@ def sources_line(k):
 
 
 def free_help(k, D, sname, st):
-    tel = st['tel'].replace('-', '')[1:]
-    a = V(k, 'fh1', [f"<li><strong>{esc(st['ship'])}</strong>, the {sname} state health insurance assistance program (SHIP), offers free, unbiased Medicare counseling: <a href=\"tel:+1{tel}\">{st['tel']}</a>.</li>",
-                     f"<li>Call <strong>{esc(st['ship'])}</strong>, {sname}&rsquo;s SHIP, for free and unbiased Medicare counseling at <a href=\"tel:+1{tel}\">{st['tel']}</a>.</li>",
-                     f"<li>{sname}&rsquo;s SHIP program, <strong>{esc(st['ship'])}</strong>, gives free Medicare counseling that is not tied to any insurer: <a href=\"tel:+1{tel}\">{st['tel']}</a>.</li>"])
-    b = V(k, 'fh2', ['<li><strong>Eldercare Locator</strong> connects you to your local Area Agency on Aging: <a href="tel:+18006771116">1-800-677-1116</a> (<a href="https://eldercare.acl.gov/" rel="noopener" target="_blank">eldercare.acl.gov</a>).</li>',
-                     '<li>The <strong>Eldercare Locator</strong>, <a href="tel:+18006771116">1-800-677-1116</a>, finds the Area Agency on Aging that serves your address (<a href="https://eldercare.acl.gov/" rel="noopener" target="_blank">eldercare.acl.gov</a>).</li>',
-                     '<li>To reach your local Area Agency on Aging, use the <a href="https://eldercare.acl.gov/" rel="noopener" target="_blank">Eldercare Locator</a> or call <a href="tel:+18006771116">1-800-677-1116</a>.</li>'])
-    c = V(k, 'fh3', ['<li><strong>1-800-MEDICARE</strong> (<a href="tel:+18006334227">1-800-633-4227</a>) is the federal Medicare helpline.</li>',
-                     '<li>The federal Medicare helpline is <strong>1-800-MEDICARE</strong>, <a href="tel:+18006334227">1-800-633-4227</a>.</li>'])
-    order = V(k, 'fho', [(a, b, c), (b, a, c), (c, a, b)])
-    tail = V(k, 'worth', ["These services are worth using. Where we add to them is comparing specific plans and helping you enroll and stay on track year after year.",
-                          "Start with any of these if you like. We pick up where they leave off: comparing the actual plans for your doctors and drugs, and staying with you each year at renewal.",
-                          "They are good places to ask questions. What we add is a side-by-side comparison of the plans you can really join, plus help with enrollment and yearly reviews."])
-    lis = '\n      '.join(order)
-    return f"""    <h2>{V(k, 'fhh', ['Free help available in ', 'Where to get free Medicare help in ', 'Free Medicare counseling for '])}{esc(D)}</h2>
-    <ul>
-      {lis}
-    </ul>
-    <p>{tail}</p>
+    # Only our own number plus the federal 1-800-MEDICARE helpline; no SHIP/Eldercare/third-party numbers.
+    return f"""    <h2>Questions about Medicare in {esc(D)}?</h2>
+    <p>Reach out to us: <a href="/#contact">fill out our short form</a> or call <a href="tel:+15713540146">(571) 354-0146</a>, and a licensed agent will compare the plans available to you, check your doctors and drugs, and stay with you each year at renewal. For general Medicare information, the federal helpline is <strong>1-800-MEDICARE</strong> (<a href="tel:+18006334227">1-800-633-4227</a>).</p>
+
 """
 
 
