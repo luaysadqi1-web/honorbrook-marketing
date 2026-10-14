@@ -29,7 +29,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 ## Rollovers - added Oct 13, 2026 (Luay request: TSP, 401(k) and all rollovers)
 - [x] Can I Roll Over My TSP to an IRA or 401(k)? What Federal Employees Should Know
 - [ ] TSP vs. IRA After Retirement: Fees, Fund Choices and Withdrawal Flexibility Compared
-- [ ] Can I Roll Over a 403(b), 457(b) or Pension Lump Sum? Rules for Each Plan Type
+- [x] Can I Roll Over a 403(b), 457(b) or Pension Lump Sum? Rules for Each Plan Type  (built Oct 13 as three annuity-angled posts: 403(b), 457(b), pension lump sum; see section below)
 - [ ] Direct vs. Indirect Rollover: Why the 60-Day Rule and 20% Withholding Trip People Up
 - [ ] Roth vs. Traditional Rollover: What Happens When You Convert a 401(k) or TSP
 - [ ] Should I Roll My Old 401(k) Into My New Employer's Plan or an IRA?
@@ -117,3 +117,15 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 - [x] Small Business Health Insurance: Group Plans vs. SHOP vs. ICHRA
 - [x] The Small Business Health Care Tax Credit: Do You Qualify?
 
+## Annuity rollover pages (Oct 13, 2026; built by scripts/rollover_gen.py, registered by scripts/rollover_register.py)
+- [x] Pillar page /retirement-rollover-annuity: every account type, what is allowed, the trap for each
+- [x] Can I Roll My 403(b) Into an Annuity?
+- [x] 457(b) Rollover to an Annuity: Governmental vs. Non-Governmental
+- [x] SIMPLE IRA and SEP IRA Rollover to an Annuity: The Two-Year Rule
+- [x] Pension Lump Sum or Monthly Payments? Rolling It Into an Annuity
+- [x] Inherited IRA and Annuities: Spouse vs. Non-Spouse Rollover Rules
+- [x] 1035 Exchange for Annuities: What It Is and the 180-Day Rule
+- [x] QLAC: How a Longevity Annuity Affects Required Minimum Distributions
+- [x] Roth IRA and Roth 401(k) Rollover to an Annuity
+- [x] The Age 55 Rule: What You Can Lose Rolling a 401(k) Into an IRA Annuity
+- [ ] Still to build (needs research first): company stock / NUA before you roll; in-service rollover at 59 1/2 (plan-by-plan); state public-pension systems; spousal and QDRO rollovers
