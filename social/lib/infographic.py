@@ -192,6 +192,35 @@ def build_image(spec, reveal=None):
     return img.resize((W, H), Image.LANCZOS)
 
 
+def end_card(spec):
+    """Closing frame for videos: big call to action, disclaimer when required."""
+    disc = vet(spec)
+    img = Image.new("RGB", (W * SS, H * SS), NAVY)
+    d = ImageDraw.Draw(img)
+    d.ellipse([(W - 260) * SS, -200 * SS, (W + 200) * SS, 260 * SS], fill=NAVY2)
+    d.rectangle([0, 0, W * SS, 14 * SS], fill=GOLD)
+    M = 70
+    y = 190
+    hf = _font(SERIF_B, 60)
+    for ln in _wrap(d, spec["headline"], hf, W - 2 * M - 40)[:3]:
+        d.text((M * SS, y * SS), ln, font=hf, fill="white"); y += 76
+    y += 30
+    d.rectangle([M * SS, y * SS, (M + 90) * SS, (y + 6) * SS], fill=GOLD)
+    y += 50
+    d.text((M * SS, y * SS), "Call us. No cost, no obligation.", font=_font(SANS_B, 34), fill=MUTED)
+    y += 70
+    d.text((M * SS, y * SS), PHONE, font=_font(SERIF_B, 84), fill=GOLD)
+    y += 120
+    d.text((M * SS, y * SS), SITE, font=_font(SANS_B, 36), fill="white")
+    d.text((M * SS, (y + 52) * SS), "Honorbrook Insurance  |  Tysons, VA", font=_font(SANS, 26), fill=MUTED)
+    if disc:
+        df = _font(SANS, 18)
+        fy = H - 90
+        for ln in _wrap(d, disc, df, W - 2 * M):
+            d.text((M * SS, fy * SS), ln, font=df, fill=MUTED); fy += 24
+    return img.resize((W, H), Image.LANCZOS)
+
+
 def n_cards(spec):
     if spec.get("layout") == "compare":
         return max(len(c["points"]) for c in _columns(spec))
