@@ -1,8 +1,8 @@
 /* ==========================================================================
    Honorbrook Insurance — chatbot serverless function (Netlify)
    Runs Claude with a Honorbrook "brain" + lead-capture tool.
-   Your Anthropic API key NEVER reaches the browser — it lives in the
-   ANTHROPIC_API_KEY environment variable on Netlify.
+   Your Anthropic API key NEVER reaches the browser — the Netlify AI Gateway
+   injects ANTHROPIC_API_KEY / ANTHROPIC_BASE_URL into this v2 function.
    ========================================================================== */
 
 const MODEL = process.env.CHAT_MODEL || "claude-haiku-4-5-20251001";
@@ -65,7 +65,7 @@ const TOOLS = [
 ];
 
 async function callAnthropic(messages) {
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
+  const res = await fetch(`${(process.env.ANTHROPIC_BASE_URL || "https://api.anthropic.com").replace(/\/$/, "")}/v1/messages`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -116,9 +116,9 @@ function textFrom(content) {
     .trim();
 }
 
-exports.handler = async (event) => {
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
+export default async (req) => {
+  if (req.method !== "POST") {
+    return new Response("Method Not Allowed", { status: 405 });
   }
   if (!process.env.ANTHROPIC_API_KEY) {
     return json(500, { error: "Server not configured. Please call (571) 354-0146." });
@@ -126,7 +126,7 @@ exports.handler = async (event) => {
 
   let body;
   try {
-    body = JSON.parse(event.body || "{}");
+    body = JSON.parse((await req.text()) || "{}");
   } catch {
     return json(400, { error: "Bad request." });
   }
@@ -177,10 +177,9 @@ exports.handler = async (event) => {
   }
 };
 
-function json(statusCode, obj) {
-  return {
-    statusCode,
+function json(status, obj) {
+  return new Response(JSON.stringify(obj), {
+    status,
     headers: { "content-type": "application/json" },
-    body: JSON.stringify(obj),
-  };
+  });
 }

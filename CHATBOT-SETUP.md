@@ -81,12 +81,12 @@ Haiku 4.5 is the right default for a website chatbot.
 - It states Honorbrook is **not connected with Medicare/government**.
 
 You can tune Brook's personality, knowledge, and rules by editing the `SYSTEM_PROMPT` text
-near the top of `netlify/functions/chat.js`, then redeploying.
+near the top of `netlify/functions/chat.mjs`, then redeploying.
 
 ---
 
 ## Next step (optional): pipe leads into Integrity Connect
 Right now chat leads email you via Formspree (same as your forms). When you're ready, we can
-wire `forwardLead()` in `netlify/functions/chat.js` to push leads straight into Integrity
+wire `forwardLead()` in `netlify/functions/chat.mjs` to push leads straight into Integrity
 Connect / your dialer via its API or a Zapier/Make webhook — just let me know which integration
 Integrity Connect supports and I'll set it up.
