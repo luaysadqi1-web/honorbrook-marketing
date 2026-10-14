@@ -18,7 +18,7 @@ Facts on screen (all read on the official page this session, 2026-10-14):
           categories say nothing about quality; extra savings only on Silver). Jan 15 / Virginia Jan 29 from scripts/aca_data.
 No plan names, no benefits, no enroll-now language (CMS marketing rules): educational only.
 """
-import os, sys, json, math, subprocess, tempfile, shutil, wave
+import os, sys, json, math, subprocess, tempfile, shutil, wave, hashlib, urllib.request, urllib.error
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
@@ -218,6 +218,9 @@ def caption(c, img, t, cap):
 
 
 # ------------------------------------------------------------------ shared scenes
+VOICE_NOTE = ''   # set by prepare() when the narration is an AI voice
+
+
 def end_card(c, img, t, ph, lines):
     """lines = (question, phone, web, disclaimer)"""
     q, phone, web, disc = lines
@@ -232,7 +235,9 @@ def end_card(c, img, t, ph, lines):
     text(img, c.cx, y2 + c.S(250, 118), 'or fill out the form at', F('med', c.S(40, 22)), SOFT, d, 'mm')
     text(img, c.cx, y2 + c.S(320, 160), web, F('bold', c.S(56, 32)), WHITE, d, 'mm')
     e = eo3(prog(t, ph[-1][0], 0.5))
-    para(img, c.cx, c.S(1090, 425), disc, F('reg', c.S(30, 17)), SOFT, int(c.W * c.S(0.84, 0.74)), e * 0.95, 1.35)
+    yend = para(img, c.cx, c.S(1090, 425), disc, F('reg', c.S(30, 17)), SOFT, int(c.W * c.S(0.84, 0.74)), e * 0.95, 1.35)
+    if VOICE_NOTE:
+        para(img, c.cx, yend + c.S(24, 6), VOICE_NOTE, F('med', c.S(28, 16)), GOLDL, int(c.W * c.S(0.84, 0.74)), e * 0.95, 1.3)
 
 
 def f_fits(c, s): return F('serif', c.S(76, 44)).getlength(s) < c.W * 0.9
@@ -548,6 +553,26 @@ VIDEOS = {'part-d': PART_D, 'aca': ACA}
 
 # ------------------------------------------------------------------ audio
 SR = 44100
+CONF = os.path.expanduser('~/.config/honorbrook')   # secrets live here, outside the repo
+ENGINE = os.environ.get('VIDEO_VOICE_ENGINE', 'say')   # say | elevenlabs | recorded
+
+
+def _secret(env, fname):
+    v = os.environ.get(env)
+    if v: return v.strip()
+    p = os.path.join(CONF, fname)
+    return open(p).read().strip() if os.path.exists(p) else None
+
+
+def _wav_to_array(path_wav):
+    with wave.open(path_wav) as w: x = np.frombuffer(w.readframes(w.getnframes()), dtype='<i2').astype(np.float32) / 32768
+    return x
+
+
+def _trim(x):
+    f = int(SR * 0.006); x = x.copy(); x[:f] *= np.linspace(0, 1, f); x[-f:] *= np.linspace(1, 0, f)
+    nz = np.nonzero(np.abs(x) > 0.01)[0]
+    return x[nz[0]:nz[-1] + 1] if len(nz) else x
 
 
 def tts(text_, path_wav, tmp, voice=None, rate=178):
@@ -555,10 +580,60 @@ def tts(text_, path_wav, tmp, voice=None, rate=178):
     aiff = path_wav.replace('.wav', '.aiff')
     subprocess.run(['say', '-v', voice, '-r', str(rate), '-o', aiff, text_], check=True)
     subprocess.run(['afconvert', '-f', 'WAVE', '-d', 'LEI16@%d' % SR, '-c', '1', aiff, path_wav], check=True)
-    with wave.open(path_wav) as w: x = np.frombuffer(w.readframes(w.getnframes()), dtype='<i2').astype(np.float32) / 32768
-    f = int(SR * 0.006); x[:f] *= np.linspace(0, 1, f); x[-f:] *= np.linspace(1, 0, f)
-    nz = np.nonzero(np.abs(x) > 0.01)[0]
-    return x[nz[0]:nz[-1] + 1] if len(nz) else x
+    return _trim(_wav_to_array(path_wav))
+
+
+def eleven_tts(text_, prev, nxt, path_wav):
+    """ElevenLabs text-to-speech with the cloned voice. Key and voice id come from env or ~/.config/honorbrook/. Audio is cached so re-renders cost nothing."""
+    key, vid = _secret('ELEVENLABS_API_KEY', 'elevenlabs.key'), _secret('ELEVENLABS_VOICE_ID', 'elevenlabs.voice')
+    if not key or not vid:
+        raise SystemExit('Missing ElevenLabs key or voice id. See VOICE-CLONE-SETUP.md (files ~/.config/honorbrook/elevenlabs.key and elevenlabs.voice).')
+    model = os.environ.get('ELEVENLABS_MODEL', 'eleven_multilingual_v2')
+    vs = {'stability': float(os.environ.get('EL_STABILITY', '0.5')), 'similarity_boost': float(os.environ.get('EL_SIMILARITY', '0.8')),
+          'style': 0.0, 'speed': float(os.environ.get('EL_SPEED', '1.0')), 'use_speaker_boost': True}
+    body = {'text': text_, 'model_id': model, 'voice_settings': vs}
+    if prev: body['previous_text'] = prev
+    if nxt: body['next_text'] = nxt
+    ck = hashlib.sha1(json.dumps([vid, body], sort_keys=True).encode()).hexdigest()[:16]
+    cdir = os.path.join(SCRATCH, 'eleven_cache'); os.makedirs(cdir, exist_ok=True)
+    mp3 = os.path.join(cdir, ck + '.mp3')
+    if not os.path.exists(mp3):
+        req = urllib.request.Request('https://api.elevenlabs.io/v1/text-to-speech/%s?output_format=mp3_44100_128' % vid, data=json.dumps(body).encode(),
+                                     headers={'xi-api-key': key, 'Content-Type': 'application/json', 'Accept': 'audio/mpeg', 'User-Agent': 'honorbrook-video/1.0'})
+        try:
+            data = urllib.request.urlopen(req, timeout=120).read()
+        except urllib.error.HTTPError as e:
+            raise SystemExit('ElevenLabs error %s: %s' % (e.code, e.read().decode()[:400]))
+        open(mp3, 'wb').write(data)
+    subprocess.run(['afconvert', '-f', 'WAVE', '-d', 'LEI16@%d' % SR, '-c', '1', mp3, path_wav], check=True)
+    return _trim(_wav_to_array(path_wav))
+
+
+def split_takes(path, n, tmp):
+    """Split one long recording into n phrase takes at the pauses between lines."""
+    wav = os.path.join(tmp, 'recorded.wav')
+    subprocess.run(['afconvert', '-f', 'WAVE', '-d', 'LEI16@%d' % SR, '-c', '1', path, wav], check=True)
+    x = _wav_to_array(wav); hop = int(SR * 0.01); frames = len(x) // hop
+    env = np.sqrt(np.mean(x[:frames * hop].reshape(frames, hop) ** 2, axis=1))
+    noise, speech = np.percentile(env, 10), np.percentile(env, 90)
+    thr = noise + 0.12 * (speech - noise); quiet = env < thr
+    found = 0
+    for min_sil in (0.8, 0.65, 0.5, 0.4, 0.3, 0.25, 0.2):
+        need = int(min_sil / 0.01); segs, start, run = [], None, 0
+        for i in range(frames + 1):
+            q = quiet[i] if i < frames else True
+            if not q:
+                if start is None: start = i
+                run = 0
+            else:
+                if start is not None:
+                    run += 1
+                    if run >= need:
+                        segs.append((start, i - run + 1)); start = None; run = 0
+        found = len(segs)
+        if found == n:
+            return [x[max(0, a * hop - int(SR * 0.04)):min(len(x), b * hop + int(SR * 0.06))] for a, b in segs]
+    raise SystemExit('Found %d takes in %s but the script has %d lines. Leave a clear one-second pause between lines, or tell me and I will adjust.' % (found, path, n))
 
 
 def sfx_wave(kind):
@@ -570,20 +645,57 @@ def sfx_wave(kind):
     return (y * 0.20).astype(np.float32)
 
 
+def load_music(path, n, tmp):
+    wav = os.path.join(tmp, 'music.wav')
+    subprocess.run(['afconvert', '-f', 'WAVE', '-d', 'LEI16@%d' % SR, '-c', '1', path, wav], check=True)
+    m = _wav_to_array(wav)
+    reps = int(math.ceil(n / max(len(m), 1)))
+    return np.tile(m, reps)[:n]
+
+
+def duck_music(voice, bed, total):
+    """Music sits about 19 dB under the voice while speaking and rises about 5 dB in pauses (attack 20 ms, release 350 ms)."""
+    hop = int(SR * 0.01); frames = len(voice) // hop
+    rms = np.sqrt(np.mean(voice[:frames * hop].reshape(frames, hop) ** 2, axis=1))
+    active = rms > max(0.01, 0.12 * np.percentile(rms, 95))
+    spk = np.sqrt(np.mean(rms[active] ** 2)) if active.any() else 0.1
+    a, r = 1 - math.exp(-0.01 / 0.02), 1 - math.exp(-0.01 / 0.35)
+    g = np.zeros(frames); prev = 0.0
+    for i in range(frames):
+        tgt = 1.0 if active[i] else 0.0
+        prev += (a if tgt > prev else r) * (tgt - prev); g[i] = prev
+    speak_lvl = spk * 10 ** (-19 / 20); pause_lvl = speak_lvl * 10 ** (5 / 20)
+    lvl = pause_lvl - g * (pause_lvl - speak_lvl)
+    env = np.interp(np.arange(len(bed)), np.arange(frames) * hop, lvl).astype(np.float32)
+    bed = bed / max(np.sqrt(np.mean(bed ** 2)), 1e-6)
+    tt = np.arange(len(bed)) / SR
+    fade = np.minimum(1, tt / 1.5) * np.minimum(1, np.maximum(0, (total - tt)) / 1.5)
+    return (bed * env * fade).astype(np.float32)
+
+
 def build_audio(video, tmp):
-    """Returns (mix, timeline) where timeline = per-scene dict(t0, t1, ph=[(s,e)...]) in global seconds."""
-    pieces, t, tl, events = [], 0.0, [], []
-    lead = 0.25
-    t = lead
+    """Returns (mix, timeline, total) where timeline = per-scene dict(t0, t1, ph=[(s,e)...]) in global seconds."""
+    pieces, tl, events = [], [], []
+    says = [say for sc in video['scenes'] for _, say in sc['phr']]
+    takes = None
+    if ENGINE == 'recorded':
+        src = os.environ.get('VIDEO_RECORDED_FILE')
+        if not src: raise SystemExit('Set VIDEO_RECORDED_FILE to the voice recording (m4a/wav/mp3) for this video.')
+        takes = split_takes(src, len(says), tmp)
+    t = 0.25; k = 0
     for si, sc in enumerate(video['scenes']):
         t0 = t; tp = t + sc.get('pre', 0.15); ph = []
         for pi, (cap, say) in enumerate(sc['phr']):
-            wav = tts(say, os.path.join(tmp, 's%d_%d.wav' % (si, pi)), tmp)
+            path_wav = os.path.join(tmp, 's%d_%d.wav' % (si, pi))
+            if ENGINE == 'elevenlabs': wav = eleven_tts(say, says[k - 1] if k else None, says[k + 1] if k + 1 < len(says) else None, path_wav)
+            elif ENGINE == 'recorded': wav = _trim(takes[k])
+            else: wav = tts(say, path_wav, tmp)
+            k += 1
             d = len(wav) / SR
-            pieces.append((tp, wav)); ph.append((tp, tp + d)); tp += d + 0.2
+            pieces.append((tp, wav)); ph.append((tp, tp + d)); tp += d + (0.2 if ENGINE == 'say' else 0.28)
         t1 = ph[-1][1] + sc.get('post', 0.6)
         tl.append(dict(t0=t0, t1=t1, ph=ph)); t = t1
-        if sc.get('sfx'): events += [(t0 + lt, k) for lt, k in sc['sfx']([(a - t0, b - t0) for a, b in ph])]
+        if sc.get('sfx'): events += [(t0 + lt, kd) for lt, kd in sc['sfx']([(a - t0, b - t0) for a, b in ph])]
     total = t + 0.5
     n = int(SR * total) + SR
     voice = np.zeros(n, np.float32)
@@ -591,11 +703,12 @@ def build_audio(video, tmp):
         i = int(st * SR); voice[i:i + len(w)] += w
     voice = voice / max(np.abs(voice).max(), 1e-6) * 0.86
     tt = np.arange(n) / SR
-    pad = sum(np.sin(2 * np.pi * f * tt + k) * a for k, (f, a) in enumerate([(110, 1.0), (164.81, 0.8), (220, 0.6), (246.94, 0.35), (277.18, 0.3)]))
-    pad *= (0.8 + 0.2 * np.sin(2 * np.pi * 0.07 * tt)) * 0.030 * np.minimum(1, tt / 1.5) * np.minimum(1, np.maximum(0, (total - tt)) / 1.5)
-    mix = voice + pad.astype(np.float32)
-    for te, k in events:
-        w = sfx_wave(k); i = int(te * SR); mix[i:i + len(w)] += w[:max(0, min(len(w), n - i))]
+    mfile = os.environ.get('VIDEO_MUSIC_FILE')
+    if mfile: bed = load_music(mfile, n, tmp)
+    else: bed = sum(np.sin(2 * np.pi * f * tt + kk) * aa for kk, (f, aa) in enumerate([(110, 1.0), (164.81, 0.8), (220, 0.6), (246.94, 0.35), (277.18, 0.3)])) * (0.8 + 0.2 * np.sin(2 * np.pi * 0.07 * tt))
+    mix = voice + duck_music(voice, np.asarray(bed, np.float32), total)
+    for te, kd in events:
+        w = sfx_wave(kd); i = int(te * SR); mix[i:i + len(w)] += w[:max(0, min(len(w), n - i))]
     mix = np.clip(mix, -0.98, 0.98)
     return mix, tl, total
 
@@ -682,6 +795,8 @@ def render_frame(c, video, tl, total, t, caps):
 
 
 def prepare(name):
+    global VOICE_NOTE
+    VOICE_NOTE = 'Narration: AI voice cloned from Luay Sadqi\'s own voice, with his permission.' if ENGINE == 'elevenlabs' else ''
     video = VIDEOS[name]
     tmp = os.path.join(SCRATCH, name); os.makedirs(tmp, exist_ok=True)
     mix, tl, total = build_audio(video, tmp)
