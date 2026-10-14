@@ -21,7 +21,8 @@ Cadence: **Sundays.** Generates the following Mon–Sun.
      disclaimer at the end.
    - **one Google Business Profile post**, 300–450 characters of content. The
      reader is on the profile with intent, so front-load the offer — only the
-     first ~200 characters show before "Read more". Concrete and local. Set
+     first ~200 characters show before "Read more". Concrete, and not limited to Northern Virginia: name the 11 licensed states
+     (see Geography in `topic-calendar.md`) rather than only NoVA towns. Set
      `"cta": "CALL"`, which uses the phone number already on the profile.
      Build the text with `compliance.append_disclaimer(body, "gbp")`, which
      appends the full CMS disclaimer when the topic is Medicare.
@@ -73,6 +74,8 @@ Match the site: plain English, calm, specific, no hype. "The right coverage.
 The honest way." Short sentences. Lead with the thing the reader did not know.
 Never open with "Did you know" or "In today's world". Never use an em dash where
 a period works.
+
+Do not geo-restrict copy to Northern Virginia; see Geography in `topic-calendar.md`.
 
 Say "we" for the agency. Luay signs nothing on social unless the post is
 explicitly first-person about him.

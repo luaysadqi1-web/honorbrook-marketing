@@ -9,13 +9,13 @@ LinkedIn post against it. Reddit drafts are produced separately (see the spec).
 | Tue | `ichra-employer` | ICHRA, SHOP, small-group — the biggest content gap | **LinkedIn** |
 | Wed | `aca-under65` | Marketplace, subsidies, SEPs, self-employed | X |
 | Thu | `life-final-expense` | Final expense, term/whole, annuities. Calm, never morbid | X |
-| Fri | `local-nova` | Fairfax/Arlington/Tysons, networks, Inova & VHC, local facts | X |
+| Fri | `local-markets` | One licensed state or metro per week (rotate), networks, hospital systems, state-specific rules and facts | X |
 | Sat | `you-asked` | One real question we actually get, answered plainly | X |
 | Sun | `trust-brand` | Independence, how we're paid, why we say "keep what you have" | LinkedIn |
 
 Every day also gets a **Google Business Profile** post on the same pillar. GBP is
 a different job from X or LinkedIn: the reader is looking at your profile with
-intent *right now*. Front-load the offer, keep it concrete and local, and let the
+intent *right now*. Front-load the offer, keep it concrete, and let the
 CALL button be the action. Only the first ~200 characters show before "Read
 more", so the first sentence has to carry it. 300–450 characters of content is
 the sweet spot; the cap is 1500 including the disclaimer.
@@ -53,15 +53,28 @@ self-employed coverage · income changes mid-year.
 how much coverage is actually needed · no-exam policies · term vs whole ·
 annuities and what they are not.
 
-**local-nova** — county-by-county network differences · Inova, VHC Health,
-Reston Hospital Center · pharmacy networks · the ten NoVA city pages ·
-seasonal local events.
+**local-markets** — pick ONE of the 11 licensed states or a metro in one (rotate
+weekly, do not repeat a state within 60 days) · state-specific Medicare, ACA or
+Medigap rules that are verifiably true · hospital systems and network differences
+in that market · pharmacy networks · seasonal local events. Northern Virginia
+(Inova, VHC Health, Reston Hospital Center, the ten NoVA city pages) is one market
+in the rotation, not the default.
 
 **you-asked** — does an agent cost anything · whose side are you on · can I keep
 my doctor · what if I already have a plan I like · do I have to switch every year.
 
 **trust-brand** — independence · NPN 21370662 · licensed in 11 states · the
 Tysons office · why we tell people to keep what they have.
+
+## Geography
+
+Honorbrook is licensed in 11 states: **Virginia, Maryland, Georgia, Texas, Michigan,
+North Carolina, South Carolina, Alabama, Louisiana, Indiana, West Virginia.** Do not
+restrict posts to Northern Virginia. Default to state-neutral wording, name a
+licensed state or metro only when the post is about it, and say "licensed in 11
+states" where it helps. Never name or imply service in a state that is not on this
+list. The office address (8609 Westwood Center Drive, Tysons VA) is identity, not a
+service-area limit. GBP posts can list the 11 states instead of NoVA towns.
 
 ## Hard rules for every draft
 

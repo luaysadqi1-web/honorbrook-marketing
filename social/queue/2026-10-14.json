@@ -11,7 +11,9 @@
       "note": "",
       "status": "pending",
       "post_id": null,
-      "blocks": [],
+      "blocks": [
+        "not configured: missing env vars: X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET"
+      ],
       "image": "../social-assets/infographics/marketplace-ready-547ede73.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/marketplace-ready-547ede73.png",
       "image_alt": "Honorbrook Insurance graphic. Get ready for the Nov 1 Marketplace window. Estimate next year's household income; List your doctors and the hospital you would use; List every prescription by name; Compare total cost, not just the monthly premium.",
@@ -21,21 +23,25 @@
       "id": "48965179db",
       "platform": "linkedin",
       "pillar": "aca-under65",
-      "text": "The ACA Marketplace enrollment window opens on November 1. The people who have the easiest time are the ones who gathered a few things beforehand.\n\nWhat to have ready:\n\n- Your best estimate of household income for next year. Subsidies are based on that estimate, not on last year's tax return, so if your income is changing, say so.\n- A list of your doctors and the hospital you would use. Networks differ by plan, and in Northern Virginia they can differ by county.\n- Every prescription you take, by name.\n- Your current plan's details, so you can tell whether staying is the better choice.\n\nCompare total cost, not just the monthly premium. A lower premium can come with a higher deductible, and the difference shows up when you use care.\n\nWe do this comparison for individuals, families and the self-employed across Northern Virginia, at no cost to you.\n\nHonorbrook Insurance. (571) 354-0146 honorbrook-insurance.com",
+      "text": "The ACA Marketplace enrollment window opens on November 1. The people who have the easiest time are the ones who gathered a few things beforehand.\n\nWhat to have ready:\n\n- Your best estimate of household income for next year. Subsidies are based on that estimate, not on last year's tax return, so if your income is changing, say so.\n- A list of your doctors and the hospital you would use. Networks differ by plan, and they can differ by county.\n- Every prescription you take, by name.\n- Your current plan's details, so you can tell whether staying is the better choice.\n\nCompare total cost, not just the monthly premium. A lower premium can come with a higher deductible, and the difference shows up when you use care.\n\nWe do this comparison for individuals, families and the self-employed in all 11 states where we are licensed, at no cost to you.\n\nHonorbrook Insurance. (571) 354-0146 honorbrook-insurance.com",
       "note": "",
       "status": "pending",
       "post_id": null,
-      "blocks": []
+      "blocks": [
+        "not configured: missing env vars: LINKEDIN_ACCESS_TOKEN"
+      ]
     },
     {
       "id": "33fb25ed09",
       "platform": "gbp",
       "pillar": "aca-under65",
-      "text": "Buying your own health coverage for 2027? The Marketplace enrollment window opens Nov 1. Get ready now: your estimated household income, your doctors and hospital, and every prescription by name. We compare total cost, not just premium, for individuals, families and the self-employed in Vienna, Tysons, McLean, Fairfax and Arlington. No cost to you.",
+      "text": "Buying your own health coverage for 2027? The Marketplace enrollment window opens Nov 1. Get ready now: your estimated household income, your doctors and hospital, and every prescription by name. We compare total cost, not just premium, for individuals, families and the self-employed in 11 states, from Virginia to Texas. No cost to you.",
       "note": "",
       "status": "pending",
       "post_id": null,
-      "blocks": [],
+      "blocks": [
+        "not configured: missing env vars: GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN, GBP_ACCOUNT_ID, GBP_LOCATION_ID"
+      ],
       "cta": "CALL",
       "image": "../social-assets/infographics/marketplace-ready-547ede73.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/marketplace-ready-547ede73.png",
