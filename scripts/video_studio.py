@@ -162,11 +162,11 @@ class Ctx:
         glow = np.clip(1 - np.sqrt(xx ** 2 * 0.8 + (yy - 0.28) ** 2 * 1.6), 0, 1) ** 2
         top, bot = np.array(NAVY2, float), np.array(NAVY, float)
         arr = top[None, None, :] * (1 - yy[..., None]) + bot[None, None, :] * yy[..., None] + glow[..., None] * np.array([16, 24, 34], float)
-        self.bg = Image.fromarray(np.clip(arr, 0, 255).astype('uint8'), 'RGB')
+        self.bg = Image.fromarray(np.clip(arr, 0, 255).astype('uint8'))
         self.logo = None
         try:
             lg = Image.open(LOGO).convert('RGBA')
-            px = np.asarray(lg).copy(); px[..., 3] = np.clip((255 - px[..., :3].min(axis=2).astype(int)) * 3, 0, 255).astype('uint8'); lg = Image.fromarray(px, 'RGBA')
+            px = np.asarray(lg).copy(); px[..., 3] = np.clip((255 - px[..., :3].min(axis=2).astype(int)) * 3, 0, 255).astype('uint8'); lg = Image.fromarray(px)
             hh = self.S(88, 56); self.logo = lg.resize((int(lg.width * hh / lg.height), hh), Image.LANCZOS)
         except Exception: pass
         # layout (portrait is a phone, with platform UI at the very top and bottom)
@@ -742,8 +742,17 @@ def finish_mix(mix, target=-14.0):
     return np.clip(y, -0.891, 0.891).astype(np.float32), cur
 
 
+DEFAULT_MUSIC = os.path.join(ROOT, 'social', 'music', 'mixkit-serene-view-443.mp3')   # Mixkit Stock Music Free License, see README there
+
+
+def _carve_voice_band(bed):
+    """Make room for speech: roll off rumble and dip 1.5-4 kHz about 3 dB in the music."""
+    dip = lambda f: 1 - (1 - 10 ** (-3 / 20)) * np.exp(-0.5 * (np.log2(np.maximum(f, 1) / 2500.0) / 0.8) ** 2)
+    return _fft_filter(bed, lambda f: (f ** 2 / (f ** 2 + 60.0 ** 2)) * dip(f))
+
+
 def duck_music(voice, bed, total):
-    """Music sits about 19 dB under the voice while speaking and rises about 5 dB in pauses (attack 20 ms, release 350 ms)."""
+    """Music sits about 18 dB under the voice while speaking and rises about 6 dB in pauses (attack 20 ms, release 350 ms)."""
     hop = int(SR * 0.01); frames = len(voice) // hop
     rms = np.sqrt(np.mean(voice[:frames * hop].reshape(frames, hop) ** 2, axis=1))
     active = rms > max(0.01, 0.12 * np.percentile(rms, 95))
@@ -753,7 +762,7 @@ def duck_music(voice, bed, total):
     for i in range(frames):
         tgt = 1.0 if active[i] else 0.0
         prev += (a if tgt > prev else r) * (tgt - prev); g[i] = prev
-    speak_lvl = spk * 10 ** (-19 / 20); pause_lvl = speak_lvl * 10 ** (5 / 20)
+    speak_lvl = spk * 10 ** (-18 / 20); pause_lvl = speak_lvl * 10 ** (6 / 20)
     lvl = pause_lvl - g * (pause_lvl - speak_lvl)
     env = np.interp(np.arange(len(bed)), np.arange(frames) * hop, lvl).astype(np.float32)
     bed = bed / max(np.sqrt(np.mean(bed ** 2)), 1e-6)
@@ -794,9 +803,10 @@ def build_audio(video, tmp):
     if os.environ.get('VIDEO_POLISH', '1') != '0': voice = polish_voice(voice, 0.6 if ENGINE in ('elevenlabs', 'recorded') else 1.0)
     voice = voice / max(np.abs(voice).max(), 1e-6) * 0.86
     tt = np.arange(n) / SR
-    mfile = os.environ.get('VIDEO_MUSIC_FILE')
-    if mfile: bed = load_music(mfile, n, tmp)
+    mfile = os.environ.get('VIDEO_MUSIC_FILE', DEFAULT_MUSIC)
+    if mfile and mfile != 'none' and os.path.exists(mfile): bed = _carve_voice_band(load_music(mfile, n, tmp))
     else: bed = sum(np.sin(2 * np.pi * f * tt + kk) * aa for kk, (f, aa) in enumerate([(110, 1.0), (164.81, 0.8), (220, 0.6), (246.94, 0.35), (277.18, 0.3)])) * (0.8 + 0.2 * np.sin(2 * np.pi * 0.07 * tt))
+    print('music:', os.path.basename(mfile) if (mfile and mfile != 'none' and os.path.exists(mfile)) else 'generated pad')
     mix = voice + duck_music(voice, np.asarray(bed, np.float32), total)
     for te, kd in events:
         w = sfx_wave(kd); i = int(te * SR); mix[i:i + len(w)] += w[:max(0, min(len(w), n - i))]
