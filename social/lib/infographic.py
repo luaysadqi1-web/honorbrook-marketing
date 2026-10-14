@@ -126,7 +126,9 @@ def _card(d, x0, y0, x1, y1, text, kind, label, pf, nf):
         d.text((tx * SS, ty * SS), ln, font=pf, fill=INK); ty += lh
 
 
-def render(spec, out_dir=None):
+def build_image(spec, reveal=None):
+    """Draw the graphic. reveal=N shows only the first N cards (rows for compare);
+    None shows all. Used for the video frames."""
     disc = vet(spec)
     lay = spec.get("layout", "steps")
     img = Image.new("RGB", (W * SS, H * SS), NAVY)
@@ -160,7 +162,9 @@ def render(spec, out_dir=None):
             x0 = M + ci * (colw + 30)
             d.text((x0 * SS, y * SS), col["title"], font=_font(SERIF_B, 34), fill=GOLD)
             cy0 = y + th
-            for p in col["points"]:
+            for ri, p in enumerate(col["points"]):
+                if reveal is not None and ri >= reveal:
+                    break
                 _card(d, x0, cy0, x0 + colw, cy0 + card_h, p, "check", "", pf, nf)
                 cy0 += card_h + gap
     else:
@@ -168,6 +172,8 @@ def render(spec, out_dir=None):
         card_h = min(150, (avail - gap * (n - 1)) // n)
         pf = _font(SANS_B, 30 if card_h >= 110 else 26)
         for i, p in enumerate(spec["points"], 1):
+            if reveal is not None and i > reveal:
+                break
             _card(d, M, y, W - M, y + card_h, p,
                   "check" if lay == "checklist" else "num", str(i), pf, nf)
             y += card_h + gap
@@ -183,7 +189,18 @@ def render(spec, out_dir=None):
     d.text(((W - M) * SS, (fy + 16) * SS), spec.get("footer", PHONE + "  |  " + SITE),
            font=_font(SANS, 24), fill=MUTED, anchor="ra")
 
-    img = img.resize((W, H), Image.LANCZOS)
+    return img.resize((W, H), Image.LANCZOS)
+
+
+def n_cards(spec):
+    if spec.get("layout") == "compare":
+        return max(len(c["points"]) for c in _columns(spec))
+    return len(spec["points"])
+
+
+def render(spec, out_dir=None):
+    img = build_image(spec)
+    lay = spec.get("layout", "steps")
     out_dir = out_dir or os.path.abspath(OUT_DIR)
     os.makedirs(out_dir, exist_ok=True)
     digest = hashlib.sha256((lay + all_text(spec)).encode()).hexdigest()[:8]

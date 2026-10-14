@@ -73,7 +73,7 @@ def _sign(method, url, oauth_params, consumer_secret, token_secret):
     return base64.b64encode(digest).decode("ascii")
 
 
-def _auth_header(method, url):
+def _auth_header(method, url, extra=None):
     api_key, api_secret, token, token_secret = _creds()
     params = {
         "oauth_consumer_key": api_key,
@@ -83,8 +83,12 @@ def _auth_header(method, url):
         "oauth_token": token,
         "oauth_version": "1.0",
     }
+    # Form-encoded bodies and query strings ARE part of an OAuth 1.0a signature
+    # (JSON and multipart bodies are not); sign them but don't send them in the header.
+    signed = dict(params)
+    signed.update(extra or {})
     params["oauth_signature"] = _sign(
-        method, url, params, api_secret, token_secret
+        method, url, signed, api_secret, token_secret
     )
     return "OAuth " + ", ".join(
         '%s="%s"' % (_quote(k), _quote(v)) for k, v in sorted(params.items())
@@ -150,10 +154,68 @@ def upload_image(path, alt=None):
     return media_id
 
 
-def post(text, reply_to=None, image_path=None, image_alt=None, dry_run=False):
+def _form(url, fields):
+    body = urllib.parse.urlencode(fields).encode()
+    req = urllib.request.Request(url, data=body, method="POST")
+    req.add_header("Authorization", _auth_header("POST", url, fields))
+    req.add_header("Content-Type", "application/x-www-form-urlencoded")
+    req.add_header("User-Agent", "honorbrook-social/1.0")
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        raw = resp.read().decode("utf-8")
+    return json.loads(raw) if raw.strip() else {}
+
+
+def upload_video(path, timeout_s=180):
+    """Chunked v1.1 upload (INIT/APPEND/FINALIZE + STATUS). Returns the media id."""
+    size = os.path.getsize(path)
+    if size > 512 * 1024 * 1024:
+        raise PostError("video too large for X")
+    try:
+        mid = str(_form(MEDIA_V11, {"command": "INIT", "total_bytes": size,
+                                    "media_type": "video/mp4",
+                                    "media_category": "tweet_video"})["media_id_string"])
+        with open(path, "rb") as fh:
+            seg = 0
+            while True:
+                chunk = fh.read(4 * 1024 * 1024)
+                if not chunk:
+                    break
+                body, ctype = _multipart({"command": "APPEND", "media_id": mid,
+                                          "segment_index": seg}, os.path.basename(path), chunk)
+                _send(MEDIA_V11, body, ctype)
+                seg += 1
+        info = _form(MEDIA_V11, {"command": "FINALIZE", "media_id": mid}).get("processing_info")
+        waited = 0
+        while info and info.get("state") in ("pending", "in_progress"):
+            wait = int(info.get("check_after_secs", 2))
+            time.sleep(wait); waited += wait
+            if waited > timeout_s:
+                raise PostError("X video processing timed out")
+            q = {"command": "STATUS", "media_id": mid}
+            url = MEDIA_V11 + "?" + urllib.parse.urlencode(q)
+            req = urllib.request.Request(url, method="GET")
+            req.add_header("Authorization", _auth_header("GET", MEDIA_V11, q))
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                info = json.loads(resp.read().decode()).get("processing_info")
+        if info and info.get("state") == "failed":
+            raise PostError("X rejected the video: %s" % info.get("error", info))
+        return mid
+    except urllib.error.HTTPError as e:
+        raise PostError("X video upload HTTP %d: %s"
+                        % (e.code, e.read().decode("utf-8", "replace")[:300]))
+    except (KeyError, urllib.error.URLError) as e:
+        raise PostError("X video upload failed: %s" % e)
+
+
+def post(text, reply_to=None, image_path=None, image_alt=None, video_path=None, dry_run=False):
     """Publish one post. Returns the new post id, or a fake id on dry_run."""
     payload = {"text": text}
-    if image_path and not dry_run:
+    if video_path and not dry_run:
+        try:
+            payload["media"] = {"media_ids": [upload_video(video_path)]}
+        except (PostError, OSError) as e:
+            print("         [warn] X video skipped, posting text only: %s" % e)
+    elif image_path and not dry_run:
         # An image problem must not cost the day its post: fall back to text only.
         try:
             payload["media"] = {"media_ids": [upload_image(image_path, image_alt)]}

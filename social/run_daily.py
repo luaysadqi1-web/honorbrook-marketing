@@ -44,6 +44,8 @@ def publish(item, dry_run):
                 image_path=(os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                          item["image"]) if item.get("image") else None),
                 image_alt=item.get("image_alt"),
+                video_path=(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                         item["video"]) if item.get("video") else None),
                 dry_run=dry_run,
             ), None
         if platform == "linkedin":
