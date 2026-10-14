@@ -1,0 +1,13 @@
+{
+ "slug": "compare-aca-plans-open-enrollment",
+ "disclaimer": "General information, not insurance, tax or legal advice. Not connected with or endorsed by any government agency.",
+ "scenes": [
+  {"kind":"title","head":"How to compare ACA plans","big":"Open Enrollment 2027: Nov 1, 2026 to Jan 15, 2027","say":"How to compare A C A health plans. Open Enrollment for twenty twenty seven coverage runs November first, twenty twenty six, through January fifteenth, twenty twenty seven."},
+  {"head":"Step 1: Total yearly cost","bullets":["Monthly premium times 12","Plus deductible, copays and coinsurance you expect to pay","Know the out-of-pocket maximum"],"say":"Step one. Estimate your total yearly cost, not just the premium. Multiply the monthly premium by twelve, then add the deductible, copays and coinsurance you expect to pay. And know the out of pocket maximum, which is the most you pay for covered, in network care in a year."},
+  {"head":"Step 2: Doctors and drugs","bullets":["Confirm your doctors and hospitals are in network","Check each prescription on the plan's drug list","Check your pharmacy too"],"say":"Step two. Confirm your doctors and hospitals are in the plan's network. Check each of your prescriptions on the plan's drug list. And check your pharmacy too."},
+  {"head":"Step 3: Metal levels","bullets":["Bronze, Silver, Gold, Platinum describe how costs are split","They do not describe quality of care","Lower tiers usually mean lower premiums and higher costs when you use care"],"say":"Step three. Bronze, silver, gold and platinum describe how costs are split between you and the plan. They do not describe the quality of care. Lower tiers usually mean lower premiums, and higher costs when you use care."},
+  {"head":"Step 4: Savings","bullets":["Premium tax credits can apply to any metal level, if you qualify","Cost-sharing reductions apply only to Silver plans"],"say":"Step four. Check for savings. Premium tax credits can apply to any metal level if you qualify. Cost sharing reductions apply only to silver plans."},
+  {"head":"Key dates","bullets":["Dec 15: deadline to enroll for coverage starting Jan 1","Jan 15: Open Enrollment ends"],"say":"Remember the dates. December fifteenth is the deadline to enroll for coverage starting January first, and January fifteenth is when Open Enrollment ends."},
+  {"kind":"title","head":"Want a second set of eyes?","big":"Fill out the form at honorbrook-insurance.com","say":"Want a second set of eyes? Fill out the short form at honorbrook insurance dot com, or call five seven one, three five four, zero one four six. A licensed agent will reach out."}
+ ]
+}

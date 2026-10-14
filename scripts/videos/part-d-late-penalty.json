@@ -1,0 +1,12 @@
+{
+ "slug": "part-d-late-enrollment-penalty",
+ "disclaimer": "General information, not advice. Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+ "scenes": [
+  {"kind":"title","head":"The Medicare Part D late enrollment penalty","big":"What it is and how to avoid it","say":"The Medicare Part D late enrollment penalty. What it is, and how to avoid it."},
+  {"head":"When does it start?","bullets":["After you are first eligible, you go 63 days or more in a row","Without Part D or other creditable drug coverage"],"say":"A penalty may apply if, after you are first eligible, you go 63 days or more in a row without Part D, or other creditable prescription drug coverage."},
+  {"head":"How it is calculated","bullets":["1% of the national base premium","times each full month you went without coverage"],"big":"2026 base premium: $38.99","say":"The penalty is one percent of the national base premium, for each full month you went without coverage. The 2026 base premium is thirty eight dollars and ninety nine cents."},
+  {"head":"It can last","bullets":["Added to your monthly plan premium","Generally lasts as long as you have Medicare drug coverage, even if you switch plans"],"say":"The amount is added to your monthly plan premium, and it generally lasts as long as you have Medicare drug coverage, even if you switch plans."},
+  {"head":"How to avoid it","bullets":["Enroll when you are first eligible","Keep proof of creditable coverage","Do not let a gap reach 63 days","Ask about Extra Help, which removes the penalty"],"say":"To avoid it, enroll when you are first eligible. Keep your creditable coverage notices. Do not let a gap reach sixty three days. And ask about Extra Help, because people who receive it do not pay the penalty."},
+  {"kind":"title","head":"Questions about your situation?","big":"Fill out the form at honorbrook-insurance.com","say":"Questions about your situation? Fill out the short form at honorbrook insurance dot com, or call five seven one, three five four, zero one four six. A licensed agent will reach out."}
+ ]
+}
