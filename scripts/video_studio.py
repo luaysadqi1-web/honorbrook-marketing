@@ -554,7 +554,7 @@ VIDEOS = {'part-d': PART_D, 'aca': ACA}
 # ------------------------------------------------------------------ audio
 SR = 44100
 CONF = os.path.expanduser('~/.config/honorbrook')   # secrets live here, outside the repo
-ENGINE = os.environ.get('VIDEO_VOICE_ENGINE', 'say')   # say | elevenlabs | recorded
+ENGINE = os.environ.get('VIDEO_VOICE_ENGINE', 'say')   # say | kokoro | elevenlabs | recorded
 
 
 def _secret(env, fname):
@@ -609,6 +609,29 @@ def eleven_tts(text_, prev, nxt, path_wav):
     return _trim(_wav_to_array(path_wav))
 
 
+KOKORO_PY = os.path.expanduser('~/.cache/honorbrook-tts/venv/bin/python')
+KOKORO_VOICE = os.environ.get('VIDEO_KOKORO_VOICE', 'af_heart')
+KOKORO_SPEED = float(os.environ.get('VIDEO_KOKORO_SPEED', '0.96'))
+
+
+def kokoro_batch(says, tmp, voice=None, speed=None):
+    """Render every line with the free local Kokoro voice (one model load). Lines are cached, so re-renders are instant."""
+    voice, speed = voice or KOKORO_VOICE, speed or KOKORO_SPEED
+    if not os.path.exists(KOKORO_PY): raise SystemExit('Kokoro is not installed (expected %s).' % KOKORO_PY)
+    cdir = os.path.join(SCRATCH, 'kokoro_cache'); os.makedirs(cdir, exist_ok=True)
+    keys = [hashlib.sha1(json.dumps([voice, speed, t]).encode()).hexdigest()[:16] for t in says]
+    jobs = [{'text': t, 'voice': voice, 'speed': speed, 'out': os.path.join(cdir, k + '.wav')} for t, k in zip(says, keys) if not os.path.exists(os.path.join(cdir, k + '.wav'))]
+    if jobs:
+        jf = os.path.join(tmp, 'kokoro_jobs.json'); json.dump(jobs, open(jf, 'w'))
+        subprocess.run([KOKORO_PY, os.path.join(ROOT, 'scripts', 'kokoro_say.py'), jf], check=True, stdout=subprocess.DEVNULL)
+    out = []
+    for i, k in enumerate(keys):
+        w44 = os.path.join(tmp, 'k%d.wav' % i)
+        subprocess.run(['afconvert', '-f', 'WAVE', '-d', 'LEI16@%d' % SR, '-c', '1', os.path.join(cdir, k + '.wav'), w44], check=True)
+        out.append(_trim(_wav_to_array(w44)))
+    return out
+
+
 def split_takes(path, n, tmp):
     """Split one long recording into n phrase takes at the pauses between lines."""
     wav = os.path.join(tmp, 'recorded.wav')
@@ -653,6 +676,72 @@ def load_music(path, n, tmp):
     return np.tile(m, reps)[:n]
 
 
+def _fft_filter(x, curve):
+    X = np.fft.rfft(x); f = np.fft.rfftfreq(len(x), 1 / SR)
+    return np.fft.irfft(X * curve(f), len(x)).astype(np.float32)
+
+
+def _frame_env(x, hop_s=0.005):
+    hop = int(SR * hop_s); n = len(x) // hop
+    return np.sqrt(np.mean(x[:n * hop].reshape(n, hop) ** 2, axis=1)) + 1e-9, hop
+
+
+def _smooth_gain(target, hop_s, attack, release):
+    a, r = 1 - math.exp(-hop_s / attack), 1 - math.exp(-hop_s / release)
+    g = np.empty(len(target)); prev = 1.0
+    for i, t in enumerate(target):
+        prev += (a if t < prev else r) * (t - prev); g[i] = prev      # gain falls fast (attack), recovers slowly (release)
+    return g
+
+
+def polish_voice(x, strength=1.0):
+    """Studio chain for a synthetic or phone-recorded voice: high-pass, warmth, presence, de-ess, gentle compression, short room tail."""
+    L = lambda db: 10 ** (db * strength / 20)
+    hp = lambda f: (f / 80.0) ** 2 / (1 + (f / 80.0) ** 2)
+    warm = lambda f: 1 + (L(1.8) - 1) / (1 + (f / 220.0) ** 2)
+    pres = lambda f: 1 + (L(2.6) - 1) * np.exp(-0.5 * (np.log2(np.maximum(f, 1) / 3200.0) / 0.55) ** 2)
+    x = _fft_filter(x, lambda f: hp(f) * warm(f) * pres(f))
+    # de-esser: duck the 5-9.5 kHz band when it spikes
+    band = _fft_filter(x, lambda f: ((f > 5000) & (f < 9500)).astype(float) * np.minimum(1, (f - 4500) / 600) * np.minimum(1, (9800 - f) / 600))
+    env, hop = _frame_env(band); thr = np.percentile(env, 88) * 0.9
+    g = np.clip(thr / env, 0.35, 1.0) ** 0.8; g = _smooth_gain(g, 0.005, 0.002, 0.04)
+    gi = np.interp(np.arange(len(x)), np.arange(len(g)) * hop, g).astype(np.float32)
+    x = x - band * (1 - gi)
+    # compressor: 2.4:1 above -26 dBFS, 8 ms attack, 140 ms release, then make-up
+    env, hop = _frame_env(x, 0.01); db = 20 * np.log10(env); thr_db, ratio = -26.0, 2.4
+    gain_db = np.where(db > thr_db, (thr_db - db) * (1 - 1 / ratio), 0.0) * strength
+    g = _smooth_gain(10 ** (gain_db / 20), 0.01, 0.008, 0.14)
+    x = x * np.interp(np.arange(len(x)), np.arange(len(g)) * hop, g).astype(np.float32)
+    # room: a few early reflections and a short soft tail, about -23 dB wet
+    rng = np.random.default_rng(7); n = int(SR * 0.32); t = np.arange(n) / SR
+    ir = rng.normal(0, 1, n) * np.exp(-t / 0.075); ir = _fft_filter(ir.astype(np.float32), lambda f: 1 / (1 + (f / 4500.0) ** 2)) if False else ir.astype(np.float32)
+    ir[: int(SR * 0.012)] = 0
+    for ms, a in ((11, 0.35), (19, 0.25), (31, 0.18)): ir[int(SR * ms / 1000)] += a * np.abs(ir).max() * 4
+    ir /= np.sqrt(np.sum(ir ** 2))
+    wet = np.fft.irfft(np.fft.rfft(x, len(x) + n) * np.fft.rfft(ir, len(x) + n))[:len(x)].astype(np.float32)
+    wet = _fft_filter(wet, lambda f: 1 / (1 + (f / 5000.0) ** 2))
+    x = x + wet * L(-23) * 0.9 * (np.sqrt(np.mean(x ** 2)) / max(np.sqrt(np.mean(wet ** 2)), 1e-9))
+    return x
+
+
+def loudness_lufs(x):
+    """Approximate BS.1770 integrated loudness (K-weighting by frequency-domain curves, 400 ms blocks, two gates)."""
+    k = _fft_filter(x, lambda f: (1 + (10 ** (4 / 20) - 1) * f ** 2 / (f ** 2 + 1700.0 ** 2)) * f ** 2 / (f ** 2 + 38.0 ** 2))
+    b, st = int(SR * 0.4), int(SR * 0.1)
+    ms = np.array([np.mean(k[i:i + b] ** 2) for i in range(0, max(len(k) - b, 1), st)]) + 1e-12
+    lu = -0.691 + 10 * np.log10(ms); ms = ms[lu > -70]
+    if not len(ms): return -70.0
+    rel = -0.691 + 10 * np.log10(np.mean(ms)) - 10; ms = ms[(-0.691 + 10 * np.log10(ms)) > rel]
+    return -0.691 + 10 * np.log10(np.mean(ms))
+
+
+def finish_mix(mix, target=-14.0):
+    """Level to about -14 LUFS (what YouTube plays back at), then soft-limit peaks to about -1 dBFS."""
+    cur = loudness_lufs(mix); y = mix * 10 ** ((target - cur) / 20)
+    y = np.tanh(y / 0.95) * 0.95 if np.abs(y).max() > 0.9 else y
+    return np.clip(y, -0.891, 0.891).astype(np.float32), cur
+
+
 def duck_music(voice, bed, total):
     """Music sits about 19 dB under the voice while speaking and rises about 5 dB in pauses (attack 20 ms, release 350 ms)."""
     hop = int(SR * 0.01); frames = len(voice) // hop
@@ -682,17 +771,18 @@ def build_audio(video, tmp):
         src = os.environ.get('VIDEO_RECORDED_FILE')
         if not src: raise SystemExit('Set VIDEO_RECORDED_FILE to the voice recording (m4a/wav/mp3) for this video.')
         takes = split_takes(src, len(says), tmp)
+    if ENGINE == 'kokoro': takes = kokoro_batch(says, tmp)
     t = 0.25; k = 0
     for si, sc in enumerate(video['scenes']):
         t0 = t; tp = t + sc.get('pre', 0.15); ph = []
         for pi, (cap, say) in enumerate(sc['phr']):
             path_wav = os.path.join(tmp, 's%d_%d.wav' % (si, pi))
             if ENGINE == 'elevenlabs': wav = eleven_tts(say, says[k - 1] if k else None, says[k + 1] if k + 1 < len(says) else None, path_wav)
-            elif ENGINE == 'recorded': wav = _trim(takes[k])
+            elif ENGINE in ('recorded', 'kokoro'): wav = _trim(takes[k])
             else: wav = tts(say, path_wav, tmp)
             k += 1
             d = len(wav) / SR
-            pieces.append((tp, wav)); ph.append((tp, tp + d)); tp += d + (0.2 if ENGINE == 'say' else 0.28)
+            pieces.append((tp, wav)); ph.append((tp, tp + d)); tp += d + (0.2 if ENGINE == 'say' else 0.3)
         t1 = ph[-1][1] + sc.get('post', 0.6)
         tl.append(dict(t0=t0, t1=t1, ph=ph)); t = t1
         if sc.get('sfx'): events += [(t0 + lt, kd) for lt, kd in sc['sfx']([(a - t0, b - t0) for a, b in ph])]
@@ -701,6 +791,7 @@ def build_audio(video, tmp):
     voice = np.zeros(n, np.float32)
     for st, w in pieces:
         i = int(st * SR); voice[i:i + len(w)] += w
+    if os.environ.get('VIDEO_POLISH', '1') != '0': voice = polish_voice(voice, 0.6 if ENGINE in ('elevenlabs', 'recorded') else 1.0)
     voice = voice / max(np.abs(voice).max(), 1e-6) * 0.86
     tt = np.arange(n) / SR
     mfile = os.environ.get('VIDEO_MUSIC_FILE')
@@ -709,7 +800,8 @@ def build_audio(video, tmp):
     mix = voice + duck_music(voice, np.asarray(bed, np.float32), total)
     for te, kd in events:
         w = sfx_wave(kd); i = int(te * SR); mix[i:i + len(w)] += w[:max(0, min(len(w), n - i))]
-    mix = np.clip(mix, -0.98, 0.98)
+    mix, cur = finish_mix(mix)
+    print('audio: %s voice, mix was %.1f LUFS before leveling, now about -14 LUFS' % (ENGINE, cur))
     return mix, tl, total
 
 
@@ -844,6 +936,21 @@ def build(name, only=None):
               open(os.path.join(tmp, 'meta.json'), 'w'), indent=1)
 
 
+def sample(name, voices, nscenes=2):
+    """Audio-only voice shootout: first scenes of a video in each Kokoro voice, with polish, music bed and loudness leveling. Writes m4a files."""
+    global ENGINE, KOKORO_VOICE
+    ENGINE = 'kokoro'
+    video = dict(VIDEOS[name]); video['scenes'] = video['scenes'][:nscenes]
+    outdir = os.path.join(ROOT, 'social', 'voice_samples'); os.makedirs(outdir, exist_ok=True)
+    for v in voices:
+        KOKORO_VOICE = v; tmp = os.path.join(SCRATCH, 'sample_' + v.replace('+', '_')); os.makedirs(tmp, exist_ok=True)
+        mix, tl, total = build_audio(video, tmp)
+        wav = os.path.join(tmp, 'mix.wav'); write_wav(wav, mix)
+        out = os.path.join(outdir, '%s-%s.m4a' % (name, v.replace('+', '-')))
+        subprocess.run(['afconvert', '-f', 'm4af', '-d', 'aac', '-b', '128000', wav, out], check=True)
+        print(v, '->', out, round(total, 1), 's')
+
+
 def embed(name):
     """Update the blog page that embeds this video: heading, VideoObject duration/description/transcript, transcript text."""
     import re, html as H
@@ -867,3 +974,4 @@ if __name__ == '__main__':
     elif a[0] == 'still': still(a[1], float(a[2]), a[3] if len(a) > 3 else 'land')
     elif a[0] == 'build': build(a[1], a[a.index('--only') + 1] if '--only' in a else None)
     elif a[0] == 'embed': embed(a[1])
+    elif a[0] == 'sample': sample(a[1], a[2].split(','), int(a[3]) if len(a) > 3 else 2)
