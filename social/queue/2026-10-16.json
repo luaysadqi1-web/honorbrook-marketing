@@ -14,7 +14,8 @@
       "blocks": [],
       "image": "../social-assets/infographics/aep-review-578240f0.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/aep-review-578240f0.png",
-      "image_alt": "Honorbrook Insurance graphic. Four checks before Medicare changes take effect. Read the Annual Notice of Change your plan mailed; Confirm every prescription is still on the drug list; Confirm your doctors and hospital are still in network; Confirm your pharmacy is still a good fit."
+      "image_alt": "Honorbrook Insurance graphic. Four checks before Medicare changes take effect. Read the Annual Notice of Change your plan mailed; Confirm every prescription is still on the drug list; Confirm your doctors and hospital are still in network; Confirm your pharmacy is still a good fit.",
+      "slot": "09:15"
     },
     {
       "id": "502f7d2c7e",
@@ -39,6 +40,28 @@
       "image": "../social-assets/infographics/aep-review-578240f0.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/aep-review-578240f0.png",
       "image_alt": "Honorbrook Insurance graphic. Four checks before Medicare changes take effect. Read the Annual Notice of Change your plan mailed; Confirm every prescription is still on the drug list; Confirm your doctors and hospital are still in network; Confirm your pharmacy is still a good fit."
+    },
+    {
+      "id": "784205310f",
+      "platform": "x",
+      "pillar": "medicare-foundations",
+      "text": "Medicare annual enrollment is open through Dec 7. If your plan's drug list changed, check the tier of each prescription you take, not just whether it is covered. (571) 354-0146 Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "slot": "13:00"
+    },
+    {
+      "id": "63cf7a0c56",
+      "platform": "x",
+      "pillar": "medicare-foundations",
+      "text": "Medicare annual enrollment ends Dec 7 and changes start Jan 1. Keep your plan's Annual Notice of Change next to you while you decide. (571) 354-0146 Not connected with or endorsed by the U.S. government or the federal Medicare program.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "slot": "18:00"
     }
   ]
 }

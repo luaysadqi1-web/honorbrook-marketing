@@ -14,7 +14,8 @@
       "blocks": [],
       "image": "../social-assets/infographics/tysons-office-2f773e15.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/tysons-office-2f773e15.png",
-      "image_alt": "Honorbrook Insurance graphic. An independent agency, in person in Tysons. Health, life and annuity for individuals and small employers; We represent more than one carrier; We will tell you when to keep the plan you have; 8609 Westwood Center Drive, Tysons VA. Call ahead."
+      "image_alt": "Honorbrook Insurance graphic. An independent agency, in person in Tysons. Health, life and annuity for individuals and small employers; We represent more than one carrier; We will tell you when to keep the plan you have; 8609 Westwood Center Drive, Tysons VA. Call ahead.",
+      "slot": "09:15"
     },
     {
       "id": "fb289c1e6d",
@@ -39,6 +40,28 @@
       "image": "../social-assets/infographics/tysons-office-2f773e15.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/tysons-office-2f773e15.png",
       "image_alt": "Honorbrook Insurance graphic. An independent agency, in person in Tysons. Health, life and annuity for individuals and small employers; We represent more than one carrier; We will tell you when to keep the plan you have; 8609 Westwood Center Drive, Tysons VA. Call ahead."
+    },
+    {
+      "id": "eda290b6a5",
+      "platform": "x",
+      "pillar": "trust-brand",
+      "text": "Health, life and annuity coverage for individuals and small employers, with one independent office in Tysons. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "slot": "13:00"
+    },
+    {
+      "id": "be03f2cd5a",
+      "platform": "x",
+      "pillar": "trust-brand",
+      "text": "Most insurance decisions go better after a calm week of preparation. Gather your cards, drug list and doctors' names, then call when ready. (571) 354-0146",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "slot": "18:00"
     }
   ]
 }

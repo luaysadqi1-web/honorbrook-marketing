@@ -15,12 +15,14 @@
   <key>WorkingDirectory</key>
   <string>/Users/luaysadqi/honorbrook-marketing/social</string>
 
-  <!-- 9:15am local, every day -->
+  <!-- 9:15am, 1:00pm and 6:00pm local, every day. Items carry a "slot" time
+       and are only posted once it has passed. -->
   <key>StartCalendarInterval</key>
-  <dict>
-    <key>Hour</key><integer>9</integer>
-    <key>Minute</key><integer>15</integer>
-  </dict>
+  <array>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+    <dict><key>Hour</key><integer>13</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
 
   <!-- If the Mac was asleep at 9:15, run once as soon as it wakes. -->
   <key>RunAtLoad</key>

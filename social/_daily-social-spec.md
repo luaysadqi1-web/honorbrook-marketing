@@ -12,7 +12,8 @@ Cadence: **Sundays.** Generates the following Mon–Sun.
 2. Read `logs/posted-log.csv` and the last 8 files in `queue/`. Do not repeat a
    topic used in the last 60 days.
 3. For each of the seven days, write:
-   - **one X post.** If the topic is Medicare, the content body must be
+   - **three X posts** (slots `09:15`, `13:00`, `18:00`; set `slot` via `store.new_item(..., slot="13:00")`; the 09:15 post carries the infographic). The poster runs 3x a day and holds each until its slot. Each X post is a different angle on the pillar, never a rephrase of the same line. Rules for X below apply to each.
+   - **(first X post)** If the topic is Medicare, the content body must be
      **≤ 193 characters** — the disclaimer is appended automatically by
      `compliance.fit_x()`. Otherwise ≤ 280.
    - **one LinkedIn post**, 600–1200 characters. Real substance, short

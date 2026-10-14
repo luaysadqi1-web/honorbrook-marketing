@@ -72,6 +72,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--all", action="store_true",
+                    help="ignore item slot times and post everything pending")
     args = ap.parse_args()
 
     store.load_dotenv()
@@ -85,6 +87,15 @@ def main():
 
     items = queue.get("items", [])
     pending = [i for i in items if i.get("status") == "pending"]
+    # Items may carry a "slot" (HH:MM local). Hold them until that time so three
+    # X posts a day spread across the day instead of firing together.
+    if not (args.all or args.dry_run):
+        now = datetime.datetime.now().strftime("%H:%M")
+        due = [i for i in pending if not i.get("slot") or i["slot"] <= now]
+        if len(due) < len(pending):
+            print("%d item(s) not due yet (slot later than %s)."
+                  % (len(pending) - len(due), now))
+        pending = due
     if not pending:
         print("%s: nothing pending (%d item(s) already handled)."
               % (date_str, len(items)))

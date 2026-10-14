@@ -14,7 +14,8 @@
       "blocks": [],
       "image": "../social-assets/infographics/marketplace-ready-547ede73.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/marketplace-ready-547ede73.png",
-      "image_alt": "Honorbrook Insurance graphic. Get ready for the Nov 1 Marketplace window. Estimate next year's household income; List your doctors and the hospital you would use; List every prescription by name; Compare total cost, not just the monthly premium."
+      "image_alt": "Honorbrook Insurance graphic. Get ready for the Nov 1 Marketplace window. Estimate next year's household income; List your doctors and the hospital you would use; List every prescription by name; Compare total cost, not just the monthly premium.",
+      "slot": "09:15"
     },
     {
       "id": "48965179db",
@@ -39,6 +40,28 @@
       "image": "../social-assets/infographics/marketplace-ready-547ede73.png",
       "image_url": "https://honorbrook-insurance.com/assets/infographics/marketplace-ready-547ede73.png",
       "image_alt": "Honorbrook Insurance graphic. Get ready for the Nov 1 Marketplace window. Estimate next year's household income; List your doctors and the hospital you would use; List every prescription by name; Compare total cost, not just the monthly premium."
+    },
+    {
+      "id": "f097af6803",
+      "platform": "x",
+      "pillar": "aca-under65",
+      "text": "Marketplace tip: a lower premium can come with a higher deductible. Compare what you would pay in a bad year, not only a good one. honorbrook-insurance.com",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "slot": "13:00"
+    },
+    {
+      "id": "061e249bd6",
+      "platform": "x",
+      "pillar": "aca-under65",
+      "text": "Self-employed? Estimate next year's income with care. Marketplace subsidies follow that estimate, and a big miss can mean repaying some at tax time. (571) 354-0146",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "slot": "18:00"
     }
   ]
 }
