@@ -14,8 +14,9 @@
       "blocks": [
         "not configured: missing env vars: X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET"
       ],
-      "image": "../social-assets/infographics/ichra-allowance-1819765b.png",
-      "image_url": "https://honorbrook-insurance.com/assets/infographics/ichra-allowance-1819765b.png"
+      "image": "../social-assets/infographics/ichra-allowance-91ab3b7d.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/ichra-allowance-91ab3b7d.png",
+      "image_alt": "Honorbrook Insurance graphic. How to set an ICHRA allowance. Start with what you spend on group coverage today; Decide what share of a typical employee's cost you want to cover; Set it the same for everyone, or by class: full-time, part-time, location; Check it against real individual plans in your area."
     },
     {
       "id": "1a402e63a8",
@@ -41,8 +42,9 @@
         "not configured: missing env vars: GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN, GBP_ACCOUNT_ID, GBP_LOCATION_ID"
       ],
       "cta": "CALL",
-      "image": "../social-assets/infographics/ichra-allowance-1819765b.png",
-      "image_url": "https://honorbrook-insurance.com/assets/infographics/ichra-allowance-1819765b.png"
+      "image": "../social-assets/infographics/ichra-allowance-91ab3b7d.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/ichra-allowance-91ab3b7d.png",
+      "image_alt": "Honorbrook Insurance graphic. How to set an ICHRA allowance. Start with what you spend on group coverage today; Decide what share of a typical employee's cost you want to cover; Set it the same for everyone, or by class: full-time, part-time, location; Check it against real individual plans in your area."
     }
   ]
 }

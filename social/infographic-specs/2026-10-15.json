@@ -3,13 +3,22 @@
     "slug": "no-exam-life",
     "eyebrow": "Life insurance",
     "headline": "Two kinds of no-exam life insurance",
-    "points": [
-      "Simplified issue: a few health questions, no exam",
-      "Guaranteed issue: no health questions at all",
-      "Guaranteed issue usually pays a reduced benefit in the first years",
-      "Ask which one you are being offered, and when the full benefit begins"
-    ],
-    "pillar": "life-final-expense"
+    "pillar": "life-final-expense",
+    "layout": "compare",
+    "left": {
+      "title": "Simplified issue",
+      "points": [
+        "A few health questions, no exam",
+        "May pay the full benefit from day one"
+      ]
+    },
+    "right": {
+      "title": "Guaranteed issue",
+      "points": [
+        "No health questions at all",
+        "Usually pays a reduced benefit in the first years"
+      ]
+    }
   },
   {
     "slug": "aep-review",
@@ -21,6 +30,7 @@
       "Confirm your doctors and hospital are still in network",
       "Confirm your pharmacy is still a good fit"
     ],
-    "pillar": "enrollment-periods"
+    "pillar": "enrollment-periods",
+    "layout": "checklist"
   }
 ]

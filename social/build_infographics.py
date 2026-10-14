@@ -49,6 +49,7 @@ def main():
                         and it["pillar"] == spec.get("pillar", it["pillar"])):
                     it["image"] = rel
                     it["image_url"] = url
+                    it["image_alt"] = infographic.alt_text(spec)
             print("%s  %s -> %s" % (d, spec.get("pillar"), url))
         store.save_queue(d, q)
         print("%s  %s" % (d, rel))

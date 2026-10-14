@@ -39,7 +39,13 @@ def publish(item, dry_run):
     platform = item["platform"]
     try:
         if platform == "x":
-            return x_client.post(item["text"], dry_run=dry_run), None
+            return x_client.post(
+                item["text"],
+                image_path=(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                         item["image"]) if item.get("image") else None),
+                image_alt=item.get("image_alt"),
+                dry_run=dry_run,
+            ), None
         if platform == "linkedin":
             return linkedin_client.post(item["text"], dry_run=dry_run), None
         if platform == "gbp":

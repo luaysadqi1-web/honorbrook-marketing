@@ -1,15 +1,18 @@
 """
-Honorbrook infographic renderer (Pillow). 1200x900 PNG, brand colours.
+Honorbrook infographic renderer (Pillow). 1200x900 PNG, brand colours,
+drawn at 2x and downsampled so edges are smooth.
 
 Every word on the image is run through compliance.check() BEFORE drawing; a
 spec that trips a BLOCK rule raises Blocked and no file is written. Medicare-topic
 specs get the full CMS disclaimer printed in the footer automatically.
 
-Spec (dict / JSON):
-    {"slug": "ichra-allowance", "eyebrow": "ICHRA FOR EMPLOYERS",
-     "headline": "How to set an ICHRA allowance",
-     "points": ["Start with what you spend today", "..."],   # 2-5 items
-     "footer": "optional override"}
+Layouts (spec["layout"], default "steps"):
+  steps      numbered cards, 2-5 points           {"points": [...]}
+  checklist  tick-mark cards, 2-5 points          {"points": [...]}
+  compare    two columns, 2-4 points each         {"left": {"title","points"}, "right": {...}}
+
+Common keys: slug, eyebrow, headline, footer (optional override).
+render() returns the PNG path; alt_text(spec) returns screen-reader text.
 
 CLI:  python3 lib/infographic.py spec.json [--out DIR]
 """
@@ -19,8 +22,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import compliance
 from PIL import Image, ImageDraw, ImageFont
 
-W, H = 1200, 900
-NAVY, GOLD, LIGHT, INK, MUTED = "#142339", "#c9a227", "#eef1f6", "#142339", "#aebbd0"
+W, H, SS = 1200, 900, 2
+NAVY, NAVY2, GOLD, LIGHT, INK, MUTED = "#142339", "#1c3250", "#c9a227", "#eef1f6", "#142339", "#aebbd0"
 PHONE, SITE = "(571) 354-0146", "honorbrook-insurance.com"
 OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                        "..", "social-assets", "infographics")
@@ -36,7 +39,7 @@ class Blocked(Exception):
 def _font(paths, size):
     for p in paths:
         if os.path.exists(p):
-            return ImageFont.truetype(p, size)
+            return ImageFont.truetype(p, size * SS)
     return ImageFont.load_default()
 
 
@@ -44,22 +47,49 @@ def _wrap(d, text, font, width):
     lines, cur = [], ""
     for w in text.split():
         t = (cur + " " + w).strip()
-        if d.textlength(t, font=font) <= width:
+        if d.textlength(t, font=font) <= width * SS:
             cur = t
         else:
             lines.append(cur); cur = w
     return lines + ([cur] if cur else [])
 
 
+def _columns(spec):
+    return [spec["left"], spec["right"]]
+
+
+def _points(spec):
+    if spec.get("layout") == "compare":
+        return [p for c in _columns(spec) for p in c["points"]]
+    return list(spec["points"])
+
+
 def all_text(spec):
-    parts = [spec.get("eyebrow", ""), spec["headline"]] + list(spec["points"])
+    parts = [spec.get("eyebrow", ""), spec["headline"]]
+    if spec.get("layout") == "compare":
+        parts += [c["title"] for c in _columns(spec)]
+    parts += _points(spec)
     parts.append(spec.get("footer", "Honorbrook Insurance " + PHONE + " " + SITE))
     return "\n".join(p for p in parts if p)
 
 
+def alt_text(spec):
+    if spec.get("layout") == "compare":
+        body = " ".join("%s: %s." % (c["title"], "; ".join(c["points"])) for c in _columns(spec))
+    else:
+        body = "; ".join(spec["points"]) + "."
+    return "Honorbrook Insurance graphic. %s. %s" % (spec["headline"], body)
+
+
 def vet(spec):
     """Lint the on-image text. Returns the disclaimer to print ('' if none)."""
-    if not 2 <= len(spec["points"]) <= 5:
+    lay = spec.get("layout", "steps")
+    if lay not in ("steps", "checklist", "compare"):
+        raise Blocked("unknown layout %r" % lay)
+    if lay == "compare":
+        if not all(2 <= len(c["points"]) <= 4 for c in _columns(spec)):
+            raise Blocked("compare columns need 2-4 points each")
+    elif not 2 <= len(spec["points"]) <= 5:
         raise Blocked("points must be 2-5 items")
     text = all_text(spec)
     disc = ""
@@ -72,59 +102,91 @@ def vet(spec):
     return disc
 
 
+def _badge(d, cx, cy, r, kind, label, nf):
+    d.ellipse([(cx - r) * SS, (cy - r) * SS, (cx + r) * SS, (cy + r) * SS], fill=GOLD)
+    if kind == "check":
+        pts = [(cx - 14, cy), (cx - 4, cy + 11), (cx + 15, cy - 12)]
+        d.line([(x * SS, y * SS) for x, y in pts], fill=NAVY, width=7 * SS, joint="curve")
+    else:
+        d.text((cx * SS, cy * SS), label, font=nf, fill=NAVY, anchor="mm")
+
+
+def _card(d, x0, y0, x1, y1, text, kind, label, pf, nf):
+    d.rounded_rectangle([x0 * SS, y0 * SS, x1 * SS, y1 * SS], 16 * SS, fill=LIGHT)
+    r = 28
+    cy = (y0 + y1) // 2
+    _badge(d, x0 + 24 + r, cy, r, kind, label, nf)
+    tx = x0 + 24 + 2 * r + 24
+    lines = _wrap(d, text, pf, x1 - 24 - tx)
+    lh = pf.size // SS + 8
+    if len(lines) * lh > (y1 - y0) - 16:
+        raise Blocked("text too long for its card: %r" % text)
+    ty = cy - len(lines) * lh // 2
+    for ln in lines:
+        d.text((tx * SS, ty * SS), ln, font=pf, fill=INK); ty += lh
+
+
 def render(spec, out_dir=None):
     disc = vet(spec)
-    img = Image.new("RGB", (W, H), NAVY)
+    lay = spec.get("layout", "steps")
+    img = Image.new("RGB", (W * SS, H * SS), NAVY)
     d = ImageDraw.Draw(img)
+    # quiet decorative arc, top right
+    d.ellipse([(W - 260) * SS, -200 * SS, (W + 200) * SS, 260 * SS], fill=NAVY2)
+    d.rectangle([0, 0, W * SS, 14 * SS], fill=GOLD)
     M = 70
-    d.rectangle([0, 0, W, 14], fill=GOLD)
 
     y = 56
     if spec.get("eyebrow"):
-        d.text((M, y), spec["eyebrow"].upper(), font=_font(SANS_B, 24), fill=GOLD)
+        d.text((M * SS, y * SS), spec["eyebrow"].upper(), font=_font(SANS_B, 24), fill=GOLD)
         y += 50
     hf = _font(SERIF_B, 56)
-    for ln in _wrap(d, spec["headline"], hf, W - 2 * M)[:3]:
-        d.text((M, y), ln, font=hf, fill="white"); y += 68
+    for ln in _wrap(d, spec["headline"], hf, W - 2 * M - 60)[:3]:
+        d.text((M * SS, y * SS), ln, font=hf, fill="white"); y += 68
     y += 18
 
     foot_h = 85 + (110 if disc else 0)
     avail = H - foot_h - y - 30
-    n = len(spec["points"])
+    nf = _font(SANS_B, 32)
     gap = 18
-    card_h = min(150, (avail - gap * (n - 1)) // n)
-    pf = _font(SANS_B, 30 if card_h >= 110 else 26)
-    for i, p in enumerate(spec["points"], 1):
-        d.rounded_rectangle([M, y, W - M, y + card_h], 16, fill=LIGHT)
-        r = 28
-        cy = y + card_h // 2
-        d.ellipse([M + 24, cy - r, M + 24 + 2 * r, cy + r], fill=GOLD)
-        nf = _font(SANS_B, 32)
-        d.text((M + 24 + r, cy), str(i), font=nf, fill=NAVY, anchor="mm")
-        tx = M + 24 + 2 * r + 28
-        lines = _wrap(d, p, pf, W - M - 30 - tx)
-        lh = pf.size + 8
-        if len(lines) * lh > card_h - 16:
-            raise Blocked("point %d too long for its card: %r" % (i, p))
-        ty = cy - len(lines) * lh // 2
-        for ln in lines:
-            d.text((tx, ty), ln, font=pf, fill=INK); ty += lh
-        y += card_h + gap
+
+    if lay == "compare":
+        colw = (W - 2 * M - 30) // 2
+        n = max(len(c["points"]) for c in _columns(spec))
+        th = 60
+        card_h = min(200, (avail - th - gap * (n - 1)) // n)
+        pf = _font(SANS_B, 26)
+        for ci, col in enumerate(_columns(spec)):
+            x0 = M + ci * (colw + 30)
+            d.text((x0 * SS, y * SS), col["title"], font=_font(SERIF_B, 34), fill=GOLD)
+            cy0 = y + th
+            for p in col["points"]:
+                _card(d, x0, cy0, x0 + colw, cy0 + card_h, p, "check", "", pf, nf)
+                cy0 += card_h + gap
+    else:
+        n = len(spec["points"])
+        card_h = min(150, (avail - gap * (n - 1)) // n)
+        pf = _font(SANS_B, 30 if card_h >= 110 else 26)
+        for i, p in enumerate(spec["points"], 1):
+            _card(d, M, y, W - M, y + card_h, p,
+                  "check" if lay == "checklist" else "num", str(i), pf, nf)
+            y += card_h + gap
 
     fy = H - foot_h + 10
     if disc:
         df = _font(SANS, 18)
         for ln in _wrap(d, disc, df, W - 2 * M):
-            d.text((M, fy), ln, font=df, fill=MUTED); fy += 24
+            d.text((M * SS, fy * SS), ln, font=df, fill=MUTED); fy += 24
         fy += 8
-    d.line([M, fy, W - M, fy], fill=GOLD, width=2)
-    d.text((M, fy + 14), "Honorbrook Insurance", font=_font(SANS_B, 26), fill="white")
-    d.text((W - M, fy + 16), spec.get("footer", PHONE + "  |  " + SITE),
+    d.line([M * SS, fy * SS, (W - M) * SS, fy * SS], fill=GOLD, width=2 * SS)
+    d.text((M * SS, (fy + 14) * SS), "Honorbrook Insurance", font=_font(SANS_B, 26), fill="white")
+    d.text(((W - M) * SS, (fy + 16) * SS), spec.get("footer", PHONE + "  |  " + SITE),
            font=_font(SANS, 24), fill=MUTED, anchor="ra")
 
+    img = img.resize((W, H), Image.LANCZOS)
     out_dir = out_dir or os.path.abspath(OUT_DIR)
     os.makedirs(out_dir, exist_ok=True)
-    digest = hashlib.sha256(all_text(spec).encode()).hexdigest()[:8]
+    digest = hashlib.sha256((lay + all_text(spec)).encode()).hexdigest()[:8]
     path = os.path.join(out_dir, "%s-%s.png" % (spec.get("slug", "infographic"), digest))
     img.save(path, optimize=True)
     return path

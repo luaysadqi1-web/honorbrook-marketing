@@ -8,5 +8,6 @@
     "List every prescription by name",
     "Compare total cost, not just the monthly premium"
   ],
-  "pillar": "aca-under65"
+  "pillar": "aca-under65",
+  "layout": "checklist"
 }

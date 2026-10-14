@@ -8,5 +8,6 @@
     "Confirm your doctors and hospital are still in network",
     "Confirm your pharmacy is still a good fit"
   ],
-  "pillar": "medicare-foundations"
+  "pillar": "medicare-foundations",
+  "layout": "checklist"
 }

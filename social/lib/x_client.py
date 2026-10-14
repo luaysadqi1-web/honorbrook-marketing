@@ -23,6 +23,13 @@ import urllib.error
 import uuid
 
 ENDPOINT = "https://api.x.com/2/tweets"
+# Media upload. Sources disagree on whether the v2 endpoint is live for every app,
+# so try v2 first and fall back to the v1.1 host. Both take multipart bodies,
+# which OAuth 1.0a does not sign, so the same header builder works for both.
+MEDIA_V2 = "https://api.x.com/2/media/upload"
+MEDIA_V11 = "https://upload.twitter.com/1.1/media/upload.json"
+ALT_V11 = "https://upload.twitter.com/1.1/media/metadata/create.json"
+MAX_IMAGE_BYTES = 5 * 1024 * 1024
 
 
 class NotConfigured(Exception):
@@ -84,9 +91,74 @@ def _auth_header(method, url):
     )
 
 
-def post(text, reply_to=None, dry_run=False):
+def _multipart(fields, filename, data):
+    boundary = uuid.uuid4().hex
+    parts = []
+    for k, v in fields.items():
+        parts.append(("--%s\r\nContent-Disposition: form-data; name=\"%s\"\r\n\r\n%s\r\n"
+                      % (boundary, k, v)).encode())
+    parts.append(("--%s\r\nContent-Disposition: form-data; name=\"media\"; filename=\"%s\"\r\n"
+                  "Content-Type: image/png\r\n\r\n" % (boundary, filename)).encode())
+    parts.append(data)
+    parts.append(("\r\n--%s--\r\n" % boundary).encode())
+    return b"".join(parts), "multipart/form-data; boundary=%s" % boundary
+
+
+def _send(url, body, ctype):
+    req = urllib.request.Request(url, data=body, method="POST")
+    req.add_header("Authorization", _auth_header("POST", url))
+    req.add_header("Content-Type", ctype)
+    req.add_header("User-Agent", "honorbrook-social/1.0")
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        raw = resp.read().decode("utf-8")
+    return json.loads(raw) if raw.strip() else {}
+
+
+def upload_image(path, alt=None):
+    """Upload a PNG/JPEG and return its media id string. Raises PostError."""
+    with open(path, "rb") as fh:
+        data = fh.read()
+    if len(data) > MAX_IMAGE_BYTES:
+        raise PostError("image is %d bytes; X images must be under 5MB" % len(data))
+    name = os.path.basename(path)
+    errors = []
+    media_id = None
+    for url, fields in ((MEDIA_V2, {"media_category": "tweet_image"}),
+                        (MEDIA_V11, {"media_category": "tweet_image"})):
+        body, ctype = _multipart(fields, name, data)
+        try:
+            resp = _send(url, body, ctype)
+        except urllib.error.HTTPError as e:
+            errors.append("%s HTTP %d %s" % (url, e.code, e.read().decode("utf-8", "replace")[:200]))
+            continue
+        except urllib.error.URLError as e:
+            raise PostError("network error uploading image to X: %s" % e)
+        mid = resp.get("media_id_string") or resp.get("data", {}).get("id") or resp.get("id")
+        if mid:
+            media_id = str(mid)
+            break
+        errors.append("%s returned no media id: %s" % (url, str(resp)[:200]))
+    if not media_id:
+        raise PostError("X image upload failed: " + " | ".join(errors))
+    if alt:
+        try:  # best effort: a missing alt text must never block the post
+            _send(ALT_V11, json.dumps({"media_id": media_id,
+                                       "alt_text": {"text": alt[:1000]}}).encode(),
+                  "application/json")
+        except Exception:
+            pass
+    return media_id
+
+
+def post(text, reply_to=None, image_path=None, image_alt=None, dry_run=False):
     """Publish one post. Returns the new post id, or a fake id on dry_run."""
     payload = {"text": text}
+    if image_path and not dry_run:
+        # An image problem must not cost the day its post: fall back to text only.
+        try:
+            payload["media"] = {"media_ids": [upload_image(image_path, image_alt)]}
+        except (PostError, OSError) as e:
+            print("         [warn] X image skipped, posting text only: %s" % e)
     if reply_to:
         payload["reply"] = {"in_reply_to_tweet_id": str(reply_to)}
 
