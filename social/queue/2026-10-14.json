@@ -24,8 +24,8 @@
       "platform": "linkedin",
       "pillar": "aca-under65",
       "text": "The ACA Marketplace enrollment window opens on November 1. The people who have the easiest time are the ones who gathered a few things beforehand.\n\nWhat to have ready:\n\n- Your best estimate of household income for next year. Subsidies are based on that estimate, not on last year's tax return, so if your income is changing, say so.\n- A list of your doctors and the hospital you would use. Networks differ by plan, and they can differ by county.\n- Every prescription you take, by name.\n- Your current plan's details, so you can tell whether staying is the better choice.\n\nCompare total cost, not just the monthly premium. A lower premium can come with a higher deductible, and the difference shows up when you use care.\n\nWe do this comparison for individuals, families and the self-employed in all 11 states where we are licensed, at no cost to you.\n\nHonorbrook Insurance. (571) 354-0146 honorbrook-insurance.com",
-      "note": "",
-      "status": "pending",
+      "note": "Replaced by hand with an AEP-eve post (saved as LinkedIn drafts 2026-10-14). Do not auto-post the ACA text.",
+      "status": "manual",
       "post_id": null,
       "blocks": [
         "not configured: missing env vars: LINKEDIN_ACCESS_TOKEN"
