@@ -307,12 +307,13 @@ import Foundation
 let a = CommandLine.arguments
 let outPath = a[1], audioPath = a[2]
 let W = Int(a[3])!, H = Int(a[4])!, fps = Int(a[5])!, n = Int(a[6])!, br = Int(a[7])!
+let hevc = a.count > 8 && a[8] == "hevc"
 let silent = outPath + ".v.mp4"
 try? FileManager.default.removeItem(atPath: silent); try? FileManager.default.removeItem(atPath: outPath)
 let w = try! AVAssetWriter(outputURL: URL(fileURLWithPath: silent), fileType: .mp4)
-let settings: [String: Any] = [AVVideoCodecKey: AVVideoCodecType.h264, AVVideoWidthKey: W, AVVideoHeightKey: H,
-  AVVideoCompressionPropertiesKey: [AVVideoAverageBitRateKey: br, AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel,
-    AVVideoMaxKeyFrameIntervalKey: fps * 2, AVVideoExpectedSourceFrameRateKey: fps, AVVideoAllowFrameReorderingKey: false]]
+var props: [String: Any] = [AVVideoAverageBitRateKey: br, AVVideoMaxKeyFrameIntervalKey: fps * 2, AVVideoExpectedSourceFrameRateKey: fps, AVVideoAllowFrameReorderingKey: false]
+if !hevc { props[AVVideoProfileLevelKey] = AVVideoProfileLevelH264HighAutoLevel }
+let settings: [String: Any] = [AVVideoCodecKey: hevc ? AVVideoCodecType.hevc : AVVideoCodecType.h264, AVVideoWidthKey: W, AVVideoHeightKey: H, AVVideoCompressionPropertiesKey: props]
 let inp = AVAssetWriterInput(mediaType: .video, outputSettings: settings)
 inp.expectsMediaDataInRealTime = false
 let adap = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: inp, sourcePixelBufferAttributes: [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA, kCVPixelBufferWidthKey as String: W, kCVPixelBufferHeightKey as String: H])
@@ -413,10 +414,11 @@ def build(name, only=None):
         c = Ctx(*fmt_size(f))
         outdir = os.path.join(ROOT, 'site', 'assets', 'video') if f == 'land' else os.path.join(ROOT, 'social', 'video_masters')
         os.makedirs(outdir, exist_ok=True)
-        final = os.path.join(outdir, video['slug'] + ('.mp4' if f == 'land' else '-vertical.mp4'))
+        final = os.path.join(outdir, video['slug'] + ('.mp4' if f == 'land' else '-vertical.mp4' if os.environ.get('VIDEO_CODEC', 'h264') == 'h264' else '-vertical-hevc.mp4'))
         out = os.path.join(SCRATCH, 'out_' + os.path.basename(final))
-        br = 1_500_000 if f == 'land' else 2_600_000
-        p = subprocess.Popen([exe, out, m4a, str(c.W), str(c.H), str(FPS), str(n), str(br)], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=False)
+        codec = os.environ.get('VIDEO_CODEC', 'h264')
+        br = int(os.environ.get('VIDEO_BITRATE', 0)) or (1_500_000 if f == 'land' else 2_600_000)
+        p = subprocess.Popen([exe, out, m4a, str(c.W), str(c.H), str(FPS), str(n), str(br), codec], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=False)
         for i in range(n):
             img = render_frame(c, video, tl, total, i / FPS, caps)
             p.stdin.write(img.tobytes('raw', 'BGRX'))
