@@ -536,8 +536,8 @@ def a_hook(c, img, t, ph):
     text(img, c.cx, ly + c.S(60, 22), 'Illustration only, not real prices', F('Regular', c.FS(28, 12)), MUTED, eo3(prog(t, ph[1][0] + 0.6, 0.5)), 'mm')
 
 
-def a_cost(c, img, t, ph):
-    title_block(c, img, t, 'Step 1', 'Total yearly cost')
+def a_cost(c, img, t, ph, over='Step 1'):
+    title_block(c, img, t, over, 'Total yearly cost')
     w, h = c.S(780, 540), c.S(132, 60); x0 = c.cx - w / 2; yb = c.S(1270, 504); gp = c.S(16, 8)
     blocks = [('Monthly premium × 12', SKY, SKYD, INK), ('Deductible', GOLDL, GOLD, INK), ('Copays and coinsurance', CORALL, CORAL, INK)]
     ys = []
@@ -695,3 +695,15 @@ ACA.update(page='how-do-i-compare-aca-plans-during-open-enrollment', watch='How 
            vdesc='An animated explainer on comparing ACA Marketplace plans: total yearly cost, network and drugs, what metal levels mean, savings, and the key dates.')
 
 VIDEOS = {'part-d': PART_D, 'aca': ACA}
+
+
+# ------------------------------------------------------------------ short cut-downs for Shorts / Reels / TikTok (vertical only; not embedded on the site)
+_cost = dict(ACA['scenes'][1])
+_cost['phr'] = [('First, estimate your total yearly cost.', 'First, estimate your total yearly cost.')] + list(_cost['phr'][1:])
+_cost['draw'] = lambda c, img, t, ph: a_cost(c, img, t, ph, over='The key idea')
+PART_D_SHORT = dict(slug='part-d-late-penalty-short', title='Part D late enrollment penalty in 45 seconds', poster=2.6, disclaimer=PART_D['disclaimer'],
+                    scenes=[PART_D['scenes'][0], PART_D['scenes'][1], PART_D['scenes'][4], PART_D['scenes'][5]])
+ACA_SHORT = dict(slug='aca-premium-vs-total-cost-short', title='ACA: the premium is not the whole cost', poster=3.2, disclaimer=ACA['disclaimer'],
+                 scenes=[ACA['scenes'][0], _cost, ACA['scenes'][6]])
+VIDEOS.update({'part-d-short': PART_D_SHORT, 'aca-short': ACA_SHORT})
+
