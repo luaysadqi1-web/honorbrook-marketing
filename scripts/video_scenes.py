@@ -271,6 +271,7 @@ class Ctx:
 
     def S(self, p, l): return p if not self.land else l * self.k
     def R(self, p, l): return l if self.land else p      # unscaled ratio for width fractions
+    def FS(self, p, l): return p if not self.land else max(l * self.k * 1.32, 23)   # font sizes: bigger on 16:9 (blog embeds it ~720 px wide)
 
     def frame(self, t):
         arr = self.base.copy()
@@ -296,8 +297,8 @@ def overlay(c, img, t, total, cap):
     shape(img, (0, 0, int(W * clamp(t / total)), int(c.S(7, 3))), GOLD, 1.0, lambda d, ss, w, h: d.rectangle([0, 0, w, h], fill=255))
     bx, by = c.S(54, 28), c.S(72, 24)
     if c.logo: img.paste(c.logo, (int(bx), int(by)), c.logo)
-    text(img, bx + (c.logo.width if c.logo else 0) + c.S(20, 10), by + c.S(42, 18), 'Honorbrook Insurance', F('Bold', c.S(42, 21)), WHITE, 1.0, 'lm')
-    text(img, W / 2, c.strip_y, 'Honorbrook Insurance  ·  (571) 354-0146', F('Semibold', c.S(32, 15)), MUTED, 1.0, 'mm')
+    text(img, bx + (c.logo.width if c.logo else 0) + c.S(20, 10), by + c.S(42, 18), 'Honorbrook Insurance', F('Bold', c.FS(42, 21)), WHITE, 1.0, 'lm')
+    text(img, W / 2, c.strip_y, 'Honorbrook Insurance  ·  (571) 354-0146', F('Semibold', c.FS(32, 15)), MUTED, 1.0, 'mm')
     if cap:
         img.paste((6, 11, 24), (0, c.scrim_y), c.scrim)
         caption(c, img, t, cap)
@@ -307,7 +308,7 @@ def caption(c, img, t, cap):
     s, e, words = cap
     a = clamp((t - (s - 0.08)) / 0.16) * clamp(((e + 0.5) - t) / 0.25)
     if a <= 0: return
-    f = F('Heavy', int(c.S(60, 28))); maxw = int(c.W * c.R(0.88, 0.62))
+    f = F('Heavy', int(c.FS(60, 28))); maxw = int(c.W * c.R(0.88, 0.74))
     lines = wrap(' '.join(words), f, maxw); lh = int(f.size * 1.22)
     wts = [len(w) + 2 for w in words]; tot = sum(wts); p = clamp((t - s) / max(e - s, 0.2)) * 1.03
     y = c.cap_y - len(lines) * lh / 2; done = 0; idx = 0
@@ -326,15 +327,17 @@ def caption(c, img, t, cap):
 
 
 def title_block(c, img, t, over, head=None, t0=0.0):
-    overline(img, c.cx, c.S(300, 100), over, F('Bold', int(c.S(32, 15))), GOLD, eo3(prog(t, t0, 0.4)), 0.22)
+    overline(img, c.cx, c.S(300, 100), over, F('Bold', int(c.FS(32, 15))), GOLD, eo3(prog(t, t0, 0.4)), 0.22)
     if head: headline(img, c.cx, c.S(352, 124), head, c.S(92, 46), t, t0 + 0.08, int(c.W * c.R(0.9, 0.8)))
 
 
 def row_card(c, img, t, x0, y0, w, h, p, kind, c1, c2, label, chk=0.0):
+    gh = eo3(prog(t, 0.35, 0.6)) * (1 - eo3(p))
+    if gh > 0.01: glass(img, x0, y0, x0 + w, y0 + h, c.S(40, 20), gh * 0.55, fill_a=0.05, border_a=0.14, shadow=False)
     p = eo3(p); sl = (1 - p) * c.S(70, 30)
     glass(img, x0 + sl, y0, x0 + w + sl, y0 + h, c.S(40, 20), p)
     badge(img, x0 + sl + h * 0.5, y0 + h / 2, h * 0.30, kind, c1, c2, p)
-    f = F('Bold', int(c.S(44, 21))); lines = wrap(label, f, w - h - c.S(150, 90))
+    f = F('Bold', int(c.FS(44, 21))); lines = wrap(label, f, w - h - c.S(150, 90))
     for j, ln in enumerate(lines): text(img, x0 + sl + h * 0.5 + h * 0.30 + c.S(40, 22), y0 + h / 2 + (j - (len(lines) - 1) / 2) * f.size * 1.2, ln, f, WHITE, p, 'lm')
     check_badge(img, x0 + sl + w - c.S(74, 36), y0 + h / 2, c.S(34, 16), chk)
 
@@ -350,20 +353,20 @@ def end_card(c, img, t, ph, lines):
     b = eo3(prog(t, ph[0][0] + 0.2, 0.5)); y2 = c.S(790, 305); w2, h2 = c.S(840, 470), c.S(150, 74)
     glow(img, c.cx, y2 + h2 / 2, w2 * 0.7, GOLD, 0.25 * b * (0.85 + 0.15 * math.sin(t * 3)), 2.2)
     grect(img, c.cx - w2 / 2, y2, c.cx + w2 / 2, y2 + h2, c.S(75, 37), GOLDL, GOLD, b)
-    text(img, c.cx, y2 + h2 / 2 + 2, phone, F('Black', c.S(84, 40)), INK, b, 'mm')
+    text(img, c.cx, y2 + h2 / 2 + 2, phone, F('Black', c.FS(84, 40)), INK, b, 'mm')
     d = eo3(prog(t, ph[0][0] + 0.8, 0.5))
-    text(img, c.cx, y2 + c.S(235, 112), 'or fill out the form at', F('Medium', c.S(40, 19)), MUTED, d, 'mm')
-    text(img, c.cx, y2 + c.S(305, 148), web, F('Bold', c.S(58, 29)), WHITE, d, 'mm')
+    text(img, c.cx, y2 + c.S(235, 112), 'or fill out the form at', F('Medium', c.FS(40, 19)), MUTED, d, 'mm')
+    text(img, c.cx, y2 + c.S(305, 148), web, F('Bold', c.FS(58, 29)), WHITE, d, 'mm')
     e = eo3(prog(t, ph[-1][0], 0.5))
-    yend = para(img, c.cx, c.S(1180, 478), disc, F('Regular', c.S(29, 13)), MUTED, int(c.W * c.R(0.84, 0.7)), e * 0.95, 1.35)
-    if VOICE_NOTE: para(img, c.cx, yend + c.S(22, 8), VOICE_NOTE, F('Medium', c.S(28, 13)), GOLDL, int(c.W * c.R(0.84, 0.7)), e * 0.95, 1.3)
+    yend = para(img, c.cx, c.S(1180, 478), disc, F('Regular', c.FS(29, 13)), MUTED, int(c.W * c.R(0.84, 0.7)), e * 0.95, 1.35)
+    if VOICE_NOTE: para(img, c.cx, yend + c.S(22, 8), VOICE_NOTE, F('Medium', c.FS(28, 13)), GOLDL, int(c.W * c.R(0.84, 0.7)), e * 0.95, 1.3)
 
 
 # ------------------------------------------------------------------ VIDEO 1: Part D late enrollment penalty
 def d_hook(c, img, t, ph):
     title_block(c, img, t, 'Medicare Part D')
     cs, ce = ph[0][0] + 0.35, ph[0][0] + (ph[0][1] - ph[0][0]) * 0.82
-    ncy = c.S(850, 300)
+    ncy = c.S(850, 282)
     pulse = 0.85 + 0.15 * math.sin(t * 2.2)
     glow(img, c.cx, ncy, c.S(560, 300), GOLD, 0.32 * pulse * eo3(prog(t, 0.1, 0.6)), 2.2)
     for k in range(3):
@@ -372,12 +375,12 @@ def d_hook(c, img, t, ph):
     v = 9.40 * eo3(prog(t, cs, ce - cs))
     pop = 1 + (0.07 * math.sin(clamp((t - ce) / 0.5) * math.pi) if t > ce else 0)
     text_grad(img, c.cx, ncy, '$%.2f' % v, F('Black', int(c.S(285, 160) * pop)), GOLDL, GOLD, eo3(prog(t, 0.15, 0.3)), 'mm')
-    text(img, c.cx, ncy + c.S(185, 92), 'more per month', F('Medium', c.S(62, 30)), WHITE, eo3(prog(t, ce - 0.2, 0.5)), 'mm')
-    p1 = eo3(prog(t, ph[1][0] + 0.05, 0.5)); cy = c.S(1215, 438); w, h = c.S(840, 470), c.S(120, 54)
+    text(img, c.cx, ncy + c.S(185, 90), 'more per month', F('Medium', c.FS(62, 30)), WHITE, eo3(prog(t, ce - 0.2, 0.5)), 'mm')
+    p1 = eo3(prog(t, ph[1][0] + 0.05, 0.5)); cy = c.S(1215, 452); w, h = c.S(840, 540), c.S(120, 58)
     glass(img, c.cx - w / 2, cy - h / 2 + (1 - p1) * 30, c.cx + w / 2, cy + h / 2 + (1 - p1) * 30, h / 2, p1)
     circle(img, c.cx - w / 2 + c.S(52, 26), cy + (1 - p1) * 30, c.S(11, 6), TEAL, p1)
-    text(img, c.cx + c.S(18, 8), cy + (1 - p1) * 30, 'for as long as you have drug coverage', F('Bold', c.S(40, 20)), WHITE, p1, 'mm')
-    text(img, c.cx, c.S(1330, 492), 'Example: 24 months without coverage  ·  2026 base premium $38.99', F('Regular', c.S(28, 13)), MUTED, eo3(prog(t, ce + 0.3, 0.5)), 'mm')
+    text(img, c.cx + c.S(18, 8), cy + (1 - p1) * 30, 'for as long as you have drug coverage', F('Bold', c.FS(40, 20)), WHITE, p1, 'mm')
+    text(img, c.cx, c.S(1330, 512), 'Example: 24 months without coverage  ·  2026 base premium $38.99', F('Regular', c.FS(28, 13)), MUTED, eo3(prog(t, ce + 0.3, 0.5)), 'mm')
 
 
 def d_63(c, img, t, ph):
@@ -401,29 +404,30 @@ def d_63(c, img, t, ph):
     glow(img, cx, cy, R * 1.5, mix(GOLD, CORAL, flash), (0.16 + 0.1 * pulse) * eo3(prog(t, 0.1, 0.5)), 2.2)
     _paste(img, (74, 96, 140), cx - box / 2, cy - box / 2, off, 0.9)
     _paste(img, mix(col, CORALL, pulse * 0.35), cx - box / 2, cy - box / 2, on, 1.0)
-    text_grad(img, cx, cy - c.S(34, 16), str(n), F('Black', c.S(210, 96)), mix(GOLDL, CORALL, flash), col, 1.0, 'mm')
-    text(img, cx, cy + c.S(84, 36), 'days without', F('Medium', c.S(34, 13)), MUTED, 1.0, 'mm')
-    text(img, cx, cy + c.S(126, 52), 'drug coverage', F('Medium', c.S(34, 13)), MUTED, 1.0, 'mm')
+    text_grad(img, cx, cy - c.S(34, 0), str(n), F('Black', c.FS(210, 96)), mix(GOLDL, CORALL, flash), col, 1.0, 'mm')
+    if not c.land:
+        text(img, cx, cy + 84, 'days without', F('Medium', 34), MUTED, 1.0, 'mm'); text(img, cx, cy + 126, 'drug coverage', F('Medium', 34), MUTED, 1.0, 'mm')
+    else: text(img, cx, cy + R + tl + 22 * c.k, 'days without drug coverage', F('Medium', c.FS(0, 17)), MUTED, 1.0, 'mm')
     a0 = eo3(prog(t, ph[0][0] + 0.1, 0.5))
     lx, ly = (c.cx, c.S(570, 0)) if not c.land else (c.S(0, 905), c.S(0, 300))
     w, h = c.S(780, 420), c.S(96, 48)
     glass(img, lx - w / 2, ly - h / 2 + (1 - a0) * 24, lx + w / 2, ly + h / 2 + (1 - a0) * 24, h / 2, a0)
     glyph(img, 'flag', lx - w / 2 + c.S(62, 30), ly + (1 - a0) * 24, c.S(54, 26), GOLDL, a0)
-    text(img, lx + c.S(30, 14), ly + (1 - a0) * 24, 'Initial Enrollment Period ends', F('Bold', c.S(36, 17)), WHITE, a0, 'mm')
+    text(img, lx + c.S(30, 14), ly + (1 - a0) * 24, 'Initial Enrollment Period ends', F('Bold', c.FS(36, 17)), WHITE, a0, 'mm')
     b = eob(prog(t, ph[2][0] + 0.25, 0.5))
     if b > 0:
         bx, by = (c.cx, cy + R + c.S(118, 0)) if not c.land else (c.S(0, 905), c.S(0, 430)); w2, h2 = c.S(700, 400), c.S(96, 52)
         glow(img, bx, by, w2 * 0.6, CORAL, 0.28 * clamp(b), 2.2)
         grect(img, bx - w2 / 2, by - h2 / 2, bx + w2 / 2, by + h2 / 2, h2 / 2, CORALL, CORAL, clamp(b))
-        text(img, bx, by, 'The penalty can start', F('Heavy', c.S(44, 21)), WHITE, clamp(b), 'mm')
+        text(img, bx, by, 'The penalty can start', F('Heavy', c.FS(44, 21)), WHITE, clamp(b), 'mm')
 
 
 def d_math(c, img, t, ph):
     title_block(c, img, t, 'The math', "How it's calculated")
     f1 = eo3(prog(t, ph[0][0] + 0.1, 0.5)); f2 = eo3(prog(t, ph[1][0] + 0.1, 0.5))
     fx, fy = (c.cx, c.S(640, 0)) if not c.land else (c.S(0, 335), c.S(0, 330))
-    text_grad(img, fx, fy + (1 - f1) * 20, '1%  ×  $38.99', F('Black', c.S(118, 60)), GOLDL, GOLD, f1, 'mm')
-    text(img, fx, fy + c.S(120, 62) + (1 - f2) * 20, '×  each full month without coverage', F('Semibold', c.S(44, 20)), WHITE, f2, 'mm')
+    text_grad(img, fx, fy + (1 - f1) * 20, '1%  ×  $38.99', F('Black', c.FS(118, 60)), GOLDL, GOLD, f1, 'mm')
+    text(img, fx, fy + c.S(120, 62) + (1 - f2) * 20, '×  each full month without coverage', F('Semibold', c.FS(44, 20)), WHITE, f2, 'mm')
     rows = [('6 mo', 2.30, 2), ('1 yr', 4.70, 3), ('2 yr', 9.40, 4), ('3 yr', 14.00, 5)]
     if not c.land: base, bw, gap, maxh, x0 = 1330, 176, 50, 440, c.cx - (4 * 176 + 3 * 50) / 2
     else: bw, gap = c.S(0, 92), c.S(0, 34); base, maxh = c.S(0, 510), c.S(0, 205); x0 = c.S(0, 905) - (4 * bw + 3 * gap) / 2
@@ -434,10 +438,10 @@ def d_math(c, img, t, ph):
         if hh > bw * 0.4:
             if hot: glow(img, x + bw / 2, base - hh / 2, bw * 1.6, GOLD, 0.25 * clamp(p), 2.2)
             grect(img, x, base - hh, x + bw, base, c.S(26, 12), GOLDL if hot else SKY, GOLD if hot else SKYD, 1.0)
-        text_grad(img, x + bw / 2, base - hh - c.S(40, 20), '$%.2f' % (val * clamp(p)), F('Heavy', c.S(48, 24)), GOLDL if hot else WHITE, GOLD if hot else (200, 215, 240), clamp(p * 3), 'mm')
-        text(img, x + bw / 2, base + c.S(44, 22), lab, F('Semibold', c.S(38, 17)), MUTED, eo3(prog(t, 0.6 + 0.1 * i, 0.4)), 'mm')
+        text_grad(img, x + bw / 2, base - hh - c.S(40, 20), '$%.2f' % (val * clamp(p)), F('Heavy', c.FS(48, 24)), GOLDL if hot else WHITE, GOLD if hot else (200, 215, 240), clamp(p * 3), 'mm')
+        text(img, x + bw / 2, base + c.S(44, 22), lab, F('Semibold', c.FS(38, 17)), MUTED, eo3(prog(t, 0.6 + 0.1 * i, 0.4)), 'mm')
     fnx, fny = (c.cx, c.S(1425, 0)) if not c.land else (c.S(0, 905), c.S(0, 556))
-    text(img, fnx, fny, 'per month  ·  rounded to the nearest $0.10  ·  Medicare.gov', F('Regular', c.S(27, 12)), MUTED, eo3(prog(t, ph[2][0], 0.6)), 'mm')
+    text(img, fnx, fny, 'per month  ·  rounded to the nearest $0.10  ·  Medicare.gov', F('Regular', c.FS(27, 12)), MUTED, eo3(prog(t, ph[2][0], 0.6)), 'mm')
 
 
 def d_follow(c, img, t, ph):
@@ -450,7 +454,7 @@ def d_follow(c, img, t, ph):
     for i, (lab, plen, sa) in enumerate((('Your plan premium', 0.46, a), ('A different plan', 0.62, b))):
         y = ys[i] + fl[i] * c.k
         glass(img, xs[i], y, xs[i] + cw, y + chh, c.S(44, 22), sa)
-        text(img, xs[i] + c.S(46, 24), y + c.S(58, 28), lab, F('Bold', c.S(42, 21)), WHITE, sa, 'lm')
+        text(img, xs[i] + c.S(46, 24), y + c.S(58, 28), lab, F('Bold', c.FS(42, 21)), WHITE, sa, 'lm')
         grect(img, xs[i] + c.S(46, 24), y + off, xs[i] + c.S(46, 24) + inner * plen, y + off + bh, bh / 2, SKY, SKYD, sa)
     appear = eo3(prog(t, ph[0][0] + 0.3, 0.5)); mv = eio(prog(t, ph[1][0] + 0.55, 1.1))
     x1, y1 = xs[0] + c.S(46, 24) + inner * 0.46, ys[0] + fl[0] * c.k + off; x2, y2 = xs[1] + c.S(46, 24) + inner * 0.62, ys[1] + fl[1] * c.k + off
@@ -460,8 +464,8 @@ def d_follow(c, img, t, ph):
     x = lerp(x1, x2, mv); y = lerp(y1, y2, mv) - math.sin(mv * math.pi) * c.S(80, 40)
     glow(img, x + pw / 2, y + bh / 2, pw, CORAL, 0.35 * appear, 2.2)
     grect(img, x, y, x + pw, y + bh, bh / 2, CORALL, CORAL, appear)
-    text(img, x + pw / 2, y + bh / 2, '+ penalty', F('Heavy', c.S(32, 16)), WHITE, appear, 'mm')
-    text(img, c.cx, c.S(1340, 525), 'It stays for as long as you have Medicare drug coverage', F('Medium', c.S(34, 16)), MUTED, eo3(prog(t, ph[1][0] + 1.8, 0.6)), 'mm')
+    text(img, x + pw / 2, y + bh / 2, '+ penalty', F('Heavy', c.FS(32, 16)), WHITE, appear, 'mm')
+    text(img, c.cx, c.S(1340, 525), 'It stays for as long as you have Medicare drug coverage', F('Medium', c.FS(34, 16)), MUTED, eo3(prog(t, ph[1][0] + 1.8, 0.6)), 'mm')
 
 
 def d_avoid(c, img, t, ph):
@@ -517,7 +521,7 @@ def a_hook(c, img, t, ph):
     for i, (nm, lab, pr, car, verdict, vcol) in enumerate(segs):
         a = eo3(prog(t, 0.15 + i * 0.2, 0.5)); y = ys[i] + 3 * math.sin(t * 1.3 + i * 2) * c.k; x0 = c.cx - cw / 2
         glass(img, x0, y, x0 + cw, y + chh, c.S(44, 22), a)
-        text(img, x0 + c.S(46, 24), y + c.S(56, 26), nm + '  ·  ' + lab, F('Bold', c.S(40, 18)), WHITE, a, 'lm')
+        text(img, x0 + c.S(46, 24), y + c.S(56, 26), nm + '  ·  ' + lab, F('Bold', c.FS(40, 18)), WHITE, a, 'lm')
         bx = x0 + c.S(46, 24); by = y + chh - c.S(46, 22) - bh
         rrect(img, bx, by, bx + bw, by + bh, bh / 2, (255, 255, 255), 0.08 * a)
         p1 = eo3(prog(t, ph[0][0] + 0.2 + i * 0.25, 0.8)); p2 = eo3(prog(t, ph[1][0] + 0.05 + i * 0.25, 0.9))
@@ -525,11 +529,11 @@ def a_hook(c, img, t, ph):
         if L1 > bh * 0.5: grect(img, bx, by, bx + L1, by + bh, bh / 2, SKY, SKYD)
         if L2 > bh * 0.5: grect(img, bx + L1 - bh / 2, by, bx + L1 + L2, by + bh, bh / 2, CORALL, CORAL)
         v = eo3(prog(t, ph[1][1] - 0.6 + i * 0.2, 0.5))
-        text(img, x0 + cw - c.S(46, 24), y + c.S(56, 26), verdict, F('Heavy', c.S(36, 17)), vcol, v, 'rm')
+        text(img, x0 + cw - c.S(46, 24), y + c.S(56, 26), verdict, F('Heavy', c.FS(36, 17)), vcol, v, 'rm')
     ly = (1330 if not c.land else c.S(0, 536))
-    circle(img, c.cx - c.S(330, 210), ly, c.S(13, 6), SKY); text(img, c.cx - c.S(300, 190), ly, 'Premiums for the year', F('Medium', c.S(33, 15)), WHITE, 1.0, 'lm')
-    circle(img, c.cx + c.S(60, 40), ly, c.S(13, 6), CORAL); text(img, c.cx + c.S(90, 60), ly, 'What you pay for care', F('Medium', c.S(33, 15)), WHITE, 1.0, 'lm')
-    text(img, c.cx, ly + c.S(60, 22), 'Illustration only, not real prices', F('Regular', c.S(28, 12)), MUTED, eo3(prog(t, ph[1][0] + 0.6, 0.5)), 'mm')
+    circle(img, c.cx - c.S(330, 290), ly, c.S(13, 6), SKY); text(img, c.cx - c.S(300, 262), ly, 'Premiums for the year', F('Medium', c.FS(33, 15)), WHITE, 1.0, 'lm')
+    circle(img, c.cx + c.S(60, 24), ly, c.S(13, 6), CORAL); text(img, c.cx + c.S(90, 52), ly, 'What you pay for care', F('Medium', c.FS(33, 15)), WHITE, 1.0, 'lm')
+    text(img, c.cx, ly + c.S(60, 22), 'Illustration only, not real prices', F('Regular', c.FS(28, 12)), MUTED, eo3(prog(t, ph[1][0] + 0.6, 0.5)), 'mm')
 
 
 def a_cost(c, img, t, ph):
@@ -540,16 +544,18 @@ def a_cost(c, img, t, ph):
     for i, (lab, c1, c2, fg) in enumerate(blocks):
         y = yb - (i + 1) * (h + gp); ys.append(y)
         p = eo3(prog(t, ph[1][0] + 0.15 + i * (ph[1][1] - ph[1][0]) * 0.33, 0.5)); sl = (1 - p) * c.S(70, 36)
+        gh = eo3(prog(t, 0.35 + 0.12 * i, 0.5)) * (1 - p)
+        if gh > 0.01: rrect(img, x0, y, x0 + w, y + h, c.S(30, 14), WHITE, 0.16 * gh, outline=2)
         grect(img, x0, y - sl, x0 + w, y + h - sl, c.S(30, 14), c1, c2, p)
-        text(img, x0 + w / 2, y + h / 2 - sl, lab, F('Heavy', c.S(42, 20)), fg, p, 'mm')
+        text(img, x0 + w / 2, y + h / 2 - sl, lab, F('Heavy', c.FS(42, 20)), fg, p, 'mm')
     q = eo3(prog(t, ph[2][0] + 0.1, 0.6))
     if q > 0:
         ytop = ys[2] - c.S(26, 12)
         for xx in range(int(x0 - c.S(10, 6)), int(x0 + w), int(c.S(48, 24))): rrect(img, xx, ytop - 3, xx + c.S(28, 14), ytop + 3, 3, TEAL, q)
         bx = x0 - c.S(28, 14); shape(img, (bx - 3, int(ys[2]), bx + 3, int(ys[1] + h)), TEAL, q, lambda d, ss, ww, hh: d.rectangle([0, 0, ww, hh], fill=255))
         glow(img, c.cx, ytop - c.S(40, 20), c.S(380, 220), TEAL, 0.18 * q, 2.2)
-        text(img, c.cx, ytop - c.S(42, 20), 'Out-of-pocket maximum', F('Heavy', c.S(44, 21)), TEAL, q, 'mm')
-        text(img, c.cx, ytop - c.S(96, 46), 'caps what you pay for covered, in-network care', F('Medium', c.S(30, 14)), MUTED, q, 'mm')
+        text(img, c.cx, ytop - c.S(42, 20), 'Out-of-pocket maximum', F('Heavy', c.FS(44, 21)), TEAL, q, 'mm')
+        text(img, c.cx, ytop - c.S(96, 46), 'caps what you pay for covered, in-network care', F('Medium', c.FS(30, 14)), MUTED, q, 'mm')
 
 
 def a_check(c, img, t, ph):
@@ -570,24 +576,25 @@ def a_metal(c, img, t, ph):
     else: bw, bh, x0, y0, gap = c.S(0, 560), c.S(0, 34), c.S(0, 90), c.S(0, 248), c.S(0, 48)
     for i, (nm, pays, c1, c2) in enumerate(METALS):
         y = y0 + i * (bh + gap); p = eo3(prog(t, ph[1][0] + 0.15 + i * 0.28, 0.7))
-        text(img, x0, y - c.S(32, 15), nm, F('Heavy', c.S(40, 18)), c1, clamp(p * 3), 'lm')
-        text(img, x0 + bw, y - c.S(32, 15), 'You pay %d%%' % (100 - pays), F('Semibold', c.S(36, 16)), WHITE, clamp((p - 0.5) * 2), 'rm')
-        rrect(img, x0, y, x0 + bw, y + bh, bh / 2, WHITE, 0.09 * clamp(p * 3))
+        early = eo3(prog(t, 0.35 + 0.1 * i, 0.5))
+        text(img, x0, y - c.S(32, 15), nm, F('Heavy', c.FS(40, 18)), c1, max(early, clamp(p * 3)), 'lm')
+        text(img, x0 + bw, y - c.S(32, 15), 'You pay %d%%' % (100 - pays), F('Semibold', c.FS(36, 16)), WHITE, clamp((p - 0.5) * 2), 'rm')
+        rrect(img, x0, y, x0 + bw, y + bh, bh / 2, WHITE, 0.09 * max(early, clamp(p * 3)))
         Lp = bw * pays / 100 * p
         if Lp > bh * 0.6:
             grect(img, x0, y, x0 + Lp, y + bh, bh / 2, c1, c2)
             lo, hi = x0 + bh / 2, x0 + Lp - bh / 2; sx = lo + ((t * 0.35 + i * 0.2) % 1.6 - 0.3) * (hi - lo)
             if hi > lo: shape(img, (max(lo, sx), y + 2, min(hi, sx + bw * 0.1), y + bh - 2), WHITE, 0.15, lambda d, ss, w, h: d.rectangle([0, 0, w, h], fill=255))
-        if p > 0.55: text(img, x0 + c.S(38, 18), y + bh / 2, 'Plan pays %d%%' % pays, F('Heavy', c.S(40, 17)), INK, clamp((p - 0.55) / 0.45), 'lm')
+        if p > 0.55: text(img, x0 + c.S(38, 18), y + bh / 2, 'Plan pays %d%%' % pays, F('Heavy', c.FS(40, 17)), INK, clamp((p - 0.55) / 0.45), 'lm')
     r = eob(prog(t, ph[2][0] + 0.1, 0.5))
     if r > 0:
         if not c.land: bx, by, w, h = c.cx, y0 + 4 * (bh + gap) - 6, 860, 104
-        else: bx, by, w, h = c.S(0, 1000), c.S(0, 330), c.S(0, 300), c.S(0, 110)
+        else: bx, by, w, h = c.S(0, 985), c.S(0, 320), c.S(0, 380), c.S(0, 104)
         glow(img, bx, by, w * 0.6, CORAL, 0.25 * clamp(r), 2.2)
         grect(img, bx - w / 2, by - h / 2, bx + w / 2, by + h / 2, c.S(52, 24), CORALL, CORAL, clamp(r))
-        text(img, bx, by, 'Metal level ≠ quality of care' if c.land else 'Metal level  ≠  quality of care', F('Heavy', c.S(44, 17)), WHITE, clamp(r), 'mm')
-    fx, fy = (c.cx, y0 + 4 * (bh + gap) + 80) if not c.land else (c.S(0, 1000), c.S(0, 410))
-    text(img, fx, fy, 'On average. Actual costs vary by plan. Source: HealthCare.gov', F('Regular', c.S(28, 12)), MUTED, eo3(prog(t, ph[1][0] + 1.2, 0.5)), 'mm')
+        text(img, bx, by, 'Metal level ≠ quality of care' if c.land else 'Metal level  ≠  quality of care', F('Heavy', c.FS(44, 17)), WHITE, clamp(r), 'mm')
+    fx, fy = (c.cx, y0 + 4 * (bh + gap) + 80) if not c.land else (c.S(0, 985), c.S(0, 395))
+    para(img, fx, fy - (0 if c.land else 18), 'On average. Actual costs vary by plan. Source: HealthCare.gov', F('Regular', c.FS(28, 12)), MUTED, int(c.S(900, 360)), eo3(prog(t, ph[1][0] + 1.2, 0.5)), 1.25)
 
 
 def a_save(c, img, t, ph):
@@ -598,16 +605,16 @@ def a_save(c, img, t, ph):
         y = y0 + i * (rh + gap); p = eo3(prog(t, 0.15 + i * 0.12, 0.45))
         glass(img, x0, y, x0 + cw, y + rh, c.S(40, 18), p)
         circle(img, x0 + c.S(60, 28), y + rh / 2, c.S(24, 10), c1, p)
-        text(img, x0 + c.S(104, 50), y + rh / 2, nm, F('Heavy', c.S(44, 21)), WHITE, p, 'lm')
-        chw1, chw2 = c.S(300, 160), c.S(280, 150); bx = x0 + cw - c.S(36, 16) - chw1 - c.S(18, 8) - chw2
+        text(img, x0 + c.S(104, 50), y + rh / 2, nm, F('Heavy', c.FS(44, 21)), WHITE, p, 'lm')
+        chw1, chw2 = c.S(300, 232), c.S(280, 212); bx = x0 + cw - c.S(36, 16) - chw1 - c.S(18, 8) - chw2
         if g1 > 0:
-            grect(img, bx, y + c.S(26, 11), bx + chw1, y + rh - c.S(26, 11), c.S(34, 14), (110, 230, 205), TEAL, g1); text(img, bx + chw1 / 2, y + rh / 2, 'Premium tax credit', F('Heavy', c.S(30, 13)), INK, g1, 'mm')
+            grect(img, bx, y + c.S(26, 11), bx + chw1, y + rh - c.S(26, 11), c.S(34, 14), (110, 230, 205), TEAL, g1); text(img, bx + chw1 / 2, y + rh / 2, 'Premium tax credit', F('Heavy', c.FS(30, 13)), INK, g1, 'mm')
         if nm == 'Silver' and g2 > 0:
             bx2 = bx + chw1 + c.S(18, 8)
-            grect(img, bx2, y + c.S(26, 11), bx2 + chw2, y + rh - c.S(26, 11), c.S(34, 14), GOLDL, GOLD, g2); text(img, bx2 + chw2 / 2, y + rh / 2, 'Cost-sharing help', F('Heavy', c.S(30, 13)), INK, g2, 'mm')
+            grect(img, bx2, y + c.S(26, 11), bx2 + chw2, y + rh - c.S(26, 11), c.S(34, 14), GOLDL, GOLD, g2); text(img, bx2 + chw2 / 2, y + rh / 2, 'Cost-sharing help', F('Heavy', c.FS(30, 13)), INK, g2, 'mm')
             rrect(img, x0 - 6, y - 6, x0 + cw + 6, y + rh + 6, c.S(46, 22), GOLDL, g2, outline=3)
     fy = y0 + 4 * (rh + gap) + c.S(50, 20)
-    text(img, c.cx, fy, 'If you qualify. Cost-sharing reductions only come with Silver plans.', F('Medium', c.S(31, 14)), MUTED, g2, 'mm')
+    text(img, c.cx, fy, 'If you qualify. Cost-sharing reductions only come with Silver plans.', F('Medium', c.FS(31, 14)), MUTED, g2, 'mm')
 
 
 def a_dates(c, img, t, ph):
@@ -620,8 +627,9 @@ def a_dates(c, img, t, ph):
         shape(img, (lx - 4, y0, lx + 4, y0 + max(1, int(2 * step * total))), GOLD, 1.0, lambda d, ss, w, h: d.rectangle([0, 0, w, h], fill=255))
         for i, (d, lab, ts) in enumerate(pts):
             y = y0 + i * step; p = eob(prog(t, ts, 0.5)); col = GOLD if i != 1 else CORAL
-            glow(img, lx, y, 90 * clamp(p), col, 0.35, 2.2); circle(img, lx, y, 28 * clamp(p), col)
-            text_grad(img, lx + 90, y - 30, d, F('Black', 84), GOLDL if i != 1 else CORALL, col, clamp(p), 'lm')
+            early = 0.28 * eo3(prog(t, 0.4 + 0.12 * i, 0.5))
+            glow(img, lx, y, 90 * clamp(p), col, 0.35, 2.2); circle(img, lx, y, 28 * clamp(p) if p > 0.02 else 14 * early * 3.5, col, 1.0 if p > 0.02 else early * 2)
+            text_grad(img, lx + 90, y - 30, d, F('Black', 84), GOLDL if i != 1 else CORALL, col, max(clamp(p), early), 'lm')
             para(img, lx + 90, y + 18, lab, F('Semibold', 38), WHITE, 640, clamp(p), 1.15, align='left')
             img  # keep
         v = eob(prog(t, ph[2][0] + 0.3, 0.5))
@@ -635,14 +643,15 @@ def a_dates(c, img, t, ph):
         shape(img, (xs[0], y - 3, xs[0] + max(1, int((xs[2] - xs[0]) * total)), y + 3), GOLD, 1.0, lambda d, ss, w, h: d.rectangle([0, 0, w, h], fill=255))
         for i, (d, lab, ts) in enumerate(pts):
             p = eob(prog(t, ts, 0.5)); col = GOLD if i != 1 else CORAL
-            glow(img, xs[i], y, c.S(0, 50) * clamp(p), col, 0.35, 2.2); circle(img, xs[i], y, c.S(0, 12) * clamp(p), col)
-            text_grad(img, xs[i], y - c.S(0, 52), d, F('Black', c.S(0, 46)), GOLDL if i != 1 else CORALL, col, clamp(p), 'mm')
-            para(img, xs[i], y + c.S(0, 30), lab, F('Semibold', c.S(0, 21)), WHITE, int(c.S(0, 330)), clamp(p), 1.15)
+            early = 0.28 * eo3(prog(t, 0.4 + 0.12 * i, 0.5))
+            glow(img, xs[i], y, c.S(0, 50) * clamp(p), col, 0.35, 2.2); circle(img, xs[i], y, c.S(0, 12) * clamp(p) if p > 0.02 else c.S(0, 8) * 3.5 * early, col, 1.0 if p > 0.02 else early * 2)
+            text_grad(img, xs[i], y - c.S(0, 52), d, F('Black', c.FS(0, 46)), GOLDL if i != 1 else CORALL, col, max(clamp(p), early), 'mm')
+            para(img, xs[i], y + c.S(0, 30), lab, F('Semibold', c.FS(0, 21)), WHITE, int(c.S(0, 330)), clamp(p), 1.15)
         v = eob(prog(t, ph[2][0] + 0.3, 0.5))
         if v > 0:
             glass(img, c.cx - c.S(0, 250), c.S(0, 400), c.cx + c.S(0, 250), c.S(0, 458), c.S(0, 29), clamp(v))
-            text(img, c.cx, c.S(0, 429), 'Virginia: through Jan 29', F('Heavy', c.S(0, 27)), GOLDL, clamp(v), 'mm')
-        text(img, c.cx, c.S(0, 496), 'State exchanges can differ  ·  Source: HealthCare.gov', F('Regular', c.S(0, 15)), MUTED, clamp(v), 'mm')
+            text(img, c.cx, c.S(0, 429), 'Virginia: through Jan 29', F('Heavy', c.FS(0, 27)), GOLDL, clamp(v), 'mm')
+        text(img, c.cx, c.S(0, 496), 'State exchanges can differ  ·  Source: HealthCare.gov', F('Regular', c.FS(0, 15)), MUTED, clamp(v), 'mm')
 
 
 ACA = dict(
