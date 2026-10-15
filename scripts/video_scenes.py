@@ -707,3 +707,91 @@ ACA_SHORT = dict(slug='aca-premium-vs-total-cost-short', title='ACA: the premium
                  scenes=[ACA['scenes'][0], _cost, ACA['scenes'][6]])
 VIDEOS.update({'part-d-short': PART_D_SHORT, 'aca-short': ACA_SHORT})
 
+
+# ------------------------------------------------------------------ VIDEO 3: Medicare Annual Enrollment Period (facts: Medicare.gov "Joining a plan" and CMS Medicare Open Enrollment page)
+def fit_font(weight, s_, maxw, maxsize):
+    size = int(maxsize)
+    while size > 20 and F(weight, size).getlength(s_) > maxw: size -= 4
+    return F(weight, size)
+
+
+def m_hook(c, img, t, ph):
+    title_block(c, img, t, 'Medicare annual enrollment')
+    f = fit_font('Black', 'Oct 15 – Dec 7', c.W * c.R(0.86, 0.62), c.S(200, 140))
+    ncy = c.S(720, 280); a = eo3(prog(t, 0.15, 0.4))
+    glow(img, c.cx, ncy, c.S(520, 300), GOLD, 0.30 * a * (0.85 + 0.15 * math.sin(t * 2.2)), 2.2)
+    for k in range(3):
+        ph_ = ((t * 0.38) + k / 3) % 1.0
+        ring_line(img, c.cx, ncy, lerp(c.S(240, 130), c.S(520, 290), ph_), c.S(3, 2), GOLDL, (1 - ph_) * 0.28 * a)
+    text_grad(img, c.cx, ncy, 'Oct 15 – Dec 7', f, GOLDL, GOLD, a, 'mm')
+    text(img, c.cx, ncy + f.size * 0.78, 'every year', F('Medium', c.FS(56, 24)), WHITE, eo3(prog(t, 0.6, 0.5)), 'mm')
+    bw = c.S(860, 640); bh = c.S(86, 40); x0 = c.cx - bw / 2; y = c.S(1090, 438)
+    glass(img, x0 - 18, y - 18, x0 + bw + 18, y + bh + 18, c.S(52, 24), eo3(prog(t, 0.3, 0.5)), shadow=False)
+    days = [31, 30, 31]; tot = sum(days); xm = x0
+    for i, (nm, d) in enumerate(zip(('Oct', 'Nov', 'Dec'), days)):
+        w = bw * d / tot
+        text(img, xm + w / 2, y + bh + c.S(44, 20), nm, F('Semibold', c.FS(38, 16)), MUTED, eo3(prog(t, 0.5 + 0.1 * i, 0.4)), 'mm')
+        if i: shape(img, (xm - 1, y, xm + 1, y + bh), WHITE, 0.25, lambda d_, ss, w_, h_: d_.rectangle([0, 0, w_, h_], fill=255))
+        xm += w
+    xs, xe = x0 + bw * 14 / tot, x0 + bw * 68 / tot
+    p0 = eio(prog(t, ph[0][0] + 0.7, max(ph[0][1] - ph[0][0] - 1.0, 1.0)))
+    if p0 > 0.01:
+        grect(img, xs, y, xs + (xe - xs) * p0, y + bh, bh / 2, GOLDL, GOLD)
+        text(img, xs, y - c.S(40, 18), 'Oct 15', F('Heavy', c.FS(36, 16)), GOLDL, eo3(prog(t, ph[0][0] + 0.7, 0.4)), 'mm')
+    if p0 > 0.97: text(img, xe, y - c.S(40, 18), 'Dec 7', F('Heavy', c.FS(36, 16)), GOLDL, eo3((p0 - 0.97) / 0.03), 'mm')
+    q = eo3(prog(t, ph[1][0] + 0.1, 0.5))
+    if q > 0:
+        shape(img, (x0 + bw - 2, y - c.S(14, 6), x0 + bw + 2, y + bh + c.S(14, 6)), TEAL, q, lambda d_, ss, w_, h_: d_.rectangle([0, 0, w_, h_], fill=255))
+        glyph(img, 'flag', x0 + bw - c.S(30, 14), y + bh + c.S(120, 54), c.S(60, 28), TEAL, q)
+        text(img, x0 + bw - c.S(60, 28), y + bh + c.S(120, 54), 'Jan 1: changes start', F('Bold', c.FS(36, 16)), WHITE, q, 'rm')
+
+
+def m_change(c, img, t, ph):
+    title_block(c, img, t, 'Annual enrollment', 'What you can change')
+    items = [('doc', GOLD, (230, 140, 40), 'Join, drop or switch a Medicare Advantage plan'),
+             ('shield', TEAL, (34, 150, 190), 'Move between Original Medicare and Medicare Advantage'),
+             ('pill', SKY, INDIGO, 'Join, drop or switch a Part D drug plan (with Original Medicare)')]
+    cw, chh, gap = c.S(940, 880), c.S(230, 92), c.S(34, 14); y0 = c.S(640, 232)
+    for i, (kind, c1, c2, lab) in enumerate(items):
+        row_card(c, img, t, c.cx - cw / 2, y0 + i * (chh + gap) + 4 * math.sin(t * 1.4 + i) * c.k, cw, chh, prog(t, ph[i][0] - 0.05, 0.45), kind, c1, c2, lab, prog(t, ph[i][1] - 0.4, 0.5))
+
+
+def m_review(c, img, t, ph):
+    title_block(c, img, t, 'Before you decide', 'Your review checklist')
+    items = [('doc', GOLD, (230, 140, 40), 'Read your Annual Notice of Change'), ('pill', SKY, INDIGO, 'Check your drugs, doctors and pharmacy'),
+             ('calendar', TEAL, (34, 150, 190), 'Compare total yearly cost, not just the premium'), ('clock', CORAL, (220, 70, 110), 'Make sure your plan gets your request by Dec 7')]
+    cw, chh, gap = c.S(940, 880), c.S(190, 78), c.S(28, 11); y0 = c.S(610, 220)
+    for i, (kind, c1, c2, lab) in enumerate(items):
+        row_card(c, img, t, c.cx - cw / 2, y0 + i * (chh + gap) + 4 * math.sin(t * 1.4 + i) * c.k, cw, chh, prog(t, ph[i][0] - 0.05, 0.45), kind, c1, c2, lab, prog(t, ph[i][1] - 0.4, 0.5))
+
+
+def m_happy(c, img, t, ph):
+    title_block(c, img, t, 'Happy with your plan?')
+    a = eo3(prog(t, 0.2, 0.5)); cy = c.S(820, 330)
+    check_badge(img, c.cx, cy, c.S(120, 58), prog(t, 0.5, 0.8))
+    w, h = c.S(900, 760), c.S(220, 100); y = c.S(1040, 410)
+    glass(img, c.cx - w / 2, y + (1 - a) * 30, c.cx + w / 2, y + h + (1 - a) * 30, c.S(46, 22), a)
+    text_grad(img, c.cx, y + h / 2 + (1 - a) * 30, 'No action needed.', F('Black', c.FS(76, 34)), WHITE, (200, 215, 240), a, 'mm')
+
+
+MEDICARE_AEP = dict(
+    slug='medicare-annual-enrollment-short', title='Medicare Annual Enrollment: Oct 15 to Dec 7, what you can change and how to review', poster=3.5, disclaimer=PART_D['disclaimer'],
+    scenes=[
+        dict(phr=[("Every year, Medicare's Annual Enrollment Period runs October 15 to December 7.", "Every year, Medicare's Annual Enrollment Period runs October fifteenth to December seventh."),
+                  ('Changes you make generally start January 1.', 'Changes you make generally start January first.')], draw=m_hook, sfx=lambda ph: [(ph[1][0] + 0.15, 'ding')], pre=0.1, post=0.7),
+        dict(phr=[('During that window, you can join, drop or switch a Medicare Advantage plan.', 'During that window, you can join, drop or switch a Medicare Advantage plan.'),
+                  ('Move between Original Medicare and Medicare Advantage, in either direction.', 'Move between Original Medicare and Medicare Advantage, in either direction.'),
+                  ('Or join, drop or switch a Part D drug plan if you have Original Medicare.', 'Or join, drop or switch a Part D drug plan if you have Original Medicare.')],
+             draw=m_change, sfx=lambda ph: [(ph[k][1] - 0.35, 'ding') for k in (0, 1, 2)], pre=0.15, post=0.6),
+        dict(phr=[("Before you decide, read your plan's Annual Notice of Change.", "Before you decide, read your plan's Annual Notice of Change."),
+                  ('Check that your drugs, doctors and pharmacy are still covered.', 'Check that your drugs, doctors and pharmacy are still covered.'),
+                  ('Compare the total yearly cost, not just the premium.', 'Compare the total yearly cost, not just the premium.'),
+                  ('And make sure your plan gets your request by December 7.', 'And make sure your plan gets your request by December seventh.')],
+             draw=m_review, sfx=lambda ph: [(ph[k][1] - 0.35, 'ding') for k in (0, 1, 2, 3)], pre=0.15, post=0.6),
+        dict(phr=[('If your plan still meets your needs and is still offered, you do not have to do anything.', 'If your plan still meets your needs and is still offered, you do not have to do anything.')],
+             draw=m_happy, sfx=lambda ph: [(ph[0][0] + 1.0, 'ding')], pre=0.15, post=0.8),
+        PART_D['scenes'][5],
+    ])
+MEDICARE_AEP['scenes'][-1] = dict(PART_D['scenes'][5])
+VIDEOS['aep'] = MEDICARE_AEP
+
