@@ -196,3 +196,20 @@
     if(e.target&&e.target.tagName==='FORM'){ track('generate_lead',{form:(e.target.getAttribute('action')||'form')}); }
   },true);
 })();
+
+/* ---- Booking CTA: header button -> Calendly, tracked as book_call_click ---- */
+(function(){
+  var URL='https://calendly.com/luaysadqi1/30min';
+  function init(){
+    var b=document.querySelector('a.cta-btn');
+    if(b && !b.hasAttribute('data-book')){
+      b.setAttribute('data-book','1'); b.href=URL; b.target='_blank'; b.rel='noopener';
+      b.textContent='Book a Free Call';
+    }
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href*="calendly.com"]'):null;
+    if(a && typeof window.gtag==='function'){ try{ window.gtag('event','book_call_click',{page:location.pathname}); }catch(x){} }
+  },true);
+})();
