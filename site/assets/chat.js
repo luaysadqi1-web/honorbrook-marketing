@@ -204,7 +204,7 @@
     var b=document.querySelector('a.cta-btn');
     if(b && !b.hasAttribute('data-book')){
       b.setAttribute('data-book','1'); b.href=URL; b.target='_blank'; b.rel='noopener';
-      b.textContent='Book a Free Call';
+      b.textContent='Book a Call';
     }
   }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
@@ -212,4 +212,48 @@
     var a=e.target&&e.target.closest?e.target.closest('a[href*="calendly.com"]'):null;
     if(a && typeof window.gtag==='function'){ try{ window.gtag('event','book_call_click',{page:location.pathname}); }catch(x){} }
   },true);
+})();
+
+
+/* ---- Lead forms: inline loading + error states, then /thank-you ---- */
+(function(){
+  function msg(form,text){
+    var m=form.querySelector('.hb-form-msg');
+    if(!m){ m=document.createElement('div'); m.className='hb-form-msg err'; m.setAttribute('role','alert'); m.setAttribute('aria-live','assertive'); form.appendChild(m); }
+    m.textContent=text; m.hidden=!text; if(text){ m.scrollIntoView({block:'nearest'}); }
+  }
+  function prep(){ document.querySelectorAll('form[action*="formspree.io"]').forEach(function(f){ f.noValidate=true; f.addEventListener('input',function(ev){ ev.target.classList&&ev.target.classList.remove('hb-field-err'); }); }); }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',prep); } else { prep(); }
+  document.addEventListener('submit',function(e){
+    var f=e.target;
+    if(!f||f.tagName!=='FORM'||!/formspree\.io/.test(f.getAttribute('action')||'')||!window.fetch||!window.FormData) return;
+    e.preventDefault();
+    if(!f.checkValidity()){
+      var bad=f.querySelectorAll(':invalid'); bad.forEach(function(el){ el.classList.add('hb-field-err'); });
+      msg(f,'Please complete the highlighted fields (and tick the consent box) so we can reach you.'); bad[0].focus(); return;
+    }
+    f.querySelectorAll('.hb-field-err').forEach(function(el){ el.classList.remove('hb-field-err'); });
+    var btn=f.querySelector('button[type=submit]'), label=btn&&btn.textContent;
+    if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
+    msg(f,'');
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
+      .then(function(r){ if(r.ok){ location.href='/thank-you'; } else { throw new Error('bad'); } })
+      .catch(function(){
+        if(btn){ btn.disabled=false; btn.textContent=label; }
+        msg(f,'Sorry, that did not go through. Please try again, or call us at (571) 354-0146 and we will help right away.');
+      });
+  });
+})();
+
+/* ---- Analytics notice (opt-out stored in this browser; honored by the tag on every page) ---- */
+(function(){
+  var K='hb_analytics', v=null;
+  try{ v=localStorage.getItem(K); }catch(e){}
+  if(v) return;
+  var d=document.createElement('div'); d.className='hb-consent'; d.setAttribute('role','region'); d.setAttribute('aria-label','Analytics notice');
+  d.innerHTML='<p>We use cookies for analytics to improve this site. We do not sell your data. See our <a href="/privacy-policy#cookies">Privacy Policy</a>.</p><button class="ok" type="button">Accept</button><button class="no" type="button">Decline</button>';
+  function set(val){ try{ localStorage.setItem(K,val); }catch(e){} if(val==='off'){ window['ga-disable-G-J5YG8E3PYC']=true; } d.remove(); }
+  d.querySelector('.ok').onclick=function(){ set('on'); };
+  d.querySelector('.no').onclick=function(){ set('off'); };
+  document.body.appendChild(d);
 })();

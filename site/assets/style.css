@@ -218,3 +218,26 @@ dialog.fd-dlg::backdrop{background:rgba(10,20,35,.55)}
 .fd-foot{margin:0;padding:0 22px 20px;font-family:'Source Sans 3',Arial,sans-serif;font-size:16px}
 #findInline{max-width:640px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:22px;box-shadow:0 6px 22px rgba(27,47,75,.06)}
 @media(max-width:520px){.fd-row{flex-direction:column}.fd-go{padding:13px}}
+
+/* ---------- sticky bar: call + book ---------- */
+.sticky-call{display:none;gap:10px;padding:10px 12px}
+.sticky-call a{flex:1;display:block;padding:10px 6px;font-size:17px;border-radius:6px}
+.sticky-call a.bk{background:var(--navy-d);color:#fff}
+@media(max-width:900px){.sticky-call{display:flex}body{padding-bottom:72px}}
+
+/* ---------- form states ---------- */
+form button[disabled]{opacity:.7;cursor:progress}
+.hb-form-msg{margin-top:14px;padding:12px 14px;border-radius:6px;font-size:16px;line-height:1.45}
+.hb-form-msg.err{background:#fdecea;border:1px solid #d9534f;color:#7a1f1b}
+.hb-field-err{border-color:#d9534f!important;background:#fff8f7}
+
+/* ---------- analytics notice ---------- */
+.hb-consent{position:fixed;left:12px;right:12px;bottom:12px;z-index:120;background:var(--navy-d,#101e37);color:#e8edf5;border:1px solid var(--gold,#c9a227);border-radius:10px;padding:14px 16px;box-shadow:0 10px 30px rgba(0,0,0,.35);display:flex;flex-wrap:wrap;gap:12px;align-items:center;max-width:760px;margin:0 auto;font:15px/1.45 'Source Sans 3',Arial,sans-serif}
+.hb-consent p{margin:0;flex:1 1 280px}
+.hb-consent a{color:var(--gold-l,#e7cd6b);text-decoration:underline}
+.hb-consent button{font:700 15px 'Source Sans 3',Arial,sans-serif;padding:10px 16px;border-radius:6px;border:1px solid var(--gold,#c9a227);cursor:pointer}
+.hb-consent .ok{background:var(--gold,#c9a227);color:#101e37}
+.hb-consent .no{background:transparent;color:#e8edf5}
+@media(max-width:900px){.hb-consent{bottom:84px}}
+
+@media(max-width:520px){a.cta-btn{padding:10px 14px;font-size:15px}}
