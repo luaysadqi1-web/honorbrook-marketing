@@ -13,7 +13,7 @@ Honorbrook Insurance is not connected with or endorsed by the U.S. government or
 ## Health insurance under 65
 - [ACA / Marketplace health insurance](https://honorbrook-insurance.com/aca-health-insurance): individuals and families, subsidies, plan metal levels
 - [Group health and SHOP for small business](https://honorbrook-insurance.com/group-health-insurance-shop)
-- [ICHRA](https://honorbrook-insurance.com/ichra): employer-funded individual coverage
+- [ICHRA / CHOICE Arrangement](https://honorbrook-insurance.com/ichra): employer-funded individual coverage (ICHRA was renamed "CHOICE Arrangement" by CMS and the SBA in September 2026; same rules)
 - [Self-employed health insurance](https://honorbrook-insurance.com/self-employed-health-insurance)
 - [Lost health coverage options](https://honorbrook-insurance.com/lost-health-coverage)
 
