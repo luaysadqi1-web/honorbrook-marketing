@@ -67,14 +67,36 @@
     }
   };
 
-  function run(f){
+  function run(f,quiet){
     var k=f.getAttribute('data-calc'), out=f.querySelector('.calc-out');
+    f.querySelectorAll('.cf-err').forEach(function(e){ e.classList.remove('cf-err'); });
+    var bad=[]; f.querySelectorAll('input[data-kind]').forEach(function(i){ var v=i.value.replace(/[^0-9.\-]/g,''); if(v!==''&&(isNaN(parseFloat(v))||parseFloat(v)<0)){ bad.push(i); } });
+    if(bad.length){ bad.forEach(function(i){ i.classList.add('cf-err'); }); out.innerHTML='<p class="calc-err">Please use positive numbers only.</p>'; return; }
     try{ out.innerHTML=CALCS[k](f); }catch(e){ out.innerHTML='<p class="calc-err">Something went wrong. Please check your numbers.</p>'; return; }
-    if(typeof window.gtag==='function'){ try{ window.gtag('event','calculator_use',{calculator:k}); }catch(e){} }
+    f.setAttribute('data-ran','1');
+    var act=document.createElement('div'); act.className='calc-actions'; act.innerHTML='<button type="button" class="calc-sec calc-reset">Start over</button> <button type="button" class="calc-sec calc-print">Print results</button>'; out.appendChild(act);
+    if(!quiet){
+      if(window.matchMedia&&window.matchMedia('(max-width:820px)').matches){ out.scrollIntoView({behavior:'smooth',block:'start'}); }
+      if(typeof window.gtag==='function'){ try{ window.gtag('event','calculator_use',{calculator:k}); }catch(e){} }
+    }
   }
+  var DEF={};
   document.querySelectorAll('form[data-calc]').forEach(function(f){
+    f.querySelectorAll('input,select').forEach(function(i){ DEF[f.getAttribute('data-calc')+'#'+i.id]=i.value; });
+    var timer=null;
+    function live(){ if(f.getAttribute('data-ran')!=='1') return; clearTimeout(timer); timer=setTimeout(function(){ run(f,true); },350); }
+    f.addEventListener('input',live); f.addEventListener('change',live);
     f.querySelector('.calc-go').addEventListener('click',function(){ run(f); });
     f.addEventListener('keydown',function(e){ if(e.key==='Enter'&&e.target.tagName!=='BUTTON'){ e.preventDefault(); run(f); } });
+    f.addEventListener('click',function(e){
+      var t=e.target;
+      if(t.classList&&t.classList.contains('calc-reset')){
+        f.querySelectorAll('input,select').forEach(function(i){ i.value=DEF[f.getAttribute('data-calc')+'#'+i.id]; i.classList.remove('cf-err'); });
+        f.removeAttribute('data-ran'); f.querySelector('.calc-out').innerHTML='<p class="calc-empty">Enter your numbers and press Calculate. Nothing you type is saved or sent anywhere.</p>';
+        var first=f.querySelector('input,select'); if(first) first.focus();
+      }
+      if(t.classList&&t.classList.contains('calc-print')){ window.print(); }
+    });
     f.querySelectorAll('input[data-kind=money]').forEach(function(i){
       i.addEventListener('blur',function(){ var v=parseFloat(i.value.replace(/[^0-9.\-]/g,'')); if(!isNaN(v)) i.value=v.toLocaleString('en-US'); });
       i.addEventListener('focus',function(){ i.value=i.value.replace(/,/g,''); });
