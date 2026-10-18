@@ -193,7 +193,7 @@
     if(a){ track('phone_call_click',{phone:a.getAttribute('href').replace('tel:','')}); }
   },true);
   document.addEventListener('submit',function(e){
-    if(e.target&&e.target.tagName==='FORM'){ track('generate_lead',{form:(e.target.getAttribute('action')||'form')}); }
+    if(e.target&&e.target.tagName==='FORM'){ track(e.target.getAttribute('data-event')||'generate_lead',{form:(e.target.getAttribute('action')||'form')}); }
   },true);
 })();
 
@@ -237,7 +237,7 @@
     if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
     msg(f,'');
     fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
-      .then(function(r){ if(r.ok){ location.href='/thank-you'; } else { throw new Error('bad'); } })
+      .then(function(r){ if(r.ok){ if(f.hasAttribute('data-inline')){ f.innerHTML='<p class="hb-sub-ok" role="status">Thank you &mdash; you&rsquo;re subscribed. We&rsquo;ll only email when we publish something worth your time.</p>'; try{localStorage.setItem('hb_subscribed','1');}catch(x){} } else { location.href='/thank-you'; } } else { throw new Error('bad'); } })
       .catch(function(){
         if(btn){ btn.disabled=false; btn.textContent=label; }
         msg(f,'Sorry, that did not go through. Please try again, or call us at (571) 354-0146 and we will help right away.');
@@ -256,4 +256,78 @@
   d.querySelector('.ok').onclick=function(){ set('on'); };
   d.querySelector('.no').onclick=function(){ set('off'); };
   document.body.appendChild(d);
+})();
+
+
+/* ---- Blog subscribe (inline box on blog pages + scroll popup) and consultation popup ---- */
+(function(){
+  var path=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';
+  var isBlogPost=/^\/blog\/[^\/]+/.test(path), isBlogIndex=(path==='/blog');
+  var skip=/^\/(thank-you|privacy-policy|terms|404|contact)$/.test(path);
+  function get(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
+  function put(k,v){ try{localStorage.setItem(k,v);}catch(e){} }
+  var CAL='https://calendly.com/luaysadqi1/30min';
+  var SUB='<form class="hb-sub-form" action="https://formspree.io/f/xgobjlba" method="POST" data-inline data-event="blog_subscribe">'+
+    '<input type="hidden" name="_subject" value="New blog subscriber — Honorbrook website">'+
+    '<input type="hidden" name="Form" value="Blog subscribe">'+
+    '<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">'+
+    '<label class="hb-sr" for="HBID">Email address</label>'+
+    '<div class="hb-sub-row"><input id="HBID" type="email" name="Email" placeholder="Your email address" autocomplete="email" required>'+
+    '<button class="btn-primary sans" type="submit">Subscribe</button></div>'+
+    '<label class="hb-sub-consent"><input type="checkbox" name="Consent" value="Yes" required> <span>I agree to receive email updates from Honorbrook Insurance. Unsubscribe anytime. See our <a href="/privacy-policy">Privacy Policy</a>.</span></label></form>';
+  function subBox(id,cls){
+    var d=document.createElement('aside'); d.className='hb-subscribe '+(cls||''); d.setAttribute('aria-label','Subscribe to the Honorbrook blog');
+    d.innerHTML='<div class="hb-sub-kicker">The Honorbrook Blog</div><h2>Plain-English Medicare &amp; insurance updates, in your inbox</h2><p>One short email when we publish something worth your time &mdash; enrollment dates, rule changes and honest explainers. No spam, no sales pressure.</p>'+SUB.replace(/HBID/g,id);
+    return d;
+  }
+  function mountInline(){
+    if(get('hb_subscribed')) return;
+    if(isBlogPost){ var w=document.querySelector('article .wrap.prose')||document.querySelector('article'); if(w) w.appendChild(subBox('hb-sub-in')); }
+    else if(isBlogIndex){ var h=document.querySelector('.page-hero'); if(h&&h.parentNode) h.parentNode.insertBefore(subBox('hb-sub-top','hb-sub-wide'),h.nextSibling); }
+  }
+  /* popup shell */
+  var open=null;
+  function show(html,key,days,cls){
+    if(open||document.querySelector('.hb-consent')) return false;
+    var ov=document.createElement('div'); ov.className='hb-pop-ov';
+    ov.innerHTML='<div class="hb-pop '+(cls||'')+'" role="dialog" aria-modal="true" aria-labelledby="hbPopT"><button class="hb-pop-x" type="button" aria-label="Close">&times;</button>'+html+'</div>';
+    var prev=document.activeElement;
+    function close(){ ov.remove(); open=null; document.removeEventListener('keydown',esc); if(prev&&prev.focus) try{prev.focus();}catch(e){} }
+    function esc(e){ if(e.key==='Escape') close(); }
+    ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+    ov.querySelector('.hb-pop-x').onclick=close;
+    document.addEventListener('keydown',esc);
+    document.body.appendChild(ov); open=ov;
+    put(key,String(Date.now()+days*864e5));
+    var f=ov.querySelector('input,a,button'); if(f) try{f.focus();}catch(e){}
+    if(typeof window.gtag==='function'){ try{window.gtag('event','popup_shown',{popup:key});}catch(e){} }
+    return true;
+  }
+  function due(key){ var t=parseInt(get(key)||'0',10); return !t||Date.now()>t; }
+  var desktop=window.matchMedia&&window.matchMedia('(min-width:901px) and (hover:hover)').matches;
+  function subPopup(){
+    if(get('hb_subscribed')||!due('hb_pop_sub')) return;
+    var d=document.createElement('div'); d.appendChild(subBox('hb-sub-pop','hb-sub-pop-box'));
+    show(d.innerHTML.replace('<h2>','<h2 id="hbPopT">'),'hb_pop_sub',14,'hb-pop-sub');
+  }
+  function consultPopup(){
+    if(!due('hb_pop_consult')) return;
+    show('<div class="hb-sub-kicker">Free &middot; No obligation</div><h2 id="hbPopT">Not sure which plan fits? Talk to a licensed agent.</h2><p>Book a free 15&ndash;30 minute review. We&rsquo;re independent, compare 90+ carriers and our help costs you nothing.</p><p class="hb-pop-cta"><a class="btn-primary sans" href="'+CAL+'" target="_blank" rel="noopener">Book a free call</a> <a class="hb-pop-call sans" href="tel:+15713540146">or call (571) 354-0146</a></p><p class="hb-pop-fine">We do not offer every plan available in your area. For all Medicare options, visit Medicare.gov or call 1-800-MEDICARE.</p>','hb_pop_consult',7);
+  }
+  function arm(){
+    if(skip||!desktop) return;
+    var t0=Date.now(), fired=false;
+    if(isBlogPost){
+      window.addEventListener('scroll',function(){
+        if(fired) return; var h=document.documentElement; var p=(h.scrollTop+innerHeight)/h.scrollHeight;
+        if(p>0.6 && Date.now()-t0>20000){ fired=true; subPopup(); }
+      },{passive:true});
+    } else {
+      document.addEventListener('mouseout',function(e){
+        if(fired||e.relatedTarget||e.clientY>0||Date.now()-t0<15000) return; fired=true; consultPopup();
+      });
+    }
+  }
+  function init(){ mountInline(); arm(); }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
 })();
