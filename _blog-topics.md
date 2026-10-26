@@ -28,7 +28,7 @@ The scheduled routine picks the FIRST unchecked `- [ ]` topic each run, writes t
 
 ## Rollovers - added Oct 13, 2026 (Luay request: TSP, 401(k) and all rollovers)
 - [x] Can I Roll Over My TSP to an IRA or 401(k)? What Federal Employees Should Know
-- [ ] TSP vs. IRA After Retirement: Fees, Fund Choices and Withdrawal Flexibility Compared
+- [x] TSP vs. IRA After Retirement: Fees, Fund Choices and Withdrawal Flexibility Compared
 - [x] Can I Roll Over a 403(b), 457(b) or Pension Lump Sum? Rules for Each Plan Type  (built Oct 13 as three annuity-angled posts: 403(b), 457(b), pension lump sum; see section below)
 - [ ] Direct vs. Indirect Rollover: Why the 60-Day Rule and 20% Withholding Trip People Up
 - [ ] Roth vs. Traditional Rollover: What Happens When You Convert a 401(k) or TSP
