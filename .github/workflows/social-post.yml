@@ -1,0 +1,77 @@
+# Daily Google Business Profile poster. Runs in GitHub's cloud, so the Mac
+# does not need to be awake. Reads social/queue/<today>.json, lints every
+# draft with social/lib/compliance.py, publishes GBP items that pass, and
+# commits the updated queue (posted / held / failed) back to main.
+#
+# One-time setup: repo Settings > Secrets and variables > Actions > add
+#   GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN,
+#   GBP_ACCOUNT_ID, GBP_LOCATION_ID
+# (values come from social/gbp_authorize.py on your Mac; see SETUP-API-KEYS.md).
+name: Social - daily GBP post
+
+on:
+  schedule:
+    - cron: '17 14 * * *'   # 9:17 ET in winter, 10:17 ET in summer (cron is UTC)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Lint and report only, publish nothing'
+        type: boolean
+        default: false
+      date:
+        description: 'Queue date to run (YYYY-MM-DD), blank = today'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/New_York
+      # X has no free API and LinkedIn needs a fresh token; those items are
+      # marked "manual" for daily_packet.py. Only GBP posts automatically.
+      SOCIAL_MANUAL_PLATFORMS: x,linkedin,reddit
+      GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
+      GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+      GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+      GBP_ACCOUNT_ID: ${{ secrets.GBP_ACCOUNT_ID }}
+      GBP_LOCATION_ID: ${{ secrets.GBP_LOCATION_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Post today's queue
+        working-directory: social
+        run: |
+          args=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then args="$args --dry-run"; fi
+          if [ -n "${{ inputs.date }}" ]; then args="$args --date ${{ inputs.date }}"; fi
+          python3 run_daily.py $args --all | tee run-output.txt
+
+      - name: Save queue status back to the repo
+        if: always()
+        run: |
+          git config user.name  "honorbrook-social-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add social/queue
+          if git diff --cached --quiet; then echo "no queue changes"; exit 0; fi
+          git commit -m "social: daily post run $(date +%F)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+
+      - name: Fail loudly if nothing could post
+        working-directory: social
+        run: |
+          if grep -q "no queue file" run-output.txt; then
+            echo "::error::No queue file for today. The weekly generator did not refill social/queue/."; exit 1; fi
+          if grep -q "\[FAILED\]" run-output.txt; then
+            echo "::error::A post failed. See the log above (not configured = GBP secrets missing; 403 = Google API access not approved)."; exit 1; fi
+          if grep -q "\[HELD\]" run-output.txt; then
+            echo "::warning::A draft was held by the compliance linter and did not post."; fi

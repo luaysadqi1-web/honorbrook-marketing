@@ -27,9 +27,10 @@ NAVY, NAVY2, GOLD, LIGHT, INK, MUTED = "#142339", "#1c3250", "#c9a227", "#eef1f6
 PHONE, SITE = "(571) 354-0146", "honorbrook-insurance.com"
 OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                        "..", "social-assets", "infographics")
-SANS = ["/System/Library/Fonts/Supplemental/Arial.ttf", "/System/Library/Fonts/Helvetica.ttc"]
-SANS_B = ["/System/Library/Fonts/Supplemental/Arial Bold.ttf", "/System/Library/Fonts/Helvetica.ttc"]
-SERIF_B = ["/System/Library/Fonts/Supplemental/Georgia Bold.ttf"] + SANS_B
+LINUX = "/usr/share/fonts/truetype/dejavu/"
+SANS = ["/System/Library/Fonts/Supplemental/Arial.ttf", "/System/Library/Fonts/Helvetica.ttc", LINUX + "DejaVuSans.ttf"]
+SANS_B = ["/System/Library/Fonts/Supplemental/Arial Bold.ttf", "/System/Library/Fonts/Helvetica.ttc", LINUX + "DejaVuSans-Bold.ttf"]
+SERIF_B = ["/System/Library/Fonts/Supplemental/Georgia Bold.ttf", LINUX + "DejaVuSerif-Bold.ttf"] + SANS_B
 
 
 class Blocked(Exception):
