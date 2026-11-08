@@ -1,0 +1,23 @@
+{
+  "slug": "ichra-vs-group",
+  "eyebrow": "ICHRA (CHOICE Arrangement)",
+  "headline": "Group plan vs. *ICHRA*",
+  "layout": "compare",
+  "left": {
+    "title": "Group plan",
+    "points": [
+      "One plan picked for everyone",
+      "Renewal cost set by the carrier",
+      "Participation minimums apply"
+    ]
+  },
+  "right": {
+    "title": "ICHRA",
+    "points": [
+      "You set a fixed allowance",
+      "Each employee picks a plan",
+      "No participation minimums"
+    ]
+  },
+  "pillar": "ichra-employer"
+}

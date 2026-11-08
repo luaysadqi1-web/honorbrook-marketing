@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-12",
+  "generated": "2026-11-08T22:48:54",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "48deec19fb",
+      "platform": "gbp",
+      "pillar": "life-final-expense",
+      "text": "Thinking about life insurance for a child or grandchild? A small whole life policy can stay with them for life and builds cash value over time. Coverage bought young can mean they hold a policy even if their health changes later. We can explain how these policies work and what to ask before you buy. Licensed in VA, MD, GA, TX, MI, NC, SC, AL, LA, IN and WV. Call (571) 354-0146 or visit honorbrook-insurance.com.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL",
+      "image": "../social-assets/infographics/whole-life-children-112e10ac.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/whole-life-children-112e10ac.png",
+      "image_alt": "Honorbrook Insurance graphic. Whole life for children and grandchildren. A policy that can stay with them for life; Builds cash value over time; Coverage is in place before health can change; Ask how the cash value grows and how to access it."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-15",
+  "generated": "2026-11-08T22:48:54",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "d4edb50de6",
+      "platform": "gbp",
+      "pillar": "trust-brand",
+      "text": "Who helps you after you enroll? With us, the same independent office answers when a claim looks wrong, a bill is confusing or a new ID card has not arrived. Health, life and annuity coverage for individuals and small employers, from our office at 8609 Westwood Center Dr in Tysons. Licensed in VA, MD, GA, TX, MI, NC, SC, AL, LA, IN and WV. Call (571) 354-0146 or visit honorbrook-insurance.com.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL",
+      "image": "../social-assets/infographics/help-after-enrollment-c83e4f29.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/help-after-enrollment-c83e4f29.png",
+      "image_alt": "Honorbrook Insurance graphic. Help that does not end at enrollment. A claim that looks wrong; A bill that is confusing; An ID card that has not arrived; The same independent office answers."
+    }
+  ]
+}
