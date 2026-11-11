@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-17",
+  "generated": "2026-11-11T14:29:38",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "e69bef1bf5",
+      "platform": "gbp",
+      "pillar": "ichra-employer",
+      "text": "Fewer than 25 full-time-equivalent employees? Your business may qualify for the Small Business Health Care Tax Credit when you offer coverage through the SHOP Marketplace and pay at least half of employee-only premiums. Average wages also have to fall under a yearly limit. We can check if you qualify and compare SHOP with an ICHRA. Licensed in VA, MD, GA, TX, MI, NC, SC, AL, LA, IN and WV. Call (571) 354-0146 or visit honorbrook-insurance.com.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL",
+      "image": "../social-assets/infographics/shop-tax-credit-8c13dc2a.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/shop-tax-credit-8c13dc2a.png",
+      "image_alt": "Honorbrook Insurance graphic. The small business health care tax credit. For employers with fewer than 25 full-time-equivalent employees; Coverage offered through the SHOP Marketplace; Employer pays at least half of employee-only premiums; Average wages must fall under a yearly limit; Ask how SHOP compares with an ICHRA."
+    }
+  ]
+}
