@@ -38,7 +38,7 @@ exports.handler = async (event) => {
 
   const parts = name.split(/\s+/), firstName = parts.shift(), lastName = parts.join(" ") || "(not given)";
   const notes = clean(
-    "Website funnel lead. Interests: " + clean(d.interests, 300) +
+    "Website funnel lead. ZIP " + zip + ". Interests: " + clean(d.interests, 300) +
     ". Best time to call: " + clean(d.best, 40) +
     (d.answers ? ". Answers: " + clean(d.answers, 1200) : "") +
     ". Source: " + clean(d.source, 60) + ". Consent to contact: yes.", 1900);
@@ -59,13 +59,7 @@ exports.handler = async (event) => {
     const token = (await t.json()).access_token;
     const base = { agentNpn: lead.agentNpn, firstName, lastName, notes, phones: lead.phones };
     if (lead.emails) base.emails = lead.emails;
-    const variants = [
-      Object.assign({}, base, { primaryCommunication: lead.emails ? "Email" : "Phone", addresses: lead.addresses }),
-      Object.assign({}, base, { addresses: lead.addresses }),
-      Object.assign({}, base, { primaryCommunication: lead.emails ? "Email" : "Phone" }),
-      base,
-      { firstName, lastName, notes, phones: lead.phones },
-    ];
+    const variants = [base, { firstName, lastName, notes, phones: lead.phones }];
     const tried = [];
     for (let i = 0; i < variants.length; i++) {
       const r = await fetch(LEADS_URL, {
@@ -74,8 +68,10 @@ exports.handler = async (event) => {
         body: JSON.stringify({ options: { forceValidation: false }, lead: variants[i] }),
       });
       if (r.status === 409) return reply(200, { ok: true, duplicate: true }, origin);
+      const body = r.ok ? "" : await r.text().catch(() => "");
+      if (r.status === 422 && /duplicate/i.test(body)) return reply(200, { ok: true, duplicate: true }, origin);
       if (r.ok) { const out = await r.json().catch(() => ({})); return reply(200, { ok: true, leadId: out.leadId || out.leadsId || null, variant: i }, origin); }
-      tried.push({ variant: i, status: r.status, detail: (await r.text().catch(() => "")).slice(0, 300) });
+      tried.push({ variant: i, status: r.status, detail: body.slice(0, 300) });
       if (r.status === 401 || r.status === 403) break;
     }
     return reply(502, { ok: false, error: "lead not created", tried }, origin);
