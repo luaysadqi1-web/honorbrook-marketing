@@ -57,15 +57,28 @@ exports.handler = async (event) => {
     const t = await fetch(TOKEN_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ client_id: id, client_secret: secret }) });
     if (!t.ok) return reply(502, { ok: false, error: "auth failed", status: t.status }, origin);
     const token = (await t.json()).access_token;
-    const r = await fetch(LEADS_URL, {
-      method: "POST",
-      headers: { "Authorization": "Bearer " + token, "Content-Type": "application/json" },
-      body: JSON.stringify({ options: { forceValidation: false }, lead }),
-    });
-    if (r.status === 409) return reply(200, { ok: true, duplicate: true }, origin);
-    if (!r.ok) return reply(502, { ok: false, error: "lead not created", status: r.status }, origin);
-    const out = await r.json().catch(() => ({}));
-    return reply(200, { ok: true, leadId: out.leadId || null }, origin);
+    const base = { agentNpn: lead.agentNpn, firstName, lastName, notes, phones: lead.phones };
+    if (lead.emails) base.emails = lead.emails;
+    const variants = [
+      Object.assign({}, base, { primaryCommunication: lead.emails ? "Email" : "Phone", addresses: lead.addresses }),
+      Object.assign({}, base, { addresses: lead.addresses }),
+      Object.assign({}, base, { primaryCommunication: lead.emails ? "Email" : "Phone" }),
+      base,
+      { firstName, lastName, notes, phones: lead.phones },
+    ];
+    const tried = [];
+    for (let i = 0; i < variants.length; i++) {
+      const r = await fetch(LEADS_URL, {
+        method: "POST",
+        headers: { "Authorization": "Bearer " + token, "Content-Type": "application/json" },
+        body: JSON.stringify({ options: { forceValidation: false }, lead: variants[i] }),
+      });
+      if (r.status === 409) return reply(200, { ok: true, duplicate: true }, origin);
+      if (r.ok) { const out = await r.json().catch(() => ({})); return reply(200, { ok: true, leadId: out.leadId || out.leadsId || null, variant: i }, origin); }
+      tried.push({ variant: i, status: r.status, detail: (await r.text().catch(() => "")).slice(0, 300) });
+      if (r.status === 401 || r.status === 403) break;
+    }
+    return reply(502, { ok: false, error: "lead not created", tried }, origin);
   } catch (e) {
     return reply(502, { ok: false, error: "integrity unreachable" }, origin);
   }
