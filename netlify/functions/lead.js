@@ -34,11 +34,11 @@ exports.handler = async (event) => {
 
   const name = clean(d.name, 80), phone = String(d.phone || "").replace(/\D/g, "").slice(-10), zip = clean(d.zip, 5);
   const email = clean(d.email, 120);
-  if (!name || phone.length !== 10 || !/^\d{5}$/.test(zip)) return reply(400, { ok: false, error: "name, 10-digit phone and ZIP are required" }, origin);
+  if (!name || phone.length !== 10 || (zip && !/^\d{5}$/.test(zip))) return reply(400, { ok: false, error: "name and 10-digit phone are required" }, origin);
 
   const parts = name.split(/\s+/), firstName = parts.shift(), lastName = parts.join(" ") || "(not given)";
   const notes = clean(
-    "Website funnel lead. ZIP " + zip + ". Interests: " + clean(d.interests, 300) +
+    "Website lead. ZIP " + (zip || "not given") + ". Interests: " + clean(d.interests, 300) +
     ". Best time to call: " + clean(d.best, 40) +
     (d.answers ? ". Answers: " + clean(d.answers, 1200) : "") +
     ". Source: " + clean(d.source, 60) + ". Consent to contact: yes.", 1900);
