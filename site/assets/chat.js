@@ -236,6 +236,8 @@
     var btn=f.querySelector('button[type=submit]'), label=btn&&btn.textContent;
     if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
     msg(f,'');
+    /* also send the lead into IntegrityCONNECT through our own server function; never blocks the visitor */
+    try{ var fd0=new FormData(f), nm=fd0.get('Name'), ph=fd0.get('Phone'); if(nm&&ph&&!f.hasAttribute('data-inline')){ fetch('/.netlify/functions/lead',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,phone:ph,email:fd0.get('Email')||'',zip:fd0.get('ZIP')||'',best:'',interests:fd0.getAll('Interests').join(', ')||fd0.get('Topic')||'',answers:fd0.get('Message')||'',source:'website-form '+location.pathname,consent:!!fd0.get('Consent'),_gotcha:fd0.get('_gotcha')||''})}).catch(function(){}); } }catch(x){}
     fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
       .then(function(r){ if(r.ok){ if(f.hasAttribute('data-inline')){ f.innerHTML='<p class="hb-sub-ok" role="status">Thank you &mdash; you&rsquo;re subscribed. We&rsquo;ll only email when we publish something worth your time.</p>'; try{localStorage.setItem('hb_subscribed','1');}catch(x){} } else { location.href='/thank-you'; } } else { throw new Error('bad'); } })
       .catch(function(){
