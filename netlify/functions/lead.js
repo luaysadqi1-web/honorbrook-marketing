@@ -55,8 +55,14 @@ exports.handler = async (event) => {
   if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) lead.emails = [{ email }];
 
   try {
-    const t = await fetch(TOKEN_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ client_id: id, client_secret: secret }) });
-    if (!t.ok) return reply(502, { ok: false, error: "auth failed", status: t.status, detail: (await t.text().catch(() => "")).slice(0, 200), idLen: id.length, secretLen: secret.length, cleaned: rawId.length - id.length + rawSecret.length - secret.length }, origin);
+    const authBodies = [{ client_id: id, client_secret: secret }, { client_id: id, client_secret: secret, isSandbox: false }, { clientId: id, clientSecret: secret, isSandbox: false }, { client_id: id, client_secret: secret, environment: "production" }];
+    let t = null, authTried = [];
+    for (let a = 0; a < authBodies.length; a++) {
+      t = await fetch(TOKEN_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(authBodies[a]) });
+      if (t.ok) break;
+      authTried.push({ form: a, status: t.status, detail: (await t.text().catch(() => "")).replace(/"traceId"[^,}]*/, "").slice(0, 120) });
+    }
+    if (!t.ok) return reply(502, { ok: false, error: "auth failed", authTried, idLen: id.length, secretLen: secret.length }, origin);
     const token = (await t.json()).access_token;
     const base = { agentNpn: lead.agentNpn, firstName, lastName, notes, phones: lead.phones };
     if (lead.emails) base.emails = lead.emails;
