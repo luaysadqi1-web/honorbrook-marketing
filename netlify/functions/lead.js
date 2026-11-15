@@ -24,7 +24,8 @@ exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return reply(204, {}, origin);
   if (event.httpMethod !== "POST") return reply(405, { ok: false, error: "POST only" }, origin);
 
-  const id = process.env.INTEGRITY_CLIENT_ID, secret = process.env.INTEGRITY_CLIENT_SECRET;
+  const rawId = process.env.INTEGRITY_CLIENT_ID || "", rawSecret = process.env.INTEGRITY_CLIENT_SECRET || "";
+  const id = rawId.replace(/[\s"']/g, ""), secret = rawSecret.replace(/[\s"']/g, "");
   if (!id || !secret) return reply(503, { ok: false, error: "not configured" }, origin);
 
   let d;
@@ -55,7 +56,7 @@ exports.handler = async (event) => {
 
   try {
     const t = await fetch(TOKEN_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ client_id: id, client_secret: secret }) });
-    if (!t.ok) return reply(502, { ok: false, error: "auth failed", status: t.status }, origin);
+    if (!t.ok) return reply(502, { ok: false, error: "auth failed", status: t.status, detail: (await t.text().catch(() => "")).slice(0, 200), idLen: id.length, secretLen: secret.length, cleaned: rawId.length - id.length + rawSecret.length - secret.length }, origin);
     const token = (await t.json()).access_token;
     const base = { agentNpn: lead.agentNpn, firstName, lastName, notes, phones: lead.phones };
     if (lead.emails) base.emails = lead.emails;
