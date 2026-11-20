@@ -15,7 +15,7 @@ def ship_block():
     lis = '\n'.join(f'      <li><a href="/{v["slug"]}-medicare-insurance">{k}</a> · <a href="/{v["slug"]}-counties">County pages</a></li>' for k, v in ST.items())
     return f'''
     <h2>Medicare help in your state</h2>
-    <p>Honorbrook is licensed in all 11 states below. Plan availability, costs and some rules vary by state and county, so call us at <a href="tel:+15713540146">(571) 354-0146</a> or fill out <a href="/#contact">our short form</a> for what applies where you live.</p>
+    <p>Honorbrook is licensed in every state where we're licensed below. Plan availability, costs and some rules vary by state and county, so call us at <a href="tel:+15713540146">(571) 354-0146</a> or fill out <a href="/#contact">our short form</a> for what applies where you live.</p>
     <ul>
 {lis}
     </ul>
@@ -25,7 +25,7 @@ def life_state_block():
     lis = '\n'.join(f'      <li><strong><a href="/{v["slug"]}-medicare-insurance">{k}</a>:</strong> <a href="{g.DOI[k][1]}" rel="noopener" target="_blank">{g.esc(g.DOI[k][0])}</a></li>' for k, v in ST.items())
     return f'''
     <h2>Availability and rules vary by state</h2>
-    <p>Life insurance and annuity products, rates, riders and consumer protections differ by state, and a given product may not be available in every state. Honorbrook is licensed in the 11 states below; which products we can offer you depends on what carriers sell in your state. Each state&rsquo;s insurance regulator can verify an agent&rsquo;s license and answer consumer questions.</p>
+    <p>Life insurance and annuity products, rates, riders and consumer protections differ by state, and a given product may not be available in every state. Honorbrook is licensed in the states below; which products we can offer you depends on what carriers sell in your state. Each state&rsquo;s insurance regulator can verify an agent&rsquo;s license and answer consumer questions.</p>
     <ul>
 {lis}
     </ul>

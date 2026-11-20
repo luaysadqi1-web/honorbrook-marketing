@@ -1,6 +1,6 @@
 # Honorbrook Insurance
 
-> Honorbrook Insurance is an independent health, life and retirement insurance agency based in Tysons, Virginia, licensed in 11 states: Virginia, Maryland, North Carolina, South Carolina, Georgia, Alabama, Louisiana, Texas, Michigan, Indiana and West Virginia. We represent 90+ carriers, so advice is not tied to one company. Our service is free to the client; carriers pay the commission. Licensed agent: Luay Sadqi (NPN 21370662). Agency NPN 22269925.
+> Honorbrook Insurance is an independent health, life and retirement insurance agency based in Tysons, Virginia, licensed in Virginia, Maryland, the District of Columbia, Delaware, Pennsylvania, West Virginia, Kentucky, Tennessee, North Carolina, South Carolina, Florida, Alabama, Louisiana, Texas, Michigan and Indiana. We represent 90+ carriers, so advice is not tied to one company. Our service is free to the client; carriers pay the commission. Licensed agent: Luay Sadqi (NPN 21370662). Agency NPN 22269925.
 
 Honorbrook Insurance is not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. For all Medicare options, visit Medicare.gov or call 1-800-MEDICARE.
 
@@ -15,6 +15,8 @@ Honorbrook Insurance is not connected with or endorsed by the U.S. government or
 - [Group health and SHOP for small business](https://honorbrook-insurance.com/group-health-insurance-shop)
 - [ICHRA / CHOICE Arrangement](https://honorbrook-insurance.com/ichra): employer-funded individual coverage (ICHRA was renamed "CHOICE Arrangement" by CMS and the SBA in September 2026; same rules)
 - [Self-employed health insurance](https://honorbrook-insurance.com/self-employed-health-insurance)
+- [Private health insurance under 65](https://honorbrook-insurance.com/private-health-insurance): Marketplace, off-exchange, short-term and employer-funded options compared
+- [HSA-eligible health plans](https://honorbrook-insurance.com/hsa-health-plans): which plans work with a health savings account, including bronze and catastrophic plans since 2026
 - [Lost health coverage options](https://honorbrook-insurance.com/lost-health-coverage)
 
 ## Medicare
@@ -32,7 +34,12 @@ Honorbrook Insurance is not connected with or endorsed by the U.S. government or
 - [Indexed universal life (IUL)](https://honorbrook-insurance.com/indexed-universal-life)
 - [Guaranteed universal life](https://honorbrook-insurance.com/guaranteed-universal-life)
 - [Final expense](https://honorbrook-insurance.com/final-expense-life-insurance)
+- [Mortgage protection insurance](https://honorbrook-insurance.com/mortgage-protection-insurance): term life sized to a home loan, paid to the family
+- [Life insurance for veterans](https://honorbrook-insurance.com/veterans-life-insurance): VGLI and VALife compared with private coverage
+- [High-net-worth life insurance planning](https://honorbrook-insurance.com/high-net-worth-life-insurance): estate liquidity, business succession, IUL trade-offs
+- [Children's life insurance](https://honorbrook-insurance.com/childrens-life-insurance): standalone policies vs. child riders
 - [Annuities (fixed and fixed indexed)](https://honorbrook-insurance.com/annuities)
+- [Single-premium annuities](https://honorbrook-insurance.com/single-premium-annuities): MYGA and SPIA explained, with surrender and tax rules
 - [Retirement rollover to an annuity: every account type](https://honorbrook-insurance.com/retirement-rollover-annuity): which accounts can be rolled over, with the IRS rule and the trap for each
 - [Long-term care](https://honorbrook-insurance.com/long-term-care-insurance)
 - [Disability](https://honorbrook-insurance.com/disability-insurance)
@@ -40,21 +47,27 @@ Honorbrook Insurance is not connected with or endorsed by the U.S. government or
 ## Supplemental coverage
 - [Hospital indemnity](https://honorbrook-insurance.com/hospital-indemnity-insurance)
 - [Cancer and critical illness](https://honorbrook-insurance.com/cancer-critical-illness-insurance)
+- [Accident and AD&D insurance](https://honorbrook-insurance.com/accident-insurance): cash benefits after a covered injury
 - [Dental, vision and hearing](https://honorbrook-insurance.com/dental-vision-hearing-insurance)
 - [Short-term and home care](https://honorbrook-insurance.com/short-term-home-care-insurance)
 
 ## State pages
 - [Virginia](https://honorbrook-insurance.com/virginia-medicare-insurance)
 - [Maryland](https://honorbrook-insurance.com/maryland-medicare-insurance)
+- [Washington, DC](https://honorbrook-insurance.com/washington-dc-medicare-insurance)
+- [Delaware](https://honorbrook-insurance.com/delaware-medicare-insurance)
+- [Pennsylvania](https://honorbrook-insurance.com/pennsylvania-medicare-insurance)
+- [West Virginia](https://honorbrook-insurance.com/west-virginia-medicare-insurance)
+- [Kentucky](https://honorbrook-insurance.com/kentucky-medicare-insurance)
+- [Tennessee](https://honorbrook-insurance.com/tennessee-medicare-insurance)
 - [North Carolina](https://honorbrook-insurance.com/north-carolina-medicare-insurance)
 - [South Carolina](https://honorbrook-insurance.com/south-carolina-medicare-insurance)
-- [Georgia](https://honorbrook-insurance.com/georgia-medicare-insurance)
+- [Florida](https://honorbrook-insurance.com/florida-medicare-insurance)
 - [Alabama](https://honorbrook-insurance.com/alabama-medicare-insurance)
 - [Louisiana](https://honorbrook-insurance.com/louisiana-medicare-insurance)
 - [Texas](https://honorbrook-insurance.com/texas-medicare-insurance)
 - [Michigan](https://honorbrook-insurance.com/michigan-medicare-insurance)
 - [Indiana](https://honorbrook-insurance.com/indiana-medicare-insurance)
-- [West Virginia](https://honorbrook-insurance.com/west-virginia-medicare-insurance)
 
 ## Guides and answers
 - [Blog: plain-English answers to common insurance questions](https://honorbrook-insurance.com/blog/)

@@ -131,3 +131,18 @@
   from = "/blog/should-i-switch-from-medicare-advantage-to-original-medicare"
   to = "/blog/switch-from-medicare-advantage-back-to-original-medicare"
   status = 301
+
+[[redirects]]
+  from = "/blog/does-medicare-cover-dental-vision-and-hearing"
+  to = "/blog/does-medicare-cover-dental-vision-hearing"
+  status = 301
+
+[[redirects]]
+  from = "/blog/medigap-plan-g-vs-plan-n"
+  to = "/blog/medigap-plan-g-vs-plan-n-2027"
+  status = 301
+
+[[redirects]]
+  from = "/blog/why-did-my-medicare-advantage-plan-drop-my-doctor"
+  to = "/blog/why-did-my-medicare-advantage-plan-drop-my-doctor-or-drug"
+  status = 301

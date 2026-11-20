@@ -11,7 +11,7 @@ rows = '\n'.join(
     f'          <tr><td><strong>{sn}</strong></td><td><a href="/{st["slug"]}-medicare-insurance">Medicare</a></td><td><a href="/{st["slug"]}-aca-health-insurance">ACA health</a></td><td><a href="/{st["slug"]}-counties">All {n_by[sn]} {"parishes" if st["unit"] == "parishes" else "counties"}</a></td></tr>'
     for sn, st in g.STATES.items())
 qas = [("Which states do you serve?", "We are licensed in Virginia, Maryland, North Carolina, South Carolina, Georgia, Alabama, Louisiana, Texas, Michigan, Indiana and West Virginia, and we help clients by phone or video call."),
-       ("Do I need to live near your office?", "No. Our office is in Tysons, Virginia, but we help people in all 11 states by phone or video, and our help is free to you."),
+       ("Do I need to live near your office?", "No. Our office is in Tysons, Virginia, but we help people in every state where we're licensed by phone or video, and our help is free to you."),
        ("What if my state is not on the list?", "We cannot help with plans in states where we are not licensed. Call (571) 354-0146 if you are moving to one of our states or have a family member there.")]
 ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": g.BASE + "/"},
@@ -32,7 +32,7 @@ body = f'''<section class="page-hero" id="maincontent" role="main">
     <noscript><p>Search needs JavaScript. You can still browse by state below, or call <a href="tel:+15713540146">(571) 354-0146</a>.</p></noscript>
 
     <h2>Browse by state</h2>
-    <p>Honorbrook is licensed in 11 states. Pick your state for Medicare help, ACA health insurance and a list of every {sum(n_by.values()):,} county and parish we cover.</p>
+    <p>Honorbrook is licensed in Virginia, Maryland, DC and more than a dozen other states. Pick your state for Medicare help, ACA health insurance and a list of every {sum(n_by.values()):,} county and parish we cover.</p>
     <div class="table-wrap">
       <table class="compare">
         <thead>
@@ -61,7 +61,7 @@ body = f'''<section class="page-hero" id="maincontent" role="main">
 
 '''
 title = "Find Help in Your Area: ZIP, City, County or State | Honorbrook"
-desc = "Search by ZIP code, city, county or state to see whether Honorbrook can help, and find local Medicare and ACA health insurance information. Licensed in 11 states."
+desc = "Search by ZIP code, city, county or state to see whether Honorbrook can help, and find local Medicare and ACA health insurance information. Licensed in Virginia, Maryland, DC and more than a dozen other states."
 page = g.head(title, desc, g.BASE + "/find-your-area", "Search by ZIP, city, county or state to find help from Honorbrook Insurance.", ld) + header + body + foot
 open(S + 'find-your-area.html', 'w').write(page)
 sm = open(S + 'sitemap.xml').read()
