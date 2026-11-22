@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-30",
+  "generated": "2026-11-22T06:22:15",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "c88056a97f",
+      "platform": "gbp",
+      "pillar": "medicare-foundations",
+      "text": "Retiring at year end with employer coverage, and already 65? You generally have 8 months after the job or the coverage ends, whichever comes first, to sign up for Part B without a late penalty. COBRA does not extend that window. Your 6-month Medigap open enrollment period starts when Part B starts. We help you line up the dates so coverage does not lapse. Call (571) 354-0146.\n\nWe do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL",
+      "image": "../social-assets/infographics/retiring-after-65-part-b-ddd7bf0d.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/retiring-after-65-part-b-ddd7bf0d.png",
+      "image_alt": "Honorbrook Insurance graphic. Leaving employer coverage? Time Part B. 8 months after the job or coverage ends; COBRA does not extend that window; Medigap open enrollment starts with Part B."
+    }
+  ]
+}

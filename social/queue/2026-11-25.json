@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-25",
+  "generated": "2026-11-22T06:22:15",
+  "source": "weekly-generator",
+  "items": [
+    {
+      "id": "201bffb8cf",
+      "platform": "gbp",
+      "pillar": "aca-under65",
+      "text": "Leaving a job, or is your COBRA running out? Losing job-based coverage usually opens a 60-day window to enroll in a Marketplace plan, and you may qualify for a tax credit based on household income. COBRA keeps your same plan, but you usually pay the full cost. We compare both side by side. HealthCare.gov enrollment runs through Jan 15; state-run exchanges may set different dates. Call (571) 354-0146.",
+      "note": "",
+      "status": "pending",
+      "post_id": null,
+      "blocks": [],
+      "cta": "CALL",
+      "image": "../social-assets/infographics/cobra-vs-marketplace-0f8fb792.png",
+      "image_url": "https://honorbrook-insurance.com/assets/infographics/cobra-vs-marketplace-0f8fb792.png",
+      "image_alt": "Honorbrook Insurance graphic. COBRA or a Marketplace plan?. Losing job coverage opens a 60-day window; Tax credits key off household income; COBRA keeps your plan at full cost; Compare both side by side."
+    }
+  ]
+}
