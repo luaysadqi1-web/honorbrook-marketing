@@ -1,0 +1,33 @@
+# robots.txt for honorbrook-insurance.com
+# Lives at https://honorbrook-insurance.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# AI search and answer engines: explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://honorbrook-insurance.com/sitemap.xml
+Sitemap: https://honorbrook-insurance.com/sitemap-counties.xml
