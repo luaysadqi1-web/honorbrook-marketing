@@ -3,7 +3,17 @@
 (function () {
   'use strict';
   var INDEX = null, LOADING = null;
-  var OTHER = {AL:0,AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',DC:'District of Columbia',FL:'Florida',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IA:'Iowa',KS:'Kansas',KY:'Kentucky',ME:'Maine',MA:'Massachusetts',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SD:'South Dakota',TN:'Tennessee',UT:'Utah',VT:'Vermont',WA:'Washington',WI:'Wisconsin',WY:'Wyoming'};
+  var OTHER = {AL:0,AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IA:'Iowa',KS:'Kansas',ME:'Maine',MA:'Massachusetts',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',RI:'Rhode Island',SD:'South Dakota',UT:'Utah',VT:'Vermont',WA:'Washington',WI:'Wisconsin',WY:'Wyoming'};
+
+  /* licensed, hub page live, county pages not built yet: [name, hub slug, other names] */
+  var NEWST = {DE:['Delaware','delaware'],DC:['Washington, DC','washington-dc','district of columbia','washington dc','washington d c'],FL:['Florida','florida'],KY:['Kentucky','kentucky'],PA:['Pennsylvania','pennsylvania'],TN:['Tennessee','tennessee']};
+  function newState(q) {
+    var n = norm(q).replace(/,/g, ''), up = q.trim().toUpperCase();
+    if (NEWST[up]) return NEWST[up];
+    for (var k in NEWST) { for (var i = 0; i < NEWST[k].length; i++) { if (i !== 1 && norm(NEWST[k][i]).replace(/,/g, '') === n) return NEWST[k]; } }
+    return null;
+  }
+  var GA_NOTE = '<p class="fd-no">Honorbrook is not currently licensed in Georgia. Our Georgia pages are general information only until that license is active again.</p>';
 
   function load() {
     if (INDEX) return Promise.resolve(INDEX);
@@ -39,17 +49,19 @@
     var cta = '<p class="fd-yes">Yes, we can help here. We work by phone or video, free to you. <a href="tel:+15713540146">Call (571) 354-0146</a> or <a href="/#contact">request a callback</a>.</p>';
     if (/^\d{5}$/.test(q)) {
       var ci = INDEX.z[q];
-      if (ci === undefined) return { html: '<p class="fd-no">We did not find ZIP ' + esc(q) + ' in the 11 states we serve. If you are moving to one of them, search by county or state, or <a href="tel:+15713540146">call (571) 354-0146</a>.</p>', type: 'zip-miss' };
+      if (ci === undefined) return { html: '<p class="fd-no">We do not have a local page for ZIP ' + esc(q) + ' yet. We are licensed in VA, MD, DC, DE, PA, WV, KY, TN, NC, SC, FL, AL, LA, TX, MI and IN. If you live in one of them, <a href="tel:+15713540146">call (571) 354-0146</a>.</p>', type: 'zip-miss' };
       var c = INDEX.c[ci];
-      return { html: cta + '<ul class="fd-list"><li>ZIP ' + esc(q) + ' is mostly in ' + countyLine(c) + '</li></ul>', type: 'zip' };
+      return { html: (c[1] === 'GA' ? GA_NOTE : cta) + '<ul class="fd-list"><li>ZIP ' + esc(q) + ' is mostly in ' + countyLine(c) + '</li></ul>', type: 'zip' };
     }
     var st = stateByQuery(q);
     if (st) {
       var u = '/' + st[2];
-      return { html: cta + '<ul class="fd-list"><li><a href="' + u + '-medicare-insurance"><strong>' + esc(st[0]) + '</strong> Medicare help</a></li><li><a href="' + u + '-aca-health-insurance">' + esc(st[0]) + ' ACA health insurance</a></li><li><a href="' + u + '-counties">All ' + esc(st[0]) + ' counties</a></li></ul>', type: 'state' };
+      return { html: (st[1] === 'GA' ? GA_NOTE : cta) + '<ul class="fd-list"><li><a href="' + u + '-medicare-insurance"><strong>' + esc(st[0]) + '</strong> Medicare help</a></li><li><a href="' + u + '-aca-health-insurance">' + esc(st[0]) + ' ACA health insurance</a></li><li><a href="' + u + '-counties">All ' + esc(st[0]) + ' counties</a></li></ul>', type: 'state' };
     }
+    var ns = newState(q);
+    if (ns) return { html: cta + '<ul class="fd-list"><li><a href="/' + ns[1] + '-medicare-insurance"><strong>' + esc(ns[0]) + '</strong> Medicare and insurance help</a></li></ul><p class="fd-hint">County pages for ' + esc(ns[0]) + ' are on the way. We can help you now by phone, text or video.</p>', type: 'state' };
     var os = otherState(q);
-    var osMsg = os ? '<p class="fd-no">Honorbrook is not licensed in ' + esc(os) + ' yet, so we cannot help with plans there. We serve Virginia, Maryland, North Carolina, South Carolina, Georgia, Alabama, Louisiana, Texas, Michigan, Indiana and West Virginia. <a href="tel:+15713540146">Call (571) 354-0146</a> with questions.</p>' : '';
+    var osMsg = os ? '<p class="fd-no">Honorbrook is not licensed in ' + esc(os) + ' yet, so we cannot help with plans there. We serve Virginia, Maryland, the District of Columbia, Delaware, Pennsylvania, West Virginia, Kentucky, Tennessee, North Carolina, South Carolina, Florida, Alabama, Louisiana, Texas, Michigan and Indiana. <a href="tel:+15713540146">Call (571) 354-0146</a> with questions.</p>' : '';
     var n = norm(q), stFilter = null, m = n.match(/^(.*?)[, ]+([a-z]{2})$/);
     if (m) { for (var i = 0; i < INDEX.s.length; i++) { if (INDEX.s[i][1].toLowerCase() === m[2]) { stFilter = INDEX.s[i][1]; n = m[1].trim(); } } }
     n = n.replace(/\s+(county|parish)$/, '');
@@ -69,10 +81,10 @@
       if (s >= 0) add(s, '<li><strong>' + esc(p[0]) + '</strong>, ' + c[1] + ' &mdash; in <a href="/' + c[2] + '">' + esc(c[0]) + '</a> <span class="fd-tag">city</span></li>', 'p' + p[0] + p[1]);
     });
     if (!hits.length && os) return { html: osMsg, type: 'other-state' };
-    if (!hits.length) return { html: '<p class="fd-no">We did not find that. Try a ZIP code, a county or a state. We serve 11 states: VA, MD, NC, SC, GA, AL, LA, TX, MI, IN and WV.</p>', type: 'miss' };
+    if (!hits.length) return { html: '<p class="fd-no">We did not find that. Try a ZIP code, a county or a state. We serve VA, MD, DC, DE, PA, WV, KY, TN, NC, SC, FL, AL, LA, TX, MI and IN.</p>', type: 'miss' };
     hits.sort(function (a, b) { return a[0] - b[0]; });
     var shown = hits.slice(0, 8).map(function (h) { return h[1]; }).join('');
-    return { html: (os ? osMsg + '<p class="fd-hint">These matches are in the 11 states we serve:</p>' : '') + cta + '<ul class="fd-list">' + shown + '</ul>' + (hits.length > 8 ? '<p class="fd-hint">Showing 8 of ' + hits.length + ' matches. Add a state, like &ldquo;Franklin, VA&rdquo;, to narrow it.</p>' : ''), type: 'place' };
+    return { html: (os ? osMsg + '<p class="fd-hint">These matches are in states we serve:</p>' : '') + cta + '<ul class="fd-list">' + shown + '</ul>' + (hits.length > 8 ? '<p class="fd-hint">Showing 8 of ' + hits.length + ' matches. Add a state, like &ldquo;Franklin, VA&rdquo;, to narrow it.</p>' : ''), type: 'place' };
   }
 
   function build(root, inline) {
