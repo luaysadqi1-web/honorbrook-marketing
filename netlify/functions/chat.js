@@ -10,7 +10,7 @@ const LEAD_ENDPOINT = process.env.LEAD_ENDPOINT || "https://formspree.io/f/xgobj
 const MAX_TURNS = 24;          // hard cap on conversation length
 const MAX_CHARS = 1500;        // hard cap per user message
 
-const SYSTEM_PROMPT = `You are "Brook," the friendly virtual assistant for Honorbrook Insurance, an independent insurance agency (a trade name of Luay's Lifeline Inc.). Licensed agent: Luay Sadqi, NPN 21370662. Phone: (571) 354-0146. Email: info@honorbrook-insurance.com. Office: Vienna, VA. Hours: Mon–Fri 9am–6pm ET, evenings/weekends by appointment. Licensed in 12 states: Virginia, Maryland, Georgia, Texas, Michigan, North Carolina, South Carolina, Alabama, Louisiana, Indiana, and West Virginia.
+const SYSTEM_PROMPT = `You are "Brook," the friendly virtual assistant for Honorbrook Insurance, an independent insurance agency (a trade name of Luay's Lifeline Inc.). Licensed agent: Luay Sadqi, NPN 21370662. Call: (301) 615-8289. Text: (571) 354-0146. Email: info@honorbrook-insurance.com. Office: Vienna, VA. Hours: Mon–Fri 9am–6pm ET, evenings/weekends by appointment. Licensed in 16 states and Washington, DC: Virginia, Maryland, West Virginia, Georgia, North Carolina, South Carolina, Texas, Louisiana, Alabama, Michigan, Indiana, Delaware, Kentucky, Pennsylvania, Tennessee, Florida, and the District of Columbia.
 
 WHAT HONORBROOK OFFERS:
 - Medicare: Medicare Advantage (Part C), Medicare Supplement (Medigap, Plan G & N), Part D drug plans.
@@ -29,7 +29,7 @@ HARD COMPLIANCE RULES (never break these):
 - NEVER collect or ask for sensitive data in chat: no Social Security numbers, Medicare/Medicaid ID numbers, full dates of birth, bank/financial info, or detailed health history. Just first name, phone, and what they need.
 - Before capturing a phone number for follow-up, show this consent line and get a clear "yes": "Just to confirm — is it OK for a licensed Honorbrook agent to call or text you about insurance at this number? Standard message/data rates may apply; you can reply STOP anytime. (Consent isn't required to get information.)"
 - Only call the capture_lead tool AFTER the visitor clearly consents (consent=true). Never set consent=true unless they actually said yes.
-- If someone is in distress, confused, or it's an emergency, gently steer them to call (571) 354-0146 or, for emergencies, 911.
+- If someone is in distress, confused, or it's an emergency, gently steer them to call (301) 615-8289 or, for emergencies, 911.
 
 LEAD FLOW: When a visitor wants a callback or a quote, collect (a) first name, (b) best phone number, (c) what they're interested in, then show the consent line, and when they say yes, call capture_lead. After it succeeds, warmly confirm a licensed agent will reach out within one business day and give the phone number for anything urgent.
 
@@ -121,7 +121,7 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
   if (!process.env.ANTHROPIC_API_KEY) {
-    return json(500, { error: "Server not configured. Please call (571) 354-0146." });
+    return json(500, { error: "Server not configured. Please call (301) 615-8289." });
   }
 
   let body;
@@ -159,7 +159,7 @@ exports.handler = async (event) => {
               tool_use_id: toolUse.id,
               content: ok
                 ? "Lead saved successfully. A licensed agent will follow up within one business day."
-                : "Could not save the lead. Ask the visitor to call (571) 354-0146.",
+                : "Could not save the lead. Ask the visitor to call (301) 615-8289.",
             },
           ],
         });
@@ -171,7 +171,7 @@ exports.handler = async (event) => {
   } catch (e) {
     return json(200, {
       reply:
-        "I'm having a little trouble right now — please call us at (571) 354-0146 and a licensed agent will help you right away.",
+        "I'm having a little trouble right now — please call us at (301) 615-8289 and a licensed agent will help you right away.",
       error: true,
     });
   }
