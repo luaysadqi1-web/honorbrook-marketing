@@ -846,6 +846,7 @@ html body .prose .hb-places details summary:focus-visible{outline:2px solid #fff
 html body .prose .hb-places details ul.hb-cols{margin:0;padding:6px 22px 20px}
 @media(max-width:640px){html body .prose ul.hb-cols{columns:2;column-gap:18px}html body .prose ul.hb-cols li{font-size:14.5px}html body .prose .hb-places details ul.hb-cols{padding:4px 16px 16px}}
 /* -- booking on the mid-page call to action and the closing band (Nov 19) -- */
+footer .hb-langs{color:#8d939e;font-size:13.5px;line-height:1.45;margin:2px 0 8px}
 html body .hb-strip-cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 22px}
 html body .band .band-book{margin-top:30px}
 html body .band .band-book a{display:inline-block;padding:16px 32px;border-radius:12px;background:#0b0c0f;color:#f4f5f7;font-family:var(--disp);font-size:16.5px;font-weight:600;text-decoration:none;

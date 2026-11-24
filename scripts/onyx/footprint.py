@@ -47,9 +47,10 @@ NEW = [
          doi='Tennessee Department of Commerce and Insurance', doi_url='https://www.tn.gov/commerce/insurance.html',
          exch='HealthCare.gov', exch_url='https://www.healthcare.gov/', exch_own=False, expanded=False),
     dict(name='Florida', ab='FL', slug='florida', the='Florida', res='Florida residents',
-         # Florida's own SHIP site could not be reached from this Mac (IPv6 only), so the page names the program generically and
-         # links to Medicare.gov's "talk to someone" page, which links SHIP help (checked Nov 21, 2026).
-         ship=None, ship_org=None, ship_tel=None, ship_url='https://www.medicare.gov/talk-to-someone',
+         # Florida's SHIP is SHINE (Serving Health Insurance Needs of Elders), a program of the Florida Department of Elder Affairs
+         # (floridashine.org, read Nov 24, 2026; the Nov 21 note that it was unreachable was a network problem on this Mac). No phone shown (owner rule).
+         ship='SHINE (Serving Health Insurance Needs of Elders)', ship_org='the Florida Department of Elder Affairs', ship_tel=None,
+         ship_url='https://www.floridashine.org/', exch_src='KFF&rsquo;s state marketplace types for 2027',
          # agent licensing: Florida Department of Financial Services (its Bureau of Licensing sends the license emails, myfloridacfo.com)
          doi='Florida Department of Financial Services', doi_url='https://www.myfloridacfo.com/',
          doi_role='licenses insurance agents in Florida. You can verify an agent&rsquo;s license with it.',
@@ -195,7 +196,7 @@ def state_page(tpl, st):
     if st.get('ship'):
         ship_html = ('<p>%s offers free, unbiased Medicare counseling through the <a href="%s" rel="noopener" target="_blank">%s</a>, run by %s. It does not sell insurance.</p>'
                      % (e(the), st['ship_url'], e(st['ship']), e(st['ship_org'])))
-        src_html = 'the %s page, the CMS Marketplace map for plan year 2027, and KFF&rsquo;s status of state Medicaid expansion decisions' % e(st['ship'])
+        src_html = 'the %s page, %s, and KFF&rsquo;s status of state Medicaid expansion decisions' % (e(st['ship']), st.get('exch_src', 'the CMS Marketplace map for plan year 2027'))
     else:
         ship_html = ('<p>%s has a State Health Insurance Assistance Program (SHIP) that gives free, unbiased Medicare counseling and does not sell insurance. '
                      '<a href="%s" rel="noopener" target="_blank">Medicare.gov</a> links to it.</p>' % (e(the), st['ship_url']))

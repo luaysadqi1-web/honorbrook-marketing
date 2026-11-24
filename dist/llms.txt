@@ -10,9 +10,10 @@ Honorbrook Insurance is not connected with or endorsed by the U.S. government or
 - Email: info@honorbrook-insurance.com
 - Address: 8609 Westwood Center Dr, Suite 110, Tysons, VA 22182
 - Hours: Mon-Fri 8am-8pm ET, Sat-Sun 9am-2:30pm ET
+- Languages: English, Arabic, French, Spanish
 
 ## Booking
-- [Schedule an appointment: how it works](https://honorbrook-insurance.com/schedule-an-appointment): appointments are booked on the agent's PlanEnroll page as a Life, Health or Annuities meeting, by phone, at the Tysons office or at home
+- [Schedule an appointment: how it works](https://honorbrook-insurance.com/schedule-an-appointment): appointments are booked on the agent's PlanEnroll page as a Life, Health or Annuities meeting, by phone, or at the Tysons office or at home in Northern Virginia
 
 ## Health insurance under 65
 - [ACA / Marketplace health insurance](https://honorbrook-insurance.com/aca-health-insurance): individuals and families, subsidies, plan metal levels
@@ -100,3 +101,33 @@ Honorbrook Insurance is not connected with or endorsed by the U.S. government or
 - [HSA-eligible health plans](https://honorbrook-insurance.com/hsa-health-plans)
 - [Accident and AD&D insurance](https://honorbrook-insurance.com/accident-insurance)
 - [Single-premium annuities (MYGA, SPIA)](https://honorbrook-insurance.com/single-premium-annuities)
+
+## ACA health insurance by state
+- [Alabama ACA health insurance](https://honorbrook-insurance.com/alabama-aca-health-insurance)
+- [Georgia ACA health insurance](https://honorbrook-insurance.com/georgia-aca-health-insurance)
+- [Indiana ACA health insurance](https://honorbrook-insurance.com/indiana-aca-health-insurance)
+- [Louisiana ACA health insurance](https://honorbrook-insurance.com/louisiana-aca-health-insurance)
+- [Maryland ACA health insurance](https://honorbrook-insurance.com/maryland-aca-health-insurance)
+- [Michigan ACA health insurance](https://honorbrook-insurance.com/michigan-aca-health-insurance)
+- [North Carolina ACA health insurance](https://honorbrook-insurance.com/north-carolina-aca-health-insurance)
+- [South Carolina ACA health insurance](https://honorbrook-insurance.com/south-carolina-aca-health-insurance)
+- [Texas ACA health insurance](https://honorbrook-insurance.com/texas-aca-health-insurance)
+- [Virginia ACA health insurance](https://honorbrook-insurance.com/virginia-aca-health-insurance)
+- [West Virginia ACA health insurance](https://honorbrook-insurance.com/west-virginia-aca-health-insurance)
+
+## County directories
+- [Alabama by county](https://honorbrook-insurance.com/alabama-counties)
+- [Delaware by county](https://honorbrook-insurance.com/delaware-counties)
+- [Georgia by county](https://honorbrook-insurance.com/georgia-counties)
+- [Indiana by county](https://honorbrook-insurance.com/indiana-counties)
+- [Kentucky by county](https://honorbrook-insurance.com/kentucky-counties)
+- [Louisiana by county](https://honorbrook-insurance.com/louisiana-counties)
+- [Maryland by county](https://honorbrook-insurance.com/maryland-counties)
+- [Michigan by county](https://honorbrook-insurance.com/michigan-counties)
+- [North Carolina by county](https://honorbrook-insurance.com/north-carolina-counties)
+- [Pennsylvania by county](https://honorbrook-insurance.com/pennsylvania-counties)
+- [South Carolina by county](https://honorbrook-insurance.com/south-carolina-counties)
+- [Tennessee by county](https://honorbrook-insurance.com/tennessee-counties)
+- [Texas by county](https://honorbrook-insurance.com/texas-counties)
+- [Virginia by county](https://honorbrook-insurance.com/virginia-counties)
+- [West Virginia by county](https://honorbrook-insurance.com/west-virginia-counties)

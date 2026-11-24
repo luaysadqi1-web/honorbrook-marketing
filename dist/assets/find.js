@@ -40,6 +40,7 @@
   }
   function countyLine(c) { return '<a href="/' + c[2] + '"><strong>' + esc(c[0]) + '</strong>, ' + c[1] + '</a>'; }
 
+  var HB_ACA = ["alabama", "georgia", "indiana", "louisiana", "maryland", "michigan", "north-carolina", "south-carolina", "texas", "virginia", "west-virginia"];
   function search(q) {
     q = q.trim();
     var out = { html: '', type: 'none' };
@@ -55,7 +56,7 @@
     var st = stateByQuery(q);
     if (st) {
       var u = '/' + st[2];
-      return { html: cta + '<ul class="fd-list"><li><a href="' + u + '-medicare-insurance"><strong>' + esc(st[0]) + '</strong> Medicare help</a></li><li><a href="' + u + '-aca-health-insurance">' + esc(st[0]) + ' ACA health insurance</a></li><li><a href="' + u + '-counties">All ' + esc(st[0]) + ' counties</a></li></ul>', type: 'state' };
+      return { html: cta + '<ul class="fd-list"><li><a href="' + u + '-medicare-insurance"><strong>' + esc(st[0]) + '</strong> Medicare help</a></li>' + (HB_ACA.indexOf(st[2]) >= 0 ? '<li><a href="' + u + '-aca-health-insurance">' + esc(st[0]) + ' ACA health insurance</a></li>' : '') + '<li><a href="' + u + '-counties">All ' + esc(st[0]) + ' counties</a></li></ul>', type: 'state' };
     }
     var nsq = newStateByQuery(q);
     if (nsq) return { html: newStateMsg(nsq), type: 'state-new' };

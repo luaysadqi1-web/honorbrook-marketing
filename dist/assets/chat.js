@@ -192,7 +192,7 @@
     if(a){ track('phone_call_click',{phone:a.getAttribute('href').replace('tel:','')}); }
   },true);
   document.addEventListener('submit',function(e){
-    if(e.target&&e.target.tagName==='FORM'){ track(e.target.getAttribute('data-event')||'generate_lead',{form:(e.target.getAttribute('action')||'form')}); }
+    if(e.target&&e.target.tagName==='FORM'&&!e.target.classList.contains('hbf-contact')&&e.target.checkValidity()){ track(e.target.getAttribute('data-event')||'generate_lead',{form:(e.target.getAttribute('action')||'form')}); }
   },true);
 })();
 
