@@ -1,0 +1,2859 @@
+{
+ "state": "Louisiana",
+ "abbr": "LA",
+ "county_unit": "parish",
+ "as_of": "2026-11-24",
+ "plan_year": 2027,
+ "statewide": {
+  "ma_pd": 64,
+  "ma_only": 6,
+  "snp": 54,
+  "total": 124,
+  "orgs": 10,
+  "orgs_non_snp": 6,
+  "contracts": 18,
+  "medicare_eligibles": 977541,
+  "ma_enrolled": 561903,
+  "penetration_pct": 57.5,
+  "counties": 64,
+  "counties_with_plans": 64,
+  "total_per_county_min": 34,
+  "total_per_county_max": 67,
+  "non_snp_per_county_min": 15,
+  "non_snp_per_county_max": 34,
+  "pen_min": 29.8,
+  "pen_max": 74.8
+ },
+ "plan_type_counts": {
+  "cms_plan_type_all_categories": {
+   "HMO": 19,
+   "HMO C-SNP": 3,
+   "HMO D-SNP": 11,
+   "HMO I-SNP": 2,
+   "HMO-POS": 21,
+   "HMO-POS C-SNP": 6,
+   "HMO-POS D-SNP": 13,
+   "PPO": 28,
+   "PPO C-SNP": 8,
+   "PPO D-SNP": 10,
+   "PPO I-SNP": 1,
+   "Regional PPO": 2
+  },
+  "non_snp_by_type": {
+   "HMO": 19,
+   "HMO-POS": 21,
+   "Local PPO": 28,
+   "Regional PPO": 2
+  },
+  "snp_by_kind": {
+   "C-SNP": 17,
+   "D-SNP": 34,
+   "I-SNP": 3
+  },
+  "all_by_base_type": {
+   "HMO": 35,
+   "HMO-POS": 40,
+   "Local PPO": 47,
+   "Regional PPO": 2
+  }
+ },
+ "per_county": [
+  {
+   "county": "Acadia Parish",
+   "fips": "22001",
+   "slug": "acadia-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 24,
+   "ma_only": 6,
+   "snp": 30,
+   "total": 60,
+   "orgs": 10,
+   "penetration_pct": 48.7,
+   "medicare_eligibles": 12645,
+   "ma_enrolled": 6159,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 11,
+    "Local PPO": 14,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 14,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Allen Parish",
+   "fips": "22003",
+   "slug": "allen-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 5,
+   "snp": 27,
+   "total": 53,
+   "orgs": 8,
+   "penetration_pct": 43.5,
+   "medicare_eligibles": 4945,
+   "ma_enrolled": 2151,
+   "orgs_non_snp": 6,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 12,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Ascension Parish",
+   "fips": "22005",
+   "slug": "ascension-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 26,
+   "ma_only": 6,
+   "snp": 31,
+   "total": 63,
+   "orgs": 10,
+   "penetration_pct": 68.5,
+   "medicare_eligibles": 22237,
+   "ma_enrolled": 15235,
+   "orgs_non_snp": 6,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 10,
+    "Local PPO": 15,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 15,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Assumption Parish",
+   "fips": "22007",
+   "slug": "assumption-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 6,
+   "snp": 30,
+   "total": 57,
+   "orgs": 9,
+   "penetration_pct": 62.7,
+   "medicare_eligibles": 5240,
+   "ma_enrolled": 3287,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 13,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 13,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Avoyelles Parish",
+   "fips": "22009",
+   "slug": "avoyelles-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 5,
+   "snp": 29,
+   "total": 55,
+   "orgs": 9,
+   "penetration_pct": 47.9,
+   "medicare_eligibles": 9462,
+   "ma_enrolled": 4531,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 12,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Beauregard Parish",
+   "fips": "22011",
+   "slug": "beauregard-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 4,
+   "snp": 29,
+   "total": 53,
+   "orgs": 9,
+   "penetration_pct": 39.6,
+   "medicare_eligibles": 7810,
+   "ma_enrolled": 3092,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 12,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Bienville Parish",
+   "fips": "22013",
+   "slug": "bienville-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 24,
+   "total": 42,
+   "orgs": 8,
+   "penetration_pct": 53.6,
+   "medicare_eligibles": 3545,
+   "ma_enrolled": 1899,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 5,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Bossier Parish",
+   "fips": "22015",
+   "slug": "bossier-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 4,
+   "snp": 26,
+   "total": 49,
+   "orgs": 8,
+   "penetration_pct": 43.5,
+   "medicare_eligibles": 24034,
+   "ma_enrolled": 10450,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 20,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Caddo Parish",
+   "fips": "22017",
+   "slug": "caddo-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 4,
+   "snp": 26,
+   "total": 49,
+   "orgs": 8,
+   "penetration_pct": 54.6,
+   "medicare_eligibles": 53821,
+   "ma_enrolled": 29363,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 20,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Calcasieu Parish",
+   "fips": "22019",
+   "slug": "calcasieu-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 5,
+   "snp": 18,
+   "total": 42,
+   "orgs": 6,
+   "penetration_pct": 45.2,
+   "medicare_eligibles": 41048,
+   "ma_enrolled": 18534,
+   "orgs_non_snp": 4,
+   "contracts": 13,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 15,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 12,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Caldwell Parish",
+   "fips": "22021",
+   "slug": "caldwell-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 12,
+   "ma_only": 4,
+   "snp": 19,
+   "total": 35,
+   "orgs": 6,
+   "penetration_pct": 51.0,
+   "medicare_eligibles": 2317,
+   "ma_enrolled": 1181,
+   "orgs_non_snp": 4,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 3,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 15,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 7,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Cameron Parish",
+   "fips": "22023",
+   "slug": "cameron-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 24,
+   "ma_only": 6,
+   "snp": 27,
+   "total": 57,
+   "orgs": 8,
+   "penetration_pct": 29.8,
+   "medicare_eligibles": 1223,
+   "ma_enrolled": 365,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 11,
+    "Local PPO": 15,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 7,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 15,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Catahoula Parish",
+   "fips": "22025",
+   "slug": "catahoula-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 15,
+   "ma_only": 4,
+   "snp": 21,
+   "total": 40,
+   "orgs": 7,
+   "penetration_pct": 46.7,
+   "medicare_eligibles": 2431,
+   "ma_enrolled": 1135,
+   "orgs_non_snp": 4,
+   "contracts": 13,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 15,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Claiborne Parish",
+   "fips": "22027",
+   "slug": "claiborne-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 12,
+   "ma_only": 4,
+   "snp": 20,
+   "total": 36,
+   "orgs": 7,
+   "penetration_pct": 44.5,
+   "medicare_eligibles": 3562,
+   "ma_enrolled": 1586,
+   "orgs_non_snp": 4,
+   "contracts": 13,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 3,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 15,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Concordia Parish",
+   "fips": "22029",
+   "slug": "concordia-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 11,
+   "ma_only": 4,
+   "snp": 19,
+   "total": 34,
+   "orgs": 6,
+   "penetration_pct": 45.1,
+   "medicare_eligibles": 4458,
+   "ma_enrolled": 2011,
+   "orgs_non_snp": 3,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 3,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "De Soto Parish",
+   "fips": "22031",
+   "slug": "de-soto-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 4,
+   "snp": 24,
+   "total": 45,
+   "orgs": 8,
+   "penetration_pct": 54.3,
+   "medicare_eligibles": 6854,
+   "ma_enrolled": 3719,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "East Baton Rouge Parish",
+   "fips": "22033",
+   "slug": "east-baton-rouge-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 27,
+   "ma_only": 6,
+   "snp": 32,
+   "total": 65,
+   "orgs": 10,
+   "penetration_pct": 65.3,
+   "medicare_eligibles": 84670,
+   "ma_enrolled": 55290,
+   "orgs_non_snp": 6,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 6,
+    "HMO-POS": 10,
+    "Local PPO": 15,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 24,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 6,
+    "HMO D-SNP": 10,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 15,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "East Carroll Parish",
+   "fips": "22035",
+   "slug": "east-carroll-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 18,
+   "total": 36,
+   "orgs": 5,
+   "penetration_pct": 52.9,
+   "medicare_eligibles": 1443,
+   "ma_enrolled": 764,
+   "orgs_non_snp": 3,
+   "contracts": 11,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 14,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 6,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "East Feliciana Parish",
+   "fips": "22037",
+   "slug": "east-feliciana-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 5,
+   "snp": 29,
+   "total": 55,
+   "orgs": 9,
+   "penetration_pct": 59.6,
+   "medicare_eligibles": 5122,
+   "ma_enrolled": 3052,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 10,
+    "Local PPO": 10,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 10,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Evangeline Parish",
+   "fips": "22039",
+   "slug": "evangeline-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 23,
+   "ma_only": 5,
+   "snp": 27,
+   "total": 55,
+   "orgs": 8,
+   "penetration_pct": 44.5,
+   "medicare_eligibles": 7235,
+   "ma_enrolled": 3220,
+   "orgs_non_snp": 6,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 11,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 12,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Franklin Parish",
+   "fips": "22041",
+   "slug": "franklin-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 18,
+   "total": 36,
+   "orgs": 5,
+   "penetration_pct": 44.9,
+   "medicare_eligibles": 4847,
+   "ma_enrolled": 2177,
+   "orgs_non_snp": 3,
+   "contracts": 11,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 14,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 6,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Grant Parish",
+   "fips": "22043",
+   "slug": "grant-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 15,
+   "ma_only": 5,
+   "snp": 23,
+   "total": 43,
+   "orgs": 8,
+   "penetration_pct": 43.1,
+   "medicare_eligibles": 4755,
+   "ma_enrolled": 2048,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 18,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Iberia Parish",
+   "fips": "22045",
+   "slug": "iberia-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 5,
+   "snp": 24,
+   "total": 48,
+   "orgs": 9,
+   "penetration_pct": 53.5,
+   "medicare_eligibles": 16182,
+   "ma_enrolled": 8657,
+   "orgs_non_snp": 5,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 11,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Iberville Parish",
+   "fips": "22047",
+   "slug": "iberville-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 5,
+   "snp": 31,
+   "total": 58,
+   "orgs": 10,
+   "penetration_pct": 70.4,
+   "medicare_eligibles": 7075,
+   "ma_enrolled": 4984,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 10,
+    "Local PPO": 10,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 10,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Jackson Parish",
+   "fips": "22049",
+   "slug": "jackson-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 22,
+   "total": 40,
+   "orgs": 7,
+   "penetration_pct": 45.0,
+   "medicare_eligibles": 3770,
+   "ma_enrolled": 1695,
+   "orgs_non_snp": 5,
+   "contracts": 13,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 5,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 18,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 7,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Jefferson Parish",
+   "fips": "22051",
+   "slug": "jefferson-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 27,
+   "ma_only": 6,
+   "snp": 33,
+   "total": 66,
+   "orgs": 9,
+   "penetration_pct": 71.2,
+   "medicare_eligibles": 95206,
+   "ma_enrolled": 67793,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 7,
+    "HMO-POS": 10,
+    "Local PPO": 14,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 7,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 7,
+    "HMO C-SNP": 2,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 14,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Jefferson Davis Parish",
+   "fips": "22053",
+   "slug": "jefferson-davis-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 23,
+   "ma_only": 6,
+   "snp": 29,
+   "total": 58,
+   "orgs": 9,
+   "penetration_pct": 40.1,
+   "medicare_eligibles": 6586,
+   "ma_enrolled": 2642,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 15,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 15,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Lafayette Parish",
+   "fips": "22055",
+   "slug": "lafayette-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 6,
+   "snp": 24,
+   "total": 51,
+   "orgs": 9,
+   "penetration_pct": 41.6,
+   "medicare_eligibles": 48418,
+   "ma_enrolled": 20162,
+   "orgs_non_snp": 5,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 11,
+    "Local PPO": 11,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 11,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Lafourche Parish",
+   "fips": "22057",
+   "slug": "lafourche-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 6,
+   "snp": 30,
+   "total": 58,
+   "orgs": 9,
+   "penetration_pct": 59.9,
+   "medicare_eligibles": 20783,
+   "ma_enrolled": 12449,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 9,
+    "Local PPO": 13,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 13,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "LaSalle Parish",
+   "fips": "22059",
+   "slug": "lasalle-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 5,
+   "snp": 23,
+   "total": 46,
+   "orgs": 8,
+   "penetration_pct": 35.3,
+   "medicare_eligibles": 3098,
+   "ma_enrolled": 1094,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 18,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Lincoln Parish",
+   "fips": "22061",
+   "slug": "lincoln-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 15,
+   "ma_only": 4,
+   "snp": 19,
+   "total": 38,
+   "orgs": 6,
+   "penetration_pct": 46.0,
+   "medicare_eligibles": 8162,
+   "ma_enrolled": 3758,
+   "orgs_non_snp": 4,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 15,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 7,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Livingston Parish",
+   "fips": "22063",
+   "slug": "livingston-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 23,
+   "ma_only": 6,
+   "snp": 25,
+   "total": 54,
+   "orgs": 9,
+   "penetration_pct": 70.0,
+   "medicare_eligibles": 25725,
+   "ma_enrolled": 18000,
+   "orgs_non_snp": 5,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 10,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 20,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 12,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Madison Parish",
+   "fips": "22065",
+   "slug": "madison-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 24,
+   "total": 42,
+   "orgs": 6,
+   "penetration_pct": 46.8,
+   "medicare_eligibles": 2187,
+   "ma_enrolled": 1024,
+   "orgs_non_snp": 4,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 3,
+    "Local PPO": 11,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 6,
+    "D-SNP": 17,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 6,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 11,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Morehouse Parish",
+   "fips": "22067",
+   "slug": "morehouse-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 20,
+   "total": 38,
+   "orgs": 6,
+   "penetration_pct": 54.1,
+   "medicare_eligibles": 6779,
+   "ma_enrolled": 3668,
+   "orgs_non_snp": 3,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Natchitoches Parish",
+   "fips": "22069",
+   "slug": "natchitoches-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 23,
+   "total": 41,
+   "orgs": 8,
+   "penetration_pct": 45.8,
+   "medicare_eligibles": 8236,
+   "ma_enrolled": 3774,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 5,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 18,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Orleans Parish",
+   "fips": "22071",
+   "slug": "orleans-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 28,
+   "ma_only": 6,
+   "snp": 33,
+   "total": 67,
+   "orgs": 9,
+   "penetration_pct": 68.0,
+   "medicare_eligibles": 70814,
+   "ma_enrolled": 48124,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 7,
+    "HMO-POS": 10,
+    "Local PPO": 15,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 7,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 7,
+    "HMO C-SNP": 2,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 15,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Ouachita Parish",
+   "fips": "22073",
+   "slug": "ouachita-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 5,
+   "snp": 21,
+   "total": 45,
+   "orgs": 7,
+   "penetration_pct": 49.5,
+   "medicare_eligibles": 31759,
+   "ma_enrolled": 15714,
+   "orgs_non_snp": 4,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 15,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 12,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Plaquemines Parish",
+   "fips": "22075",
+   "slug": "plaquemines-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 5,
+   "snp": 30,
+   "total": 52,
+   "orgs": 9,
+   "penetration_pct": 69.0,
+   "medicare_eligibles": 4199,
+   "ma_enrolled": 2898,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Pointe Coupee Parish",
+   "fips": "22077",
+   "slug": "pointe-coupee-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 5,
+   "snp": 30,
+   "total": 54,
+   "orgs": 9,
+   "penetration_pct": 65.6,
+   "medicare_eligibles": 5371,
+   "ma_enrolled": 3525,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 10,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 10,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Rapides Parish",
+   "fips": "22079",
+   "slug": "rapides-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 5,
+   "snp": 23,
+   "total": 45,
+   "orgs": 8,
+   "penetration_pct": 42.5,
+   "medicare_eligibles": 29469,
+   "ma_enrolled": 12531,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 18,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Red River Parish",
+   "fips": "22081",
+   "slug": "red-river-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 24,
+   "total": 42,
+   "orgs": 8,
+   "penetration_pct": 52.2,
+   "medicare_eligibles": 1801,
+   "ma_enrolled": 940,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 5,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Richland Parish",
+   "fips": "22083",
+   "slug": "richland-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 20,
+   "total": 38,
+   "orgs": 6,
+   "penetration_pct": 52.2,
+   "medicare_eligibles": 4876,
+   "ma_enrolled": 2544,
+   "orgs_non_snp": 3,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Sabine Parish",
+   "fips": "22085",
+   "slug": "sabine-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 4,
+   "snp": 23,
+   "total": 44,
+   "orgs": 8,
+   "penetration_pct": 44.8,
+   "medicare_eligibles": 5735,
+   "ma_enrolled": 2570,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 18,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. Bernard Parish",
+   "fips": "22087",
+   "slug": "st-bernard-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 5,
+   "snp": 30,
+   "total": 53,
+   "orgs": 9,
+   "penetration_pct": 71.8,
+   "medicare_eligibles": 7681,
+   "ma_enrolled": 5518,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. Charles Parish",
+   "fips": "22089",
+   "slug": "st-charles-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 26,
+   "ma_only": 6,
+   "snp": 30,
+   "total": 62,
+   "orgs": 9,
+   "penetration_pct": 74.5,
+   "medicare_eligibles": 10777,
+   "ma_enrolled": 8028,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 6,
+    "HMO-POS": 10,
+    "Local PPO": 14,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 6,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 14,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. Helena Parish",
+   "fips": "22091",
+   "slug": "st-helena-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 5,
+   "snp": 29,
+   "total": 55,
+   "orgs": 9,
+   "penetration_pct": 52.4,
+   "medicare_eligibles": 3411,
+   "ma_enrolled": 1789,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 10,
+    "Local PPO": 10,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 21,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 10,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. James Parish",
+   "fips": "22093",
+   "slug": "st-james-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 5,
+   "snp": 31,
+   "total": 53,
+   "orgs": 10,
+   "penetration_pct": 70.3,
+   "medicare_eligibles": 4994,
+   "ma_enrolled": 3511,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. John the Baptist Parish",
+   "fips": "22095",
+   "slug": "st-john-the-baptist-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 5,
+   "snp": 31,
+   "total": 53,
+   "orgs": 10,
+   "penetration_pct": 74.8,
+   "medicare_eligibles": 9209,
+   "ma_enrolled": 6888,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 8,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. Landry Parish",
+   "fips": "22097",
+   "slug": "st-landry-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 5,
+   "snp": 30,
+   "total": 57,
+   "orgs": 10,
+   "penetration_pct": 48.6,
+   "medicare_eligibles": 20770,
+   "ma_enrolled": 10093,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 11,
+    "Local PPO": 11,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 11,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. Martin Parish",
+   "fips": "22099",
+   "slug": "st-martin-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 5,
+   "snp": 30,
+   "total": 57,
+   "orgs": 10,
+   "penetration_pct": 52.4,
+   "medicare_eligibles": 12374,
+   "ma_enrolled": 6485,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 11,
+    "Local PPO": 11,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 11,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. Mary Parish",
+   "fips": "22101",
+   "slug": "st-mary-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 5,
+   "snp": 24,
+   "total": 48,
+   "orgs": 8,
+   "penetration_pct": 61.3,
+   "medicare_eligibles": 11746,
+   "ma_enrolled": 7204,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 10,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "St. Tammany Parish",
+   "fips": "22103",
+   "slug": "st-tammany-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 6,
+   "snp": 31,
+   "total": 57,
+   "orgs": 10,
+   "penetration_pct": 61.8,
+   "medicare_eligibles": 63387,
+   "ma_enrolled": 39176,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 14,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 14,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Tangipahoa Parish",
+   "fips": "22105",
+   "slug": "tangipahoa-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 5,
+   "snp": 24,
+   "total": 48,
+   "orgs": 8,
+   "penetration_pct": 65.4,
+   "medicare_eligibles": 27453,
+   "ma_enrolled": 17962,
+   "orgs_non_snp": 5,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 12,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Tensas Parish",
+   "fips": "22107",
+   "slug": "tensas-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 4,
+   "snp": 24,
+   "total": 45,
+   "orgs": 6,
+   "penetration_pct": 50.9,
+   "medicare_eligibles": 1255,
+   "ma_enrolled": 639,
+   "orgs_non_snp": 4,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 5,
+    "Local PPO": 12,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 6,
+    "D-SNP": 17,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 6,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 12,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Terrebonne Parish",
+   "fips": "22109",
+   "slug": "terrebonne-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 5,
+   "snp": 24,
+   "total": 46,
+   "orgs": 8,
+   "penetration_pct": 59.5,
+   "medicare_eligibles": 22916,
+   "ma_enrolled": 13636,
+   "orgs_non_snp": 5,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 10,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 19,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 10,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Union Parish",
+   "fips": "22111",
+   "slug": "union-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 12,
+   "ma_only": 4,
+   "snp": 21,
+   "total": 37,
+   "orgs": 7,
+   "penetration_pct": 44.2,
+   "medicare_eligibles": 5828,
+   "ma_enrolled": 2576,
+   "orgs_non_snp": 4,
+   "contracts": 13,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 3,
+    "Local PPO": 8,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 15,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 8,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Vermilion Parish",
+   "fips": "22113",
+   "slug": "vermilion-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 24,
+   "ma_only": 6,
+   "snp": 30,
+   "total": 60,
+   "orgs": 10,
+   "penetration_pct": 49.0,
+   "medicare_eligibles": 12794,
+   "ma_enrolled": 6275,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 11,
+    "Local PPO": 14,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 11,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 14,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Vernon Parish",
+   "fips": "22115",
+   "slug": "vernon-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 5,
+   "snp": 23,
+   "total": 46,
+   "orgs": 8,
+   "penetration_pct": 36.6,
+   "medicare_eligibles": 8128,
+   "ma_enrolled": 2975,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 18,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Washington Parish",
+   "fips": "22117",
+   "slug": "washington-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 5,
+   "snp": 30,
+   "total": 55,
+   "orgs": 9,
+   "penetration_pct": 61.1,
+   "medicare_eligibles": 11138,
+   "ma_enrolled": 6808,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 9,
+    "Local PPO": 11,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 22,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 11,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Webster Parish",
+   "fips": "22119",
+   "slug": "webster-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 15,
+   "ma_only": 4,
+   "snp": 22,
+   "total": 41,
+   "orgs": 7,
+   "penetration_pct": 49.2,
+   "medicare_eligibles": 9876,
+   "ma_enrolled": 4857,
+   "orgs_non_snp": 4,
+   "contracts": 13,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 16,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 8,
+    "HMO I-SNP": 2,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "West Baton Rouge Parish",
+   "fips": "22121",
+   "slug": "west-baton-rouge-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 5,
+   "snp": 31,
+   "total": 58,
+   "orgs": 10,
+   "penetration_pct": 68.7,
+   "medicare_eligibles": 5519,
+   "ma_enrolled": 3792,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 10,
+    "Local PPO": 10,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 23,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 9,
+    "HMO I-SNP": 2,
+    "HMO-POS": 10,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 10,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 6,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "West Carroll Parish",
+   "fips": "22123",
+   "slug": "west-carroll-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 4,
+   "snp": 18,
+   "total": 36,
+   "orgs": 5,
+   "penetration_pct": 45.4,
+   "medicare_eligibles": 2830,
+   "ma_enrolled": 1284,
+   "orgs_non_snp": 3,
+   "contracts": 11,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 5,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 3,
+    "D-SNP": 14,
+    "I-SNP": 1
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO C-SNP": 1,
+    "HMO D-SNP": 6,
+    "HMO-POS": 5,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 5,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "West Feliciana Parish",
+   "fips": "22125",
+   "slug": "west-feliciana-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 3,
+   "snp": 24,
+   "total": 41,
+   "orgs": 9,
+   "penetration_pct": 51.8,
+   "medicare_eligibles": 2545,
+   "ma_enrolled": 1319,
+   "orgs_non_snp": 6,
+   "contracts": 12,
+   "non_snp_by_type": {
+    "HMO": 1,
+    "HMO-POS": 9,
+    "Local PPO": 5,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 5,
+    "D-SNP": 16,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 1,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 9,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 5,
+    "PPO C-SNP": 3,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Winn Parish",
+   "fips": "22127",
+   "slug": "winn-parish-la-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 4,
+   "snp": 23,
+   "total": 44,
+   "orgs": 8,
+   "penetration_pct": 43.5,
+   "medicare_eligibles": 2975,
+   "ma_enrolled": 1293,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 7,
+    "Local PPO": 9,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 2,
+    "D-SNP": 18,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 7,
+    "HMO-POS C-SNP": 2,
+    "HMO-POS D-SNP": 8,
+    "PPO": 9,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  }
+ ],
+ "ship": {
+  "name": "Louisiana Senior Health Information Program (LaSHIP), Louisiana Department of Insurance",
+  "short_name": "LaSHIP",
+  "former_name": "Senior Health Insurance Information Program (SHIIP). The CMS contacts directory and shiphelp.org still use it. In the repo it appears only in the generator config (scripts/county_gen.py ship='SHIIP', printed by scripts/prep_staged.py on staged pages). It was not found on any built page in dist/.",
+  "url": "https://www.ldi.la.gov/consumers/senior-health-shiip",
+  "url_short_link_in_ldi_print": "https://www.ldi.la.gov/LaSHIP",
+  "quote": "LaSHIP is the Louisiana Senior Health Information Program that helps Medicare beneficiaries better understand their Medicare coverage options",
+  "quote_url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/guide-to-navigating-medicare.pdf",
+  "quote_2": "LaSHIP offers free and confidential help with Medicare and other health insurance.",
+  "quote_2_url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/Free-Medicare-Counseling-English.pdf?sfvrsn=2",
+  "quote_3": "Organization type SHIP -- State Health Insurance Assistance Program ... Covered states and territories Louisiana Address State of Louisiana Department of Insurance",
+  "quote_3_url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-information-program-shiip/1562086",
+  "page_copy": "LaSHIP, the Louisiana Senior Health Information Program, gives free Medicare counseling. It is a program of the Louisiana Department of Insurance.",
+  "quote_4": "A program of the Louisiana Department of Insurance",
+  "quote_4_url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/Free-Medicare-Counseling-English.pdf?sfvrsn=2",
+  "url_opened": false,
+  "url_status": "Not opened: ldi.la.gov web pages return HTTP 403 to plain curl and to WebFetch (re-tried 2026-11-24). The address is published by CMS (contacts directory) and shiphelp.org. LDI's own PDFs print www.ldi.la.gov/LaSHIP. Both addresses are published, but neither page was opened."
+ },
+ "doi": {
+  "name": "Louisiana Department of Insurance",
+  "url": "https://www.ldi.la.gov/",
+  "quote": "This publication was produced by the Louisiana Department of Insurance and is available online.",
+  "quote_url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/Free-Medicare-Counseling-English.pdf?sfvrsn=2",
+  "quote_2": "Address State of Louisiana Department of Insurance P.O. Box 94214 Baton Rouge LA",
+  "quote_2_url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-information-program-shiip/1562086",
+  "note": "ldi.la.gov HTML pages return 403 (bot check) to curl and WebFetch; the home page itself was not opened. Name and domain confirmed from two LDI PDFs on ldi.la.gov and the CMS contacts directory."
+ },
+ "periods": [
+  {
+   "name": "Initial Enrollment Period",
+   "dates": "7 months: starts 3 months before the month you turn 65, includes that month, ends 3 months after it",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "It lasts for 7 months, starting 3 months before you turn 65, and ending 3 months after the month you turn 65.",
+   "page_copy": "Most people can first join a plan when they turn 65. This window lasts 7 months. It starts 3 months before the month you turn 65 and ends 3 months after that month.",
+   "quote_2": "Generally when you turn 65."
+  },
+  {
+   "name": "Open Enrollment Period",
+   "dates": "October 15 - December 7 each year; coverage starts January 1",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "Open Enrollment Period October 15-December 7 Join, drop, or switch to another Medicare Advantage Plan with or without drug coverage",
+   "quote_2": "January 1 of the next year (the plan must get your request to join by December 7)",
+   "page_copy": "Each year from October 15 to December 7, you can join, switch or drop a Medicare Advantage plan. The change starts January 1.",
+   "naming_note": "Medicare.gov calls October 15 - December 7 the 'Open Enrollment Period'. The term 'Annual Election Period' was not found on the Medicare.gov pages fetched. LDI's Medicare guide calls it the 'Annual Enrollment Period (AEP)'."
+  },
+  {
+   "name": "Medicare Advantage Open Enrollment Period",
+   "dates": "January 1 - March 31 each year (only if already in a Medicare Advantage plan), or within the first 3 months you have Medicare",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "Medicare Advantage Open Enrollment Period (only if you’re already in a Medicare Advantage Plan) January 1-March 31",
+   "quote_2": "Switch to another Medicare Advantage Plan with or without drug coverage. Drop your Medicare Advantage Plan and return to Original Medicare.",
+   "page_copy": "If you are already in a Medicare Advantage plan, you can switch plans or go back to Original Medicare from January 1 to March 31."
+  },
+  {
+   "name": "5-star Special Enrollment Period",
+   "dates": "Once between December 8 of the year before the plan year and November 30 of the plan year",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods",
+   "quote": "One time between December 8 of the year before the plan year and November 30 of the plan year.",
+   "quote_2": "use the 5-star Special Enrollment Period to switch from your current Medicare plan to a Medicare plan with a “5-star” quality rating",
+   "use_on_page": "OWNER DECISION: Medicare.gov states this period, but it is defined by star ratings, which the owner rule keeps off these pages. See notes_unverified for whether it applies in each state.",
+   "page_copy": null
+  }
+ ],
+ "sources": [
+  {
+   "name": "CMS CY2027 Medicare Advantage and Prescription Drug Plan Landscape (Nov 2026 data refresh)",
+   "file": "cy2027-landscape-202611.zip -> CY2027_Landscape_202611/CY2027_Landscape_202611.csv",
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "page": "https://www.cms.gov/medicare/coverage/prescription-drug-coverage",
+   "release": "Data Last Updated: 11/01/2026 (ReadMe CY2027_Landscape_ReadMe_20261101.txt); zip members dated 2026-11-03; CMS page last modified 11/03/2026",
+   "quote": "Downloads CY2027 Landscape (202611) (ZIP)",
+   "readme_quote": "11/01/2026: Data refresh update - new counties were added to the contract service area",
+   "readme_quote_2": "The data within are subject to change as contracts are finalized.",
+   "fetched": "2026-11-24, streamed by HTTP range requests (rows for this state kept; no premiums or ratings kept)",
+   "used_for": "plan counts by category and plan type, organization counts"
+  },
+  {
+   "name": "CMS Medicare Advantage State/County Penetration, September 2026",
+   "file": "ma-state-county-penetration-september-2026.zip -> State_County_Penetration_MA_2026_09/State_County_Penetration_MA_2026_09.csv",
+   "url": "https://www.cms.gov/files/zip/ma-state-county-penetration-september-2026.zip",
+   "page": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/ma-state/county-penetration/ma-state-county-penetration-2026-09",
+   "quote": "MA State/County Penetration Report Period 2026-09 Downloads MA State/County Penetration – September 2026",
+   "repo_copy": "/Users/luaysadqi/honorbrook-marketing/scripts/county_data/county_stats.json (key \"pen\"); same file the county pages use (DATA_MONTH = September 2026 in scripts/county_gen.py)",
+   "check": "2026-11-24: streamed the CMS September 2026 CSV and compared all 119 WV + LA rows with county_stats.json: 0 mismatches",
+   "method": "penetration_pct = Enrolled / Eligibles x 100, 1 decimal; statewide = sum of county Enrolled / sum of county Eligibles (same method as the live state and county pages)",
+   "used_for": "Medicare Advantage share (penetration_pct), medicare_eligibles, ma_enrolled"
+  },
+  {
+   "name": "Medicare.gov - Joining a plan",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "Contact your local State Health Insurance Assistance Program (SHIP) to get free personalized health insurance counseling.",
+   "used_for": "Initial Enrollment Period, Open Enrollment Period, Medicare Advantage Open Enrollment Period; SHIP counseling is free",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "Medicare.gov - Special Enrollment Periods",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods",
+   "quote": "One time between December 8 of the year before the plan year and November 30 of the plan year.",
+   "used_for": "5-star Special Enrollment Period",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "Louisiana Department of Insurance - Guide to Navigating Medicare (PDF, created 2025-03-18)",
+   "url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/guide-to-navigating-medicare.pdf",
+   "quote": "LaSHIP is the Louisiana Senior Health Information Program that helps Medicare beneficiaries better understand their Medicare coverage options",
+   "used_for": "current SHIP name (LaSHIP)",
+   "fetched": "2026-11-24 via WebFetch (PDF)"
+  },
+  {
+   "name": "Louisiana Department of Insurance - Free Medicare Counseling brochure (PDF, created 2025-03-07)",
+   "url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/Free-Medicare-Counseling-English.pdf?sfvrsn=2",
+   "quote": "LaSHIP offers free and confidential help with Medicare and other health insurance.",
+   "used_for": "free counseling; regulator name",
+   "fetched": "2026-11-24 via WebFetch (PDF)"
+  },
+  {
+   "name": "CMS Contacts Directory - Senior Health Insurance Information Program (SHIIP)",
+   "url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-information-program-shiip/1562086",
+   "quote": "Organization type SHIP -- State Health Insurance Assistance Program ... Covered states and territories Louisiana",
+   "used_for": "SHIP web address (lists http://www.ldi.la.gov/consumers/senior-health-shiip) and sponsor (State of Louisiana Department of Insurance)",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "SHIP Technical Assistance Center (ACL-funded) - Louisiana",
+   "url": "https://www.shiphelp.org/ships/louisiana/",
+   "quote": "Senior Health Insurance Information Program (SHIIP) ... Website Louisiana Website",
+   "used_for": "cross-check of SHIP website (links to http://www.ldi.la.gov/consumers/senior-health-shiip)",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "Medicare.gov - Special Needs Plans (SNP)",
+   "url": "https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options/SNP",
+   "quote": "Yes. All SNPs must provide Medicare drug coverage (Part D).",
+   "quote_2": "You meet the eligibility requirements for one of the 3 types of SNPs",
+   "used_for": "SNPs are only for people who qualify; all SNPs include drug coverage",
+   "fetched": "2026-11-24 (checker)"
+  }
+ ],
+ "definitions": {
+  "plan": "distinct Contract Plan Segment ID in the landscape file (a plan segment = one plan as offered in that area)",
+  "ma_pd": "Contract Category Type = MA-PD (Medicare Advantage with Part D drug coverage, not a special needs plan)",
+  "ma_only": "Contract Category Type = MA (Medicare Advantage without Part D drug coverage)",
+  "snp": "Contract Category Type = SNP (special needs plans: D-SNP dual eligible, C-SNP chronic condition, I-SNP institutional); counted separately, not inside ma_pd",
+  "total": "ma_pd + ma_only + snp",
+  "orgs": "distinct Parent Organization Name across all MA categories incl. SNP (names deliberately not output); orgs_non_snp excludes SNP-only parents; contracts = distinct Contract ID",
+  "plan_types": "landscape Plan Type; CMS labels local PPOs as \"PPO\" (Organization Type = Local Coordinated Care Plan) -> shown as Local PPO; HMO-POS kept separate from HMO",
+  "excluded": "PDP (stand-alone drug plans), employer group plans (Plan ID >= 800), Part B-only and national PACE plans are not in the landscape file; no Cost plans exist in this state in the file"
+ },
+ "page_ready": [
+  "For 2027, CMS lists 124 Medicare Advantage plans offered in Louisiana.",
+  "54 of them are special needs plans. Of the other 70, 64 include drug coverage and 6 do not. All special needs plans include drug coverage.",
+  "Special needs plans are only for people who qualify, such as people with both Medicare and Medicaid.",
+  "Not every plan is offered everywhere. CMS lists between 34 and 67 plans in each parish, counting special needs plans.",
+  "10 companies offer Medicare Advantage plans in Louisiana. 4 of them offer only special needs plans.",
+  "In September 2026, 57.5% of people with Medicare in Louisiana were in a Medicare Advantage plan.",
+  "Plan counts: CMS 2027 plan list, November 2026 update. Share: CMS, September 2026."
+ ],
+ "notes_unverified": [
+  "SHIP name: LDI's own March 2025 PDFs call the program 'LaSHIP' (Louisiana Senior Health Information Program), with short link ldi.la.gov/LaSHIP. The CMS contacts directory and shiphelp.org still say 'Senior Health Insurance Information Program (SHIIP)'. The repo's generator config (scripts/county_gen.py) says 'SHIIP'. No built dist/ page shows it. Recommend 'LaSHIP'.",
+  "ldi.la.gov HTML pages (SHIIP page and home page) return HTTP 403 (bot check) to curl and WebFetch; they were not opened and no workaround was used. The SHIP URL https://www.ldi.la.gov/consumers/senior-health-shiip is confirmed by the CMS contacts directory and shiphelp.org, not by opening it. Whether ldi.la.gov/LaSHIP redirects there is unverified.",
+  "5-star SEP: CY2027 landscape shows 0 Louisiana MA segments with a 5-star overall rating and 0 stand-alone drug plans with a 5-star Part D summary rating (count only). Suggest leaving the 5-star SEP off the Louisiana page.",
+  "Louisiana's MA region in the landscape is 'Louisiana and Mississippi' (Regional PPOs cover that region).",
+  "Louisiana has 54 special needs plans of 124 total; SNPs are only for people who qualify (D-SNP: Medicare and Medicaid; C-SNP: certain chronic conditions; I-SNP: living in an institution). Copy should not imply anyone can join them.",
+  "Plan counts come from the CMS landscape file as of the Nov 1, 2026 data refresh. The ReadMe says 'The data within are subject to change as contracts are finalized.' Copy should say 'CMS lists' and date it.",
+  "The landscape lists a plan in a county when the county is in the plan's service area; it does not flag plans that serve only part of a county. Per-county counts may include partial-county plans (not verified per plan).",
+  "Statewide totals count each distinct plan once if it is offered in any county or parish; no single county has all of them (see total_per_county_min/max).",
+  "orgs = distinct Parent Organization Name (8 in WV, 10 in LA). Counting Organization Marketing Name instead gives 9 in WV and 11 in LA; counting contracts gives 20 and 18. Names deliberately not output.",
+  "Penetration figures reuse the repo's county_stats.json (CMS MA State/County Penetration, September 2026); all 119 WV + LA rows were re-checked against the CMS CSV on 2026-11-24 with 0 mismatches. CMS publishes no statewide row in this file; statewide = sum of county enrolled / sum of county eligibles, the same method the live state pages use (WV 56.6%, LA 57.5%). A November 2026 penetration file also exists; September was kept to match the county pages.",
+  "Medicare.gov names Oct 15 - Dec 7 the 'Open Enrollment Period'. 'Annual Election Period' was not found on the Medicare.gov pages fetched, so it is not quoted.",
+  "Excluded from counts: stand-alone drug plans (PDP), employer group plans, PACE and Part B-only plans (not in the landscape file). No Cost plans or sanctioned plans appear for WV or LA.",
+  "Checker: no fact in this file was set to null. Every number and quote was confirmed from the primary source, except the LDI web page addresses noted above (published by CMS and LDI, but not opened because of the 403)."
+ ],
+ "page_ready_sources": [
+  {
+   "line": 0,
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "quote": "This Landscape file contains a list of all approved contracts and plans for Medicare Advantage (MA) Plans"
+  },
+  {
+   "line": 1,
+   "url": "https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options/SNP",
+   "quote": "Yes. All SNPs must provide Medicare drug coverage (Part D).",
+   "also": "landscape Part D Coverage Indicator = Yes for all SNP segments, No for all MA-only segments"
+  },
+  {
+   "line": 2,
+   "url": "https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options/SNP",
+   "quote": "You meet the eligibility requirements for one of the 3 types of SNPs"
+  },
+  {
+   "line": 3,
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "quote": "county-level recount; see statewide.total_per_county_min/max"
+  },
+  {
+   "line": 4,
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "quote": "distinct Parent Organization Name; orgs vs orgs_non_snp"
+  },
+  {
+   "line": 5,
+   "url": "https://www.cms.gov/files/zip/ma-state-county-penetration-september-2026.zip",
+   "quote": "Penetration - [numeric] - Derived field that equals the ratio of enrollees over eligibles multiplied by 100"
+  },
+  {
+   "line": 6,
+   "url": "https://www.cms.gov/medicare/coverage/prescription-drug-coverage",
+   "quote": "CY2027 Landscape (202611) (ZIP)"
+  }
+ ],
+ "verified_by_checker": true,
+ "checker_verified_on": "2026-11-24",
+ "checker_corrected": [
+  {
+   "field": "page_ready[1]",
+   "was": "64 include drug coverage, 6 do not, and 54 are special needs plans.",
+   "now": "54 of them are special needs plans. Of the other 70, 64 include drug coverage and 6 do not. All special needs plans include drug coverage."
+  },
+  {
+   "field": "page_ready[3]",
+   "was": "Not every plan is offered everywhere. Each parish has between 34 and 67 plans, counting special needs plans.",
+   "now": "Not every plan is offered everywhere. CMS lists between 34 and 67 plans in each parish, counting special needs plans."
+  },
+  {
+   "field": "page_ready[4]",
+   "was": "10 companies offer Medicare Advantage plans in Louisiana.",
+   "now": "10 companies offer Medicare Advantage plans in Louisiana. 4 of them offer only special needs plans."
+  },
+  {
+   "field": "periods[0].page_copy",
+   "was": "When you first get Medicare, you have 7 months to join a plan. It starts 3 months before the month you turn 65 and ends 3 months after it.",
+   "now": "Most people can first join a plan when they turn 65. This window lasts 7 months. It starts 3 months before the month you turn 65 and ends 3 months after that month."
+  },
+  {
+   "field": "ship.page_copy",
+   "was": "LaSHIP, the Louisiana Senior Health Information Program, gives free Medicare counseling. It is part of the Louisiana Department of Insurance.",
+   "now": "LaSHIP, the Louisiana Senior Health Information Program, gives free Medicare counseling. It is a program of the Louisiana Department of Insurance.",
+   "source": "https://www.ldi.la.gov/docs/default-source/documents/shiip/Free-Medicare-Counseling-English.pdf?sfvrsn=2"
+  },
+  {
+   "field": "ship.former_name",
+   "was": "Senior Health Insurance Information Program (SHIIP) - still used by the CMS contacts directory and by the live Honorbrook site (scripts/county_gen.py ship='SHIIP')",
+   "now": "Senior Health Insurance Information Program (SHIIP). The CMS contacts directory and shiphelp.org still use it. In the repo it appears only in the generator config (scripts/county_gen.py ship='SHIIP', printed by scripts/prep_staged.py on staged pages). It was not found on any built page in dist/.",
+   "source": "read-only grep of /Users/luaysadqi/honorbrook-marketing/dist and scripts"
+  }
+ ],
+ "checker_notes": [
+  "Checker re-fetched the CMS CY2027 landscape zip (12,580,399 bytes; CSV dated 2026-11-03; ReadMe 'Data Last Updated: 11/01/2026') and recounted every county from scratch: statewide totals, category splits, plan types, SNP kinds, parent-organization and contract counts, per-county min/max, and all per-county rows match the original (0 mismatches). The CMS download page (Page Last Modified 11/03/2026) lists CY2027 Landscape (202611) as the newest CY2027 file.",
+  "Checker re-fetched the CMS MA State/County Penetration September 2026 zip and recomputed every county from Eligibles and Enrolled, matched by FIPS: 0 mismatches in eligibles, enrolled, share or county name. Neither state has a 'Pending County Designation' row this month, so summing the counties gives the full state figure.",
+  "Every Medicare.gov quote (Initial Enrollment Period, Open Enrollment Period, Medicare Advantage Open Enrollment Period, 5-star SEP dates, SHIP is free) was re-fetched on 2026-11-24 and found word for word.",
+  "CORRECTED page_ready[1]: the original said 'X include drug coverage, Y do not, and Z are special needs plans', which suggests special needs plans lack drug coverage. All special needs plans in the file have Part D (Part D Coverage Indicator = Yes for every SNP segment), and Medicare.gov says 'All SNPs must provide Medicare drug coverage (Part D).' The sentence was rewritten.",
+  "CORRECTED page_ready[4]: the company count is right, but some parent organizations offer only special needs plans in this state. A clause was added so readers who do not qualify for a special needs plan are not misled.",
+  "CORRECTED periods[0].page_copy: Medicare.gov says the 7-month window applies 'Generally when you turn 65'. The original said 'When you first get Medicare', which is not the same for people who get Medicare early because of a disability. Reworded to match the source.",
+  "page_ready[3] reworded from 'Each county has' to 'CMS lists ... in each county', because the landscape does not flag plans that serve only part of a county.",
+  "page_ready[5] note: CMS counts as 'MA enrollees' people in MA plans plus cost plans, PACE, demonstrations and employer plans (penetration ReadMe list of organization types). The copy follows CMS's own label; no change made.",
+  "Rule check on all page-ready copy: no '$0', no 'free plan', no superlatives, guarantees, urgency, prices, star ratings, carrier names, phone numbers or guaranty-association language. 'Free' is used only for SHIP counseling, which the sources state.",
+  "5-star SEP: count re-checked (count only, nothing kept). The landscape 'Overall Star Rating' is 'Not Applicable' for every stand-alone drug plan, so drug plans were checked on 'Part D Summary Star Rating' instead. page_copy stays null (owner rule: no star ratings).",
+  "Side finding for the owner (repo read only, nothing changed): scripts/prep_staged.py prints each state's SHIP phone number on staged pages, which conflicts with the 'no outside phone numbers except 1-800-MEDICARE' rule. For Louisiana, scripts/county_gen.py has 1-800-259-5301, but LDI's own 2025 brochures and shiphelp.org show 1-800-259-5300.",
+  "LaSHIP name CONFIRMED from LDI's own PDFs on ldi.la.gov, re-fetched by the checker: the guide (created 2025-03-18) says 'LaSHIP is the Louisiana Senior Health Information Program', and the brochure (created 2025-03-07) says 'A program of the Louisiana Department of Insurance' and 'LaSHIP offers free and confidential help with Medicare'. A web search shows ldi.la.gov/consumers/senior-health-shiip titled 'Louisiana Senior Health Information Program'. This is a search-index title, used only as supporting evidence.",
+  "REFUTED (researcher summary): 'the live Honorbrook site still says SHIIP'. No built page in dist/ contains 'SHIIP' or a Louisiana SHIP phone number. The old name is only in the generator config (scripts/county_gen.py), used by scripts/prep_staged.py. Fix the config before staged pages are built. Do not edit live pages.",
+  "ldi.la.gov HTML pages (consumers/senior-health-shiip, /LaSHIP, March 2025 newsletter) returned HTTP 403 to plain curl and WebFetch. The checker did not try to get around the bot check. Whether ldi.la.gov/LaSHIP redirects to the CMS-listed page is unverified.",
+  "Spot checks (checker recount = original): Acadia 60 plans (24 with drugs / 6 without / 30 SNP), share 48.7%; Orleans 67 (28/6/33); East Baton Rouge 65 (27/6/32). Fewest plans: Concordia (34). Most: Orleans (67). Statewide 124 = 64 + 6 + 54; 10 parent organizations (6 offer non-SNP plans); 18 contracts; share 561,903 / 977,541 = 57.48%.",
+  "5-star check corrected in wording: 0 Louisiana MA segments have an overall 5-star rating, and 0 of the 8 stand-alone drug plans have a 5-star Part D summary rating. Their 'Overall Star Rating' is 'Not Applicable', so the original phrase 'MA or PDP with a 5-star overall rating' was imprecise. The conclusion holds: leave the 5-star SEP off the Louisiana page."
+ ]
+}

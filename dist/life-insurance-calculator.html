@@ -20,12 +20,12 @@
 <meta name="theme-color" content="#050506">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=onyx2">
+<link rel="stylesheet" href="/assets/style.css?v=onyx3">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://honorbrook-insurance.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://honorbrook-insurance.com/calculators"}, {"@type": "ListItem", "position": 3, "name": "Life Insurance Calculator: How Much Coverage Do I Need?", "item": "https://honorbrook-insurance.com/life-insurance-calculator"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much life insurance do I need?", "acceptedAnswer": {"@type": "Answer", "text": "A common starting point adds up the income your family would need to replace, your debts and mortgage, future costs such as college, and final expenses, then subtracts the coverage and savings you already have. This calculator does exactly that. Many people also check the result against a simple multiple of income, and an agent can help you refine it."}}, {"@type": "Question", "name": "How many years of income should I replace?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your family. Many households choose enough years to cover until children are independent or a spouse could rebuild their finances, often 10 years or more. Younger families with small children commonly choose a longer period."}}, {"@type": "Question", "name": "Does this include the cost of the policy?", "acceptedAnswer": {"@type": "Answer", "text": "No. It estimates the amount of coverage, not the premium. Premiums depend on your age, health, tobacco use, the type of policy and the carrier. We can compare quotes from many carriers once you know the amount."}}]}</script>
 <script src="/assets/calc.js" defer></script>
 </head>
-<body>
+<body data-line="life">
 <a class="skip-link" href="#maincontent">Skip to main content</a>
 
 
@@ -89,7 +89,7 @@
       <a href="/blog/">Blog</a>
       <a href="/contact">Contact</a>
     </nav>
-    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="/#contact">Plan Review</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
+    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="#quote">Plan Review</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
   </div>
 </header>
 
@@ -111,6 +111,50 @@
       <div class="calc-out" aria-live="polite" role="region" aria-label="Your estimate"><p class="calc-empty">Enter your numbers and press Calculate. Nothing you type is saved or sent anywhere.</p></div>
     </form>
     <div class="calc-cta"><h2>Want a licensed agent to check the real numbers?</h2><p>We compare 90+ carriers, we are independent, and our help costs you nothing.</p><p><a class="btn-primary sans" href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">Schedule an appointment</a> &nbsp; <a class="calc-call sans" href="tel:+13016158289">or call (301) 615-8289</a></p></div>
+<section id="quote" style="padding:0 20px">
+<style>
+.hb-quote{background:#fff;border:1px solid #dfe4ec;border-top:3px solid #c6a14a;border-radius:8px;box-shadow:0 8px 26px rgba(27,47,75,.07);padding:28px;margin:38px auto;max-width:620px}
+.hb-quote h3{margin:0 0 4px;font-size:24px}
+.hb-quote p.sub{margin:0 0 14px;color:#5b6678;font-size:16px}
+.hb-quote label{display:block;font-weight:600;font-size:15px;margin:14px 0 5px}
+.hb-quote input[type=text],.hb-quote input[type=tel],.hb-quote input[type=email],.hb-quote select{width:100%;padding:12px;border:1px solid #c9d1dc;border-radius:6px;font-size:17px;background:#fff;box-sizing:border-box}
+.hb-quote .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hb-quote .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;line-height:1.45;color:#5b6678;margin-top:16px}
+.hb-quote .hb-field-err{border-color:#d9534f}
+@media(max-width:560px){.hb-quote .row2{grid-template-columns:1fr}}
+</style>
+  <div class="hb-quote sans">
+    <form data-line="life" data-thanks="/thank-you-life?t=life" action="https://formspree.io/f/xgobjlba" method="POST">
+      <input type="hidden" name="_subject" value="Quote request: Life insurance amount check (Honorbrook website)">
+      <input type="hidden" name="Topic" value="Life insurance amount check">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <h3>Ask an agent to check your numbers</h3>
+      <p class="sub">This sends only the contact details below, not what you typed in the calculator. We reply within one business day, by text if you prefer.</p>
+      <label for="qc-name">Full name</label>
+      <input id="qc-name" type="text" name="Name" autocomplete="name" required>
+      <div class="row2">
+        <div><label for="qc-phone">Mobile phone</label>
+        <input id="qc-phone" type="tel" name="Phone" autocomplete="tel" required></div>
+        <div><label for="qc-zip">ZIP code</label>
+        <input id="qc-zip" type="text" name="ZIP" inputmode="numeric" autocomplete="postal-code" maxlength="5" required></div>
+      </div>
+      <div class="row2">
+        <div><label for="qc-age">Your age</label>
+        <select id="qc-age" name="Age range"><option value="">Select</option><option>Under 40</option><option>40 to 49</option><option>50 to 59</option><option>60 to 69</option><option>70 to 79</option><option>80 or older</option></select></div>
+        <div><label for="qc-how">Best way to reach you</label>
+        <select id="qc-how" name="Contact preference"><option>Text me</option><option>Call me</option><option>Email me</option></select></div>
+      </div>
+      <label for="qc-email">Email (optional)</label>
+      <input id="qc-email" type="email" name="Email" autocomplete="email">
+      <div><label for="qc-best">Best time to call</label>
+        <select id="qc-best" name="Best time to call"><option>Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+      <label class="consent"><input type="checkbox" name="Consent" value="Yes" required>
+        <span>By submitting, I authorize Honorbrook Insurance to contact me by phone or text (including automated means) about insurance. Consent isn't a condition of purchase; reply STOP to opt out. See our <a href="/privacy-policy" rel="noopener" target="_blank">Privacy Policy</a>.</span>
+      </label>
+      <button class="btn-primary sans" type="submit" style="margin-top:18px;width:100%">Send my request</button>
+    </form>
+  </div>
+</section>
     <div class="prose">
       <h2>How this estimate works</h2>
       <p>We add the income your family would need to replace, your mortgage and other debts, future college costs and final expenses. Then we subtract the life insurance and savings you already have. The result is the gap that new coverage could fill.</p>
@@ -158,7 +202,7 @@
         <a href="sms:+15713540146">Text (571) 354-0146</a>
         <p class="hb-langs">We speak English, Arabic, French and Spanish</p>
         <a href="mailto:info@honorbrook-insurance.com">Email us</a>
-        <a href="/#contact">Request a callback</a>
+        <a href="#quote">Request a callback</a>
         <a href="/schedule-an-appointment">How scheduling works</a>
         <a href="/careers">Careers</a>
         <a href="/privacy-policy">Privacy Policy</a>
@@ -196,9 +240,9 @@
   <a href="tel:+13016158289">Call now</a><a class="bk" href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">Schedule an appointment</a>
 </div>
 
-<script src="/assets/chat.js?v=onyx2" defer></script>
-<script src="/assets/find.js?v=onyx2" defer></script>
+<script src="/assets/chat.js?v=onyx3" defer></script>
+<script src="/assets/find.js?v=onyx3" defer></script>
 
-<script src="/assets/hb-nav.js?v=onyx2" defer></script>
+<script src="/assets/hb-nav.js?v=onyx3" defer></script>
 </body>
 </html>

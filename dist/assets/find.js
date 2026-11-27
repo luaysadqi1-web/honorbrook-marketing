@@ -40,7 +40,7 @@
   }
   function countyLine(c) { return '<a href="/' + c[2] + '"><strong>' + esc(c[0]) + '</strong>, ' + c[1] + '</a>'; }
 
-  var HB_ACA = ["alabama", "georgia", "indiana", "louisiana", "maryland", "michigan", "north-carolina", "south-carolina", "texas", "virginia", "west-virginia"];
+  var HB_ACA = ["alabama", "delaware", "florida", "georgia", "indiana", "kentucky", "louisiana", "maryland", "michigan", "north-carolina", "pennsylvania", "south-carolina", "tennessee", "texas", "virginia", "washington-dc", "west-virginia"];
   function search(q) {
     q = q.trim();
     var out = { html: '', type: 'none' };

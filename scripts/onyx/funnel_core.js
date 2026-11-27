@@ -5,6 +5,8 @@
   var H = window.HB = {};
   H.PHONE = '(571) 354-0146'; H.TEL = '+15713540146';
   H.ENDPOINT = 'https://formspree.io/f/xgobjlba';
+  /* second lead form: emails a copy of each lead to the owner's Gmail (added Nov 25, 2026) */
+  H.ENDPOINT2 = 'https://formspree.io/f/xljbopja';
   H.DRY = false;
   H.YEAR = 2026;
   H.SITE = '/';
@@ -338,8 +340,9 @@
         fetch(H.CRM, { method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: f.name.value.trim(), phone: f.phone.value.trim(), zip: f.zip.value.trim(), email: f.email.value.trim(), best: form.querySelector('input[name=best]:checked').value, interests: names.join(', '), answers: 'Priority: ' + prio + ' || ' + ans, source: L.source || '', consent: true }) }).catch(function () {});
       } catch (x) {} }
       var btn = form.querySelector('.hbf-submit'); btn.disabled = true; btn.classList.add('busy');
+      if (!H.DRY && H.ENDPOINT2 && !form._hbCopied) { form._hbCopied = true; try { fetch(H.ENDPOINT2, { method: 'POST', body: fd, headers: { Accept: 'application/json' }, keepalive: true }).catch(function () {}); } catch (x) {} }
       var go = H.DRY ? Promise.resolve({ ok: true }) : fetch(H.ENDPOINT, { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).then(function (r) { return { ok: r.ok }; });
-      go.then(function (r) { if (r.ok) { H.track('generate_lead', { products: L.products.join(','), source: L.source || '' }); done(); } else throw 0; }).catch(function () { btn.disabled = false; btn.classList.remove('busy'); err.innerHTML = 'Something went wrong. Please call us at <a href="tel:' + H.TEL + '">' + H.PHONE + '</a>.'; });
+      go.then(function (r) { if (r.ok) { H.track('generate_lead', { products: L.products.join(','), source: L.source || '', line: L.products.join(','), hot: String(prio).indexOf('HOT') === 0 }); done(); } else throw 0; }).catch(function () { btn.disabled = false; btn.classList.remove('busy'); err.innerHTML = 'Something went wrong. Please call us at <a href="tel:' + H.TEL + '">' + H.PHONE + '</a>.'; });
     });
   };
 })();

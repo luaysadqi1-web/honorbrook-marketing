@@ -1,0 +1,157 @@
+{
+  "state": "Florida",
+  "slug": "florida",
+  "exchange_name": "HealthCare.gov (Federally-facilitated Marketplace)",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federal Marketplace (HealthCare.gov)",
+  "exchange_type_source_url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+  "exchange_type_quote": "States by Marketplace Type (FFM/SBM-FP/SBM) for Plan Year 2027 ... Federally-facilitated Marketplace (FFM) states: ... Florida",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+  "oe_quote": "January 15: Open Enrollment ends — last day to enroll in or change Marketplace health plans for the year.",
+  "oe_year_confirmation_url": "https://www.cms.gov/newsroom/fact-sheets/plan-year-2027-marketplace-plans-prices-fact-sheet-0",
+  "oe_year_confirmation_quote": "The Open Enrollment Period to choose Healthcare.gov coverage for 2027 begins on November 1, 2026, and runs through January 15, 2027.",
+  "oe_jan1_deadline": "2026-12-15",
+  "oe_jan1_deadline_quote": "December 15: Last day to enroll in or change plans for coverage to start January 1.",
+  "medicaid_expanded": false,
+  "medicaid_program_name": "Florida Medicaid (Statewide Medicaid Managed Care), administered by the Agency for Health Care Administration (AHCA). Eligibility for families, parents and caretaker relatives is decided by the Florida Department of Children and Families (DCF) through ACCESS Florida, and by the Social Security Administration for SSI recipients.",
+  "medicaid_adult_income_limit_note": "DCF 'Medicaid Income Limits (Effective April 2026 – March 2027)' table, column 'Ages 19 & 20 and Parents and Caregivers' (monthly maximum income by household size): 1 = $356, 2 = $478, 3 = $600, 4 = $723. MACPAC (Feb 2026, levels as of July 2025) lists Florida parents and caretaker relatives at 22% FPL, with no coverage for other adults age 19-64 except 'Age 19–20 only'. DCF's Medicaid page lists the adult groups it covers as parents and caretaker relatives of children, pregnant women, former foster youth under 26, non-citizen emergencies, and aged or disabled people; it lists no group for other adults. Work requirement: no Florida Medicaid work requirement for 2027 was found. The federal H.R. 1 requirement applies to expansion adults, and Florida has none. KFF (secondary) reports that a 2026 Florida bill (SB 1758) to add work requirements passed the Senate but failed in the House.",
+  "medicaid_url": "https://www.myflfamilies.com/medicaid",
+  "medicaid_quote": "Parents and other caretaker relatives of children up to age 18 who live with them may be eligible for Medicaid if the family’s countable income does not exceed certain income limits.",
+  "medicaid_income_table_url": "https://www.myflfamilies.com/documents/Medicaid%20Income%20Limits%20April%202026.pdf",
+  "medicaid_income_table_quote": "Medicaid Income Limits (Effective April 2026 – March 2027) ... Ages 19 & 20 and Parents and Caregivers ... 3 ... 600",
+  "state_subsidy_or_reinsurance_note": null,
+  "state_subsidy_source_url": null,
+  "state_subsidy_quote": null,
+  "doi_name": "Florida Office of Insurance Regulation (OIR)",
+  "doi_url": "https://floir.gov/",
+  "doi_quote": "responsible for all activities concerning insurers and other risk bearing entities, including licensing, rates, policy forms",
+  "agent_licensing_agency_name": "Florida Department of Financial Services (DFS), Division of Insurance Agent and Agency Services",
+  "agent_licensing_agency_url": "https://www.myfloridacfo.com/division/agents",
+  "agent_licensing_agency_quote": "accurate information regarding insurance agents, adjusters, limited surety (bail bond) agents, navigators",
+  "copy": {
+    "exch": "HealthCare.gov",
+    "exch_type": "federal Marketplace",
+    "medicaid": "Florida has not expanded Medicaid. From April 2026 through March 2027, the income limit for parents and caretaker relatives is $600 a month for a family of three. Most adults without children do not qualify unless they are pregnant, age 65 or older, or have a disability.",
+    "state_help": null
+  },
+  "copy_trace": {
+    "medicaid_s1": "PRIMARY: Medicaid.gov eligibility levels table (CMS, levels as of Dec 1, 2023; read with WebFetch because curl gets 403): Florida 'Adults (Medicaid) Expansion to Adults' = 'No'. SECONDARY: KFF (Nov 6, 2026) table 'Florida,FL,Not adopted,,'; MACPAC Exhibit 36 (July 2025 levels) 'Florida 22 Age 19–20 only: 22'.",
+    "medicaid_s2": "DCF table 'Medicaid Income Limits (Effective April 2026 – March 2027)', column 'Ages 19 & 20 and Parents and Caregivers', family size 3 = 600. DCF page: 'Step 3: Determine Your Maximum Monthly Income Limit'.",
+    "medicaid_s3": "DCF Medicaid page lists the adult groups it covers: 'Parents and Other Caretaker Relatives of Children' (of children 'who live with them'), 'Pregnant Women', 'Former Foster Care Individuals', 'Non-Citizens with Medical Emergencies', and 'aged (65 or older) or disabled' (SSI-Related Medicaid). Other exceptions (ages 19-20, former foster youth under 26) are why the copy says 'Most'."
+  },
+  "sources": [
+    {
+      "url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+      "supports": "Exchange type: CMS lists Florida as a Federally-facilitated Marketplace (FFM) state for Plan Year 2027 (page last modified 09/01/2026)",
+      "quote": "Federally-facilitated Marketplace (FFM) states: ... Florida"
+    },
+    {
+      "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+      "supports": "Florida is not on CMS's list of State-based Exchanges or SBE-FPs for Plan Year 2027 (page updated Nov 6, 2026)",
+      "quote": "Below is a list of the SBEs and SBE-FPs, for Plan Year 2027"
+    },
+    {
+      "url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+      "supports": "HealthCare.gov open enrollment dates (Nov 1 to Jan 15) and Dec 15 deadline for Jan 1 coverage, under the banner 'Enroll for 2027 now'",
+      "quote": "January 15: Open Enrollment ends — last day to enroll in or change Marketplace health plans for the year."
+    },
+    {
+      "url": "https://www.healthcare.gov/glossary/open-enrollment-period/",
+      "supports": "HealthCare.gov's yearly open enrollment window",
+      "quote": "The yearly period (November 1 – January 15) when people can enroll in a Marketplace health insurance plan."
+    },
+    {
+      "url": "https://www.cms.gov/newsroom/fact-sheets/plan-year-2027-marketplace-plans-prices-fact-sheet-0",
+      "supports": "CMS fact sheet (Oct 30, 2026) with year-specific 2027 open enrollment dates for HealthCare.gov",
+      "quote": "The Open Enrollment Period to choose Healthcare.gov coverage for 2027 begins on November 1, 2026, and runs through January 15, 2027."
+    },
+    {
+      "url": "https://www.myflfamilies.com/medicaid",
+      "supports": "DCF Medicaid page: eligibility groups (parents/caretakers, pregnant women, former foster youth, aged or disabled), DCF decides eligibility, AHCA runs Medicaid",
+      "quote": "Parents and other caretaker relatives of children up to age 18 who live with them may be eligible for Medicaid"
+    },
+    {
+      "url": "https://www.myflfamilies.com/medicaid/determining-your-income-limit",
+      "supports": "The DCF income tables are monthly maximum income limits, and the current table is April 2026 – March 2027",
+      "quote": "To determine your monthly maximum income limit, you must first determine"
+    },
+    {
+      "url": "https://www.myflfamilies.com/documents/Medicaid%20Income%20Limits%20April%202026.pdf",
+      "supports": "Parents and caregivers monthly limits: $356 (1), $478 (2), $600 (3), $723 (4)",
+      "quote": "Medicaid Income Limits (Effective April 2026 – March 2027)"
+    },
+    {
+      "url": "https://ahca.myflorida.com/medicaid",
+      "supports": "AHCA is responsible for Florida Medicaid; Statewide Medicaid Managed Care program (redirects to /medicaid.html)",
+      "quote": "In Florida, the Agency for Health Care Administration (Agency) is responsible for Medicaid."
+    },
+    {
+      "url": "https://www.macpac.gov/wp-content/uploads/2026/01/EXHIBIT-36.-Medicaid-Income-Eligibility-Levels-as-a-Percentage-of-the-Federal-Poverty-Level-for-Non-Aged-Non-Disabled-Non-Pregnant-Adults-by-State-2025.pdf",
+      "supports": "SECONDARY (federal MACPAC compilation of CMS data, Feb 2026, levels as of July 2025): Florida parents 22% FPL; other adults 19-64 covered only at age 19-20",
+      "quote": "Florida 22 Age 19–20 only: 22"
+    },
+    {
+      "url": "https://www.kff.org/medicaid/status-of-state-medicaid-expansion-decisions/",
+      "supports": "SECONDARY (KFF, published 2026-11-06): Florida has not adopted expansion; 2026 SB 1758 work-requirement bill failed in the House; 2028 ballot initiative relaunched",
+      "quote": "Florida,FL,Not adopted"
+    },
+    {
+      "url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+      "supports": "No 1332 waiver (reinsurance) for Florida: page lists approved waivers by state and has no Florida entry",
+      "quote": null
+    },
+    {
+      "url": "https://floir.gov/about-us/organization-and-operation",
+      "supports": "Florida OIR is the regulator of insurers, rates and policy forms, including health insurers and HMOs",
+      "quote": "responsible for all activities concerning insurers and other risk bearing entities, including licensing, rates, policy forms"
+    },
+    {
+      "url": "https://floir.gov/life-health/federal-health-insurance",
+      "supports": "OIR publishes Florida ACA plan-year 2027 individual market premium information; no state premium subsidy or reinsurance program listed",
+      "quote": "Individual PPACA Market Monthly Premiums for Plan Year 2027"
+    },
+    {
+      "url": "https://floir.gov/",
+      "supports": "Regulator home page",
+      "quote": null
+    },
+    {
+      "url": "https://www.myfloridacfo.com/division/agents",
+      "supports": "Florida DFS licenses insurance agents (agent license lookup)",
+      "quote": "accurate information regarding insurance agents, adjusters, limited surety (bail bond) agents, navigators"
+    },
+    {
+      "url": "https://www.medicaid.gov/medicaid/national-medicaid-chip-program-information/medicaid-childrens-health-insurance-program-basic-health-program-eligibility-levels",
+      "supports": "PRIMARY (CMS) evidence that Florida did not expand Medicaid: 'Expansion to Adults' column shows 'No' (levels as of Dec 1, 2023); parents 24%. Added by checker; curl got 403, so it was read with WebFetch",
+      "quote": "Florida | 206% | 140% | 133% | 210% (1 up to 19) | 191% | N/A | 24%($) | No"
+    }
+  ],
+  "notes_unverified": [
+    "Florida's non-expansion status comes from KFF (secondary, Nov 6, 2026) and MACPAC's Feb 2026 table (a federal agency compiling CMS data, treated as secondary). No Florida state page says 'not expanded' in those words. DCF's Medicaid page simply lists no group for other adults. Medicaid.gov's Florida state profile could not be read reliably: curl got 403, and WebFetch returned only template text that wrongly read 'has expanded coverage', so it was not used.",
+    "The DCF table header shown is 'Ages 19 & 20 and Parents and Caregivers'. The figures are monthly maximum countable income for the household size; for a parent, the household size includes the children. The table does not state a %FPL. MACPAC gives 22% FPL as of July 2025.",
+    "No Florida state premium subsidy or Section 1332 reinsurance program for 2027 was found: no Florida entry on CMS's 1332 page, and none on OIR's federal health insurance page. state_help is null.",
+    "Insurance regulator: OIR (floir.gov) regulates insurers and reviews health rates, and the Department of Financial Services (myfloridacfo.com) licenses agents. footprint.py uses DFS. Which to show depends on the link's role: aca_gen's resource line says 'insurance regulator, including agent license lookup', which covers both.",
+    "HealthCare.gov's dates page lists the dates without years under an 'Enroll for 2027 now' banner. The CMS fact sheet (Oct 30, 2026) gives the full 2027 dates. A 2025 CMS rule would have moved federal open enrollment to end Dec 15 starting with plan year 2027, but both CMS and HealthCare.gov currently show Jan 15, 2027, so Jan 15 is used.",
+    "A web-search summary said HealthCare.gov notes that, starting January 1, 2027, only people with certain immigration statuses qualify for Marketplace savings. This was not on the HealthCare.gov pages fetched, so it is not verified and not used in copy.",
+    "Checker: the Medicaid.gov primary table is dated Dec 1, 2023. Current status (not expanded) rests on that table plus KFF (secondary, Nov 6, 2026) and the DCF Medicaid page, which lists no group for adults without children. No newer CMS or Florida page saying 'not expanded' in those words was found."
+  ],
+  "doi_quote_source_url": "https://floir.gov/about-us/organization-and-operation",
+  "medicaid_expanded_primary_url": "https://www.medicaid.gov/medicaid/national-medicaid-chip-program-information/medicaid-childrens-health-insurance-program-basic-health-program-eligibility-levels",
+  "medicaid_expanded_primary_quote": "Adults (Medicaid) Expansion to Adults ... Florida ... No (levels as of December 1, 2023)",
+  "medicaid_aged_quote": "Medicaid for low-income individuals who are either aged (65 or older) or disabled is called SSI-Related Medicaid.",
+  "verified_by_checker": true,
+  "checker_notes": [
+    "Re-fetched every cited URL on 2026-11-24 with curl and a browser user agent; all returned 200. Medicaid.gov eligibility table read with WebFetch after curl got 403.",
+    "CONFIRMED exchange type: CMS marketplaces map (PY2027, modified 09/01/2026) lists Florida under Federally-facilitated Marketplace (FFM) states. Florida is not on CMS's PY2027 SBE or SBE-FP lists or the PY2028 transition list (Oklahoma only), per the page modified 11/06/2026.",
+    "CONFIRMED open enrollment Nov 1, 2026 to Jan 15, 2027 and the Dec 15 deadline for Jan 1 coverage. Sources: HealthCare.gov dates page (banner 'Enroll for 2027 now ... Enroll by December 15 for coverage that starts January 1'), HealthCare.gov glossary, and the CMS fact sheet dated Oct 30, 2026 ('...for 2027 begins on November 1, 2026, and runs through January 15, 2027').",
+    "CONFIRMED DCF income table (Effective April 2026 – March 2027), column 'Ages 19 & 20 and Parents and Caregivers': $356, $478, $600, $723 for 1-4 people. DCF calls these the 'Maximum Monthly Income Limit'.",
+    "CONFIRMED DCF's adult groups include parents and caretaker relatives of children who live with them, pregnant women, former foster youth under 26, non-citizen emergencies, and aged (65 or older) or disabled people. CONFIRMED AHCA runs Medicaid and DCF decides eligibility.",
+    "CORRECTED copy, medicaid sentence 2: 'can qualify with income up to $600' became 'the income limit ... is $600 a month for a family of three'. The old wording implied income alone decides eligibility. $600 is an income limit, not a price or premium, so it does not break the no-prices rule.",
+    "STRENGTHENED non-expansion: a primary CMS source was added (Medicaid.gov, Florida 'Expansion to Adults' = 'No', as of Dec 1, 2023). KFF (Nov 6, 2026) confirms 'Not adopted', and its notes confirm SB 1758 (2026) passed the Senate and 'failed to pass in the House'. MACPAC confirms parents 22% FPL and 'Age 19–20 only' (July 2025).",
+    "CORRECTED source link: doi_quote ('responsible for all activities concerning insurers...') is not on the floir.gov home page. It is on https://floir.gov/about-us/organization-and-operation, so doi_quote_source_url was added. CONFIRMED the DFS quote on myfloridacfo.com/division/agents.",
+    "CONFIRMED there is no Florida entry on CMS's Section 1332 waiver page (modified 11/17/2026). OIR's federal health insurance page lists PY2027 premium tables and no state subsidy or reinsurance program. state_help stays null.",
+    "RULES CHECK on final copy: no '$0', 'free', prices, premiums, carrier names, phone numbers, superlatives, guarantees, urgency or guaranty-association mentions."
+  ]
+}

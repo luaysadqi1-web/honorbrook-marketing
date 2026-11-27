@@ -1,0 +1,189 @@
+{
+  "state": "District of Columbia",
+  "slug": "washington-dc",
+  "exchange_name": "DC Health Link (run by the DC Health Benefit Exchange Authority, DCHBX)",
+  "exchange_url": "https://www.dchealthlink.com/",
+  "exchange_type": "state-based exchange",
+  "exchange_type_source_url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+  "exchange_type_quote": "States by Marketplace Type (FFM/SBM-FP/SBM) for Plan Year 2027 ... State Based Marketplaces (SBM) states: ... District of Columbia",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-31",
+  "oe_source_url": "https://disb.dc.gov/page/information-about-rates-january-2027-health-plan-offerings-dc-health-link",
+  "oe_quote": "DC Health Link's open enrollment begins November 1, 2026, and ends on January 31, 2027",
+  "oe_jan1_deadline": null,
+  "medicaid_expanded": true,
+  "medicaid_program_name": "DC Medicaid, run by the DC Department of Health Care Finance (DHCF). Adults who are not eligible for Medicaid with income from 138% to 200% FPL may instead qualify for the Healthy DC Plan, a Basic Health Plan offered by the DC Health Benefit Exchange through DC Health Link.",
+  "medicaid_adult_income_limit_note": "DHCF Medicaid Income Limits page: effective 1/1/2026 the limit for Parent/Caretaker Relatives and Childless Adults is 138% FPL (133% + 5% disregard), down from 216%/210% + 5% disregard (FAQ: 221% and 215%). The page's table lists $1,800/month for 1 person, $2,432 for 2, $3,065 for 3, $3,697 for 4. These dollar figures equal 138% of the 2025 FPL, and DHCF's Aug 2025 FAQ says they 'will change again 1/1/2026 to align with federal requirements', so the dollar amounts may be out of date; the 138% FPL limit is the reliable fact. 2027 work requirement: DHCF's 'Federal Changes to Medicaid' page says that starting January 1, 2027, most adults ages 19 to 64 without dependent children must do at least 80 hours each month of work, training, volunteering or similar activities to keep Medicaid, and must renew every 6 months instead of once a year. DHCF's Jan 29, 2026 testimony describes this 'expansion' group as childless adults aged 21-64, so the two DHCF sources give different lower ages.",
+  "medicaid_url": "https://dhcf.dc.gov/page/medicaid-income-limits",
+  "medicaid_quote": "Medicaid income limits for Parent/Caretaker Relatives and Childless Adults decreases to 138% of the federal poverty limit (FPL).",
+  "medicaid_work_requirement_url": "https://dhcf.dc.gov/page/federal-changes-medicaid",
+  "medicaid_work_requirement_quote": "Starting January 1, 2027 ... Most adults ages 19 to 64 who do not have dependent children must do at least 80 hours each month",
+  "state_subsidy_or_reinsurance_note": "No District-funded premium subsidy and no Section 1332 reinsurance program found for 2027. CMS's Section 1332 waiver page has no District of Columbia entry, and no premium-subsidy program appears on the DISB or HBX pages reached (dchealthlink.com itself could not be read). The District's own coverage help is the Healthy DC Plan, a Basic Health Plan run through the DC Health Benefit Exchange (DC Health Link), new on 1/1/2026. DHCF MDL 25-02 (Oct 16, 2025) lists eligibility as age 21-64, US citizen or lawfully present, not eligible for Medicaid or employer coverage, and income from 138% to 200% FPL. The Mayor's Nov 6, 2026 newsletter says the plan is for residents with incomes up to two times FPL and includes vision and dental benefits for 2027. This is a coverage program, not a premium subsidy for private plans; the caller should decide whether it belongs in the 'State help' row.",
+  "state_subsidy_source_url": "https://content.govdelivery.com/accounts/DCWASH/bulletins/4315c8a",
+  "state_subsidy_quote": "Healthy DC Plan is for residents whose incomes are up to two times the federal poverty level",
+  "doi_name": "DC Department of Insurance, Securities and Banking (DISB)",
+  "doi_url": "https://disb.dc.gov/",
+  "doi_quote": "cultivate a regulatory environment that protects consumers and attracts and retains financial services firms to the District",
+  "copy": {
+    "exch": "DC Health Link",
+    "exch_type": "run by the District",
+    "medicaid": "The District has expanded Medicaid. Since January 1, 2026, the income limit for parents, caretaker relatives and adults without children is 138% of the federal poverty level. Starting January 1, 2027, most adults under 65 without dependent children must meet a work rule to keep Medicaid. They must do at least 80 hours a month of work, training, volunteering or similar activities.",
+    "state_help": "The District also offers the Healthy DC Plan through DC Health Link. It is for some adults who do not qualify for Medicaid and have incomes up to two times the federal poverty level. Age and other rules apply. For 2027, it includes vision and dental benefits."
+  },
+  "copy_trace": {
+    "medicaid_s1": "PRIMARY: Medicaid.gov eligibility levels table (CMS, levels as of Dec 1, 2023; fetched with WebFetch because curl gets 403): District of Columbia 'Adults (Medicaid) Expansion to Adults' = 210%. DHCF testimony 2026-01-29: '\"expansion\" enrollees under the DC Medicaid program are childless adults aged 21-64'. SECONDARY: KFF (Nov 6, 2026) table: 'District of Columbia,DC,Adopted and implemented'.",
+    "medicaid_s2": "DHCF income limits page: 'Medicaid income limits for Parent/Caretaker Relatives and Childless Adults decreases to 138% of the federal poverty limit (FPL).' Table column '(Effective 1/1/2026)'. MDL 25-02: 'Effective January 1, 2026, the income limits for PCRs and Childless Adults will be reduced to 138%'.",
+    "medicaid_s3": "DHCF Federal Changes to Medicaid page under 'Starting January 1, 2027': 'Most adults ages 19 to 64 who do not have dependent children must do at least 80 hours each month'. DHCF one-pager (Version 1, 11/18/2026): 'Starting January 1, 2027, individuals in the childless adult population must meet work or community engagement requirements.' 'Under 65' is used because DHCF's testimony gives ages 21-64 and the public page 19-64; both end at 64.",
+    "medicaid_s4": "DHCF Federal Changes to Medicaid page: 'at least 80 hours each month of work, training, volunteering, or similar activities to keep Medicaid.'",
+    "state_help_s1": "Mayor's newsletter 2026-11-06: 'in addition to the Healthy DC Plan'; residents can 'find out if they qualify for lower premiums or the Healthy DC Plan, and enroll: Go Online: DCHealthLink.com'. MDL 25-02: 'administered through the DC Health Benefit Exchange (HBX)'.",
+    "state_help_s2": "Mayor's newsletter 2026-11-06: 'Healthy DC Plan is for residents whose incomes are up to two times the federal poverty level'. MDL 25-02 eligibility: 'Not eligible for Medicaid'.",
+    "state_help_s3": "MDL 25-02 (Oct 16, 2025) eligibility criteria starting Jan 1, 2026: '21-64 years old; US Citizen or lawfully present; Not eligible for Medicaid; Not eligible for employer or other coverage'. No 2027 change to these rules was found, so the copy says only 'Age and other rules apply'.",
+    "state_help_s4": "Mayor's newsletter 2026-11-06: 'includes vision and dental benefits for 2027'. DHCF May 20, 2026 slides confirm the 2026 plan excluded 'dental and vision coverage', so this is a 2027 addition."
+  },
+  "sources": [
+    {
+      "url": "https://disb.dc.gov/page/information-about-rates-january-2027-health-plan-offerings-dc-health-link",
+      "supports": "2027 open enrollment dates (DC insurance regulator page on plan year 2027 DC Health Link rates)",
+      "quote": "DC Health Link's open enrollment begins November 1, 2026, and ends on January 31, 2027"
+    },
+    {
+      "url": "https://disb.dc.gov/release/disb-announces-approved-2027-health-insurance-rates-rigorous-review-protects-dc-consumers",
+      "supports": "2027 open enrollment dates confirmed in DISB press release dated Sep 18, 2026; DISB mission (regulator)",
+      "quote": "Open enrollment for individuals and families through DC Health Link begins November 1, 2026, and runs through January 31, 2027."
+    },
+    {
+      "url": "https://content.govdelivery.com/accounts/DCWASH/bulletins/4315c8a",
+      "supports": "Mayor Bowser's newsletter sent 11/06/2026: 2027 open enrollment dates, DC Health Link is the District's state-based marketplace, Healthy DC Plan income level and 2027 vision/dental benefits",
+      "quote": "The 2027 Open Enrollment period began on November 1 and runs through January 31, 2027."
+    },
+    {
+      "url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+      "supports": "Exchange type: CMS lists District of Columbia under State Based Marketplaces (SBM) for Plan Year 2027 (page last modified 09/01/2026)",
+      "quote": "State Based Marketplaces (SBM) states: ... District of Columbia"
+    },
+    {
+      "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+      "supports": "Exchange type: CMS 'State-based Exchanges for Plan Year 2027' list includes District of Columbia, linking the DC Health Link website at https://dchealthlink.com/ (page updated November 6, 2026)",
+      "quote": "For Plan Year 2027, there are 22 SBEs, and 2 State-based Exchanges on the Federal platform (SBE-FPs)."
+    },
+    {
+      "url": "https://dhcf.dc.gov/page/medicaid-income-limits",
+      "supports": "DC Medicaid adult income limit 138% FPL effective 1/1/2026 and the monthly dollar table",
+      "quote": "Medicaid income limits for Parent/Caretaker Relatives and Childless Adults decreases to 138% of the federal poverty limit (FPL)."
+    },
+    {
+      "url": "https://dhcf.dc.gov/publication/medicaid-director-letter-mdl-25-02-dc-medicaid-income-eligibility-changes-effective",
+      "supports": "Landing page for Medicaid Director Letter MDL 25-02 (PDF fetched below)",
+      "quote": null
+    },
+    {
+      "url": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/publication/attachments/MDL_25-02-Medicaid_PCR_and_CA_Income_Change_Eff_01_01_26_1.pdf",
+      "supports": "MDL 25-02 dated Oct 16, 2025: Medicaid limit lowered to 138% effective 1/1/2026; Healthy DC Plan eligibility (21-64, not eligible for Medicaid, 138%-200% FPL)",
+      "quote": "effective January 1, 2026, the income limits to be eligible for D.C. Medicaid will be lowered to 138%"
+    },
+    {
+      "url": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/page_content/attachments/Medicaid%20Changes%202025%20Fact%20Sheet%20FAQ%2010.2025.pdf",
+      "supports": "DHCF FAQ (Aug 2025): prior limits 221%/215%; Healthy DC Plan (Basic Health Plan) offered by the DC Health Benefit Exchange, effective 1/1/2026, income limit 200% FPL; dollar figures to change 1/1/2026",
+      "quote": "Healthy DC Plan (Basic Health Plan), new program effective 1/1/2026"
+    },
+    {
+      "url": "https://dhcf.dc.gov/page/federal-changes-medicaid",
+      "supports": "2027 work requirement and 6-month renewals for adults 19-64 without dependent children (reached via https://dhcf.dc.gov/node/1839746)",
+      "quote": "Most adults ages 19 to 64 who do not have dependent children must do at least 80 hours each month"
+    },
+    {
+      "url": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/release_content/attachments/DHCF%202026%20Performance%20Testimony%201.29.26.pdf",
+      "supports": "DHCF calls DC's childless adult group the 'expansion' group; work requirements from Jan 1, 2027; 78,000 childless adults at 0-138% FPL",
+      "quote": "\"expansion\" enrollees under the DC Medicaid program are childless adults aged 21-64"
+    },
+    {
+      "url": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/page_content/attachments/Biweekly%20DHCF%20Eligibility%20Meeting%20022526.pdf",
+      "supports": "Checked: the preliminary injunction DHCF mentions applies to the 10/1/26 non-citizen eligibility provision, not to the work requirement",
+      "quote": "A Preliminary Injunction was issued related to this provision, suspending implementation of this OB3 provision"
+    },
+    {
+      "url": "https://dhcf.dc.gov/service/medicaid",
+      "supports": "DC Medicaid program description (DHCF)",
+      "quote": "DC Medicaid is a healthcare program that pays for medical services for qualified people."
+    },
+    {
+      "url": "https://www.kff.org/medicaid/status-of-state-medicaid-expansion-decisions/",
+      "supports": "SECONDARY (KFF, published 2026-11-06): DC adopted and implemented expansion",
+      "quote": "41 states (including DC) have adopted the Medicaid expansion and 10 states have not adopted the expansion."
+    },
+    {
+      "url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+      "supports": "No 1332 waiver (reinsurance) for DC: page lists approved waivers by state and has no District of Columbia entry",
+      "quote": null
+    },
+    {
+      "url": "https://hbx.dc.gov/sites/default/files/dc/sites/hbx/page_content/attachments/Basic%20Health%20Plan%20Overview.pdf",
+      "supports": "Background only (HBX DRAFT, May 27, 2025): Healthy DC Plan is an ACA Section 1331 Basic Health Plan run by HBX; not used for copy",
+      "quote": "Affordable Care Act Section 1331 gives states an option to establish a BHP."
+    },
+    {
+      "url": "https://hbx.dc.gov/newsroom",
+      "supports": "Checked for a 2027 open enrollment release from the exchange authority; none found (latest OE release is for 2024)",
+      "quote": null
+    },
+    {
+      "url": "https://disb.dc.gov/",
+      "supports": "Regulator home page (DISB)",
+      "quote": null
+    },
+    {
+      "url": "https://www.dchealthlink.com/",
+      "supports": "NOT READ: returns HTTP 403 with a Cloudflare 'Verify you are human' check to curl, WebFetch and the browser; not bypassed",
+      "quote": null
+    },
+    {
+      "url": "https://www.medicaid.gov/medicaid/national-medicaid-chip-program-information/medicaid-childrens-health-insurance-program-basic-health-program-eligibility-levels",
+      "supports": "PRIMARY (CMS) evidence that DC expanded Medicaid: the 'Expansion to Adults' column shows 210% for DC (levels as of Dec 1, 2023). Added by checker; curl got 403, so it was read with WebFetch",
+      "quote": "District of Columbia | 319% | 319% | 319% | N/A | 319% | N/A | 216% | 210%"
+    },
+    {
+      "url": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/documents/Work%20Requirement%20Verification%20One%20Pager.pdf",
+      "supports": "DHCF one-pager (Version 1, 11/18/2026): the work rule starts Jan 1, 2027 for the childless adult population. Added by checker",
+      "quote": "Starting January 1, 2027, individuals in the childless adult population must meet work or community engagement requirements."
+    },
+    {
+      "url": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/page_content/attachments/Biweekly%20DHCF%20Eligibility%20Meeting%20052026.pdf",
+      "supports": "DHCF slides (May 20, 2026): HBX runs the Healthy DC Plan; in 2026 it did not cover dental and vision. Added by checker",
+      "quote": "The Healthy DC Plan is a new option administered by DCHBX and offers no cost coverage to eligible adults"
+    }
+  ],
+  "notes_unverified": [
+    "DC Health Link's own site (dchealthlink.com, including /individuals/plans, /faqs and HealthyDCPlan.com, which redirects there) shows a Cloudflare human-verification check (CAPTCHA) and could not be read. Per the rules it was not bypassed. The 2027 open enrollment dates come from three other DC government sources that agree: the DC insurance regulator's 2027 rates page, DISB's Sep 18, 2026 press release and the Mayor's Nov 6, 2026 newsletter. The owner may want to look at dchealthlink.com in a normal browser to confirm.",
+    "The deadline to enroll for January 1, 2027 coverage in DC was not found on any reachable DC government page, so oe_jan1_deadline is null. A third-party site says Dec 15; not used.",
+    "The DHCF table's Medicaid dollar figures ($1,800/month for one person, etc.) are 138% of the 2025 federal poverty level, and DHCF's own FAQ says they would change on 1/1/2026. No updated 2026 dollar table was found, so the copy uses only the 138% FPL limit.",
+    "Two DHCF sources give different ages for the work-requirement group: the public 'Federal Changes to Medicaid' page says ages 19 to 64, while the Jan 29, 2026 testimony says childless adults aged 21-64. The copy follows the public page.",
+    "DHCF says more information on the work requirement 'is coming'. Exemptions and how to report were not checked in detail.",
+    "The DC Medicaid expansion status comes from KFF (secondary, Nov 6, 2026) and from DHCF's use of the word 'expansion' for the childless adult group. Medicaid.gov's DC state profile could not be read reliably: curl got 403, and WebFetch returned only template text.",
+    "The Healthy DC Plan is a District coverage program (a Basic Health Plan), not a premium subsidy for private plans. It is placed in state_help for the caller or owner to accept or drop. Secondary sources report that some immigration statuses lose Healthy DC Plan and Marketplace tax-credit eligibility starting January 2027 under federal law. This was not verified on a primary page and is not used.",
+    "No District-funded premium subsidy for 2027 was found. Only the reachable DISB, HBX, DHCF and CMS pages were checked; dchealthlink.com could not be read.",
+    "Checker: the Healthy DC Plan eligibility rules (ages 21-64, citizen or lawfully present, no employer coverage) come from MDL 25-02 for 2026. No 2027 version was found on a reachable DC government page; dchealthlink.com is blocked by a Cloudflare check that was not bypassed. Federal H.R. 1 changes for some immigration statuses in 2027 are not checked, so the copy only says 'Age and other rules apply'.",
+    "Checker: no District-funded premium subsidy for 2027 was found on DISB, DHCF, the Mayor's newsletter or CMS pages, and KFF's Jan 9, 2026 roundup of state subsidies (secondary) does not name DC. DC Health Link's own site could not be read, so 'none' cannot be stated as fact in copy."
+  ],
+  "doi_quote_source_url": "https://disb.dc.gov/release/disb-announces-approved-2027-health-insurance-rates-rigorous-review-protects-dc-consumers",
+  "medicaid_expanded_primary_url": "https://www.medicaid.gov/medicaid/national-medicaid-chip-program-information/medicaid-childrens-health-insurance-program-basic-health-program-eligibility-levels",
+  "medicaid_expanded_primary_quote": "Adults (Medicaid) Expansion to Adults ... District of Columbia ... 210% (levels as of December 1, 2023)",
+  "medicaid_work_requirement_quote_2": "Starting January 1, 2027, individuals in the childless adult population must meet work or community engagement requirements.",
+  "medicaid_work_requirement_url_2": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/documents/Work%20Requirement%20Verification%20One%20Pager.pdf",
+  "state_subsidy_source_url_2": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/publication/attachments/MDL_25-02-Medicaid_PCR_and_CA_Income_Change_Eff_01_01_26_1.pdf",
+  "state_subsidy_quote_2": "DC residents are eligible for Healthy DC Plan if they are: 21-64 years old; US Citizen or lawfully present; Not eligible for Medicaid",
+  "verified_by_checker": true,
+  "checker_notes": [
+    "Re-fetched every cited URL on 2026-11-24 with curl and a browser user agent. dchealthlink.com still returns 403 with a Cloudflare 'Just a moment...' check; not bypassed. Medicaid.gov eligibility table read with WebFetch after curl got 403.",
+    "CONFIRMED exchange type: CMS marketplaces map (PY2027, modified 09/01/2026) lists District of Columbia under State Based Marketplaces. CMS state-marketplaces page (modified 11/06/2026) lists DC for PY2027 with a link to https://dchealthlink.com/ and gives 22 SBEs and 2 SBE-FPs.",
+    "CONFIRMED 2027 open enrollment Nov 1, 2026 to Jan 31, 2027: exact quotes found on the DISB 2027 rates page, the DISB release dated Friday, Sep 18, 2026, and the Mayor's bulletin sent 11/06/2026. No January 1 coverage deadline appears on any of them; oe_jan1_deadline stays null.",
+    "CONFIRMED 138% FPL limit effective 1/1/2026 (DHCF income limits page and MDL 25-02 dated Oct 16, 2025), prior 221%/215% (DHCF FAQ, August 2025 version 1.0), and that the $1,800 per person figure sits in the 1/1/2026 column. The FAQ says the figures 'will change again 1/1/2026'; the copy correctly leaves out dollar amounts.",
+    "CONFIRMED work rule from Jan 1, 2027 (80 hours a month of work, training, volunteering or similar) and 6-month renewals on DHCF's Federal Changes page, plus a new DHCF one-pager dated 11/18/2026. The age conflict is real: the public page says 19 to 64, the Jan 29, 2026 testimony says 21-64.",
+    "CORRECTED copy, medicaid: sentence 2 now states the 138% income limit as DHCF does, rather than 'can qualify', which implied income alone is enough. The 41-word work-rule sentence is split in two. '19 to 64' became 'under 65', which both DHCF sources support.",
+    "CORRECTED copy, state_help: the old text implied anyone under Medicaid with income up to 2x FPL qualifies. MDL 25-02 also requires age 21-64, citizen or lawfully present status, and no employer or other coverage. Copy now says 'some adults' and 'Age and other rules apply'.",
+    "STRENGTHENED expansion status: a primary CMS source (Medicaid.gov eligibility levels, 'Expansion to Adults' 210% for DC, as of Dec 1, 2023) was added. Before, the claim rested mainly on KFF. KFF (Nov 6, 2026) confirms 'Adopted and implemented', 1/1/2014.",
+    "CORRECTED source link: doi_quote ('cultivate a regulatory environment...') is not on the disb.dc.gov home page. It appears in the mission statement on the DISB Sep 18, 2026 release page, so doi_quote_source_url was added.",
+    "CONFIRMED there is no DC entry on CMS's Section 1332 waiver page (modified 11/17/2026).",
+    "OWNER DECISION: the Healthy DC Plan is a Basic Health Plan, meaning coverage and not a premium subsidy. It is kept in state_help with wording that does not call it a subsidy. Drop it if the 'State help' row must hold only subsidies or reinsurance.",
+    "RULES CHECK on final copy: no '$0', 'free', 'no cost', prices, premiums, carrier names, phone numbers, superlatives, guarantees, urgency or guaranty-association mentions. The Mayor's bulletin says 'high-quality' and 'Free Expert Help'; neither phrase was carried into copy."
+  ]
+}

@@ -1,0 +1,305 @@
+{
+ "group": "final-expense",
+ "pages": [
+  {
+   "page": "final-expense-life-insurance.html",
+   "replacements": [
+    {
+     "old": "<strong>Many plans ask health questions instead of a medical exam.</strong> Get a free quote today — <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+     "new": "<strong>Many plans ask health questions instead of a medical exam.</strong> Call <a href=\"tel:+13016158289\">(301) 615-8289</a> or <a href=\"#quote\">request a quote</a>.</div>",
+     "why": "Top banner: drop \"free quote\" (plan item 1: no \"free\" wording) and give a second path to the quote form on this page (#quote) next to the allowed phone number.",
+     "sources": []
+    },
+    {
+     "old": "and the premium stays level for life.</p>",
+     "new": "and the premium is usually level for as long as you pay it.</p>",
+     "why": "Hero: removes the certainty claim about level premiums (same fix as the FAQ \"never increases\" line); hedged to match the Texas Department of Insurance wording that whole life premiums usually do not go up.",
+     "sources": [
+      "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance life insurance guide, Last updated: 12/12/2025: whole life premiums \"usually don't go up\")",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "NPN 21370662 · Updated June 2026</p>",
+     "new": "NPN 21370662 · Updated November 2026</p>",
+     "why": "Reviewed/updated date reflects this content revision.",
+     "sources": []
+    },
+    {
+     "old": "<p>Final expense insurance is a smaller whole life policy designed for one purpose:",
+     "new": "<p>Final expense insurance, also sold as burial insurance or funeral insurance, is a smaller whole life policy designed for one purpose:",
+     "why": "Uses \"funeral insurance\" once, naturally, in the body (searches targeted in plan item 5). \"Cremation\" already appears once in this same paragraph, so it is not added again.",
+     "sources": []
+    },
+    {
+     "old": "That money is paid <strong>tax-free</strong>, and your family can use it however they need — there are no restrictions.",
+     "new": "The <a href=\"https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds\" target=\"_blank\" rel=\"noopener\">IRS says</a> life insurance proceeds a beneficiary receives because of the insured person's death are generally not taxable income, though any interest paid on them is taxable. Your family can use the money however they need.",
+     "why": "Sources the \"tax-free\" claim to the IRS FAQ and adds the IRS interest exception, instead of an unqualified \"tax-free\".",
+     "sources": [
+      "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds (Page Last Reviewed or Updated: 16-Oct-2026)"
+     ]
+    },
+    {
+     "old": "As long as you pay the premium, the coverage never expires and is there whenever it's needed.</p>",
+     "new": "As long as you pay the premiums, it does not run out at the end of a set term the way term life does.</p>",
+     "why": "Removes \"never expires\" (owner rule: no \"never\"/\"always\" certainty wording) while keeping the permanent-vs-term point.",
+     "sources": []
+    },
+    {
+     "old": "<p>One of the biggest worries people have is whether they'll even qualify — especially if they've had health problems. With final expense insurance, qualifying is usually much simpler than people expect:</p>",
+     "new": "<p>A common worry is whether you can qualify, especially after health problems. Here is how it usually works:</p>",
+     "why": "Removes the superlative \"biggest\" and the unsupported \"much simpler than people expect\".",
+     "sources": []
+    },
+    {
+     "old": "<li><strong>Options for many health histories</strong>, ages 45–85, including common conditions like diabetes, high blood pressure and heart conditions.</li>",
+     "new": "<li><strong>Options for many health histories</strong>, including common conditions like diabetes, high blood pressure and heart conditions. Issue ages vary by insurer.</li>",
+     "why": "Plan item 5: the \"ages 45-85\" issue-age range is carrier-specific; replaced with \"issue ages vary by insurer\".",
+     "sources": []
+    },
+    {
+     "old": "<li><strong>Level premiums</strong>: on a whole life final expense policy, the premium is set when the policy starts and stays level.</li>",
+     "new": "<li><strong>Level premiums</strong>: on a whole life final expense policy, the premium is usually set when the policy starts and stays level. Check the policy to confirm.</li>",
+     "why": "Checker addition (plan item 5, level-premium hedge): this bullet still stated level premiums as certain while the FAQ, hero and callout are now hedged; it now matches them (\"usually ... check the policy\").",
+     "sources": [
+      "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance life insurance guide, Last updated: 12/12/2025: whole life premiums \"usually don't go up\")",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "Choose <strong>final expense</strong> if you want permanent coverage that's always there to handle funeral and final costs — it doesn't expire and the premium never changes.",
+     "new": "Choose <strong>final expense</strong> if you want smaller, permanent coverage for funeral and final costs. It does not end after a set term, and the premium is usually level.",
+     "why": "Removes \"always\" and \"the premium never changes\" from the term-vs-final-expense callout (same certainty wording plan item 5 removes from the FAQ).",
+     "sources": [
+      "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance life insurance guide, Last updated: 12/12/2025: whole life premiums \"usually don't go up\")",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "<h2>Life insurance by state</h2>",
+     "new": "<h2>Before you buy</h2>\n    <p>These short guides cover what to check before you apply:</p>\n    <ul>\n      <li><a href=\"/blog/hidden-costs-final-expense\">The hidden costs of final expense insurance</a>: underwriting classes, waiting periods and the premium math.</li>\n      <li><a href=\"/blog/how-much-does-final-expense-insurance-cost-at-65-70-75\">What final expense costs at 65, 70 and 75</a>: what sets the price.</li>\n      <li><a href=\"/blog/graded-death-benefit-final-expense-explained\">What a graded death benefit is</a>: what your family receives if death comes in the first years of a graded policy.</li>\n      <li><a href=\"/blog/can-i-get-life-insurance-at-80-with-health-problems\">Life insurance at 80 with health problems</a>: simplified, graded and guaranteed-issue options.</li>\n      <li><a href=\"/blog/no-exam-life-insurance-how-it-works-and-who-its-for\">No-exam life insurance</a>: how simplified issue and guaranteed issue work.</li>\n      <li><a href=\"/blog/final-expense-vs-burial-insurance-vs-prepaid-funeral-plan\">Final expense vs. burial insurance vs. a prepaid funeral plan</a>: how an insurance policy differs from a contract with a funeral home.</li>\n      <li><a href=\"/blog/how-much-does-a-funeral-cost-and-who-pays-without-a-policy\">How much a funeral costs, and who pays</a>: your rights when you shop, and who pays when there is no policy.</li>\n    </ul>\n    <p><strong>Veterans:</strong> If the person was a veteran, VA may pay an allowance toward part of the burial, funeral, and plot or interment costs. VA&rsquo;s <a href=\"https://www.va.gov/burials-memorials/veterans-burial-allowance/\" target=\"_blank\" rel=\"noopener\">Veterans burial allowance page</a> (updated October 30, 2026) explains who is eligible and the current amounts. That benefit is separate from any private life policy, and Honorbrook is not connected with VA. For private coverage options, see <a href=\"/veterans-life-insurance\">life insurance for veterans</a>.</p>\n\n    <h2>Life insurance by state</h2>",
+     "why": "Plan item 5: adds a \"Before you buy\" block linking the 6 final expense posts and the no-exam post (all 7 slugs confirmed in staging/site-onyx/blog; the item 12 post /blog/government-final-expense-program does not exist yet, so it is not linked). Plan items 5 and 10: adds one VA burial line linking va.gov (no amounts restated, page date given, no VA affiliation implied) and /veterans-life-insurance. Checker: VA sentence reworded so it does not repeat the line the veterans patch adds to /veterans-life-insurance; the prepaid-plan link text now says what that post covers (policy vs. a contract with a funeral home).",
+     "sources": [
+      "https://www.va.gov/burials-memorials/veterans-burial-allowance/ (Last updated October 30, 2026)"
+     ]
+    },
+    {
+     "old": "      <h3>Find out what you'd pay — for free</h3>\n      <p class=\"sans\">A quick, no-pressure conversation is all it takes to see your options.</p>\n      <a class=\"btn-primary sans\" href=\"/#contact\">Get my free final expense quote</a>",
+     "new": "      <h3>Find out what you'd pay</h3>\n      <p class=\"sans\">A short, no-pressure conversation shows your options. There is no fee for our help.</p>\n      <a class=\"btn-primary sans\" href=\"#quote\">Get my final expense quote</a>",
+     "why": "Plan item 1: the in-body quote button went to /#contact (the homepage Medicare-led form); it now goes to this page's own quote form (#quote). \"Free\" wording replaced with \"no fee for our help\" per plan item 1.",
+     "sources": []
+    },
+    {
+     "old": "    {\"@type\":\"Question\",\"name\":\"Can I qualify with health problems?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Almost always yes. Most final expense plans are simplified-issue, meaning there's no medical exam and just a few health questions. Even with conditions like diabetes, heart disease, or COPD, many carriers will approve you. And if your health is more serious, guaranteed-issue options exist that accept you regardless of health history.\"}},\n    {\"@type\":\"Question\",\"name\":\"Will my premium ever go up?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. Final expense is whole life insurance, so your premium is locked in the day your policy starts and never increases — no matter your age or any changes in your health.\"}},\n    {\"@type\":\"Question\",\"name\":\"How much coverage do I need?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Most people choose between $10,000 and $25,000, which is typically enough to cover funeral and burial costs plus any final medical bills or small debts. We'll help you figure out the right amount for your situation without overselling you.\"}},\n    {\"@type\":\"Question\",\"name\":\"How fast does my family get the money?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Usually within days of filing a claim. The death benefit is paid directly to your named beneficiaries, tax-free, so they have cash on hand quickly to handle funeral costs and final expenses.\"}}",
+     "new": "    {\"@type\":\"Question\",\"name\":\"Can I qualify with health problems?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Often, yes. Many final expense plans ask a few health questions instead of a medical exam, and some insurers accept common conditions like diabetes and heart disease. Each insurer sets its own rules. If your health is more serious, guaranteed-issue plans skip the health questions, but they have a waiting period. If death happens in the first years of the policy, often the first 2 or 3, the policy may pay only a reduced amount, such as the premiums paid, instead of the full benefit. Graded-benefit plans also pay less in the early years. The exact terms are in the policy, so read them before you buy. See how a graded death benefit works.\"}},\n    {\"@type\":\"Question\",\"name\":\"Will my premium ever go up?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Usually not. A whole life final expense policy normally sets the premium when the policy starts and keeps it level for as long as you pay it. Check the premium terms in the policy before you buy to confirm yours works that way.\"}},\n    {\"@type\":\"Question\",\"name\":\"How much coverage do I need?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Many people choose an amount close to the funeral and final bills they expect to leave. We'll help you decide the right amount for your situation without overselling you.\"}},\n    {\"@type\":\"Question\",\"name\":\"How fast does my family get the money?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"The insurer pays after it receives proof of death, such as a certified copy of the death certificate, and the completed claim forms. How long that takes depends on the insurer and the claim. The money goes directly to the beneficiaries you name. Under IRS rules, proceeds paid because of the insured person's death are generally not taxable income, but interest paid on them is.\"}}",
+     "why": "Plan item 5: FAQPage JSON-LD now matches the visible FAQ word for word (generated from the visible answers with tags stripped). Removes the unsourced \"$10,000 to $25,000\", \"Almost always\", \"never increases\", \"within days\" and the unqualified \"tax-free\".",
+     "sources": [
+      "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds (Page Last Reviewed or Updated: 16-Oct-2026)",
+      "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance life insurance guide, Last updated: 12/12/2025: whole life premiums \"usually don't go up\")",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "    <details><summary>Can I qualify with health problems?</summary><div class=\"a\">Almost always yes. Most final expense plans are simplified-issue — no medical exam, just a few health questions — and many carriers approve common conditions like diabetes and heart disease. If your health is more serious, guaranteed-issue options exist that accept you regardless of health history.</div></details>\n    <details><summary>Will my premium ever go up?</summary><div class=\"a\">No. Final expense is whole life insurance, so your premium is locked in the day your policy starts and never increases — no matter your age or any changes in your health.</div></details>\n    <details><summary>How much coverage do I need?</summary><div class=\"a\">Many people choose an amount close to the funeral and final bills they expect to leave. We'll help you decide the right amount for your situation without overselling you.</div></details>\n    <details><summary>How fast does my family get the money?</summary><div class=\"a\">Usually within days of filing a claim. The death benefit is paid directly to your beneficiaries, tax-free, so they have cash on hand quickly to handle funeral and final expenses.</div></details>",
+     "new": "    <details><summary>Can I qualify with health problems?</summary><div class=\"a\">Often, yes. Many final expense plans ask a few health questions instead of a medical exam, and some insurers accept common conditions like diabetes and heart disease. Each insurer sets its own rules. If your health is more serious, guaranteed-issue plans skip the health questions, but they have a waiting period. If death happens in the first years of the policy, often the first 2 or 3, the policy may pay only a reduced amount, such as the premiums paid, instead of the full benefit. Graded-benefit plans also pay less in the early years. The exact terms are in the policy, so read them before you buy. See <a href=\"/blog/graded-death-benefit-final-expense-explained\">how a graded death benefit works</a>.</div></details>\n    <details><summary>Will my premium ever go up?</summary><div class=\"a\">Usually not. A whole life final expense policy normally sets the premium when the policy starts and keeps it level for as long as you pay it. Check the premium terms in the policy before you buy to confirm yours works that way.</div></details>\n    <details><summary>How much coverage do I need?</summary><div class=\"a\">Many people choose an amount close to the funeral and final bills they expect to leave. We'll help you decide the right amount for your situation without overselling you.</div></details>\n    <details><summary>How fast does my family get the money?</summary><div class=\"a\">The insurer pays after it receives proof of death, such as a certified copy of the death certificate, and the completed claim forms. How long that takes depends on the insurer and the claim. The money goes directly to the beneficiaries you name. Under IRS rules, proceeds paid because of the insured person's death are generally not taxable income, but interest paid on them is.</div></details>",
+     "why": "Plan item 5: \"Almost always yes\" becomes \"Often, yes\" and the answer gains the waiting-period / graded-benefit caveat (Virginia Bureau of Insurance: guaranteed-issue restrictions often apply in the first two or three years; such policies usually pay only the premiums paid early on); \"never increases ... no matter your age\" becomes a hedged level-premium answer with \"check the policy\"; \"Usually within days of filing a claim\" becomes \"pays after it receives proof of death ... and the completed claim forms\"; \"tax-free\" now follows the IRS FAQ, with its interest exception. \"How much coverage\" answer unchanged. Checker: dropped the unsourced \"natural causes\" condition and made the reduced payout \"may pay only a reduced amount, such as the premiums paid\" to match the Virginia guide.",
+     "sources": [
+      "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds (Page Last Reviewed or Updated: 16-Oct-2026)",
+      "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance life insurance guide, Last updated: 12/12/2025: whole life premiums \"usually don't go up\")",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "      <a class=\"rel-card\" href=\"/medicare-supplement-medigap\"><h3>Medicare Supplement</h3><p>See any doctor nationwide with predictable costs.</p></a>\n      <a class=\"rel-card\" href=\"/medicare-advantage\"><h3>Medicare Advantage</h3><p>All-in-one plans, with premiums, networks and benefits that vary by plan.</p></a>",
+     "new": "      <a class=\"rel-card\" href=\"/whole-life-insurance\"><h3>Whole Life</h3><p>Permanent coverage with cash value.</p></a>\n      <a class=\"rel-card\" href=\"/term-life-insurance\"><h3>Term Life</h3><p>Coverage for a set number of years.</p></a>",
+     "why": "Owner rule: no Medicare sales on life pages. The two Medicare cards in \"Keep exploring\" are swapped for whole life and term life (card wording reused from existing cards on the site).",
+     "sources": []
+    }
+   ]
+  },
+  {
+   "page": "blog/hidden-costs-final-expense.html",
+   "replacements": [
+    {
+     "old": "<meta name=\"twitter:description\" content=\"One of the most useful — and most over-sold — products in the senior insurance market.\">",
+     "new": "<meta name=\"twitter:description\" content=\"Underwriting classes, waiting periods, premium math and nonforfeiture options: what to check before you buy a final expense policy.\">",
+     "why": "Removes the superlative \"most\" (owner rule) from the share description.",
+     "sources": []
+    },
+    {
+     "old": "\"description\": \"Final expense is one of the most useful — and most over-sold — products in the senior insurance market. What to watch for and what to ask before signing.\",\n  \"datePublished\": \"2026-06-24\",\n  \"dateModified\": \"2026-09-07\",",
+     "new": "\"description\": \"Final expense insurance can be useful, but the wrong policy can cost more than it should. What to watch for and what to ask before signing.\",\n  \"datePublished\": \"2026-06-24\",\n  \"dateModified\": \"2026-11-24\",",
+     "why": "BlogPosting schema: removes the superlative \"most\" and updates dateModified for this revision.",
+     "sources": []
+    },
+    {
+     "old": "<div class=\"aep-banner sans\" id=\"aepBanner\">\n  <strong>Medicare Annual Enrollment runs Oct 15 – Dec 7.</strong>\n  <span id=\"aepMsg\"></span> <a href=\"/#contact\">Get on our priority review list →</a>\n</div>",
+     "new": "<div class=\"aep-banner sans\"><strong>Comparing final expense policies?</strong> Call <a href=\"tel:+13016158289\">(301) 615-8289</a> or <a href=\"/final-expense-life-insurance#quote\">request a quote</a>.</div>",
+     "why": "Checker addition (owner rule: no Medicare sales on life pages; plan item 1: no leak to the /#contact Medicare form). This life post opened with a Medicare Annual Enrollment banner linking to /#contact. It now offers the allowed phone number and the final expense quote form. The banner script already returns early when #aepMsg is missing (if(!msg)return;), so removing the id is safe.",
+     "sources": []
+    },
+    {
+     "old": "<p class=\"lead\">One of the most useful — and most over-sold — products in the senior insurance market. Here's what to watch for, and what to ask before you sign.</p>",
+     "new": "<p class=\"lead\">Final expense insurance can be useful coverage, and it is also heavily marketed to seniors. Here's what to watch for, and what to ask before you sign.</p>",
+     "why": "Removes the superlatives \"most useful\" / \"most over-sold\" (owner rule).",
+     "sources": []
+    },
+    {
+     "old": "By Luay Sadqi, Licensed Agent (NPN 21370662) · June 2026</p>",
+     "new": "By Luay Sadqi, Licensed Agent (NPN 21370662) · June 2026 · Updated November 2026</p>",
+     "why": "Shows the revision date on the byline.",
+     "sources": []
+    },
+    {
+     "old": "    <p>Final expense whole life is a genuinely useful product. It can be the right answer for many families — especially those who want simple, permanent coverage for funeral and burial costs without medical exams or complex underwriting. But it's also one of the most aggressively marketed products in the senior insurance market, and the wrong policy can cost you thousands in extra premium over the years it's in force.</p>",
+     "new": "    <p>Final expense whole life can be a useful product. It can be the right answer for many families, especially those who want simple, permanent coverage for funeral and burial costs without a medical exam. But it is heavily marketed to seniors, and the wrong policy can mean paying more premium than you need to for as long as you keep it.</p>",
+     "why": "Removes the superlative \"one of the most aggressively marketed products\" and the unsourced dollar claim \"cost you thousands\".",
+     "sources": []
+    },
+    {
+     "old": "    <p>The argument for final expense is straightforward: average funeral costs in the United States now run several thousand dollars and often into five figures. Many families don't have that liquid. When death comes unexpectedly, the cost falls on grieving spouses and adult children, often paid through credit cards, hardship withdrawals from retirement accounts, or quick-sold belongings.</p>\n    <p>A small, permanent whole life policy — usually $10,000 to $25,000 in face amount — solves this. Premiums never change. Once issued, the coverage doesn't expire. The death benefit pays out tax-free, typically within a couple of weeks of a filed claim. That's real value.</p>",
+     "new": "    <p>The argument for final expense is straightforward: a funeral is a large bill, and it often comes with little warning. The National Funeral Directors Association publishes national median funeral prices from its <a href=\"https://content.nfda.org/news/media-center/nfda-news-releases/id/8134/2023-nfda-general-price-list-study-shows-inflation-increasing-faster-than-the-cost-of-a-funeral\" target=\"_blank\" rel=\"noopener\">2023 General Price List Study</a> (released December 8, 2023), but your own cost depends on the funeral home and the choices you make. Under the <a href=\"https://consumer.ftc.gov/articles/ftc-funeral-rule\" target=\"_blank\" rel=\"noopener\">FTC Funeral Rule</a>, you can ask a funeral home for prices by phone, get a General Price List to keep, and buy only the goods and services you want. Many families don't have that money set aside, and the bill falls on a spouse or adult children, sometimes paid with credit cards or loans.</p>\n    <p>A small, permanent whole life policy can solve this. You pick a face amount close to the costs you expect to leave. On a whole life final expense policy the premium is usually set at the start and stays level; check the policy to confirm. The coverage does not end after a set term the way term life does. Under the <a href=\"https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds\" target=\"_blank\" rel=\"noopener\">IRS's rules</a>, a beneficiary generally does not owe income tax on life insurance paid because of the insured's death, but interest added to the payment is taxable. The insurer pays after it receives proof of death and the claim form.</p>",
+     "why": "Plan item 5: removes \"usually $10,000 to $25,000\", \"Premiums never change\", \"typically within a couple of weeks\", the unsourced \"several thousand dollars and often into five figures\" and \"hardship withdrawals / quick-sold belongings\". Adds the IRS source for tax treatment (with the interest exception), the FTC Funeral Rule link and rights, and the dated NFDA 2023 study link. NFDA dollar medians are not restated because the owner rule allows dollar amounts only from a primary government source (NFDA is a trade association). Checker: confirmed IRS (interest exception), FTC rights (prices by phone, a General Price List to keep, buy only what you want) and the NFDA release date; proof-of-death line backed by the Virginia guide.",
+     "sources": [
+      "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds (Page Last Reviewed or Updated: 16-Oct-2026)",
+      "https://consumer.ftc.gov/articles/ftc-funeral-rule (page dated July 2012)",
+      "https://content.nfda.org/news/media-center/nfda-news-releases/id/8134/2023-nfda-general-price-list-study-shows-inflation-increasing-faster-than-the-cost-of-a-funeral (news release dated December 8, 2023; the nfda.org articleid/8134 URL now returns 404)",
+      "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance life insurance guide, Last updated: 12/12/2025: whole life premiums \"usually don't go up\")",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "    <p>Final expense applications fall into four underwriting categories. The category you qualify for can change your premium by 50% or more for the same face amount.</p>",
+     "new": "    <p>Insurers sort final expense applicants into underwriting classes. The names and rules differ by insurer, but these four types are common. The class you land in can change your premium a great deal for the same face amount, so know which one you are in.</p>",
+     "why": "Plan item 5: removes the unsourced \"50% or more\" and notes that class names and rules vary by insurer.",
+     "sources": []
+    },
+    {
+     "old": "    <p>Best rate, day-one full coverage. For applicants in good health — no major medical events in the past 24 months, no recent cancer treatment, no insulin-dependent diabetes, no heart attack or stroke history. Most healthy 55- to 75-year-olds qualify.</p>",
+     "new": "    <p>Lower rate, full coverage from the first day. For applicants whose answers to the insurer's health questions raise no concerns. Each insurer writes its own questions and look-back periods, so the same health history can land in different classes at different companies.</p>",
+     "why": "Plan item 5: removes the generic underwriting rules (\"no major medical events in the past 24 months...\", \"Most healthy 55- to 75-year-olds qualify\") and the superlative \"Best rate\".",
+     "sources": []
+    },
+    {
+     "old": "    <p>Mid-tier rate, day-one full coverage. For applicants with some health concerns — controlled diabetes, treated cancer history with appropriate wait periods, controlled high blood pressure. Premiums run meaningfully higher than Preferred.</p>",
+     "new": "    <p>Mid-tier rate, full coverage from the first day. For applicants with some health conditions that an insurer still accepts for the full benefit. Which conditions qualify depends on the insurer. Premiums are higher than Preferred.</p>",
+     "why": "Plan item 5: removes the generic list of conditions that qualify for Standard; each insurer sets its own rules.",
+     "sources": []
+    },
+    {
+     "old": "    <p>Higher rate, partial benefit during the first two to three years. If you pass during the waiting period, your beneficiary receives a partial payout — often premiums paid plus interest, or a fraction of the face amount. After the waiting period, the full benefit applies. For applicants with significant health issues who aren't terminal.</p>",
+     "new": "    <p>Higher rate, and a reduced benefit in the early years, often the first 2 or 3 years; the exact period is in the policy. If death happens during that period, your beneficiary receives a partial payout, such as the premiums paid back or a set percentage of the face amount. After the period, the full benefit applies.</p>",
+     "why": "Plan item 5: \"first two to three years\" becomes \"often the first 2 or 3 years; the exact period is in the policy\"; removes the generic \"significant health issues who aren't terminal\" rule. Checker: dropped the unsourced \"from natural causes\" and \"plus some interest\".",
+     "sources": [
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "    <p>Highest rate, no health questions, but with a two- to three-year waiting period. If you pass during the waiting period from natural causes, your beneficiary receives premiums paid plus interest. Accidental death is covered from day one. For applicants who can't qualify for any other class — usually due to recent serious illness, a terminal diagnosis, or insulin-dependent diabetes with complications.</p>",
+     "new": "    <p>Usually costs more than the other classes for the same face amount. No health questions, and a waiting period, often the first 2 or 3 years; the exact period is in the policy. If death happens during the waiting period, many of these policies pay back only the premiums paid instead of the face amount. Ask whether the policy pays the full benefit for accidental death during that time. This class is meant for people who cannot qualify for coverage that asks health questions.</p>",
+     "why": "Plan item 5: \"two- to three-year waiting period\" becomes \"often the first 2 or 3 years; the exact period is in the policy\" (Virginia Bureau of Insurance guide). Removes the superlative \"Highest rate\", the certainty \"Accidental death is covered from day one\" and the generic underwriting list. Checker: the unsourced \"Many pay the full benefit for accidental death from the start\" is now a question to ask; \"premiums paid plus interest\" became \"pay back only the premiums paid\", as the Virginia guide says.",
+     "sources": [
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "The applicant ends up paying a far higher premium for waiting-period coverage they never needed. Always ask which class you're in, and why that one specifically.",
+     "new": "The applicant pays a higher premium and accepts a waiting period they did not need. Ask which class you're in, and why that one specifically.",
+     "why": "Removes \"never\" and \"Always\" (owner rule) from the callout.",
+     "sources": []
+    },
+    {
+     "old": "<h2>The premium math most families don't run</h2>",
+     "new": "<h2>The premium math many families don't run</h2>",
+     "why": "Removes the superlative \"most\" from the heading.",
+     "sources": []
+    },
+    {
+     "old": "    <p>Final expense premiums are level — they never change. That sounds great until you do the math.</p>",
+     "new": "    <p>On a whole life final expense policy, the premium is usually level: the same amount for as long as you pay. That sounds great until you do the math.</p>",
+     "why": "Plan item 5: removes \"they never change\"; hedged level-premium wording.",
+     "sources": [
+      "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance life insurance guide, Last updated: 12/12/2025: whole life premiums \"usually don't go up\")",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "    <p>It depends. The policy guaranteed the family would have the money when death came, regardless of when. If that same buyer had passed just a couple of years after issue, the policy would have paid out the full benefit for a small fraction of it in premium. The insurance company shoulders the risk that some buyers live long enough to pay in more than the death benefit. That's the trade you're buying.</p>",
+     "new": "    <p>It depends. The policy promised the family a set amount whenever death came, once any waiting period had passed. If that same buyer had passed a few years after issue, a policy with full coverage from the first day would have paid the full benefit for a small fraction of it in premium. The insurer takes the risk that a buyer dies early, and the buyer accepts that a long life may mean paying in more than the benefit. That's the trade you're buying.</p>",
+     "why": "Removes \"guaranteed\" (owner rule), notes that graded and guaranteed-issue policies do not pay in full early, and corrects the risk sentence (the insurer bears early-death risk, not long-life risk).",
+     "sources": []
+    },
+    {
+     "old": "    <p>Every whole life policy includes \"nonforfeiture options\" — what happens to your coverage if you ever stop paying premiums. There are three.</p>\n    <h3>Extended Term Insurance (often the default)</h3>",
+     "new": "    <p>Whole life policies that build cash value include \"nonforfeiture options\": what happens to your coverage if you stop paying premiums. Besides taking the cash surrender value, these are the choices to ask about.</p>\n    <h3>Extended Term Insurance</h3>",
+     "why": "Removes the absolute \"Every whole life policy ... There are three\" (the cash surrender value is also an option, and automatic premium loan is a separate feature) and the unsourced \"often the default\" heading.",
+     "sources": [
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "For final expense buyers, this is almost always the better choice.</p>",
+     "new": "If keeping some coverage for life matters to you, ask for this option.</p>",
+     "why": "Plan item 5: removes \"almost always the better choice\". Checker: replaced \"often the better fit\" (an unsourced judgment) with a plain prompt to ask for the option.",
+     "sources": []
+    },
+    {
+     "old": "    <p>Many policies default to Extended Term Insurance. <strong>Change it to Reduced Paid-Up Insurance during the application.</strong> This is one of the most common ways final expense agents leave families worse off than they should be.</p>",
+     "new": "    <p>If you don't choose an option, the policy uses its default, and on some policies that default is Extended Term Insurance. <strong>Ask which option your policy uses, and whether you can choose Reduced Paid-Up Insurance on the application.</strong></p>",
+     "why": "Removes the unsourced \"Many policies default to Extended Term\" and the superlative \"one of the most common ways\"; turns it into a question to ask.",
+     "sources": [
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "      <p class=\"sans\">We quote multiple carriers, explain the underwriting class you actually qualify for, and set your policy up the right way — free, with no pressure.</p>\n      <a class=\"btn-primary sans\" href=\"/final-expense-life-insurance\">Learn about final expense coverage</a>",
+     "new": "      <p class=\"sans\">We compare quotes from several carriers, explain the underwriting class you qualify for, and go over the waiting period and nonforfeiture option before you sign. No fee for our help, and no pressure.</p>\n      <a class=\"btn-primary sans\" href=\"/final-expense-life-insurance#quote\">Get a final expense quote</a>",
+     "why": "Plan items 1 and 5: the post's quote button now goes to the quote form on the final expense page (/final-expense-life-insurance#quote). \"Free\" becomes \"no fee for our help\".",
+     "sources": []
+    },
+    {
+     "old": "<li>What carrier is issuing this policy, and what's their AM Best financial rating?</li>",
+     "new": "<li>Which insurer issues this policy, and what are its financial strength ratings?</li>",
+     "why": "Keeps the question but drops the single rating-agency name (avoids a false \"best\" match and does not favor one rater).",
+     "sources": []
+    },
+    {
+     "old": "<li>You're under 55 and healthy — term life at the same monthly premium could give you many times more coverage</li>",
+     "new": "<li>You're younger, in good health, and need a larger amount for a set number of years. Term life may buy more coverage for the same premium, so compare both</li>",
+     "why": "Removes the unsourced \"many times more coverage\" and the arbitrary age cut-off.",
+     "sources": []
+    },
+    {
+     "old": "<p>A good agent will sometimes recommend that you <em>don't</em> buy final expense. We've done that more than once. Honest advice is worth more than a sale — and that's the standard we hold ourselves to on every <a href=\"/final-expense-life-insurance\">final expense</a> and <a href=\"/medicare-advantage\">Medicare</a> conversation we have.</p>",
+     "new": "<p>A good agent will sometimes tell you <em>not</em> to buy final expense. Honest advice is worth more than a sale, and that is the standard we hold ourselves to in every <a href=\"/final-expense-life-insurance\">final expense</a> review.</p>",
+     "why": "Owner rule: no Medicare sales on life pages (removes the Medicare link); drops the unverifiable \"We've done that more than once\".",
+     "sources": []
+    },
+    {
+     "old": "    {\"@type\":\"Question\",\"name\":\"What is final expense insurance?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Final expense is a small whole life insurance policy — usually $10,000 to $25,000 in face amount — designed to cover funeral, burial, and other end-of-life costs. Premiums are level and never change, the coverage doesn't expire, and the death benefit pays out tax-free, typically within a couple of weeks of a filed claim.\"}},\n    {\"@type\":\"Question\",\"name\":\"What is the first question to ask a final expense agent?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ask which underwriting class you are being placed in: Preferred, Standard, Graded Benefit, or Guaranteed Issue. The class can change your premium by 50% or more for the same face amount. A common bad-faith move is selling Guaranteed Issue to people who could qualify for Preferred or Standard just because the application is easier.\"}},\n    {\"@type\":\"Question\",\"name\":\"What is the nonforfeiture trap in final expense policies?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Many whole life policies default the nonforfeiture option to Extended Term Insurance, which converts your cash value into term coverage that eventually expires — defeating the point of permanent insurance. For most final expense buyers, Reduced Paid-Up Insurance is the better choice and should be set during the application.\"}}",
+     "new": "    {\"@type\":\"Question\",\"name\":\"What is final expense insurance?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Final expense insurance is a small whole life policy meant to cover funeral, burial or cremation costs and final bills. You choose the face amount. On a whole life final expense policy the premium is usually level, and the coverage lasts for life as long as you pay. Under IRS rules the death benefit is generally not taxable income to your beneficiary; interest paid on it is taxable. Graded and guaranteed-issue policies may pay only a reduced amount, such as the premiums paid, if death comes in the early years, often the first 2 or 3; the exact period is in the policy.\"}},\n    {\"@type\":\"Question\",\"name\":\"What's the first question to ask a final expense agent?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ask which underwriting class you're being placed in: Preferred, Standard, Graded Benefit, or Guaranteed Issue (names vary by insurer). The class can change your premium a great deal for the same face amount, and the graded and guaranteed-issue classes limit what your family receives in the early years. A bad-faith move is selling Guaranteed Issue to people who could qualify for Preferred or Standard just because the application is easier.\"}},\n    {\"@type\":\"Question\",\"name\":\"What is the nonforfeiture trap?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"If you stop paying, the policy uses the nonforfeiture option you chose, or its default if you didn't choose one. On some policies the default is Extended Term Insurance, which turns your cash value into term coverage that ends after a set time. Reduced Paid-Up Insurance keeps a smaller benefit for life, with no more premiums due. Ask which option your policy uses and whether you can choose Reduced Paid-Up on the application.\"}}",
+     "why": "Plan item 5: FAQPage JSON-LD now matches the visible FAQ word for word (generated from the visible answers with tags stripped; question names also brought in line: \"What's the first question...\" and \"What is the nonforfeiture trap?\").",
+     "sources": [
+      "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds (Page Last Reviewed or Updated: 16-Oct-2026)",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "    <details><summary>What is final expense insurance?</summary><div class=\"a\">Final expense is a small whole life policy — usually $10,000 to $25,000 in face amount — designed to cover funeral, burial, and other end-of-life costs. Premiums are level and never change, the coverage doesn't expire, and the death benefit pays out tax-free, typically within a couple of weeks of a filed claim.</div></details>\n    <details><summary>What's the first question to ask a final expense agent?</summary><div class=\"a\">Ask which underwriting class you're being placed in: <strong>Preferred, Standard, Graded Benefit, or Guaranteed Issue.</strong> The class can change your premium by 50% or more for the same face amount. A common bad-faith move is selling Guaranteed Issue to people who could qualify for Preferred or Standard just because the application is easier.</div></details>\n    <details><summary>What is the nonforfeiture trap?</summary><div class=\"a\">Many whole life policies default the nonforfeiture option to <strong>Extended Term Insurance</strong>, which converts your cash value into term coverage that eventually expires — defeating the point of permanent insurance. For most final expense buyers, <strong>Reduced Paid-Up Insurance</strong> is the better choice and should be set during the application.</div></details>",
+     "new": "    <details><summary>What is final expense insurance?</summary><div class=\"a\">Final expense insurance is a small whole life policy meant to cover funeral, burial or cremation costs and final bills. You choose the face amount. On a whole life final expense policy the premium is usually level, and the coverage lasts for life as long as you pay. Under IRS rules the death benefit is generally not taxable income to your beneficiary; interest paid on it is taxable. Graded and guaranteed-issue policies may pay only a reduced amount, such as the premiums paid, if death comes in the early years, often the first 2 or 3; the exact period is in the policy.</div></details>\n    <details><summary>What's the first question to ask a final expense agent?</summary><div class=\"a\">Ask which underwriting class you're being placed in: <strong>Preferred, Standard, Graded Benefit, or Guaranteed Issue</strong> (names vary by insurer). The class can change your premium a great deal for the same face amount, and the graded and guaranteed-issue classes limit what your family receives in the early years. A bad-faith move is selling Guaranteed Issue to people who could qualify for Preferred or Standard just because the application is easier.</div></details>\n    <details><summary>What is the nonforfeiture trap?</summary><div class=\"a\">If you stop paying, the policy uses the nonforfeiture option you chose, or its default if you didn't choose one. On some policies the default is <strong>Extended Term Insurance</strong>, which turns your cash value into term coverage that ends after a set time. <strong>Reduced Paid-Up Insurance</strong> keeps a smaller benefit for life, with no more premiums due. Ask which option your policy uses and whether you can choose Reduced Paid-Up on the application.</div></details>",
+     "why": "Plan item 5: removes \"usually $10,000 to $25,000\", \"never change\", \"typically within a couple of weeks\", \"50% or more\" and \"For most final expense buyers\"; adds the IRS interest exception and the waiting-period caveat (\"often the first 2 or 3; the exact period is in the policy\"). Checker: the reduced early payout is now \"may pay only a reduced amount, such as the premiums paid\" (no unsourced \"natural causes\"), and the unsourced \"Many final expense buyers prefer\" is replaced by what Reduced Paid-Up does.",
+     "sources": [
+      "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds (Page Last Reviewed or Updated: 16-Oct-2026)",
+      "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated: January 5, 2024: guaranteed issue \"restrictions often apply if death occurs within the first two or three years\"; such insurers usually \"only pay the total premium paid, rather than the policy's face amount\" early on; whole life premium \"generally does not go up\"; beneficiary needs \"a certified copy of the death certificate or some other lawful evidence of death\" and completed claim forms; if no nonforfeiture option is chosen \"an automatic option selected by the insurance company will go into effect\")"
+     ]
+    },
+    {
+     "old": "<a class=\"rel-card\" href=\"/medicare-advantage\"><h3>Medicare Advantage</h3><p>Compare Part C plans the honest way — we verify your doctors and drugs first.</p></a>",
+     "new": "<a class=\"rel-card\" href=\"/blog/graded-death-benefit-final-expense-explained\"><h3>What Is a Graded Death Benefit?</h3><p>How the reduced payout in a policy's early years works.</p></a>",
+     "why": "Owner rule: no Medicare sales on life pages. Swaps the Medicare Advantage card for the graded death benefit post.",
+     "sources": []
+    }
+   ]
+  }
+ ]
+}

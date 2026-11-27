@@ -7,6 +7,7 @@
 
 const MODEL = process.env.CHAT_MODEL || "claude-haiku-4-5-20251001";
 const LEAD_ENDPOINT = process.env.LEAD_ENDPOINT || "https://formspree.io/f/xgobjlba";
+const LEAD_COPY_ENDPOINT = process.env.LEAD_COPY_ENDPOINT || "https://formspree.io/f/xljbopja";
 const MAX_TURNS = 24;          // hard cap on conversation length
 const MAX_CHARS = 1500;        // hard cap per user message
 
@@ -15,7 +16,7 @@ const SYSTEM_PROMPT = `You are "Brook," the friendly virtual assistant for Honor
 WHAT HONORBROOK OFFERS:
 - Medicare: Medicare Advantage (Part C), Medicare Supplement (Medigap, Plan G & N), Part D drug plans.
 - Senior add-ons: hospital indemnity, cancer/critical illness, dental-vision-hearing, short-term/home care.
-- Final expense / burial whole life (many plans ask health questions instead of an exam; ages 45–85), and broader life insurance (term, whole, indexed universal life), plus annuities and 401(k)/IRA rollovers.
+- Final expense / burial whole life (many plans ask health questions instead of an exam; issue ages vary by insurer), and broader life insurance (term, whole, indexed universal life), plus annuities and 401(k)/IRA rollovers.
 - Under-65 & business: ICHRA, ACA marketplace plans (with subsidy checks), and group/SHOP small-business health (SHOP-certified).
 
 YOUR JOB:
@@ -89,25 +90,24 @@ async function callAnthropic(messages) {
   return res.json();
 }
 
+// Each lead goes to both lead forms (one emails info@, the other emails the owner's Gmail).
+// It counts as saved only if at least one of them accepts it; before Nov 25, 2026 a rejected lead was reported as saved.
 async function forwardLead(lead) {
-  try {
-    await fetch(LEAD_ENDPOINT, {
-      method: "POST",
-      headers: { "content-type": "application/json", accept: "application/json" },
-      body: JSON.stringify({
-        _subject: "🔵 New CHATBOT lead — Honorbrook website",
-        Source: "Website chatbot (Brook)",
-        Name: lead.first_name,
-        Phone: lead.phone,
-        Interest: lead.interest,
-        Notes: lead.notes || "",
-        Consent: lead.consent ? "Yes — agreed to phone/text" : "No",
-      }),
-    });
-    return true;
-  } catch (e) {
-    return false;
-  }
+  const body = JSON.stringify({
+    _subject: "🔵 New CHATBOT lead — Honorbrook website",
+    Source: "Website chatbot (Brook)",
+    Name: lead.first_name,
+    Phone: lead.phone,
+    Interest: lead.interest,
+    Notes: lead.notes || "",
+    Consent: lead.consent ? "Yes — agreed to phone/text" : "No",
+  });
+  const post = (url) =>
+    fetch(url, { method: "POST", headers: { "content-type": "application/json", accept: "application/json" }, body })
+      .then((r) => r.ok)
+      .catch(() => false);
+  const sent = await Promise.all([post(LEAD_ENDPOINT), post(LEAD_COPY_ENDPOINT)]);
+  return sent.some(Boolean);
 }
 
 function textFrom(content) {

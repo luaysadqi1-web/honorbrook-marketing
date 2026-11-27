@@ -58,6 +58,7 @@ ALL = [
     # "compare every plan" contradicts the CMS disclaimer on the same pages ("We do not offer every plan available in your area")
     ('we compare them all and recommend', 'we compare the plans we offer and recommend'),
     ('a local guide who shops the whole market for you.', 'a local guide who compares carriers for you.'),
+    ('— affordable coverage so funeral costs never fall on your family.', '— coverage to help pay for a funeral and final bills.'),
     ('We compare every option side by side and explain the tradeoffs', 'We compare your options side by side and explain the tradeoffs'),
     # term life superlatives
     ('<p>The most protection per dollar you can buy.</p>', '<p>Coverage for a set number of years, usually for less than permanent coverage.</p>'),
@@ -176,6 +177,64 @@ PAGE = {
     'schedule-an-appointment.html': [('at our office in Tysons or at your home.', 'at our office in Tysons or at your home (office and home visits are in Northern Virginia).')],
 }
 # the Part D "donut hole" answer: the coverage gap ended in 2025 (Part D redesign; the site's own posts say so)
+# Nov 25, 2026 pre-publish reviews: an unverified speed claim on five final expense posts, "best price" / "best class",
+# and an unverified carrier-quality claim on the annuities page (visible FAQ and FAQ schema).
+REVIEW_NOV25 = {
+    'blog/can-i-get-life-insurance-at-80-with-health-problems.html': [
+        ('<h3>See what you qualify for in about five minutes</h3>',
+         "<h3>Find out what you'd pay</h3>"),
+        ('<p class="sans">We\'ll compare final expense options from several carriers — free, no pressure, no medical exam in many cases.</p>',
+         '<p class="sans">We compare final expense options from several carriers. There is no fee for our help, and no pressure.</p>'),
+        ('>Get my free final expense quote</a>',
+         '>Get my final expense quote</a>'),
+    ],
+    'blog/final-expense-vs-burial-insurance-vs-prepaid-funeral-plan.html': [
+        ('<h3>See what you qualify for in about five minutes</h3>',
+         "<h3>Find out what you'd pay</h3>"),
+        ('<p class="sans">We\'ll compare final expense options from several carriers — free, no pressure, no medical exam in many cases.</p>',
+         '<p class="sans">We compare final expense options from several carriers. There is no fee for our help, and no pressure.</p>'),
+        ('>Get my free final expense quote</a>',
+         '>Get my final expense quote</a>'),
+    ],
+    'blog/graded-death-benefit-final-expense-explained.html': [
+        ('<h3>See what you qualify for in about five minutes</h3>',
+         "<h3>Find out what you'd pay</h3>"),
+        ('<p class="sans">We\'ll compare final expense options from several carriers — free, no pressure, no medical exam in many cases.</p>',
+         '<p class="sans">We compare final expense options from several carriers. There is no fee for our help, and no pressure.</p>'),
+        ('>Get my free final expense quote</a>',
+         '>Get my final expense quote</a>'),
+        ('to match your health history with the carriers most likely to approve you at the best class.</li>',
+         'to match your health history with carriers whose underwriting fits it.</li>'),
+    ],
+    'blog/how-much-does-a-funeral-cost-and-who-pays-without-a-policy.html': [
+        ('<h3>See what you qualify for in about five minutes</h3>',
+         "<h3>Find out what you'd pay</h3>"),
+        ('<p class="sans">We\'ll compare final expense options from several carriers — free, no pressure, no medical exam in many cases.</p>',
+         '<p class="sans">We compare final expense options from several carriers. There is no fee for our help, and no pressure.</p>'),
+        ('>Get my free final expense quote</a>',
+         '>Get my final expense quote</a>'),
+    ],
+    'blog/how-much-does-final-expense-insurance-cost-at-65-70-75.html': [
+        ('<h3>See what you qualify for in about five minutes</h3>',
+         "<h3>Find out what you'd pay</h3>"),
+        ('<p class="sans">We\'ll compare final expense options from several carriers — free, no pressure, no medical exam in many cases.</p>',
+         '<p class="sans">We compare final expense options from several carriers. There is no fee for our help, and no pressure.</p>'),
+        ('>Get my free final expense quote</a>',
+         '>Get my final expense quote</a>'),
+    ],
+    'blog/no-exam-life-insurance-how-it-works-and-who-its-for.html': [
+        ('point you to the carriers and underwriting types most likely to approve you at the best price.',
+         'point you to the carriers and underwriting types that fit your health history, and compare their prices.'),
+    ],
+    'annuities.html': [
+        (' We place business with highly rated carriers.',
+         ''),
+        ('we compare fixed and fixed-indexed options across highly rated carriers, explain',
+         "we compare fixed and fixed-indexed options from several carriers, show you each insurer's financial strength ratings, explain"),
+    ],
+}
+for _k, _v in REVIEW_NOV25.items(): PAGE.setdefault(_k, []).extend(_v)
+
 DONUT = [
     (re.compile(r'"name":"What is the Part D coverage gap or donut hole\?","acceptedAnswer":\{"@type":"Answer","text":"[^"]*"'),
      '"name":"Is there still a Part D donut hole?","acceptedAnswer":{"@type":"Answer","text":"No. Starting in 2025, Part D no longer has a coverage gap, and there is a yearly cap on what you pay out of pocket for covered drugs. We include that in the total yearly cost we show you."'),
@@ -188,7 +247,7 @@ FE_NEW = '''<h2 class="section-title">Help your family with funeral costs and fi
       <p>Final expense insurance is a smaller whole life policy meant to pay for a funeral and last bills, so they do not fall on the people you leave behind.</p>
       <ul>
         <li>Many plans ask health questions instead of a medical exam</li>
-        <li>Options for many health histories, ages 45&ndash;85</li>
+        <li>Options for many health histories; issue ages vary by insurer</li>
         <li>Level premiums that are set when the policy starts</li>
         <li>Coverage for life, as long as premiums are paid</li>
         <li>The benefit is paid to the beneficiary you name</li>
@@ -244,7 +303,9 @@ BANNED = [r'\$2/day', r'\$2 a day', r'Sample monthly rates', r'lowest true', r'n
           r'choosing wrong can cost', r'Most popular', r'true lowest', r'lowest</em> true', r'Find Your Lowest', r'never quietly overpaying', r'and beyond —',
           r'find the best coverage', r'most protection per dollar', r'most coverage per dollar', r'wipes? out', r'few dollars a month', r'compare every plan',
           r'(?<!offer )every plan available in your (?:area|county)', r'single most expensive mistake', r'never forgives', r'no (?:added|additional) premium',
-          r'a dozen carriers', r'top Medigap', r'whole market', r'hundreds (?:of dollars )?(?:per|a) year', r'compare them all', r'coverage gap or']
+          r'a dozen carriers', r'top Medigap', r'whole market', r'hundreds (?:of dollars )?(?:per|a) year', r'compare them all', r'coverage gap or',
+          # Nov 25 review: unverified speed claim and superlative price promises ("best rate" alone is not banned: a Medigap post uses it in a neutral sentence)
+          r'in about five minutes', r'best (?:price|class)\b', r'highly rated carriers']
 
 
 def _sub_count(s, a, b):

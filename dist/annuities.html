@@ -33,7 +33,7 @@
 <meta name="twitter:image" content="https://honorbrook-insurance.com/assets/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=onyx2">
+<link rel="stylesheet" href="/assets/style.css?v=onyx3">
 
 <!-- Breadcrumb schema -->
 <script type="application/ld+json">
@@ -53,7 +53,7 @@
   "@type":"FAQPage",
   "mainEntity":[
     {"@type":"Question","name":"What is an annuity?","acceptedAnswer":{"@type":"Answer","text":"An annuity is a contract with an insurance company. You give the carrier a lump sum or a series of payments, and in exchange the carrier guarantees future income — either for a fixed number of years or for the rest of your life. We focus on fixed and fixed-indexed annuities, which avoid stock market risk and have clearer cost structures than variable annuities."}},
-    {"@type":"Question","name":"Are fixed annuities safe?","acceptedAnswer":{"@type":"Answer","text":"Fixed annuities are backed by the claims-paying ability of the issuing insurance company. We place business with highly rated carriers. Safety and principal protection are among the primary reasons people choose fixed and fixed-indexed annuities, but guarantees depend on the issuing company's claims-paying ability."}},
+    {"@type":"Question","name":"Are fixed annuities safe?","acceptedAnswer":{"@type":"Answer","text":"Fixed annuities are backed by the claims-paying ability of the issuing insurance company. Safety and principal protection are among the primary reasons people choose fixed and fixed-indexed annuities, but guarantees depend on the issuing company's claims-paying ability."}},
     {"@type":"Question","name":"What are surrender charges?","acceptedAnswer":{"@type":"Answer","text":"Most annuities lock up your money for a defined surrender period, often several years. During that period, withdrawing more than a small annual amount can trigger a surrender charge that typically decreases each year. After the surrender period ends, you have full access. We never recommend an annuity to anyone who may need the funds during the surrender period."}},
     {"@type":"Question","name":"Is an annuity right for me?","acceptedAnswer":{"@type":"Answer","text":"It depends on your situation. Annuities generally fit best in the years immediately before or after retirement, for people who want contractual income options and principal protection rather than maximum growth or full liquidity. We will tell you honestly whether an annuity is a good fit for you — even if that means recommending you do not buy one."}}
   ]
@@ -85,7 +85,7 @@
 }
 </script>
 </head>
-<body>
+<body data-line="annuity">
 <a class="skip-link" href="#maincontent">Skip to main content</a>
 
 
@@ -149,7 +149,7 @@
       <a href="/blog/">Blog</a>
       <a href="/contact">Contact</a>
     </nav>
-    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="/contact">Free Consultation</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
+    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="#quote">Free Consultation</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
   </div>
 </header>
 
@@ -203,11 +203,11 @@
     <div class="cta-strip">
       <h3>Is an annuity right for you?</h3>
       <p class="sans">A free conversation about your retirement goals, current assets, and income needs — followed by honest advice, whether it includes an annuity or not.</p>
-      <a class="btn-primary sans" href="/contact">Schedule a free consultation</a>
+      <a class="btn-primary sans" href="#quote">Schedule a free consultation</a>
     </div>
 
     <h2>How Honorbrook helps</h2>
-    <p>We're an independent agency, so we don't push one carrier's product. We start with your goals — not a sales quota — and walk through whether an annuity even belongs in your plan. If it does, we compare fixed and fixed-indexed options across highly rated carriers, explain surrender terms, taxation, and tradeoffs in plain English, and share current rates and commission disclosure openly when you ask. If it doesn't, we'll say so. Our help is free, and everything can be handled by phone across the states where we're licensed.</p>
+    <p>We're an independent agency, so we don't push one carrier's product. We start with your goals — not a sales quota — and walk through whether an annuity even belongs in your plan. If it does, we compare fixed and fixed-indexed options from several carriers, show you each insurer's financial strength ratings, explain surrender terms, taxation, and tradeoffs in plain English, and share current rates and commission disclosure openly when you ask. If it doesn't, we'll say so. Our help is free, and everything can be handled by phone across the states where we're licensed.</p>
   </div>
 </article>
 
@@ -217,14 +217,14 @@
 .hb-quote h3{margin:0 0 4px;font-size:24px}
 .hb-quote p.sub{margin:0 0 14px;color:#5b6678;font-size:16px}
 .hb-quote label{display:block;font-weight:600;font-size:15px;margin:14px 0 5px}
-.hb-quote input[type=text],.hb-quote input[type=tel],.hb-quote select{width:100%;padding:12px;border:1px solid #c9d1dc;border-radius:6px;font-size:17px;background:#fff;box-sizing:border-box}
+.hb-quote input[type=text],.hb-quote input[type=tel],.hb-quote input[type=email],.hb-quote select{width:100%;padding:12px;border:1px solid #c9d1dc;border-radius:6px;font-size:17px;background:#fff;box-sizing:border-box}
 .hb-quote .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .hb-quote .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;line-height:1.45;color:#5b6678;margin-top:16px}
 .hb-quote .hb-field-err{border-color:#d9534f}
 @media(max-width:560px){.hb-quote .row2{grid-template-columns:1fr}}
 </style>
   <div class="hb-quote sans">
-    <form action="https://formspree.io/f/xgobjlba" method="POST">
+    <form data-line="annuity" data-thanks="/thank-you-life?t=annuity" action="https://formspree.io/f/xgobjlba" method="POST">
       <input type="hidden" name="_subject" value="Quote request: Fixed annuities (Honorbrook website)">
       <input type="hidden" name="Topic" value="Fixed annuities">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
@@ -240,10 +240,14 @@
       </div>
       <div class="row2">
         <div><label for="q26-age">Your age</label>
-        <select id="q26-age" name="Age range"><option>Under 40</option><option>40 to 49</option><option>50 to 59</option><option>60 to 69</option><option>70 to 79</option><option>80 or older</option></select></div>
+        <select id="q26-age" name="Age range"><option value="">Select</option><option>Under 40</option><option>40 to 49</option><option>50 to 59</option><option>60 to 69</option><option>70 to 79</option><option>80 or older</option></select></div>
         <div><label for="q26-how">Best way to reach you</label>
         <select id="q26-how" name="Contact preference"><option>Text me</option><option>Call me</option><option>Email me</option></select></div>
       </div>
+      <label for="q26-email">Email (optional)</label>
+      <input id="q26-email" type="email" name="Email" autocomplete="email">
+      <div><label for="qx-best">Best time to call</label>
+        <select id="qx-best" name="Best time to call"><option>Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
       <label class="consent"><input type="checkbox" name="Consent" value="Yes" required>
         <span>By submitting, I authorize Honorbrook Insurance to contact me by phone or text (including automated means) about insurance. Consent isn't a condition of purchase; reply STOP to opt out. See our <a href="/privacy-policy" rel="noopener" target="_blank">Privacy Policy</a>.</span>
       </label>
@@ -257,7 +261,7 @@
     <div class="kicker">Common questions</div>
     <h2 class="section-title" style="font-size:30px;margin-bottom:24px">Annuity FAQ</h2>
     <details><summary>What is an annuity?</summary><div class="a">An annuity is a contract with an insurance company. You give the carrier a lump sum or a series of payments, and in exchange the carrier guarantees future income — either for a fixed number of years or for the rest of your life. We focus on fixed and fixed-indexed annuities, which avoid stock market risk and have clearer cost structures than variable annuities.</div></details>
-    <details><summary>Are fixed annuities safe?</summary><div class="a">Fixed annuities are backed by the claims-paying ability of the issuing insurance company. We place business with highly rated carriers. Safety and principal protection are among the primary reasons people choose fixed and fixed-indexed annuities, but guarantees depend on the issuing company's claims-paying ability.</div></details>
+    <details><summary>Are fixed annuities safe?</summary><div class="a">Fixed annuities are backed by the claims-paying ability of the issuing insurance company. Safety and principal protection are among the primary reasons people choose fixed and fixed-indexed annuities, but guarantees depend on the issuing company's claims-paying ability.</div></details>
     <details><summary>What are surrender charges?</summary><div class="a">Most annuities lock up your money for a defined surrender period, often several years. During that period, withdrawing more than a small annual amount can trigger a surrender charge that typically decreases each year. After the surrender period ends, you have full access. We never recommend an annuity to anyone who may need the funds during the surrender period.</div></details>
     <details><summary>Is an annuity right for me?</summary><div class="a">It depends on your situation. Annuities generally fit best in the years immediately before or after retirement, for people who want contractual income options and principal protection rather than maximum growth or full liquidity. We'll tell you honestly whether an annuity is a good fit — even if that means recommending you don't buy one.</div></details>
   </div>
@@ -325,7 +329,7 @@
         <a href="sms:+15713540146">Text (571) 354-0146</a>
         <p class="hb-langs">We speak English, Arabic, French and Spanish</p>
         <a href="mailto:info@honorbrook-insurance.com">Email us</a>
-        <a href="/contact">Request a callback</a>
+        <a href="#quote">Request a callback</a>
         <a href="/careers">Careers</a>
         <a href="/privacy-policy">Privacy Policy</a>
       </div>
@@ -374,9 +378,9 @@
   })();
 </script>
 
-<script src="/assets/chat.js?v=onyx2" defer></script>
-<script src="/assets/find.js?v=onyx2" defer></script>
+<script src="/assets/chat.js?v=onyx3" defer></script>
+<script src="/assets/find.js?v=onyx3" defer></script>
 
-<script src="/assets/hb-nav.js?v=onyx2" defer></script>
+<script src="/assets/hb-nav.js?v=onyx3" defer></script>
 </body>
 </html>

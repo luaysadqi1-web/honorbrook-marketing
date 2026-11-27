@@ -1,0 +1,192 @@
+{
+ "state": "Kentucky",
+ "slug": "kentucky",
+ "exchange_name": "kynect (Kentucky's marketplace, administered by the Kentucky Health Benefit Exchange (KHBE), 'a Division within Office of Health Data and Analytics'; 'KHBE is a program of the Cabinet for Health and Family Services')",
+ "exchange_url": "https://kynect.ky.gov/",
+ "exchange_type": "state-based exchange",
+ "exchange_type_source": {
+  "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+  "quote": "State-based Exchanges for Plan Year 2027: ... Kentucky ... Kynect Website",
+  "also": {
+   "url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+   "quote": "State Based Marketplaces (SBM) states: ... Kentucky (CMS map for Plan Year 2027, page last modified 09/01/2026)"
+  }
+ },
+ "oe_start": "2026-11-01",
+ "oe_end": "2027-01-15",
+ "oe_source_url": "https://kynect.ky.gov/s/?language=en_US",
+ "oe_quote": "Open Enrollment for Qualified Health Plans through kynect for Plan Year 2027 starts 11/1/2026 and lasts through 1/15/2027.",
+ "oe_detail": [
+  {
+   "url": "https://khbe.ky.gov/Pages/index.aspx",
+   "quote": "The Open Enrollment period for Plan Year 2027 is November 1st, 2026 - January 15th 2027."
+  },
+  {
+   "url": "https://khbe.ky.gov/Pages/index.aspx",
+   "quote": "Applicants must enroll for kynect health coverage by December 15, 2026 to have coverage start on January 1, 2027."
+  },
+  {
+   "url": "https://khbe.ky.gov/Pages/index.aspx",
+   "quote": "For applicants who enroll from December 16, 2026 through January 15, 2027, their coverage will start February 1, 2027."
+  },
+  {
+   "url": "https://khbe.ky.gov/Pages/index.aspx",
+   "quote": "If you qualify, you can enroll in Medicaid or KCHIP anytime."
+  }
+ ],
+ "medicaid_expanded": true,
+ "medicaid_program_name": "Kentucky Medicaid (Department for Medicaid Services, Cabinet for Health and Family Services); adult 'Medicaid expansion' group, applied for through kynect benefits",
+ "medicaid_adult_income_limit_note": "KHBE/kynect 'Federal Poverty Level (FPL)' chart, '2026 Medicaid Table (April 2026 ongoing)', column 'Eligible for MAGI Medicaid 138%': household of 1 $1,836/month ($22,032/yr); household of 4 $3,795/month ($45,540/yr); note: 'Medicaid table updated March 2026 and is effective April 1, 2026 ongoing'. CHFS work-requirement FAQ (last updated Sept 15, 2026) says the expansion adult group 'generally have incomes up to 138% of the federal poverty level.' 2027: starting January 1, 2027, adults 19-64 in the Medicaid expansion group (qualify based only on income) who are not exempt must show 80 hours/month of work or community engagement (or earn $580/month); current members report at their 2027 renewal (3 of the 6 months before renewal); new applicants show the month before applying. Separately, from October 1, 2026 federal law narrows which lawfully present noncitizens qualify for Medicaid.",
+ "medicaid_url": "https://www.chfs.ky.gov/agencies/dms/Pages/default.aspx",
+ "medicaid_quote": "This applies to adults ages 19 to 64 enrolled in Medicaid based only on their income, also known as Medicaid Expansion.",
+ "medicaid_extra_quotes": [
+  {
+   "url": "https://www.chfs.ky.gov/agencies/dms/Pages/default.aspx",
+   "quote": "Beginning January 1, 2027, some individuals must meet new work or community engagement requirements to apply for or keep their Medicaid coverage."
+  },
+  {
+   "url": "https://khbe.ky.gov/About/Documents/FPL-Chart-April26.pdf",
+   "quote": "2026 Medicaid Table (April 2026 ongoing) ... Eligible for MAGI Medicaid 138%* ... 1 1,836 22,032 ... 4 3,795 45,540"
+  },
+  {
+   "url": "https://khbe.ky.gov/About/Documents/FPL-Chart-April26.pdf",
+   "quote": "*Medicaid table updated March 2026 and is effective April 1, 2026 ongoing"
+  },
+  {
+   "url": "https://khbe.ky.gov/Enrollment/MACEHR1/Medicaid_Work_or_Community_Engagement_FAQ.pdf",
+   "quote": "The Medicaid expansion population includes people under 65 with incomes who qualify for Medicaid under the Affordable Care Act's Medicaid expansion."
+  },
+  {
+   "url": "https://khbe.ky.gov/Enrollment/MACEHR1/Medicaid_Work_or_Community_Engagement_FAQ.pdf",
+   "quote": "generally have incomes up to 138% of the federal poverty level."
+  },
+  {
+   "url": "https://khbe.ky.gov/Enrollment/Pages/MedicaidChanges.aspx",
+   "quote": "To qualify, you must work or complete community engagement activities for at least 80 hours per month."
+  },
+  {
+   "url": "https://khbe.ky.gov/Enrollment/Pages/MedicaidChanges.aspx",
+   "quote": "Earning $580 a month, or if your work is seasonal, earning an average of $580 over the last 6 months."
+  }
+ ],
+ "state_subsidy_or_reinsurance_note": null,
+ "state_subsidy_source_url": null,
+ "state_subsidy_quote": null,
+ "doi_name": "Kentucky Department of Insurance",
+ "doi_url": "https://insurance.ky.gov/",
+ "doi_quote": "The Kentucky Department of Insurance regulates the Commonwealth's insurance market, licenses agents and other insurance professionals...",
+ "copy": {
+  "exch": "kynect",
+  "exch_type": "run by the state",
+  "medicaid": "Kentucky has expanded Medicaid for adults age 19 to 64. The state&rsquo;s Medicaid table, effective April 1, 2026, lists monthly income up to $1,836 for one person and $3,795 for a household of four. Starting January 1, 2027, some of these adults must meet a work or community engagement requirement unless they are exempt.",
+  "state_help": null
+ },
+ "sources": [
+  {
+   "url": "https://kynect.ky.gov/s/?language=en_US",
+   "supports": "Exchange name/URL; PY2027 OE Nov 1, 2026 - Jan 15, 2027 (rendered in browser; curl/WebFetch get only a JS shell); kynect is a program of CHFS"
+  },
+  {
+   "url": "https://khbe.ky.gov/Pages/index.aspx",
+   "supports": "PY2027 OE dates, Dec 15 deadline for Jan 1 start, Dec 16-Jan 15 enrollments start Feb 1; KHBE administers the ACA for Kentucky"
+  },
+  {
+   "url": "https://khbe.ky.gov/About/Pages/About-KHBE.aspx",
+   "supports": "KHBE oversees Kentucky's ACA implementation; exchange determines eligibility for tax credits, Medicaid and KCHIP"
+  },
+  {
+   "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+   "supports": "Kentucky listed among 22 State-based Exchanges for Plan Year 2027 (not an SBE-FP)"
+  },
+  {
+   "url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+   "supports": "CMS PY2027 map: Kentucky under 'State Based Marketplaces (SBM) states'"
+  },
+  {
+   "url": "https://www.chfs.ky.gov/agencies/dms/Pages/default.aspx",
+   "supports": "Kentucky Medicaid expansion adults 19-64; work/community engagement requirement begins Jan 1, 2027"
+  },
+  {
+   "url": "https://khbe.ky.gov/Enrollment/Pages/MedicaidChanges.aspx",
+   "supports": "2027 work/community engagement details (80 hrs/month or $580/month, exemptions, renewal timing); Oct 1, 2026 noncitizen Medicaid change; Jan 1, 2027 APTC change for some lawfully present noncitizens"
+  },
+  {
+   "url": "https://khbe.ky.gov/Enrollment/MACEHR1/Medicaid_Work_or_Community_Engagement_FAQ.pdf",
+   "supports": "CHFS FAQ (last updated Sept 15, 2026): expansion group under the ACA, generally up to 138% FPL; Jan 1, 2027 start"
+  },
+  {
+   "url": "https://khbe.ky.gov/About/Documents/FPL-Chart-April26.pdf",
+   "supports": "MAGI Medicaid 138% income table effective April 1, 2026 (1 person $1,836/mo, 4 people $3,795/mo)"
+  },
+  {
+   "url": "https://khbe.ky.gov/About/Pages/Kentucky-Access.aspx",
+   "supports": "Checked for state premium help: Kentucky Access/GAP are legacy high-risk programs; no current premium subsidy described"
+  },
+  {
+   "url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+   "supports": "No Kentucky Section 1332 waiver listed (Pennsylvania is listed); so no 1332 reinsurance program found for Kentucky"
+  },
+  {
+   "url": "https://osbd.ky.gov/Publications/Documents/Budget%20Documents/2026-2028%20Executive%20Budget%20Recommendation/2026-28%20Executive%20Budget%20-%20Budget%20in%20Brief.pdf",
+   "supports": "Governor's 2026-28 budget RECOMMENDED a $100 million fund to supplement remaining tax credits for kynect enrollees (proposal only)"
+  },
+  {
+   "url": "https://apps.legislature.ky.gov/law/acts/26RS/documents/0168.pdf",
+   "supports": "Enacted 2026-28 budget (HB 500, 2026 Acts ch. 168): text search found no mention of kynect, Health Benefit Exchange, or tax credits (suggests the $100M fund was not enacted; not confirmed by an official statement)"
+  },
+  {
+   "url": "https://insurance.ky.gov/",
+   "supports": "Regulator: 'The Kentucky Department of Insurance regulates the Commonwealth's insurance market, licenses agents...' (URL redirects to /ppc/new_default.aspx)"
+  }
+ ],
+ "notes_unverified": [
+  "State help for 2027: none found. Kentucky has no Section 1332 waiver on CMS's 1332 page. The Governor's 2026-28 Executive Budget recommended a $100 million kynect premium fund, but a text search of the enacted budget (HB 500, 2026 Acts ch. 168, extracted from PDF) found no kynect/exchange/tax-credit language, and neither kynect.ky.gov nor khbe.ky.gov mentions any state premium help. Treated as not enacted; set to null. No official statement that it failed was found.",
+  "OE end date: kynect.ky.gov and khbe.ky.gov both say January 15, 2027. Re-check on kynect.ky.gov before publishing in case of a late extension or federal rule change.",
+  "Medicaid income figures come from the KHBE/kynect FPL chart (a CHFS document), not from a DMS web page; the DMS page states the expansion group and the 2027 requirement but lists no dollar limits. Yearly 138% figure for one person on the chart is $22,032.",
+  "Other 2027 changes on khbe.ky.gov (not used in copy): from Oct 1, 2026 fewer lawfully present noncitizens qualify for Medicaid; from Jan 1, 2027 refugees, asylees and several other lawfully present groups no longer qualify for APTC. CHFS FAQ says details are subject to change pending CMS guidance.",
+  "No KFF or other secondary source was used for Kentucky.",
+  "Checker: 'not enacted' for the $100 million kynect fund rests on its absence from HB 500 (2026 Acts ch. 168); other 2026 acts were not searched and no official statement that the proposal failed was found. That is why state help stays null and the proposal must not be mentioned in copy."
+ ],
+ "copy_trace": {
+  "exch": "kynect.ky.gov: 'Open Enrollment for Qualified Health Plans through kynect for Plan Year 2027...'; CMS SBE list links Kentucky to 'Kynect Website'",
+  "exch_type": "CMS SBE list and CMS PY2027 map list Kentucky as a State Based Marketplace (not federal platform)",
+  "medicaid_s1": "DMS page: 'adults ages 19 to 64 enrolled in Medicaid based only on their income, also known as Medicaid Expansion'; CHFS FAQ: 'qualify for Medicaid under the Affordable Care Act's Medicaid expansion'",
+  "medicaid_s2": "KHBE/kynect FPL chart: 'Eligible for MAGI Medicaid 138%': 1 = 1,836 monthly; 4 = 3,795 monthly; 'effective April 1, 2026 ongoing'",
+  "medicaid_s3": "DMS page: 'Beginning January 1, 2027, some individuals must meet new work or community engagement requirements...'; KHBE changes page lists exemptions"
+ },
+ "exchange_name_source": {
+  "url": "https://khbe.ky.gov/Pages/index.aspx",
+  "quote": "The Kentucky Health Benefit Exchange is a Division within Office of Health Data and Analytics"
+ },
+ "verified_by_checker": true,
+ "checker_notes": [
+  "Checked 2026-11-24 by an independent checker. Every cited source was re-fetched with curl (browser user agent); kynect.ky.gov was read in a browser because curl gets only a JavaScript shell.",
+  "CONFIRMED exchange_type: CMS 'State-based Exchanges' page ('Updated: November 6, 2026') lists Kentucky under 'State-based Exchanges for Plan Year 2027' with 'Kynect Website'. CMS 'States by Marketplace Type (FFM/SBM-FP/SBM) for Plan Year 2027' (last modified 09/01/2026) lists Kentucky under 'State Based Marketplaces (SBM) states'.",
+  "CONFIRMED oe_start/oe_end: kynect.ky.gov (browser) shows the exact oe_quote ('...for Plan Year 2027 starts 11/1/2026 and lasts through 1/15/2027.'). khbe.ky.gov home page shows 'November 1st, 2026 - January 15th 2027', the December 15, 2026 deadline for January 1, 2027 coverage, February 1, 2027 start for Dec 16 - Jan 15 enrollments, and 'If you qualify, you can enroll in Medicaid or KCHIP anytime.'",
+  "CONFIRMED medicaid_expanded and medicaid_quote on the DMS page (chfs.ky.gov/agencies/dms): 'This applies to adults ages 19 to 64 enrolled in Medicaid based only on their income, also known as Medicaid Expansion.' and 'Beginning January 1, 2027, some individuals must meet new work or community engagement requirements...'.",
+  "CONFIRMED income figures in FPL-Chart-April26.pdf (khbe.ky.gov): '2026 Medicaid Table (April 2026 ongoing)', column 'Eligible for MAGI Medicaid 138%*': 1 person 1,836 monthly / 22,032 yearly; 4 people 3,795 monthly / 45,540 yearly; footnote '*Medicaid table updated March 2026 and is effective April 1, 2026 ongoing'. Arithmetic check: 100% column is 15,960 (1) and 33,000 (4); x1.38 = 22,025 and 45,540, matching.",
+  "CONFIRMED work-requirement FAQ PDF ('Last Updated: September 15, 2026'): 80 hours from January 1, 2027; footnote 3 '...generally have incomes up to 138% of the federal poverty level.'; footnote 1 says the details are subject to change pending CMS guidance or changes in law.",
+  "CONFIRMED khbe.ky.gov MedicaidChanges page: 'at least 80 hours per month'; 'Earning $580 a month...'; three of the six months before renewal; applicants on or after January 1, 2027 report the month before applying; October 1, 2026 noncitizen Medicaid change; January 1, 2027 APTC change (refugees, asylees and others no longer qualify).",
+  "CONFIRMED state help null: Kentucky is not on the CMS Section 1332 waiver page. The Governor's Budget in Brief says 'The Governor is recommending a $100 million fund to assist Kentuckians purchasing insurance through kynect'. A whitespace-free text search of the enacted budget HB 500 (2026 Acts ch. 168, 125 pages) found 0 hits for kynect, healthbenefitexchange, premiumtaxcredit, taxcredit, marketplace, exchange and qualifiedhealthplan. khbe.ky.gov Kentucky Access page describes only legacy high-risk programs (GAP / Kentucky Access) and premium assessments, not consumer help.",
+  "CONFIRMED doi_quote on insurance.ky.gov (redirects to /ppc/new_default.aspx).",
+  "CORRECTED exchange_name: KHBE is 'a Division within Office of Health Data and Analytics' and 'a program of the Cabinet for Health and Family Services' (khbe.ky.gov), not 'a division of the Cabinet'. Not used in copy.",
+  "COPY CHECK: exch, exch_type and the three medicaid sentences each match a confirmed quote. No banned content ($0, free plan, superlatives, guarantees, urgency, prices or premiums, ratings, carrier names, phone numbers, guaranty associations). The dollar amounts are Medicaid income limits, not prices. Copy left unchanged.",
+  "PUBLISH CAUTION: the Medicaid dollar limits are 2026 figures (effective April 1, 2026). New federal poverty guidelines come out each year and Kentucky updates the chart after that; the copy names its effective date, so it stays accurate as written, but re-check the chart when a new one is posted. Re-check the January 15, 2027 end date on kynect.ky.gov before publishing."
+ ],
+ "checker_sources_fetched": [
+  "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+  "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+  "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+  "https://kynect.ky.gov/s/?language=en_US",
+  "https://khbe.ky.gov/Pages/index.aspx",
+  "https://khbe.ky.gov/About/Pages/About-KHBE.aspx",
+  "https://khbe.ky.gov/About/Pages/Kentucky-Access.aspx",
+  "https://www.chfs.ky.gov/agencies/dms/Pages/default.aspx",
+  "https://khbe.ky.gov/Enrollment/Pages/MedicaidChanges.aspx",
+  "https://khbe.ky.gov/Enrollment/MACEHR1/Medicaid_Work_or_Community_Engagement_FAQ.pdf",
+  "https://khbe.ky.gov/About/Documents/FPL-Chart-April26.pdf",
+  "https://osbd.ky.gov/Publications/Documents/Budget%20Documents/2026-2028%20Executive%20Budget%20Recommendation/2026-28%20Executive%20Budget%20-%20Budget%20in%20Brief.pdf",
+  "https://apps.legislature.ky.gov/law/acts/26RS/documents/0168.pdf",
+  "https://insurance.ky.gov/"
+ ]
+}

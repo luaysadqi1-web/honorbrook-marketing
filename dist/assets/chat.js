@@ -189,14 +189,14 @@
   function track(name,params){ if(typeof window.gtag==='function'){ try{ window.gtag('event',name,params||{}); }catch(e){} } }
   document.addEventListener('click',function(e){
     var a=e.target&&e.target.closest?e.target.closest('a[href^="tel:"]'):null;
-    if(a){ track('phone_call_click',{phone:a.getAttribute('href').replace('tel:','')}); }
+    if(a){ track('phone_call_click',{phone:a.getAttribute('href').replace('tel:',''),line:(document.body.getAttribute('data-line')||'')}); }
   },true);
   document.addEventListener('submit',function(e){
-    if(e.target&&e.target.tagName==='FORM'&&!e.target.classList.contains('hbf-contact')&&e.target.checkValidity()){ track(e.target.getAttribute('data-event')||'generate_lead',{form:(e.target.getAttribute('action')||'form')}); }
+    if(e.target&&e.target.tagName==='FORM'&&!e.target.classList.contains('hbf-contact')&&e.target.checkValidity()){ if(!/formspree\.io/.test(e.target.getAttribute('action')||'')){ track(e.target.getAttribute('data-event')||'generate_lead',{form:(e.target.getAttribute('action')||'form')}); } }
   },true);
 })();
 
-/* ---- Booking CTA: header button -> PlanEnroll, tracked as book_call_click ---- */
+/* ---- Booking CTA: header button -> PlanEnroll (clicks are counted as book_click in hb-nav.js) ---- */
 (function(){
   var URL='https://www.planenroll.com/?purl=Luay-Sadqi';
   function init(){
@@ -207,10 +207,6 @@
     }
   }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
-  document.addEventListener('click',function(e){
-    var a=e.target&&e.target.closest?e.target.closest('a[href*="planenroll.com"]'):null;
-    if(a && typeof window.gtag==='function'){ try{ window.gtag('event','book_call_click',{page:location.pathname}); }catch(x){} }
-  },true);
 })();
 
 
@@ -221,25 +217,33 @@
     if(!m){ m=document.createElement('div'); m.className='hb-form-msg err'; m.setAttribute('role','alert'); m.setAttribute('aria-live','assertive'); form.appendChild(m); }
     m.textContent=text; m.hidden=!text; if(text){ m.scrollIntoView({block:'nearest'}); }
   }
+  function hbLead(f){ try{ if(typeof window.gtag==='function'){ window.gtag('event',f.getAttribute('data-event')||'generate_lead',{form:f.getAttribute('action')||'form',line:f.getAttribute('data-line')||'',hot:!!f.querySelector('option[data-hot]:checked')}); } }catch(x){} }
+  function hbAnswers(f,fd){ var skip={Name:1,Phone:1,Email:1,ZIP:1,Consent:1,Topic:1,Interests:1,_subject:1,_gotcha:1,'Best time to call':1}, out=[]; fd.forEach(function(v,k){ if(!skip[k]&&v){ out.push(k+': '+v); } }); return out.join(' / '); }
+  function hbBody(f){ var d=new FormData(f); try{ if(d.has('Email')&&!d.get('Email')){ d['delete']('Email'); } }catch(x){} return d; }
   function prep(){ document.querySelectorAll('form[action*="formspree.io"]').forEach(function(f){ f.noValidate=true; f.addEventListener('input',function(ev){ ev.target.classList&&ev.target.classList.remove('hb-field-err'); }); }); }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',prep); } else { prep(); }
   document.addEventListener('submit',function(e){
     var f=e.target;
     if(!f||f.tagName!=='FORM'||!/formspree\.io/.test(f.getAttribute('action')||'')||!window.fetch||!window.FormData) return;
     e.preventDefault();
+    var how=f.querySelector('select[name="Contact preference"]'), em=f.querySelector('input[name="Email"]');
+    if(how&&em&&how.value==='Email me'&&!em.value.replace(/\s/g,'')){ em.classList.add('hb-field-err'); msg(f,'Please add your email, or choose text or call.'); em.focus(); return; }
     if(!f.checkValidity()){
       var bad=f.querySelectorAll(':invalid'); bad.forEach(function(el){ el.classList.add('hb-field-err'); });
       msg(f,'Please complete the highlighted fields (and tick the consent box) so we can reach you.'); bad[0].focus(); return;
     }
     f.querySelectorAll('.hb-field-err').forEach(function(el){ el.classList.remove('hb-field-err'); });
+    var sj=f.querySelector('input[name=_subject]'); if(sj){ if(!sj.hasAttribute('data-base')){ sj.setAttribute('data-base',sj.value); } var sb=sj.getAttribute('data-base'); sj.value=f.querySelector('option[data-hot]:checked')?'HOT lead: '+sb.replace(/^Quote request: /,''):sb; }
     var btn=f.querySelector('button[type=submit]'), label=btn&&btn.textContent;
     if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
     msg(f,'');
     /* also send the lead into IntegrityCONNECT through our own server function; never blocks the visitor */
-    try{ var fd0=new FormData(f), nm=fd0.get('Name'), ph=fd0.get('Phone'); if(nm&&ph&&!f.hasAttribute('data-inline')){ fetch('/.netlify/functions/lead',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,phone:ph,email:fd0.get('Email')||'',zip:fd0.get('ZIP')||'',best:'',interests:fd0.getAll('Interests').join(', ')||fd0.get('Topic')||'',answers:fd0.get('Message')||'',source:'website-form '+location.pathname,consent:!!fd0.get('Consent'),_gotcha:fd0.get('_gotcha')||''})}).catch(function(){}); } }catch(x){}
-    fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
-      .then(function(r){ if(r.ok){ if(f.hasAttribute('data-inline')){ f.innerHTML='<p class="hb-sub-ok" role="status">Thank you &mdash; you&rsquo;re subscribed. We&rsquo;ll only email when we publish something worth your time.</p>'; try{localStorage.setItem('hb_subscribed','1');}catch(x){} } else { location.href='/thank-you'; } } else { throw new Error('bad'); } })
+    try{ var fd0=new FormData(f), nm=fd0.get('Name'), ph=fd0.get('Phone'); if(nm&&ph&&!f.hasAttribute('data-inline')){ fetch('/.netlify/functions/lead',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,phone:ph,email:fd0.get('Email')||'',zip:fd0.get('ZIP')||'',best:fd0.get('Best time to call')||'',interests:fd0.getAll('Interests').join(', ')||fd0.get('Topic')||'',answers:hbAnswers(f,fd0),source:'website-form '+location.pathname,consent:!!fd0.get('Consent'),_gotcha:fd0.get('_gotcha')||''})}).catch(function(){}); } }catch(x){}
+    if(!f.hasAttribute('data-inline')&&!f.hasAttribute('data-nocopy')&&!f._hbCopied){ f._hbCopied=true; try{ fetch('https://formspree.io/f/xljbopja',{method:'POST',body:hbBody(f),headers:{Accept:'application/json'},keepalive:true}).catch(function(){}); }catch(x){} }
+    fetch(f.action,{method:'POST',body:hbBody(f),headers:{Accept:'application/json'}})
+      .then(function(r){ if(r.ok){ hbLead(f); if(f.hasAttribute('data-inline')){ f.innerHTML='<p class="hb-sub-ok" role="status">Thank you &mdash; you&rsquo;re subscribed. We&rsquo;ll only email when we publish something worth your time.</p>'; try{localStorage.setItem('hb_subscribed','1');}catch(x){} } else { location.href=f.getAttribute('data-thanks')||'/thank-you'; } } else { throw new Error('bad'); } })
       .catch(function(){
+        try{ if(typeof window.gtag==='function'){ window.gtag('event','lead_error',{line:f.getAttribute('data-line')||'',page:location.pathname}); } }catch(x){}
         if(btn){ btn.disabled=false; btn.textContent=label; }
         msg(f,'Sorry, that did not go through. Please try again, or call us at (301) 615-8289 and we will help right away.');
       });
@@ -264,7 +268,7 @@
 (function(){
   var path=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';
   var isBlogPost=/^\/blog\/[^\/]+/.test(path), isBlogIndex=(path==='/blog');
-  var skip=/^\/(thank-you|privacy-policy|terms|404|contact)$/.test(path);
+  var skip=/^\/(thank-you|thank-you-life|privacy-policy|terms|404|contact)$/.test(path);
   function get(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
   function put(k,v){ try{localStorage.setItem(k,v);}catch(e){} }
   var CAL='https://www.planenroll.com/?purl=Luay-Sadqi';
@@ -331,4 +335,16 @@
   }
   function init(){ mountInline(); arm(); }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
+})();
+
+/* ---- /thank-you-life: show the meeting type and the "have this ready" line for the form that was sent ---- */
+(function(){
+  if(!/^\/thank-you-life/.test(location.pathname)) return;
+  function go(){
+    var t=(location.search.match(/[?&]t=([a-z_]+)/)||[])[1]||'', m=document.getElementById('hbMeet'), l=document.getElementById('hbReady');
+    if(m&&t==='annuity'){ m.textContent='Annuities'; }
+    if(l&&t){ var hit=l.querySelector('[data-t="'+t+'"]'); if(hit){ [].forEach.call(l.children,function(li){ if(li!==hit){ li.hidden=true; } }); } }
+    if(t){ document.body.setAttribute('data-line',t); }
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',go); } else { go(); }
 })();

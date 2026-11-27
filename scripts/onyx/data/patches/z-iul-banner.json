@@ -1,0 +1,16 @@
+{
+ "group": "z-iul-banner",
+ "pages": [
+  {
+   "page": "indexed-universal-life.html",
+   "replacements": [
+    {
+     "old": "<strong>IUL is oversold and under-explained.</strong> We'll tell you honestly if it fits — ",
+     "new": "<strong>IUL, explained in plain English.</strong> We'll tell you honestly whether it fits. Call ",
+     "why": "'oversold' is a claim about other sellers; neutral wording",
+     "sources": []
+    }
+   ]
+  }
+ ]
+}

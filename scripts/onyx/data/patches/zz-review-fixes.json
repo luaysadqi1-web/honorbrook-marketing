@@ -1,0 +1,68 @@
+{
+ "group": "zz-review-fixes",
+ "note": "Nov 25, 2026: wording fixes confirmed by the two pre-publish reviews (guarantee wording without the claims-paying caveat, absolute tax statement). Applied last, on the text the earlier patches leave. The banned-wording fixes from the same reviews (speed claim, best price / best class, highly rated carriers) are in scripts/onyx/claims.py REVIEW_NOV25, because the wording guard runs before the patches.",
+ "pages": [
+  {
+   "page": "life-insurance.html",
+   "replacements": [
+    {
+     "old": "<p>Guaranteed growth and lifelong protection.</p>",
+     "new": "<p>Contractual guarantees and lifelong coverage.</p>"
+    },
+    {
+     "old": "<td>Guaranteed growth</td>",
+     "new": "<td>Guaranteed minimum (insurer-backed)</td>"
+    },
+    {
+     "old": "<td>Certainty plus an asset</td>",
+     "new": "<td>Predictability plus cash value</td>"
+    },
+    {
+     "old": "<td>Max guaranteed benefit per dollar</td>",
+     "new": "<td>Death benefit focus, little cash value</td>"
+    },
+    {
+     "old": "lifelong coverage that never expires as long as you pay the premium",
+     "new": "coverage that lasts for life as long as you pay the premium"
+    }
+   ]
+  },
+  {
+   "page": "guaranteed-universal-life.html",
+   "replacements": [
+    {
+     "old": "<p>Guaranteed growth and lifelong protection.</p>",
+     "new": "<p>Contractual guarantees and lifelong coverage.</p>"
+    },
+    {
+     "old": "<td>Guaranteed growth</td>",
+     "new": "<td>Guaranteed minimum (insurer-backed)</td>"
+    },
+    {
+     "old": "<td>Max guaranteed benefit per dollar</td>",
+     "new": "<td>Death benefit focus, little cash value</td>"
+    }
+   ]
+  },
+  {
+   "page": "term-life-insurance.html",
+   "replacements": [
+    {
+     "old": "<p>Guaranteed growth and lifelong protection.</p>",
+     "new": "<p>Contractual guarantees and lifelong coverage.</p>"
+    },
+    {
+     "old": "review your specific contract.</p>",
+     "new": "review your specific contract. Guarantees are backed by the claims-paying ability of the issuing insurance company, not by any government agency.</p>"
+    },
+    {
+     "old": "your beneficiaries receive the death benefit income-tax-free.",
+     "new": "your beneficiaries receive the death benefit, generally free of federal income tax; any interest paid on it is taxable.",
+     "sources": [
+      "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,220 @@
+{
+  "group": "x-crosslinks",
+  "pages": [
+    {
+      "page": "life-insurance.html",
+      "replacements": [
+        {
+          "old": "<h2>Life insurance by state</h2>",
+          "new": "<h2>Life insurance for a specific situation</h2>\n    <p>Some needs raise their own questions, so each one has its own page:</p>\n    <ul>\n      <li><strong>A home loan.</strong> <a href=\"/mortgage-protection-insurance\">Mortgage protection insurance</a> is usually term life that you own, sized to what you owe and the years left on the loan. It is not the mortgage insurance a lender may ask for.</li>\n      <li><strong>Military service.</strong> If you have or had SGLI, VGLI or VALife, <a href=\"/veterans-life-insurance\">life insurance for veterans</a> sets VA coverage next to private policies. Honorbrook is an independent agency and is not part of the VA.</li>\n      <li><strong>A child or grandchild.</strong> A child rider on a parent's policy is one way to cover a child, and a separate policy on the child is another. <a href=\"/childrens-life-insurance\">Children's life insurance</a> compares the two.</li>\n      <li><strong>An estate or a business.</strong> <a href=\"/high-net-worth-life-insurance\">Life insurance for high-net-worth families</a> explains how coverage is used for estate costs, business succession and heirs. It is general education, not tax advice.</li>\n    </ul>\n\n    <h2>Life insurance by state</h2>",
+          "why": "Hub page had no body link to the mortgage, veterans, children's or high-net-worth pages (header menu only). Adds one short list, placed just before the state list, with a differently worded line for each. No VA facts stated beyond program names; says Honorbrook is not part of the VA. Child rider line is consistent with the Virginia Bureau of Insurance guide (\"Spousal or family riders allow you the option of buying life insurance on your spouse or children.\" https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ , page last updated January 5, 2024). No prices. CHECKER (Nov 25, 2026), reworded: added \"usually\" so the line matches the mortgage page (\"It is usually a term policy that you own\"). Nothing else changed. All four link targets exist. No VA fact beyond program names, and it says Honorbrook is not part of the VA. The high-net-worth line carries \"general education, not tax advice\". No prices.",
+          "sources": [
+            "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Virginia SCC Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, Last Updated January 5, 2024; re-read Nov 25, 2026): \"Spousal or family riders allow you the option of buying life insurance on your spouse or children.\"",
+            "/mortgage-protection-insurance (built page): \"It is usually a term policy that you own, with the benefit paid to the person you name.\" The page cites the CFPB for the difference from lender mortgage insurance.",
+            "https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/ (CFPB, last reviewed Nov 9, 2026; re-read Nov 25, 2026): \"PMI protects the lender—not you—if you stop making payments on your loan.\"",
+            "/veterans-life-insurance, /childrens-life-insurance, /high-net-worth-life-insurance (built pages): each covers what its line says."
+          ]
+        },
+        {
+          "old": "Pick your state: <a href=\"/virginia-medicare-insurance\">Virginia</a>, <a href=\"/maryland-medicare-insurance\">Maryland</a>, <a href=\"/north-carolina-medicare-insurance\">North Carolina</a>, <a href=\"/south-carolina-medicare-insurance\">South Carolina</a>, <a href=\"/georgia-medicare-insurance\">Georgia</a>, <a href=\"/alabama-medicare-insurance\">Alabama</a>, <a href=\"/louisiana-medicare-insurance\">Louisiana</a>, <a href=\"/texas-medicare-insurance\">Texas</a>, <a href=\"/michigan-medicare-insurance\">Michigan</a>, <a href=\"/indiana-medicare-insurance\">Indiana</a> or <a href=\"/west-virginia-medicare-insurance\">West Virginia</a>.",
+          "new": "Pick your state for life insurance: <a href=\"/alabama-life-insurance\">Alabama</a>, <a href=\"/delaware-life-insurance\">Delaware</a>, <a href=\"/florida-life-insurance\">Florida</a>, <a href=\"/georgia-life-insurance\">Georgia</a>, <a href=\"/indiana-life-insurance\">Indiana</a>, <a href=\"/kentucky-life-insurance\">Kentucky</a>, <a href=\"/louisiana-life-insurance\">Louisiana</a>, <a href=\"/maryland-life-insurance\">Maryland</a>, <a href=\"/michigan-life-insurance\">Michigan</a>, <a href=\"/north-carolina-life-insurance\">North Carolina</a>, <a href=\"/pennsylvania-life-insurance\">Pennsylvania</a>, <a href=\"/south-carolina-life-insurance\">South Carolina</a>, <a href=\"/tennessee-life-insurance\">Tennessee</a>, <a href=\"/texas-life-insurance\">Texas</a>, <a href=\"/virginia-life-insurance\">Virginia</a>, <a href=\"/washington-dc-life-insurance\">Washington, DC</a> or <a href=\"/west-virginia-life-insurance\">West Virginia</a>.",
+          "why": "Stale paragraph under \"Looking for life insurance companies near you?\" listed 11 states and linked the Medicare hubs. Now lists the 17 state life pages (16 states and DC, Florida included per the owner on Nov 25, 2026); every file checked to exist. Listed A to Z so it is not a copy of the \"Life insurance by state\" paragraph higher on the page, which already links the same 17 pages in licensing order. CHECKER (Nov 25, 2026), unchanged: all 17 state life pages exist in the build. The list has 16 states and DC, which matches \"licensed in 16 states and DC\" in the same paragraph and the 17 links already in \"Life insurance by state\" on this page. Florida stays because the status board records the owner's Nov 25, 2026 answer that the life line is active in all 17. If that changes, remove the Florida link here and in the paragraph above it.",
+          "sources": [
+            "Built site: 17 files checked on Nov 25, 2026, /alabama-life-insurance through /west-virginia-life-insurance."
+          ]
+        }
+      ]
+    },
+    {
+      "page": "term-life-insurance.html",
+      "replacements": [
+        {
+          "old": "<h2>Level term, decreasing term, and return of premium</h2>",
+          "new": "<p>If you have children, an add-on to know about is the <strong>child rider</strong>. Virginia's Bureau of Insurance says spousal or family riders give you the option of buying life insurance on your spouse or children. How much you can buy depends on the company's underwriting limits, and riders usually add to the premium (<a href=\"https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/\" rel=\"noopener\" target=\"_blank\">Virginia Consumer's Guide for Life Insurance</a>, page last updated January 5, 2024). What a rider covers varies by carrier and state. Our <a href=\"/childrens-life-insurance\">children's life insurance page</a> compares a rider on your own policy with a separate policy on the child.</p>\n\n    <h2>Level term, decreasing term, and return of premium</h2>",
+          "why": "Term page did not mention child riders, although the children's page sends readers here. Adds a short child-rider paragraph at the end of the policy-features section with a link to /childrens-life-insurance. No prices. Source: Virginia SCC Bureau of Insurance, Virginia Consumer's Guide for Life Insurance, https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (page footer: Last Updated January 5, 2024): \"Spousal or family riders allow you the option of buying life insurance on your spouse or children.\" and \"These riders usually increase your premium\". CHECKER (Nov 25, 2026), reworded: removed \"Parents often ask\" (a claim about how often people ask, with no source) and \"one more add-on\" (the section before it is about the conversion privilege, which is not an add-on). Split the 48-word sentence in two. The three Virginia statements and the page date match the source.",
+          "sources": [
+            "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (Last Updated January 5, 2024; re-read Nov 25, 2026): \"Spousal or family riders allow you the option of buying life insurance on your spouse or children.\"",
+            "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ : \"The amount of insurance you can buy varies subject to company underwriting limitations.\"",
+            "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ : \"These riders usually increase your premium\"",
+            "/childrens-life-insurance (built page): section \"The alternative: a child rider\" and \"We will show you a standalone policy next to a child rider\"."
+          ]
+        },
+        {
+          "old": "rarely decline as neatly as an amortization schedule.",
+          "new": "rarely decline as neatly as an amortization schedule. Our <a href=\"/mortgage-protection-insurance\">mortgage protection page</a> lists the questions to ask when coverage is offered along with a home loan.",
+          "why": "Links /mortgage-protection-insurance from the decreasing-term sentence that already talks about coverage marketed alongside mortgages. The mortgage page has a \"Questions to ask about any coverage offered with a loan\" section, so the sentence describes what the reader will find. No new facts. CHECKER (Nov 25, 2026), unchanged: the mortgage page has the section \"Questions to ask about any coverage offered with a loan\", so the sentence describes what the reader finds. No new fact.",
+          "sources": [
+            "/mortgage-protection-insurance (built page): section \"Questions to ask about any coverage offered with a loan\"."
+          ]
+        },
+        {
+          "old": "<h2>No-exam and accelerated underwriting</h2>",
+          "new": "<p><strong>Served in the military?</strong> VGLI, which VA offers after you leave the service, is also term life insurance. VA bases its rates on your age and the amount of coverage (<a href=\"https://www.va.gov/life-insurance/options-eligibility/vgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: VGLI</a>, updated October 13, 2026). A private term policy is also priced on your health. Our <a href=\"/veterans-life-insurance\">life insurance for veterans page</a> explains how VGLI and a private term policy differ.</p>\n\n    <h2>No-exam and accelerated underwriting</h2>",
+          "why": "VGLI vs term line with a link to /veterans-life-insurance, placed at the end of the section on kinds of term. VA facts are from va.gov only: https://www.va.gov/life-insurance/options-eligibility/vgli/ (Last updated October 13, 2026): \"You can get between $10,000 and $500,000 in term life insurance benefits.\" and \"VGLI premium rates are based on your age and the amount of insurance coverage you want.\" The line that private term also looks at health matches the Virginia Bureau of Insurance, which says premiums depend largely on the type of policy and on health, age and other factors (cited on the mortgage page). It does not say which costs less, and no VA affiliation is implied. CHECKER (Nov 25, 2026), reworded: changed \"the coverage VA offers after you leave the service\" to \"which VA offers\" (VA also offers VALife to veterans, so VGLI is not the only coverage) and split the 34-word sentence. Both VA statements and the page date match va.gov. It does not say which costs less and implies no VA affiliation.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (Last updated: October 13, 2026; re-read Nov 25, 2026): \"You can get between $10,000 and $500,000 in term life insurance benefits.\"",
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ : \"VGLI premium rates are based on your age and the amount of insurance coverage you want.\"",
+            "https://www.scc.virginia.gov/about-the-scc/newsreleases/release/september-is-life-insurance-awareness-month/-september-is-life-insurance-awareness-month.html (Virginia SCC news release, Sep 1, 2023; re-read Nov 25, 2026): \"What you pay for life insurance (premiums) depends largely on the type of policy chosen, your health status, age\"",
+            "/veterans-life-insurance (built page): section \"When private coverage is worth comparing\"."
+          ]
+        },
+        {
+          "old": "<a href=\"/whole-life-insurance\">whole life</a> are built for that.",
+          "new": "<a href=\"/whole-life-insurance\">whole life</a> are built for that. Estate and business needs like these are covered on our <a href=\"/high-net-worth-life-insurance\">high-net-worth life insurance page</a>, which is general education, not tax advice.",
+          "why": "Links /high-net-worth-life-insurance from the sentence that already names estate tax and buy-sell needs. Carries the \"general education, not tax advice\" wording because the sentence before it mentions estate tax. CHECKER (Nov 25, 2026), unchanged: the sentence before it names an estate tax bill and a buy-sell agreement, and the high-net-worth page covers both. Carries \"general education, not tax advice\".",
+          "sources": [
+            "/high-net-worth-life-insurance (built page): \"Estate liquidity\", \"Business succession\", and \"This page is general education, not tax, legal, or investment advice.\""
+          ]
+        }
+      ]
+    },
+    {
+      "page": "whole-life-insurance.html",
+      "replacements": [
+        {
+          "old": "<h2>When something else is the better answer</h2>",
+          "new": "<p><strong>For veterans and people leaving the service:</strong> VA says SGLI and VGLI can each be converted to an individual policy from a participating company. The new policy has to be permanent coverage, such as whole life (<a href=\"https://www.va.gov/life-insurance/options-eligibility/sgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: SGLI</a>, updated November 19, 2026; <a href=\"https://www.va.gov/life-insurance/options-eligibility/vgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: VGLI</a>, updated October 13, 2026). Converting is one choice among several. Our <a href=\"/veterans-life-insurance\">life insurance for veterans page</a> lists VA's deadlines and the other options to compare.</p>\n\n    <h2>When something else is the better answer</h2>",
+          "why": "Links /veterans-life-insurance with the one VA fact that belongs on a whole life page: SGLI and VGLI convert only to permanent policies. Sources (va.gov only): https://www.va.gov/life-insurance/options-eligibility/vgli/ (Last updated October 13, 2026): \"The conversion policy must be a permanent policy, such as a whole life policy.\" https://www.va.gov/life-insurance/options-eligibility/sgli/ (Last updated November 19, 2026): \"convert your SGLI coverage to a permanent, individual insurance policy (like whole life)\". Says converting is one choice among several, so it is not a push to convert. This page already links the high-net-worth page in its body, so no second link was added. CHECKER (Nov 25, 2026), reworded: \"VA lets you convert\" now reads \"VA says ... can each be converted to an individual policy from a participating company\". VA's pages say a conversion goes through the companies on VA's list, so the sentence no longer reads as if VA, or this agency, issues the new policy. \"Service members\" became \"people leaving the service\" because VA ties the SGLI conversion to leaving the military. Split the 40-word sentence. Both VA quotes and both page dates match va.gov.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/sgli/ (Last updated: November 19, 2026; re-read Nov 25, 2026): \"convert your SGLI coverage to a permanent, individual insurance policy (like whole life) within 120 days from your date of discharge\"",
+            "https://www.va.gov/life-insurance/options-eligibility/sgli/ : \"Check the list of participating companies and learn how to convert to an individual policy (PDF)\"",
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (Last updated: October 13, 2026; re-read Nov 25, 2026): \"The conversion policy must be a permanent policy, such as a whole life policy.\"",
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ : \"Choose your new insurance company.\" and \"Get a list of the participating companies (PDF)\"",
+            "/veterans-life-insurance (built page): table \"VA deadlines after you leave the military\"."
+          ]
+        }
+      ]
+    },
+    {
+      "page": "veterans-life-insurance.html",
+      "replacements": [
+        {
+          "old": "<li><strong>You want permanent coverage beyond $40,000.</strong>",
+          "new": "<li><strong>You have a mortgage but no Specially Adapted Housing grant.</strong> VMLI, in the table above, requires that grant. A private option is <a href=\"/mortgage-protection-insurance\">mortgage protection insurance</a>, which is usually term life you own, sized to the balance and the years left.</li>\n      <li><strong>You want permanent coverage beyond $40,000.</strong>",
+          "why": "The veterans page did not link /mortgage-protection-insurance in its body. Adds one bullet to \"When private coverage is worth comparing\". The only VA fact is that VMLI needs a Specially Adapted Housing grant, already cited in the table on this page. Source: https://www.va.gov/life-insurance/options-eligibility/vmli/ (Last updated June 4, 2025): \"You received a Specially Adapted Housing (SAH) grant to buy, build, or make changes\". CHECKER (Nov 25, 2026), reworded: \"For other home loans\" read as if the kind of loan decided it. The point is the grant, so it now says \"A private option is\". Added \"usually\" to match the mortgage page, in words that do not repeat the line on the 17 state life pages. The VMLI row is in the table above this list on the built page. The $40,000 figure is existing page text inside the anchor, not new.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vmli/ (Last updated: June 4, 2025; re-read Nov 25, 2026): \"All of these must be true\" ... \"You received a Specially Adapted Housing (SAH) grant to buy, build, or make changes\"",
+            "/mortgage-protection-insurance (built page): \"It is usually a term policy that you own, with the benefit paid to the person you name.\""
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/how-much-does-a-funeral-cost-and-who-pays-without-a-policy.html",
+      "replacements": [
+        {
+          "old": "Veterans' families can ask about burial benefits through the Department of Veterans Affairs.",
+          "new": "Veterans' families can ask about burial benefits through the Department of Veterans Affairs. Our <a href=\"/veterans-life-insurance\">life insurance for veterans page</a> links to VA's burial allowance page and explains how VALife and a private final expense policy can sit side by side.",
+          "why": "This post mentions VA burial benefits three times and had no link to the veterans page. One sentence, link only: it states no VA amounts or rules and points to the veterans page, which links VA.gov burial allowances and says a final expense policy \"can sit alongside VA burial benefits and VALife\". No statement about Medicare was added or changed. CHECKER (Nov 25, 2026), unchanged: link only. It states no VA amount or rule. The veterans page links VA.gov burial allowances and says a final expense policy \"can sit alongside VA burial benefits and VALife\". Nothing about Medicare was added or changed.",
+          "sources": [
+            "/veterans-life-insurance (built page): section \"Final expense for veterans\", which links https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+            "https://www.va.gov/burials-memorials/veterans-burial-allowance/ (re-read Nov 25, 2026, page loads): \"Find out how to get Veterans burial allowances\""
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/can-i-roll-over-my-tsp-to-an-ira-or-401k.html",
+      "replacements": [
+        {
+          "old": "<h2>Direct vs. indirect rollovers: the 60-day rule</h2>",
+          "new": "<p>Leaving the military rather than a civilian federal job? Your SGLI life insurance is a separate decision from your TSP, and VA has its own deadlines for it. Our <a href=\"/veterans-life-insurance\">veterans life insurance page</a> lists them, with links to VA.gov.</p>\n\n    <h2>Direct vs. indirect rollovers: the 60-day rule</h2>",
+          "why": "The post speaks to people leaving federal service or the military but had no link to the veterans page. One short aside at the end of \"Your main choices after you separate\". Link only: no VA numbers. That VA sets deadlines after separation is on va.gov (https://www.va.gov/life-insurance/options-eligibility/vgli/, Last updated October 13, 2026: \"You'll need to apply for VGLI within 1 year and 120 days of leaving the military.\"). The post keeps its Annuities booking block; this is a text link, not a change of meeting type. CHECKER (Nov 25, 2026), unchanged: link only, no VA numbers. \"Deadlines\" is a plain statement that VA sets time limits, and the veterans page lists them with VA.gov links. The post keeps its Annuities booking block.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/sgli/ (Last updated: November 19, 2026; re-read Nov 25, 2026): \"120 days of free coverage from the date you leave the military\"",
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (Last updated: October 13, 2026; re-read Nov 25, 2026): \"You’ll need to apply for VGLI within 1 year and 120 days of leaving the military.\"",
+            "/veterans-life-insurance (built page): table \"VA deadlines after you leave the military\", each row linked to VA.gov."
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/tsp-vs-ira-after-retirement-fees-fund-choices-and-withdrawals.html",
+      "replacements": [
+        {
+          "old": "<li>Who is paid if I move the money, and how?</li>\n    </ul>",
+          "new": "<li>Who is paid if I move the money, and how?</li>\n    </ul>\n    <p>One more item if you are separating from the military: look at your life insurance as well as your TSP. <a href=\"/veterans-life-insurance\">Life insurance for veterans</a> explains what VA offers after you leave and how private coverage compares.</p>",
+          "why": "Second TSP post, worded differently from the first and placed after the closing checklist. Link only: it states no VA rule, amount or deadline. The post keeps its Annuities booking block. CHECKER (Nov 25, 2026), reworded: \"life insurance does not follow the TSP's rules\" was vague and read like a rule statement with no source. It is now a plain suggestion that follows the checklist above it and states no fact. Still worded differently from the other TSP post. No VA rule, amount or deadline. The post keeps its Annuities booking block.",
+          "sources": [
+            "/veterans-life-insurance (built page): sections \"What the VA offers\" and \"When private coverage is worth comparing\"."
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/term-vs-whole-life-insurance-which-fits-your-family.html",
+      "replacements": [
+        {
+          "old": "<li>You have young children, a mortgage, or other debts that would fall on your family.</li>",
+          "new": "<li>You have young children, a mortgage, or other debts that would fall on your family. A term policy sized to a home loan is what we call <a href=\"/mortgage-protection-insurance\">mortgage protection insurance</a>.</li>",
+          "why": "Links /mortgage-protection-insurance from the \"Term often fits when\" bullet that names a mortgage. Matches the mortgage page, which defines mortgage protection as a term life policy sized to the loan. No new facts. CHECKER (Nov 25, 2026), reworded: \"is often sold as\" is a claim about the market with no primary source. \"Is what we call\" says only how this site uses the name, which is what the mortgage page says.",
+          "sources": [
+            "/mortgage-protection-insurance (built page): \"A term life policy you own. This is what this page calls mortgage protection.\""
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/how-much-life-insurance-do-you-need.html",
+      "replacements": [
+        {
+          "old": "a twenty-five or thirty-year term outlasts it.",
+          "new": "a twenty-five or thirty-year term outlasts it. Our <a href=\"/mortgage-protection-insurance\">mortgage protection page</a> goes deeper on matching a policy to a home loan.",
+          "why": "Links /mortgage-protection-insurance from the sentence about matching a term to the years left on a mortgage. No new facts. CHECKER (Nov 25, 2026), unchanged: sits right after the sentence about a mortgage with twenty-two years left. The mortgage page covers matching the term to the years left on the loan. No new fact.",
+          "sources": [
+            "/mortgage-protection-insurance (built page): section \"What to compare\", \"Term length. Match it to the years left on the mortgage\"."
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/how-much-life-insurance-do-high-income-earners-need.html",
+      "replacements": [
+        {
+          "old": "An attorney can advise on structures such as trusts.",
+          "new": "An attorney can advise on structures such as trusts. Our <a href=\"/high-net-worth-life-insurance\">high-net-worth life insurance page</a> covers estate liquidity, business succession and why policy ownership matters. It is general education, not tax advice.",
+          "why": "The high-net-worth page links to this post, but the post did not link back. Adds the link in the estate planning bullet, naming three things that page covers (estate liquidity, business succession, policy ownership). Carries \"general education, not tax advice\" because the bullet mentions estate taxes. CHECKER (Nov 25, 2026), reworded: \"who should own the policy\" promised more than the page gives. The high-net-worth page says ownership affects the estate and sends the reader to an attorney. It does not say who should own the policy. Now \"why policy ownership matters\".",
+          "sources": [
+            "/high-net-worth-life-insurance (built page): sections \"What life insurance is used for at this level\" and \"Ownership matters as much as the policy\"."
+          ]
+        },
+        {
+          "old": "and a permanent policy for lifelong needs.",
+          "new": "and a permanent policy for lifelong needs. The mortgage layer is the subject of our <a href=\"/mortgage-protection-insurance\">mortgage protection insurance page</a>.",
+          "why": "Links /mortgage-protection-insurance from the \"Coverage in layers\" paragraph, where a policy for the mortgage period is already the example. No new facts. CHECKER (Nov 25, 2026), unchanged: the paragraph already uses a policy for the mortgage period as its example. No new fact.",
+          "sources": [
+            "/mortgage-protection-insurance (built page)."
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/do-i-need-disability-insurance.html",
+      "replacements": [
+        {
+          "old": "which protect your family if you die rather than if you cannot work.",
+          "new": "which protect your family if you die rather than if you cannot work. The same goes for <a href=\"/mortgage-protection-insurance\">mortgage protection insurance</a>. It is life insurance that pays a death benefit, so on its own it does not replace a paycheck while you recover from an illness or injury.",
+          "why": "Links /mortgage-protection-insurance where the post already contrasts disability coverage with life insurance. Clears up a common mix-up and matches the mortgage page (\"Mortgage protection is life insurance. It pays a death benefit.\"), which links back to the disability page. No new facts. CHECKER (Nov 25, 2026), reworded: split the 31-word sentence and added \"on its own\". Some policies can add riders (the mortgage page says so), so the flat statement would not hold for every policy.",
+          "sources": [
+            "/mortgage-protection-insurance (built page): \"Mortgage protection is life insurance. It pays a death benefit.\" and \"Riders. Some policies can add features such as a waiver of premium if you become disabled.\""
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/no-exam-life-insurance-how-it-works-and-who-its-for.html",
+      "replacements": [
+        {
+          "old": "for example for a loan requirement or a new mortgage.",
+          "new": "for example for a loan requirement or a new mortgage. Our <a href=\"/mortgage-protection-insurance\">mortgage protection page</a> explains coverage sized to a home loan. That coverage is optional, and it is a separate product from the mortgage insurance some lenders require.",
+          "why": "Links /mortgage-protection-insurance from the bullet that names a new mortgage. The added clause repeats what the mortgage page sources to the CFPB and NAIC (optional; different from lender-required mortgage insurance), so a reader does not take \"loan requirement\" to mean mortgage protection is required. CHECKER (Nov 25, 2026), reworded: the clause \"is not the mortgage insurance a lender may ask for\" was word for word the same as the new line on /life-insurance in this patch. This version says it in different words and in two short sentences, and it avoids the wording already on the 17 state life pages. Both points are on the mortgage page and match the CFPB and NAIC pages.",
+          "sources": [
+            "/mortgage-protection-insurance (built page, FAQ): \"Is mortgage protection insurance required? No. It is optional life insurance.\"",
+            "https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/ (CFPB, last reviewed Nov 9, 2026; re-read Nov 25, 2026): \"PMI protects the lender—not you—if you stop making payments on your loan.\"",
+            "https://content.naic.org/article/consumer-insight-credit-insurance (NAIC, page modified January 16, 2024; re-read Nov 25, 2026): \"lenders cannot deny you credit if you do not buy optional credit insurance\""
+          ]
+        }
+      ]
+    }
+  ]
+}

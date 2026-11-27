@@ -33,7 +33,7 @@
 <meta name="twitter:image" content="https://honorbrook-insurance.com/assets/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=onyx2">
+<link rel="stylesheet" href="/assets/style.css?v=onyx3">
 
 <script type="application/ld+json">
 {
@@ -137,7 +137,7 @@
 }
 </script>
 </head>
-<body>
+<body data-line="area">
 <a class="skip-link" href="#maincontent">Skip to main content</a>
 
 
@@ -201,13 +201,13 @@
       <a href="/blog/">Blog</a>
       <a href="/contact">Contact</a>
     </nav>
-    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="/#contact">Plan Review</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
+    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="#quote">Plan Review</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
   </div>
 </header>
 
 <div class="aep-banner sans" id="aepBanner">
   <strong>Medicare Annual Enrollment runs Oct 15 – Dec 7.</strong>
-  <span id="aepMsg"></span> <a href="/#contact">Get on our priority review list →</a>
+  <span id="aepMsg"></span> <a href="#quote">Get on our priority review list →</a>
 </div>
 
 <section class="page-hero" id="maincontent" role="main">
@@ -266,7 +266,7 @@
 
 
     <h2>Questions about Medicare in Armstrong County?</h2>
-    <p>Reach out to us: <a href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">schedule an appointment</a>, <a href="/#contact">fill out our short form</a> or call <a href="tel:+13016158289">(301) 615-8289</a>, and a licensed agent will compare the plans available to you, check your doctors and drugs, and stay with you each year at renewal. For general Medicare information, the federal helpline is <strong>1-800-MEDICARE</strong> (<a href="tel:+18006334227">1-800-633-4227</a>).</p>
+    <p>Reach out to us: <a href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">schedule an appointment</a>, <a href="#quote">fill out our short form</a> or call <a href="tel:+13016158289">(301) 615-8289</a>, and a licensed agent will compare the plans available to you, check your doctors and drugs, and stay with you each year at renewal. For general Medicare information, the federal helpline is <strong>1-800-MEDICARE</strong> (<a href="tel:+18006334227">1-800-633-4227</a>).</p>
 
 
     <h2>Medicare resources from official sources</h2>
@@ -294,7 +294,7 @@
     <div class="cta-strip">
       <h3>Get a clear answer for Armstrong County</h3>
       <p class="sans">A short call is enough to compare your options. Our help is free to you.</p>
-      <div class="hb-strip-cta sans"><a class="btn-primary" href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">Schedule an appointment</a><a class="hb-book-how" href="/#contact">Or send a short form</a></div>
+      <div class="hb-strip-cta sans"><a class="btn-primary" href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">Schedule an appointment</a><a class="hb-book-how" href="#quote">Or send a short form</a></div>
     </div>
 
     <h2>Read next</h2>
@@ -325,6 +325,55 @@
     <p>See every Texas county in our <a href="/texas-counties">Texas directory</a> or go to our <a href="/texas-medicare-insurance">Texas Medicare hub</a>.</p>
   </div>
 </article>
+
+<section id="quote" style="padding:0 20px">
+<style>
+.hb-quote{background:#fff;border:1px solid #dfe4ec;border-top:3px solid #c6a14a;border-radius:8px;box-shadow:0 8px 26px rgba(27,47,75,.07);padding:28px;margin:38px auto;max-width:620px}
+.hb-quote h3{margin:0 0 4px;font-size:24px}
+.hb-quote p.sub{margin:0 0 14px;color:#5b6678;font-size:16px}
+.hb-quote label{display:block;font-weight:600;font-size:15px;margin:14px 0 5px}
+.hb-quote input[type=text],.hb-quote input[type=tel],.hb-quote input[type=email],.hb-quote select{width:100%;padding:12px;border:1px solid #c9d1dc;border-radius:6px;font-size:17px;background:#fff;box-sizing:border-box}
+.hb-quote .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hb-quote .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;line-height:1.45;color:#5b6678;margin-top:16px}
+.hb-quote .hb-field-err{border-color:#d9534f}
+@media(max-width:560px){.hb-quote .row2{grid-template-columns:1fr}}
+</style>
+  <div class="hb-quote sans">
+    <form data-line="area" data-thanks="/thank-you" action="https://formspree.io/f/xgobjlba" method="POST">
+      <input type="hidden" name="_subject" value="Quote request: Medicare &amp; insurance help in Armstrong County, Texas (Honorbrook website)">
+      <input type="hidden" name="Topic" value="Medicare &amp; insurance help in Armstrong County, Texas">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <h3>Ask a question</h3>
+      <p class="sub">Tell us how to reach you and what you need. We reply within one business day, by text if you prefer.</p>
+      <label for="qa-name">Full name</label>
+      <input id="qa-name" type="text" name="Name" autocomplete="name" required>
+      <div class="row2">
+        <div><label for="qa-phone">Mobile phone</label>
+        <input id="qa-phone" type="tel" name="Phone" autocomplete="tel" required></div>
+        <div><label for="qa-zip">ZIP code</label>
+        <input id="qa-zip" type="text" name="ZIP" inputmode="numeric" autocomplete="postal-code" maxlength="5" required></div>
+      </div>
+      <div class="row2">
+        <div><label for="qa-age">Your age</label>
+        <select id="qa-age" name="Age range"><option value="">Select</option><option>Under 40</option><option>40 to 49</option><option>50 to 59</option><option>60 to 69</option><option>70 to 79</option><option>80 or older</option></select></div>
+        <div><label for="qa-how">Best way to reach you</label>
+        <select id="qa-how" name="Contact preference"><option>Text me</option><option>Call me</option><option>Email me</option></select></div>
+      </div>
+      <label for="qa-email">Email (optional)</label>
+      <input id="qa-email" type="email" name="Email" autocomplete="email">
+      <div class="row2">
+        <div><label for="qa-help">What do you need help with?</label>
+        <select id="qa-help" name="Help with"><option value="">Choose one</option><option>Medicare</option><option>Life insurance or final expense</option><option>Health insurance under 65</option><option>Annuities or retirement income</option><option>Something else</option></select></div>
+        <div><label for="qa-best">Best time to call</label>
+        <select id="qa-best" name="Best time to call"><option>Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+      </div>
+      <label class="consent"><input type="checkbox" name="Consent" value="Yes" required>
+        <span>By submitting, I authorize Honorbrook Insurance to contact me by phone or text (including automated means) about insurance. Consent isn't a condition of purchase; reply STOP to opt out. See our <a href="/privacy-policy" rel="noopener" target="_blank">Privacy Policy</a>.</span>
+      </label>
+      <button class="btn-primary sans" type="submit" style="margin-top:18px;width:100%">Send my request</button>
+    </form>
+  </div>
+</section>
 
 <section class="faq">
   <div class="wrap" style="max-width:880px">
@@ -398,7 +447,7 @@
         <a href="sms:+15713540146">Text (571) 354-0146</a>
         <p class="hb-langs">We speak English, Arabic, French and Spanish</p>
         <a href="mailto:info@honorbrook-insurance.com">Email us</a>
-        <a href="/#contact">Request a callback</a>
+        <a href="#quote">Request a callback</a>
         <a href="/schedule-an-appointment">How scheduling works</a>
         <a href="/careers">Careers</a>
         <a href="/privacy-policy">Privacy Policy</a>
@@ -448,9 +497,9 @@
   })();
 </script>
 
-<script src="/assets/chat.js?v=onyx2" defer></script>
-<script src="/assets/find.js?v=onyx2" defer></script>
+<script src="/assets/chat.js?v=onyx3" defer></script>
+<script src="/assets/find.js?v=onyx3" defer></script>
 
-<script src="/assets/hb-nav.js?v=onyx2" defer></script>
+<script src="/assets/hb-nav.js?v=onyx3" defer></script>
 </body>
 </html>

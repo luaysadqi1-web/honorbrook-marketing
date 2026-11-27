@@ -1,0 +1,2432 @@
+{
+ "state": "West Virginia",
+ "abbr": "WV",
+ "county_unit": "county",
+ "as_of": "2026-11-24",
+ "plan_year": 2027,
+ "statewide": {
+  "ma_pd": 43,
+  "ma_only": 8,
+  "snp": 19,
+  "total": 70,
+  "orgs": 8,
+  "orgs_non_snp": 7,
+  "contracts": 20,
+  "medicare_eligibles": 458491,
+  "ma_enrolled": 259694,
+  "penetration_pct": 56.6,
+  "counties": 55,
+  "counties_with_plans": 55,
+  "total_per_county_min": 30,
+  "total_per_county_max": 57,
+  "non_snp_per_county_min": 21,
+  "non_snp_per_county_max": 38,
+  "pen_min": 41.1,
+  "pen_max": 72.0
+ },
+ "plan_type_counts": {
+  "cms_plan_type_all_categories": {
+   "HMO": 6,
+   "HMO D-SNP": 7,
+   "HMO I-SNP": 2,
+   "HMO-POS": 5,
+   "HMO-POS C-SNP": 1,
+   "HMO-POS D-SNP": 3,
+   "PFFS": 1,
+   "PPO": 37,
+   "PPO D-SNP": 5,
+   "PPO I-SNP": 1,
+   "Regional PPO": 2
+  },
+  "non_snp_by_type": {
+   "HMO": 6,
+   "HMO-POS": 5,
+   "Local PPO": 37,
+   "PFFS": 1,
+   "Regional PPO": 2
+  },
+  "snp_by_kind": {
+   "C-SNP": 1,
+   "D-SNP": 15,
+   "I-SNP": 3
+  },
+  "all_by_base_type": {
+   "HMO": 15,
+   "HMO-POS": 9,
+   "Local PPO": 43,
+   "PFFS": 1,
+   "Regional PPO": 2
+  }
+ },
+ "per_county": [
+  {
+   "county": "Barbour County",
+   "fips": "54001",
+   "slug": "barbour-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 16,
+   "ma_only": 7,
+   "snp": 12,
+   "total": 35,
+   "orgs": 7,
+   "penetration_pct": 57.4,
+   "medicare_eligibles": 4188,
+   "ma_enrolled": 2404,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 3,
+    "Local PPO": 16,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 9,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PPO": 16,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Berkeley County",
+   "fips": "54003",
+   "slug": "berkeley-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 27,
+   "ma_only": 8,
+   "snp": 14,
+   "total": 49,
+   "orgs": 7,
+   "penetration_pct": 44.1,
+   "medicare_eligibles": 27046,
+   "ma_enrolled": 11937,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 24,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 24,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Boone County",
+   "fips": "54005",
+   "slug": "boone-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 48,
+   "orgs": 8,
+   "penetration_pct": 71.2,
+   "medicare_eligibles": 5709,
+   "ma_enrolled": 4066,
+   "orgs_non_snp": 7,
+   "contracts": 19,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 4,
+    "Local PPO": 20,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 20,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Braxton County",
+   "fips": "54007",
+   "slug": "braxton-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 28,
+   "ma_only": 8,
+   "snp": 16,
+   "total": 52,
+   "orgs": 8,
+   "penetration_pct": 64.8,
+   "medicare_eligibles": 3804,
+   "ma_enrolled": 2466,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 26,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 26,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Brooke County",
+   "fips": "54009",
+   "slug": "brooke-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 26,
+   "ma_only": 8,
+   "snp": 12,
+   "total": 46,
+   "orgs": 8,
+   "penetration_pct": 54.5,
+   "medicare_eligibles": 6105,
+   "ma_enrolled": 3327,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 23,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 9,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 5,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "PFFS": 1,
+    "PPO": 23,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Cabell County",
+   "fips": "54011",
+   "slug": "cabell-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 30,
+   "ma_only": 8,
+   "snp": 19,
+   "total": 57,
+   "orgs": 8,
+   "penetration_pct": 56.7,
+   "medicare_eligibles": 21059,
+   "ma_enrolled": 11945,
+   "orgs_non_snp": 7,
+   "contracts": 19,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 27,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 15,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 27,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Calhoun County",
+   "fips": "54013",
+   "slug": "calhoun-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 24,
+   "ma_only": 8,
+   "snp": 15,
+   "total": 47,
+   "orgs": 8,
+   "penetration_pct": 57.7,
+   "medicare_eligibles": 2112,
+   "ma_enrolled": 1218,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 22,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 22,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Clay County",
+   "fips": "54015",
+   "slug": "clay-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 8,
+   "snp": 16,
+   "total": 46,
+   "orgs": 8,
+   "penetration_pct": 71.3,
+   "medicare_eligibles": 2512,
+   "ma_enrolled": 1792,
+   "orgs_non_snp": 7,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 20,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 20,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Doddridge County",
+   "fips": "54017",
+   "slug": "doddridge-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 7,
+   "snp": 16,
+   "total": 42,
+   "orgs": 8,
+   "penetration_pct": 52.0,
+   "medicare_eligibles": 1808,
+   "ma_enrolled": 941,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 18,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 18,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Fayette County",
+   "fips": "54019",
+   "slug": "fayette-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 29,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 55,
+   "orgs": 8,
+   "penetration_pct": 61.4,
+   "medicare_eligibles": 10952,
+   "ma_enrolled": 6723,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 27,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PPO": 27,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Gilmer County",
+   "fips": "54021",
+   "slug": "gilmer-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 25,
+   "ma_only": 8,
+   "snp": 15,
+   "total": 48,
+   "orgs": 8,
+   "penetration_pct": 65.4,
+   "medicare_eligibles": 1464,
+   "ma_enrolled": 958,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 23,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 23,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Grant County",
+   "fips": "54023",
+   "slug": "grant-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 8,
+   "snp": 16,
+   "total": 44,
+   "orgs": 8,
+   "penetration_pct": 44.4,
+   "medicare_eligibles": 3425,
+   "ma_enrolled": 1519,
+   "orgs_non_snp": 7,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 6,
+    "HMO-POS": 4,
+    "Local PPO": 15,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 6,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 15,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Greenbrier County",
+   "fips": "54025",
+   "slug": "greenbrier-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 29,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 55,
+   "orgs": 8,
+   "penetration_pct": 52.6,
+   "medicare_eligibles": 10043,
+   "ma_enrolled": 5281,
+   "orgs_non_snp": 7,
+   "contracts": 19,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 26,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 26,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Hampshire County",
+   "fips": "54027",
+   "slug": "hampshire-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 8,
+   "snp": 13,
+   "total": 43,
+   "orgs": 8,
+   "penetration_pct": 46.7,
+   "medicare_eligibles": 6783,
+   "ma_enrolled": 3166,
+   "orgs_non_snp": 7,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 6,
+    "HMO-POS": 3,
+    "Local PPO": 19,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 10,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 6,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "PPO": 19,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Hancock County",
+   "fips": "54029",
+   "slug": "hancock-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 23,
+   "ma_only": 8,
+   "snp": 12,
+   "total": 43,
+   "orgs": 8,
+   "penetration_pct": 48.2,
+   "medicare_eligibles": 8233,
+   "ma_enrolled": 3967,
+   "orgs_non_snp": 7,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 21,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 9,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 5,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "PPO": 21,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Hardy County",
+   "fips": "54031",
+   "slug": "hardy-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 7,
+   "snp": 15,
+   "total": 42,
+   "orgs": 8,
+   "penetration_pct": 44.8,
+   "medicare_eligibles": 3932,
+   "ma_enrolled": 1761,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 18,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 18,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Harrison County",
+   "fips": "54033",
+   "slug": "harrison-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 25,
+   "ma_only": 8,
+   "snp": 14,
+   "total": 47,
+   "orgs": 7,
+   "penetration_pct": 57.5,
+   "medicare_eligibles": 16583,
+   "ma_enrolled": 9542,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 22,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 22,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Jackson County",
+   "fips": "54035",
+   "slug": "jackson-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 25,
+   "ma_only": 8,
+   "snp": 16,
+   "total": 49,
+   "orgs": 8,
+   "penetration_pct": 61.8,
+   "medicare_eligibles": 7548,
+   "ma_enrolled": 4668,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 23,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 23,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Jefferson County",
+   "fips": "54037",
+   "slug": "jefferson-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 7,
+   "snp": 14,
+   "total": 42,
+   "orgs": 7,
+   "penetration_pct": 41.2,
+   "medicare_eligibles": 13196,
+   "ma_enrolled": 5436,
+   "orgs_non_snp": 5,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 3,
+    "Local PPO": 20,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 20,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Kanawha County",
+   "fips": "54039",
+   "slug": "kanawha-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 30,
+   "ma_only": 8,
+   "snp": 19,
+   "total": 57,
+   "orgs": 8,
+   "penetration_pct": 61.7,
+   "medicare_eligibles": 46861,
+   "ma_enrolled": 28925,
+   "orgs_non_snp": 7,
+   "contracts": 19,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 27,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 15,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 27,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Lewis County",
+   "fips": "54041",
+   "slug": "lewis-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 8,
+   "snp": 16,
+   "total": 44,
+   "orgs": 8,
+   "penetration_pct": 60.5,
+   "medicare_eligibles": 4484,
+   "ma_enrolled": 2711,
+   "orgs_non_snp": 7,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 4,
+    "Local PPO": 17,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 17,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Lincoln County",
+   "fips": "54043",
+   "slug": "lincoln-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 48,
+   "orgs": 8,
+   "penetration_pct": 72.0,
+   "medicare_eligibles": 5252,
+   "ma_enrolled": 3782,
+   "orgs_non_snp": 7,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 20,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PPO": 20,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Logan County",
+   "fips": "54045",
+   "slug": "logan-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 7,
+   "snp": 18,
+   "total": 44,
+   "orgs": 8,
+   "penetration_pct": 65.3,
+   "medicare_eligibles": 8600,
+   "ma_enrolled": 5613,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 17,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 17,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "McDowell County",
+   "fips": "54047",
+   "slug": "mcdowell-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 28,
+   "ma_only": 8,
+   "snp": 15,
+   "total": 51,
+   "orgs": 8,
+   "penetration_pct": 67.2,
+   "medicare_eligibles": 5194,
+   "ma_enrolled": 3492,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 3,
+    "Local PPO": 26,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 1,
+    "PFFS": 1,
+    "PPO": 26,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Marion County",
+   "fips": "54049",
+   "slug": "marion-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 25,
+   "ma_only": 8,
+   "snp": 14,
+   "total": 47,
+   "orgs": 7,
+   "penetration_pct": 58.9,
+   "medicare_eligibles": 14117,
+   "ma_enrolled": 8315,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 22,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 22,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Marshall County",
+   "fips": "54051",
+   "slug": "marshall-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 24,
+   "ma_only": 8,
+   "snp": 13,
+   "total": 45,
+   "orgs": 8,
+   "penetration_pct": 66.6,
+   "medicare_eligibles": 7440,
+   "ma_enrolled": 4956,
+   "orgs_non_snp": 7,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 22,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 10,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "PPO": 22,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Mason County",
+   "fips": "54053",
+   "slug": "mason-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 29,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 55,
+   "orgs": 8,
+   "penetration_pct": 61.8,
+   "medicare_eligibles": 6822,
+   "ma_enrolled": 4219,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 27,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PPO": 27,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Mercer County",
+   "fips": "54055",
+   "slug": "mercer-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 28,
+   "ma_only": 8,
+   "snp": 12,
+   "total": 48,
+   "orgs": 7,
+   "penetration_pct": 59.5,
+   "medicare_eligibles": 16140,
+   "ma_enrolled": 9608,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 2,
+    "Local PPO": 27,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 8,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 2,
+    "HMO-POS C-SNP": 1,
+    "PFFS": 1,
+    "PPO": 27,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Mineral County",
+   "fips": "54057",
+   "slug": "mineral-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 14,
+   "ma_only": 7,
+   "snp": 9,
+   "total": 30,
+   "orgs": 7,
+   "penetration_pct": 41.1,
+   "medicare_eligibles": 7279,
+   "ma_enrolled": 2989,
+   "orgs_non_snp": 5,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 2,
+    "Local PPO": 15,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 6,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 2,
+    "PPO": 15,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Mingo County",
+   "fips": "54059",
+   "slug": "mingo-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 30,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 56,
+   "orgs": 8,
+   "penetration_pct": 69.5,
+   "medicare_eligibles": 6486,
+   "ma_enrolled": 4510,
+   "orgs_non_snp": 7,
+   "contracts": 20,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 27,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 27,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Monongalia County",
+   "fips": "54061",
+   "slug": "monongalia-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 22,
+   "ma_only": 8,
+   "snp": 14,
+   "total": 44,
+   "orgs": 7,
+   "penetration_pct": 57.1,
+   "medicare_eligibles": 16423,
+   "ma_enrolled": 9380,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 2,
+    "Local PPO": 21,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 2,
+    "HMO-POS D-SNP": 3,
+    "PPO": 21,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Monroe County",
+   "fips": "54063",
+   "slug": "monroe-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 8,
+   "snp": 15,
+   "total": 44,
+   "orgs": 8,
+   "penetration_pct": 48.3,
+   "medicare_eligibles": 3937,
+   "ma_enrolled": 1902,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 3,
+    "Local PPO": 20,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 1,
+    "PFFS": 1,
+    "PPO": 20,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Morgan County",
+   "fips": "54065",
+   "slug": "morgan-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 16,
+   "ma_only": 7,
+   "snp": 11,
+   "total": 34,
+   "orgs": 8,
+   "penetration_pct": 44.8,
+   "medicare_eligibles": 5337,
+   "ma_enrolled": 2389,
+   "orgs_non_snp": 6,
+   "contracts": 14,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 3,
+    "Local PPO": 16,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 8,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 5,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "PPO": 16,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Nicholas County",
+   "fips": "54067",
+   "slug": "nicholas-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 21,
+   "ma_only": 7,
+   "snp": 17,
+   "total": 45,
+   "orgs": 8,
+   "penetration_pct": 64.3,
+   "medicare_eligibles": 7384,
+   "ma_enrolled": 4747,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 20,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 20,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Ohio County",
+   "fips": "54069",
+   "slug": "ohio-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 25,
+   "ma_only": 8,
+   "snp": 14,
+   "total": 47,
+   "orgs": 8,
+   "penetration_pct": 55.4,
+   "medicare_eligibles": 11663,
+   "ma_enrolled": 6459,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 22,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "PFFS": 1,
+    "PPO": 22,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Pendleton County",
+   "fips": "54071",
+   "slug": "pendleton-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 26,
+   "ma_only": 8,
+   "snp": 15,
+   "total": 49,
+   "orgs": 8,
+   "penetration_pct": 50.1,
+   "medicare_eligibles": 2340,
+   "ma_enrolled": 1173,
+   "orgs_non_snp": 7,
+   "contracts": 19,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 23,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 23,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Pleasants County",
+   "fips": "54073",
+   "slug": "pleasants-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 25,
+   "ma_only": 8,
+   "snp": 16,
+   "total": 49,
+   "orgs": 8,
+   "penetration_pct": 56.4,
+   "medicare_eligibles": 1891,
+   "ma_enrolled": 1066,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 23,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 23,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Pocahontas County",
+   "fips": "54075",
+   "slug": "pocahontas-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 7,
+   "snp": 16,
+   "total": 41,
+   "orgs": 8,
+   "penetration_pct": 51.8,
+   "medicare_eligibles": 2566,
+   "ma_enrolled": 1329,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 17,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 17,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Preston County",
+   "fips": "54077",
+   "slug": "preston-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 7,
+   "snp": 15,
+   "total": 40,
+   "orgs": 8,
+   "penetration_pct": 56.2,
+   "medicare_eligibles": 8569,
+   "ma_enrolled": 4815,
+   "orgs_non_snp": 6,
+   "contracts": 15,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 17,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 5,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 17,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Putnam County",
+   "fips": "54079",
+   "slug": "putnam-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 30,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 56,
+   "orgs": 8,
+   "penetration_pct": 58.8,
+   "medicare_eligibles": 14048,
+   "ma_enrolled": 8261,
+   "orgs_non_snp": 7,
+   "contracts": 19,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 27,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 27,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Raleigh County",
+   "fips": "54081",
+   "slug": "raleigh-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 26,
+   "ma_only": 8,
+   "snp": 13,
+   "total": 47,
+   "orgs": 6,
+   "penetration_pct": 52.6,
+   "medicare_eligibles": 19743,
+   "ma_enrolled": 10391,
+   "orgs_non_snp": 5,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 2,
+    "Local PPO": 25,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 9,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 5,
+    "HMO I-SNP": 2,
+    "HMO-POS": 2,
+    "HMO-POS C-SNP": 1,
+    "PFFS": 1,
+    "PPO": 25,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Randolph County",
+   "fips": "54083",
+   "slug": "randolph-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 24,
+   "ma_only": 8,
+   "snp": 13,
+   "total": 45,
+   "orgs": 7,
+   "penetration_pct": 54.4,
+   "medicare_eligibles": 7548,
+   "ma_enrolled": 4106,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 21,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 10,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 21,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Ritchie County",
+   "fips": "54085",
+   "slug": "ritchie-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 7,
+   "snp": 16,
+   "total": 43,
+   "orgs": 8,
+   "penetration_pct": 53.8,
+   "medicare_eligibles": 2834,
+   "ma_enrolled": 1526,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 18,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 18,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Roane County",
+   "fips": "54087",
+   "slug": "roane-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 7,
+   "snp": 15,
+   "total": 40,
+   "orgs": 8,
+   "penetration_pct": 58.3,
+   "medicare_eligibles": 4180,
+   "ma_enrolled": 2435,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 17,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 17,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Summers County",
+   "fips": "54089",
+   "slug": "summers-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 8,
+   "snp": 15,
+   "total": 42,
+   "orgs": 8,
+   "penetration_pct": 55.9,
+   "medicare_eligibles": 3615,
+   "ma_enrolled": 2020,
+   "orgs_non_snp": 7,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 3,
+    "Local PPO": 19,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 1,
+    "PPO": 19,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Taylor County",
+   "fips": "54091",
+   "slug": "taylor-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 24,
+   "ma_only": 8,
+   "snp": 13,
+   "total": 45,
+   "orgs": 7,
+   "penetration_pct": 54.2,
+   "medicare_eligibles": 4207,
+   "ma_enrolled": 2281,
+   "orgs_non_snp": 6,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 5,
+    "HMO-POS": 3,
+    "Local PPO": 21,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 10,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 5,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 21,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Tucker County",
+   "fips": "54093",
+   "slug": "tucker-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 7,
+   "snp": 15,
+   "total": 39,
+   "orgs": 8,
+   "penetration_pct": 56.7,
+   "medicare_eligibles": 2024,
+   "ma_enrolled": 1147,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 15,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 15,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Tyler County",
+   "fips": "54095",
+   "slug": "tyler-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 7,
+   "snp": 15,
+   "total": 40,
+   "orgs": 8,
+   "penetration_pct": 53.2,
+   "medicare_eligibles": 2419,
+   "ma_enrolled": 1288,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 16,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 12,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 16,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Upshur County",
+   "fips": "54097",
+   "slug": "upshur-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 8,
+   "snp": 12,
+   "total": 40,
+   "orgs": 7,
+   "penetration_pct": 60.0,
+   "medicare_eligibles": 6315,
+   "ma_enrolled": 3788,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 3,
+    "Local PPO": 19,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 9,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 3,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 19,
+    "PPO D-SNP": 3,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Wayne County",
+   "fips": "54099",
+   "slug": "wayne-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 30,
+   "ma_only": 8,
+   "snp": 18,
+   "total": 56,
+   "orgs": 8,
+   "penetration_pct": 62.6,
+   "medicare_eligibles": 9917,
+   "ma_enrolled": 6211,
+   "orgs_non_snp": 7,
+   "contracts": 19,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 4,
+    "Local PPO": 27,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 14,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS C-SNP": 1,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 27,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Webster County",
+   "fips": "54101",
+   "slug": "webster-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 19,
+   "ma_only": 7,
+   "snp": 16,
+   "total": 42,
+   "orgs": 8,
+   "penetration_pct": 70.5,
+   "medicare_eligibles": 2481,
+   "ma_enrolled": 1749,
+   "orgs_non_snp": 6,
+   "contracts": 17,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 17,
+    "PFFS": 1,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PFFS": 1,
+    "PPO": 17,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Wetzel County",
+   "fips": "54103",
+   "slug": "wetzel-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 17,
+   "ma_only": 7,
+   "snp": 16,
+   "total": 40,
+   "orgs": 8,
+   "penetration_pct": 63.3,
+   "medicare_eligibles": 3889,
+   "ma_enrolled": 2460,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 16,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 16,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Wirt County",
+   "fips": "54105",
+   "slug": "wirt-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 26,
+   "ma_only": 8,
+   "snp": 16,
+   "total": 50,
+   "orgs": 8,
+   "penetration_pct": 60.1,
+   "medicare_eligibles": 1775,
+   "ma_enrolled": 1066,
+   "orgs_non_snp": 7,
+   "contracts": 18,
+   "non_snp_by_type": {
+    "HMO": 3,
+    "HMO-POS": 4,
+    "Local PPO": 25,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 13,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 3,
+    "HMO D-SNP": 6,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 25,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Wood County",
+   "fips": "54107",
+   "slug": "wood-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 20,
+   "ma_only": 7,
+   "snp": 18,
+   "total": 45,
+   "orgs": 8,
+   "penetration_pct": 51.6,
+   "medicare_eligibles": 22776,
+   "ma_enrolled": 11747,
+   "orgs_non_snp": 6,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 2,
+    "HMO-POS": 4,
+    "Local PPO": 19,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "D-SNP": 15,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 2,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 4,
+    "HMO-POS D-SNP": 3,
+    "PPO": 19,
+    "PPO D-SNP": 5,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  },
+  {
+   "county": "Wyoming County",
+   "fips": "54109",
+   "slug": "wyoming-county-wv-medicare-insurance",
+   "slug_exists": true,
+   "ma_pd": 18,
+   "ma_only": 8,
+   "snp": 15,
+   "total": 41,
+   "orgs": 8,
+   "penetration_pct": 68.5,
+   "medicare_eligibles": 5433,
+   "ma_enrolled": 3721,
+   "orgs_non_snp": 7,
+   "contracts": 16,
+   "non_snp_by_type": {
+    "HMO": 4,
+    "HMO-POS": 3,
+    "Local PPO": 17,
+    "Regional PPO": 2
+   },
+   "snp_by_kind": {
+    "C-SNP": 1,
+    "D-SNP": 11,
+    "I-SNP": 3
+   },
+   "plan_types_cms": {
+    "HMO": 4,
+    "HMO D-SNP": 7,
+    "HMO I-SNP": 2,
+    "HMO-POS": 3,
+    "HMO-POS C-SNP": 1,
+    "PPO": 17,
+    "PPO D-SNP": 4,
+    "PPO I-SNP": 1,
+    "Regional PPO": 2
+   }
+  }
+ ],
+ "ship": {
+  "name": "West Virginia State Health Insurance Assistance Program (WV SHIP), West Virginia Bureau of Senior Services",
+  "short_name": "WV SHIP",
+  "url": "http://www.wvship.org/",
+  "url_agency_page": "http://www.wvseniorservices.gov/StayingHealthy/SHIPMedicare/tabid/72/Default.aspx",
+  "quote": "provides free, objective, and confidential help to West Virginia Medicare beneficiaries and their families",
+  "quote_url": "http://www.wvseniorservices.gov/StayingHealthy/SHIPMedicare/tabid/72/Default.aspx",
+  "quote_2": "WV SHIP’s 80+ professional counselors are paid employees of the Bureau of Senior Services ... or the county aging providers (senior centers).",
+  "quote_2_url": "http://www.wvship.org/AboutWVSHIPandSMP/tabid/132/Default.aspx",
+  "cross_check": "shiphelp.org (ACL-funded SHIP TA Center) lists West Virginia 'State Health Insurance Assistance Program (SHIP)' with website http://www.wvship.org/ (https://www.shiphelp.org/ships/west-virginia/)",
+  "page_copy": "WV SHIP gives free, unbiased Medicare counseling. It is offered by the West Virginia Bureau of Senior Services.",
+  "quote_3": "SHIP and other services offered by the Bureau of Senior Services",
+  "quote_3_url": "http://www.wvship.org/"
+ },
+ "doi": {
+  "name": "West Virginia Offices of the Insurance Commissioner",
+  "url": "https://www.wvinsurance.gov/",
+  "quote": "WEST VIRGINIA Offices of the Insurance Commissioner",
+  "quote_url": "https://www.wvinsurance.gov/",
+  "quote_2": "Welcome to the West Virginia Offices of the Insurance Commissioner’s Insurance Education Center."
+ },
+ "periods": [
+  {
+   "name": "Initial Enrollment Period",
+   "dates": "7 months: starts 3 months before the month you turn 65, includes that month, ends 3 months after it",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "It lasts for 7 months, starting 3 months before you turn 65, and ending 3 months after the month you turn 65.",
+   "page_copy": "Most people can first join a plan when they turn 65. This window lasts 7 months. It starts 3 months before the month you turn 65 and ends 3 months after that month.",
+   "quote_2": "Generally when you turn 65."
+  },
+  {
+   "name": "Open Enrollment Period",
+   "dates": "October 15 - December 7 each year; coverage starts January 1",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "Open Enrollment Period October 15-December 7 Join, drop, or switch to another Medicare Advantage Plan with or without drug coverage",
+   "quote_2": "January 1 of the next year (the plan must get your request to join by December 7)",
+   "page_copy": "Each year from October 15 to December 7, you can join, switch or drop a Medicare Advantage plan. The change starts January 1.",
+   "naming_note": "Medicare.gov calls October 15 - December 7 the 'Open Enrollment Period'. The term 'Annual Election Period' was not found on the Medicare.gov pages fetched. LDI's Medicare guide calls it the 'Annual Enrollment Period (AEP)'."
+  },
+  {
+   "name": "Medicare Advantage Open Enrollment Period",
+   "dates": "January 1 - March 31 each year (only if already in a Medicare Advantage plan), or within the first 3 months you have Medicare",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "Medicare Advantage Open Enrollment Period (only if you’re already in a Medicare Advantage Plan) January 1-March 31",
+   "quote_2": "Switch to another Medicare Advantage Plan with or without drug coverage. Drop your Medicare Advantage Plan and return to Original Medicare.",
+   "page_copy": "If you are already in a Medicare Advantage plan, you can switch plans or go back to Original Medicare from January 1 to March 31."
+  },
+  {
+   "name": "5-star Special Enrollment Period",
+   "dates": "Once between December 8 of the year before the plan year and November 30 of the plan year",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods",
+   "quote": "One time between December 8 of the year before the plan year and November 30 of the plan year.",
+   "quote_2": "use the 5-star Special Enrollment Period to switch from your current Medicare plan to a Medicare plan with a “5-star” quality rating",
+   "use_on_page": "OWNER DECISION: Medicare.gov states this period, but it is defined by star ratings, which the owner rule keeps off these pages. See notes_unverified for whether it applies in each state.",
+   "page_copy": null
+  }
+ ],
+ "sources": [
+  {
+   "name": "CMS CY2027 Medicare Advantage and Prescription Drug Plan Landscape (Nov 2026 data refresh)",
+   "file": "cy2027-landscape-202611.zip -> CY2027_Landscape_202611/CY2027_Landscape_202611.csv",
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "page": "https://www.cms.gov/medicare/coverage/prescription-drug-coverage",
+   "release": "Data Last Updated: 11/01/2026 (ReadMe CY2027_Landscape_ReadMe_20261101.txt); zip members dated 2026-11-03; CMS page last modified 11/03/2026",
+   "quote": "Downloads CY2027 Landscape (202611) (ZIP)",
+   "readme_quote": "11/01/2026: Data refresh update - new counties were added to the contract service area",
+   "readme_quote_2": "The data within are subject to change as contracts are finalized.",
+   "fetched": "2026-11-24, streamed by HTTP range requests (rows for this state kept; no premiums or ratings kept)",
+   "used_for": "plan counts by category and plan type, organization counts"
+  },
+  {
+   "name": "CMS Medicare Advantage State/County Penetration, September 2026",
+   "file": "ma-state-county-penetration-september-2026.zip -> State_County_Penetration_MA_2026_09/State_County_Penetration_MA_2026_09.csv",
+   "url": "https://www.cms.gov/files/zip/ma-state-county-penetration-september-2026.zip",
+   "page": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/ma-state/county-penetration/ma-state-county-penetration-2026-09",
+   "quote": "MA State/County Penetration Report Period 2026-09 Downloads MA State/County Penetration – September 2026",
+   "repo_copy": "/Users/luaysadqi/honorbrook-marketing/scripts/county_data/county_stats.json (key \"pen\"); same file the county pages use (DATA_MONTH = September 2026 in scripts/county_gen.py)",
+   "check": "2026-11-24: streamed the CMS September 2026 CSV and compared all 119 WV + LA rows with county_stats.json: 0 mismatches",
+   "method": "penetration_pct = Enrolled / Eligibles x 100, 1 decimal; statewide = sum of county Enrolled / sum of county Eligibles (same method as the live state and county pages)",
+   "used_for": "Medicare Advantage share (penetration_pct), medicare_eligibles, ma_enrolled"
+  },
+  {
+   "name": "Medicare.gov - Joining a plan",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+   "quote": "Contact your local State Health Insurance Assistance Program (SHIP) to get free personalized health insurance counseling.",
+   "used_for": "Initial Enrollment Period, Open Enrollment Period, Medicare Advantage Open Enrollment Period; SHIP counseling is free",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "Medicare.gov - Special Enrollment Periods",
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods",
+   "quote": "One time between December 8 of the year before the plan year and November 30 of the plan year.",
+   "used_for": "5-star Special Enrollment Period",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "West Virginia Bureau of Senior Services - SHIP (Medicare Counseling)",
+   "url": "http://www.wvseniorservices.gov/StayingHealthy/SHIPMedicare/tabid/72/Default.aspx",
+   "quote": "provides free, objective, and confidential help to West Virginia Medicare beneficiaries and their families",
+   "used_for": "SHIP name, sponsor agency, free counseling",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "WV SHIP - About WV SHIP and SMP",
+   "url": "http://www.wvship.org/AboutWVSHIPandSMP/tabid/132/Default.aspx",
+   "quote": "WV SHIP’s 80+ professional counselors are paid employees of the Bureau of Senior Services",
+   "used_for": "SHIP official site",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "SHIP Technical Assistance Center (ACL-funded) - West Virginia",
+   "url": "https://www.shiphelp.org/ships/west-virginia/",
+   "quote": "State Health Insurance Assistance Program (SHIP) ... Website West Virginia Website",
+   "used_for": "cross-check of SHIP website (links to http://www.wvship.org/)",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "West Virginia Offices of the Insurance Commissioner",
+   "url": "https://www.wvinsurance.gov/",
+   "quote": "WEST VIRGINIA Offices of the Insurance Commissioner",
+   "used_for": "state insurance regulator",
+   "fetched": "2026-11-24"
+  },
+  {
+   "name": "Medicare.gov - Special Needs Plans (SNP)",
+   "url": "https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options/SNP",
+   "quote": "Yes. All SNPs must provide Medicare drug coverage (Part D).",
+   "quote_2": "You meet the eligibility requirements for one of the 3 types of SNPs",
+   "used_for": "SNPs are only for people who qualify; all SNPs include drug coverage",
+   "fetched": "2026-11-24 (checker)"
+  }
+ ],
+ "definitions": {
+  "plan": "distinct Contract Plan Segment ID in the landscape file (a plan segment = one plan as offered in that area)",
+  "ma_pd": "Contract Category Type = MA-PD (Medicare Advantage with Part D drug coverage, not a special needs plan)",
+  "ma_only": "Contract Category Type = MA (Medicare Advantage without Part D drug coverage)",
+  "snp": "Contract Category Type = SNP (special needs plans: D-SNP dual eligible, C-SNP chronic condition, I-SNP institutional); counted separately, not inside ma_pd",
+  "total": "ma_pd + ma_only + snp",
+  "orgs": "distinct Parent Organization Name across all MA categories incl. SNP (names deliberately not output); orgs_non_snp excludes SNP-only parents; contracts = distinct Contract ID",
+  "plan_types": "landscape Plan Type; CMS labels local PPOs as \"PPO\" (Organization Type = Local Coordinated Care Plan) -> shown as Local PPO; HMO-POS kept separate from HMO",
+  "excluded": "PDP (stand-alone drug plans), employer group plans (Plan ID >= 800), Part B-only and national PACE plans are not in the landscape file; no Cost plans exist in this state in the file"
+ },
+ "page_ready": [
+  "For 2027, CMS lists 70 Medicare Advantage plans offered in West Virginia.",
+  "19 of them are special needs plans. Of the other 51, 43 include drug coverage and 8 do not. All special needs plans include drug coverage.",
+  "Special needs plans are only for people who qualify, such as people with both Medicare and Medicaid.",
+  "Not every plan is offered everywhere. CMS lists between 30 and 57 plans in each county, counting special needs plans.",
+  "8 companies offer Medicare Advantage plans in West Virginia. One of them offers only special needs plans.",
+  "In September 2026, 56.6% of people with Medicare in West Virginia were in a Medicare Advantage plan.",
+  "Plan counts: CMS 2027 plan list, November 2026 update. Share: CMS, September 2026."
+ ],
+ "notes_unverified": [
+  "5-star SEP: a count-only check of the CY2027 landscape found 7 West Virginia Medicare Advantage plan segments with a 5-star overall rating (no names or ratings kept). The SEP therefore applies in at least part of the state, but naming or counting 5-star plans would be a star-rating claim, which the owner rule bars. Owner decides whether to mention the SEP at all.",
+  "WV SHIP site wvship.org is http-only and parts of it are dated (2015-2021 items). The Bureau of Senior Services page (copyright 2026) is the current statement used for the quote.",
+  "West Virginia's MA region in the landscape is 'Pennsylvania and West Virginia' (Regional PPOs cover that region).",
+  "Phone numbers for WV SHIP and the Insurance Commissioner were deliberately not recorded (owner rule).",
+  "Plan counts come from the CMS landscape file as of the Nov 1, 2026 data refresh. The ReadMe says 'The data within are subject to change as contracts are finalized.' Copy should say 'CMS lists' and date it.",
+  "The landscape lists a plan in a county when the county is in the plan's service area; it does not flag plans that serve only part of a county. Per-county counts may include partial-county plans (not verified per plan).",
+  "Statewide totals count each distinct plan once if it is offered in any county or parish; no single county has all of them (see total_per_county_min/max).",
+  "orgs = distinct Parent Organization Name (8 in WV, 10 in LA). Counting Organization Marketing Name instead gives 9 in WV and 11 in LA; counting contracts gives 20 and 18. Names deliberately not output.",
+  "Penetration figures reuse the repo's county_stats.json (CMS MA State/County Penetration, September 2026); all 119 WV + LA rows were re-checked against the CMS CSV on 2026-11-24 with 0 mismatches. CMS publishes no statewide row in this file; statewide = sum of county enrolled / sum of county eligibles, the same method the live state pages use (WV 56.6%, LA 57.5%). A November 2026 penetration file also exists; September was kept to match the county pages.",
+  "Medicare.gov names Oct 15 - Dec 7 the 'Open Enrollment Period'. 'Annual Election Period' was not found on the Medicare.gov pages fetched, so it is not quoted.",
+  "Excluded from counts: stand-alone drug plans (PDP), employer group plans, PACE and Part B-only plans (not in the landscape file). No Cost plans or sanctioned plans appear for WV or LA.",
+  "Checker: no fact in this file was set to null. Every number and quote was confirmed from the primary source, except the LDI web page addresses noted above (published by CMS and LDI, but not opened because of the 403)."
+ ],
+ "page_ready_sources": [
+  {
+   "line": 0,
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "quote": "This Landscape file contains a list of all approved contracts and plans for Medicare Advantage (MA) Plans"
+  },
+  {
+   "line": 1,
+   "url": "https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options/SNP",
+   "quote": "Yes. All SNPs must provide Medicare drug coverage (Part D).",
+   "also": "landscape Part D Coverage Indicator = Yes for all SNP segments, No for all MA-only segments"
+  },
+  {
+   "line": 2,
+   "url": "https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options/SNP",
+   "quote": "You meet the eligibility requirements for one of the 3 types of SNPs"
+  },
+  {
+   "line": 3,
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "quote": "county-level recount; see statewide.total_per_county_min/max"
+  },
+  {
+   "line": 4,
+   "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+   "quote": "distinct Parent Organization Name; orgs vs orgs_non_snp"
+  },
+  {
+   "line": 5,
+   "url": "https://www.cms.gov/files/zip/ma-state-county-penetration-september-2026.zip",
+   "quote": "Penetration - [numeric] - Derived field that equals the ratio of enrollees over eligibles multiplied by 100"
+  },
+  {
+   "line": 6,
+   "url": "https://www.cms.gov/medicare/coverage/prescription-drug-coverage",
+   "quote": "CY2027 Landscape (202611) (ZIP)"
+  }
+ ],
+ "verified_by_checker": true,
+ "checker_verified_on": "2026-11-24",
+ "checker_corrected": [
+  {
+   "field": "page_ready[1]",
+   "was": "43 include drug coverage, 8 do not, and 19 are special needs plans.",
+   "now": "19 of them are special needs plans. Of the other 51, 43 include drug coverage and 8 do not. All special needs plans include drug coverage."
+  },
+  {
+   "field": "page_ready[3]",
+   "was": "Not every plan is offered everywhere. Each county has between 30 and 57 plans, counting special needs plans.",
+   "now": "Not every plan is offered everywhere. CMS lists between 30 and 57 plans in each county, counting special needs plans."
+  },
+  {
+   "field": "page_ready[4]",
+   "was": "8 companies offer Medicare Advantage plans in West Virginia.",
+   "now": "8 companies offer Medicare Advantage plans in West Virginia. One of them offers only special needs plans."
+  },
+  {
+   "field": "periods[0].page_copy",
+   "was": "When you first get Medicare, you have 7 months to join a plan. It starts 3 months before the month you turn 65 and ends 3 months after it.",
+   "now": "Most people can first join a plan when they turn 65. This window lasts 7 months. It starts 3 months before the month you turn 65 and ends 3 months after that month."
+  },
+  {
+   "field": "ship.quote_2",
+   "was": "WV SHIP’s 80+ professional counselors are paid employees of the Bureau of Senior Services",
+   "now": "WV SHIP’s 80+ professional counselors are paid employees of the Bureau of Senior Services ... or the county aging providers (senior centers).",
+   "source": "http://www.wvship.org/AboutWVSHIPandSMP/tabid/132/Default.aspx"
+  },
+  {
+   "field": "ship.page_copy",
+   "was": "WV SHIP gives free, unbiased Medicare counseling. It is run by the West Virginia Bureau of Senior Services.",
+   "now": "WV SHIP gives free, unbiased Medicare counseling. It is offered by the West Virginia Bureau of Senior Services.",
+   "source": "http://www.wvship.org/"
+  }
+ ],
+ "checker_notes": [
+  "Checker re-fetched the CMS CY2027 landscape zip (12,580,399 bytes; CSV dated 2026-11-03; ReadMe 'Data Last Updated: 11/01/2026') and recounted every county from scratch: statewide totals, category splits, plan types, SNP kinds, parent-organization and contract counts, per-county min/max, and all per-county rows match the original (0 mismatches). The CMS download page (Page Last Modified 11/03/2026) lists CY2027 Landscape (202611) as the newest CY2027 file.",
+  "Checker re-fetched the CMS MA State/County Penetration September 2026 zip and recomputed every county from Eligibles and Enrolled, matched by FIPS: 0 mismatches in eligibles, enrolled, share or county name. Neither state has a 'Pending County Designation' row this month, so summing the counties gives the full state figure.",
+  "Every Medicare.gov quote (Initial Enrollment Period, Open Enrollment Period, Medicare Advantage Open Enrollment Period, 5-star SEP dates, SHIP is free) was re-fetched on 2026-11-24 and found word for word.",
+  "CORRECTED page_ready[1]: the original said 'X include drug coverage, Y do not, and Z are special needs plans', which suggests special needs plans lack drug coverage. All special needs plans in the file have Part D (Part D Coverage Indicator = Yes for every SNP segment), and Medicare.gov says 'All SNPs must provide Medicare drug coverage (Part D).' The sentence was rewritten.",
+  "CORRECTED page_ready[4]: the company count is right, but some parent organizations offer only special needs plans in this state. A clause was added so readers who do not qualify for a special needs plan are not misled.",
+  "CORRECTED periods[0].page_copy: Medicare.gov says the 7-month window applies 'Generally when you turn 65'. The original said 'When you first get Medicare', which is not the same for people who get Medicare early because of a disability. Reworded to match the source.",
+  "page_ready[3] reworded from 'Each county has' to 'CMS lists ... in each county', because the landscape does not flag plans that serve only part of a county.",
+  "page_ready[5] note: CMS counts as 'MA enrollees' people in MA plans plus cost plans, PACE, demonstrations and employer plans (penetration ReadMe list of organization types). The copy follows CMS's own label; no change made.",
+  "Rule check on all page-ready copy: no '$0', no 'free plan', no superlatives, guarantees, urgency, prices, star ratings, carrier names, phone numbers or guaranty-association language. 'Free' is used only for SHIP counseling, which the sources state.",
+  "5-star SEP: count re-checked (count only, nothing kept). The landscape 'Overall Star Rating' is 'Not Applicable' for every stand-alone drug plan, so drug plans were checked on 'Part D Summary Star Rating' instead. page_copy stays null (owner rule: no star ratings).",
+  "Side finding for the owner (repo read only, nothing changed): scripts/prep_staged.py prints each state's SHIP phone number on staged pages, which conflicts with the 'no outside phone numbers except 1-800-MEDICARE' rule. For Louisiana, scripts/county_gen.py has 1-800-259-5301, but LDI's own 2025 brochures and shiphelp.org show 1-800-259-5300.",
+  "ship.quote_2 was cut off mid-sentence. The full sentence says the counselors work for the Bureau of Senior Services, the Area Agencies on Aging, or county aging providers. Quote fixed. The page copy now says the program is 'offered by' the Bureau, which wvship.org states. 'Run by' is not stated word for word in any source.",
+  "WV SHIP quote ('provides free, objective, and confidential help ...') was found word for word on the Bureau of Senior Services page (Copyright (c) 2026). The same page also says rate comparisons were 'updated November 2021', so parts of it are old. The program name and the fact that it is free are confirmed. shiphelp.org links to http://www.wvship.org/.",
+  "WV regulator name confirmed on https://www.wvinsurance.gov/ (header and welcome text).",
+  "Spot checks (checker recount = original): Barbour 35 plans (16 with drugs / 7 without / 12 SNP), share 57.4%; Kanawha 57 (30/8/19); Berkeley 49 (27/8/14), share 44.1%. Fewest plans: Mineral (30). Most: Cabell and Kanawha (57). Statewide 70 = 43 + 8 + 19; 8 parent organizations (7 offer non-SNP plans); 20 contracts; share 259,694 / 458,491 = 56.64%.",
+  "5-star count re-checked: 7 West Virginia MA segments have an overall 5-star rating; no drug plan has 5 stars. Kept as an owner decision, with no copy."
+ ]
+}

@@ -358,6 +358,11 @@ def finish(out):
     return done
 
 
+def _rel(path):
+    """Sitemap path -> file in the build: 'blog/' is blog/index.html, 'x' is x.html."""
+    return path + 'index.html' if path.endswith('/') else path if path.endswith('.html') else path + '.html'
+
+
 def sitemaps(out, date, changed):
     """Pages changed in this build (vs the live copy) get today's date; removed stubs leave the sitemap."""
     done = []
@@ -368,7 +373,7 @@ def sitemaps(out, date, changed):
         def lm(m):
             nonlocal k
             loc = m.group(1); path = loc.split('honorbrook-insurance.com/', 1)[-1] or 'index'
-            rel = (path if path.endswith('.html') else path + '.html')
+            rel = _rel(path)
             if rel in changed and m.group(2) < date:
                 k += 1; return m.group(0).replace('<lastmod>%s</lastmod>' % m.group(2), '<lastmod>%s</lastmod>' % date)
             return m.group(0)
@@ -376,7 +381,7 @@ def sitemaps(out, date, changed):
         def add(m):
             nonlocal k
             path = m.group(1).split('honorbrook-insurance.com/', 1)[-1] or 'index'
-            if (path if path.endswith('.html') else path + '.html') in changed:
+            if _rel(path) in changed:
                 k += 1; return m.group(0) + '<lastmod>%s</lastmod>' % date
             return m.group(0)
         t = re.sub(r'<loc>([^<]+)</loc>(?!\s*<lastmod>)', add, t)

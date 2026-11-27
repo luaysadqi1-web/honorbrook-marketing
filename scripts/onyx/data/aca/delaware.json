@@ -1,0 +1,178 @@
+{
+  "state": "Delaware",
+  "slug": "delaware",
+  "exchange_name": "HealthCare.gov",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federal Marketplace (HealthCare.gov)",
+  "exchange_type_source_url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+  "exchange_type_quote": "For Plan Year 2027, there are 22 SBEs, and 2 State-based Exchanges on the Federal platform (SBE-FPs). [Delaware is in neither list; page updated November 6, 2026]",
+  "exchange_type_quote_2": "choosehealthde.com/Health-Insurance (linked from the DOI's Sept 4, 2026 rate release) returns HTTP 301 with Location: https://healthcare.gov (re-checked by checker 2026-11-24)",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+  "oe_quote": "November 1: Open Enrollment starts ... January 15: Open Enrollment ends — last day to enroll in or change Marketplace health plans for the year.",
+  "oe_quote_2": "CMS/CCIIO, July 31, 2026: \"Open Enrollment at the Federally-facilitated Exchange will begin on November 1, 2026, and end on January 15, 2027.\"",
+  "oe_quote_3": "Delaware DOI, Sept 4, 2026: \"Open enrollment for Plan Year 2027 begins on November 1.\"",
+  "oe_dec15_note": "HealthCare.gov: \"December 15: Last day to enroll in or change plans for coverage to start January 1.\"",
+  "medicaid_expanded": true,
+  "medicaid_program_name": "Delaware Medicaid (Diamond State Health Plan), run by the Division of Medicaid & Medical Assistance (DMMA), Delaware Department of Health and Social Services; adults are covered through the Adult Medicaid Expansion group",
+  "medicaid_adult_income_limit_note": "DMMA Medicaid ENGAGE page: the Adult Medicaid Expansion group 'includes low-income adults, ages 19 through 64 ... with household incomes up to 133% of the federal poverty level.' DMMA's '2026 Countable Income Limits for Federal Poverty Level Related Medical Assistance Programs' table lists 133% FPL monthly income of $1,769 for a family of 1 and $3,658 for a family of 4 (table labeled 2026; no exact effective day shown on the page). 2027 work requirement announced by the state: 'Starting January 1, 2027, you must work and earn at least $580 a month or complete at least 80 hours a month' (working, volunteering/community service, a work program, or school/job training at least part-time), with exemptions; six-month renewals for the expansion group also start January 1, 2027. Non-citizen eligibility changes started October 1, 2026.",
+  "medicaid_url": "https://dhss.delaware.gov/dmma/home/medicaid-engage/",
+  "medicaid_quote": "New federal work and community engagement requirements for those in the Medicaid Expansion group go into effect January 1, 2027.",
+  "medicaid_quote_2": "Under the Affordable Care Act, the Medicaid Expansion group includes low-income adults, ages 19 through 64 ... with household incomes up to 133% of the federal poverty level.",
+  "medicaid_quote_3": "Starting January 1, 2027, you must work and earn at least $580 a month or complete at least 80 hours a month",
+  "medicaid_income_table_url": "https://dhss.delaware.gov/dmma/home/income-limits/",
+  "medicaid_income_table_quote": "2026 Countable Income Limits for Federal Poverty Level Related Medical Assistance Programs ... Family Size 1 ... Monthly Income 133% FPL $1,769",
+  "state_subsidy_or_reinsurance_note": "Delaware Health Insurance Individual Market Stabilization Reinsurance Program (Section 1332 state reinsurance waiver), in place since plan year 2020. CMS approved a five-year extension effective January 1, 2025 through December 31, 2029, so the program's federal approval covers plan year 2027. Funded by federal pass-through money plus a 2.75% carrier assessment collected by the DOI; administered by the Delaware Health Care Commission. No state-funded premium subsidy (separate from the federal tax credit) was found on the DOI or exchange pages checked.",
+  "state_subsidy_source_url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2026/03/domestic-foreign-insurers-bulletin-no113-Revised1.pdf",
+  "state_subsidy_quote": "On July 31, 2024, CMS approved the extension, extending the Reinsurance Program waiver period from January 1, 2025 to December 31, 2029",
+  "state_subsidy_quote_2": "CMS 1332 page: \"This approval is effective for January 1, 2025, through December 31, 2029.\" (original approval \"effective for January 1, 2020 through December 31, 2024\")",
+  "state_subsidy_source_url_2": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+  "doi_name": "Delaware Department of Insurance",
+  "doi_url": "https://insurance.delaware.gov/",
+  "copy": {
+    "exch": "HealthCare.gov",
+    "exch_type": "federal Marketplace",
+    "medicaid": "Delaware has expanded Medicaid. Adults age 19 through 64 with household income up to 133% of the federal poverty level can qualify. The state&rsquo;s 2026 table puts that at $1,769 a month for one person. Starting January 1, 2027, adults in this group must meet a work rule unless they are exempt. They must earn at least $580 a month or spend at least 80 hours a month in work, volunteering, a work program, or school or job training.",
+    "state_help": "Delaware has a state reinsurance program for individual health plans. It pays insurers back for part of their high-cost claims. It has been in place since 2020, and its federal approval runs through December 31, 2029."
+  },
+  "copy_trace": {
+    "exch / exch_type": "CMS state-marketplaces page (updated Nov 6, 2026): Delaware is in neither the 22 SBE list nor the 2 SBE-FP list for Plan Year 2027, and not in the PY2028 transition list (Oklahoma only); DOI Sept 4, 2026 release: rates 'do not apply to ... policies purchased outside Healthcare.gov'; choosehealthde.com 301 -> https://healthcare.gov",
+    "medicaid s1": "DMMA eligibility page: 'require work or community engagement beginning January 1, 2027 for those currently covered as part of the Adult Medical Expansion group'; Medicaid.gov table (data as of Dec 1, 2023): Delaware Expansion to Adults 133%",
+    "medicaid s2": "DMMA ENGAGE page: 'the Medicaid Expansion group includes low-income adults, ages 19 through 64 ... with household incomes up to 133% of the federal poverty level.'",
+    "medicaid s3": "DMMA income-limits page: '2026 Countable Income Limits for Federal Poverty Level Related Medical Assistance Programs' -> Family Size 1, Monthly Income 133% FPL $1,769",
+    "medicaid s4": "DMMA ENGAGE page: 'New federal work and community engagement requirements for those in the Medicaid Expansion group go into effect January 1, 2027.' + exemptions FAQ ('Are there exemptions from ... the new requirements?')",
+    "medicaid s5": "DMMA ENGAGE page: 'Starting January 1, 2027, you must work and earn at least $580 a month or complete at least 80 hours a month: Working; Volunteering or doing community service; Taking part in a work program; and/or Going to school or job training at least part-time' + exemptions FAQ",
+    "state_help s1": "DOI Bulletin 113: 'Insurers who offer coverage in Delaware's individual market are reimbursed by the Reinsurance Program'",
+    "state_help s2": "DOI Bulletin 113: reimbursed 'for a percentage of the annual claims' between an attachment point and a cap; 'By offsetting high-cost claims'",
+    "state_help s3": "CMS 1332 page (last modified 11/17/2026): first approval 'effective for January 1, 2020 through December 31, 2024'; extension 'effective for January 1, 2025, through December 31, 2029.'"
+  },
+  "sources": [
+    {
+      "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+      "supports": "PY2027 list of 22 SBEs and 2 SBE-FPs (Arkansas, Oklahoma); Delaware not listed, so it uses the Federally-facilitated Exchange (HealthCare.gov). Page updated November 6, 2026.",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+      "supports": "OE Nov 1 - Jan 15; Dec 15 deadline for Jan 1 start; page banner 'Enroll for 2027 now'",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.healthcare.gov/glossary/open-enrollment-period/",
+      "supports": "'The yearly period (November 1 – January 15) when people can enroll in a Marketplace health insurance plan.'",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.cms.gov/files/document/statement-re-city-columbus-073126.pdf",
+      "supports": "CMS/CCIIO July 31, 2026: FFE OE begins November 1, 2026 and ends January 15, 2027",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://news.delaware.gov/2026/09/04/delaware-announces-2027-marketplace-health-insurance-rates/",
+      "supports": "DOI 2027 rate release: 'Open enrollment for Plan Year 2027 begins on November 1'; Marketplace bought through Healthcare.gov; enhanced APTCs expired. (Rate and carrier details NOT used in copy.)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.choosehealthde.com/Health-Insurance",
+      "supports": "Delaware's marketplace info link returns HTTP 301 to https://healthcare.gov",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://insurance.delaware.gov/",
+      "supports": "Regulator name and URL; homepage links 'Delaware Marketplace' info page",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://insurance.delaware.gov/information/demarketplace/",
+      "supports": "DOI page names Choose Health Delaware as the state's marketplace resource (older page)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2026/03/domestic-foreign-insurers-bulletin-no113-Revised1.pdf",
+      "supports": "DOI Bulletin 113 (originally Dec 12, 2019; revised March 2026, day left blank in the document): waiver period Jan 1, 2025 - Dec 31, 2029; 2.75% assessment; DHCC administers; reimbursement for a percentage of claims between attachment point and cap",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+      "supports": "CMS 1332 page (last modified 11/17/2026): Delaware approval 2020-2024 and extension Jan 1, 2025 - Dec 31, 2029",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://delcode.delaware.gov/title18/c087/index.html",
+      "supports": "18 Del. C. ch. 87 creates the Delaware Health Insurance Individual Market Stabilization Reinsurance Program assessment (2.75%)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://dhss.delaware.gov/dmma/home/medicaid-engage/",
+      "supports": "Expansion group definition (ages 19-64, up to 133% FPL); work/community engagement starts Jan 1, 2027 ($580/month or 80 hours/month); exemptions; six-month renewals from Jan 1, 2027; non-citizen changes Oct 1, 2026",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://dhss.delaware.gov/dmma/home/medicaid/delaware-medicaid-eligibility/",
+      "supports": "'Low-income uninsured adults between the ages of 19 and 65 may qualify for Medicaid'; notice of work requirement for 'Adult Medical Expansion group' from Jan 1, 2027",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://dhss.delaware.gov/dmma/home/income-limits/",
+      "supports": "2026 FPL table: 133% FPL monthly $1,769 (1 person), $3,658 (4 people)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://dhss.delaware.gov/dmma/",
+      "supports": "DMMA administers Medicaid; site structure",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.medicaid.gov/medicaid/national-medicaid-chip-program-information/medicaid-childrens-health-insurance-program-basic-health-program-eligibility-levels",
+      "supports": "CMS table (data as of December 1, 2023): Delaware 'Expansion to Adults' 133%, parent/caretaker 87%. Read via WebFetch (curl got 403). Confirms expansion; dated.",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    }
+  ],
+  "footprint_check": {
+    "file": "/Users/luaysadqi/honorbrook-marketing/scripts/onyx/footprint.py",
+    "says": "exch='HealthCare.gov', exch_url='https://www.healthcare.gov/', exch_own=False, doi='Delaware Department of Insurance', doi_url='https://insurance.delaware.gov/', expanded=True",
+    "agrees": true,
+    "comment": "All four facts agree with primary sources. footprint.py cites KFF for expansion; the DMMA ENGAGE page is a primary source for the same fact."
+  },
+  "notes_unverified": [
+    "DMMA's income-limits page labels its table '2026' but shows no exact effective date; the 133% column is not itself labeled 'adult expansion'. The 133% figure comes from the ENGAGE page definition of the expansion group. Delaware states the limit as 133% (not 138%); copy follows the state's wording.",
+    "Delaware has historically been described as a State Partnership Marketplace (the state handles plan review; HealthCare.gov handles enrollment). The CMS page fetched has no partnership list, so that label was not verified for 2027 and is not used in copy.",
+    "Reinsurance: 2027-specific parameters (attachment point, cap, coinsurance) and the 2027 pass-through amount were not found; the Delaware Health Care Commission reinsurance page (dhss.delaware.gov/dhcc/reinsur1332waiver/) returned 404. Federal approval through 2029 is confirmed; actual 2027 operation is inferred from that approval and the March 2026 DOI bulletin, not from a 2027-specific notice.",
+    "No Delaware state-funded premium subsidy was found on the DOI, DHSS or HealthCare.gov pages checked; absence was not exhaustively verified.",
+    "The DOI rate release (Sept 4, 2026) contains carrier names and rate changes; none are used in copy per the content rules.",
+    "Checker: the $1,769 figure is from DMMA's 2026 table and is labeled 2026 in copy. It will change when the 2027 federal poverty guidelines are published and DMMA updates its table; re-check before each rebuild.",
+    "Checker: the 133% column on the DMMA income page is not itself labeled 'adult expansion'; the tie to the expansion group rests on the ENGAGE page definition (up to 133%). Copy follows the state's 133% wording; effective eligibility with the 5% MAGI disregard is not stated by DMMA on these pages and is not used."
+  ],
+  "state_subsidy_quote_3": "Bulletin 113: 'By offsetting high-cost claims, the Reinsurance Program reduces gross premiums across all metal tiers'",
+  "state_subsidy_bulletin_date_note": "Bulletin 113 header reads 'REVISED: March 3, 2020, November 6, 2025, and March ____, 2026' (day left blank); PDF metadata created March 11, 2026, modified March 13, 2026. The researcher's 'March 12, 2026' is not printed in the document.",
+  "verified_by_checker": true,
+  "checker_notes": [
+    "Re-fetched every cited URL on 2026-11-24 (curl with browser user agent; Medicaid.gov via WebFetch). All quotes used in copy were found on the pages.",
+    "CMS state-marketplaces page: recounted 22 SBEs and 2 SBE-FPs (Arkansas, Oklahoma) for PY2027; Delaware is in neither list and is not in the PY2028 transition list (Oklahoma only). Federal Marketplace (HealthCare.gov) confirmed.",
+    "OE 2026-11-01 to 2027-01-15 confirmed on HealthCare.gov dates page ('Enroll for 2027 now'), HealthCare.gov glossary, CMS/CCIIO July 31, 2026 statement, and DOI Sept 4, 2026 release ('Open enrollment for Plan Year 2027 begins on November 1').",
+    "Medicaid expansion, ages 19-64, 133% FPL, Jan 1, 2027 work rule ($580 or 80 hours), exemptions and six-month renewals confirmed on DMMA ENGAGE page. $1,769 (133% FPL, 1 person) confirmed on DMMA 2026 table.",
+    "Reinsurance: CMS 1332 page (last modified 11/17/2026) confirms 2020-2024 approval and Jan 1, 2025 - Dec 31, 2029 extension; pass-through funding documents are listed through the 2026 year. 18 Del. C. 8703(b) confirms the 2.75% assessment.",
+    "CORRECTED: choosehealthde.com redirect target is https://healthcare.gov (no www), not https://www.healthcare.gov/.",
+    "CORRECTED: Bulletin 113 does not print 'March 12, 2026'; its header reads 'March ____, 2026'. Date changed to 'March 2026'.",
+    "CONFIRMED DMMA eligibility page wording is 'Adult Medical Expansion group' (sic) while the ENGAGE page says 'Adult Medicaid Expansion group'; copy uses neither label.",
+    "COPY: split the semicolon run-on and the 39-word work-rule sentence into short sentences; removed the unverified quantifier 'many of these adults'; changed 'school' to 'school or job training' to match DMMA wording; added a plain-English line explaining reinsurance (from Bulletin 113) so the term is not bare jargon. No banned terms, prices, premiums, carrier names, phone numbers, guaranty-association mentions, superlatives, guarantees or urgency in copy.",
+    "footprint.py agrees (exch HealthCare.gov, exch_own False, doi name/url, expanded True). Its expansion comment cites KFF; DMMA ENGAGE page is the primary source for the same fact."
+  ]
+}

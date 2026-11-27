@@ -1,0 +1,226 @@
+{
+ "state": "Pennsylvania",
+ "slug": "pennsylvania",
+ "exchange_name": "Pennie (operated by the Pennsylvania Health Insurance Exchange Authority, PHIEA)",
+ "exchange_url": "https://pennie.com/",
+ "exchange_type": "state-based exchange",
+ "exchange_type_source": {
+  "url": "https://agency.pennie.com/pennie-helps-lehigh-valley-navigate-health-insurance-2/",
+  "quote": "Pennie, Pennsylvania's official state-based health insurance marketplace, opens on November 1 for 2027 enrollment at pennie.com.",
+  "also": [
+   {
+    "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+    "quote": "State-based Exchanges for Plan Year 2027: ... Pennsylvania ... Pennie Website"
+   },
+   {
+    "url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+    "quote": "State Based Marketplaces (SBM) states: ... Pennslyvania [sic, CMS spelling]"
+   }
+  ]
+ },
+ "oe_start": "2026-11-01",
+ "oe_end": "2027-01-15",
+ "oe_source_url": "https://pennie.com/whats-new/",
+ "oe_quote": "Shop and compare plans during the Open Enrollment Period which begins November 1 and ends on January 15.",
+ "oe_detail": [
+  {
+   "url": "https://pennie.com/learn/faq/",
+   "quote": "December 15 is the deadline for coverage that begins January 1. If you enroll between December 16 and January 15, your health coverage will begin February 1st."
+  },
+  {
+   "url": "https://agency.pennie.com/pennie-helps-lehigh-valley-navigate-health-insurance-2/",
+   "quote": "Enroll by December 15, 2026, to ensure new coverage that will start on January 1, 2027."
+  },
+  {
+   "url": "https://agency.pennie.com/pennies-2027-health-insurance-open-enrollment-is-here/",
+   "quote": "Open Enrollment began on November 1 for 2027 health coverage."
+  }
+ ],
+ "medicaid_expanded": true,
+ "medicaid_program_name": "Medicaid / Medical Assistance (MA); managed care is called HealthChoices (Physical, Behavioral and Community HealthChoices). Adult expansion group: 'Adults ages 19-64' under MAGI rules.",
+ "medicaid_adult_income_limit_note": "PA DHS Medicaid page table 'Medicaid Income Requirements 138% of Federal Poverty Income Guidelines', 'Effective: January 13, 2026': household of 1 $22,025/year, 2 $29,864, 3 $37,702, 4 $45,540, each additional $7,839. DHS General Eligibility page lists 'Adults ages 19-64 with incomes at or below 133 percent of the Federal Income Poverty Guidelines (FPIG)' (133% plus the standard 5% MAGI disregard = 138%; the two pages are consistent in effect). 2027 changes (DHS 'Changes Coming to Medicaid in Pennsylvania'): starting January 1, 2027, work and community engagement requirements apply to adult recipients ages 19-64 who do not have a dependent child under 14 and do not meet an exemption (80 hours/month of work, training, school, etc., or household monthly income of at least $580); current recipients report at their next 2027 renewal; some expansion adults move to six-month renewals; retroactive coverage for expansion adults drops to one month.",
+ "medicaid_url": "https://www.pa.gov/agencies/dhs/resources/medicaid",
+ "medicaid_quote": "Medicaid Income Requirements 138% of Federal Poverty Income Guidelines ... 1 $22,025 ... 4 $45,540 ... Effective: January 13, 2026",
+ "medicaid_extra_quotes": [
+  {
+   "url": "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-changes",
+   "quote": "Work requirements go into effect for adult Medicaid recipients ages 19-64 who do not have a dependent child under 14 years old and do not meet an exemption."
+  },
+  {
+   "url": "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-changes",
+   "quote": "January 1, 2027: Work and community engagement requirements"
+  },
+  {
+   "url": "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-changes",
+   "quote": "One month for Medicaid expansion adults (age 19-64)"
+  },
+  {
+   "url": "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-general-eligibility",
+   "quote": "Adults ages 19-64 with incomes at or below 133 percent of the Federal Income Poverty Guidelines (FPIG)"
+  }
+ ],
+ "state_subsidy_or_reinsurance_note": "Pennsylvania's Section 1332 Waiver Reinsurance Program (authorized by Act 42 of 2019) partially reimburses insurers for high-cost individual-market claims, funded by Pennie plus federal pass-through savings. First approved in 2020 (plan years 2021-2025); an extension approved in 2025 continues it January 1, 2026 through December 31, 2030, so it is in effect for 2027. It is 'invisible' to consumers (no application). No separate state-funded premium subsidy for 2027 was found on pennie.com or the PID site.",
+ "state_subsidy_source_url": "https://www.pa.gov/agencies/insurance/laws-regulations-notices/act-42-reinsurance-1332-waiver",
+ "state_subsidy_quote": "An application to extend the waiver was approved in 2025, continuing the program from January 1, 2026, through December 31, 2030.",
+ "state_subsidy_extra_quotes": [
+  {
+   "url": "https://www.pa.gov/agencies/insurance/laws-regulations-notices/act-42-reinsurance-1332-waiver",
+   "quote": "partially reimburse insurance companies for costs associated with high-cost claims in the individual market."
+  },
+  {
+   "url": "https://www.pa.gov/agencies/insurance/laws-regulations-notices/act-42-reinsurance-1332-waiver",
+   "quote": "The reimbursement allows insurers to set lower premiums for all individuals purchasing their health insurance through the individual market."
+  },
+  {
+   "url": "https://www.pa.gov/agencies/insurance/laws-regulations-notices/act-42-reinsurance-1332-waiver",
+   "quote": "Pennsylvania's reinsurance program is \"invisible\" to consumers, who continue to enroll in coverage and seek care under their policies"
+  },
+  {
+   "url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+   "quote": "approved Pennsylvania's extension request under section 1332 of the ACA. This approval is effective for January 1, 2026, through December 31, 2030."
+  },
+  {
+   "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/insurance/documents/posted-filings-reports-orders/aca-health-rate-filings/plan-year-2027/individual-market/upmchp-rate-change-summary-indv-mkt.pdf",
+   "quote": "For 2027, the Pennsylvania Insurance Department has mandated that an adjustment factor of 1.0 is applied ... state-based reinsurance program",
+   "note": "Insurer-written 2027 rate filing posted on the PID site; supports that the program is built into 2027 rates. Not for copy (names an insurer)."
+  }
+ ],
+ "doi_name": "Pennsylvania Insurance Department",
+ "doi_url": "https://www.pa.gov/agencies/insurance",
+ "copy": {
+  "exch": "Pennie",
+  "exch_type": "run by the state",
+  "medicaid": "Pennsylvania has expanded Medicaid for adults age 19 to 64. The state&rsquo;s Medicaid income table, effective January 13, 2026, lists yearly income up to $22,025 for one person and $45,540 for a household of four. Starting January 1, 2027, some adults age 19 to 64 without a child under 14 must meet work requirements or qualify for an exemption.",
+  "state_help": "Pennsylvania has a state reinsurance program. It pays insurers back for part of the cost of high-cost claims on health plans people buy for themselves. People do not apply for it. It is approved through December 31, 2030."
+ },
+ "copy_trace": {
+  "exch": "pennie.com home page: 'Pennie is Pennsylvania's official Health Insurance Marketplace.'",
+  "exch_type": "agency.pennie.com Oct 22, 2026 release: 'Pennsylvania's official state-based health insurance marketplace'",
+  "medicaid_s1": "DHS medicaid-changes: 'One month for Medicaid expansion adults (age 19-64)'; general eligibility: 'Adults ages 19-64 with incomes at or below 133 percent...'",
+  "medicaid_s2": "DHS medicaid page table: 'Medicaid Income Requirements 138% of Federal Poverty Income Guidelines ... Annual Income Limits', '1 $22,025', '4 $45,540', 'Effective: January 13, 2026'",
+  "medicaid_s3": "DHS medicaid-changes: 'Starting January 1, 2027, some adults ages 19-64 who do not have a dependent child under 14 years old must show that they are meeting work requirements.' and 'Some people may be exempt from the requirement.'",
+  "state_help_s1": "PID Act 42 page: 'As a result, Pennsylvania's Section 1332 Waiver Reinsurance Program was created.'",
+  "state_help_s2": "PID Act 42 page: '...to partially reimburse insurance companies for costs associated with high-cost claims in the individual market.'",
+  "state_help_s3": "PID Act 42 page: 'Pennsylvania's reinsurance program is \"invisible\" to consumers, who continue to enroll in coverage...as they always have.'",
+  "state_help_s4": "PID Act 42 page: 'continuing the program from January 1, 2026, through December 31, 2030.'; CMS 1332 page: 'This approval is effective for January 1, 2026, through December 31, 2030.'"
+ },
+ "sources": [
+  {
+   "url": "https://pennie.com/",
+   "supports": "Exchange name/URL: 'Pennie is Pennsylvania's official Health Insurance Marketplace'; operated by PHIEA"
+  },
+  {
+   "url": "https://pennie.com/whats-new/",
+   "supports": "2027 changes page: OE 'begins November 1 and ends on January 15'; Medicaid work requirements and six-month renewals from Jan 1, 2027; 2027 APTC limits for lawfully present non-citizens; enhanced PTCs expired Dec 31, 2025"
+  },
+  {
+   "url": "https://pennie.com/learn/faq/",
+   "supports": "OE Nov 1 - Jan 15; Dec 15 deadline for Jan 1 coverage; Dec 16 - Jan 15 enrollments start Feb 1"
+  },
+  {
+   "url": "https://pennie.com/learn/how-to-enroll-2/",
+   "supports": "'Pennie's Open Enrollment Period runs yearly from November 1 to January 15.'"
+  },
+  {
+   "url": "https://agency.pennie.com/pennie-helps-lehigh-valley-navigate-health-insurance-2/",
+   "supports": "Oct 22, 2026 release: Pennie is 'Pennsylvania's official state-based health insurance marketplace'; opens Nov 1 for 2027; enroll by Dec 15, 2026 for Jan 1, 2027 start"
+  },
+  {
+   "url": "https://agency.pennie.com/pennies-2027-health-insurance-open-enrollment-is-here/",
+   "supports": "Nov 10, 2026 release: OE began Nov 1 for 2027 coverage; Dec 15 for New Year's Day coverage"
+  },
+  {
+   "url": "https://agency.pennie.com/pennie-outlines-consumer-data-protections-as-open-enrollment-starts/",
+   "supports": "Nov 6, 2026 release: OE began Nov 1 for 2027 coverage"
+  },
+  {
+   "url": "https://agency.pennie.com/wp-json/wp/v2/posts?per_page=10&_fields=id,date,link,title",
+   "supports": "List of Pennie press releases; shows the 2026 deadline was extended to Jan 31, 2026 (releases Jan 7 and Jan 22, 2026), and no 2027 extension announced as of Nov 24, 2026"
+  },
+  {
+   "url": "https://pennie.com/affordability/",
+   "supports": "Checked for state premium help: page covers enhanced PTC expiration and 2027 federal changes; no state-funded subsidy described"
+  },
+  {
+   "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+   "supports": "Pennsylvania listed among 22 State-based Exchanges for Plan Year 2027"
+  },
+  {
+   "url": "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+   "supports": "CMS PY2027 map: Pennsylvania under 'State Based Marketplaces (SBM) states'"
+  },
+  {
+   "url": "https://www.pa.gov/agencies/dhs/resources/medicaid",
+   "supports": "Medicaid/Medical Assistance; HealthChoices; 138% FPIG income table effective Jan 13, 2026 ($22,025 for 1; $45,540 for 4)"
+  },
+  {
+   "url": "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-general-eligibility",
+   "supports": "Adult group: 'Adults ages 19-64 with incomes at or below 133 percent of the FPIG' (MAGI)"
+  },
+  {
+   "url": "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-changes",
+   "supports": "Jan 1, 2027 work requirements for adults 19-64 without a dependent child under 14 (80 hrs/month or $580/month household income); six-month renewals; 'Medicaid expansion adults (age 19-64)'"
+  },
+  {
+   "url": "https://www.pa.gov/agencies/insurance/laws-regulations-notices/act-42-reinsurance-1332-waiver",
+   "supports": "Section 1332 Reinsurance Program (Act 42 of 2019): reimburses insurers for high-cost claims; extension approved 2025, Jan 1, 2026 - Dec 31, 2030"
+  },
+  {
+   "url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+   "supports": "CMS: Pennsylvania 1332 waiver approved July 24, 2020 (2021-2025); extension approved April 24, 2025, effective Jan 1, 2026 - Dec 31, 2030"
+  },
+  {
+   "url": "https://www.pa.gov/agencies/insurance",
+   "supports": "Regulator: Pennsylvania Insurance Department home page (Consumer Help Center, Office of Market Regulation)"
+  }
+ ],
+ "notes_unverified": [
+  "OE end date: Pennie's FAQ (modified Nov 6, 2026), how-to-enroll page and 2027 'What's New' page (published Sept 18, modified Nov 1, 2026) say Nov 1 - Jan 15; none of them prints the year '2027' next to January 15. The 2027 OE press releases (Oct 22, Nov 6 and Nov 10, 2026) give the Nov 1 start and the Dec 15 deadline but not the end date. For 2026 coverage Pennie extended both its first deadline (release Dec 16, 2025) and its final deadline to Jan 31, 2026 (releases Jan 7 and Jan 22, 2026). No 2027 extension announced as of Nov 24, 2026. Re-check pennie.com before publishing.",
+  "Medicaid limit wording: DHS's General Eligibility page says 'at or below 133 percent' while the DHS Medicaid page table is titled '138% of Federal Poverty Income Guidelines'. They agree once the federal 5-percentage-point MAGI disregard (42 CFR 435.603(d)(4)) is counted; copy uses the 138% table's dollar figures. The DHS table itself is not labeled 'adults'; it is a general MAGI Medicaid table, which matches the adult group limit.",
+  "State help: only the 1332 reinsurance program was found. No separate state-funded premium subsidy for 2027 was found on pennie.com (including the Affordability page), the Pennie press releases, or the PID site. This is an absence finding, not an official statement.",
+  "Not used in copy: the PID page's claim that premiums fell '4-6% annually' under reinsurance (a statistic), and its statement that reinsurance lets insurers 'set lower premiums' (a price claim, removed from copy by the checker).",
+  "Other 2027 items not used in copy: from 2027 only lawful permanent residents, Cuban/Haitian entrants and COFA residents among non-citizens remain eligible for Pennie financial savings (Pennie What's New); some adults 19-64 move to six-month Medicaid renewals; retroactive coverage for expansion adults drops to one month (DHS).",
+  "No KFF or other secondary source was used for Pennsylvania."
+ ],
+ "doi_quote": "The Pennsylvania Insurance Department protects and assists consumers, licenses insurance professionals and companies, and regulates the insurance marketplace.",
+ "medicaid_disregard_source": {
+  "url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-435/subpart-B/section-435.603",
+  "quote": "a state must subtract an amount equivalent to 5 percentage points of the Federal poverty level",
+  "note": "42 CFR 435.603(d)(4); explains why DHS's '133 percent' and its '138%' table agree. Fetched via the eCFR versioner API (2026-11-20 version)."
+ },
+ "verified_by_checker": true,
+ "checker_notes": [
+  "Checked 2026-11-24 by an independent checker. Every cited source was re-fetched with curl (browser user agent); all returned HTTP 200.",
+  "CONFIRMED exchange_type: CMS 'State-based Exchanges' page ('Updated: November 6, 2026') lists Pennsylvania under 'State-based Exchanges for Plan Year 2027' with 'Pennie Website'. CMS Plan Year 2027 marketplace-type map (last modified 09/01/2026) lists 'Pennslyvania' (CMS misspelling) under 'State Based Marketplaces (SBM) states'. Pennie's Oct 22, 2026 release (URL slug ...lehigh-valley...-2, title 'Pennie's 2027 Open Enrollment Period is Coming Soon') says 'Pennie, Pennsylvania's official state-based health insurance marketplace, opens on November 1 for 2027 enrollment'. Its boilerplate says 'Pennie is operated by the Pennsylvania Health Insurance Exchange Authority, established under state law.'",
+  "CONFIRMED oe_start/oe_end and oe_detail quotes on pennie.com/whats-new, pennie.com/learn/faq, pennie.com/learn/how-to-enroll-2 and the Oct 22 / Nov 6 / Nov 10, 2026 releases (see notes_unverified for the end-date caution).",
+  "CONFIRMED medicaid_quote: DHS Medicaid page table 'Medicaid Income Requirements', '138% of Federal Poverty Income Guidelines', 'Annual Income Limits' 1 = $22,025, 2 = $29,864, 3 = $37,702, 4 = $45,540, each additional $7,839, 'Effective: January 13, 2026'.",
+  "CONFIRMED DHS medicaid-changes quotes: 'January 1, 2027: Work and community engagement requirements'; 'Work requirements go into effect for adult Medicaid recipients ages 19-64 who do not have a dependent child under 14 years old and do not meet an exemption.'; 80 hours a month or household monthly income of at least $580; 'One month for Medicaid expansion adults (age 19-64)'; current recipients report at their next 2027 renewal; six-month renewals for some adults 19-64. General Eligibility page: 'Adults ages 19-64 with incomes at or below 133 percent of the Federal Income Poverty Guidelines (FPIG)'.",
+  "CONFIRMED state_subsidy_quote and extra quotes on the PID Act 42 page; CONFIRMED on the CMS 1332 page: original approval July 24, 2020 (effective Jan 1, 2021 - Dec 31, 2025) and extension approved April 24, 2025 (effective Jan 1, 2026 - Dec 31, 2030). A 2027 individual-market rate filing posted by PID says the Department set a 2027 adjustment for the 'state-based reinsurance program', so the program is in 2027 rates.",
+  "ADDED doi_quote from pa.gov/agencies/insurance (original had none).",
+  "COPY FIX (state_help): original said reinsurance lets insurers 'set lower premiums in the individual market'. That is a premium/price claim, which the owner's rules bar from copy, and 'individual market' is jargon. Rewritten in plain words without the premium claim; added 'People do not apply for it' from PID's 'invisible to consumers' line. 'runs' changed to 'has' because the PID page says the program uses Pennie and federal funds, not who operates it day to day.",
+  "COPY FIX (medicaid): 'The state's table' changed to 'The state's Medicaid income table' so readers know which table. Facts unchanged.",
+  "COPY CHECK: exch, exch_type, the three medicaid sentences and the four state_help sentences each match a confirmed quote. No $0, free plan, superlatives, guarantees, urgency, prices or premiums, ratings, carrier names, phone numbers or guaranty associations. Dollar amounts are Medicaid income limits, not prices.",
+  "PUBLISH CAUTION: the Medicaid dollar limits are 2026 figures (effective January 13, 2026); the copy names that date. Re-check the DHS table and the January 15 end date on pennie.com before publishing."
+ ],
+ "checker_sources_fetched": [
+  "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+  "https://www.cms.gov/marketplace/in-person-assisters/training-webinars/training/marketplaces-map",
+  "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+  "https://pennie.com/",
+  "https://pennie.com/whats-new/",
+  "https://pennie.com/learn/faq/",
+  "https://pennie.com/learn/how-to-enroll-2/",
+  "https://pennie.com/affordability/",
+  "https://agency.pennie.com/pennie-helps-lehigh-valley-navigate-health-insurance-2/",
+  "https://agency.pennie.com/pennies-2027-health-insurance-open-enrollment-is-here/",
+  "https://agency.pennie.com/pennie-outlines-consumer-data-protections-as-open-enrollment-starts/",
+  "https://agency.pennie.com/wp-json/wp/v2/posts?per_page=30&_fields=id,date,link,title",
+  "https://www.pa.gov/agencies/dhs/resources/medicaid",
+  "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-general-eligibility",
+  "https://www.pa.gov/agencies/dhs/resources/medicaid/medicaid-changes",
+  "https://www.pa.gov/agencies/insurance/laws-regulations-notices/act-42-reinsurance-1332-waiver",
+  "https://www.pa.gov/agencies/insurance",
+  "https://www.pa.gov/content/dam/copapwp-pagov/en/insurance/documents/posted-filings-reports-orders/aca-health-rate-filings/plan-year-2027/individual-market/upmchp-rate-change-summary-indv-mkt.pdf",
+  "https://www.ecfr.gov/api/versioner/v1/full/2026-11-20/title-42.xml?part=435&section=435.603"
+ ]
+}

@@ -1,0 +1,155 @@
+{
+  "state": "Tennessee",
+  "slug": "tennessee",
+  "exchange_name": "HealthCare.gov",
+  "exchange_url": "https://www.healthcare.gov/",
+  "exchange_type": "federal Marketplace (HealthCare.gov)",
+  "exchange_type_source_url": "https://www.tn.gov/commerce/news/2026/10/29/tdci-provides-consumer-tips-ahead-of-2026-27-aca-open-enrollment.html",
+  "exchange_type_quote": "consumers who may be purchasing or changing their individual health coverage on the Federally Facilitated Marketplace (FFM) for 2027",
+  "exchange_type_quote_2": "CMS state-marketplaces page (updated November 6, 2026): \"For Plan Year 2027, there are 22 SBEs, and 2 State-based Exchanges on the Federal platform\" [Tennessee is in neither list]",
+  "oe_start": "2026-11-01",
+  "oe_end": "2027-01-15",
+  "oe_source_url": "https://www.tn.gov/commerce/news/2026/10/29/tdci-provides-consumer-tips-ahead-of-2026-27-aca-open-enrollment.html",
+  "oe_quote": "Open Enrollment runs Sunday, November 1, 2026 – Friday, January 15, 2027.",
+  "oe_quote_2": "HealthCare.gov: \"November 1: Open Enrollment starts ... January 15: Open Enrollment ends\"; CMS July 31, 2026: \"Open Enrollment at the Federally-facilitated Exchange will begin on November 1, 2026, and end on January 15, 2027.\"",
+  "oe_dec15_note": "TDCI: \"December 15, 2026: Last day to enroll in or change plans for coverage to start January 1\" (release text says 'January 1, 2026', an apparent typo for 2027). \"January 15, 2027: ... coverage starting February 1, 2027.\"",
+  "medicaid_expanded": false,
+  "medicaid_program_name": "TennCare (Tennessee's Medicaid program, Division of TennCare); not an ACA Medicaid expansion",
+  "medicaid_adult_income_limit_note": "No coverage group for adults without children or disability. Parents and caretaker relatives of a dependent child under 18 (or 18 and a full-time student) qualify up to 100% FPL: TennCare categories page lists $1,330/month (1), $1,804 (2), $2,277 (3), $2,750 (4); Eligibility Reference Guide PDF (created Feb 20, 2026) shows the same figures; TennCare Policy Manual 015.040 (version dated Nov 2, 2026; income-standard section revised June 11, 2024) says 'The income standard for the Caretaker Relative MAGI category is 100% FPL.' No exact effective date of the current dollar table is printed. 2027 work requirement: TennCare says 'TennCare members will not experience an impact from Work or Community Engagement Requirements'; only certain parents/caretakers above $580/month are subject, and TennCare deems them to meet it from income on file. Non-citizen eligibility changes started October 1, 2026.",
+  "medicaid_url": "https://www.tn.gov/tenncare/information-statistics/notices.html",
+  "medicaid_quote": "The community engagement requirement applies almost entirely to adults who receive Medicaid through the Affordable Care Act Medicaid expansion, which Tennessee does not have.",
+  "medicaid_quote_2": "IMPORTANT: TennCare members will not experience an impact from Work or Community Engagement Requirements.",
+  "medicaid_quote_3": "TennCare does not cover all adults the way Medicaid expansion states do.",
+  "medicaid_income_table_url": "https://www.tn.gov/tenncare/members-applicants/eligibility/categories.html",
+  "medicaid_income_table_quote": "Parents or Caretaker Relatives (100% FPL) ... 3 $27,320 $2,277",
+  "state_subsidy_or_reinsurance_note": null,
+  "state_subsidy_source_url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+  "state_subsidy_quote": null,
+  "state_subsidy_finding": "None found. CMS's Section 1332 waiver page (last modified 11/17/2026) has no Tennessee entry (state sections on the page: AK, CA, CO, DE, GA, HI, ID, IA, ME, MD, MA, MN, MT, NV, NH, NJ, ND, OH, OK, OR, PA, RI, VA, VT, WA, WI; CA and MA appear only as applications, not approvals). TDCI's Oct 29, 2026 open-enrollment release mentions only federal tax credits ('calculate applicable tax credits') and no state premium program.",
+  "doi_name": "Tennessee Department of Commerce & Insurance (TDCI), Insurance Division",
+  "doi_url": "https://www.tn.gov/commerce/insurance-division.html",
+  "doi_url_note": "https://www.tn.gov/commerce/insurance.html returns HTTP 302 to https://www.tn.gov/commerce/insurance-division.html (page title 'Tennessee Insurance Division'; re-checked 2026-11-24).",
+  "copy": {
+    "exch": "HealthCare.gov",
+    "exch_type": "federal Marketplace",
+    "medicaid": "Tennessee has not expanded Medicaid. TennCare does not cover all low-income adults the way expansion states do. It does cover parents and caretaker relatives with income up to 100% of the federal poverty level. TennCare&rsquo;s current guide lists that as $2,277 a month for a family of three. TennCare says the federal work rules that begin in 2027 will not affect its members.",
+    "state_help": null
+  },
+  "copy_trace": {
+    "exch / exch_type": "TDCI Oct 29, 2026: 'individual health coverage on the Federally Facilitated Marketplace (FFM) for 2027' and 'By visiting Healthcare.gov, Tennesseans can search for ACA-compliant products'; CMS PY2027 SBE/SBE-FP lists omit Tennessee",
+    "medicaid s1": "TennCare notices: '... adults who receive Medicaid through the Affordable Care Act Medicaid expansion, which Tennessee does not have.'",
+    "medicaid s2": "TennCare notices: 'TennCare does not cover all adults the way Medicaid expansion states do.'",
+    "medicaid s3": "TennCare categories page: 'Parents or Caretaker Relatives (100% FPL)'; Eligibility Reference Guide: Caretaker Relative '100% of the poverty level'; Policy Manual 015.040: 'The income standard for the Caretaker Relative MAGI category is 100% FPL.'",
+    "medicaid s4": "TennCare categories page, Parents or Caretaker Relatives (100% FPL), household size 3: $27,320 yearly, $2,277 monthly; Eligibility Reference Guide PDF: 100% FPL, family size 3, Monthly $2,277",
+    "medicaid s5": "TennCare notices: 'Beginning in 2027, Federal law requires some Medicaid members to meet work or community engagement requirements.' + 'TennCare members will not experience an impact from Work or Community Engagement Requirements.'"
+  },
+  "sources": [
+    {
+      "url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/state-marketplaces",
+      "supports": "PY2027 SBE and SBE-FP lists; Tennessee not listed, so it uses the Federally-facilitated Exchange. Updated November 6, 2026.",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/commerce/news/2026/10/29/tdci-provides-consumer-tips-ahead-of-2026-27-aca-open-enrollment.html",
+      "supports": "Tennessee uses the FFM for 2027; OE Nov 1, 2026 - Jan 15, 2027; Dec 15 deadline for Jan 1 start; enroll at Healthcare.gov",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+      "supports": "OE Nov 1 - Jan 15; Dec 15 for Jan 1 start; 'Enroll for 2027 now'",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.cms.gov/files/document/statement-re-city-columbus-073126.pdf",
+      "supports": "CMS/CCIIO July 31, 2026: FFE OE Nov 1, 2026 - Jan 15, 2027",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/tenncare/information-statistics/notices.html",
+      "supports": "Tennessee does not have the ACA Medicaid expansion; work/community engagement rules from 2027 will not affect TennCare members; non-citizen changes Oct 1, 2026",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/tenncare/members-applicants/eligibility/categories.html",
+      "supports": "Parents or Caretaker Relatives (100% FPL) table: $1,330 (1), $1,804 (2), $2,277 (3), $2,750 (4) monthly",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/tenncare/members-applicants/eligibility-reference-guide.html",
+      "supports": "Caretaker Relative '100% of the poverty level'; FPL dollar table (100% FPL, 3 people: $2,277/month)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/content/dam/tn/tenncare/documents/eligibilityrefguide.pdf",
+      "supports": "Printable Eligibility Reference Guide (PDF created Feb 20, 2026), same figures; no category for adults without children",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/content/dam/tn/tenncare/documents/CaretakerRelativeMAGI.pdf",
+      "supports": "Policy Manual 015.040: 'The income standard for the Caretaker Relative MAGI category is 100% FPL' (income standard section revised 06.11.2024; version dated Nov 2, 2026)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/tenncare/members-applicants/eligibility/tenncare-medicaid.html",
+      "supports": "'TennCare is the state of Tennessee's Medicaid program'; groups covered (children, pregnant women, parents/caretakers, elderly or disabled)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.cms.gov/marketplace/states/section-1332-state-innovation-waivers",
+      "supports": "No Tennessee 1332 waiver (no state reinsurance) on CMS list, last modified 11/17/2026",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.tn.gov/commerce/insurance.html",
+      "supports": "Regulator page; returns HTTP 302 to https://www.tn.gov/commerce/insurance-division.html ('Tennessee Insurance Division', TDCI)",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    },
+    {
+      "url": "https://www.medicaid.gov/medicaid/national-medicaid-chip-program-information/medicaid-childrens-health-insurance-program-basic-health-program-eligibility-levels",
+      "supports": "CMS table (data as of December 1, 2023): Tennessee 'Expansion to Adults: No'. Older parent figure (84%) is superseded by TennCare's current 100% FPL. Read via WebFetch (curl got 403).",
+      "fetched": "2026-11-24",
+      "checker_refetched": "2026-11-24"
+    }
+  ],
+  "footprint_check": {
+    "file": "/Users/luaysadqi/honorbrook-marketing/scripts/onyx/footprint.py",
+    "says": "exch='HealthCare.gov', exch_url='https://www.healthcare.gov/', exch_own=False, doi='Tennessee Department of Commerce and Insurance', doi_url='https://www.tn.gov/commerce/insurance.html', expanded=False",
+    "agrees": true,
+    "comment": "All facts agree. Minor: doi_url now redirects to https://www.tn.gov/commerce/insurance-division.html (still works); the department styles its name 'Commerce & Insurance'."
+  },
+  "notes_unverified": [
+    "No exact effective date is printed on TennCare's current dollar table. The amounts match the 2026 federal poverty guidelines (100% FPL for 1 person = $15,960/yr), the PDF guide was created Feb 20, 2026, and the 100% FPL standard appears in the policy manual section revised June 11, 2024. The CMS approval date for raising the parent limit to 100% FPL was not confirmed from a primary page.",
+    "No Tennessee state premium subsidy or reinsurance program was found (CMS 1332 list, TDCI release). Absence was not exhaustively verified against every state source; state_subsidy_or_reinsurance_note set to null.",
+    "TDCI's Oct 29, 2026 release says 'coverage to start January 1, 2026' for the Dec 15 deadline; this is an apparent typo for 2027 (HealthCare.gov shows the same Dec 15 -> Jan 1 rule for 2027).",
+    "TennCare's notice says certain parents/caretakers above $580 a month are subject to the federal work rule but are deemed to meet it from income on file; copy summarizes this as 'will not affect its members' based on TennCare's own statement.",
+    "Coverage gap: HealthCare.gov's Medicaid-expansion page says in non-expansion states, adults under the poverty level who do not qualify for Medicaid won't qualify for Medicaid or Marketplace savings. Not used in copy (state-specific text is not on the static page).",
+    "Checker: the $2,277 figure matches 100% of the 2026 HHS poverty guideline for 3 people but TennCare prints no effective date; copy calls it TennCare's 'current guide' rather than naming a year. Re-check when the 2027 guidelines are published.",
+    "Checker: the PDF policy manual section CaretakerRelativeMAGI.pdf has a footer date of November 02, 2026 and PDF metadata created Oct 28, 2026 / modified Oct 29, 2026; its worked budget example says it is 'current as of June 2024'."
+  ],
+  "verified_by_checker": true,
+  "checker_notes": [
+    "Re-fetched every cited URL on 2026-11-24 (curl with browser user agent; Medicaid.gov via WebFetch). All quotes used in copy were found on the pages.",
+    "Exchange: TDCI release dated Thursday, October 29, 2026 says 'Federally Facilitated Marketplace (FFM) for 2027'; CMS PY2027 lists (22 SBEs recounted, 2 SBE-FPs) omit Tennessee. Confirmed.",
+    "OE: TDCI release 'Open Enrollment runs Sunday, November 1, 2026 - Friday, January 15, 2027'; HealthCare.gov and CMS July 31, 2026 statement agree. The release's 'coverage to start January 1, 2026' under Dec 15 is confirmed as printed (typo for 2027).",
+    "Medicaid not expanded: confirmed on TennCare notices page and Medicaid.gov table (data as of Dec 1, 2023: 'Expansion to Adults: No').",
+    "Parent/caretaker limit 100% FPL and $2,277/month for 3 confirmed on TennCare categories page, Eligibility Reference Guide page and PDF (created Feb 20, 2026), and Policy Manual 015.040.",
+    "Work rules: TennCare notices confirm 'TennCare members will not experience an impact' and that only certain parents/caretakers above $580 a month are subject and are deemed to meet it from income on file.",
+    "No 1332 waiver for Tennessee on CMS page (last modified 11/17/2026). state_help stays null.",
+    "CORRECTED: researcher's list of states on the CMS 1332 page omitted California and Massachusetts (listed as applications only). Does not change the Tennessee finding.",
+    "CORRECTED: insurance.html redirect is HTTP 302 (temporary), not a permanent move; footprint.py's doi_url still works but the target is https://www.tn.gov/commerce/insurance-division.html.",
+    "COPY: split long sentences; labeled the dollar figure as TennCare's 'current guide' because no effective date is printed. No banned terms, prices, premiums, carrier names, phone numbers, guaranty-association mentions, superlatives, guarantees or urgency in copy.",
+    "footprint.py agrees (exch HealthCare.gov, exch_own False, expanded False). Department styles its name 'Commerce & Insurance'; footprint.py uses 'and' (cosmetic)."
+  ]
+}

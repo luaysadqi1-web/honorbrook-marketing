@@ -1,0 +1,384 @@
+{
+  "group": "kids-pr3",
+  "pages": [
+    {
+      "page": "childrens-life-insurance.html",
+      "replacements": [
+        {
+          "old": "<title>Children&#x27;s Life Insurance: Is It Worth It? | Honorbrook</title>",
+          "new": "<title>Children&#x27;s &amp; Juvenile Life Insurance | Honorbrook</title>",
+          "why": "Plan item 9: put 'juvenile' in the title; 49 characters (limit 60).",
+          "sources": []
+        },
+        {
+          "old": "<meta property=\"og:title\" content=\"Children&#x27;s Life Insurance: Is It Worth It? | Honorbrook\">",
+          "new": "<meta property=\"og:title\" content=\"Children&#x27;s &amp; Juvenile Life Insurance | Honorbrook\">",
+          "why": "og:title matches the new title.",
+          "sources": []
+        },
+        {
+          "old": "<meta name=\"twitter:title\" content=\"Children&#x27;s Life Insurance: Is It Worth It? | Honorbrook\">",
+          "new": "<meta name=\"twitter:title\" content=\"Children&#x27;s &amp; Juvenile Life Insurance | Honorbrook\">",
+          "why": "twitter:title matches the new title.",
+          "sources": []
+        },
+        {
+          "old": "<meta name=\"description\" content=\"What a child&#x27;s whole life policy does, what it costs, and when a rider on your own policy is enough. We&#x27;re appointed with Gerber Life and other carriers.\">",
+          "new": "<meta name=\"description\" content=\"Juvenile life insurance: what a policy on a child or grandchild does, and when a child rider is enough. We&#x27;re appointed with Gerber Life and other carriers.\">",
+          "why": "The old description promised 'what it costs', which the page does not have. New one promises no cost and adds 'juvenile' and 'grandchild' (157 characters). The Gerber appointment sentence is kept as instructed until the owner confirms it.",
+          "sources": []
+        },
+        {
+          "old": "<meta property=\"og:description\" content=\"What a child&#x27;s whole life policy does, what it costs, and when a rider on your own policy is enough. We&#x27;re appointed with Gerber Life and other carriers.\">",
+          "new": "<meta property=\"og:description\" content=\"Juvenile life insurance: what a policy on a child or grandchild does, and when a child rider is enough. We&#x27;re appointed with Gerber Life and other carriers.\">",
+          "why": "og:description matches the new meta description (same cost promise removed).",
+          "sources": []
+        },
+        {
+          "old": "<meta name=\"twitter:description\" content=\"What a child&#x27;s whole life policy does, what it costs, and when a rider on your own policy is enough. We&#x27;re appointed with Gerber Life and other carriers.\">",
+          "new": "<meta name=\"twitter:description\" content=\"Juvenile life insurance: what a policy on a child or grandchild does, and when a child rider is enough. We&#x27;re appointed with Gerber Life and other carriers.\">",
+          "why": "twitter:description matches the new meta description.",
+          "sources": []
+        },
+        {
+          "old": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Service\",",
+          "new": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Children's & juvenile life insurance: a child policy or a child rider?\",\n  \"description\": \"What a juvenile life insurance policy on a child or grandchild does, and when a child rider on a parent's policy is enough.\",\n  \"dateModified\": \"2026-11-24\",\n  \"author\": {\n    \"@type\": \"Person\",\n    \"@id\": \"https://honorbrook-insurance.com/#luay-sadqi\",\n    \"name\": \"Luay Sadqi\",\n    \"jobTitle\": \"Founder & Designated Responsible Licensed Producer\",\n    \"url\": \"https://honorbrook-insurance.com/about\",\n    \"identifier\": \"NPN 21370662\",\n    \"worksFor\": {\n      \"@id\": \"https://honorbrook-insurance.com/#organization\"\n    }\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Honorbrook Insurance\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://honorbrook-insurance.com/childrens-life-insurance\"\n  }\n}\n</script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Service\",",
+          "why": "Plan item 9: Article schema with author (same Person @id as the blog posts) and dateModified. datePublished left out because the first live date is not confirmed.",
+          "sources": []
+        },
+        {
+          "old": "<div class=\"aep-banner sans\"><strong>Your paycheck is the asset everything else depends on.</strong> Free, no-pressure review — <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "new": "<div class=\"aep-banner sans\"><strong>Coverage on a child or grandchild, or a child rider on your own policy?</strong> <a href=\"https://www.planenroll.com/?purl=Luay-Sadqi\" target=\"_blank\" rel=\"noopener\">Book a Life review</a> and choose Life as the meeting type, or call <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "why": "Wrong (disability) banner replaced with a life banner that opens PlanEnroll and says to choose Life. Drops 'Free'.",
+          "sources": []
+        },
+        {
+          "old": "<h1>Children's life insurance: what it does and <em>when it makes sense</em></h1>\n    <p class=\"lead\">A child's life insurance policy is small whole life coverage that a parent or grandparent buys and the child keeps as an adult. It is not for everyone. Here is what it does, and the cheaper alternative many families overlook.</p>",
+          "new": "<h1>Children's &amp; juvenile life insurance: <em>a child policy or a child rider?</em></h1>\n    <p class=\"lead\">Children's life insurance, also called juvenile life insurance, is usually a small whole life policy that a parent or grandparent buys on a child or grandchild. The child can keep it as an adult. It is not for everyone. Here is what it does, and how it compares with a child rider on a parent's policy. We price both side by side.</p>",
+          "why": "Plan item 9: H1 names juvenile life insurance and the policy-or-rider choice; 'grandchild' in the first paragraph; 'the cheaper alternative' (unsourced price claim) becomes 'we price both side by side'.",
+          "sources": []
+        },
+        {
+          "old": "<li><strong>Locks in insurability.</strong> The child has coverage for life at the price set today, whatever health conditions appear later. Many policies include the right to buy more coverage at set ages without health questions.</li>\n      <li><strong>Fixed premiums.</strong> The premium is set by the child's age at purchase and does not rise.</li>",
+          "new": "<li><strong>Locks in insurability.</strong> As long as premiums are paid, the coverage stays in force even if health conditions appear later. Many policies include the right to buy more coverage at set ages without health questions.</li>\n      <li><strong>Usually level premiums.</strong> The premium is set by the child's age at purchase. On many policies it stays level, but terms vary, so check the policy.</li>",
+          "why": "Hedge the certainty wording: 'does not rise' and 'coverage for life at the price set today' become level on most policies, check the policy (same approach as the final expense fix). Checker: 'most policies' removed (banned word 'most', and an unsourced share).",
+          "sources": []
+        },
+        {
+          "old": "We will tell you which route costs less for what you want.",
+          "new": "You see the price of each for the coverage you want.",
+          "why": "'Which route costs less' becomes 'we price both side by side'. The Gerber appointment sentence before it is left unchanged, as instructed. Checker: the page already says 'we price both side by side' in the lead and FAQ and 'we compare them' in the sentence before; reworded so the phrase is not repeated three times.",
+          "sources": []
+        },
+        {
+          "old": "a child rider on a parent&#x27;s term policy usually costs less.</div>",
+          "new": "a child rider on a parent&#x27;s term policy may be enough. We price both side by side.</div>",
+          "why": "Visible FAQ: 'usually costs less' (unsourced price comparison) becomes 'may be enough. We price both side by side.'",
+          "sources": []
+        },
+        {
+          "old": "a child rider on a parent's term policy usually costs less.\"",
+          "new": "a child rider on a parent's term policy may be enough. We price both side by side.\"",
+          "why": "FAQPage JSON-LD matches the visible FAQ answer.",
+          "sources": []
+        },
+        {
+          "old": "<div class=\"a\">Yes. Ownership is typically transferred to the child as an adult, who can keep the coverage at the original premium.</div>",
+          "new": "<div class=\"a\">Often, yes. Ownership can usually be transferred to the child as an adult. The premium usually stays level after the transfer, but check the policy&#x27;s terms.</div>",
+          "why": "Visible FAQ: hedge 'keep the coverage at the original premium' (a premiums-do-not-rise claim).",
+          "sources": []
+        },
+        {
+          "old": "\"text\": \"Yes. Ownership is typically transferred to the child as an adult, who can keep the coverage at the original premium.\"",
+          "new": "\"text\": \"Often, yes. Ownership can usually be transferred to the child as an adult. The premium usually stays level after the transfer, but check the policy's terms.\"",
+          "why": "FAQPage JSON-LD matches the visible FAQ answer.",
+          "sources": []
+        },
+        {
+          "old": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, or legal advice, an offer of coverage, or a contract. Definitions of disability, benefit amounts, elimination periods, riders, exclusions, occupation classes, and pricing vary by state, carrier, and individual circumstances. Read your policy for the terms that apply to you.</p>\n      <p style=\"margin-top:10px\">The tax treatment of disability benefits depends on who paid the premium and how it was reported. Consult a qualified tax professional regarding your specific situation. Coverage is subject to medical and financial underwriting and is not guaranteed to be issued.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by the United States government, the Social Security Administration, the federal Medicare program, or any government agency. This coverage is separate from Social Security Disability Insurance (SSDI).</p>",
+          "new": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, legal, or investment advice, an offer of coverage, or a contract. Product availability, benefits, riders, purchase options, ownership rules, and eligibility vary by state, carrier, and individual circumstances. Read the policy for the terms that apply to you.</p>\n      <p style=\"margin-top:10px\">A child&#x27;s life insurance policy is insurance. It is not a savings or investment plan. Cash value grows slowly in the early years, and policy loans and withdrawals can reduce the cash value and the death benefit. Dividends, where a policy pays them, are not guaranteed. Guarantees depend on the issuing insurance company&#x27;s claims-paying ability. Coverage is subject to the carrier&#x27;s application rules and underwriting and is not guaranteed to be issued. Consult a qualified tax professional regarding your specific situation.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by any government agency or program.</p>",
+          "why": "Wrong (disability/SSDI) disclaimer replaced with a children's life disclaimer: not a savings or investment plan (14VAC5-41-30(E)), dividends not guaranteed (14VAC5-41-60), claims-paying ability, loans reduce the death benefit. No SSDI or Social Security wording. Checker: 'reduce' changed to 'can reduce' (a repaid loan does not lower the benefit); TDI life guide added as the source for loans, withdrawals and dividends.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)",
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section60/ (14VAC5-41-60(B),(D), eff. July 1, 2011; page read Nov 24, 2026)",
+            "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance, Life insurance guide, last updated Dec 12, 2025)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "single-premium-annuities.html",
+      "replacements": [
+        {
+          "old": "<div class=\"aep-banner sans\"><strong>Your paycheck is the asset everything else depends on.</strong> Free, no-pressure review — <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "new": "<div class=\"aep-banner sans\"><strong>Thinking about a single-premium annuity?</strong> Guarantees depend on the insurer&rsquo;s claims-paying ability, and surrender charges apply to withdrawals above what the contract allows during the surrender period. <a href=\"https://www.planenroll.com/?purl=Luay-Sadqi\" target=\"_blank\" rel=\"noopener\">Book an annuity review</a> and choose Annuities as the meeting type, or call <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "why": "Wrong (disability) banner replaced with an annuity banner carrying the claims-paying and surrender caveats. Booking says to choose Annuities, matching the page's own booking block (annuity readers go to the Annuities meeting type, per the critique). Drops 'Free'. Checker: TDI cb078 supports the surrender-charge and free-withdrawal wording but does not mention claims-paying ability; FINRA added for that ('only guaranteed as long as the insurance company issuing it remains in business'). Annuities kept as the meeting type because the page's own booking block says Annuities.",
+          "sources": [
+            "https://www.tdi.texas.gov/pubs/consumer/cb078.html (Texas Department of Insurance, Annuities guide, last updated Oct 16, 2023)",
+            "https://www.finra.org/investors/investing/investment-products/annuities (FINRA, Annuities; no page date shown, read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, or legal advice, an offer of coverage, or a contract. Definitions of disability, benefit amounts, elimination periods, riders, exclusions, occupation classes, and pricing vary by state, carrier, and individual circumstances. Read your policy for the terms that apply to you.</p>\n      <p style=\"margin-top:10px\">The tax treatment of disability benefits depends on who paid the premium and how it was reported. Consult a qualified tax professional regarding your specific situation. Coverage is subject to medical and financial underwriting and is not guaranteed to be issued.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by the United States government, the Social Security Administration, the federal Medicare program, or any government agency. This coverage is separate from Social Security Disability Insurance (SSDI).</p>",
+          "new": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, legal, or investment advice, an offer, a recommendation, or a contract. Annuity features, interest rates, guarantees, fees, surrender charges and surrender periods, and availability vary by product, carrier, state, and individual circumstances. Read the contract for the terms that apply to you.</p>\n      <p style=\"margin-top:10px\">Annuity guarantees are backed by the claims-paying ability of the issuing insurance company. Annuities are not bank deposits and are not insured by the FDIC. Withdrawals above what the contract allows during the surrender period are subject to surrender charges. On a fixed indexed annuity, caps, participation rates, and spreads can limit how much of an index gain is credited. Optional riders, such as income riders, may carry added charges. Consult a qualified tax professional regarding your specific situation.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by any government agency or program.</p>",
+          "why": "Wrong (disability/SSDI) disclaimer replaced with an annuity disclaimer: claims-paying ability, not FDIC-insured, surrender charges, caps/participation/spreads on the fixed indexed annuity the page lists, and rider charges. No guaranty-association wording. Checker: 'limit' changed to 'can limit' (a contract may use one or two of these, not all three); FINRA source covers riders at added cost and guarantees lasting only while the insurer is in business.",
+          "sources": [
+            "https://www.fdic.gov/resources/deposit-insurance/financial-products-not-insured (FDIC, Financial Products That Are Not Insured by the FDIC, last updated May 12, 2026)",
+            "https://www.tdi.texas.gov/pubs/consumer/cb078.html (Texas Department of Insurance, Annuities guide, last updated Oct 16, 2023)",
+            "https://www.finra.org/investors/investing/investment-products/annuities (FINRA, Annuities; no page date shown, read Nov 24, 2026)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/cash-value-life-insurance-for-kids-and-college.html",
+      "replacements": [
+        {
+          "old": "<meta name=\"description\" content=\"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus other savings.\">",
+          "new": "<meta name=\"description\" content=\"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus a 529 plan.\">",
+          "why": "'versus other savings' implies the policy is a form of savings (14VAC5-41-30(E)); compare with a 529 instead.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<meta property=\"og:description\" content=\"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus other savings.\">",
+          "new": "<meta property=\"og:description\" content=\"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus a 529 plan.\">",
+          "why": "og:description matches the meta description.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<meta name=\"twitter:description\" content=\"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus other savings.\">",
+          "new": "<meta name=\"twitter:description\" content=\"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus a 529 plan.\">",
+          "why": "twitter:description matches the meta description.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "\"description\": \"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus other savings.\",",
+          "new": "\"description\": \"Can a child's whole life policy help pay for college? Learn how cash value builds, how it can be accessed, and the trade-offs versus a 529 plan.\",",
+          "why": "BlogPosting JSON-LD description matches the meta description.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "It can work for some families, but the details matter. Here is how it works and where it falls short.</p>",
+          "new": "It can work for some families, but the details matter. Here is how it works and where it falls short. For the basics of a policy on a child or grandchild, and how it compares with a child rider, see <a href=\"/childrens-life-insurance\">children's and juvenile life insurance</a>.</p>",
+          "why": "Plan item 9: intro link to /childrens-life-insurance (no post linked to it in the body).",
+          "sources": []
+        },
+        {
+          "old": "<p>A whole life policy on a child has a death benefit and a cash value account. A portion of each premium goes to insurance costs and fees, and the rest builds cash value, which grows at a guaranteed rate and may also earn dividends if the policy is from a mutual company. In the early years, cash value is usually small, then builds more noticeably over the long term.</p>",
+          "new": "<p>A whole life policy on a child has a death benefit and a cash value. The cash value is part of the insurance policy. It is not a separate savings account. A portion of each premium goes to insurance costs and fees, and the rest builds the policy's guaranteed cash value. Some policies from mutual companies may also pay dividends, which are not guaranteed. In the early years, cash value is usually small, then builds more noticeably over the long term.</p>",
+          "why": "'A cash value account' presents the policy as an account; reworded so cash value is part of the policy, not a savings account (14VAC5-41-30(E), 41-70(L)). Dividends now say 'not guaranteed' (14VAC5-41-60(D)). Checker: smoother wording; TDI life guide added ('Dividends aren't guaranteed').",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)",
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section70/ (14VAC5-41-70(L)-(M), eff. July 1, 2011; page read Nov 24, 2026)",
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section60/ (14VAC5-41-60(B),(D), eff. July 1, 2011; page read Nov 24, 2026)",
+            "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance, Life insurance guide, last updated Dec 12, 2025)"
+          ]
+        },
+        {
+          "old": "<div class=\"cta-strip\">\n  <h3>Free needs check for your family</h3>\n  <p class=\"sans\">We'll walk through your goals and show how term, whole life, and savings options compare — no pressure.</p>\n  <a class=\"btn-primary sans\" href=\"/#contact\">Get my free needs check</a>\n</div>",
+          "new": "<div class=\"cta-strip\">\n  <h3>Needs check for your family</h3>\n  <p class=\"sans\">We&#x27;ll look at the parents&#x27; coverage first, then price a policy on your child next to a child rider. No fee for our help.</p>\n  <a class=\"btn-primary sans\" href=\"/childrens-life-insurance#quote\">Request my needs check</a>\n</div>",
+          "why": "Quote button pointed from /#contact (the Medicare-led home form) to /childrens-life-insurance#quote. 'Free' dropped, and 'savings options' removed so the policy is not offered as a savings option.",
+          "sources": []
+        },
+        {
+          "old": "<li><strong>Guaranteed growth</strong> in whole life, though modest.</li>",
+          "new": "<li><strong>Guaranteed cash values</strong> in whole life, though they build slowly and depend on the insurer's claims-paying ability.</li>",
+          "why": "'Guaranteed growth' reads like an investment return; name the contract feature (guaranteed cash values) and add the claims-paying caveat.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "Then compare to what the same money might do in other savings options, considering your tax situation and goals. The best choice may be a combination.</p>",
+          "new": "Then compare that with what the same money might do in a 529 or other savings, considering your tax situation and goals. This is a comparison only. Cash value is not the same as a savings account, and premiums are not the same as savings deposits. Some families use more than one tool.</p>",
+          "why": "'Other savings options' treated the policy as a savings option; 14VAC5-41-70(M) requires any cash value vs savings analogy to say it is an analogy only and that cash value and premiums are not the same as a savings account and deposits. Also removes the superlative 'best'.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section70/ (14VAC5-41-70(L)-(M), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/life-insurance-vs-529-for-college-savings.html",
+      "replacements": [
+        {
+          "old": "This guide lays out the tradeoffs without claiming one is superior.</p>",
+          "new": "This guide lays out the tradeoffs without claiming one is superior. If you are also weighing a small policy on your child, our <a href=\"/childrens-life-insurance\">children's life insurance</a> page explains what one does and how it compares with a child rider.</p>",
+          "why": "Plan item 9: intro link to /childrens-life-insurance. The not-better-than-a-529 framing is kept.",
+          "sources": []
+        },
+        {
+          "old": "<p>One is a savings vehicle; the other is protection with a savings feature.</p>",
+          "new": "<p>One is an education savings plan. The other is insurance: its cash value is part of the policy, not a savings account.</p>",
+          "why": "'Protection with a savings feature' presents life insurance as a savings plan (14VAC5-41-30(E)); reworded so cash value is not called savings.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)",
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section70/ (14VAC5-41-70(L)-(M), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "Do not choose a savings vehicle solely for aid reasons without checking the numbers.",
+          "new": "Do not choose a 529 or a life policy only for aid reasons without checking the numbers.",
+          "why": "'A savings vehicle' here covered both tools, which calls the policy a savings vehicle; name both instead.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<div class=\"cta-strip\">\n  <h3>Free needs check for your family</h3>\n  <p class=\"sans\">We'll walk through your goals and show how term, whole life, and savings options compare — no pressure.</p>\n  <a class=\"btn-primary sans\" href=\"/#contact\">Get my free needs check</a>\n</div>",
+          "new": "<div class=\"cta-strip\">\n  <h3>Needs check for your family</h3>\n  <p class=\"sans\">Start with the parents&#x27; protection. Then, if you want one, we price a child&#x27;s policy next to a child rider. No fee for our help.</p>\n  <a class=\"btn-primary sans\" href=\"/childrens-life-insurance#quote\">Request my needs check</a>\n</div>",
+          "why": "Quote button pointed from /#contact to /childrens-life-insurance#quote. 'Free' dropped, and 'savings options' removed.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "blog/should-i-buy-life-insurance-for-my-child-gerber-style-whole-life.html",
+      "replacements": [
+        {
+          "old": "This guide lays out the pros and cons so you can decide with a clear head.</p>",
+          "new": "This guide lays out the pros and cons so you can decide with a clear head. To see the choices side by side (a policy on your child or grandchild, or a child rider on your own policy), visit our <a href=\"/childrens-life-insurance\">children's and juvenile life insurance</a> page.</p>",
+          "why": "Plan item 9: intro link sends 'is it worth it' readers to /childrens-life-insurance so the post and the page stop competing.",
+          "sources": []
+        },
+        {
+          "old": "<li><strong>Guaranteed cash value growth,</strong> typically modest, and level premiums.</li>",
+          "new": "<li><strong>Guaranteed cash values,</strong> which build slowly, and usually level premiums. Check the policy.</li>",
+          "why": "'Cash value growth' reads like a savings return (14VAC5-41-30(E)); 'level premiums' hedged the same way as the children's page.",
+          "sources": []
+        },
+        {
+          "old": "<strong>A fair test:</strong> If you would not buy the policy without the savings feature, compare the cash value schedule against other ways to save for the same goal.",
+          "new": "<strong>A fair test:</strong> A child&#x27;s policy is insurance, not a savings plan. If the cash value is your main reason to buy, compare the policy&#x27;s guaranteed cash value table with a 529 or other ways to save for the same goal. Treat it as a comparison only, since a policy&#x27;s cash value is not a savings account.",
+          "why": "'The savings feature' presents the policy as a savings plan (14VAC5-41-30(E)); the comparison now says it is a comparison only and cash value is not a savings account (14VAC5-41-70(M)).",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)",
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section70/ (14VAC5-41-70(L)-(M), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<div class=\"cta-strip\">\n  <h3>Free needs check for your family</h3>\n  <p class=\"sans\">We'll walk through your goals and show how term, whole life, and savings options compare — no pressure.</p>\n  <a class=\"btn-primary sans\" href=\"/#contact\">Get my free needs check</a>\n</div>",
+          "new": "<div class=\"cta-strip\">\n  <h3>Needs check for your family</h3>\n  <p class=\"sans\">Tell us about your family. We&#x27;ll price a policy on your child or grandchild next to a child rider on your own policy. No fee for our help.</p>\n  <a class=\"btn-primary sans\" href=\"/childrens-life-insurance#quote\">Request my needs check</a>\n</div>",
+          "why": "Quote button pointed from /#contact to /childrens-life-insurance#quote. 'Free' dropped, and 'savings options' removed.",
+          "sources": []
+        },
+        {
+          "old": "<li>How does the cost compare to other savings options?</li>",
+          "new": "<li>How do the total premiums compare with putting the same money in a 529?</li>",
+          "why": "'Other savings options' implies the policy is a savings option (14VAC5-41-30(E)).",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<div class=\"a\">It is a whole life policy on a child that builds cash value over time, has level premiums, and can often continue into adulthood, sometimes with options to increase coverage.</div>",
+          "new": "<div class=\"a\">It is a whole life policy on a child that builds cash value over time, usually has level premiums (check the policy), and can often continue into adulthood, sometimes with options to increase coverage.</div>",
+          "why": "Visible FAQ: hedge 'has level premiums'.",
+          "sources": []
+        },
+        {
+          "old": "\"text\":\"It is a whole life policy on a child that builds cash value over time, has level premiums, and can often continue into adulthood, sometimes with options to increase coverage.\"",
+          "new": "\"text\":\"It is a whole life policy on a child that builds cash value over time, usually has level premiums (check the policy), and can often continue into adulthood, sometimes with options to increase coverage.\"",
+          "why": "FAQPage JSON-LD matches the visible FAQ answer.",
+          "sources": []
+        },
+        {
+          "old": "<div class=\"a\">Cash value grows slowly and there are costs, so it may not be the most efficient savings tool. It can be a supplement for families who value the guarantees and permanence.</div>",
+          "new": "<div class=\"a\">A child's policy is life insurance, not a savings plan. Cash value grows slowly and there are costs. If saving is the goal, look at a 529 or other savings first. Some families add a small policy for the permanent coverage itself.</div>",
+          "why": "Visible FAQ: 'the most efficient savings tool' treated the policy as a savings tool and used a superlative; now says it is life insurance, not a savings plan, and points savers to a 529 first.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "\"text\":\"Cash value grows slowly and there are costs, so it may not be the most efficient savings tool. It can be a supplement for families who value the guarantees and permanence.\"",
+          "new": "\"text\":\"A child's policy is life insurance, not a savings plan. Cash value grows slowly and there are costs. If saving is the goal, look at a 529 or other savings first. Some families add a small policy for the permanent coverage itself.\"",
+          "why": "FAQPage JSON-LD matches the visible FAQ answer.",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "blog/guaranteed-insurability-rider-juvenile-life-insurance.html",
+      "replacements": [
+        {
+          "old": "This guide explains how it works and how to judge whether it is worth it.</p>",
+          "new": "This guide explains how it works and how to judge whether it is worth it. For how a child's own policy compares with a child rider on a parent's policy, see <a href=\"/childrens-life-insurance\">life insurance for children and grandchildren</a>.</p>",
+          "why": "Plan item 9: intro link to /childrens-life-insurance.",
+          "sources": []
+        },
+        {
+          "old": "<div class=\"cta-strip\">\n  <h3>Free needs check for your family</h3>\n  <p class=\"sans\">We'll walk through your goals and show how term, whole life, and savings options compare — no pressure.</p>\n  <a class=\"btn-primary sans\" href=\"/#contact\">Get my free needs check</a>\n</div>",
+          "new": "<div class=\"cta-strip\">\n  <h3>Needs check for your family</h3>\n  <p class=\"sans\">Ask us for the option dates, the amounts and the rider charge on each policy we compare. No fee for our help.</p>\n  <a class=\"btn-primary sans\" href=\"/childrens-life-insurance#quote\">Request my needs check</a>\n</div>",
+          "why": "Quote button pointed from /#contact to /childrens-life-insurance#quote. 'Free' dropped, and 'savings options' removed.",
+          "sources": []
+        },
+        {
+          "old": "The value of the rider is highest for those who develop a condition and lowest for those who stay healthy, which is the nature of insurance.",
+          "new": "The rider helps those who develop a condition, because they can still buy more coverage. For those who stay healthy, its cost buys an option they turned out not to need. That is the nature of insurance.",
+          "why": "Removes the superlatives 'highest' and 'lowest' (owner rule). Checker: 'pays off' could read as the rider paying money; it gives a right to buy coverage.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "blog/protect-kids-college-plans-if-i-die-early.html",
+      "replacements": [
+        {
+          "old": "Here is a practical approach, with steps you can take this month.</p>",
+          "new": "Here is a practical approach, in simple steps. Cover the parents first. If you are also thinking about a small policy on the child, see <a href=\"/childrens-life-insurance\">children's life insurance</a>.</p>",
+          "why": "Plan item 9: intro link to /childrens-life-insurance, with parents first. Drops 'this month' (urgency).",
+          "sources": []
+        },
+        {
+          "old": "<p>Term life insurance is often the most affordable way to cover the years when your children depend on you. When sizing coverage, include:</p>",
+          "new": "<p>Term life insurance is built to cover a set number of years, such as the years when your children depend on you. When sizing coverage, include:</p>",
+          "why": "Removes the superlative 'most affordable' (unsourced price claim).",
+          "sources": []
+        },
+        {
+          "old": "<p>For help deciding between savings tools, read <a href=\"/blog/life-insurance-vs-529-for-college-savings\">life insurance vs. 529</a>.</p>",
+          "new": "<p>A 529 and life insurance do different jobs. See <a href=\"/blog/life-insurance-vs-529-for-college-savings\">life insurance vs. 529</a>.</p>",
+          "why": "'Deciding between savings tools' calls life insurance a savings tool (14VAC5-41-30(E)).",
+          "sources": [
+            "https://law.lis.virginia.gov/admincode/title14/agency5/chapter41/section30/ (14VAC5-41-30(E), eff. July 1, 2011; page read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<div class=\"cta-strip\">\n  <h3>Free needs check for your family</h3>\n  <p class=\"sans\">We'll walk through your goals and show how term, whole life, and savings options compare — no pressure.</p>\n  <a class=\"btn-primary sans\" href=\"/#contact\">Get my free needs check</a>\n</div>",
+          "new": "<div class=\"cta-strip\">\n  <h3>Needs check for your family</h3>\n  <p class=\"sans\">We&#x27;ll check whether your coverage would keep college plans on track, and price a child rider or a child&#x27;s policy if you want one. No fee for our help.</p>\n  <a class=\"btn-primary sans\" href=\"/childrens-life-insurance#quote\">Request my needs check</a>\n</div>",
+          "why": "Quote button pointed from /#contact to /childrens-life-insurance#quote. 'Free' dropped, and 'savings options' removed.",
+          "sources": []
+        },
+        {
+          "old": "<p>The best arrangements fail if no one knows about them.",
+          "new": "<p>Even good arrangements can fail if no one knows about them.",
+          "why": "Removes the superlative 'best'. Checker: 'fail' changed to 'can fail' (no absolute claims).",
+          "sources": []
+        },
+        {
+          "old": "<details><summary>What kind of life insurance best protects college plans?</summary><div class=\"a\">Term life insurance sized to cover the years your children will need support is often the most affordable way to protect college funding, though your needs and budget decide.</div></details>",
+          "new": "<details><summary>What kind of life insurance protects college plans?</summary><div class=\"a\">Many families use term life insurance sized to cover the years their children will need support. Your needs and budget decide the type and the amount.</div></details>",
+          "why": "Visible FAQ: removes 'best' and 'most affordable' (superlatives, unsourced price claim).",
+          "sources": []
+        },
+        {
+          "old": "\"name\":\"What kind of life insurance best protects college plans?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Term life insurance sized to cover the years your children will need support is often the most affordable way to protect college funding, though your needs and budget decide.\"}",
+          "new": "\"name\":\"What kind of life insurance protects college plans?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Many families use term life insurance sized to cover the years their children will need support. Your needs and budget decide the type and the amount.\"}",
+          "why": "FAQPage JSON-LD matches the visible FAQ question and answer.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

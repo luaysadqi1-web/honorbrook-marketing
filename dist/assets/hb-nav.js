@@ -3,12 +3,12 @@
 /* Count every click that opens the PlanEnroll booking page, by page and by where the button sits, and every tap on the text number. */
 document.addEventListener('click', function (e) {
   if (!e.target || !e.target.closest || typeof window.gtag !== 'function') return;
-  if (e.target.closest('a[href^="sms:"]')) { try { window.gtag('event', 'text_click', { page: location.pathname }); } catch (x) {} return; }
+  if (e.target.closest('a[href^="sms:"]')) { try { window.gtag('event', 'text_click', { page: location.pathname, line: document.body.getAttribute('data-line') || '' }); } catch (x) {} return; }
   var a = e.target.closest('a[href*="planenroll.com"]');
   if (!a) return;
   var place = a.closest('.hb-next') ? 'post next step' : a.closest('.hb-life') ? 'life block' : a.closest('.hb-book') ? 'product block' : a.closest('.cta-strip') ? 'page strip' : a.closest('.band') ? 'bottom band' : a.closest('.sticky-call') ? 'bottom bar' : a.closest('nav.menu') ? 'menu' : a.closest('header') ? 'header' :
     a.closest('.page-hero,.hx') ? 'hero' : a.closest('#funnel') ? 'funnel' : 'page';
-  try { window.gtag('event', 'book_click', { page: location.pathname, place: place }); } catch (x) {}
+  try { window.gtag('event', 'book_click', { page: location.pathname, place: place, line: document.body.getAttribute('data-line') || '' }); } catch (x) {}
 }, true);
 
 /* Cards lean toward the pointer and catch the light. Desktop pointers only; off when the visitor prefers reduced motion. */

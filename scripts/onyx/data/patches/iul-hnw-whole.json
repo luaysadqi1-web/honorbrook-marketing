@@ -1,0 +1,509 @@
+{
+  "group": "iul-hnw-whole",
+  "pages": [
+    {
+      "page": "indexed-universal-life.html",
+      "replacements": [
+        {
+          "old": "<meta name=\"twitter:description\" content=\"How IUL really works — index crediting, caps, floors, and the costs most illustrations gloss over.\">",
+          "new": "<meta name=\"twitter:description\" content=\"How IUL really works: index crediting, caps, floors, policy charges, surrender charges and the risks to check before you buy.\">",
+          "why": "Removes \"most\" (superlative/unverified quantifier) from the social description.",
+          "sources": []
+        },
+        {
+          "old": "{\"@type\":\"Question\",\"name\":\"What are the downsides of IUL?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Caps and participation rates limit your upside, and carriers can adjust them over time. The cost of insurance rises as you age and is deducted from your cash value, so an underfunded policy can erode or even lapse. Surrender charges apply in the early years. Illustrations are projections, not guarantees. These are real tradeoffs, and any agent who does not walk you through them is not doing the job.\"}},",
+          "new": "{\"@type\":\"Question\",\"name\":\"What are the downsides of IUL?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Caps and participation rates limit your upside, and the carrier can change them. The cost of insurance rises with age and comes out of the cash value, so an underfunded policy can shrink or lapse. Surrender charges can apply in the early years. Illustrations are projections, not guarantees, and any guarantees depend on the claims-paying ability of the insurer.\"}},",
+          "why": "FAQPage JSON-LD for \"What are the downsides of IUL?\" now matches the visible answer word for word and adds the claims-paying caveat (owner rule: claims-paying, caps/participation, fees and surrender caveats on IUL content). Checker: \"Surrender charges apply\" became \"can apply\" to match the source (\"A charge may be made at the surrender\"); Indiana DOI source dropped (it has no claims-paying sentence), replaced by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://content.naic.org/sites/default/files/model-law-585.pdf (NAIC Universal Life Insurance Model Regulation #585, January 2001 edition: Sec. 6 \"A charge may be made at the surrender of the policy\"; Sec. 7.D(6) the policy shall provide \"Any surrender or partial withdrawal charges\"; Sec. 7.F \"lapse shall occur on that date on which the net cash surrender value first equals zero\")",
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)",
+            "https://content.naic.org/insurance-topics/life-insurance-illustrations (NAIC Life Insurance Illustrations page, last updated 1/8/2026: AG 49 adopted in 2015 for illustrations of policies tied to an external index; \"Revisions to AG 49-A became effective in 2023 to tighten illustration limits\"; illustrations show guaranteed and non-guaranteed elements)"
+          ]
+        },
+        {
+          "old": "{\"@type\":\"Question\",\"name\":\"Can I access the cash value in an IUL policy?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes, typically through policy loans or withdrawals, and loans are generally not treated as taxable income when the policy is structured and maintained properly. However, unpaid loans reduce the death benefit, and a policy that lapses with an outstanding loan can create a taxable event. This is exactly the kind of detail worth reviewing with a licensed agent before you rely on it.\"}}",
+          "new": "{\"@type\":\"Question\",\"name\":\"Can I access the cash value in an IUL policy?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes, typically through policy loans or withdrawals, and loans are generally not treated as taxable income when the policy is structured and maintained properly. However, unpaid loans reduce the death benefit, and a policy that lapses with an outstanding loan can create a taxable event. This is exactly the kind of detail worth reviewing with a licensed agent before you rely on it.\"}},\n    {\"@type\":\"Question\",\"name\":\"I already have an IUL. Can you review it?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. There is no fee for our help. Send us your annual statement, and we will help you ask the insurer for an in-force illustration, which shows whether the policy is on track or drifting toward a lapse. We do this whether or not you bought the policy from us.\"}}",
+          "why": "Adds the sixth visible FAQ question to the FAQPage JSON-LD with the same answer text, so schema and page match.",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://oci.wi.gov/Pages/Regulation/CA20211203UniversalLifeInsurance.aspx (Wisconsin OCI, Consumer Alert related to Universal Life Insurance, December 3, 2021: the office \"has seen many cases\" of universal life buyers whose policies \"had lapsed (were no longer in effect) with little to no value\" or who had to pay \"large additional premium payments\"; \"As you age, the rate of the cost of insurance charge will increase\"; policyholders can request an updated \"in-force illustration\" once a year; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "</script>\n</head>",
+          "new": "</script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"@id\": \"https://honorbrook-insurance.com/indexed-universal-life\",\n  \"url\": \"https://honorbrook-insurance.com/indexed-universal-life\",\n  \"name\": \"Indexed Universal Life (IUL): Pros and Cons\",\n  \"lastReviewed\": \"2026-11-24\",\n  \"reviewedBy\": {\n    \"@type\": \"Person\",\n    \"@id\": \"https://honorbrook-insurance.com/#luay-sadqi\",\n    \"name\": \"Luay Sadqi\",\n    \"jobTitle\": \"Licensed Agent\",\n    \"identifier\": \"NPN 21370662\",\n    \"url\": \"https://honorbrook-insurance.com/about\"\n  }\n}\n</script>\n</head>",
+          "why": "Plan item 8: reviewedBy Person schema matching the visible \"Reviewed by Luay Sadqi, Licensed Agent, NPN 21370662\" line; same Person @id as the blog posts.",
+          "sources": []
+        },
+        {
+          "old": "<p class=\"lead\">IUL is one of the most aggressively marketed products in the insurance business — and one of the least understood. Here's how it actually works, what the illustrations don't emphasize, and the specific situations where it genuinely makes sense.</p>",
+          "new": "<p class=\"lead\">IUL is a complex product, and a short sales pitch can leave out what matters. Here is how it works, what to check in an illustration, and the situations where it can make sense.</p>",
+          "why": "Removes \"one of the most aggressively marketed\" and \"one of the least understood\" (superlatives, plan item 8). Plain English. Checker: dropped \"often pitched with big promises and too little explanation\", an unsourced claim about how others sell; the page's own table rates IUL complexity \"High\".",
+          "sources": []
+        },
+        {
+          "old": "NPN 21370662 · Updated August 2026</p>",
+          "new": "NPN 21370662 · Updated November 2026</p>",
+          "why": "Plan item 8: update the visible review date with this content change.",
+          "sources": []
+        },
+        {
+          "old": "<a class=\"btn-ghost\" href=\"tel:+13016158289\">Call (301) 615-8289</a>\n    </div>\n  </div>\n</section>",
+          "new": "<a class=\"btn-ghost\" href=\"tel:+13016158289\">Call (301) 615-8289</a>\n      <a class=\"btn-ghost\" href=\"#quote\">Already own an IUL? Bring your annual statement</a>\n    </div>\n    <p class=\"sans\" style=\"font-size:14px;color:#aebbd0;letter-spacing:.3px;margin-top:12px\">Scheduling opens PlanEnroll. When it asks for the meeting type, choose <strong>Life</strong>.</p>\n  </div>\n</section>",
+          "why": "Plan item 8 + critique: the existing-policy review path moves into the hero as a second button to the on-page form (#quote), since /iul-policy-review is not built. Adds the \"choose Life\" instruction next to the hero Schedule button.",
+          "sources": []
+        },
+        {
+          "old": "tied to the movement of a market index, most often the S&amp;P 500.</p>",
+          "new": "tied to the movement of a market index, such as the S&amp;P 500.</p>",
+          "why": "Removes \"most often\" (unverified quantifier). NAIC describes indexed policies as tied to indexes \"such as bonds or the S&P 500\".",
+          "sources": [
+            "https://content.naic.org/insurance-topics/life-insurance (NAIC Life Insurance page, last updated 11/14/2025: indexed policy interest is \"tied to external investment indexes, such as bonds or the S&P 500\"; \"Term insurance is generally more affordable than permanent insurance, particularly in the early policy durations\")"
+          ]
+        },
+        {
+          "old": "<p>An IUL policy has internal charges, and they matter more than most illustrations make obvious. The largest is the <strong>cost of insurance</strong> — the actual charge for the death benefit — which rises as you age. In the early years it's modest. In your seventies and eighties it is substantially higher, and it is deducted from your cash value every month.</p>",
+          "new": "<p>An IUL policy has internal charges, and they matter. A major one is the <strong>cost of insurance</strong> — the actual charge for the death benefit — which rises as you age. In the early years it's modest. In your seventies and eighties it is substantially higher, and it is deducted from your cash value every month.</p>",
+          "why": "Removes \"most illustrations\" and \"The largest\" (superlatives/unverified). The rising cost-of-insurance statement is confirmed by the Wisconsin regulator: \"As you age, the rate of the cost of insurance charge will increase.\" Checker: cut \"more than an illustration's summary page may show\" (unverified). Wisconsin OCI calls the cost of insurance \"The main expense of a universal life policy\", so \"A major one\" stays accurate.",
+          "sources": [
+            "https://oci.wi.gov/Pages/Regulation/CA20211203UniversalLifeInsurance.aspx (Wisconsin OCI, Consumer Alert related to Universal Life Insurance, December 3, 2021: the office \"has seen many cases\" of universal life buyers whose policies \"had lapsed (were no longer in effect) with little to no value\" or who had to pay \"large additional premium payments\"; \"As you age, the rate of the cost of insurance charge will increase\"; policyholders can request an updated \"in-force illustration\" once a year; read Nov 24, 2026)",
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<p>This creates the single biggest risk in the product: <strong>an underfunded IUL can collapse.</strong> If you pay only the minimum premium, and crediting comes in below what the illustration assumed, rising insurance costs can consume the cash value until the policy lapses — potentially decades in, after you've paid for years, and at an age when replacing coverage is expensive or impossible. Funding an IUL properly is not optional. It is the whole game.</p>",
+          "new": "<p>This creates a major risk in the product: <strong>an underfunded IUL can lapse.</strong> If you pay only the minimum premium, and crediting comes in below what the illustration assumed, rising insurance costs can use up the cash value until the policy lapses. That can happen decades in, after you have paid for years, at an age when new coverage may cost much more or not be available. In a December 3, 2021 <a href=\"https://oci.wi.gov/Pages/Regulation/CA20211203UniversalLifeInsurance.aspx\" target=\"_blank\" rel=\"noopener\">consumer alert</a>, Wisconsin&rsquo;s insurance regulator said it had seen many cases of universal life owners whose policies lapsed with little to no value, or who had to pay large added premiums to keep coverage. Funding an IUL at a level that holds up is the core of the decision.</p>",
+          "why": "Critique: rewords \"the single biggest risk\" and \"collapse ... impossible\" without losing the underfunding and lapse warning; adds a dated state-regulator source for it. Checker: the alert does not say it was issued \"after\" lapses; reworded to what it says (\"has seen many cases\", lapsed \"with little to no value\" or \"large additional premium payments\"), with the exact date.",
+          "sources": [
+            "https://oci.wi.gov/Pages/Regulation/CA20211203UniversalLifeInsurance.aspx (Wisconsin OCI, Consumer Alert related to Universal Life Insurance, December 3, 2021: the office \"has seen many cases\" of universal life buyers whose policies \"had lapsed (were no longer in effect) with little to no value\" or who had to pay \"large additional premium payments\"; \"As you age, the rate of the cost of insurance charge will increase\"; policyholders can request an updated \"in-force illustration\" once a year; read Nov 24, 2026)",
+            "https://content.naic.org/sites/default/files/model-law-585.pdf (NAIC Universal Life Insurance Model Regulation #585, January 2001 edition: Sec. 6 \"A charge may be made at the surrender of the policy\"; Sec. 7.D(6) the policy shall provide \"Any surrender or partial withdrawal charges\"; Sec. 7.F \"lapse shall occur on that date on which the net cash surrender value first equals zero\")",
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<strong>How to read any IUL illustration:</strong> ask for the <em>guaranteed</em> column, not just the illustrated one. The illustrated column assumes a crediting rate that may not happen; the guaranteed column shows what the carrier must deliver in the worst case. If the guaranteed column shows the policy lapsing, you're looking at a policy that depends on optimism to survive. Regulators cap how aggressive these illustrations can be for exactly this reason — but a capped projection is still a projection.",
+          "new": "<strong>How to read any IUL illustration:</strong> ask for the <em>guaranteed</em> column, not just the illustrated one. The illustrated column assumes a crediting rate that may not happen; the guaranteed column shows what the carrier must deliver in the worst case. If the guaranteed column shows the policy lapsing, you're looking at a policy that depends on optimism to survive. State regulators, working through the NAIC, limit how aggressive index illustrations can be (see the NAIC&rsquo;s <a href=\"https://content.naic.org/insurance-topics/life-insurance-illustrations\" target=\"_blank\" rel=\"noopener\">life insurance illustrations page</a>), but a limited projection is still a projection.",
+          "why": "Plan item 8: cites the NAIC Life Insurance Illustrations page (guaranteed vs non-guaranteed elements; AG 49 and AG 49-A for index-linked policies).",
+          "sources": [
+            "https://content.naic.org/insurance-topics/life-insurance-illustrations (NAIC Life Insurance Illustrations page, last updated 1/8/2026: AG 49 adopted in 2015 for illustrations of policies tied to an external index; \"Revisions to AG 49-A became effective in 2023 to tighten illustration limits\"; illustrations show guaranteed and non-guaranteed elements)"
+          ]
+        },
+        {
+          "old": "    </div>\n\n    <h2>IUL vs. whole life vs. term</h2>",
+          "new": "    </div>\n\n    <div class=\"callout navy\">\n      <strong>Before you buy any IUL:</strong> An IUL is life insurance, not an investment in the market. Caps and participation rates limit your interest credits, and the carrier can change them within limits set in the policy. Policy charges come out of the cash value, and the cost of insurance rises with age. Loans and withdrawals reduce the death benefit and can cause a lapse. Surrender charges can apply if you cancel or take money out in the early years. The policy lists these charges, so ask how large they are and how many years they last before you sign. Every guarantee in the policy, including the floor, depends on the claims-paying ability of the insurance company. Illustrated values are projections, not promises. The NAIC&rsquo;s <a href=\"https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf\" target=\"_blank\" rel=\"noopener\">Life Insurance Buyer&rsquo;s Guide</a> lists a question to answer from your policy: what part of the premium or policy value isn&rsquo;t guaranteed?\n    </div>\n\n    <h2>IUL vs. whole life vs. term</h2>",
+          "why": "Critique must-fix: adds the claims-paying AND surrender-charge caveats next to the caps/participation and charges caveats (all four on the page), adapted from the HNW caveat box so the two pages are not word for word. Cites the NAIC Buyer's Guide (plan item 8). Checker: fixed \"Policy charges ... rise with age\" (only the cost of insurance is sourced as rising with age); \"Surrender charges apply\" became \"can apply\" and covers partial withdrawals (Model Reg 585 Sec. 7.D(6)); the Buyer's Guide line now matches its wording (a question you should be able to answer from your policy); last sentence differs from the HNW box. Indiana DOI source dropped (no claims-paying sentence there).",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)",
+            "https://content.naic.org/sites/default/files/model-law-585.pdf (NAIC Universal Life Insurance Model Regulation #585, January 2001 edition: Sec. 6 \"A charge may be made at the surrender of the policy\"; Sec. 7.D(6) the policy shall provide \"Any surrender or partial withdrawal charges\"; Sec. 7.F \"lapse shall occur on that date on which the net cash surrender value first equals zero\")",
+            "https://oci.wi.gov/Pages/Regulation/CA20211203UniversalLifeInsurance.aspx (Wisconsin OCI, Consumer Alert related to Universal Life Insurance, December 3, 2021: the office \"has seen many cases\" of universal life buyers whose policies \"had lapsed (were no longer in effect) with little to no value\" or who had to pay \"large additional premium payments\"; \"As you age, the rate of the cost of insurance charge will increase\"; policyholders can request an updated \"in-force illustration\" once a year; read Nov 24, 2026)",
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<p>Most people considering IUL are really choosing between three permanent-or-temporary paths.",
+          "new": "<p>People considering IUL are often choosing between three permanent-or-temporary paths.",
+          "why": "Removes \"Most\" (superlative/unverified quantifier).",
+          "sources": []
+        },
+        {
+          "old": "<tr><td>Premiums</td><td>Level, lowest cost</td>",
+          "new": "<tr><td>Premiums</td><td>Level for the term; lower cost for a set period</td>",
+          "why": "Critique: removes \"lowest cost\". NAIC: term insurance \"is intended to provide lower cost coverage for a specific period of time\".",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance, Life insurance guide, last updated 12/12/2025: term \"Premiums will stay the same for the entire term\"; whole life premiums \"Higher than term life at first, but usually don't go up\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<tr><td>Best for</td><td>Income replacement on a budget</td><td>Certainty and legacy planning</td>",
+          "new": "<tr><td>Can fit</td><td>Income replacement on a budget</td><td>Predictability and legacy planning</td>",
+          "why": "Removes \"Best\" (owner rule: no superlatives) from the table row label. Checker: extended to the whole life cell (\"Certainty\" becomes \"Predictability\"), the same fix the whole life page gets.",
+          "sources": []
+        },
+        {
+          "old": "<li>You have a <strong>genuine permanent life insurance need</strong> — estate liquidity, a lifelong dependent, a business buy-sell agreement, or a legacy goal that doesn't expire.</li>",
+          "new": "<li>You have a <strong>genuine permanent life insurance need</strong> — estate liquidity, a lifelong dependent, a business buy-sell agreement, or a legacy goal that doesn't expire. See <a href=\"/high-net-worth-life-insurance\">life insurance for high-net-worth families and business owners</a>.</li>",
+          "why": "Plan item 8: in-body link to /high-net-worth-life-insurance (it has no in-body links today).",
+          "sources": []
+        },
+        {
+          "old": "<p>Equally honest: if your primary goal is retirement savings and you don't need permanent life insurance, a 401(k), IRA, or ordinary brokerage account will almost always serve you better with less complexity and lower cost. If your budget is tight and your real need is protecting your family during your working years, <a href=\"/term-life-insurance\">term life insurance</a> gives you far more death benefit per dollar. And if you want permanent coverage with guarantees rather than projections, <a href=\"/whole-life-insurance\">whole life</a> or <a href=\"/guaranteed-universal-life\">guaranteed universal life</a> are more honest fits.</p>",
+          "new": "<p>Equally honest: if your primary goal is retirement savings and you don't need permanent life insurance, a 401(k), IRA, or ordinary brokerage account is usually the simpler, lower-cost choice. If your budget is tight and your real need is protecting your family during your working years, <a href=\"/term-life-insurance\">term life insurance</a> gives you more death benefit for each premium dollar. And if you want permanent coverage with guarantees rather than projections, <a href=\"/whole-life-insurance\">whole life</a> or <a href=\"/guaranteed-universal-life\">guaranteed universal life</a> may fit better.</p>",
+          "why": "Critique: removes \"almost always\" and \"far more\"; \"more honest fits\" becomes \"may fit better\". NAIC: term is \"lower cost coverage for a specific period of time\".",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://content.naic.org/insurance-topics/life-insurance (NAIC Life Insurance page, last updated 11/14/2025: indexed policy interest is \"tied to external investment indexes, such as bonds or the S&P 500\"; \"Term insurance is generally more affordable than permanent insurance, particularly in the early policy durations\")"
+          ]
+        },
+        {
+          "old": "but they describe the best case, not the guaranteed case.",
+          "new": "but they describe what happens when things go well, not what is guaranteed.",
+          "why": "Removes \"best case\" (owner rule sweep for \"best\"). Keeps the \"tax-free retirement plan\" quote as the single remaining use of \"free\" on the page.",
+          "sources": []
+        },
+        {
+          "old": "<p class=\"sans\">We'll review your situation and tell you honestly — including when the answer is no. Free, no pressure.</p>\n      <a class=\"btn-primary sans\" href=\"/#contact\">Get my free policy review</a>",
+          "new": "<p class=\"sans\">We'll review your situation and tell you honestly, including when the answer is no. There is no fee for our help.</p>\n      <a class=\"btn-primary sans\" href=\"#quote\">Get my policy review</a>",
+          "why": "Plan item 1/8: \"Get my free policy review\" now goes to the on-page form (#quote) instead of the Medicare-led homepage form; drops two uses of \"free\".",
+          "sources": []
+        },
+        {
+          "old": "That matters here more than almost anywhere else in insurance, because IUL is a high-commission product and the incentive to recommend it is real.",
+          "new": "That matters with IUL, because it can pay a high commission and the incentive to recommend it is real.",
+          "why": "Removes \"more than almost anywhere else\" (superlative).",
+          "sources": []
+        },
+        {
+          "old": "<p>Already own an IUL and aren't sure how it's performing? Bring us the annual statement. An in-force illustration will show whether it's on track or drifting toward trouble — and that review is free whether or not you bought it from us.</p>",
+          "new": "<p>Already own an IUL and not sure how it is doing? Bring us the annual statement. We will help you ask the insurer for an in-force illustration, which shows whether the policy is on track or drifting toward a lapse. There is no fee for this review, whether or not you bought the policy from us. <a href=\"#quote\">Request a review</a>.</p>",
+          "why": "Drops \"free\" (owner rule), keeps the review offer and links it to the form. NAIC: \"The insurance company can provide policy statements and illustrations to help with this review.\"",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://oci.wi.gov/Pages/Regulation/CA20211203UniversalLifeInsurance.aspx (Wisconsin OCI, Consumer Alert related to Universal Life Insurance, December 3, 2021: the office \"has seen many cases\" of universal life buyers whose policies \"had lapsed (were no longer in effect) with little to no value\" or who had to pay \"large additional premium payments\"; \"As you age, the rate of the cost of insurance charge will increase\"; policyholders can request an updated \"in-force illustration\" once a year; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<details><summary>What are the downsides of IUL?</summary><div class=\"a\">Caps and participation rates limit your upside and can be adjusted by the carrier. Cost of insurance rises with age and is deducted from cash value, so an underfunded policy can erode or lapse. Surrender charges apply early on. Illustrations are projections, not guarantees.</div></details>",
+          "new": "<details><summary>What are the downsides of IUL?</summary><div class=\"a\">Caps and participation rates limit your upside, and the carrier can change them. The cost of insurance rises with age and comes out of the cash value, so an underfunded policy can shrink or lapse. Surrender charges can apply in the early years. Illustrations are projections, not guarantees, and any guarantees depend on the claims-paying ability of the insurer.</div></details>",
+          "why": "Visible FAQ answer adds the claims-paying caveat; JSON-LD changed to the same text. Checker: \"can apply\" to match the source and the JSON-LD.",
+          "sources": [
+            "https://content.naic.org/sites/default/files/model-law-585.pdf (NAIC Universal Life Insurance Model Regulation #585, January 2001 edition: Sec. 6 \"A charge may be made at the surrender of the policy\"; Sec. 7.D(6) the policy shall provide \"Any surrender or partial withdrawal charges\"; Sec. 7.F \"lapse shall occur on that date on which the net cash surrender value first equals zero\")",
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<details><summary>I already have an IUL. Can you review it?</summary><div class=\"a\">Yes, and it's free. Send us your annual statement and we'll request an in-force illustration, which shows whether the policy is on track or drifting toward a lapse. We do this whether or not you bought the policy from us.</div></details>",
+          "new": "<details><summary>I already have an IUL. Can you review it?</summary><div class=\"a\">Yes. There is no fee for our help. Send us your annual statement, and we will help you ask the insurer for an in-force illustration, which shows whether the policy is on track or drifting toward a lapse. We do this whether or not you bought the policy from us.</div></details>",
+          "why": "Drops \"it's free\"; same text added to the FAQPage JSON-LD.",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://oci.wi.gov/Pages/Regulation/CA20211203UniversalLifeInsurance.aspx (Wisconsin OCI, Consumer Alert related to Universal Life Insurance, December 3, 2021: the office \"has seen many cases\" of universal life buyers whose policies \"had lapsed (were no longer in effect) with little to no value\" or who had to pay \"large additional premium payments\"; \"As you age, the rate of the cost of insurance charge will increase\"; policyholders can request an updated \"in-force illustration\" once a year; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<p>Free consultation · No obligation · No pressure</p>",
+          "new": "<p>No fee for our help · No obligation · No pressure</p>",
+          "why": "Cuts \"free\" (owner asked for at most one use on the IUL page; plan item 1 wording \"no fee for our help\").",
+          "sources": []
+        },
+        {
+          "old": "      <a class=\"rel-card\" href=\"/guaranteed-universal-life\"><h3>Guaranteed Universal Life</h3><p>Lifetime coverage focused on the death benefit.</p></a>\n      <a class=\"rel-card\" href=\"/whole-life-insurance\"><h3>Whole Life</h3><p>Guaranteed growth and lifelong protection.</p></a>\n      <a class=\"rel-card\" href=\"/life-insurance\"><h3>All Life Insurance</h3><p>Compare every type side by side.</p></a>",
+          "new": "      <a class=\"rel-card\" href=\"/blog/what-is-indexed-universal-life-iul-how-it-works-cost-risks\"><h3>What Is IUL?</h3><p>Index crediting, policy costs and the risks, step by step.</p></a>\n      <a class=\"rel-card\" href=\"/blog/iul-vs-term-life-plus-investing-for-high-earners\"><h3>IUL vs. Term Plus Investing</h3><p>How the two compare on cost, flexibility, taxes and risk.</p></a>\n      <a class=\"rel-card\" href=\"/blog/life-insurance-policy-loan-does-it-avoid-taxes\"><h3>Policy Loans and Taxes</h3><p>How cash value loans work, and what can make them taxable.</p></a>\n      <a class=\"rel-card\" href=\"/blog/is-cash-value-life-insurance-a-good-retirement-supplement\"><h3>Cash Value for Retirement?</h3><p>Questions to ask before counting on a policy for income.</p></a>\n      <a class=\"rel-card\" href=\"/high-net-worth-life-insurance\"><h3>High-Net-Worth Planning</h3><p>Estate liquidity, business succession and high earners.</p></a>\n      <a class=\"rel-card\" href=\"/annuities\"><h3>Annuities</h3><p>Fixed and fixed indexed annuities for retirement.</p></a>\n      <a class=\"rel-card\" href=\"/guaranteed-universal-life\"><h3>Guaranteed Universal Life</h3><p>Lifetime coverage focused on the death benefit.</p></a>\n      <a class=\"rel-card\" href=\"/whole-life-insurance\"><h3>Whole Life</h3><p>Contractual guarantees and lifelong coverage.</p></a>\n      <a class=\"rel-card\" href=\"/life-insurance\"><h3>All Life Insurance</h3><p>Compare every type side by side.</p></a>",
+          "why": "Plan item 8: \"Keep exploring\" adds the 4 IUL posts, /high-net-worth-life-insurance and /annuities (all slugs exist in the build); 9 cards fill the 3-column grid. The whole life card loses the \"Guaranteed growth\" headline.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "high-net-worth-life-insurance.html",
+      "replacements": [
+        {
+          "old": "<div class=\"aep-banner sans\"><strong>Your paycheck is the asset everything else depends on.</strong> Free, no-pressure review — <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "new": "<div class=\"aep-banner sans\"><strong>Life insurance for estates, businesses and heirs.</strong> <a href=\"https://www.planenroll.com/?purl=Luay-Sadqi\" target=\"_blank\" rel=\"noopener\">Book a Life review</a> and choose Life as the meeting type, or call <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "why": "Critique: the banner was copied from the disability template (\"Your paycheck is the asset...\") and said \"Free\". Replaced with life wording plus the PlanEnroll link and the \"choose Life\" instruction.",
+          "sources": []
+        },
+        {
+          "old": "<p>The federal estate tax exemption is high, and most families never owe federal estate tax. State taxes are another matter. Several jurisdictions where we are licensed have their own estate or inheritance tax with far lower thresholds, including Maryland, Pennsylvania, Kentucky, and the District of Columbia. Rules and thresholds change, so confirm your exposure with an estate attorney or CPA.</p>",
+          "new": "<p>A federal estate tax return is required only when an estate is worth more than a high threshold, which the IRS lists by year of death (see the <a href=\"https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax\" target=\"_blank\" rel=\"noopener\">IRS estate tax page</a>). State taxes are another matter. Several jurisdictions where we are licensed have their own estate or inheritance tax with lower thresholds, including Maryland, Pennsylvania, Kentucky, and the District of Columbia. Rules and thresholds change, so confirm your exposure with an estate attorney or CPA.</p>",
+          "why": "Removes \"most ... never\" (superlative and absolute wording) and sources the federal estate tax threshold to the IRS without quoting a dollar amount. Checker: the IRS page lists a filing threshold by year of death (set by law, not \"set by the IRS each year\") and does not say \"many families do not reach it\", so that clause is cut; \"far lower\" becomes \"lower\" (matches the FAQ).",
+          "sources": [
+            "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax (IRS Estate tax page, Page Last Reviewed or Updated: 23-Oct-2026: a return is required if the gross estate plus adjusted taxable gifts is more than \"the filing threshold for the year of the decedent's death\", listed in a table by year; no dollar amount is quoted on our page)"
+          ]
+        },
+        {
+          "old": "<td>Large coverage at the lowest cost for a set period</td>",
+          "new": "<td>Large coverage at a lower cost for a set period</td>",
+          "why": "Critique: removes \"the lowest cost\". NAIC: term insurance \"is intended to provide lower cost coverage for a specific period of time\".",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<td>Highest premium per dollar of coverage</td>",
+          "new": "<td>Higher premium than term for the same coverage</td>",
+          "why": "Critique: removes \"Highest\". The same table already says guaranteed universal life has \"a lower premium than whole life\". Checker: the comparison with guaranteed universal life had no source; kept only the term comparison, which TDI and NAIC support (the GUL row already says GUL costs less than whole life).",
+          "sources": [
+            "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance, Life insurance guide, last updated 12/12/2025: term \"Premiums will stay the same for the entire term\"; whole life premiums \"Higher than term life at first, but usually don't go up\"; read Nov 24, 2026)",
+            "https://content.naic.org/insurance-topics/life-insurance (NAIC Life Insurance page, last updated 11/14/2025: indexed policy interest is \"tied to external investment indexes, such as bonds or the S&P 500\"; \"Term insurance is generally more affordable than permanent insurance, particularly in the early policy durations\")"
+          ]
+        },
+        {
+          "old": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, or legal advice, an offer of coverage, or a contract. Definitions of disability, benefit amounts, elimination periods, riders, exclusions, occupation classes, and pricing vary by state, carrier, and individual circumstances. Read your policy for the terms that apply to you.</p>\n      <p style=\"margin-top:10px\">The tax treatment of disability benefits depends on who paid the premium and how it was reported. Consult a qualified tax professional regarding your specific situation. Coverage is subject to medical and financial underwriting and is not guaranteed to be issued.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by the United States government, the Social Security Administration, the federal Medicare program, or any government agency. This coverage is separate from Social Security Disability Insurance (SSDI).</p>",
+          "new": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, legal, or investment advice, an offer of coverage, or a contract. Product availability, benefits, riders, caps, participation rates, and eligibility vary by state, carrier, and individual circumstances. Read your policy for the terms that apply to you.</p>\n      <p style=\"margin-top:10px\">Life insurance guarantees depend on the claims-paying ability of the issuing insurance company. Indexed universal life is life insurance, not a security or a direct investment in any index; caps and participation rates can change, and surrender charges can apply in the early years. Illustrations are projections based on assumptions that are not guaranteed. Policy loans and withdrawals reduce the cash value and death benefit, and a policy that lapses with a loan outstanding may create taxable income. Ownership, trust, and estate tax decisions should be made with your attorney and CPA. Coverage is subject to medical and financial underwriting and is not guaranteed to be issued.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by any government agency or program.</p>",
+          "why": "Critique: the footer disclaimer was the disability template (definitions of disability, tax on disability benefits, SSDI and SSA). Replaced with life and IUL wording: claims-paying, caps/participation, surrender charges, illustrations, loans, underwriting. No Medicare mention on a life page. Checker: \"can apply\" to match the source; Indiana DOI source replaced (no claims-paying sentence there).",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)",
+            "https://content.naic.org/sites/default/files/model-law-585.pdf (NAIC Universal Life Insurance Model Regulation #585, January 2001 edition: Sec. 6 \"A charge may be made at the surrender of the policy\"; Sec. 7.D(6) the policy shall provide \"Any surrender or partial withdrawal charges\"; Sec. 7.F \"lapse shall occur on that date on which the net cash surrender value first equals zero\")",
+            "https://content.naic.org/insurance-topics/life-insurance-illustrations (NAIC Life Insurance Illustrations page, last updated 1/8/2026: AG 49 adopted in 2015 for illustrations of policies tied to an external index; \"Revisions to AG 49-A became effective in 2023 to tighten illustration limits\"; illustrations show guaranteed and non-guaranteed elements)"
+          ]
+        },
+        {
+          "old": "<p>Free consultation · No obligation · No pressure</p>",
+          "new": "<p>No fee for our help · No obligation · No pressure</p>",
+          "why": "Plan item 1 wording: \"free\" becomes \"no fee for our help\".",
+          "sources": []
+        },
+        {
+          "old": "Physicians, executives, and owners often carry far less coverage than their income supports.",
+          "new": "Physicians, executives, and owners may carry less coverage than their income supports.",
+          "why": "Checker: critique sweep of \"far more\" style wording on HNW; \"often carry far less\" is an unsourced claim, softened.",
+          "sources": []
+        },
+        {
+          "old": "A policy can fund a gift far larger than the premiums paid.",
+          "new": "A policy can fund a gift larger than the premiums paid.",
+          "why": "Checker: critique sweep; drops the unsourced \"far\".",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "whole-life-insurance.html",
+      "replacements": [
+        {
+          "old": "<title>Whole Life Insurance: Guaranteed Coverage | Honorbrook</title>",
+          "new": "<title>Whole Life Insurance: Lifetime Coverage | Honorbrook</title>",
+          "why": "Guarantee-style headline in the title becomes \"Lifetime Coverage\" (52 characters, under the 60 limit).",
+          "sources": []
+        },
+        {
+          "old": "<meta property=\"og:title\" content=\"Whole Life Insurance: Guaranteed Coverage | Honorbrook\">",
+          "new": "<meta property=\"og:title\" content=\"Whole Life Insurance: Lifetime Coverage | Honorbrook\">",
+          "why": "Matches the new title.",
+          "sources": []
+        },
+        {
+          "old": "<meta name=\"description\" content=\"Permanent coverage with guaranteed premiums and cash value that builds over time. Compare whole life policies from 90+ carriers, free of charge.\">",
+          "new": "<meta name=\"description\" content=\"Permanent coverage with contractual premium and cash value guarantees that depend on the insurer's claims-paying ability. Compare 90+ carriers.\">",
+          "why": "States that the guarantees are contractual and depend on claims-paying ability; drops \"free of charge\". Keeps \"90+ carriers\" (owner-supplied, STATUS: keep). Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<meta property=\"og:description\" content=\"Permanent coverage with guaranteed premiums and cash value that builds over time. Compare whole life policies from 90+ carriers, free of charge.\">",
+          "new": "<meta property=\"og:description\" content=\"Permanent coverage with contractual premium and cash value guarantees that depend on the insurer's claims-paying ability. Compare 90+ carriers.\">",
+          "why": "Matches the new meta description. Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<meta name=\"twitter:title\" content=\"Whole Life Insurance — Guaranteed Coverage &amp; Cash Value\">",
+          "new": "<meta name=\"twitter:title\" content=\"Whole Life Insurance: Lifetime Coverage &amp; Cash Value\">",
+          "why": "Guarantee-style social headline reworded.",
+          "sources": []
+        },
+        {
+          "old": "<meta name=\"twitter:description\" content=\"A guaranteed death benefit, guaranteed cash value growth, and level premiums for life.\">",
+          "new": "<meta name=\"twitter:description\" content=\"Contractual guarantees on the death benefit, cash value and premium, backed by the insurer&#x27;s claims-paying ability.\">",
+          "why": "States that the guarantees are contractual and depend on the insurer. Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "{\"@type\":\"Question\",\"name\":\"What is whole life insurance?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Whole life is permanent life insurance with three core guarantees: a death benefit that never expires, cash value that grows at a guaranteed minimum rate, and a premium that never increases. You pay more than term insurance for the same death benefit because you are buying permanence and an accumulating asset rather than temporary protection.\"}},",
+          "new": "{\"@type\":\"Question\",\"name\":\"What is whole life insurance?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Permanent life insurance with three contractual guarantees: a death benefit that lasts for life as long as premiums are paid, cash value that grows at a guaranteed minimum rate, and a level premium. These guarantees depend on the claims-paying ability of the insurer. You pay more than term for the same death benefit because you're buying lifetime coverage and cash value rather than temporary protection.\"}},",
+          "why": "FAQPage JSON-LD now matches the visible answer: \"never expires\" and \"never increases\" become contractual guarantees that depend on claims-paying ability. Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "{\"@type\":\"Question\",\"name\":\"Are whole life dividends guaranteed?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. Dividends are paid at the discretion of the insurance company on participating policies and are not guaranteed, even at carriers with long histories of paying them. Any illustration showing dividends is showing a projection, not a promise. The guaranteed column of the illustration shows what the carrier must deliver regardless, and that is the number to plan around.\"}},",
+          "new": "{\"@type\":\"Question\",\"name\":\"Are whole life dividends guaranteed?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. Dividends are paid at the insurance company's discretion on participating policies and are not guaranteed, even at carriers with long histories of paying them. Any illustration showing dividends is showing a projection. The guaranteed column shows what the carrier must deliver regardless, and that's the number to plan around.\"}},",
+          "why": "FAQPage JSON-LD now matches the visible answer word for word.",
+          "sources": []
+        },
+        {
+          "old": "{\"@type\":\"Question\",\"name\":\"Is whole life insurance worth it?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"It depends entirely on whether you need permanent coverage. If your need is temporary, such as replacing income while children are at home, term life provides far more death benefit per dollar and whole life is an expensive way to solve that problem. If your need genuinely never ends, or you want guaranteed lifetime coverage plus an asset with predictable growth, whole life earns its cost. We will tell you honestly which case you are in.\"}},",
+          "new": "{\"@type\":\"Question\",\"name\":\"Is whole life insurance worth it?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"It depends on whether you need permanent coverage. If your need is temporary, such as replacing income while children are home, term life gives more death benefit for each premium dollar, and whole life is an expensive way to solve that. If your need lasts for life, or you want lifetime coverage with contractual guarantees plus predictable cash value, it can earn its cost. We'll tell you honestly which case you're in.\"}},",
+          "why": "FAQPage JSON-LD now matches the visible answer: removes \"far more\" and \"never ends\".",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://content.naic.org/insurance-topics/life-insurance (NAIC Life Insurance page, last updated 11/14/2025: indexed policy interest is \"tied to external investment indexes, such as bonds or the S&P 500\"; \"Term insurance is generally more affordable than permanent insurance, particularly in the early policy durations\")"
+          ]
+        },
+        {
+          "old": "<div class=\"aep-banner sans\"><strong>Guaranteed coverage, guaranteed growth, level premiums.</strong> See if it fits — <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "new": "<div class=\"aep-banner sans\"><strong>Whole life guarantees are written into the contract.</strong> They depend on the insurer&rsquo;s claims-paying ability. <a href=\"https://www.planenroll.com/?purl=Luay-Sadqi\" target=\"_blank\" rel=\"noopener\">Book a Life review</a> and choose Life as the meeting type, or call <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "why": "Critique: the banner \"Guaranteed coverage, guaranteed growth\" now says the guarantees are contractual and depend on claims-paying ability; adds the PlanEnroll link with \"choose Life\". Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<h1>Whole life: coverage that comes with <em>certainty</em></h1>",
+          "new": "<h1>Whole life: lifetime coverage with <em>contractual</em> guarantees</h1>",
+          "why": "Guarantee-style headline (\"certainty\") now says the guarantees are contractual.",
+          "sources": []
+        },
+        {
+          "old": "<p class=\"lead\">Whole life is the conservative end of permanent insurance. The death benefit is guaranteed, the cash value growth is guaranteed, and the premium never changes. You pay more for that certainty — here's an honest look at when it's worth it and when it isn't.</p>",
+          "new": "<p class=\"lead\">Whole life is the conservative end of permanent insurance. The contract guarantees the death benefit, a minimum cash value growth rate and a level premium, and those guarantees depend on the claims-paying ability of the insurance company. You pay more for that predictability. Here&rsquo;s an honest look at when it&rsquo;s worth it and when it isn&rsquo;t.</p>",
+          "why": "Hero lead: \"guaranteed ... guaranteed ... never changes\" now states the guarantees are contractual and depend on the insurer. Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "NPN 21370662 · Updated August 2026</p>",
+          "new": "NPN 21370662 · Updated November 2026</p>",
+          "why": "Visible review date updated with this content change.",
+          "sources": []
+        },
+        {
+          "old": "<p>Whole life is permanent life insurance built on three guarantees, and those guarantees are the entire value proposition:</p>",
+          "new": "<p>Whole life is permanent life insurance built on three contractual guarantees. They are the main reason to buy it, and they are only as strong as the insurance company that makes them:</p>",
+          "why": "States the guarantees are contractual and depend on the insurer. Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<li><strong>A death benefit that never expires</strong> — as long as premiums are paid, coverage lasts your whole life.",
+          "new": "<li><strong>A death benefit that lasts for life</strong> — as long as premiums are paid, coverage lasts your whole life.",
+          "why": "Removes \"never\" from a guarantee-style bold heading.",
+          "sources": []
+        },
+        {
+          "old": "<li><strong>A premium that never increases</strong> — the amount you're quoted at 45 is the amount you pay at 75.",
+          "new": "<li><strong>A level premium set in the contract</strong> — on a level-premium policy, the amount you're quoted at 45 is the amount you pay at 75.",
+          "why": "Removes \"never\" from a guarantee-style bold heading and hedges to level-premium policies.",
+          "sources": []
+        },
+        {
+          "old": "Whether that's a good trade depends entirely on whether you actually need coverage that never ends.</p>",
+          "new": "Whether that's a good trade depends entirely on whether you actually need coverage for life.</p>",
+          "why": "Removes \"never\".",
+          "sources": []
+        },
+        {
+          "old": "and evaluating it on a five-year window will always make it look bad.",
+          "new": "and judging it on a five-year window will usually make it look bad.",
+          "why": "Removes \"always\".",
+          "sources": []
+        },
+        {
+          "old": "or — most commonly and usually most effectively — used to purchase paid-up additions,",
+          "new": "or used to purchase paid-up additions,",
+          "why": "Removes an unsourced superlative claim (\"most commonly and usually most effectively\").",
+          "sources": []
+        },
+        {
+          "old": "<tr><td>Relative cost</td><td>Highest</td><td>Lower than whole life</td><td>Varies with design</td><td>Lowest</td></tr>",
+          "new": "<tr><td>Relative cost</td><td>Higher premium for the same coverage</td><td>Lower than whole life</td><td>Varies with design</td><td>Lower, for a set period</td></tr>",
+          "why": "Removes \"Highest\" and \"Lowest\" (owner rule, same fix the critique asked for on the HNW table). NAIC: term is \"lower cost coverage for a specific period of time\".",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://www.tdi.texas.gov/pubs/consumer/cb018.html (Texas Department of Insurance, Life insurance guide, last updated 12/12/2025: term \"Premiums will stay the same for the entire term\"; whole life premiums \"Higher than term life at first, but usually don't go up\"; read Nov 24, 2026)",
+            "https://content.naic.org/insurance-topics/life-insurance (NAIC Life Insurance page, last updated 11/14/2025: indexed policy interest is \"tied to external investment indexes, such as bonds or the S&P 500\"; \"Term insurance is generally more affordable than permanent insurance, particularly in the early policy durations\")"
+          ]
+        },
+        {
+          "old": "<tr><td>Best for</td><td>Certainty plus a living asset</td><td>Max guaranteed benefit per dollar</td>",
+          "new": "<tr><td>Can fit</td><td>Predictability plus cash value</td><td>Death benefit focus, little cash value</td>",
+          "why": "Removes \"Best\", \"Max\" and \"Certainty\" (superlative and guarantee-style wording). Checker: \"A lifetime death benefit\" conflicted with the same table's \"Guaranteed to a set age\" for guaranteed UL; now \"Death benefit focus, little cash value\".",
+          "sources": []
+        },
+        {
+          "old": "<li><strong>You want guaranteed lifetime coverage and value predictability over upside.</strong>",
+          "new": "<li><strong>You want lifetime coverage with contractual guarantees and predictable value over upside.</strong>",
+          "why": "Guarantee-style bold heading now says the guarantees are contractual.",
+          "sources": []
+        },
+        {
+          "old": "<li><strong>Estate planning with a liquidity need</strong> — heirs may need cash to settle taxes or expenses without a forced sale of property or a business.</li>",
+          "new": "<li><strong>Estate planning with a liquidity need</strong> — heirs may need cash to settle taxes or expenses without a forced sale of property or a business. See <a href=\"/high-net-worth-life-insurance\">life insurance planning for high-net-worth families</a>.</li>",
+          "why": "Plan item 8: in-body link to /high-net-worth-life-insurance.",
+          "sources": []
+        },
+        {
+          "old": "gives you dramatically more protection per dollar,",
+          "new": "gives you more protection for each premium dollar,",
+          "why": "Removes \"dramatically\" (overstatement).",
+          "sources": []
+        },
+        {
+          "old": "That tradeoff is the most common and most costly mistake we see.</p>",
+          "new": "That tradeoff can be a costly mistake.</p>",
+          "why": "Removes \"most common and most costly\" (superlatives). Checker: \"a common ... mistake\" is an unsourced frequency claim; now \"can be a costly mistake\".",
+          "sources": []
+        },
+        {
+          "old": "<a class=\"btn-primary sans\" href=\"/#contact\">Get my free policy review</a>",
+          "new": "<a class=\"btn-primary sans\" href=\"#quote\">Get my whole life quote</a>",
+          "why": "Plan item 1 pattern: the button went to the Medicare-led homepage form; it now goes to the page's own quote form (#quote) and drops \"free\".",
+          "sources": []
+        },
+        {
+          "old": "Whole life is where the gap between a good recommendation and a bad one is widest,",
+          "new": "Whole life is where the gap between a good recommendation and a bad one is wide,",
+          "why": "Removes \"widest\" (superlative).",
+          "sources": []
+        },
+        {
+          "old": "Our first question is never which whole life policy",
+          "new": "Our first question is not which whole life policy",
+          "why": "Removes \"never\" (owner rule sweep); same meaning.",
+          "sources": []
+        },
+        {
+          "old": "Our guidance is free, we're licensed in 16 states and DC, and everything can be handled by phone.",
+          "new": "There is no fee for our help. We're licensed in 16 states and DC, and everything can be handled by phone.",
+          "why": "Plan item 1 wording: \"free\" becomes \"no fee for our help\".",
+          "sources": []
+        },
+        {
+          "old": "that review is free whether or not you bought it from us.</p>",
+          "new": "there is no fee for that review, whether or not you bought it from us.</p>",
+          "why": "Plan item 1 wording: drops \"free\".",
+          "sources": []
+        },
+        {
+          "old": "<details><summary>What is whole life insurance?</summary><div class=\"a\">Permanent life insurance with three core guarantees: a death benefit that never expires, cash value that grows at a guaranteed minimum rate, and a premium that never increases. You pay more than term for the same death benefit because you're buying permanence and an accumulating asset rather than temporary protection.</div></details>",
+          "new": "<details><summary>What is whole life insurance?</summary><div class=\"a\">Permanent life insurance with three contractual guarantees: a death benefit that lasts for life as long as premiums are paid, cash value that grows at a guaranteed minimum rate, and a level premium. These guarantees depend on the claims-paying ability of the insurer. You pay more than term for the same death benefit because you're buying lifetime coverage and cash value rather than temporary protection.</div></details>",
+          "why": "Visible FAQ: \"never expires\" / \"never increases\" become contractual guarantees tied to claims-paying ability; JSON-LD changed to the same text. Checker: Indiana DOI source replaced (it has no claims-paying sentence) by the Florida DFS life guide and SEC Investor.gov.",
+          "sources": [
+            "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/consumer-guides/life-insurance-guide.pdf (Florida Department of Financial Services, Life Insurance: A Guide for Consumers, revised February 2017: \"the insurance company must have the long-term financial strength to remain in business for decades into the future and pay claims\"; \"Due to surrender charges, if you surrender your policy during its early years ... you might receive much less than, or none of what you paid into the policy\"; \"As you get older, the cost of insurance rises\"; compare \"the surrender charges for the length of years applicable\"; read Nov 24, 2026)",
+            "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-investor-bulletin-indexed-annuities (SEC Investor.gov, Updated Investor Bulletin: Indexed Annuities, July 31, 2020: \"all amounts payable are subject to the ability of the insurance company to pay\"; read Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "<details><summary>Are dividends guaranteed?</summary><div class=\"a\">No. Dividends are paid at the insurance company's discretion on participating policies and are never guaranteed, even at carriers with long histories of paying them. Any illustration showing dividends is showing a projection. The guaranteed column shows what the carrier must deliver regardless — that's the number to plan around.</div></details>",
+          "new": "<details><summary>Are dividends guaranteed?</summary><div class=\"a\">No. Dividends are paid at the insurance company's discretion on participating policies and are not guaranteed, even at carriers with long histories of paying them. Any illustration showing dividends is showing a projection. The guaranteed column shows what the carrier must deliver regardless, and that's the number to plan around.</div></details>",
+          "why": "Visible FAQ: \"never guaranteed\" becomes \"not guaranteed\" so the page and JSON-LD match word for word.",
+          "sources": []
+        },
+        {
+          "old": "<details><summary>Is whole life worth it?</summary><div class=\"a\">It depends on whether you need permanent coverage. If your need is temporary — replacing income while children are home — term life gives far more death benefit per dollar and whole life is an expensive way to solve that. If your need genuinely never ends, or you want guaranteed lifetime coverage plus a predictable asset, it earns its cost. We'll tell you honestly which case you're in.</div></details>",
+          "new": "<details><summary>Is whole life worth it?</summary><div class=\"a\">It depends on whether you need permanent coverage. If your need is temporary, such as replacing income while children are home, term life gives more death benefit for each premium dollar, and whole life is an expensive way to solve that. If your need lasts for life, or you want lifetime coverage with contractual guarantees plus predictable cash value, it can earn its cost. We'll tell you honestly which case you're in.</div></details>",
+          "why": "Visible FAQ: removes \"far more\" and \"never ends\"; JSON-LD changed to the same text.",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026 edition: \"Term insurance is intended to provide lower cost coverage for a specific period of time\"; \"What part of the premium or policy value isn't guaranteed?\"; \"The insurance company can provide policy statements and illustrations to help with this review\"; read Nov 24, 2026)",
+            "https://content.naic.org/insurance-topics/life-insurance (NAIC Life Insurance page, last updated 11/14/2025: indexed policy interest is \"tied to external investment indexes, such as bonds or the S&P 500\"; \"Term insurance is generally more affordable than permanent insurance, particularly in the early policy durations\")"
+          ]
+        },
+        {
+          "old": "<p>Free consultation · No obligation · No pressure</p>",
+          "new": "<p>No fee for our help · No obligation · No pressure</p>",
+          "why": "Plan item 1 wording: \"free\" becomes \"no fee for our help\".",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

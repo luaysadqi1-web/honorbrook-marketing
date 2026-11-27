@@ -1,0 +1,176 @@
+{
+  "group": "veterans",
+  "pages": [
+    {
+      "page": "veterans-life-insurance.html",
+      "replacements": [
+        {
+          "old": "<p class=\"lead\">Veterans have choices most people do not: coverage through the VA, private coverage, or both. Which costs less depends on your age, your health, and how long you need it. We lay the options side by side.</p>",
+          "new": "<p class=\"lead\">Veterans can have life insurance through the VA, a private policy, or both. Which costs less depends on your age, your health, and how long you need it. We lay the options side by side.</p>",
+          "why": "Checker addition: owner rule bans 'most'; 'choices most people do not' is also an unsourced claim. Same meaning without it.",
+          "sources": []
+        },
+        {
+          "old": "<div class=\"aep-banner sans\"><strong>Your paycheck is the asset everything else depends on.</strong> Free, no-pressure review — <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "new": "<div class=\"aep-banner sans\"><strong>An independent agency, not the VA.</strong> We compare private life insurance with VGLI and VALife — <a href=\"tel:+13016158289\">(301) 615-8289</a>.</div>",
+          "why": "Plan item 6: the top banner was the disability-insurance message from the new-page template, with 'Free'. Replaced with a life message that also states plainly that Honorbrook is not the VA (no VA affiliation; no 'free' claim, per the active-duty sales rule 14VAC5-420 and owner rules).",
+          "sources": []
+        },
+        {
+          "old": "<p>The Department of Veterans Affairs runs several life insurance programs. The three most veterans ask about:</p>",
+          "new": "<p>The Department of Veterans Affairs runs several life insurance programs, including these three. The deadline table below covers the others.</p>",
+          "why": "Checker addition: 'The three most veterans ask about' uses the banned word 'most' and is an unsourced claim about what veterans ask. The timeline table added above covers FSGLI, S-DVI and VMLI.",
+          "sources": [
+            "https://www.va.gov/life-insurance/ (updated Nov 24, 2026; checked Nov 24, 2026): lists VA life insurance options SGLI, FSGLI, VGLI, VALife, S-DVI, VMLI"
+          ]
+        },
+        {
+          "old": "<li><strong>VGLI</strong> (Veterans' Group Life Insurance) lets you keep term coverage after you separate, from $10,000 up to $500,000 depending on how much SGLI you carried. There is a deadline to apply after separation, and applying early can let you skip health questions. VGLI premiums are set by age band, so they rise as you get older.</li>",
+          "new": "<li><strong>VGLI</strong> (Veterans' Group Life Insurance) lets you keep term coverage after you separate, from $10,000 up to the amount of SGLI you had, with a $500,000 limit. The monthly cost depends only on your age and the amount, and it goes up with each older age band. Coverage lasts for life as long as you pay the premiums. The deadlines to apply are in the table below.</li>",
+          "why": "Plan item 6: the vague 'There is a deadline' and 'applying early can let you skip health questions' are replaced by VA's own wording; the exact 240-day and 1 year 120 day dates move to the new timeline table.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026; checked Nov 24, 2026): 'between $10,000 and $500,000', 'up to the amount you had through SGLI', 'Your monthly cost depends only on your age', 'Your coverage lasts your whole life as long as you keep paying your premiums', rate table age bands rise"
+          ]
+        },
+        {
+          "old": "<li><strong>VALife</strong> is guaranteed-acceptance whole life of up to $40,000, in $10,000 steps, for veterans age 80 or under with a service-connected disability rating. There are no health questions. Full coverage starts after a two-year waiting period.</li>",
+          "new": "<li><strong>VALife</strong> is guaranteed-acceptance whole life of up to $40,000, in $10,000 steps, for veterans age 80 or under with a service-connected disability rating, even 0%. You do not need to prove good health. Full coverage starts 2 years after you apply. If death happens during that wait, your beneficiaries get the premiums paid plus interest.</li>",
+          "why": "Plan item 6: VA wording ('won't need to prove you're in good health' rather than 'no health questions'), adds the 0% rating rule and what is paid during the 2-year wait.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/valife/ (updated Oct 13, 2026; checked Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "    <h2>When private coverage is worth comparing</h2>",
+          "new": "    <h2>VA deadlines after you leave the military</h2>\n    <p>These dates come from VA.gov and can change, so check the linked VA page before you act. Still serving? Keep your SGLI. The dates below count from the day you leave the military.</p>\n    <div class=\"table-wrap\">\n      <table class=\"compare\">\n        <thead><tr><th>When</th><th>What VA says</th><th>Source</th></tr></thead>\n        <tbody>\n          <tr><td>First 120 days after you leave</td><td>SGLI coverage continues for 120 days after you leave the military (up to 2 years if you apply and qualify for the SGLI Disability Extension). In this window you can also convert SGLI to a permanent individual policy without proof of good health.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/sgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: SGLI</a><br>Updated Nov 19, 2026; checked November 2026</td></tr>\n          <tr><td>Within 240 days of leaving</td><td>Apply for VGLI and you do not need to prove you are in good health.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/vgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: VGLI</a><br>Updated Oct 13, 2026; checked November 2026</td></tr>\n          <tr><td>240 days to 1 year and 120 days</td><td>You can still apply for VGLI, but you need to send evidence that you are in good health. VA's deadline to apply is 1 year and 120 days after you leave.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/vgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: VGLI</a><br>Updated Oct 13, 2026; checked November 2026</td></tr>\n          <tr><td>Nov 1, 2026 to Jan 31, 2027</td><td>VGLI premium holiday: if you are an eligible veteran covered by VGLI, VA says you do not need to pay VGLI premiums from November 1, 2026, through January 31, 2027, and your coverage continues. VA&rsquo;s VGLI page explains who is eligible.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/vgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: VGLI</a><br>Updated Oct 13, 2026; checked November 2026</td></tr>\n          <tr><td>Within 120 days of separation, divorce or the member's death</td><td>A spouse can convert FSGLI spouse coverage to a permanent individual policy, such as whole life. Coverage for a child cannot be converted.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/fsgli/\" rel=\"noopener\" target=\"_blank\">VA.gov: FSGLI</a><br>Updated Oct 14, 2026; checked November 2026</td></tr>\n          <tr><td>Any time after a service-connected rating (age 80 or younger)</td><td>VALife is open to veterans 80 or younger with a service-connected rating, even 0%. There is no time limit to apply after the rating. Full coverage starts 2 years after you apply.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/valife/\" rel=\"noopener\" target=\"_blank\">VA.gov: VALife</a><br>Updated Oct 13, 2026; checked November 2026</td></tr>\n          <tr><td>If you have S-DVI</td><td>S-DVI stopped taking new applications after December 31, 2022. If you have it, you can keep it. If you apply for VALife on or after January 1, 2026, your S-DVI ends the day VA approves VALife, and you will not have full coverage during VALife's 2-year wait. S-DVI premium waivers do not carry over to VALife.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/s-dvi/\" rel=\"noopener\" target=\"_blank\">VA.gov: S-DVI</a><br>Updated Nov 19, 2026; checked November 2026</td></tr>\n          <tr><td>If VA gave you a Specially Adapted Housing grant</td><td>VMLI is mortgage life insurance of up to $200,000, paid to your lender, for veterans with a severe service-connected disability who hold title to the home, have a mortgage on it and are under 70.</td><td><a href=\"https://www.va.gov/life-insurance/options-eligibility/vmli/\" rel=\"noopener\" target=\"_blank\">VA.gov: VMLI</a><br>Updated Jun 4, 2025; checked November 2026</td></tr>\n        </tbody>\n      </table>\n    </div>\n\n    <h2>When private coverage is worth comparing</h2>",
+          "why": "Plan item 6: adds VA's exact deadlines as a timeline table (table.compare inside div.table-wrap, the site's existing markup). Each row links the va.gov page it came from with its updated date and 'checked November 2026'. Re-read every page on Nov 24, 2026. The VGLI premium holiday is still on va.gov today and its end date (Jan 31, 2027) is in the row; the row must be removed in February 2027. 'Keep your SGLI' keeps the page from ever suggesting dropping SGLI before separation. VA's SGLI page calls the 120 days 'free coverage'; the row avoids the word 'free'. No VA phone numbers. Checker (Nov 24, 2026): re-read all six va.gov pages; dates and wording match. Changed: intro no longer says VA itself sets the dates (several are set by law); SGLI 2-year extension now says you must apply and qualify (VA: SGLI Disability Extension needs an application); premium holiday now says 'eligible veteran covered by VGLI' as VA does; VGLI deadline sentence reordered; VALife row notes age 80 or younger; S-DVI row adds VA's 'if you already have S-DVI, you can keep it'. Remove the premium holiday row in February 2027.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/sgli/ (updated Nov 19, 2026; checked Nov 24, 2026): '120 days of free coverage from the date you leave', 'Extension of free coverage for up to 2 years (if you're totally disabled)' via the SGLI Disability Extension application (SGLV 8715), convert to a permanent individual policy 'within 120 days from your date of discharge without proof of good health'",
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026; checked Nov 24, 2026): 'apply for VGLI within 1 year and 120 days of leaving', 'within 240 days ... you won't need to prove you're in good health', 'after the 240-day period, you'll need to submit evidence that you're in good health', 'If you're an eligible Veteran covered under VGLI, you don't need to pay premiums from November 1, 2026, through January 31, 2027. Your coverage will continue during this time (called the VGLI premium holiday)'",
+            "https://www.va.gov/life-insurance/options-eligibility/fsgli/ (updated Oct 14, 2026; checked Nov 24, 2026): convert spousal FSGLI to a permanent, individual policy (such as whole life) within 120 days of separation, divorce or the member's death; child coverage can't be converted",
+            "https://www.va.gov/life-insurance/options-eligibility/valife/ (updated Oct 13, 2026; checked Nov 24, 2026): rating 'even if your rating is 0%', 'no time limit to apply after getting your disability rating', full coverage '2 years after you apply'",
+            "https://www.va.gov/life-insurance/options-eligibility/s-dvi/ (updated Nov 19, 2026; checked Nov 24, 2026): no new applications after Dec 31, 2022, 'if you already have S-DVI, you can keep it'; VALife applied for on or after Jan 1, 2026 ends S-DVI 'the day we approve your VALife application'; 'you won't have full coverage during this time'; waivers do not transfer",
+            "https://www.va.gov/life-insurance/options-eligibility/vmli/ (updated Jun 4, 2025; checked Nov 24, 2026): up to $200,000 paid to the lender; severe service-connected disability, SAH grant, title, mortgage, under 70"
+          ]
+        },
+        {
+          "old": "<li><strong>You are healthy.</strong> VGLI charges every veteran in an age band the same rate. A healthy veteran can often qualify for private term life at a lower locked-in price, especially past age 50.</li>",
+          "new": "<li><strong>You are in good health.</strong> VGLI's monthly cost depends only on your age and the amount, so your health does not change it. A private policy is priced on your health, age and tobacco use, so it can come out higher or lower. We quote both so you can compare.</li>",
+          "why": "Plan item 6, unsourced claim 1: 'can often qualify for private term life at a lower locked-in price, especially past age 50' has no source (VA's own compare page does not say private costs less). Replaced with VA's pricing rule and neutral compare wording.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026; checked Nov 24, 2026): 'Your monthly cost depends only on your age'; 'We don't charge more based on your gender or if you use tobacco'",
+            "https://www.va.gov/resources/life-insurance-if-you-have-preexisting-conditions/ (updated Nov 3, 2026; checked Nov 24, 2026): private insurers usually need proof of good health and 'may charge you more for coverage' or deny it"
+          ]
+        },
+        {
+          "old": "<li><strong>You want a level premium.</strong> Private term locks the price for 10 to 30 years. VGLI steps up every five years.</li>",
+          "new": "<li><strong>You want a level premium.</strong> Level term is built to keep the same premium for the term you choose, such as 10, 20 or 30 years. Check the policy for what is guaranteed. VGLI's rate goes up each time you move into an older age band on VA's rate table.</li>",
+          "why": "Hedges the certainty wording ('locks the price'), as the plan does for level-premium lines elsewhere, and ties the VGLI step-up to VA's published 5-year age bands. Checker: VA's bands are 29 and younger, then 5-year bands to 75-79, then 80 and older, so '5-year age band' was dropped.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026; checked Nov 24, 2026): rate table bands 29 and younger, 30-34, 35-39 ... 75-79, 80 and older, rates as of July 1, 2025, rising with each band"
+          ]
+        },
+        {
+          "old": "<li><strong>You want coverage for a spouse.</strong> Spouse coverage under the VA programs ends or must be converted after separation.</li>",
+          "new": "<li><strong>You want coverage for a spouse.</strong> VGLI and VALife insure the veteran. A spouse with FSGLI coverage can convert it to a permanent individual policy within 120 days of your separation. A private policy can cover a spouse in their own name.</li>",
+          "why": "Uses VA's FSGLI wording (120-day conversion to a permanent individual policy) instead of the loose 'ends or must be converted'.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/fsgli/ (updated Oct 14, 2026; checked Nov 24, 2026)",
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026): 'Who's covered' lists Veterans and Former service members",
+            "https://www.va.gov/life-insurance/options-eligibility/valife/ (updated Oct 13, 2026)"
+          ]
+        },
+        {
+          "old": "<strong>When VA coverage is the better choice:</strong> If you have serious health conditions, VGLI inside its no-health-question window, or VALife if you have a service-connected rating, may be coverage you could not buy privately at any price. We will tell you when that is the case.",
+          "new": "<strong>When VA coverage may fit better:</strong> If you have serious health conditions, VGLI applied for within 240 days of leaving does not ask you to prove good health, and VALife accepts veterans 80 or younger with a service-connected rating. VA warns that if you wait and a private company turns you down, you may miss the 240-day window (<a href=\"https://www.va.gov/resources/life-insurance-if-you-have-preexisting-conditions/\" rel=\"noopener\" target=\"_blank\">VA.gov</a>, updated Nov 3, 2026). We will tell you when VA coverage looks like the better fit.",
+          "why": "Plan item 6, unsourced claim 'could not buy privately at any price'. Replaced with VA's own facts and VA's warning about the 240-day window.",
+          "sources": [
+            "https://www.va.gov/resources/life-insurance-if-you-have-preexisting-conditions/ (updated Nov 3, 2026; checked Nov 24, 2026): 'If you wait and a private insurance company denies your application, you may miss the VGLI 240-day no health review period.'",
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026)",
+            "https://www.va.gov/life-insurance/options-eligibility/valife/ (updated Oct 13, 2026): 'guaranteed acceptance whole life insurance'"
+          ]
+        },
+        {
+          "old": "<p>VA burial benefits help, but they rarely cover the full cost of a funeral. Many veterans add a small <a href=\"/final-expense-life-insurance\">final expense policy</a> so their family is not left with the balance. It can sit alongside VALife.</p>",
+          "new": "<p>VA burial allowances can help pay some burial, funeral and plot costs when a veteran meets VA&rsquo;s rules. VA sets who qualifies and how much it pays; see <a href=\"https://www.va.gov/burials-memorials/veterans-burial-allowance/\" rel=\"noopener\" target=\"_blank\">VA.gov burial allowances</a> (updated Oct 30, 2026). If your family wants more set aside, a small <a href=\"/final-expense-life-insurance\">final expense policy</a> can sit alongside VA burial benefits and VALife. Guaranteed-issue final expense policies have a waiting period or a graded benefit in the first years, and VALife has a 2-year wait before full coverage. We can quote final expense so you can compare it with what VA offers.</p>",
+          "why": "Plan item 6, unsourced claims 'rarely cover the full cost of a funeral' and 'Many veterans add...'. Replaced with VA's description (no amounts restated), the owner's guaranteed-issue waiting-period / graded-benefit rule, and neutral compare wording. Checker: 'the amounts depend on the date of death' was incomplete (VA's page also has a separate service-connected table and does not say which applies when), so the line now says only that VA sets who qualifies and how much.",
+          "sources": [
+            "https://www.va.gov/burials-memorials/veterans-burial-allowance/ (updated Oct 30, 2026; checked Nov 24, 2026): allowances 'help cover some burial, funeral, and plot costs'; eligibility conditions; amounts by date of death",
+            "https://www.va.gov/life-insurance/options-eligibility/valife/ (updated Oct 13, 2026)"
+          ]
+        },
+        {
+          "old": "<p>Health coverage is a separate question from life insurance, and the rules for combining VA care or TRICARE For Life with Medicare are easy to get wrong. Start with our <a href=\"/turning-65\">turning 65 guide</a> and call us before you enroll in anything.</p>",
+          "new": "<p>Health coverage is a separate question from life insurance, and this page covers life insurance only. VA&rsquo;s page on <a href=\"https://www.va.gov/health-care/about-va-health-benefits/va-health-care-and-other-insurance/\" rel=\"noopener\" target=\"_blank\">VA health care and other insurance</a> (updated Nov 13, 2026) answers questions such as whether to sign up for Medicare at 65 when you have VA care.</p>",
+          "why": "Owner rule: no Medicare sales on life pages. 'call us before you enroll in anything' invited a Medicare sales call from a life page, and /turning-65 does not cover VA care or TRICARE (checked: no TRICARE or veteran text in its body). Points to VA's own page instead. The H2 is unchanged.",
+          "sources": [
+            "https://www.va.gov/health-care/about-va-health-benefits/va-health-care-and-other-insurance/ (updated Nov 13, 2026; checked Nov 24, 2026): 'should I still sign up for Medicare when I turn 65?'"
+          ]
+        },
+        {
+          "old": "<details><summary>Should I keep VGLI or switch to private life insurance?</summary><div class=\"a\">It depends on your health and age. Healthy veterans often find private term life costs less over time because VGLI rates rise every five years. Veterans with health conditions are often better off keeping VGLI. We compare both.</div></details>",
+          "new": "<details><summary>Should I keep VGLI or switch to private life insurance?</summary><div class=\"a\">It depends on your age, your health and how long you need coverage. VGLI's monthly cost depends only on your age and the amount, and it goes up with each older age band. A private policy is priced on your health, age and tobacco use, so it can come out higher or lower. Keep your current coverage until any new policy is approved and in force. We quote both so you can compare.</div></details>",
+          "why": "Plan item 6, unsourced claims 'Healthy veterans often find private term life costs less' and 'often better off keeping VGLI'. Replaced with VA's pricing rule, a keep-until-in-force caution and neutral compare wording.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026; checked Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "\"text\": \"It depends on your health and age. Healthy veterans often find private term life costs less over time because VGLI rates rise every five years. Veterans with health conditions are often better off keeping VGLI. We compare both.\"",
+          "new": "\"text\": \"It depends on your age, your health and how long you need coverage. VGLI's monthly cost depends only on your age and the amount, and it goes up with each older age band. A private policy is priced on your health, age and tobacco use, so it can come out higher or lower. Keep your current coverage until any new policy is approved and in force. We quote both so you can compare.\"",
+          "why": "FAQPage JSON-LD text matched to the new visible FAQ 1 answer.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026)"
+          ]
+        },
+        {
+          "old": "<details><summary>Can I have VA life insurance and a private policy at the same time?</summary><div class=\"a\">Yes. Many veterans keep VA coverage and add private term, whole life, or final expense coverage on top.</div></details>",
+          "new": "<details><summary>Can I have VA life insurance and a private policy at the same time?</summary><div class=\"a\">Yes. VA's own page on life insurance with preexisting conditions lists applying for both VGLI and a private policy as one option. We can quote term, whole life or final expense coverage to sit alongside what you have from VA.</div></details>",
+          "why": "Plan item 6, unsourced 'Many veterans keep VA coverage and add...'. Replaced with VA's own statement.",
+          "sources": [
+            "https://www.va.gov/resources/life-insurance-if-you-have-preexisting-conditions/ (updated Nov 3, 2026; checked Nov 24, 2026): 'Apply for both VGLI and a private insurance policy'"
+          ]
+        },
+        {
+          "old": "\"text\": \"Yes. Many veterans keep VA coverage and add private term, whole life, or final expense coverage on top.\"",
+          "new": "\"text\": \"Yes. VA's own page on life insurance with preexisting conditions lists applying for both VGLI and a private policy as one option. We can quote term, whole life or final expense coverage to sit alongside what you have from VA.\"",
+          "why": "FAQPage JSON-LD text matched to the new visible FAQ 3 answer.",
+          "sources": [
+            "https://www.va.gov/resources/life-insurance-if-you-have-preexisting-conditions/ (updated Nov 3, 2026)"
+          ]
+        },
+        {
+          "old": "<details><summary>Is Honorbrook affiliated with the VA?</summary>",
+          "new": "<details><summary>How long do I have to apply for VGLI after I leave the military?</summary><div class=\"a\">VA says to apply within 1 year and 120 days of leaving. If you apply within 240 days, you do not need to prove you are in good health. After 240 days, you need to send evidence that you are in good health.</div></details>\n    <details><summary>Is Honorbrook affiliated with the VA?</summary>",
+          "why": "New FAQ for the 'how long to convert sgli to vgli' / 'sgli after separation' searches listed in veterans.md, using VA's exact wording. Added before the affiliation question.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026; checked Nov 24, 2026)"
+          ]
+        },
+        {
+          "old": "    {\n      \"@type\": \"Question\",\n      \"name\": \"Is Honorbrook affiliated with the VA?\",",
+          "new": "    {\n      \"@type\": \"Question\",\n      \"name\": \"How long do I have to apply for VGLI after I leave the military?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"VA says to apply within 1 year and 120 days of leaving. If you apply within 240 days, you do not need to prove you are in good health. After 240 days, you need to send evidence that you are in good health.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Is Honorbrook affiliated with the VA?\",",
+          "why": "FAQPage JSON-LD entry for the new visible VGLI deadline FAQ.",
+          "sources": [
+            "https://www.va.gov/life-insurance/options-eligibility/vgli/ (updated Oct 13, 2026)"
+          ]
+        },
+        {
+          "old": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, or legal advice, an offer of coverage, or a contract. Definitions of disability, benefit amounts, elimination periods, riders, exclusions, occupation classes, and pricing vary by state, carrier, and individual circumstances. Read your policy for the terms that apply to you.</p>\n      <p style=\"margin-top:10px\">The tax treatment of disability benefits depends on who paid the premium and how it was reported. Consult a qualified tax professional regarding your specific situation. Coverage is subject to medical and financial underwriting and is not guaranteed to be issued.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by the United States government, the Social Security Administration, the federal Medicare program, or any government agency. This coverage is separate from Social Security Disability Insurance (SSDI).</p>",
+          "new": "<p><strong>Disclaimer:</strong> Honorbrook Insurance is an independent insurance agency. This page is for general educational purposes only and is not insurance, tax, or legal advice, an offer of coverage, or a contract. Product availability, benefits, riders, conversion privileges, and eligibility vary by state, carrier, and individual circumstances.</p>\n      <p style=\"margin-top:10px\">SGLI, VGLI, FSGLI, VALife, S-DVI and VMLI are VA life insurance programs. Their rules, deadlines and rates can change, so check VA.gov before you decide. Each carrier decides whether to issue a private policy. Under current federal tax law, life insurance proceeds a beneficiary receives are generally not counted as taxable income; interest on the proceeds is taxable. Individual circumstances vary, so consult a qualified tax professional.</p>\n      <p style=\"margin-top:10px\">Honorbrook Insurance is not connected with or endorsed by the U.S. Department of Veterans Affairs, the Department of Defense, any branch of the armed forces, or any government agency or program. We do not sell VA insurance. Private premiums depend on age, sex, health, tobacco status, state, coverage amount, and carrier underwriting.</p>",
+          "why": "Plan item 6: the footer carried the disability/SSDI disclaimer from the new-page template. Replaced with the life version (based on the term-life disclaimer) plus a VA line and a no-affiliation line naming VA, DoD and the armed forces. The copyright line is untouched. Checker: 'run by VA, which sets their rules, deadlines and rates' overstated (VGLI/SGLI are administered through OSGLI and several deadlines are set by law); reworded to 'VA life insurance programs ... can change'. IRS FAQ re-read: page last reviewed Oct 16, 2026. Also replaced 'subject to underwriting and not guaranteed to be issued', which does not fit the guaranteed-issue final expense policies the page mentions.",
+          "sources": [
+            "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds (reviewed Oct 16, 2026; checked Nov 24, 2026): proceeds received as a beneficiary 'aren't includable in gross income'; interest received on the proceeds is taxable",
+            "https://www.va.gov/life-insurance/ (updated Nov 24, 2026; checked Nov 24, 2026): lists VALife, S-DVI, VMLI, VGLI, SGLI, FSGLI"
+          ]
+        },
+        {
+          "old": "  \"url\": \"https://honorbrook-insurance.com/veterans-life-insurance\"\n}\n</script>\n</head>",
+          "new": "  \"url\": \"https://honorbrook-insurance.com/veterans-life-insurance\"\n}\n</script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"@id\": \"https://honorbrook-insurance.com/veterans-life-insurance#webpage\",\n  \"url\": \"https://honorbrook-insurance.com/veterans-life-insurance\",\n  \"name\": \"Life Insurance for Veterans: VA vs. Private\",\n  \"inLanguage\": \"en-US\",\n  \"dateModified\": \"2026-11-24\",\n  \"lastReviewed\": \"2026-11-24\",\n  \"reviewedBy\": {\n    \"@type\": \"Person\",\n    \"@id\": \"https://honorbrook-insurance.com/#luay-sadqi\",\n    \"name\": \"Luay Sadqi\",\n    \"identifier\": \"NPN 21370662\",\n    \"url\": \"https://honorbrook-insurance.com/about\"\n  },\n  \"publisher\": {\n    \"@id\": \"https://honorbrook-insurance.com/#organization\"\n  },\n  \"citation\": [\n    \"https://www.va.gov/life-insurance/\",\n    \"https://www.va.gov/life-insurance/options-eligibility/sgli/\",\n    \"https://www.va.gov/life-insurance/options-eligibility/vgli/\",\n    \"https://www.va.gov/life-insurance/options-eligibility/fsgli/\",\n    \"https://www.va.gov/life-insurance/options-eligibility/valife/\",\n    \"https://www.va.gov/life-insurance/options-eligibility/s-dvi/\",\n    \"https://www.va.gov/life-insurance/options-eligibility/vmli/\",\n    \"https://www.va.gov/resources/life-insurance-if-you-have-preexisting-conditions/\",\n    \"https://www.va.gov/burials-memorials/veterans-burial-allowance/\",\n    \"https://www.va.gov/health-care/about-va-health-benefits/va-health-care-and-other-insurance/\",\n    \"https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds\"\n  ]\n}\n</script>\n</head>",
+          "why": "Plan item 6: WebPage schema with reviewedBy (Luay Sadqi, NPN 21370662, same @id as the Article schema on /retirement-rollover-annuity) and dateModified. Set dateModified/lastReviewed to the push date if it ships later than Nov 24, 2026. Checker: dropped jobTitle, because the same Person @id already carries a different jobTitle on /about and /retirement-rollover-annuity; added the VA health and IRS pages the page now cites.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
