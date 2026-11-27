@@ -406,3 +406,184 @@ def check(out):
         if '(571)...' in s: cut.append(key)
         if key.replace('-medicare-insurance', '') in NOVA and OFFICE_VIENNA.search(s): vienna.append(key)
     return {'titles over 60': long_t, 'descriptions over 160': long_d, 'cut-off (571)': cut, 'office said Vienna': vienna}
+
+
+# ---------------------------------------------------------------------------------------------------------------------------
+# Nov 27 2026 technical pass (growth plan items 7, 10 trust, 18, 20). Runs last in build.py, before the final claims guard.
+# - Schema: one agency entity. The #organization node (home, about, contact) stays; every other InsuranceAgency or
+#   LocalBusiness node without an @id (county, city, state, ACA and life state pages) becomes a Service for that area whose
+#   provider is {"@id": "#organization"}. The home page gets a WebSite node. knowsAbout gains the lines the site sells.
+#   priceRange "Free consultation" is not a price range and is removed.
+# - The YouTube channel link returned 404 on Nov 27 2026 (curl): removed from sameAs and from every footer.
+# - Speed: asset links carry a short content hash (?v=xxxxxxxx) so a changed file reaches visitors at once; unchanged files
+#   keep their cached copy. Fonts come from a <link> in the head (theme_css.FONT_LINK), not a CSS @import.
+# - Hygiene: one robots meta per page (the thank-you page had both noindex and index); Open Graph tags on the calculators.
+# - Trust: "Verify our license" on about and contact. Links checked Nov 27 2026: the NIPR NPN lookup and the Virginia SCC
+#   Bureau of Insurance agent search both load. The agency NPN 22269925 is the one already stated on /terms.
+# ---------------------------------------------------------------------------------------------------------------------------
+import hashlib
+
+SITE_URL = 'https://honorbrook-insurance.com/'
+ORG_ID = SITE_URL + '#organization'
+WEBSITE_ID = SITE_URL + '#website'
+DEAD_LINKS = ['https://www.youtube.com/@luaysadqi5069']   # 404 on Nov 27 2026
+KNOWS_MORE = ['Term and Whole Life Insurance', 'Indexed Universal Life', 'Annuities', 'Veterans Life Insurance', 'Mortgage Protection Insurance', "Children's Life Insurance", 'Long-Term Care Insurance', 'Disability Insurance']
+NIPR_LOOKUP = 'https://nipr.com/licensing-center/look-up-a-national-producer-number'
+VA_BOI_LOOKUP = 'https://www.scc.virginia.gov/boi/consumerinquiry/search.aspx?searchType=agent'
+VERIFY = ('<div class="hb-verify" id="verify-license">\n'
+          '      <h3>Verify our license</h3>\n'
+          '      <p>Licensed agent: Luay Sadqi, National Producer Number (NPN) 21370662. Agency NPN: 22269925 (Luay&rsquo;s Lifeline Inc., doing business as Honorbrook Insurance).</p>\n'
+          '      <ul>\n'
+          '        <li><a href="%s" target="_blank" rel="noopener">Look up a National Producer Number</a> at NIPR, the National Insurance Producer Registry.</li>\n'
+          '        <li><a href="%s" target="_blank" rel="noopener">Search Virginia licensed agents and agencies</a> at the Virginia State Corporation Commission, Bureau of Insurance.</li>\n'
+          '      </ul>\n'
+          '    </div>\n    ') % (NIPR_LOOKUP, VA_BOI_LOOKUP)
+OG_IMAGE = SITE_URL + 'assets/og-image.jpg'
+
+
+def _agency(o):
+    t = o.get('@type'); t = t if isinstance(t, list) else [t]
+    return bool({'InsuranceAgency', 'LocalBusiness'} & set(t))
+
+
+def _service_type(key):
+    if key.endswith('-aca-health-insurance'): return 'ACA health insurance guidance'
+    if key.endswith('-life-insurance'): return 'Life insurance guidance'
+    if key.endswith('-medicare-advantage'): return 'Medicare Advantage guidance'
+    if key.endswith('-medicare-insurance'): return 'Medicare, health and life insurance guidance'
+    if key == 'iul-policy-review': return 'Indexed universal life policy review'
+    return 'Insurance guidance'
+
+
+def _place(x):
+    if isinstance(x, dict): return x
+    return {"@type": "AdministrativeArea" if re.search(r'County|Parish|District of Columbia|\bCity of\b', str(x)) else "Place", "name": str(x)}
+
+
+def _area(a):
+    if isinstance(a, list):
+        a = [_place(x) for x in a]
+        return a[0] if len(a) == 1 else a
+    return _place(a)
+
+
+def _to_service(j, key, url):
+    node = {"@context": j.get('@context', 'https://schema.org'), "@type": "Service", "serviceType": _service_type(key)}
+    a = j.get('areaServed')
+    if a:
+        node['areaServed'] = _area(a)
+        names = [x.get('name') for x in (node['areaServed'] if isinstance(node['areaServed'], list) else [node['areaServed']]) if x.get('name')]
+        if names: node['name'] = '%s in %s' % (node['serviceType'], ' and '.join(names[:2]) if len(names) <= 2 else names[0])
+    if j.get('description'): node['description'] = j['description']
+    node['provider'] = {"@id": ORG_ID}
+    node['url'] = j.get('url') or url
+    return node
+
+
+def _clean(o):
+    """Inside any node: agency providers without @id point to the one entity; dead sameAs links and the priceRange go."""
+    if isinstance(o, dict):
+        for k in list(o):
+            v = o[k]
+            if k == 'provider' and isinstance(v, dict) and _agency(v) and '@id' not in v:
+                o[k] = {"@id": ORG_ID}; continue
+            if k == 'sameAs':
+                if isinstance(v, list): o[k] = [x for x in v if x not in DEAD_LINKS]
+                elif v in DEAD_LINKS: del o[k]; continue
+            if k == 'priceRange' and v == 'Free consultation': del o[k]; continue
+            _clean(o[k])
+        if o.get('@id') == ORG_ID and isinstance(o.get('knowsAbout'), list):
+            have = {str(x).lower() for x in o['knowsAbout']}
+            o['knowsAbout'] += [x for x in KNOWS_MORE if x.lower() not in have]
+    elif isinstance(o, list):
+        for x in o: _clean(x)
+    return o
+
+
+def tech_schema(key, s):
+    canon = re.search(r'rel="canonical" href="([^"]+)"', s)
+    url = canon.group(1) if canon else SITE_URL + ('' if key == 'index' else key)
+    for m in reversed(_ld_blocks(s)):
+        try: j = json.loads(m.group(2))
+        except ValueError: continue
+        old = json.dumps(j, sort_keys=True)
+        if isinstance(j, dict) and '@graph' in j and isinstance(j['@graph'], list):
+            j['@graph'] = [_to_service(x, key, url) if isinstance(x, dict) and _agency(x) and '@id' not in x else x for x in j['@graph']]
+        elif isinstance(j, dict) and _agency(j) and '@id' not in j:
+            j = _to_service(j, key, url)
+        _clean(j)
+        if json.dumps(j, sort_keys=True) != old:
+            s = s[:m.start(2)] + '\n' + json.dumps(j, indent=2, ensure_ascii=False) + '\n' + s[m.end(2):]
+    if key == 'index' and '"WebSite"' not in s:
+        w = {"@context": "https://schema.org", "@type": "WebSite", "@id": WEBSITE_ID, "url": SITE_URL, "name": "Honorbrook Insurance",
+             "inLanguage": "en-US", "publisher": {"@id": ORG_ID}}
+        s = s.replace('</head>', '<script type="application/ld+json">\n%s\n</script>\n</head>' % json.dumps(w, indent=2), 1)
+    return s
+
+
+def tech_hygiene(key, s):
+    for d in DEAD_LINKS:   # footer link to the dead channel
+        s = re.sub(r'\n?[ \t]*<a href="%s"[^>]*>[^<]*</a>' % re.escape(d), '', s)
+    r = list(re.finditer(r'\n?[ \t]*<meta name="robots"[^>]*>', s))
+    if len(r) > 1:   # one robots tag: the noindex one if any, else the first
+        keep = next((m for m in r if 'noindex' in m.group(0)), r[0])
+        for m in reversed(r):
+            if m is not keep: s = s[:m.start()] + s[m.end():]
+    if (key.endswith('-calculator') or key == 'calculators') and 'property="og:title"' not in s:
+        t = re.search(r'<title>(.*?)</title>', s, re.S); d = re.search(r'<meta name="description" content="([^"]*)"', s)
+        c = re.search(r'rel="canonical" href="([^"]+)"', s)
+        tags = [('og:type', 'website'), ('og:site_name', 'Honorbrook Insurance'), ('og:title', t.group(1).strip() if t else ''),
+                ('og:description', d.group(1) if d else ''), ('og:url', c.group(1) if c else SITE_URL + key), ('og:image', OG_IMAGE),
+                ('og:image:width', '1200'), ('og:image:height', '630')]
+        add = ''.join('\n<meta property="%s" content="%s">' % (p, v) for p, v in tags if v and 'property="%s"' % p not in s)
+        if d: s = s.replace(d.group(0) + '>', d.group(0) + '>' + add, 1)
+        else: s = s.replace('</title>', '</title>' + add, 1)
+    if 'fonts.googleapis.com/css2' not in s and 'href="/assets/style.css' in s:   # every page loads the fonts from its head
+        import theme_css
+        s = s.replace('<link rel="stylesheet" href="/assets/style.css', theme_css.FONT_LINK + '\n<link rel="stylesheet" href="/assets/style.css', 1)
+    return s
+
+
+def tech_verify(key, s):
+    if 'class="hb-verify"' in s: return s
+    if key == 'about':
+        i = s.find('<h2>Licensed. Independent. Documented.</h2>'); j = s.find('<div class="cta-strip">', i)
+        if i > 0 and j > 0: s = s[:j] + VERIFY + s[j:]
+    elif key == 'contact':
+        s = re.sub(r'(<div class="info-line">(?:(?!</div></div>).)*<strong>Hours</strong>.*?</div></div>)', lambda m: m.group(1) + '\n      ' + VERIFY.rstrip(), s, count=1, flags=re.S)
+    return s
+
+
+def tech(out):
+    """The last pass over the build. Returns counts; exits if any JSON-LD block does not parse or the one entity is missing."""
+    n = {'schema': 0, 'hygiene': 0, 'verify': 0, 'versions': 0}
+    hashes = {}
+
+    def ver(m):
+        p = os.path.join(out, 'assets', m.group(2))
+        if not os.path.isfile(p): return m.group(0)
+        if p not in hashes: hashes[p] = hashlib.sha1(open(p, 'rb').read()).hexdigest()[:8]
+        return '%s?v=%s"' % (m.group(1), hashes[p])
+    bad = []
+    for f in glob.glob(os.path.join(out, '**', '*.html'), recursive=True):
+        if '/assets/' in f: continue
+        key = os.path.relpath(f, out)[:-5]
+        s = open(f, encoding='utf-8', errors='ignore').read(); o = s
+        for name, fn in (('schema', tech_schema), ('hygiene', tech_hygiene), ('verify', tech_verify)):
+            t = fn(key, s)
+            if t != s: n[name] += 1; s = t
+        t = re.sub(r'((?:src|href)="/assets/([^"?#]+\.(?:css|js)))(?:\?v=[0-9a-z]+)?"', ver, s)
+        if t != s: n['versions'] += 1; s = t
+        for m in _ld_blocks(s):
+            try: json.loads(m.group(2))
+            except ValueError: bad.append(key)
+        if s != o: open(f, 'w', encoding='utf-8').write(s)
+    for p in glob.glob(os.path.join(out, '*.txt')):   # llms.txt and the like
+        t = open(p, encoding='utf-8').read(); u = t
+        for d in DEAD_LINKS: u = re.sub(r'[^\n]*%s[^\n]*\n?' % re.escape(d), '', u)
+        if u != t: open(p, 'w', encoding='utf-8').write(u)
+    if bad: raise SystemExit('tech: invalid JSON-LD in ' + ', '.join(bad[:10]))
+    idx = open(os.path.join(out, 'index.html'), encoding='utf-8').read()
+    if ORG_ID not in idx or WEBSITE_ID not in idx: raise SystemExit('tech: home page lost the organization or website node')
+    n['asset files hashed'] = len(hashes)
+    return n

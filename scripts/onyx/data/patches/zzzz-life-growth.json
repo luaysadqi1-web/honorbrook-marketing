@@ -1,0 +1,223 @@
+{
+  "group": "life-growth",
+  "note": "Growth plan items 5, 6 and 8 (Nov 27, 2026, key \"life\"). Applied after zzz-facts2027.json.",
+  "pages": [
+    {
+      "page": "final-expense-life-insurance.html",
+      "replacements": [
+        {
+          "old": "    <h2>Before you buy</h2>",
+          "new": "    <h2 id=\"underwriting\">Simplified issue, guaranteed issue and graded benefits</h2>\n    <p>Final expense policies are usually sold in one of three styles. Insurers use different names for them, so read the terms of the policy you are offered, not just its name.</p>\n    <ul>\n      <li><strong>Simplified issue.</strong> The application asks health questions, and many plans do not require a medical exam. The insurer decides from your answers whether to offer the policy and at what premium.</li>\n      <li><strong>Guaranteed issue.</strong> There are no health questions. The Virginia Bureau of Insurance <a href=\"https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/\" target=\"_blank\" rel=\"noopener\">life insurance guide</a> says restrictions often apply if death occurs within the first two or three years after the policy is issued. It also says insurers that take all risks usually pay only the total premium paid, rather than the face amount, if death occurs within the first year or two.</li>\n      <li><strong>Graded benefit.</strong> The policy pays less than the full amount if death happens during its first years, on a schedule written into the policy. See <a href=\"/blog/graded-death-benefit-final-expense-explained\">how a graded death benefit works</a>.</li>\n    </ul>\n    <p>The NAIC&rsquo;s <a href=\"https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf\" target=\"_blank\" rel=\"noopener\">Life Insurance Buyer&rsquo;s Guide</a> notes that a policy that does not ask for detailed health information will usually cost more and provide less coverage than one that does. Which style you are offered is the insurer&rsquo;s decision, made after it reviews your application. We cannot promise a style, an approval or a premium before then.</p>\n\n    <h2 id=\"free-look\">The free look period: time to review a new policy</h2>\n    <p>After a new policy arrives, you have a set number of days to read it and return it. In Virginia, <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/\" target=\"_blank\" rel=\"noopener\">Va. Code &sect; 38.2-3301</a> gives you 10 days from the date the policy is delivered to you. If you return it to the insurer or its agent within that time, with a written request to cancel, the policy is void from the beginning and the insurer must refund any premium you paid. A policy may give you a longer period. Other states set their own rules; the NAIC Buyer&rsquo;s Guide says the period is usually 10 days after you receive the policy and is usually stated on the first page. Our state pages for <a href=\"/virginia-life-insurance#state-facts\">Virginia</a>, <a href=\"/maryland-life-insurance#state-facts\">Maryland</a>, <a href=\"/north-carolina-life-insurance#state-facts\">North Carolina</a>, <a href=\"/texas-life-insurance#state-facts\">Texas</a>, <a href=\"/louisiana-life-insurance#state-facts\">Louisiana</a> and <a href=\"/florida-life-insurance#state-facts\">Florida</a> list what we confirmed there; for other states, see the <a href=\"#life-by-state\">state pages below</a> and the policy itself.</p>\n\n    <h2 id=\"contestability\">The contestability period</h2>\n    <p>In Virginia, for the first two years, an insurer can look back at the application if a claim is filed. <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3305/\" target=\"_blank\" rel=\"noopener\">Va. Code &sect; 38.2-3305</a> requires an individual life policy to become incontestable once it has been in force for two years from its date of issue during the insured person&rsquo;s lifetime, except for nonpayment of premiums. The NAIC Buyer&rsquo;s Guide warns that if the insurer finds false statements on the application after it issues the policy, it could reduce or cancel the coverage. Answer every health question truthfully, and read the application before you sign it. The contestability period is separate from the reduced-benefit years on a guaranteed-issue or graded policy.</p>\n\n    <h2 id=\"missed-payment\">Grace period, lapse and reinstatement</h2>\n    <p>A missed payment does not end a policy right away. In Virginia, <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3303/\" target=\"_blank\" rel=\"noopener\">Va. Code &sect; 38.2-3303</a> requires a grace period of at least 31 days after a premium is due, and the policy stays in force during it. The insurer may charge interest of up to 6% a year on the late premium, and if the insured person dies during the grace period, the unpaid premium may be taken out of the benefit. If the premium is still unpaid when the grace period ends, the policy lapses, as the Virginia Bureau of Insurance guide explains.</p>\n    <p>A lapsed policy can often be brought back. Under <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3311/\" target=\"_blank\" rel=\"noopener\">Va. Code &sect; 38.2-3311</a>, if a Virginia policy&rsquo;s value was automatically used to buy other insurance that is still in force, and the policy was not surrendered and cancelled, it may be reinstated within three years of the default. You would give evidence of insurability that satisfies the insurer, pay the overdue premiums with interest (up to 6% a year) and repay or reinstate any other debt on the policy. Otherwise the policy&rsquo;s own reinstatement terms apply. The Virginia Bureau of Insurance guide says most policies provide for reinstatement within three years from the date of lapse, and that you should expect to pay the missed premiums with interest and show you are still insurable. Policies in other states follow their own state&rsquo;s rules, and the policy itself spells out its terms. If a payment will be late, call the insurer, or call us, before the grace period ends.</p>\n\n    <h2 id=\"who-may-not-need-it\">Who may not need final expense insurance</h2>\n    <p>The NAIC Buyer&rsquo;s Guide suggests starting with questions such as whether anyone depends on you financially and how your family would pay your final expenses and debts. Some people find they do not need a final expense policy:</p>\n    <ul>\n      <li><strong>Savings are already set aside</strong> for the funeral and last bills, and the family will be able to reach them.</li>\n      <li><strong>Existing life insurance is enough</strong> to cover those costs. If the coverage is through work, the NAIC guide cautions that you may not be able to take it with you if you leave the employer.</li>\n      <li><strong>A funeral is already prepaid</strong> through a contract with a funeral home. That is a different product with its own rules; see <a href=\"/blog/final-expense-vs-burial-insurance-vs-prepaid-funeral-plan\">final expense vs. a prepaid funeral plan</a>.</li>\n      <li><strong>The real need is income replacement.</strong> If a family depends on your paycheck, a larger <a href=\"/term-life-insurance\">term life</a> policy may fit the need better.</li>\n    </ul>\n    <p>If you already have a policy and are thinking of replacing it, the NAIC guide says to compare the two first, keep in mind that changes in your health may affect a new policy, and not cancel the current policy until you have the new one.</p>\n\n    <h2>Before you buy</h2>",
+          "why": "Growth plan item 5: free look, contestability, grace period / lapse / reinstatement, simplified vs guaranteed vs graded (neutral, no promises) and who may not need it, each fact cited.",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026, listed on content.naic.org publications as \"Life Insurance Buyer's Guide\"; read November 27, 2026: free look \"usually 10 days after you receive it\", \"usually stated on the first page\"; a policy that does not require detailed health information \"will cost more and provide less coverage\"; false statements found after issue \"could reduce or cancel your coverage\"; \"Don't cancel your current policy until you get the new one\"; employer coverage may not go with you)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/ (ten days from delivery; returned to insurer or its agent with written request; void from the beginning; refund of any premium; longer period if the policy says so; read November 27, 2026)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3303/ (grace period not less than 31 days; policy continues in full force; interest up to 6%/yr; overdue premium deductible from the benefit; read November 27, 2026)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3305/ (incontestable after in force two years from date of issue during the lifetime of the insured, except nonpayment of premiums; read November 27, 2026)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3311/ (reinstatement within three years from default when the policy value was applied automatically to other insurance still in force and the policy was not surrendered and cancelled; evidence of insurability; overdue premiums with interest up to 6%; other indebtedness; read November 27, 2026)",
+            "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (guaranteed issue: restrictions often apply in first two or three years, insurers that take all risks usually pay only premiums paid within the first year or two; most policies allow reinstatement within three years of lapse; lapse when premium unpaid after grace period; read November 27, 2026)"
+          ]
+        },
+        {
+          "old": "    <h2>Life insurance by state</h2>",
+          "new": "    <h2 id=\"life-by-state\">Life insurance by state</h2>",
+          "why": "Anchor for the free look paragraph link.",
+          "sources": []
+        },
+        {
+          "old": "and everything can be handled by phone.</p>\n  </div>\n</article>",
+          "new": "and everything can be handled by phone.</p>\n    <h2 id=\"sources\">Sources</h2>\n    <p class=\"sans\" style=\"font-size:14px\">Read November 27, 2026. This page is general information, not insurance advice; your policy&rsquo;s own terms control.</p>\n    <ul class=\"sans\" style=\"font-size:14px\">\n      <li>National Association of Insurance Commissioners, <a href=\"https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf\" target=\"_blank\" rel=\"noopener\">Life Insurance Buyer&rsquo;s Guide</a></li>\n      <li>Code of Virginia <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/\" target=\"_blank\" rel=\"noopener\">&sect; 38.2-3301, Ten-day right to examine policy</a></li>\n      <li>Code of Virginia <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3303/\" target=\"_blank\" rel=\"noopener\">&sect; 38.2-3303, Grace period</a></li>\n      <li>Code of Virginia <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3305/\" target=\"_blank\" rel=\"noopener\">&sect; 38.2-3305, Incontestability</a></li>\n      <li>Code of Virginia <a href=\"https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3311/\" target=\"_blank\" rel=\"noopener\">&sect; 38.2-3311, Reinstatement</a></li>\n      <li>Virginia State Corporation Commission, Bureau of Insurance, <a href=\"https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/\" target=\"_blank\" rel=\"noopener\">Virginia Consumer&rsquo;s Guide for Life Insurance</a></li>\n      <li>Internal Revenue Service, <a href=\"https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds\" target=\"_blank\" rel=\"noopener\">Life insurance and disability insurance proceeds</a></li>\n      <li>U.S. Department of Veterans Affairs, <a href=\"https://www.va.gov/burials-memorials/veterans-burial-allowance/\" target=\"_blank\" rel=\"noopener\">Veterans burial allowance</a></li>\n    </ul>\n  </div>\n</article>",
+          "why": "Growth plan item 5: a Sources list for every outside fact on the page.",
+          "sources": [
+            "https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf (NAIC Life Insurance Buyer's Guide, (c) 2026, listed on content.naic.org publications as \"Life Insurance Buyer's Guide\"; read November 27, 2026: free look \"usually 10 days after you receive it\", \"usually stated on the first page\"; a policy that does not require detailed health information \"will cost more and provide less coverage\"; false statements found after issue \"could reduce or cancel your coverage\"; \"Don't cancel your current policy until you get the new one\"; employer coverage may not go with you)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/ (ten days from delivery; returned to insurer or its agent with written request; void from the beginning; refund of any premium; longer period if the policy says so; read November 27, 2026)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3303/ (grace period not less than 31 days; policy continues in full force; interest up to 6%/yr; overdue premium deductible from the benefit; read November 27, 2026)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3305/ (incontestable after in force two years from date of issue during the lifetime of the insured, except nonpayment of premiums; read November 27, 2026)",
+            "https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3311/ (reinstatement within three years from default when the policy value was applied automatically to other insurance still in force and the policy was not surrendered and cancelled; evidence of insurability; overdue premiums with interest up to 6%; other indebtedness; read November 27, 2026)",
+            "https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/ (guaranteed issue: restrictions often apply in first two or three years, insurers that take all risks usually pay only premiums paid within the first year or two; most policies allow reinstatement within three years of lapse; lapse when premium unpaid after grace period; read November 27, 2026)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "mortgage-protection-insurance.html",
+      "replacements": [
+        {
+          "old": "    <p>Then compare the answers with a term life policy that you own.</p>",
+          "new": "    <p>Then compare the answers with a term life policy that you own.</p>\n    <p>Got a letter about mortgage protection after your closing? See <a href=\"/blog/mortgage-protection-letter-after-closing\">what to check before you answer it</a>.</p>",
+          "why": "Growth plan item 6: orphan post mortgage-protection-letter-after-closing.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "medicare-part-d.html",
+      "replacements": [
+        {
+          "old": "      <li><strong>Special Enrollment Periods:</strong> triggered by moving, losing coverage, qualifying for Extra Help, and other events.</li>\n    </ul>",
+          "new": "      <li><strong>Special Enrollment Periods:</strong> triggered by moving, losing coverage, qualifying for Extra Help, and other events.</li>\n    </ul>\n    <p>Wondering whether you qualify for help with drug costs? Read <a href=\"/blog/what-is-medicare-extra-help-and-do-i-qualify\">what Medicare Extra Help is, and who qualifies</a>.</p>",
+          "why": "Growth plan item 6: orphan post what-is-medicare-extra-help-and-do-i-qualify.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "turning-65.html",
+      "replacements": [
+        {
+          "old": "If you are on COBRA and approaching 65, talk to someone before you make a decision.</p>",
+          "new": "If you are on COBRA and approaching 65, talk to someone before you make a decision.</p>\n    <p>Still in a 401(k) at 65? See <a href=\"/blog/turning-65-with-a-401k-medicare-and-retirement-savings\">turning 65 with a 401(k): Medicare and your savings</a>.</p>",
+          "why": "Growth plan item 6: orphan post turning-65-with-a-401k-medicare-and-retirement-savings.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "annuities.html",
+      "replacements": [
+        {
+          "old": "which accounts can be rolled into an annuity, and the trap for each</a>.</p>",
+          "new": "which accounts can be rolled into an annuity, and the trap for each</a>. For what your beneficiaries receive, see <a href=\"/blog/what-happens-to-a-fixed-indexed-annuity-when-you-die\">what happens to a fixed indexed annuity when you die</a>.</p>",
+          "why": "Growth plan item 6: orphan post what-happens-to-a-fixed-indexed-annuity-when-you-die.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "indexed-universal-life.html",
+      "replacements": [
+        {
+          "old": "There is no fee for this review, whether or not you bought the policy from us. <a href=\"#quote\">Request a review</a>.</p>",
+          "new": "There is no fee for this review, whether or not you bought the policy from us. See <a href=\"/iul-policy-review\">how an IUL policy review works</a>, or <a href=\"#quote\">request a review</a>.</p>",
+          "why": "Growth plan item 6: /iul-policy-review had no links from the IUL product page.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "blog/what-is-indexed-universal-life-iul-how-it-works-cost-risks.html",
+      "replacements": [
+        {
+          "old": "A policy that still holds up under conservative assumptions is far more reassuring.</p>",
+          "new": "A policy that still holds up under conservative assumptions is far more reassuring.</p>\n    <p>Already own an IUL? An in-force illustration shows how the policy is doing now. See <a href=\"/iul-policy-review\">how an IUL policy review works</a>.</p>",
+          "why": "Growth plan item 6: link the IUL explainer post to /iul-policy-review.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "blog/when-can-i-change-my-medigap-plan-birthday-rule-and-underwriting.html",
+      "replacements": [
+        {
+          "old": "See our state guides, for example <a href=\"/blog/when-can-i-change-my-medicare-plan-in-virginia\">Virginia</a> and <a href=\"/blog/when-can-i-change-my-medicare-plan-in-maryland\">Maryland</a>.</p>",
+          "new": "See our state guides, for example <a href=\"/blog/when-can-i-change-my-medicare-plan-in-virginia\">Virginia</a> and <a href=\"/blog/when-can-i-change-my-medicare-plan-in-maryland\">Maryland</a>. West Virginia added a Medigap birthday rule in 2026: see <a href=\"/blog/when-can-i-change-my-medicare-plan-in-west-virginia#birthday-rule\">the West Virginia Medigap birthday rule</a>.</p>",
+          "why": "Growth plan items 6 and 8: link the national birthday-rule post to the WV post.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "medicare-supplement-medigap.html",
+      "replacements": [
+        {
+          "old": "If you're unsure where you stand, we'll tell you plainly and help you act before a window closes.</p>",
+          "new": "If you're unsure where you stand, we'll tell you plainly and help you act before a window closes.</p>\n    <p>Some states add their own rules. West Virginia has a Medigap birthday rule as of June 11, 2026: see <a href=\"/blog/when-can-i-change-my-medicare-plan-in-west-virginia#birthday-rule\">the West Virginia Medigap birthday rule</a>. For the federal protections, see <a href=\"/blog/when-can-i-change-my-medigap-plan-birthday-rule-and-underwriting\">when you can change a Medigap plan</a>.</p>",
+          "why": "Growth plan items 6 and 8: medicare-supplement-medigap did not link to the WV birthday-rule post.",
+          "sources": [
+            "https://www.wvinsurance.gov/Portals/0/pdf/pol_leg/info_letters/IB%2026-02%20Summary%20of%202026%20Legislation.pdf (West Virginia Insurance Bulletin No. 26-02: \"House Bill 4869 ... (Effective June 11, 2026)\", read November 27, 2026)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "fairfax-medicare-insurance.html",
+      "replacements": [
+        {
+          "old": "Local independent agency · Luay Sadqi, Licensed Agent · NPN 21370662</p>",
+          "new": "Local independent agency · Luay Sadqi, Licensed Agent · NPN 21370662</p>\n    <p class=\"sans\" style=\"font-size:14px;margin-top:4px\">Live in the independent City of Fairfax? See <a href=\"/fairfax-city-va-medicare-insurance\">Medicare help in the City of Fairfax</a>.</p>",
+          "why": "Growth plan item 6: cross-link Fairfax County and the City of Fairfax near the top.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "fairfax-city-va-medicare-insurance.html",
+      "replacements": [
+        {
+          "old": "Independent agency &middot; Luay Sadqi, Licensed Agent, NPN 21370662</p>",
+          "new": "Independent agency &middot; Luay Sadqi, Licensed Agent, NPN 21370662</p>\n    <p class=\"sans\" style=\"font-size:14px;margin-top:4px\">In Fairfax County outside the city? See <a href=\"/fairfax-medicare-insurance\">Medicare help in Fairfax County</a>.</p>",
+          "why": "Growth plan item 6: cross-link Fairfax County and the City of Fairfax near the top.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "page": "blog/when-can-i-change-my-medicare-plan-in-west-virginia.html",
+      "replacements": [
+        {
+          "old": "<title>When Can I Change Medicare Plans in West Virginia?</title>",
+          "new": "<title>West Virginia Medigap Birthday Rule: Changing Medicare Plans</title>",
+          "why": "Growth plan item 8: the title now says \"Medigap birthday rule\" (the search the post answers).",
+          "sources": []
+        },
+        {
+          "old": "<meta property=\"og:title\" content=\"When Can I Change Medicare Plans in West Virginia?\">",
+          "new": "<meta property=\"og:title\" content=\"West Virginia Medigap Birthday Rule: Changing Medicare Plans\">",
+          "why": "Same title for sharing.",
+          "sources": []
+        },
+        {
+          "old": "<meta name=\"twitter:title\" content=\"When Can I Change Medicare Plans in West Virginia?\">",
+          "new": "<meta name=\"twitter:title\" content=\"West Virginia Medigap Birthday Rule: Changing Medicare Plans\">",
+          "why": "Same title for sharing.",
+          "sources": []
+        },
+        {
+          "old": "\"headline\": \"When Can I Change My Medicare Advantage or Medigap Plan in West Virginia?\",",
+          "new": "\"headline\": \"West Virginia Medigap Birthday Rule: When Can I Change My Medicare Advantage or Medigap Plan?\",",
+          "why": "Schema headline matches the new title and H1.",
+          "sources": []
+        },
+        {
+          "old": "\"dateModified\": \"2026-10-12\",",
+          "new": "\"dateModified\": \"2026-11-27\",",
+          "why": "Title, heading and links changed on Nov 27, 2026.",
+          "sources": []
+        },
+        {
+          "old": "(NPN 21370662) · October 2026</p>",
+          "new": "(NPN 21370662) · October 2026, updated November 2026</p>",
+          "why": "Visible date matches dateModified.",
+          "sources": []
+        },
+        {
+          "old": "<h1>When Can I <em>Change</em> My Medicare Advantage or Medigap Plan in West Virginia?</h1>",
+          "new": "<h1>West Virginia Medigap <em>birthday rule</em>, and when you can change your Medicare plan</h1>",
+          "why": "Growth plan item 8: H1 carries the same meaning as the new title.",
+          "sources": []
+        },
+        {
+          "old": "    <h2>Medigap changes in West Virginia</h2>\n    <p>West Virginia has a Medigap birthday rule.",
+          "new": "    <h2 id=\"birthday-rule\">The West Virginia Medigap birthday rule (House Bill 4869)</h2>\n    <p>West Virginia has a Medigap birthday rule.",
+          "why": "Growth plan item 8: heading names the rule; anchor for links from the Medigap page, the national birthday-rule post and the WV hub. The rule text below already matches Bulletin 26-02 word for word in substance (checked Nov 27, 2026).",
+          "sources": [
+            "https://www.wvinsurance.gov/Portals/0/pdf/pol_leg/info_letters/IB%2026-02%20Summary%20of%202026%20Legislation.pdf (West Virginia Insurance Bulletin No. 26-02, Summary of 2026 Legislation: HB 4869 \"Effective June 11, 2026\"; 24 months continuously in force; once per calendar year; application period begins the first day of the birthday month and ends 60 days thereafter; same insurer or affiliate; same or less standardized benefits; 12-month exception; read November 27, 2026)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "west-virginia-medicare-insurance.html",
+      "replacements": [
+        {
+          "old": "        <p>Want to switch plans? See <a href=\"/blog/when-can-i-change-my-medicare-plan-in-west-virginia\">when you can change Medicare plans in West Virginia</a>.</p>",
+          "new": "    <h2 id=\"medigap-birthday-rule\">West Virginia&rsquo;s Medigap birthday rule</h2>\n    <p>Since June 11, 2026, West Virginia has a Medigap birthday rule (House Bill 4869). If your Medicare Supplement policy has been continuously in force for at least 24 months, you can replace it once per calendar year, in an application period that begins on the first day of your birthday month and ends 60 days later. The new policy must come from the same insurer or an affiliated insurer and have the same or fewer standardized benefits. Source: <a href=\"https://www.wvinsurance.gov/Portals/0/pdf/pol_leg/info_letters/IB%2026-02%20Summary%20of%202026%20Legislation.pdf\" rel=\"noopener\" target=\"_blank\">West Virginia Insurance Bulletin No. 26-02</a>, Offices of the Insurance Commissioner, read November 27, 2026. The full details, including the exception when your insurer no longer sells such a plan, are in our guide to <a href=\"/blog/when-can-i-change-my-medicare-plan-in-west-virginia#birthday-rule\">the West Virginia Medigap birthday rule and other ways to change plans</a>. Apply first and wait for approval before you cancel your current policy.</p>",
+          "why": "Growth plan item 8: the WV Medicare hub had 0 mentions of \"birthday\"; a short section that links to the existing post (no new WV page). The CMS disclaimer in the footer is unchanged.",
+          "sources": [
+            "https://www.wvinsurance.gov/Portals/0/pdf/pol_leg/info_letters/IB%2026-02%20Summary%20of%202026%20Legislation.pdf (read November 27, 2026)"
+          ]
+        }
+      ]
+    }
+  ]
+}

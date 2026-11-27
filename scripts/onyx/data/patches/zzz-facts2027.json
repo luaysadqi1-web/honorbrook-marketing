@@ -1,0 +1,227 @@
+{
+ "group": "zzz-facts2027",
+ "note": "Nov 27, 2026 (growth plan item 2): 2027 Medicare Part A/B amounts from the CMS fact sheet released Nov 17, 2026 (Part B $209.40/month, Part B deductible $292, Part A deductible $1,776) on the Medicare cost calculator, its FAQ schema, calc.js and the dental post; the ACA open-enrollment post moved to the 2027 plan year (HealthCare.gov dates, IRS premium tax credit rule, CMS list of state-run marketplaces). URL kept. Applied after zz-review-fixes.",
+ "pages": [
+  {
+   "page": "medicare-cost-calculator.html",
+   "replacements": [
+    {
+     "old": "Medicare Cost Calculator: Your 2026 Costs | Honorbrook",
+     "new": "Medicare Cost Calculator: Your 2027 Costs | Honorbrook"
+    },
+    {
+     "old": "Add your plan premiums to the 2026 Part B premium",
+     "new": "Add your plan premiums to the 2027 Part B premium"
+    },
+    {
+     "old": "Medicare Cost Calculator: Estimate Your 2026 Costs",
+     "new": "Medicare Cost Calculator: Estimate Your 2027 Costs",
+     "count": 2
+    },
+    {
+     "old": "using the official 2026 Part A and B amounts plus your plan premiums.",
+     "new": "using the official 2027 Part A and B amounts plus your plan premiums."
+    },
+    {
+     "old": "What does Original Medicare cost in 2026?",
+     "new": "What does Original Medicare cost in 2027?",
+     "count": 2
+    },
+    {
+     "old": "For 2026 the standard Part B premium is $202.90 per month and the Part B deductible is $283. The Part A inpatient hospital deductible is $1,736 per benefit period.",
+     "new": "For 2027 the standard Part B premium is $209.40 per month and the Part B deductible is $292. The Part A inpatient hospital deductible is $1,776 per benefit period, according to CMS (November 17, 2026).",
+     "count": 2
+    },
+    {
+     "old": "Higher-income enrollees pay more for Part B and Part D.</div></details>",
+     "new": "Higher-income enrollees pay more for Part B and Part D. Source: <a href=\"https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles\" rel=\"noopener\" target=\"_blank\">CMS, 2027 Medicare Parts A &amp; B Premiums and Deductibles</a>, released November 17, 2026.</div></details>"
+    },
+    {
+     "old": "We start with the 2026 standard Part B premium of $202.90 per month, then add the monthly premiums you enter. We also show the Part B deductible ($283) and the Part A hospital deductible ($1,736 per benefit period).",
+     "new": "We start with the 2027 standard Part B premium of $209.40 per month, then add the monthly premiums you enter. We also show the 2027 Part B deductible ($292) and the 2027 Part A hospital deductible ($1,776 per benefit period). Source: <a href=\"https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles\" rel=\"noopener\" target=\"_blank\">CMS, 2027 Medicare Parts A &amp; B Premiums and Deductibles</a>, released November 17, 2026."
+    },
+    {
+     "old": "Figures are the CMS 2026 standard amounts.",
+     "new": "Figures are the CMS 2027 standard amounts (released November 17, 2026)."
+    }
+   ]
+  },
+  {
+   "page": "assets/calc.js",
+   "replacements": [
+    {
+     "old": "var B=202.90, annual=",
+     "new": "var B=209.40, annual="
+    },
+    {
+     "old": "Part B premium (standard, 2026)",
+     "new": "Part B premium (standard, 2027)"
+    },
+    {
+     "old": "the $283 Part B deductible",
+     "new": "the $292 Part B deductible",
+     "count": 2
+    },
+    {
+     "old": "and a $1,736 Part A deductible for each hospital benefit period (2026).",
+     "new": "and a $1,776 Part A deductible for each hospital benefit period (2027)."
+    },
+    {
+     "old": "Standard 2026 amounts. Higher-income",
+     "new": "Standard 2027 amounts from CMS (November 17, 2026). Higher-income"
+    }
+   ]
+  },
+  {
+   "page": "calculators.html",
+   "replacements": [
+    {
+     "old": "<p>Official 2026 amounts plus your plan premiums.</p>",
+     "new": "<p>Official 2027 amounts plus your plan premiums.</p>"
+    }
+   ]
+  },
+  {
+   "page": "blog/does-medicare-cover-dental-vision-hearing.html",
+   "replacements": [
+    {
+     "old": "CMS lists the 2026 <a href=\"https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles\" rel=\"noopener\" target=\"_blank\">Part B deductible as $283</a>.",
+     "new": "CMS lists the 2027 <a href=\"https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles\" rel=\"noopener\" target=\"_blank\">Part B deductible as $292</a> (released November 17, 2026)."
+    }
+   ]
+  },
+  {
+   "page": "blog/aca-marketplace-2026.html",
+   "replacements": [
+    {
+     "old": "ACA Marketplace 2026: What to Expect | Honorbrook",
+     "new": "ACA Marketplace 2027: What to Expect | Honorbrook",
+     "count": 2
+    },
+    {
+     "old": "What changes at open enrollment for 2026 ACA plans",
+     "new": "What to know at open enrollment for 2027 ACA plans",
+     "count": 2
+    },
+    {
+     "old": "ACA Marketplace 2026: What To Expect At Open Enrollment",
+     "new": "ACA Marketplace 2027: What To Expect At Open Enrollment",
+     "count": 2
+    },
+    {
+     "old": "What changed for the 2026 plan year, how premium tax credits work",
+     "new": "What to know for the 2027 plan year, how premium tax credits work",
+     "count": 2
+    },
+    {
+     "old": "\"name\":\"ACA Marketplace 2026\",\"item\"",
+     "new": "\"name\":\"ACA Marketplace 2027\",\"item\""
+    },
+    {
+     "old": "&rsaquo; ACA Marketplace 2026</div>",
+     "new": "&rsaquo; ACA Marketplace 2027</div>"
+    },
+    {
+     "old": "<h1>ACA Marketplace 2026: what to expect at",
+     "new": "<h1>ACA Marketplace 2027: what to expect at"
+    },
+    {
+     "old": "Here's what changed for the 2026 plan year",
+     "new": "Here's what to know for the 2027 plan year"
+    },
+    {
+     "old": "· June 2026</p>",
+     "new": "· June 2026 · Updated November 27, 2026</p>"
+    },
+    {
+     "old": "\"dateModified\": \"2026-09-07\"",
+     "new": "\"dateModified\": \"2026-11-27\""
+    },
+    {
+     "old": "Open Enrollment for the 2026 plan year runs November 1, 2025 through January 15, 2026. The changes this year are smaller than in recent years, but the subsidy math has shifted in ways that catch many families off guard.",
+     "new": "Open Enrollment for the 2027 plan year runs November 1, 2026 through January 15, 2027 on HealthCare.gov. Enroll by December 15 for coverage that starts January 1; if you enroll December 16 through January 15, coverage starts February 1 (<a href=\"https://www.healthcare.gov/quick-guide/dates-and-deadlines/\" rel=\"noopener\" target=\"_blank\">HealthCare.gov dates and deadlines</a>, checked November 27, 2026). States that run their own marketplace can set different dates."
+    },
+    {
+     "old": "<h2>The big picture for 2026</h2>",
+     "new": "<h2>The big picture for 2027</h2>"
+    },
+    {
+     "old": "<p>Enhanced premium tax credits — the expanded ACA subsidies that came from the American Rescue Plan and were extended through the Inflation Reduction Act — remained in place through the 2025 plan year. That means for 2026 Open Enrollment, most middle-income families still qualify for some subsidy assistance.</p>",
+     "new": "<p>The IRS says that in general, the premium tax credit is for households with income of at least 100 percent but no more than 400 percent of the federal poverty line for their family size. For tax years 2021 through 2025, Congress temporarily removed the 400 percent limit (<a href=\"https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit\" rel=\"noopener\" target=\"_blank\">IRS premium tax credit questions and answers</a>, page reviewed September 21, 2026).</p>"
+    },
+    {
+     "old": "<p>Whether enhanced subsidies continue past 2025 is a political question that hasn't been settled. The current law expires at the end of 2025 unless Congress acts. We'll update guidance as the situation clarifies.</p>",
+     "new": "<p>Your exact plan prices and savings for 2027 depend on your household and income. HealthCare.gov shows them when you fill out a Marketplace application (<a href=\"https://www.healthcare.gov/lower-costs/\" rel=\"noopener\" target=\"_blank\">HealthCare.gov: lower costs</a>).</p>"
+    },
+    {
+     "old": "When is ACA Open Enrollment for the 2026 plan year?",
+     "new": "When is ACA Open Enrollment for the 2027 plan year?",
+     "count": 2
+    },
+    {
+     "old": "Open Enrollment for the 2026 plan year runs November 1, 2025 through January 15, 2026 on the federal Marketplace.",
+     "new": "Open Enrollment for the 2027 plan year runs November 1, 2026 through January 15, 2027 on HealthCare.gov. Enroll by December 15 for coverage that starts January 1. States that run their own marketplace can set different dates.",
+     "count": 2
+    },
+    {
+     "old": "If you don't enroll by January 15, you're generally locked out",
+     "new": "If you don't enroll by January 15 (on HealthCare.gov; state-run marketplaces can set different dates), you're generally locked out"
+    },
+    {
+     "old": "<p>Most states we serve use the federal HealthCare.gov platform, with Open Enrollment running November 1 to January 15. A few run their own state-based exchanges, so make sure you're shopping on the right platform for your state:</p>",
+     "new": "<p>Most states we serve use HealthCare.gov. Six run their own marketplace, so make sure you're shopping on the right platform for your state. This list follows CMS's report for the 2026 plan year (<a href=\"https://www.cms.gov/newsroom/fact-sheets/marketplace-2026-open-enrollment-period-report-national-snapshot\" rel=\"noopener\" target=\"_blank\">CMS 2026 Open Enrollment report</a>, December 5, 2025):</p>"
+    },
+    {
+     "old": "<li><strong>Federal HealthCare.gov states</strong> — including Virginia, Maryland, West Virginia, Georgia, North Carolina, South Carolina, Texas, Louisiana, Alabama, Michigan, Indiana, Delaware, the District of Columbia, Kentucky, Pennsylvania, Tennessee, and Florida.</li>",
+     "new": "<li><strong>HealthCare.gov states</strong> — West Virginia, North Carolina, South Carolina, Texas, Louisiana, Alabama, Michigan, Indiana, Delaware, Tennessee, and Florida.</li>"
+    },
+    {
+     "old": "<li><strong>Georgia</strong> — transitioned from HealthCare.gov to its own state-based exchange, Georgia Access. The dates and process are largely similar, but the platform is different.</li>",
+     "new": "<li><strong>States with their own marketplace</strong> — Virginia, Maryland, Georgia, Kentucky, Pennsylvania, and the District of Columbia. Their dates and steps can differ from HealthCare.gov, so check your state&rsquo;s marketplace.</li>"
+    },
+    {
+     "old": "<li><strong>Maryland</strong> — uses Maryland Health Connection, the state's own exchange, with the same enrollment timing.</li>",
+     "new": ""
+    },
+    {
+     "old": "<li>Estimated household income for 2026 (be realistic",
+     "new": "<li>Estimated household income for 2027 (be realistic"
+    },
+    {
+     "old": "ACA Marketplace 2026 FAQ</h2>",
+     "new": "ACA Marketplace 2027 FAQ</h2>"
+    }
+   ]
+  },
+  {
+   "page": "blog/index.html",
+   "replacements": [
+    {
+     "old": "<h3>ACA Marketplace 2026: Plans, Subsidies &amp; Deadlines</h3>",
+     "new": "<h3>ACA Marketplace 2027: Plans, Subsidies &amp; Deadlines</h3>",
+     "why": "Fix review Nov 27 2026: link text to the retitled post (now 2027 in its title, H1 and schema) still said 2026. URL kept."
+    }
+   ]
+  },
+  {
+   "page": "blog/bronze-vs-silver-vs-gold-aca-plans.html",
+   "replacements": [
+    {
+     "old": "<a class=\"rel-card\" href=\"/blog/aca-marketplace-2026\"><h3>ACA Marketplace 2026</h3>",
+     "new": "<a class=\"rel-card\" href=\"/blog/aca-marketplace-2026\"><h3>ACA Marketplace 2027</h3>",
+     "why": "Fix review Nov 27 2026: link text to the retitled post (now 2027 in its title, H1 and schema) still said 2026. URL kept."
+    }
+   ]
+  },
+  {
+   "page": "blog/aca-or-medicaid-virginia-2026.html",
+   "replacements": [
+    {
+     "old": "<a class=\"rel-card\" href=\"/blog/aca-marketplace-2026\"><h3>ACA Marketplace 2026</h3>",
+     "new": "<a class=\"rel-card\" href=\"/blog/aca-marketplace-2026\"><h3>ACA Marketplace 2027</h3>",
+     "why": "Fix review Nov 27 2026: link text to the retitled post (now 2027 in its title, H1 and schema) still said 2026. URL kept."
+    }
+   ]
+  }
+ ]
+}

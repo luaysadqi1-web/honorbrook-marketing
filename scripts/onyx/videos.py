@@ -23,6 +23,10 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 DATA = os.path.join(HERE, 'data', 'videos')
 SRC = os.path.join(ROOT, 'site', 'assets', 'video')
 BASE = 'https://honorbrook-insurance.com'
+# Videos kept off the pages until the owner decides a point in them (the narration cannot be edited without a new recording).
+# about-honorbrook-insurance: says "One agent compares 90+ carriers"; whether that is true is an open owner question
+# (STATUS.md 3k, question 2). Fix review, Nov 27 2026. Take the slug out of HOLD once he confirms it or the video is re-recorded.
+HOLD = {}  # Nov 27 2026: owner confirmed '90+ carriers' is accurate; About video released to the home page
 
 
 def _iso(sec):
@@ -48,6 +52,18 @@ def _block(v):
             % (e(v['heading'], quote=False), v['slug'], v['slug'], e(v['transcript'], quote=False)))
 
 
+def _home_block(v):
+    e = html.escape
+    return ('<div class="wrap" style="margin-top:72px;text-align:center">\n'
+            '  <h3 style="font-size:clamp(24px,2.6vw,32px);margin:0 0 22px">Watch: %s</h3>\n'
+            '  <video controls preload="none" playsinline poster="/assets/video/%s.jpg" style="width:100%%;max-width:960px;aspect-ratio:16/9;border-radius:18px;display:block;margin:0 auto 14px;border:1px solid rgba(255,255,255,.18);background:#050506">\n'
+            '    <source src="/assets/video/%s.mp4" type="video/mp4">\n'
+            '    Your browser does not support video. A transcript is below.\n'
+            '  </video>\n'
+            '  <div style="max-width:960px;margin:0 auto;text-align:left"><details><summary>Video transcript</summary><div class="a">%s</div></details></div>\n'   # plain <details> so the checker can pair the tags
+            '</div>\n' % (e(v['heading'], quote=False), v['slug'], v['slug'], e(v['transcript'], quote=False)))
+
+
 def _schema(v):
     d = {"@context": "https://schema.org", "@type": "VideoObject", "name": v['name'], "description": v['description'],
          "thumbnailUrl": "%s/assets/video/%s.jpg" % (BASE, v['slug']), "uploadDate": _when(v['upload']), "duration": _iso(v['seconds']),
@@ -71,11 +87,13 @@ def _spot(s, anchor):
 
 
 def apply(out):
-    done, skipped = [], []
+    done, skipped, held = [], [], []
     for jf in sorted(glob.glob(os.path.join(DATA, '*.json'))):
         v = json.load(open(jf, encoding='utf-8'))
         for k in ('slug', 'page', 'heading', 'name', 'description', 'upload', 'seconds', 'transcript'):
             if not v.get(k): raise SystemExit('videos: %s has no %s' % (os.path.basename(jf), k))
+        if v['slug'] in HOLD:
+            held.append(v['slug']); continue
         if not (os.path.isfile(os.path.join(SRC, v['slug'] + '.mp4')) and os.path.isfile(os.path.join(SRC, v['slug'] + '.jpg'))):
             skipped.append(v['slug']); continue
         for n, page in enumerate([v['page']] + list(v.get('also') or [])):
@@ -83,8 +101,13 @@ def apply(out):
             if not os.path.isfile(p): raise SystemExit('videos: page not in the build: ' + page)
             s = open(p, encoding='utf-8').read()
             if '/assets/video/%s.mp4' % v['slug'] in s: continue
-            i = _spot(s, (v.get('before') or {}).get(page))
-            s = s[:i] + _block(v) + s[i:]
+            if v.get('section'):   # home page: a full-width block at the end of the named section (no article there)
+                a = s.find('<section class="%s"' % v['section']); i = s.find('</section>', a)
+                if a < 0 or i < 0: raise SystemExit('videos: section not found on %s: %s' % (page, v['section']))
+                s = s[:i] + _home_block(v) + s[i:]
+            else:
+                i = _spot(s, (v.get('before') or {}).get(page))
+                s = s[:i] + _block(v) + s[i:]
             if n == 0:
                 if s.count('</head>') != 1: raise SystemExit('videos: head not found on ' + page)
                 s = s.replace('</head>', _schema(v) + '</head>', 1)
@@ -108,4 +131,4 @@ def apply(out):
         try:
             if subprocess.call(['git', '-C', ROOT, 'ls-files', '--error-unmatch', 'site/assets/video/' + f], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) != 0: untracked.append(f)
         except OSError: pass
-    return {'embedded on': done, 'waiting for files': skipped, 'dates given a time zone': dated, 'NOT IN GIT YET (stage by name when publishing)': untracked}
+    return {'embedded on': done, 'waiting for files': skipped, 'HELD for the owner': held, 'dates given a time zone': dated, 'NOT IN GIT YET (stage by name when publishing)': untracked}

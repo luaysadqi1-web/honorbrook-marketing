@@ -3,7 +3,8 @@
 /* Count every click that opens the PlanEnroll booking page, by page and by where the button sits, and every tap on the text number. */
 document.addEventListener('click', function (e) {
   if (!e.target || !e.target.closest || typeof window.gtag !== 'function') return;
-  if (e.target.closest('a[href^="sms:"]')) { try { window.gtag('event', 'text_click', { page: location.pathname, line: document.body.getAttribute('data-line') || '' }); } catch (x) {} return; }
+  /* text_click is counted in assets/chat.js (with transport_type beacon), so it is not sent twice */
+  if (e.target.closest('a[href^="sms:"]')) return;
   var a = e.target.closest('a[href*="planenroll.com"]');
   if (!a) return;
   var place = a.closest('.hb-next') ? 'post next step' : a.closest('.hb-life') ? 'life block' : a.closest('.hb-book') ? 'product block' : a.closest('.cta-strip') ? 'page strip' : a.closest('.band') ? 'bottom band' : a.closest('.sticky-call') ? 'bottom bar' : a.closest('nav.menu') ? 'menu' : a.closest('header') ? 'header' :

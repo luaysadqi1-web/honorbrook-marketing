@@ -234,11 +234,8 @@ CHAT_PATCH = [
      "best:fd0.get('Best time to call')||'',interests:fd0.getAll('Interests').join(', ')||fd0.get('Topic')||'',answers:hbAnswers(f,fd0),"),
     # life and annuity forms end on their own thank-you page
     ("else { location.href='/thank-you'; }", "else { location.href=f.getAttribute('data-thanks')||'/thank-you'; }"),
-    # one booking event only (book_click in hb-nav.js); this listener doubled every count, so it is removed whole
-    ("  document.addEventListener('click',function(e){\n    var a=e.target&&e.target.closest?e.target.closest('a[href*=\"planenroll.com\"]'):null;\n"
-     "    if(a && typeof window.gtag==='function'){ try{ window.gtag('event','book_call_click',{page:location.pathname}); }catch(x){} }\n  },true);\n", ""),
-    ("/* ---- Booking CTA: header button -> PlanEnroll, tracked as book_call_click ---- */",
-     "/* ---- Booking CTA: header button -> PlanEnroll (clicks are counted as book_click in hb-nav.js) ---- */"),
+    # (Nov 27 2026: the header "Booking CTA" block and its book_call_click listener were removed from site/assets/chat.js itself,
+    #  so the two patches that edited them are gone.)
     # a lead is counted when the form service accepts it (it was counted on every submit, even ones that failed); failures get their own event
     ("track(e.target.getAttribute('data-event')||'generate_lead',{form:(e.target.getAttribute('action')||'form')});",
      "if(!/formspree\\.io/.test(e.target.getAttribute('action')||'')){ track(e.target.getAttribute('data-event')||'generate_lead',{form:(e.target.getAttribute('action')||'form')}); }"),
@@ -286,11 +283,48 @@ CHAT_ADD = '''
 '''
 
 
+# Nov 27 2026 (growth plan items 1 and 3): a lead counts as sent when ANY of the three posts is accepted (the lead connector
+# function, the info@ form xgobjlba or the Gmail copy form xljbopja). Before this, the visitor saw an error whenever the main
+# form failed, even when the lead connector had saved the lead. The error shows only when all of them fail.
+# The lead event is sent with transport_type beacon, so it is not lost when the page moves to /thank-you.
+# The hidden lead source fields (added in site/assets/chat.js) are left out of the post when empty and out of the "answers" text.
+CHAT_ANY = [
+    ("  function hbBody(f){ var d=new FormData(f); try{ if(d.has('Email')&&!d.get('Email')){ d['delete']('Email'); } }catch(x){} return d; }",
+     "  function hbBody(f){ var d=new FormData(f); try{ if(d.has('Email')&&!d.get('Email')){ d['delete']('Email'); } HB_SRC.forEach(function(k){ if(d.has(k)&&!d.get(k)){ d['delete'](k); } }); }catch(x){} return d; }\n"
+     "  var HB_SRC=['landing_page','referrer','utm_source','utm_medium','utm_campaign','gclid'];\n"
+     "  function hbOk(r){ return !!(r&&r.ok); }\n"
+     "  function hbNo(){ return false; }\n"
+     # true when any post was accepted. It waits for the others (up to 3 seconds after the first one is accepted), so the
+     # move to /thank-you does not cut off a post still on its way. With no answer at all after 15 seconds it gives up, so the
+     # button does not stay on "Sending..." until the browser's own network timeout (fix review, Nov 27 2026)
+     "  function hbAny(ps){ return new Promise(function(res){ var left=ps.length, any=false, done=false; function end(v){ if(!done){ done=true; res(v); } } if(!left){ end(false); return; } setTimeout(function(){ end(any); },15000); ps.forEach(function(p){ Promise.resolve(p).then(function(v){ if(v&&!any){ any=true; setTimeout(function(){ end(true); },3000); } if(--left===0){ end(any); } },function(){ if(--left===0){ end(any); } }); }); }); }"),
+    ("Topic:1,Interests:1,_subject:1,_gotcha:1,'Best time to call':1}",
+     "Topic:1,Interests:1,_subject:1,_gotcha:1,'Best time to call':1,landing_page:1,referrer:1,utm_source:1,utm_medium:1,utm_campaign:1,gclid:1}"),
+    ("window.gtag('event',f.getAttribute('data-event')||'generate_lead',{form:f.getAttribute('action')||'form',",
+     "window.gtag('event',f.getAttribute('data-event')||'generate_lead',{transport_type:'beacon',page:location.pathname,form:f.getAttribute('action')||'form',"),
+    ("    /* also send the lead into IntegrityCONNECT through our own server function; never blocks the visitor */\n",
+     "    var hbTries=[];\n    /* also send the lead into IntegrityCONNECT through our own server function; any one accepted post counts as sent */\n"),
+    ("fetch('/.netlify/functions/lead',{method:'POST',keepalive:true,", "hbTries.push(fetch('/.netlify/functions/lead',{method:'POST',keepalive:true,"),
+    ("_gotcha:fd0.get('_gotcha')||''})}).catch(function(){}); } }catch(x){}", "_gotcha:fd0.get('_gotcha')||''})}).then(hbOk,hbNo)); } }catch(x){}"),
+    ("try{ fetch('https://formspree.io/f/xljbopja',{method:'POST',body:hbBody(f),headers:{Accept:'application/json'},keepalive:true}).catch(function(){}); }catch(x){} }",
+     "try{ hbTries.push(fetch('https://formspree.io/f/xljbopja',{method:'POST',body:hbBody(f),headers:{Accept:'application/json'},keepalive:true}).then(hbOk,hbNo)); }catch(x){} }"),
+    ("    fetch(f.action,{method:'POST',body:hbBody(f),headers:{Accept:'application/json'}})\n      .then(function(r){ if(r.ok){ hbLead(f);",
+     "    hbTries.push(fetch(f.action,{method:'POST',body:hbBody(f),headers:{Accept:'application/json'},keepalive:true}).then(hbOk,hbNo));\n    hbAny(hbTries)\n      .then(function(ok){ if(ok){ hbLead(f);"),
+    ("window.gtag('event','lead_error',{line:", "window.gtag('event','lead_error',{transport_type:'beacon',line:"),
+    # the copy is marked sent only once it is accepted: it now counts toward "sent", so a retry after a total failure tries it again
+    # (a copy that was accepted is still never sent twice)
+    ("!f._hbCopied){ f._hbCopied=true; try{ hbTries.push(fetch('https://formspree.io/f/xljbopja',{method:'POST',body:hbBody(f),headers:{Accept:'application/json'},keepalive:true}).then(hbOk,hbNo)); }catch(x){} }",
+     "!f._hbCopied){ try{ hbTries.push(fetch('https://formspree.io/f/xljbopja',{method:'POST',body:hbBody(f),headers:{Accept:'application/json'},keepalive:true}).then(function(r){ var k=hbOk(r); if(k){ f._hbCopied=true; } return k; },hbNo)); }catch(x){} }"),
+]
+
+
 def _chat(out):
     p = os.path.join(out, 'assets', 'chat.js'); t = open(p, encoding='utf-8').read()
-    for a, b in CHAT_PATCH:
+    for a, b in CHAT_PATCH + CHAT_ANY:
         if t.count(a) != 1: raise SystemExit('lifeleads: chat.js text not found once: ' + a[:70])
         t = t.replace(a, b, 1)
+    for k in ('xgobjlba', 'xljbopja', '/.netlify/functions/lead'):
+        if k not in t: raise SystemExit('lifeleads: chat.js lost ' + k)
     open(p, 'w', encoding='utf-8').write(t + CHAT_ADD)
 
 
@@ -580,4 +614,279 @@ def finish_forms(out):
         if len(ids) != len(set(ids)): raise SystemExit('lifeleads: duplicate id on %s: %s' % (slug, sorted(x for x in set(ids) if ids.count(x) > 1)[:5]))
         if s != o: open(p, 'w', encoding='utf-8').write(s)
         n['pages'] += 1
+    return n
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Nov 27 2026, growth plan items 1, 3 and 19 (conversion): the main buttons lead to the form on the page.
+# Booking on PlanEnroll asks for a profile first and its first open time is 24 or more hours away
+# (schedule-an-appointment.html), so it is now the last choice, through our own scheduling page.
+# - Hero on pages with a quote form (#quote): a line-specific button to the form, then Call, then a small Text link and
+#   a "Schedule a time" link to /schedule-an-appointment. Pages without a form keep their buttons.
+#   Medicare pages say "Ask about Medicare options" (no quote wording).
+# - Phones: a "Get a call back" link right under the hero that jumps to the form (the form is not repeated).
+# - Bottom bar on phones: Call | Text | Get a quote (the form), or Schedule a time where a page has no form.
+# - Header button on form pages: "Get a quote" (Medicare pages keep "Plan Review"); it already points at #quote.
+# - Blog posts: the end-of-post next step opens the matching product page's form instead of the booking site.
+# Nov 27 2026, owner: 'Schedule a time' must open booking instantly, not an extra page.
+SCHEDULE = 'https://www.planenroll.com/?purl=Luay-Sadqi'
+NEWTAB = ' target="_blank" rel="noopener"'
+MEDICARE_LINES = ('medicare', 'area')
+LABEL_SLUG = {
+    'final-expense-life-insurance': 'Get a final expense quote', 'term-life-insurance': 'Get a term life quote',
+    'whole-life-insurance': 'Get a whole life quote', 'guaranteed-universal-life': 'Get a universal life quote',
+    'mortgage-protection-insurance': 'Get a mortgage protection quote', 'childrens-life-insurance': 'Get a children&rsquo;s life insurance quote',
+    'veterans-life-insurance': 'Get a veterans life insurance quote', 'indexed-universal-life': 'Ask about indexed universal life',
+    'high-net-worth-life-insurance': 'Ask about high net worth life insurance', 'iul-policy-review': 'Ask for an IUL policy review',
+    'accident-insurance': 'Get an accident insurance quote', 'cancer-critical-illness-insurance': 'Get a critical illness quote',
+    'dental-vision-hearing-insurance': 'Get a dental and vision quote', 'disability-insurance': 'Get a disability insurance quote',
+    'hospital-indemnity-insurance': 'Get a hospital indemnity quote', 'long-term-care-insurance': 'Get a long-term care quote',
+    'short-term-home-care-insurance': 'Get a home care insurance quote',
+}
+LABEL_LINE = {'final_expense': 'Get a final expense quote', 'life': 'Get a life insurance quote', 'mortgage': 'Get a mortgage protection quote',
+              'kids': 'Get a children&rsquo;s life insurance quote', 'veterans': 'Get a veterans life insurance quote',
+              'iul': 'Ask about indexed universal life', 'annuity': 'Ask about annuity options', 'health': 'Get a health insurance quote',
+              'group': 'Ask about group coverage'}
+HERO_FORM = ('<div class="hero-ctas sans">\n      <a class="btn-primary" href="#quote">%s</a>\n'
+             '      <a class="btn-ghost" href="tel:+13016158289">Call (301) 615-8289</a>\n    </div>\n'
+             '    <p class="hb-hero-alt sans"><a href="sms:+15713540146">Text (571) 354-0146</a><span aria-hidden="true"> &middot; </span>'
+             '<a href="%s"%s>Schedule a time</a></p>' % ('%s', SCHEDULE, NEWTAB))
+CALLBACK = '\n<p class="hb-callback-m sans"><a href="#quote">Get a call back</a></p>'
+STICKY = '<div class="sticky-call sans">\n  <a href="tel:+13016158289">Call</a><a class="tx" href="sms:+15713540146">Text</a>%s\n</div>'
+
+
+def _line(s):
+    m = re.search(r'<body[^>]*\bdata-line="([^"]*)"', s)
+    return m.group(1) if m else ''
+
+
+def form_label(slug, s):
+    """The hero button text for a page with a #quote form."""
+    line = _line(s)
+    if line in MEDICARE_LINES: return 'Ask about Medicare options'
+    if slug in LABEL_SLUG: return LABEL_SLUG[slug]
+    if line == 'group':   # employer pages already name their own request (ichra.html: "Ask about setting up an ICHRA")
+        m = re.search(r'<div class="hero-ctas sans">.*?<a class="btn-ghost" href="#quote">([^<]+)</a>', s, re.S)
+        if m: return m.group(1).strip()
+    return LABEL_LINE.get(line, 'Get a quote')
+
+
+def convert(out):
+    n = {'hero': 0, 'call back link': 0, 'bottom bar': 0, 'header': 0, 'post next step': 0}
+    has_form = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(out, '*.html')) if 'id="quote"' in open(f, encoding='utf-8', errors='ignore').read()}
+    for f in glob.glob(os.path.join(out, '**', '*.html'), recursive=True):
+        if '/assets/video' in f: continue
+        s = open(f, encoding='utf-8', errors='ignore').read(); o = s
+        slug = os.path.basename(f)[:-5]
+        top = os.path.dirname(f) == out
+        form = top and 'id="quote"' in s
+        medicare = _line(s) in MEDICARE_LINES
+        if form:
+            q = s.find('id="quote"'); h = s.find('<div class="hero-ctas sans">')
+            sec = s.rfind('<section', 0, h) if h >= 0 else -1
+            if 0 <= h < q and sec >= 0 and 'hero' in s[sec:s.find('>', sec)]:
+                e = s.find('</div>', h) + len('</div>')
+                s = s[:h] + HERO_FORM % form_label(slug, s) + s[e:]; n['hero'] += 1
+                se = s.find('</section>', h)
+                if se > 0 and 'class="hb-callback-m' not in s:
+                    se += len('</section>'); s = s[:se] + CALLBACK + s[se:]; n['call back link'] += 1
+            if not medicare:
+                s, k = re.subn(r'(<a class="cta-btn sans" href="#quote">)Plan Review(</a>)', r'\1Get a quote\2', s, count=1); n['header'] += k
+        third = (('<a class="qt" href="#quote">%s</a>' % ('Get a call back' if medicare else 'Get a quote')) if form else
+                 '<a class="bk" href="%s"%s>Schedule a time</a>' % (SCHEDULE, NEWTAB))
+        if slug == 'schedule-an-appointment':   # the scheduling page itself: the third button is the booking link it explains
+            third = '<a class="bk" href="%s" target="_blank" rel="noopener">Schedule</a>' % BOOK
+        s, k = re.subn(r'<div class="sticky-call sans">.*?</div>', lambda m: STICKY % third, s, count=1, flags=re.S); n['bottom bar'] += k
+        if os.path.basename(os.path.dirname(f)) == 'blog' and 'class="hb-book hb-next"' in s:
+            m = re.search(r'<div class="hb-book hb-next">\s*<h3>Next step: schedule ([^<]+)</h3>\s*<p>Booking opens[^<]*</p>(.*?)'
+                          r'<div class="hb-book-cta sans"><a class="btn-primary" href="[^"]*planenroll[^"]*"[^>]*>[^<]*</a><a class="hb-book-how" href="/([a-z0-9-]+)">([^<]*)</a></div>', s, re.S)
+            if m and m.group(3) in has_form:
+                what, page = m.group(1), m.group(3)
+                pf = os.path.join(out, page + '.html'); ps = open(pf, encoding='utf-8', errors='ignore').read()
+                lab = form_label(page, ps)
+                blk = ('<div class="hb-book hb-next">\n      <h3>Next step: ask for %s</h3>\n'
+                       '      <p>The button opens a short form. Send it and a licensed agent will call you back. '
+                       'To talk sooner, call <a href="tel:+13016158289">(301) 615-8289</a> or text <a href="sms:+15713540146">(571) 354-0146</a>.</p>\n'
+                       '      <div class="hb-book-cta sans"><a class="btn-primary" href="/%s#quote">%s</a><a class="hb-book-how" href="/%s">%s</a>'
+                       '<a class="hb-book-how" href="%s"%s>Or schedule a time</a></div>') % (what, page, lab, page, m.group(4), SCHEDULE, NEWTAB)
+                s = s[:m.start()] + blk + s[m.end():]; n['post next step'] += 1
+        if s != o: open(f, 'w', encoding='utf-8').write(s)
+    return n
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Enrollment banner (Nov 27, 2026, growth plan item 2c).
+# The Medicare Annual Enrollment banner used the visitor's own clock and new Date(y,11,7), which is midnight at the START of
+# Dec 7, so it stopped one day early in the US and ran on the wrong day elsewhere; after Dec 7 it kept "Annual Enrollment runs
+# Oct 15 - Dec 7" with a countdown line. The new script reads the date in Eastern time, treats Oct 15 to Dec 7 as open (both
+# days included) and outside that window shows one neutral line (call / text) instead of the enrollment text.
+# The Medigap page's own script (no annual deadline) is left as it is.
+# On the state life pages and the annuity pages the Medicare banner is replaced with a life (or annuity) line.
+AEP_JS = re.compile(r'<script>\s*\(function\(\)\{\s*const now=new Date\(\),y=now\.getFullYear\(\);\s*const start=new Date\(y,9,15\),end=new Date\(y,11,7\);\s*'
+                    r"const msg=document\.getElementById\('aepMsg'\);\s*if\(!msg\)return;\s*"
+                    r"if\(now>=start&&now<=end\)\{msg\.textContent='([^']*)';\}\s*else\{const days=.*?\}\s*\}\)\(\);\s*</script>", re.S)
+NEUTRAL = ('<strong>Medicare questions?</strong> Call <a href="tel:+13016158289">(301) 615-8289</a> '
+           'or text <a href="sms:+15713540146">(571) 354-0146</a>.')
+AEP_NEW = '''<script>
+  (function(){
+    const msg=document.getElementById('aepMsg');
+    if(!msg)return;
+    let m,d;
+    try{const p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',month:'numeric',day:'numeric'}).formatToParts(new Date());
+      m=+p.find(x=>x.type==='month').value; d=+p.find(x=>x.type==='day').value;}
+    catch(e){const n=new Date(); m=n.getMonth()+1; d=n.getDate();}
+    const open=(m===10&&d>=15)||m===11||(m===12&&d<=7);   // Oct 15 to Dec 7, Eastern, both days included
+    if(open){msg.textContent='%s';}
+    else{const b=document.getElementById('aepBanner'); if(b) b.innerHTML='%s';}
+  })();
+</script>'''
+LIFE_LINE = ('<div class="aep-banner sans"><strong>%s questions?</strong> Call <a href="tel:+13016158289">(301) 615-8289</a> '
+             'or text <a href="sms:+15713540146">(571) 354-0146</a>.</div>')
+ANNUITY_PAGES = ('annuities', 'retirement-rollover-annuity', 'single-premium-annuities')
+LIFE_PAGES = ('final-expense-life-insurance', 'term-life-insurance', 'whole-life-insurance', 'indexed-universal-life', 'veterans-life-insurance',
+              'mortgage-protection-insurance', 'childrens-life-insurance', 'life-insurance', 'guaranteed-universal-life', 'high-net-worth-life-insurance',
+              'iul-policy-review', 'life-insurance-calculator')
+
+
+def enrollment_banner(out):
+    n = {'banner script': 0, 'life line': 0, 'annuity line': 0}
+    for f in glob.glob(os.path.join(out, '**', '*.html'), recursive=True):
+        if '/assets/video' in f: continue
+        s = open(f, encoding='utf-8', errors='ignore').read(); o = s
+        slug = os.path.basename(f)[:-5]
+        top = os.path.dirname(f) == out
+        life = top and (slug in LIFE_PAGES or slug.endswith('-life-insurance'))
+        if (life or (top and slug in ANNUITY_PAGES)) and AEP_RX.search(s):
+            s, k = AEP_RX.subn(lambda m: LIFE_LINE % ('Life insurance' if life else 'Annuity'), s, count=1)
+            n['life line' if life else 'annuity line'] += k
+        s, k = AEP_JS.subn(lambda m: AEP_NEW % (m.group(1), NEUTRAL), s); n['banner script'] += k
+        if s != o: open(f, 'w', encoding='utf-8').write(s)
+    return n
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Growth plan items 4 and 5 (Nov 27, 2026): state life pages lead with final expense / burial insurance, six of them carry a
+# short block of state facts, and the final expense, IUL and mortgage protection pages say when they last changed.
+# Every fact below was read on the primary source on Nov 27, 2026 (log: the "life" implementer notes). Facts that could not be
+# confirmed were left out. No prices, no carrier names, no guaranty-association wording, nothing about Medicare.
+MODIFIED = '2026-11-27'
+_T = ' rel="noopener" target="_blank"'
+_CFPB = 'https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/'
+_MORTGAGE = ('    <p><strong>Mortgage protection is life insurance, not lender mortgage insurance.</strong> Private mortgage insurance (PMI) is something a lender may '
+             'require, typically on a conventional loan with a down payment of less than 20 percent of the purchase price. The Consumer Financial Protection Bureau '
+             'says &ldquo;PMI protects the lender&mdash;not you&mdash;if you stop making payments on your loan&rdquo; (<a href="%s"%s>CFPB, What is private mortgage '
+             'insurance?</a>). Mortgage protection, as we use the term, is a life policy that you own, and it pays the person you name if you die. One does not replace the other. '
+             '<a href="/mortgage-protection-insurance">How mortgage protection works</a>.</p>\n' % (_CFPB, _T))
+# state slug: (free look, preneed funeral contracts, consumer guide, sources [(label, url)], mortgage paragraph)
+STATE_FACTS = {
+    'virginia': (
+        '<a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/"%s>Va. Code &sect; 38.2-3301</a> gives you 10 days from the date an individual life policy is delivered to you to return it to the insurer or its agent with a written request to cancel. The policy is then void from the beginning, and the insurer must refund any premium you paid. A policy may give you a longer period.' % _T,
+        'A prepaid funeral arranged with a funeral home is a preneed funeral contract, not an insurance policy. <a href="https://law.lis.virginia.gov/vacode/title54.1/chapter28/section54.1-2820/"%s>Va. Code &sect; 54.1-2820</a> sets what such a contract must contain, including the seller&rsquo;s license number and the contact details of the <a href="https://www.dhp.virginia.gov/Boards/Funeral/"%s>Virginia Board of Funeral Directors and Embalmers</a>, the agency that handles consumer complaints about these contracts.' % (_T, _T),
+        'The Virginia Bureau of Insurance publishes the <a href="https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/"%s>Virginia Consumer&rsquo;s Guide for Life Insurance</a>.' % _T,
+        [('Code of Virginia &sect; 38.2-3301, Ten-day right to examine policy', 'https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/'),
+         ('Code of Virginia &sect; 54.1-2820, Requirements of preneed funeral contracts', 'https://law.lis.virginia.gov/vacode/title54.1/chapter28/section54.1-2820/'),
+         ('Code of Virginia &sect; 54.1-2800, Definitions (&ldquo;Board&rdquo; means the Board of Funeral Directors and Embalmers)', 'https://law.lis.virginia.gov/vacode/title54.1/chapter28/section54.1-2800/'),
+         ('Virginia Bureau of Insurance, Virginia Consumer&rsquo;s Guide for Life Insurance', 'https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/'),
+         ('Consumer Financial Protection Bureau, What is private mortgage insurance?', _CFPB)], True),
+    'maryland': (
+        '<a href="https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gin&amp;section=16-105&amp;enactments=false"%s>Maryland Insurance Article &sect; 16-105</a> requires a life policy to carry a notice that, for 10 days after it is delivered, you may return it to the insurer for cancellation by written notice, with a refund of the pro rata premium for the unexpired term, or a notice the Insurance Commissioner considers no less favorable. The notice on your own policy gives its exact terms.' % _T,
+        'Under <a href="https://mgaleg.maryland.gov/mgawebsite/laws/StatuteText?article=gho&amp;section=7-405"%s>Maryland Health Occupations Article &sect; 7-405</a>, only a licensed mortician, a licensed funeral director or a holder of a surviving spouse license may offer a preneed funeral contract, and payments must be deposited in an escrow or trust account within 10 days. Morticians and funeral directors are licensed by the <a href="https://health.maryland.gov/bom/"%s>Maryland Board of Morticians &amp; Funeral Directors</a>.' % (_T, _T),
+        'The Maryland Insurance Administration publishes <a href="https://insurance.maryland.gov/consumer/documents/publications/lifeinsurance.pdf"%s>A Consumer Guide to Life Insurance</a>.' % _T,
+        [('Maryland Insurance Article &sect; 16-105', 'https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gin&amp;section=16-105&amp;enactments=false'),
+         ('Maryland Health Occupations Article &sect; 7-405', 'https://mgaleg.maryland.gov/mgawebsite/laws/StatuteText?article=gho&amp;section=7-405'),
+         ('Maryland Department of Health, Board of Morticians &amp; Funeral Directors', 'https://health.maryland.gov/bom/'),
+         ('Maryland Insurance Administration, A Consumer Guide to Life Insurance', 'https://insurance.maryland.gov/consumer/documents/publications/lifeinsurance.pdf'),
+         ('Consumer Financial Protection Bureau, What is private mortgage insurance?', _CFPB)], True),
+    'texas': (
+        'The Texas Department of Insurance says Texas policies have a free-look period of at least 10 to 20 days, during which you may cancel the policy for any reason and get a full refund.',
+        'Prepaid funeral contracts sold by funeral homes are overseen by the <a href="https://www.dob.texas.gov/cemetery-prepaid-funeral-services"%s>Texas Department of Banking</a>, and a seller must hold a permit from that department to sell them. The Texas Department of Insurance life insurance guide covers funeral insurance policies.' % _T,
+        'The Texas Department of Insurance publishes a <a href="https://www.tdi.texas.gov/pubs/consumer/cb018.html"%s>life insurance guide</a> (last updated December 12, 2025).' % _T,
+        [('Texas Department of Insurance, Life insurance guide', 'https://www.tdi.texas.gov/pubs/consumer/cb018.html'),
+         ('Texas Department of Banking, Cemetery &amp; Prepaid Funeral Businesses', 'https://www.dob.texas.gov/cemetery-prepaid-funeral-services')], False),
+    'louisiana': (
+        'The Louisiana Department of Insurance guide says Louisiana law allows you a 10-day free look period to decide whether to keep a life insurance policy.',
+        '<a href="https://legis.la.gov/legis/Law.aspx?d=631302"%s>La. R.S. 37:865</a> limits how a funeral establishment may use money paid on a preneed funeral contract, requires those payments to go into trust accounts or to an insurer, and requires an annual sworn report of the accounts to the Louisiana State Board of Embalmers and Funeral Directors, which can inspect the records.' % _T,
+        'The Louisiana Department of Insurance publishes a <a href="https://www.ldi.la.gov/docs/default-source/documents/publicaffairs/consumerpublications/consumer\'s-guide-to-life-insurance.pdf"%s>Consumer&rsquo;s Guide to Life Insurance</a> (Rev. 12/2025).' % _T,
+        [('Louisiana Department of Insurance, Consumer&rsquo;s Guide to Life Insurance (Rev. 12/2025)', 'https://www.ldi.la.gov/docs/default-source/documents/publicaffairs/consumerpublications/consumer\'s-guide-to-life-insurance.pdf'),
+         ('Louisiana Revised Statutes 37:865', 'https://legis.la.gov/legis/Law.aspx?d=631302')], False),
+    'north-carolina': (
+        'The North Carolina Department of Insurance says there is a minimum 10-day free look period on new life policies and a minimum 20-day free look period on replacement policies.',
+        'Under <a href="https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_90/Article_13D.html"%s>N.C. Gen. Stat. &sect; 90-210.67</a>, no one may offer or sell preneed funeral contracts without first getting a license from the North Carolina Board of Funeral Service.' % _T,
+        'The North Carolina Department of Insurance publishes <a href="https://www.ncdoi.gov/consumers/life-insurance/shopping-life-insurance"%s>Shopping for Life Insurance</a>.' % _T,
+        [('North Carolina Department of Insurance, Shopping for Life Insurance', 'https://www.ncdoi.gov/consumers/life-insurance/shopping-life-insurance'),
+         ('N.C. General Statutes Chapter 90, Article 13D, Preneed Funeral Funds (&sect; 90-210.67)', 'https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_90/Article_13D.html')], False),
+    'florida': (
+        'The Florida Department of Financial Services says that after a life policy is delivered, the policyowner has at least 14 days to review it and can return it for a full premium refund. For indexed universal life, DFS says the refund is subject to market valuation adjustments, and for variable life it is the value of the investment accounts when the policy is returned.',
+        'Sellers of preneed funeral and cemetery goods and services must be licensed under chapter 497 of the Florida Statutes. They are regulated by the Department of Financial Services&rsquo; <a href="https://www.myfloridacfo.com/division/funeralcemetery/consumer-help/consumer-faq"%s>Division of Funeral, Cemetery, and Consumer Services</a>.' % _T,
+        'The Florida Department of Financial Services publishes a <a href="https://www.myfloridacfo.com/division/consumers/understanding-insurance/lifeinsuranceoverview"%s>life insurance overview</a> for consumers.' % _T,
+        [('Florida Department of Financial Services, Life Insurance Overview', 'https://www.myfloridacfo.com/division/consumers/understanding-insurance/lifeinsuranceoverview'),
+         ('Florida Division of Funeral, Cemetery, and Consumer Services, Consumer FAQ', 'https://www.myfloridacfo.com/division/funeralcemetery/consumer-help/consumer-faq')], False),
+}
+# government-final-expense-program had no links except the blog index (growth plan item 6)
+FINAL_LINKS = [('final-expense-life-insurance', 'Schedule a time at honorbrook-insurance.com or call (301) 615-8289.</div></details>',
+                '\n    <p>Read the full guide, with its sources: <a href="/blog/government-final-expense-program">Is there a government final expense program?</a></p>')]
+TITLE_MAX = 60   # the same limit seo.check() uses
+
+
+def state_title(the, ab):
+    """Full state name and the words "Life Insurance in <State>" (the old title's exact match, and the slug's words); the brand
+    suffix is left off so every state fits in 60 characters (fix review, Nov 27 2026: postal abbreviations replaced)."""
+    t = 'Final Expense & Life Insurance in %s | Term, IUL' % the
+    if len(t) > TITLE_MAX: t = 'Final Expense & Life Insurance in %s' % the
+    return t
+
+
+def _facts_block(name, the, facts):
+    free, preneed, guide, srcs, mortgage = facts
+    return ('    <h2 id="state-facts">%s facts to check before you buy</h2>\n    <ul>\n'
+            '      <li><strong>Free look period.</strong> %s</li>\n'
+            '      <li><strong>Prepaid funeral contracts.</strong> %s</li>\n'
+            '      <li><strong>Consumer guide.</strong> %s</li>\n    </ul>\n%s'
+            '    <p class="sans" style="font-size:14px;color:var(--muted)">Sources for this section, read November 27, 2026: %s. '
+            'Rules can change; the policy or contract you are given states its own terms.</p>\n\n'
+            % (the, free, preneed, guide, _MORTGAGE if mortgage else '',
+               '; '.join('<a href="%s"%s>%s</a>' % (u, _T, l) for l, u in srcs)))
+
+
+def growth_life(out):
+    """State life page titles, H1s and state facts; dateModified on the final expense, IUL and mortgage protection pages."""
+    import html as _h
+    import life
+    n = {'state titles': 0, 'state facts': 0, 'dateModified': 0}
+    for name, ab, slug, the, doi, doi_url, cword in life.STATES:
+        p = os.path.join(out, slug + '-life-insurance.html')
+        s = open(p, encoding='utf-8').read(); o = s
+        old = 'Life Insurance in %s | Final Expense, Term &amp; IUL' % _h.escape(the)
+        if s.count(old) != 3: raise SystemExit('growth_life: %s: title found %d times, expected 3' % (slug, s.count(old)))
+        s = s.replace('<title>%s</title>' % old, '<title>%s</title>' % _h.escape(state_title(the, ab)))
+        s = s.replace(old, _h.escape('Final Expense & Burial Insurance in %s | Term, IUL | Honorbrook' % the))   # og and twitter titles: full name
+        h1 = '<h1>Life insurance in <em>%s</em></h1>' % _h.escape(the)
+        if s.count(h1) != 1: raise SystemExit('growth_life: %s: H1 not found' % slug)
+        s = s.replace(h1, '<h1>Final expense &amp; burial insurance in <em>%s</em>, plus term and IUL</h1>' % _h.escape(the))
+        n['state titles'] += 1
+        if slug in STATE_FACTS:
+            anchor = '    <h2>Who regulates life insurance in %s</h2>' % _h.escape(the)
+            if s.count(anchor) != 1: raise SystemExit('growth_life: %s: regulator heading not found' % slug)
+            s = s.replace(anchor, _facts_block(name, _h.escape(the), STATE_FACTS[slug]) + anchor)
+            n['state facts'] += 1
+        if s != o: open(p, 'w', encoding='utf-8').write(s)
+    # links that need the video blocks (videos.apply), so they go in here rather than in a patch file
+    for slug, old, new in FINAL_LINKS:
+        p = os.path.join(out, slug + '.html'); s = open(p, encoding='utf-8').read()
+        if new in s: continue
+        if s.count(old) != 1: raise SystemExit('growth_life: %s: link anchor found %d times' % (slug, s.count(old)))
+        open(p, 'w', encoding='utf-8').write(s.replace(old, old + new)); n['links'] = n.get('links', 0) + 1
+    for slug, name in (('final-expense-life-insurance', 'Final Expense and Burial Insurance'), ('mortgage-protection-insurance', 'Mortgage Protection Insurance'),
+                       ('indexed-universal-life', None)):
+        p = os.path.join(out, slug + '.html'); s = open(p, encoding='utf-8').read()
+        url = 'https://honorbrook-insurance.com/' + slug
+        if '"dateModified"' in s: continue
+        if name is None:   # the IUL page already has a WebPage node
+            k = '"@id": "%s",\n  "url": "%s",' % (url, url)
+            if s.count(k) != 1: raise SystemExit('growth_life: %s: WebPage node not found' % slug)
+            s = s.replace(k, k + '\n  "dateModified": "%s",' % MODIFIED)
+        else:
+            node = {"@context": "https://schema.org", "@type": "WebPage", "@id": url, "url": url, "name": name, "dateModified": MODIFIED}
+            s = s.replace('</head>', '<script type="application/ld+json">\n%s\n</script>\n</head>' % json.dumps(node, indent=2), 1)
+        open(p, 'w', encoding='utf-8').write(s); n['dateModified'] += 1
     return n

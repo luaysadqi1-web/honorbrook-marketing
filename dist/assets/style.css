@@ -3,7 +3,7 @@
    Upload to:  /assets/style.css
    Headings: Playfair Display · Body: Georgia · UI: Source Sans 3
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Cinzel:wght@500;600&display=swap');
+/* fonts: loaded by a <link> in each page head (theme_css.FONT_LINK) */
 
 :root{
   --navy:#1b2f4b; --navy-d:#142339; --gold:#c9a227; --gold-l:#e3c25c; --gold-d:#a8851a;
@@ -917,4 +917,28 @@ html body nav.menu .hb-menu-cta{display:none}
   html body .logo img{transition:filter .4s}
   html body .logo:hover img{filter:drop-shadow(0 0 22px rgba(255,255,255,.4))}
 }
+/* Nov 27 2026 conversion pass (scripts/onyx/lifeleads.py convert): small Text and Schedule links under the hero buttons,
+   a phone-only "Get a call back" link under the hero, a three-part bottom bar, and the cookie notice kept above the bar. */
+html body .hb-hero-alt{margin:16px 0 0;font-size:15.5px;color:#aab0ba}
+html body .hb-hero-alt a{color:#e6e8ec;text-decoration:underline;text-underline-offset:4px}
+html body .hb-hero-alt a:hover{color:#fff}
+html body .hb-callback-m{display:none}
+html body .sticky-call a.tx{background:rgba(255,255,255,.06);color:#f4f5f7;border:1px solid var(--hair2);box-shadow:none}
+@media(max-width:900px){
+  html body .hb-consent{bottom:calc(66px + env(safe-area-inset-bottom))}
+  html body:has(.hb-consent:not([hidden])) #hb-launch{bottom:calc(160px + env(safe-area-inset-bottom))}
+}
+@media(max-width:640px){
+  html body .hb-callback-m{display:block;margin:0;padding:14px 20px;text-align:center;font-size:16px;border-bottom:1px solid var(--hair)}
+  html body .hb-callback-m a{color:#f4f5f7;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+  html body .sticky-call a[href^="tel:"]{flex:0 0 27%}
+  html body .sticky-call a.tx{flex:0 0 21%}
+}
+/* Nov 27 2026 trust block (scripts/onyx/seo.py verify_block): "Verify our license" on the about and contact pages. */
+html body .hb-verify{margin:28px 0;padding:22px 24px;border:1px solid var(--hair2);border-radius:var(--r);background:var(--panel)}
+html body .hb-verify h3{margin:0 0 8px;font-size:21px}
+html body .hb-verify p{margin:0 0 10px;font-size:16.5px;color:#cfd3d9}
+html body .hb-verify ul{margin:0;padding-left:20px;font-size:16.5px}
+html body .hb-verify li{margin:4px 0}
+html body .hb-verify a{color:#f4f5f7;text-decoration:underline;text-underline-offset:4px}
 

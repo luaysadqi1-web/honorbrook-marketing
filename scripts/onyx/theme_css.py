@@ -1,7 +1,12 @@
 """Honorbrook Onyx: the hand-built design layer. Polished black surfaces, hairline silver edges, chrome type and buttons.
 Loaded after the compiled palette overrides (palette.py), so these rules set the final look of the main components."""
 
-FONT_IMPORT = "@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Cinzel:wght@500;600&display=swap');"
+# Fonts load from a <link> in each page head (scripts/onyx/build.py), not a CSS @import, so the browser finds them sooner.
+# Weights in use (Nov 27 2026 scan of the built CSS): Sora 300-700 (headings, buttons), Manrope 400-700 (body; 800 was never used),
+# Cinzel 500 and 600 (the logo wordmark; no other loaded face looks like it, so it stays).
+FONT_URL = 'https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Cinzel:wght@500;600&display=swap'
+FONT_LINK = '<link rel="stylesheet" href="%s">' % FONT_URL.replace('&', '&amp;')
+FONT_IMPORT = "@import url('%s');" % FONT_URL   # kept for reference; the build no longer writes it
 
 ICON_PHONE = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z'/%3E%3C/svg%3E\")"
 ICON_CAL = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='16' rx='2'/%3E%3Cpath d='M3 10h18M8 3v4M16 3v4'/%3E%3C/svg%3E\")"
@@ -451,4 +456,28 @@ html body nav.menu .hb-menu-cta{display:none}
   html body .logo img{transition:filter .4s}
   html body .logo:hover img{filter:drop-shadow(0 0 22px rgba(255,255,255,.4))}
 }
+/* Nov 27 2026 conversion pass (scripts/onyx/lifeleads.py convert): small Text and Schedule links under the hero buttons,
+   a phone-only "Get a call back" link under the hero, a three-part bottom bar, and the cookie notice kept above the bar. */
+html body .hb-hero-alt{margin:16px 0 0;font-size:15.5px;color:#aab0ba}
+html body .hb-hero-alt a{color:#e6e8ec;text-decoration:underline;text-underline-offset:4px}
+html body .hb-hero-alt a:hover{color:#fff}
+html body .hb-callback-m{display:none}
+html body .sticky-call a.tx{background:rgba(255,255,255,.06);color:#f4f5f7;border:1px solid var(--hair2);box-shadow:none}
+@media(max-width:900px){
+  html body .hb-consent{bottom:calc(66px + env(safe-area-inset-bottom))}
+  html body:has(.hb-consent:not([hidden])) #hb-launch{bottom:calc(160px + env(safe-area-inset-bottom))}
+}
+@media(max-width:640px){
+  html body .hb-callback-m{display:block;margin:0;padding:14px 20px;text-align:center;font-size:16px;border-bottom:1px solid var(--hair)}
+  html body .hb-callback-m a{color:#f4f5f7;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+  html body .sticky-call a[href^="tel:"]{flex:0 0 27%}
+  html body .sticky-call a.tx{flex:0 0 21%}
+}
+/* Nov 27 2026 trust block (scripts/onyx/seo.py verify_block): "Verify our license" on the about and contact pages. */
+html body .hb-verify{margin:28px 0;padding:22px 24px;border:1px solid var(--hair2);border-radius:var(--r);background:var(--panel)}
+html body .hb-verify h3{margin:0 0 8px;font-size:21px}
+html body .hb-verify p{margin:0 0 10px;font-size:16.5px;color:#cfd3d9}
+html body .hb-verify ul{margin:0;padding-left:20px;font-size:16.5px}
+html body .hb-verify li{margin:4px 0}
+html body .hb-verify a{color:#f4f5f7;text-decoration:underline;text-underline-offset:4px}
 '''.replace('ICON_PHONE', ICON_PHONE).replace('ICON_CAL', ICON_CAL)

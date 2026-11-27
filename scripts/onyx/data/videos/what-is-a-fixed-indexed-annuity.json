@@ -1,0 +1,17 @@
+{
+ "slug": "what-is-a-fixed-indexed-annuity",
+ "page": "blog/what-is-a-fixed-indexed-annuity-fia.html",
+ "also": [
+  "annuities.html"
+ ],
+ "heading": "Fixed indexed annuities in plain English (69 seconds)",
+ "name": "What is a fixed indexed annuity? The plain-English version",
+ "description": "A fixed indexed annuity is a contract with an insurance company, not a market investment. This short video covers how index-linked interest is limited by caps, participation rates or spreads, the floor, surrender charges, taxes and who it may fit. General education, not tax advice.",
+ "upload": "2026-11-27",
+ "seconds": 69,
+ "transcript": "What is a fixed indexed annuity? Here is the plain-English version. It is a contract with an insurance company, not a market investment. Interest is linked to a market index. Caps, participation rates or spreads limit the interest that is credited. If the index falls, credited interest is generally zero, not negative. That is often called the floor. It is built to be held for years. Withdraw more than the contract allows early, and surrender charges may apply. Growth is tax-deferred, but withdrawals can be taxable. Before age 59½, an additional 10% federal tax can apply. It may fit someone near or in retirement, whose money can stay untouched. Be cautious if you may need the money soon. Guarantees depend on the insurer's claims-paying ability. Not a bank deposit. Not FDIC insured. Not better than other savings, just a different role. General education, not tax advice. Want to talk it through? Schedule a time at honorbrook-insurance.com or call (301) 615-8289.",
+ "before": {
+  "blog/what-is-a-fixed-indexed-annuity-fia.html": "<h2>The three limits that matter</h2>",
+  "annuities.html": "<h2>Types of annuities we offer</h2>"
+ }
+}

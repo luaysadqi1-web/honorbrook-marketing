@@ -33,7 +33,8 @@
 <meta name="twitter:image" content="https://honorbrook-insurance.com/assets/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=onyx3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Cinzel:wght@500;600&amp;display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=b797a199">
 
 <!-- Breadcrumb schema -->
 <script type="application/ld+json">
@@ -64,24 +65,40 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Final Expense Life Insurance",
-  "name": "Final Expense Life Insurance \u2014 Honorbrook Insurance",
+  "name": "Final Expense Life Insurance — Honorbrook Insurance",
   "provider": {
-    "@type": "InsuranceAgency",
-  "hasMap": "https://www.google.com/maps/search/?api=1&query=Honorbrook+Insurance+8609+Westwood+Center+Dr+Suite+110+Tysons+VA+22182",
-    "name": "Honorbrook Insurance",
-    "telephone": "+1-301-615-8289",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "8609 Westwood Center Dr, Suite 110",
-      "addressLocality": "Tysons",
-      "addressRegion": "VA",
-      "postalCode": "22182",
-      "addressCountry": "US"
-    },
-    "areaServed": ["Virginia", "Maryland", "West Virginia", "Georgia", "North Carolina", "South Carolina", "Texas", "Louisiana", "Alabama", "Michigan", "Indiana", "Delaware", "District of Columbia", "Kentucky", "Pennsylvania", "Tennessee", "Florida"]
+    "@id": "https://honorbrook-insurance.com/#organization"
   },
-  "areaServed": ["Virginia", "Maryland", "West Virginia", "Georgia", "North Carolina", "South Carolina", "Texas", "Louisiana", "Alabama", "Michigan", "Indiana", "Delaware", "District of Columbia", "Kentucky", "Pennsylvania", "Tennessee", "Florida"],
+  "areaServed": [
+    "Virginia",
+    "Maryland",
+    "West Virginia",
+    "Georgia",
+    "North Carolina",
+    "South Carolina",
+    "Texas",
+    "Louisiana",
+    "Alabama",
+    "Michigan",
+    "Indiana",
+    "Delaware",
+    "District of Columbia",
+    "Kentucky",
+    "Pennsylvania",
+    "Tennessee",
+    "Florida"
+  ],
   "url": "https://honorbrook-insurance.com/final-expense-life-insurance"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://honorbrook-insurance.com/final-expense-life-insurance",
+  "url": "https://honorbrook-insurance.com/final-expense-life-insurance",
+  "name": "Final Expense and Burial Insurance",
+  "dateModified": "2026-11-27"
 }
 </script>
 </head>
@@ -149,7 +166,7 @@
       <a href="/blog/">Blog</a>
       <a href="/contact">Contact</a>
     </nav>
-    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="#quote">Plan Review</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
+    <div class="nav-right"><button type="button" class="find-btn" data-find aria-label="Find your area"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="fb-t">Find your area</span></button><a class="cta-btn sans" href="#quote">Get a quote</a><button type="button" class="hb-burger" aria-label="Open menu" aria-expanded="false" aria-controls="hbMenu"><span></span><span></span><span></span></button></div>
   </div>
 </header>
 
@@ -162,11 +179,13 @@
     <p class="lead">Final expense insurance is a smaller whole life policy meant to pay for a funeral and last bills, so they do not fall on the people you leave behind. Many policies ask health questions instead of requiring a medical exam, and the premium is usually level for as long as you pay it.</p>
     <p class="sans" style="font-size:14px;color:#aebbd0;letter-spacing:.3px;margin-top:4px">Reviewed by Luay Sadqi, Licensed Agent · NPN 21370662 · Updated November 2026</p>
     <div class="hero-ctas sans">
-      <a class="btn-primary" href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">Schedule an appointment</a>
+      <a class="btn-primary" href="#quote">Get a final expense quote</a>
       <a class="btn-ghost" href="tel:+13016158289">Call (301) 615-8289</a>
     </div>
+    <p class="hb-hero-alt sans"><a href="sms:+15713540146">Text (571) 354-0146</a><span aria-hidden="true"> &middot; </span><a href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">Schedule a time</a></p>
   </div>
 </section>
+<p class="hb-callback-m sans"><a href="#quote">Get a call back</a></p>
 
 <article class="article">
   <div class="wrap prose">
@@ -198,12 +217,42 @@
       <strong>The simple difference:</strong> Choose <strong>term life</strong> if you need a large benefit to replace income and protect dependents during your working years. Choose <strong>final expense</strong> if you want smaller, permanent coverage for funeral and final costs. It does not end after a set term, and the premium is usually level. Many people use term while working, then keep a final expense policy for life. Not sure which fits? See our overview of <a href="/life-insurance">term and whole life options</a>.
     </div>
 
+    <h2 id="underwriting">Simplified issue, guaranteed issue and graded benefits</h2>
+    <p>Final expense policies are usually sold in one of three styles. Insurers use different names for them, so read the terms of the policy you are offered, not just its name.</p>
+    <ul>
+      <li><strong>Simplified issue.</strong> The application asks health questions, and many plans do not require a medical exam. The insurer decides from your answers whether to offer the policy and at what premium.</li>
+      <li><strong>Guaranteed issue.</strong> There are no health questions. The Virginia Bureau of Insurance <a href="https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/" target="_blank" rel="noopener">life insurance guide</a> says restrictions often apply if death occurs within the first two or three years after the policy is issued. It also says insurers that take all risks usually pay only the total premium paid, rather than the face amount, if death occurs within the first year or two.</li>
+      <li><strong>Graded benefit.</strong> The policy pays less than the full amount if death happens during its first years, on a schedule written into the policy. See <a href="/blog/graded-death-benefit-final-expense-explained">how a graded death benefit works</a>.</li>
+    </ul>
+    <p>The NAIC&rsquo;s <a href="https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf" target="_blank" rel="noopener">Life Insurance Buyer&rsquo;s Guide</a> notes that a policy that does not ask for detailed health information will usually cost more and provide less coverage than one that does. Which style you are offered is the insurer&rsquo;s decision, made after it reviews your application. We cannot promise a style, an approval or a premium before then.</p>
+
+    <h2 id="free-look">The free look period: time to review a new policy</h2>
+    <p>After a new policy arrives, you have a set number of days to read it and return it. In Virginia, <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/" target="_blank" rel="noopener">Va. Code &sect; 38.2-3301</a> gives you 10 days from the date the policy is delivered to you. If you return it to the insurer or its agent within that time, with a written request to cancel, the policy is void from the beginning and the insurer must refund any premium you paid. A policy may give you a longer period. Other states set their own rules; the NAIC Buyer&rsquo;s Guide says the period is usually 10 days after you receive the policy and is usually stated on the first page. Our state pages for <a href="/virginia-life-insurance#state-facts">Virginia</a>, <a href="/maryland-life-insurance#state-facts">Maryland</a>, <a href="/north-carolina-life-insurance#state-facts">North Carolina</a>, <a href="/texas-life-insurance#state-facts">Texas</a>, <a href="/louisiana-life-insurance#state-facts">Louisiana</a> and <a href="/florida-life-insurance#state-facts">Florida</a> list what we confirmed there; for other states, see the <a href="#life-by-state">state pages below</a> and the policy itself.</p>
+
+    <h2 id="contestability">The contestability period</h2>
+    <p>In Virginia, for the first two years, an insurer can look back at the application if a claim is filed. <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3305/" target="_blank" rel="noopener">Va. Code &sect; 38.2-3305</a> requires an individual life policy to become incontestable once it has been in force for two years from its date of issue during the insured person&rsquo;s lifetime, except for nonpayment of premiums. The NAIC Buyer&rsquo;s Guide warns that if the insurer finds false statements on the application after it issues the policy, it could reduce or cancel the coverage. Answer every health question truthfully, and read the application before you sign it. The contestability period is separate from the reduced-benefit years on a guaranteed-issue or graded policy.</p>
+
+    <h2 id="missed-payment">Grace period, lapse and reinstatement</h2>
+    <p>A missed payment does not end a policy right away. In Virginia, <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3303/" target="_blank" rel="noopener">Va. Code &sect; 38.2-3303</a> requires a grace period of at least 31 days after a premium is due, and the policy stays in force during it. The insurer may charge interest of up to 6% a year on the late premium, and if the insured person dies during the grace period, the unpaid premium may be taken out of the benefit. If the premium is still unpaid when the grace period ends, the policy lapses, as the Virginia Bureau of Insurance guide explains.</p>
+    <p>A lapsed policy can often be brought back. Under <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3311/" target="_blank" rel="noopener">Va. Code &sect; 38.2-3311</a>, if a Virginia policy&rsquo;s value was automatically used to buy other insurance that is still in force, and the policy was not surrendered and cancelled, it may be reinstated within three years of the default. You would give evidence of insurability that satisfies the insurer, pay the overdue premiums with interest (up to 6% a year) and repay or reinstate any other debt on the policy. Otherwise the policy&rsquo;s own reinstatement terms apply. The Virginia Bureau of Insurance guide says most policies provide for reinstatement within three years from the date of lapse, and that you should expect to pay the missed premiums with interest and show you are still insurable. Policies in other states follow their own state&rsquo;s rules, and the policy itself spells out its terms. If a payment will be late, call the insurer, or call us, before the grace period ends.</p>
+
+    <h2 id="who-may-not-need-it">Who may not need final expense insurance</h2>
+    <p>The NAIC Buyer&rsquo;s Guide suggests starting with questions such as whether anyone depends on you financially and how your family would pay your final expenses and debts. Some people find they do not need a final expense policy:</p>
+    <ul>
+      <li><strong>Savings are already set aside</strong> for the funeral and last bills, and the family will be able to reach them.</li>
+      <li><strong>Existing life insurance is enough</strong> to cover those costs. If the coverage is through work, the NAIC guide cautions that you may not be able to take it with you if you leave the employer.</li>
+      <li><strong>A funeral is already prepaid</strong> through a contract with a funeral home. That is a different product with its own rules; see <a href="/blog/final-expense-vs-burial-insurance-vs-prepaid-funeral-plan">final expense vs. a prepaid funeral plan</a>.</li>
+      <li><strong>The real need is income replacement.</strong> If a family depends on your paycheck, a larger <a href="/term-life-insurance">term life</a> policy may fit the need better.</li>
+    </ul>
+    <p>If you already have a policy and are thinking of replacing it, the NAIC guide says to compare the two first, keep in mind that changes in your health may affect a new policy, and not cancel the current policy until you have the new one.</p>
+
     <h2>Watch: Is there a government final expense program? (74 seconds)</h2>
     <video controls preload="none" playsinline poster="/assets/video/government-final-expense-program.jpg" style="width:100%;max-width:720px;border-radius:10px;display:block;margin:0 0 12px">
       <source src="/assets/video/government-final-expense-program.mp4" type="video/mp4">
       Your browser does not support video. A transcript is below.
     </video>
     <details><summary>Video transcript</summary><div class="a">Saw an ad for a government final expense program? Here is what is real. There is no federal final expense insurance program for the public. The ads describe private life insurance that you pay for. State-regulated means your state oversees insurers and agents. It does not mean the state runs or pays for the plan. Social Security has a lump-sum death payment. A spouse might get a one-time payment of $255. If there is no spouse, some children may be eligible. You must apply within 2 years of the death. If you pay for an eligible veteran's burial, VA burial allowances may help. They cover some burial and funeral costs. Check the agent's license. Ask for the name, the agency, and the NPN. Open the NAIC Insurance Departments page. Confirm the agent is licensed in your state. Fair questions for any caller, including us. Are you licensed in my state? Is this insurance I pay for? Can I have it in writing first? Want to talk it through? Schedule a time at honorbrook-insurance.com or call (301) 615-8289.</div></details>
+    <p>Read the full guide, with its sources: <a href="/blog/government-final-expense-program">Is there a government final expense program?</a></p>
 
     <h2>Before you buy</h2>
     <p>These short guides cover what to check before you apply:</p>
@@ -218,7 +267,7 @@
     </ul>
     <p><strong>Veterans:</strong> If the person was a veteran, VA may pay an allowance toward part of the burial, funeral, and plot or interment costs. VA&rsquo;s <a href="https://www.va.gov/burials-memorials/veterans-burial-allowance/" target="_blank" rel="noopener">Veterans burial allowance page</a> (updated October 30, 2026) explains who is eligible and the current amounts. That benefit is separate from any private life policy, and Honorbrook is not connected with VA. For private coverage options, see <a href="/veterans-life-insurance">life insurance for veterans</a>.</p>
 
-    <h2>Life insurance by state</h2>
+    <h2 id="life-by-state">Life insurance by state</h2>
     <p>Honorbrook is licensed in 16 states and Washington, DC. Each page explains how a review works where you live and who regulates insurance there: <a href="/virginia-life-insurance">Virginia</a>, <a href="/maryland-life-insurance">Maryland</a>, <a href="/west-virginia-life-insurance">West Virginia</a>, <a href="/georgia-life-insurance">Georgia</a>, <a href="/north-carolina-life-insurance">North Carolina</a>, <a href="/south-carolina-life-insurance">South Carolina</a>, <a href="/texas-life-insurance">Texas</a>, <a href="/louisiana-life-insurance">Louisiana</a>, <a href="/alabama-life-insurance">Alabama</a>, <a href="/michigan-life-insurance">Michigan</a>, <a href="/indiana-life-insurance">Indiana</a>, <a href="/delaware-life-insurance">Delaware</a>, <a href="/washington-dc-life-insurance">Washington, DC</a>, <a href="/kentucky-life-insurance">Kentucky</a>, <a href="/pennsylvania-life-insurance">Pennsylvania</a>, <a href="/tennessee-life-insurance">Tennessee</a>, <a href="/florida-life-insurance">Florida</a>.</p>
 
     <div class="cta-strip">
@@ -229,6 +278,18 @@
 
     <h2>How Honorbrook compares carriers</h2>
     <p>We're an independent agency, which means we don't work for any single insurance company — we work for you. We compare final expense plans from carriers like AIG, Mutual of Omaha, Americo, Aetna Accendo, and more. Every carrier underwrites health conditions differently, so the company that's right for your neighbor may be the wrong choice for you. We take your health history and match you with carriers whose underwriting fits your health history, then walk you through the options in plain English with no pressure. We're licensed in 16 states and DC, and everything can be handled by phone.</p>
+    <h2 id="sources">Sources</h2>
+    <p class="sans" style="font-size:14px">Read November 27, 2026. This page is general information, not insurance advice; your policy&rsquo;s own terms control.</p>
+    <ul class="sans" style="font-size:14px">
+      <li>National Association of Insurance Commissioners, <a href="https://content.naic.org/sites/default/files/publication-lig-lp-consumer-life.pdf" target="_blank" rel="noopener">Life Insurance Buyer&rsquo;s Guide</a></li>
+      <li>Code of Virginia <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3301/" target="_blank" rel="noopener">&sect; 38.2-3301, Ten-day right to examine policy</a></li>
+      <li>Code of Virginia <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3303/" target="_blank" rel="noopener">&sect; 38.2-3303, Grace period</a></li>
+      <li>Code of Virginia <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3305/" target="_blank" rel="noopener">&sect; 38.2-3305, Incontestability</a></li>
+      <li>Code of Virginia <a href="https://law.lis.virginia.gov/vacode/title38.2/chapter33/section38.2-3311/" target="_blank" rel="noopener">&sect; 38.2-3311, Reinstatement</a></li>
+      <li>Virginia State Corporation Commission, Bureau of Insurance, <a href="https://www.scc.virginia.gov/consumers/insurance/health-insurance-consumer/tips,-guides-publications/virginia-life-insurance-guide/" target="_blank" rel="noopener">Virginia Consumer&rsquo;s Guide for Life Insurance</a></li>
+      <li>Internal Revenue Service, <a href="https://www.irs.gov/faqs/interest-dividends-other-types-of-income/life-insurance-disability-insurance-proceeds" target="_blank" rel="noopener">Life insurance and disability insurance proceeds</a></li>
+      <li>U.S. Department of Veterans Affairs, <a href="https://www.va.gov/burials-memorials/veterans-burial-allowance/" target="_blank" rel="noopener">Veterans burial allowance</a></li>
+    </ul>
   </div>
 </article>
 
@@ -372,7 +433,6 @@
       <a href="https://www.instagram.com/honorbrookinsurance" rel="me noopener" target="_blank" aria-label="Honorbrook Insurance on Instagram">Instagram</a>
       <a href="https://www.linkedin.com/company/honorbrook-insurance" rel="me noopener" target="_blank" aria-label="Honorbrook Insurance on LinkedIn">LinkedIn</a>
       <a href="https://www.tiktok.com/@honorbrookinsurance" rel="me noopener" target="_blank" aria-label="Honorbrook Insurance on TikTok">TikTok</a>
-      <a href="https://www.youtube.com/@luaysadqi5069" rel="me noopener" target="_blank" aria-label="Honorbrook Insurance on YouTube">YouTube</a>
       <a href="https://g.page/r/CSVdc8pCgKkAEAE/" rel="noopener" target="_blank" aria-label="Honorbrook Insurance on Google Maps">Google&nbsp;Maps</a>
     </div>
     <div class="svc-areas">
@@ -396,12 +456,12 @@
 </footer>
 
 <div class="sticky-call sans">
-  <a href="tel:+13016158289">Call now</a><a class="bk" href="https://www.planenroll.com/?purl=Luay-Sadqi" target="_blank" rel="noopener">Schedule an appointment</a>
+  <a href="tel:+13016158289">Call</a><a class="tx" href="sms:+15713540146">Text</a><a class="qt" href="#quote">Get a quote</a>
 </div>
 
-<script src="/assets/chat.js?v=onyx3" defer></script>
-<script src="/assets/find.js?v=onyx3" defer></script>
+<script src="/assets/chat.js?v=86414769" defer></script>
+<script src="/assets/find.js?v=8792cef3" defer></script>
 
-<script src="/assets/hb-nav.js?v=onyx3" defer></script>
+<script src="/assets/hb-nav.js?v=c0650ce6" defer></script>
 </body>
 </html>

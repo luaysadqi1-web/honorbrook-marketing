@@ -161,6 +161,10 @@
       var data = {};
       try { data = await res.json(); } catch (_) {}
       typing(false);
+      if (res.ok && data && data.leadCaptured && typeof window.gtag === "function") {
+        // the chat saved a lead (netlify/functions/chat.js returns leadCaptured): count it like a form lead
+        try { window.gtag("event", "generate_lead", { form: "chat", page: location.pathname, line: document.body.getAttribute("data-line") || "", transport_type: "beacon" }); } catch (_) {}
+      }
       if (res.ok && data && data.reply) {
         addMsg(data.reply, "bot");
         history.push({ role: "assistant", content: data.reply });
@@ -187,7 +191,7 @@
 
 /* ---- GA4 conversion tracking (fires only if gtag is present on the page) ---- */
 (function(){
-  function track(name,params){ if(typeof window.gtag==='function'){ try{ window.gtag('event',name,params||{}); }catch(e){} } }
+  function track(name,params){ if(typeof window.gtag==='function'){ try{ var p=params||{}; p.transport_type='beacon'; window.gtag('event',name,p); }catch(e){} } }
   document.addEventListener('click',function(e){
     var a=e.target&&e.target.closest?e.target.closest('a[href^="tel:"]'):null;
     if(a){ track('phone_call_click',{phone:a.getAttribute('href').replace('tel:','')}); }
@@ -197,22 +201,8 @@
   },true);
 })();
 
-/* ---- Booking CTA: header button -> Calendly, tracked as book_call_click ---- */
-(function(){
-  var URL='https://calendly.com/luaysadqi1/30min';
-  function init(){
-    var b=document.querySelector('a.cta-btn');
-    if(b && !b.hasAttribute('data-book')){
-      b.setAttribute('data-book','1'); b.href=URL; b.target='_blank'; b.rel='noopener';
-      b.textContent='Book a Call';
-    }
-  }
-  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
-  document.addEventListener('click',function(e){
-    var a=e.target&&e.target.closest?e.target.closest('a[href*="calendly.com"]'):null;
-    if(a && typeof window.gtag==='function'){ try{ window.gtag('event','book_call_click',{page:location.pathname}); }catch(x){} }
-  },true);
-})();
+/* ---- Header button: it keeps the link written in the page (the on-page form, #quote, or the home page form).
+   Until Nov 27 2026 this script sent it to the booking site instead; booking asks for a profile first, so it was removed. ---- */
 
 
 /* ---- Lead forms: inline loading + error states, then /thank-you ---- */
@@ -332,4 +322,58 @@
   }
   function init(){ mountInline(); arm(); }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
+})();
+
+
+/* ---- Lead source and conversion events (Nov 27 2026) ----
+   Every lead form (Formspree) gets hidden fields: landing_page, referrer, utm_source, utm_medium, utm_campaign, gclid.
+   The first page of the visit and its referrer are kept for this browser tab only (sessionStorage); campaign tags in the
+   current address replace the stored ones. Empty fields are left out of the posts.
+   Events (sent with transport_type beacon, so they are not lost when the page changes): form_start (first focus in a
+   lead form), phone_click (tel: links), text_click (sms: links), schedule_click (scheduling page or booking site). */
+(function(){
+  var KEYS=['landing_page','referrer','utm_source','utm_medium','utm_campaign','gclid'], SK='hb_attr';
+  function qs(k){ var m=new RegExp('[?&]'+k+'=([^&#]*)').exec(location.search); if(!m) return ''; try{ return decodeURIComponent(m[1].replace(/\+/g,' ')); }catch(x){ return m[1]; } }
+  function cut(v){ return String(v||'').slice(0,300); }
+  var a=null;
+  try{ a=JSON.parse(sessionStorage.getItem(SK)||'null'); }catch(x){ a=null; }
+  if(!a||typeof a!=='object'){ a={landing_page:cut(location.href.split('#')[0]),referrer:cut(document.referrer)}; }
+  var tagged=false; ['utm_source','utm_medium','utm_campaign','gclid'].forEach(function(k){ if(qs(k)){ tagged=true; } });
+  if(tagged){ ['utm_source','utm_medium','utm_campaign','gclid'].forEach(function(k){ a[k]=cut(qs(k)); }); }
+  try{ sessionStorage.setItem(SK,JSON.stringify(a)); }catch(x){}
+  /* newsletter sign-ups (data-inline) are not lead forms: no source fields, no form_start */
+  function lead(f){ return !!(f&&f.tagName==='FORM'&&/formspree\.io/.test(f.getAttribute('action')||'')&&!f.hasAttribute('data-inline')); }
+  function fill(f){
+    if(!lead(f)) return;
+    KEYS.forEach(function(k){
+      var el=f.querySelector('input[name="'+k+'"]');
+      if(!el){ el=document.createElement('input'); el.type='hidden'; el.name=k; f.appendChild(el); }
+      el.value=a[k]||'';
+    });
+  }
+  function fillAll(){ [].forEach.call(document.querySelectorAll('form[action*="formspree.io"]'),fill); }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',fillAll); } else { fillAll(); }
+  /* capture phase: runs before the lead form handler reads the form */
+  document.addEventListener('submit',function(e){ fill(e.target); },true);
+
+  function ev(name,p){
+    if(typeof window.gtag!=='function') return;
+    p=p||{}; p.page=location.pathname; p.line=(document.body&&document.body.getAttribute('data-line'))||''; p.transport_type='beacon';
+    try{ window.gtag('event',name,p); }catch(x){}
+  }
+  document.addEventListener('focusin',function(e){
+    var f=e.target&&e.target.form;
+    if(!lead(f)||f._hbStarted) return;
+    f._hbStarted=true;
+    ev('form_start',{form:f.getAttribute('data-line')||f.getAttribute('data-event')||'form'});
+  },true);
+  function place(el){ return el.closest('.sticky-call')?'bottom bar':el.closest('.hero-ctas,.hb-hero-alt,.hb-callback-m')?'hero':el.closest('nav.menu')?'menu':el.closest('header')?'header':el.closest('footer')?'footer':el.closest('.hb-next')?'post next step':el.closest('#hb-chat')?'chat':'page'; }
+  document.addEventListener('click',function(e){
+    var el=e.target&&e.target.closest?e.target.closest('a[href]'):null;
+    if(!el) return;
+    var h=el.getAttribute('href')||'';
+    if(/^tel:/i.test(h)){ ev('phone_click',{place:place(el)}); }
+    else if(/^sms:/i.test(h)){ ev('text_click',{place:place(el)}); }
+    else if(/^\/schedule-an-appointment(\.html)?([?#]|$)/.test(h)||/planenroll\.com/.test(h)){ ev('schedule_click',{place:place(el),to:/planenroll\.com/.test(h)?'booking site':'scheduling page'}); }
+  },true);
 })();

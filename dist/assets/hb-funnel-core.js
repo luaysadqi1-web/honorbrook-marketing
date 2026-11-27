@@ -310,6 +310,11 @@
   H.bindContact = function (form, getLead, done) {
     var zipEl = form.elements.zip;
     if (zipEl && !zipEl.value && H.zip) zipEl.value = H.zip;
+    /* first focus in the contact step counts as a form start, like the other lead forms (assets/chat.js) */
+    form.addEventListener('focusin', function () {
+      if (form._hbStarted) return; form._hbStarted = true;
+      H.track('form_start', { form: 'funnel', page: location.pathname, line: (document.body && document.body.getAttribute('data-line')) || '', transport_type: 'beacon' });
+    });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var f = form.elements, err = form.querySelector('.hbf-err'), digits = f.phone.value.replace(/\D/g, '');
@@ -334,15 +339,27 @@
         fd.append(p.label + ' page', H.SITE + H.pageFor(id, a));
       });
       fd.append('Consent', 'Yes'); fd.append('Funnel', L.source || '');
+      /* lead source of this visit, kept by assets/chat.js for this browser tab; only fields that have a value */
+      try { var at = JSON.parse(sessionStorage.getItem('hb_attr') || 'null');
+        if (at && typeof at === 'object') ['landing_page', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign', 'gclid'].forEach(function (k) { if (at[k]) fd.append(k, String(at[k]).slice(0, 300)); });
+      } catch (x) {}
+      /* the lead counts as sent when any one of the three posts is accepted (CRM function, xgobjlba, xljbopja) */
+      var tries = [], ok = function (r) { return !!(r && r.ok); }, no = function () { return false; };
       /* also send the lead into IntegrityCONNECT through our own server function; never blocks the visitor */
       if (!H.DRY && H.CRM) { try {
         var ans = L.products.map(function (id) { var p = H.byId(id), x = (L.answers || {})[id] || {}; return p.label + ': ' + H.vis(p, x).filter(function (q) { return x[q.id] !== undefined; }).map(function (q) { return q.q + ' ' + x[q.id]; }).join(' / '); }).join(' || ');
-        fetch(H.CRM, { method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: f.name.value.trim(), phone: f.phone.value.trim(), zip: f.zip.value.trim(), email: f.email.value.trim(), best: form.querySelector('input[name=best]:checked').value, interests: names.join(', '), answers: 'Priority: ' + prio + ' || ' + ans, source: L.source || '', consent: true }) }).catch(function () {});
+        tries.push(fetch(H.CRM, { method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: f.name.value.trim(), phone: f.phone.value.trim(), zip: f.zip.value.trim(), email: f.email.value.trim(), best: form.querySelector('input[name=best]:checked').value, interests: names.join(', '), answers: 'Priority: ' + prio + ' || ' + ans, source: L.source || '', consent: true }) }).then(ok, no));
       } catch (x) {} }
       var btn = form.querySelector('.hbf-submit'); btn.disabled = true; btn.classList.add('busy');
-      if (!H.DRY && H.ENDPOINT2 && !form._hbCopied) { form._hbCopied = true; try { fetch(H.ENDPOINT2, { method: 'POST', body: fd, headers: { Accept: 'application/json' }, keepalive: true }).catch(function () {}); } catch (x) {} }
-      var go = H.DRY ? Promise.resolve({ ok: true }) : fetch(H.ENDPOINT, { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).then(function (r) { return { ok: r.ok }; });
-      go.then(function (r) { if (r.ok) { H.track('generate_lead', { products: L.products.join(','), source: L.source || '', line: L.products.join(','), hot: String(prio).indexOf('HOT') === 0 }); done(); } else throw 0; }).catch(function () { btn.disabled = false; btn.classList.remove('busy'); err.innerHTML = 'Something went wrong. Please call us at <a href="tel:' + H.TEL + '">' + H.PHONE + '</a>.'; });
+      /* the copy is marked sent only when it is accepted, so a retry after a failure tries it again */
+      if (!H.DRY && H.ENDPOINT2 && !form._hbCopied) { try { tries.push(fetch(H.ENDPOINT2, { method: 'POST', body: fd, headers: { Accept: 'application/json' }, keepalive: true }).then(function (r) { if (ok(r)) form._hbCopied = true; return ok(r); }, no)); } catch (x) {} }
+      if (H.DRY) tries.push(Promise.resolve(true));
+      else tries.push(fetch(H.ENDPOINT, { method: 'POST', body: fd, headers: { Accept: 'application/json' }, keepalive: true }).then(ok, no));
+      /* true when any post is accepted; waits up to 3 s more for the others, and gives up after 15 s with no answer */
+      var go = new Promise(function (res) { var left = tries.length, any = false, fin = false; function end(v) { if (!fin) { fin = true; res(v); } }
+        setTimeout(function () { end(any); }, 15000);
+        tries.forEach(function (p) { p.then(function (v) { if (v && !any) { any = true; setTimeout(function () { end(true); }, 3000); } if (--left === 0) end(any); }, function () { if (--left === 0) end(any); }); }); });
+      go.then(function (sent) { if (sent) { H.track('generate_lead', { products: L.products.join(','), source: L.source || '', line: L.products.join(','), hot: String(prio).indexOf('HOT') === 0 }); done(); } else throw 0; }).catch(function () { btn.disabled = false; btn.classList.remove('busy'); err.innerHTML = 'Something went wrong. Please call us at <a href="tel:' + H.TEL + '">' + H.PHONE + '</a>.'; });
     });
   };
 })();

@@ -27,16 +27,16 @@
     },
     medicare:function(f){
       var plan=f.querySelector('#plan').value, prem=num('prem',f), pd=num('pd',f), moop=num('moop',f);
-      var B=202.90, annual=(B+prem+pd)*12;
-      var rows=[row('Part B premium (standard, 2026)',m2(B*12)+' / yr')];
+      var B=209.40, annual=(B+prem+pd)*12;
+      var rows=[row('Part B premium (standard, 2027)',m2(B*12)+' / yr')];
       if(plan!=='orig') rows.push(row(plan==='ma'?'Medicare Advantage plan premium':'Medigap premium',m2(prem*12)+' / yr'));
       rows.push(row('Part D premium',m2(pd*12)+' / yr')); rows.push(row('Estimated yearly premiums',m2(annual),1));
       var exp;
-      if(plan==='orig') exp='<p class="calc-note"><strong>If you have a heavy-use year:</strong> you would also pay the $283 Part B deductible, 20% of most outpatient costs with <strong>no yearly cap</strong>, and a $1,736 Part A deductible for each hospital benefit period (2026). Many people add a Medigap or Advantage plan to limit this.</p>';
-      else if(plan==='medigap') exp='<p class="calc-note"><strong>If you have a heavy-use year:</strong> most Medigap plans limit your extra costs to the $283 Part B deductible plus any copays your specific plan has. Part D drugs have their own rules.</p>';
+      if(plan==='orig') exp='<p class="calc-note"><strong>If you have a heavy-use year:</strong> you would also pay the $292 Part B deductible, 20% of most outpatient costs with <strong>no yearly cap</strong>, and a $1,776 Part A deductible for each hospital benefit period (2027). Many people add a Medigap or Advantage plan to limit this.</p>';
+      else if(plan==='medigap') exp='<p class="calc-note"><strong>If you have a heavy-use year:</strong> most Medigap plans limit your extra costs to the $292 Part B deductible plus any copays your specific plan has. Part D drugs have their own rules.</p>';
       else exp='<p class="calc-note"><strong>If you have a heavy-use year:</strong> '+(moop>0?'your in-network costs for covered services are capped at your plan&rsquo;s out-of-pocket maximum of '+m0(moop)+', for a possible total of about '+m0(annual+moop)+' for the year.':'your costs for covered in-network services are capped at your plan&rsquo;s out-of-pocket maximum. Enter it above to see a total.')+' Drugs, out-of-network care and some services may not count toward the cap.</p>';
       return big('Estimated yearly premiums',m2(annual),'About '+m2(annual/12)+' per month before any copays or deductibles.')+tbl(rows)+exp+
-        '<p class="calc-note">Standard 2026 amounts. Higher-income enrollees pay more for Parts B and D. See Medicare.gov for your exact figures.</p>';
+        '<p class="calc-note">Standard 2027 amounts from CMS (November 17, 2026). Higher-income enrollees pay more for Parts B and D. See Medicare.gov for your exact figures.</p>';
     },
     aca:function(f){
       var hh=Math.max(1,Math.round(num('hh',f))), magi=num('magi',f), bench=num('bench',f);
